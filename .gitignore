@@ -41,9 +41,6 @@ server.out
 # Local source research caches
 /sources/
 
-# Local full-repo backups (created via robocopy)
-/_backup_*/
-
 # Local static server scratch
 server.js
 
