@@ -61,3 +61,9 @@ scripts/_*.py
 /docs/pages-run-1*
 # CF Pages Direct Upload script (GH Pages is primary now)
 /scripts/_direct_upload.ps1
+
+# Large backup/exports
+MotionSites-main.zip
+all_prompts*.csv
+all_prompts*.md
+gumroad_*.txt
