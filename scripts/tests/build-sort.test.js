@@ -59,6 +59,21 @@ test("sortCatalog groups records with a preview above records without one", () =
   );
 });
 
+test("sortCatalog puts newest created_at first, undated records last", () => {
+  const list = [
+    { id: "old", created_at: "2026-01-01T00:00:00Z", local_rel: "assets/old.mp4", local_kind: "mp4" },
+    { id: "new", created_at: "2026-09-12T00:00:00Z", local_rel: "assets/new.webp", local_kind: "webp" },
+    { id: "mid", created_at: "2026-06-01T00:00:00Z", local_rel: null },
+    { id: "undated", local_rel: "assets/undated.mp4", local_kind: "mp4", sort_order: 1 },
+  ];
+  const sorted = sortCatalog(list);
+  // 日期优先于媒体桶：new(图片) 排在 old(视频) 前；无日期的 undated 垫底
+  assert.deepEqual(
+    sorted.map((x) => x.id),
+    ["new", "mid", "old", "undated"]
+  );
+});
+
 const { detectAssetKind } = require('../lib/catalog-utils');
 const fs2 = require('node:fs');
 const os = require('node:os');

@@ -1,0 +1,331 @@
+Build a single, self-contained landing page as ONE file named index.html.
+No build step, no frameworks, no external JS libraries, no local assets — all CSS and JS inline,
+all media referenced by remote URL. Must be fully mobile responsive.
+
+=====================================================================
+1. DOCUMENT SETUP
+=====================================================================
+- <!DOCTYPE html>, <html lang="en">
+- <meta charset="UTF-8">
+- <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+- <title>Vitalis — Advanced Diagnostics &amp; Wellbeing</title>
+- Fonts (exact): preconnect to https://fonts.googleapis.com and https://fonts.gstatic.com (crossorigin),
+  then load:
+  https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Sans:wght@400;500;600&display=swap
+
+CSS custom properties on :root:
+  --ink:#0d0f10;  --paper:#f3f1ee;  --muted:#6f7377;
+  --line:rgba(13,15,16,.16);  --ease:cubic-bezier(.22,.8,.28,1);
+
+Base: *,*::before,*::after{box-sizing:border-box}; html{-webkit-text-size-adjust:100%};
+body{margin:0; background:var(--paper); color:var(--ink);
+font-family:"Instrument Sans","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; overflow-x:hidden}
+img,video{display:block;max-width:100%}
+
+Page = exactly TWO sections: a tall video hero, then a light "story" text section.
+Plus a full-screen overlay menu.
+
+=====================================================================
+2. STAGGERED REVEAL ENGINE (CSS)
+=====================================================================
+.r{opacity:0; transform:translate3d(0,26px,0);
+   transition:opacity .9s var(--ease), transform 1.05s var(--ease);
+   transition-delay:var(--d,0ms); will-change:opacity,transform}
+.r.blur{filter:blur(8px);
+   transition:opacity .9s var(--ease),transform 1.05s var(--ease),filter .9s var(--ease)}
+.r.scale{transform:translate3d(0,18px,0) scale(.96)}
+.r.in{opacity:1;transform:none;filter:none}
+@media (prefers-reduced-motion:reduce){
+  .r{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}}
+
+Every animated element carries its delay via an inline style --d.
+
+=====================================================================
+3. HERO (<header class="hero">)
+=====================================================================
+.hero{position:relative; min-height:126vh; min-height:126svh; (both lines, svh after vh)
+      display:flex; flex-direction:column; overflow:hidden;
+      background:#0b0d0e; isolation:isolate}
+The hero is INTENTIONALLY taller than the viewport so the wordmark sits below the fold.
+
+3a. Background video
+.hero__media{position:absolute;inset:0;z-index:-2}
+.hero__media video{width:100%;height:100%;object-fit:cover;object-position:center;
+                   transform:scale(1.07); animation:heroZoom 16s var(--ease) forwards}
+@keyframes heroZoom{to{transform:scale(1)}}   /* slow 16s de-zoom on load */
+
+Markup: <video ... autoplay muted loop playsinline preload="auto">
+Use these EXACT remote URLs (do not substitute, do not download):
+src    = https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260908_125436_a499ee1f-d503-4933-ae18-4e4d23098c40.mp4
+poster = https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/d275fe35-55c9-4ecd-8ab8-5fee91c40fba.png
+(Video is a 1:1 slow cinematic shot of a scientist at a microscope.)
+
+Dark overlay — .hero__media::after{content:"";position:absolute;inset:0; background:
+  linear-gradient(180deg,rgba(8,10,11,.55) 0%,rgba(8,10,11,.10) 24%,rgba(8,10,11,.20) 52%,rgba(8,10,11,.44) 80%,rgba(8,10,11,.30) 100%),
+  radial-gradient(120% 80% at 50% 42%,rgba(8,10,11,0) 40%,rgba(8,10,11,.45) 100%);}
+
+3b. Light fade at hero foot — sits OVER the wordmark, melting it into section 2
+.hero__fade{position:absolute;left:0;right:0;bottom:-1px;
+  height:clamp(200px,34%,430px); z-index:4; pointer-events:none;
+  background:linear-gradient(180deg,
+    rgba(243,241,238,0) 0%, rgba(243,241,238,.13) 26%, rgba(243,241,238,.40) 50%,
+    rgba(243,241,238,.71) 70%, rgba(243,241,238,.94) 88%, var(--paper) 100%)}
+Place this div LAST inside the header (after the wordmark).
+
+3c. Navbar — a centred glass bar, NO border
+.nav{position:relative;z-index:3;padding:18px 20px 0;display:flex;justify-content:center}
+.nav__inner{display:flex;align-items:center;gap:clamp(26px,3.4vw,44px);
+  padding:8px 20px; border-radius:7px;           /* softly rounded, NOT a pill */
+  background:rgba(255,255,255,.07);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+Contents in order: atom logo link, text link "Home", hamburger button.
+.brand{display:flex;align-items:center;gap:10px} .brand svg{width:16px;height:16px;opacity:.95}
+.nav__link{color:rgba(255,255,255,.92);font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;text-decoration:none;font-weight:500;
+  transition:opacity .3s var(--ease)}  .nav__link:hover{opacity:.6}
+
+Atom/molecule logo SVG (used in nav at 16px and hero centre at 22px), viewBox "0 0 24 24",
+fill none, stroke #fff, stroke-width 1.15 (nav) / 1.05 (hero mark):
+  <circle cx="12" cy="12" r="1.9" fill="#fff" stroke="none"/>
+  <ellipse cx="12" cy="12" rx="10.2" ry="4.3"/>
+  <ellipse cx="12" cy="12" rx="10.2" ry="4.3" transform="rotate(60 12 12)"/>
+  <ellipse cx="12" cy="12" rx="10.2" ry="4.3" transform="rotate(120 12 12)"/>
+
+Hamburger = button with exactly TWO spans:
+.burger{width:22px;height:22px;border:0;background:transparent;
+  display:grid;place-content:center;gap:5px;cursor:pointer;padding:0}
+.burger span{display:block;width:17px;height:1.5px;background:#fff;border-radius:2px;
+  transition:transform .5s cubic-bezier(.76,0,.24,1)}
+.burger:not(.is-open):hover span:first-child{transform:translateX(-2px)}
+.burger:not(.is-open):hover span:last-child{transform:translateX(2px)}
+.burger.is-open span:first-child{transform:translateY(3.25px) rotate(45deg)}
+.burger.is-open span:last-child{transform:translateY(-3.25px) rotate(-45deg)}
+
+3d. Hero centre content
+.hero__body{position:relative;z-index:2;flex:1;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center; padding:clamp(92px,16vh,200px) 22px 0}   /* generous top space */
+.hero__mark{margin-bottom:26px}  .hero__mark svg{width:22px;height:22px;opacity:.95}
+.hero__lead{margin:0;max-width:23ch;color:#fff;
+  font-size:clamp(17px,2.1vw,22px);line-height:1.36;font-weight:500;
+  letter-spacing:-.01em;text-shadow:0 1px 24px rgba(0,0,0,.35)}
+.hero__cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;
+  margin-top:clamp(58px,11.5vh,134px)}   /* wide gap between text and buttons */
+
+Buttons — slightly rounded, with a fill that slides up from the bottom on hover:
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;
+  padding:13px 22px;border:1px solid rgba(255,255,255,.55);border-radius:7px;
+  color:#fff;text-decoration:none;font-size:10px;letter-spacing:.18em;
+  text-transform:uppercase;font-weight:500;background:rgba(255,255,255,.06);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  transition:color .45s var(--ease),border-color .45s var(--ease)}
+.btn span{position:relative;z-index:1}
+.btn::before{content:"";position:absolute;inset:0;background:#fff;
+  transform:translateY(101%);transition:transform .5s var(--ease)}
+.btn:hover{color:var(--ink);border-color:#fff}
+.btn:hover::before{transform:translateY(0)}
+FILLED PRIMARY (first button):
+.btn--solid{background:#fff;border-color:#fff;color:var(--ink)}
+.btn--solid::before{background:var(--ink)}          /* dark fill rises instead of white */
+.btn--solid:hover{color:#fff;border-color:var(--ink)}
+
+3e. Giant wordmark "Vitalis" — an <h1 class="hero__word" id="word" aria-label="Vitalis"></h1>
+left EMPTY in HTML and filled by JS, one <span> per letter.
+.hero__word{position:relative;z-index:1;text-align:center;line-height:.78;margin:0;
+  padding-top:6vh;font-family:"Inter","Instrument Sans",sans-serif;font-weight:400;
+  font-size:24.5vw;letter-spacing:-.035em;color:#fff;user-select:none;
+  transform:translateY(.10em);white-space:nowrap}
+.hero__word span{display:inline-block;opacity:0;transform:translate3d(0,.34em,0);
+  transition:opacity .9s var(--ease),transform 1.1s var(--ease);
+  transition-delay:var(--d,0ms); color:rgba(255,255,255,.9)}
+Gradient text fill (90% white at top -> 40% at baseline), applied PER LETTER so each span
+keeps its own fade-in opacity — a gradient on the parent would paint through the animation:
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .hero__word span{color:transparent;
+    background-image:linear-gradient(180deg,rgba(255,255,255,.90) 0%,
+      rgba(255,255,255,.72) 42%,rgba(255,255,255,.40) 100%);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}}
+.hero__word.in span{opacity:1;transform:none}
+
+=====================================================================
+4. FULL-SCREEN MENU
+=====================================================================
+CRITICAL: place this <div class="menu" id="menu"> as a DIRECT CHILD OF <body>, AFTER the
+story section — NOT inside the header. The hero creates its own stacking context
+(isolation:isolate), so a menu nested inside it would paint underneath section 2.
+
+body.nav-open{overflow:hidden}      /* scroll lock */
+.menu{position:fixed;inset:0;z-index:80;display:flex;flex-direction:column;
+  padding:18px clamp(20px,5vw,64px) clamp(24px,4vh,44px);
+  background:radial-gradient(125% 90% at 50% 0%,#171b1d 0%,#0b0d0e 62%);
+  pointer-events:none;
+  clip-path:inset(0 0 100% 0); -webkit-clip-path:inset(0 0 100% 0);
+  transition:clip-path .8s cubic-bezier(.76,0,.24,1),
+             -webkit-clip-path .8s cubic-bezier(.76,0,.24,1)}
+.menu.open{pointer-events:auto;clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}
+   /* curtain wipes DOWN to open, retracts UP to close */
+
+.menu__top{display:flex;justify-content:center}
+  -> contains a copy of .nav__inner holding: the same atom logo, a <span class="nav__link">Menu</span>,
+     and <button class="burger is-open" id="menuClose"> (already an X), so the bar looks
+     identical to the navbar and the icon appears to morph in place.
+
+.menu__nav{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  gap:clamp(2px,.8vh,10px)}
+.menu__link{display:block;overflow:hidden;text-decoration:none;padding:2px 0}
+.menu__link > span{display:block;color:#fff;font-size:clamp(32px,7vw,84px);line-height:1.12;
+  letter-spacing:-.038em;font-weight:500;transform:translate3d(0,108%,0);
+  transition:transform .85s var(--ease) 0s,opacity .45s ease 0s}
+.menu.open .menu__link > span{transform:none;transition-delay:var(--d,0ms)}
+.menu__link:hover > span{opacity:.5}
+IMPORTANT: the per-item delay lives ONLY in the .open rule, so opening cascades but
+closing snaps out together (a stagger on exit feels sluggish).
+
+.menu__foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;
+  color:rgba(255,255,255,.45);font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+  opacity:0;transform:translate3d(0,14px,0);
+  transition:opacity .6s ease 0s,transform .7s var(--ease) 0s}
+.menu.open .menu__foot{opacity:1;transform:none;transition-delay:.46s}
+.menu__foot a{color:inherit;text-decoration:none;transition:color .3s var(--ease)}
+.menu__foot a:hover{color:#fff}
+@media (prefers-reduced-motion:reduce){.menu{transition:none}
+  .menu__link > span,.menu__foot{transform:none!important;transition:none!important;opacity:1!important}}
+
+=====================================================================
+5. SECTION 2 — "STORY" (<section class="story" id="story">)
+=====================================================================
+.story{background:var(--paper);padding:clamp(64px,11vh,124px) 0 clamp(80px,14vh,150px)}
+.wrap{width:min(1180px,92vw);margin-inline:auto}
+.story__grid{display:grid;grid-template-columns:minmax(180px,.36fr) minmax(0,1fr);
+  gap:clamp(34px,6vw,90px);align-items:start}
+Left column <aside class="stat">: a hairline rule, a big number, a small caption.
+.stat{padding-top:6px}
+.stat__rule{height:1px;background:var(--line);width:100%;transform-origin:left;
+  transform:scaleX(0);transition:transform 1.1s var(--ease);transition-delay:var(--d,0ms)}
+.stat__rule.in{transform:scaleX(1)}          /* wipes out from the left */
+.stat__num{margin:20px 0 12px;font-size:clamp(30px,3.4vw,42px);
+  font-weight:400;letter-spacing:-.03em;line-height:1}
+.stat__label{margin:0;max-width:26ch;color:var(--muted);font-size:11px;line-height:1.65}
+Right column <div class="story__copy">: an h2 then a p, both class "js-lines".
+.story__head{margin:0;font-size:clamp(27px,4.05vw,50px);line-height:1.12;
+  letter-spacing:-.032em;font-weight:500;max-width:14em}
+.story__sub{margin:clamp(18px,2.6vw,30px) 0 0;font-size:clamp(20px,3.05vw,38px);
+  line-height:1.2;letter-spacing:-.028em;font-weight:500;max-width:15em}
+.story__sub .dim{color:#a9adb1}   /* second half of the paragraph is greyed */
+
+Line-mask animation:
+.ln{display:block;overflow:hidden}
+.ln > i{display:block;font-style:normal;transform:translate3d(0,102%,0);
+  transition:transform 1.05s var(--ease);transition-delay:var(--d,0ms)}
+.ln.in > i{transform:none}
+@media (prefers-reduced-motion:reduce){.ln>i{transform:none!important}
+  .stat__rule{transform:none!important}
+  .hero__word span{opacity:1!important;transform:none!important}}
+
+=====================================================================
+6. RESPONSIVE (exact breakpoints)
+=====================================================================
+@media (max-width:860px){
+  .story__grid{grid-template-columns:1fr;gap:38px}
+  .story__head,.story__sub{max-width:none}
+  .stat__label{max-width:34ch}}
+@media (max-width:640px){
+  .hero__body{padding:clamp(72px,13vh,150px) 20px 0}
+  .hero__lead{font-size:16.5px;max-width:20ch}
+  .hero__mark{margin-bottom:20px}
+  .btn{padding:12px 18px;font-size:9.5px;letter-spacing:.15em}
+  .hero__cta{gap:10px}
+  .hero__word{font-size:27vw;transform:translateY(.10em)}
+  .nav{padding:14px 16px 0}
+  .nav__inner{gap:18px}}
+@media (max-width:400px){.btn{flex:1 1 auto;min-width:0}}
+No horizontal overflow at any width.
+
+=====================================================================
+7. JAVASCRIPT (vanilla, one IIFE with "use strict", at end of body)
+=====================================================================
+7a. REVEAL QUEUE — deliberately NOT IntersectionObserver.
+Keep an array "pending" of elements to reveal. check() loops it backwards, and for each
+element whose getBoundingClientRect() satisfies (top < innerHeight*0.92 && bottom > 0),
+adds class "in" and splices it out.
+- queue(): rAF-throttled via a "ticking" flag, AND ALSO schedules setTimeout(checkNow,120).
+- checkNow(): resets ticking and calls check() synchronously.
+- Bind queue() to window scroll (passive:true) and resize.
+- Also run checkNow() on window load and at setTimeout 60ms, 500ms, 1600ms.
+- LAST-RESORT POLL: setInterval(400ms) calling checkNow(), clearing itself when
+  pending is empty. Rationale: in some embedded webviews/hidden tabs, scroll events,
+  requestAnimationFrame AND IntersectionObserver can all be suppressed — content that
+  starts at opacity:0 must never be able to stay invisible forever.
+
+7b. WORDMARK: take the string "Vitalis", split into characters, and for each create a span
+with textContent = char and style --d = (920 + i*70) + "ms", appended to #word.
+
+7c. LINE SPLITTER splitLines(el) for every .js-lines element:
+- Cache original markup once in el.dataset.text; read stagger origin from data-start.
+- Walk the cached markup's child nodes into a token list of {word, className}, preserving
+  the class of any wrapping element (so <span class="dim"> survives).
+- Render each token as a bare probe span into el, then group tokens into lines by comparing
+  each probe's offsetTop (new line when it differs from the previous by more than 3px).
+- Rewrite el.innerHTML as, per line:
+  <span class="ln" style="--d:(start + i*95)ms"><i>…words…</i></span>
+  re-wrapping any classed token in its own <span class="…">.
+- Return el.querySelectorAll(".ln") and add each to the reveal queue.
+Call buildLines() on init; also queue all ".story .r, .stat__rule" elements.
+
+7d. HERO ON LOAD: playHero() adds "in" to every ".hero .r" and to #word.
+Run on window load, or immediately if document.readyState === "complete".
+
+7e. REFLOW: rebuild() re-runs splitLines for all .js-lines — first recording which blocks
+were already revealed, filtering .ln entries out of pending, then re-adding lines as either
+shown (if the block was already visible) or watched. Trigger rebuild() from
+document.fonts.ready (so line breaks match the real webfont) and on resize, but ONLY when
+window.innerWidth actually changed, debounced 160ms.
+
+7f. MENU LOGIC:
+- openMenu(): store document.activeElement; add .open to menu; aria-hidden="false";
+  add .is-open to burger; burger aria-expanded="true" and aria-label="Close menu";
+  add body.nav-open; make menu links focusable; after 260ms focus the close button.
+- closeMenu(): exact inverse, and restore focus to the previously focused element.
+- setMenuFocusable(on): add/remove tabindex="-1" on every a/button inside the menu so
+  hidden links leave the tab order. Call it with false on init.
+- Burger click toggles; close button click closes; clicking any menu link closes.
+- Escape key closes when open.
+- Focus trap: on Tab keydown inside the menu, wrap focus between first and last a/button.
+
+=====================================================================
+8. EXACT COPY (use verbatim)
+=====================================================================
+Title:        Vitalis — Advanced Diagnostics & Wellbeing
+Nav link:     Home
+Hero mark:    (atom icon only)
+Hero lead:    Your body through detailed evaluations, personalized insights, and evidence-based care for a healthier future.
+Buttons:      "Discover Vitalis" (filled) and "See Inside" (outlined) — both href="#story"
+Wordmark:     Vitalis
+Stat number:  10+
+Stat caption: Supporting the progression of predictive medicine and wellbeing.
+Headline h2 (data-start="0"):
+  Health is no longer counted by the years we grow, but by the promise of the years ahead.
+Paragraph p (data-start="240") — first clause plain, remainder wrapped in <span class="dim">:
+  By understanding the hidden markers within your anatomy, <span class="dim">we can move from standard protocols to focused, protective care built uniquely around you.</span>
+Menu links + their --d delays:
+  Home 180ms | Overview 250ms | Assessments 320ms | Methods 390ms | Connect 460ms
+Menu footer left:  Predictive medicine & wellbeing
+Menu footer right: hello@vitalis.health
+Hero element delays (inline --d):
+  brand 80ms | nav link 150ms | burger 220ms | hero mark 420ms (class "r scale")
+  | hero lead 560ms | primary button 760ms | secondary button 850ms
+  (brand, nav link, burger, lead and both buttons all use class "r blur")
+Stat delays: rule 0ms | number 160ms | caption 260ms
+
+=====================================================================
+9. ACCEPTANCE CRITERIA
+=====================================================================
+- Hero is 1.26x viewport height; the "Vitalis" wordmark begins near the bottom edge of the
+  first screen and is cropped by the hero's foot, with the light gradient washing its lower
+  half into the cream section below.
+- On load: nav, mark, lead and buttons cascade in; the wordmark animates letter by letter.
+- On scroll to section 2: the rule wipes right, the number and caption rise, and both text
+  blocks reveal line by line.
+- Hamburger opens the curtain menu with staggered links; Escape / X / any link closes it.
+- No horizontal scrollbar at 375px, 700px, 768px, 860px or 1280px.

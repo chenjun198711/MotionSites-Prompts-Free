@@ -1,0 +1,209 @@
+Build a **standalone static site**: `index.html`, `styles.css`, `script.js`, plus `media/`. No framework, no overlay on backgrounds, no comments in code. Big-tech frontend: Inter + Syne, tight type, copper accent, ghost buttons. `html { scroll-behavior: smooth }`. Body `#05070d`, white text, `overflow-x: hidden`, antialiased.
+
+Google Fonts (exact URL):
+
+```
+https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@500;600;700;800&display=swap
+```
+
+- Body / nav / tagline / columns: `"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`
+- Display (logo, h1, h2, `02`, chips): `"Syne", "Inter", sans-serif`
+- Accent: `#cc704b`
+- Muted: `#c9cdd4`
+- Copper **X** via `.accent`: `linear-gradient(180deg, #e3925c 0%, #c45a32 78%, #b44e2c 100%)` + `background-clip: text` + `-webkit-text-fill-color: transparent`
+
+Title: `HorizonX`. Brand everywhere: `Horizon` + copper `X` (8 characters).
+
+---
+
+## Assets (use these exact URLs)
+
+**Hero background (no overlay, `center / cover`, fallback `#05070d`):**
+
+```
+https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260908_084305_9c0807ad-c252-4ba0-9dff-9b52b25b1735.png&w=1920&q=85
+```
+
+Raw CloudFront PNG:
+
+```
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260908_084305_9c0807ad-c252-4ba0-9dff-9b52b25b1735.png
+```
+
+**Rocket video (download to `media/rocket-src.mp4`; do not play the navy plate as-is):**
+
+```
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260908_083318_30217b69-1399-4f94-93ed-bd96c6278a4f.mp4
+```
+
+H.264, **1664×1244**, 24fps, ~5.04s, yuv420p, looping, muted, autoplay, playsinline. Navy plate must be keyed out (see chroma-key below). Aspect ratio CSS: `1664 / 1244`.
+
+**Section 2 background (no overlay):**
+
+```
+https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260908_085445_eb8c952b-1979-409d-ad8c-182762ebb64e.png&w=1920&q=85
+```
+
+Raw CloudFront PNG:
+
+```
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260908_085445_eb8c952b-1979-409d-ad8c-182762ebb64e.png
+```
+
+**Asteroid-belt transition PNG (Figma).** Download, **crop to 1920×600 RGBA** (original band roughly `y=470…1070`), save as `media/rocks.png`. Real alpha, not a black matte.
+
+```
+https://thus-sweat-74219310.figma.site/_assets/v11/83b9ccb128e4edf58c5fd43099a79a46ca3866da.png
+```
+
+Layout reference for section 2 (do not use as the live background):
+
+```
+https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260908_084807_117cfc39-e5ea-4720-803b-d97a944b1707.png&w=1920&q=85
+```
+
+---
+
+## Structure
+
+```
+body
+  section.hero (z-index 1, isolation: isolate, min-height 100dvh, overflow hidden)
+    header.nav (absolute top, only on hero — never on section 2)
+      a.logo → Horizon + span.accent X
+      .nav-end
+        nav.links → About (#about) / Careers / Impact / Contact
+        .lang → EN dropdown (ES, FR, DE)
+    .rocket-wrap → hidden <video.rocket-src> + <canvas.rocket>
+    .hero-content → h1, tagline, CTA
+  .cover (z-index 4, will-change: transform)   ← THIS is what parallax moves
+    img.rocks (z-index 6)
+    section.about#about (z-index 1, min-height 100dvh)
+      .about-inner (z-index 2)
+```
+
+Do **not** put a tall spacer/seam between sections. Rocks live **inside `.cover`** with the about section so they scroll together over the hero.
+
+---
+
+## Section 1 — Hero
+
+**Nav** (`padding: 2.15rem 3.5rem`): logo `1.05rem / 700 / letter-spacing -0.03em`. Links `0.8125rem`, gap `2.85rem`, hover opacity `0.62`. Lang button `0.8125rem / 500 / letter-spacing 0.06em` + 10×6 chevron SVG. Menu: `rgba(8,10,16,0.92)`, `1px solid rgba(255,255,255,0.12)`, `backdrop-filter: blur(12px)`, right-aligned. Click outside closes. At `max-width: 900px` hide `.links`.
+
+**Hero content** (centered, z-index 2):
+
+- H1 Syne **700**, `clamp(4.25rem, 10.6vw, 8.25rem)`, letter-spacing `-0.045em`, line-height `0.92`: `HorizonX`
+- Tagline Inter, `1.02rem`, line-height `1.58`, color `#c9cdd4`, max-width `26.5rem`, `text-wrap: balance`:
+  `Put AI-backed spatial training in the hands of every crew on-site.`
+- Ghost CTA `href="#about"`: `EXPERIENCE` + 22×12 arrow SVG. Border `1px solid rgba(255,255,255,0.95)`, padding `0.82rem 1.7rem 0.82rem 1.85rem`, `0.6875rem / 500 / letter-spacing 0.22em`. Hover: white fill, text `#0b0d12`.
+
+**Rocket** (inside `.hero`, under content, over bg):
+
+```
+.rocket-wrap {
+  position: absolute;
+  right: 4%;
+  bottom: 6%;
+  z-index: 1;
+  width: min(58vw, 780px);
+  aspect-ratio: 1664 / 1244;
+  pointer-events: none;
+  transform: translate(10%, 10%);
+  mix-blend-mode: lighten;
+}
+```
+
+Video is `opacity: 0` (source only). Canvas fills the wrap. Mobile (`≤900px`): `width: min(82vw, 420px); right: 0; bottom: 4%;`.
+
+**Chroma-key (required).** Video has a navy plate, not alpha. Each rAF:
+
+1. Size canvas to CSS box.
+2. `drawImage(video)`.
+3. Per pixel vs key **`(R,G,B) = (1, 9, 31)`**:
+   - `HARD = 22²`, `SOFT = 36²`
+   - `dist ≤ HARD` → alpha `0`
+   - `HARD < dist < SOFT` → alpha `((dist-HARD)/(SOFT-HARD))*255`
+4. `putImageData`. Context: `{ alpha: true, willReadFrequently: true }`.
+
+Do **not** rely on WebM alpha / ffmpeg colorkey — that failed. Do **not** skip `mix-blend-mode: lighten`.
+
+---
+
+## Section 2 — About (`#about`)
+
+No navbar. Padding `calc(18vw + 3rem) 6vw 8vh` so copy sits **below** the rock belt. Inner `width: min(62rem, 100%)`, centered column.
+
+1. `02` — Syne 600, `0.95rem`, letter-spacing `0.22em`, color `#cc704b`
+2. H2 Syne 700, `clamp(2.6rem, 5.4vw, 4.15rem)`, letter-spacing `-0.03em`, line-height `1.06`:
+   `Shaped for live reality.`
+3. Rule: `6.5rem × 1px`, `linear-gradient(90deg, transparent, #cc704b, transparent)`, margin `1.45rem 0 1.75rem`
+4. Lead, max-width `40rem`, `1.02rem / 1.65`, `rgba(255,255,255,0.62)`:
+   `Using our spatial AI stack on site, you can stand up living field programs in minutes. Let the models take the grind of production off your desk entirely,`
+5. Two columns, `max-width: 52rem`, gap `2.75rem 3.5rem`, left-aligned, `0.9rem / 1.7`, `rgba(255,255,255,0.42)`:
+
+**Left 1:** `Spatial layers now reach a wide spread of jobs, from classroom drills and coaching to live work out in the field. They make lessons concrete and give crews practical reps without the hazards or spend of the real locations now.`
+
+**Left 2:** `We give crews a path to ship spatial programs with software that stays quiet. Whether you’re just getting going or already running at volume, the product is made to keep extending what’s possible for you.`  
+(curly apostrophes)
+
+**Right 1:** `The product is shaped around how people actually work: point-and-place tools, ready-made layouts, and coverage on mobiles, visors, and glasses so you can hit a wider market without a studio team, now.`
+
+**Right 2:** `We’re steadily shipping capture, teamwork, and distribution tools so you remain in front of the pack. A network of makers is on hand to back the craft as it goes from a sketch to live experience.`
+
+6. Two copper ghost chips, Syne 600, `0.68rem`, letter-spacing `0.16em`, border `1px solid #cc704b`, min-width `13.5rem`, gap `1.15rem`, margin-top `2.85rem`. Hover: copper fill, text `#0b0d12`.
+   - `✦ AI POWERED UX`
+   - `IMMERSAL BUILDING ✦`
+
+Mobile: single column, chips stack `width: 100%`, about padding `calc(18vw + 4.5rem) 1.35rem 5rem`.
+
+---
+
+## Rocks + parallax (critical)
+
+`.rocks`: `position: absolute; left: 0; top: 0; z-index: 6; width: 100%; height: auto; pointer-events: none; transform: translateY(-50%);`
+
+That `-50%` parks the belt on the **fold**, not over the about copy. Width **100%** — no 145–150vw, no horizontal parallax, no scale.
+
+JS moves **`.cover` only** (rocks + about together over the hero):
+
+```
+vh = innerHeight
+sEnd = vh * 0.55
+s = clamp(scrollY, 0, sEnd)
+extra = s * ((vh - sEnd) / sEnd)
+cover.style.transform = `translate3d(0, ${-extra}px, 0)`
+```
+
+rAF-throttled scroll + resize. If `prefers-reduced-motion: reduce`: transform none, no cover motion.
+
+Do **not** create a 90–180vh `.seam` gap. Hero `overflow: hidden` + `isolation: isolate` is a stacking context; rocks must be in `.cover` **above** the hero (`z-index: 4` vs hero `1`).
+
+---
+
+## Animations
+
+**Hero `.reveal`:** start `opacity: 0; translateY(1.15rem)`; `animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards`; delay `--d`.
+
+Delays: h1 `0.12s`, tagline `0.28s`, CTA `0.44s`.
+
+**About `.reveal`:** `animation: none`. Same opacity/translate start. Transition `0.9s` same easing, delay `--d`. Fire once when `.about-inner` gets `.is-in` via `IntersectionObserver { threshold: 0.22 }`, then disconnect.
+
+About delays: `02` `0s`, h2 `0.1s`, rule `0.18s`, lead `0.26s`, cols `0.38s`, chips `0.5s`.
+
+Reduced motion: all reveals instantly visible, no animation/transition.
+
+Lang dropdown: toggle `hidden`, `aria-expanded`, select EN/ES/FR/DE, click-outside close.
+
+---
+
+## Hard constraints
+
+- No dark overlays / scrims on either background.
+- No navbar on section 2.
+- Rocket: canvas chroma-key + `lighten`, not a transparent video file.
+- Rocks crop 1920×600 with real alpha; sit on the fold via `translateY(-50%)`.
+- Parallax is vertical only, on `.cover`, formula above.
+- Copy and character counts as written (layout depends on it).
+- Files: `index.html` / `styles.css` / `script.js` / `media/rocket-src.mp4` / `media/rocks.png`.
+
+---

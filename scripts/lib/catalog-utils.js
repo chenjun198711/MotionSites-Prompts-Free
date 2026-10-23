@@ -101,10 +101,8 @@ function isCompletePrompt(value, record) {
 }
 
 function sortCatalog(list) {
-  // Visual priority bucket:
-  //   0 = video preview (mp4 / webm / hls) - shown first
-  //   1 = image preview (webp / png / gif / jpeg)
-  //   2 = no local preview (concept card / metadata only) - shown last
+  // 主排序：created_at 新的在前；无日期的记录排在最后。
+  // 兜底顺序（同日期或无日期时）：视频预览 -> 图片预览 -> 无预览，再按 sort_order、id。
   function visualBucket(record) {
     if (!record || !record.local_rel) return 2;
     const kind = record.local_kind;
@@ -112,7 +110,16 @@ function sortCatalog(list) {
     if (kind === 'webp' || kind === 'png' || kind === 'gif' || kind === 'jpeg') return 1;
     return 2;
   }
+  function dateVal(record) {
+    const t = Date.parse(record && record.created_at);
+    return Number.isNaN(t) ? null : t;
+  }
   return list.slice().sort((a, b) => {
+    const ad = dateVal(a);
+    const bd = dateVal(b);
+    if (ad !== null && bd !== null && ad !== bd) return bd - ad;
+    if (ad !== null && bd === null) return -1;
+    if (ad === null && bd !== null) return 1;
     const av = visualBucket(a);
     const bv = visualBucket(b);
     if (av !== bv) return av - bv;

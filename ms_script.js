@@ -47,7 +47,7 @@ const I18N = {
     resultsSuffix: '条结果',
     totalSuffix: '共',
     prompts: '个提示词',
-    tagline: '动效 UI 提示词资料库',
+    tagline: '动效 UI 提示词资料库（更新至2026年10月）',
     footer: '按 / 搜索 · 按 Esc 关闭 · 按 G 切换紧凑',
     noPreview: '概念图',
     conceptBadge: '概念',
