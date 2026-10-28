@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arceage Stats — Process &amp; Stats 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色背景的响应式统计数据显示区，使用Barlow和Instrument Serif字体，展示关键数据指标。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/arceage-stats.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arceage Stats — Process &amp; Stats 提示词">
+<meta property="og:description" content="深色背景的响应式统计数据显示区，使用Barlow和Instrument Serif字体，展示关键数据指标。">
+<meta property="og:url" content="https://prompt-site.shop/p/arceage-stats.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/arceage-stats.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Arceage Stats","description":"深色背景的响应式统计数据显示区，使用Barlow和Instrument Serif字体，展示关键数据指标。","url":"https://prompt-site.shop/p/arceage-stats.html","inLanguage":"zh-CN","genre":"Process & Stats","dateCreated":"2026-06-06T11:50:03.989072+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-process___stats">Process &amp; Stats</a></div><h1>Arceage Stats</h1><div class="chip-row"><span class="chip">Process &amp; Stats</span><span class="chip">stats</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-06-06</span><span>正文：7,718 字符</span></div><div class="hero-media"><img src="../assets/previews/arceage-stats.webp" alt="Arceage Stats 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色背景的响应式统计数据显示区，使用Barlow和Instrument Serif字体，展示关键数据指标。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Create a React + Tailwind CSS v4 + Motion (framer-motion successor) stats section component. Use Vite as the bundler. The section should be fully mobile responsive.
+
+### Fonts
+
+Import from Google Fonts in your global CSS:
+```
+@import url(&#39;https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Instrument+Serif:ital@0;1&amp;display=swap&#39;);
+```
+
+Define two Tailwind v4 theme fonts:
+- `--font-sans: &quot;Barlow&quot;, ui-sans-serif, system-ui, sans-serif;` (used as the primary UI font via `font-sans`)
+- `--font-dm-serif: &quot;Instrument Serif&quot;, serif;` (used as the accent/poetic font via `font-dm-serif`)
+
+The page wrapper uses `bg-black font-sans text-white`.
+
+### Dependencies
+
+- `react` v19
+- `motion` (npm package &quot;motion&quot;, imported as `motion/react` -- provides `motion`, `useInView`, `animate`)
+- `tailwindcss` v4 with `@tailwindcss/vite` plugin
+- Vite v6+
+
+### Section Layout
+
+The section is a `&lt;section&gt;` with:
+- `id=&quot;stats&quot;`
+- Classes: `bg-black text-white py-8 md:py-24 px-6 md:px-12 lg:px-[120px] w-full border-t border-white/10 overflow-hidden`
+- Inner wrapper: `w-full max-w-[1440px] mx-auto`
+- Content is a two-column flexbox: `flex flex-col lg:flex-row gap-16 lg:gap-[160px] items-stretch`
+
+### Left Column (flex-1, flex flex-col justify-start)
+
+The entire left column is wrapped in a `motion.div` with staggered reveal animation:
+- `initial=&quot;hidden&quot;`, `whileInView=&quot;visible&quot;`, `viewport={{ once: true, margin: &quot;-100px&quot; }}`
+- Variants: hidden = `{ opacity: 0 }`, visible = `{ opacity: 1, transition: { staggerChildren: 0.06 } }`
+
+**Heading (h2):**
+- Classes: `text-[clamp(1.5rem,4vw,3.5rem)] font-medium tracking-tight mb-6 leading-[1.1] w-[590px] max-w-full`
+- Content uses a custom `&lt;Typewriter&gt;` component (described below):
+- `&lt;Typewriter text=&quot;Powering Harvests&quot; delay={0} speed={0.012} /&gt;` followed by `&lt;br /&gt;`
+- `&lt;Typewriter text=&quot;that &quot; delay={0.25} speed={0.012} /&gt;` then a `&lt;span className=&quot;font-dm-serif italic font-normal&quot;&gt;` wrapping `&lt;Typewriter text=&quot;Maximize Your Yield&quot; delay={0.35} speed={0.012} /&gt;`
+- The phrase &quot;Maximize Your Yield&quot; renders in Instrument Serif italic as the accent font.
+
+**Subtitle (p):**
+- Classes: `text-base md:text-lg text-white/40 leading-relaxed font-light max-w-lg whitespace-normal mb-16`
+- Content: `&lt;Typewriter text=&quot;For over a decade, the region&#39;s most demanding agricultural operations have relied on our modern machinery and skilled crews to secure their crops efficiently and reduce loss.&quot; delay={0.1} speed={0.012} /&gt;`
+
+**Stats Grid:**
+- Wrapped in `motion.div` with stagger variants: hidden = `{ opacity: 0 }`, visible = `{ opacity: 1, transition: { staggerChildren: 0.06, delayChildren: 0.1 } }`
+- Classes: `grid grid-cols-2 md:grid-cols-[max-content_max-content] gap-8 md:gap-x-16 lg:gap-x-24`
+- 5 stat items, each wrapped in `motion.div` with variants: hidden = `{ opacity: 0, y: 20 }`, visible = `{ opacity: 1, y: 0, transition: { duration: 0.4, ease: &quot;easeOut&quot; } }`
+- Each stat item (`flex flex-col`):
+- **Number:** `text-4xl md:text-5xl lg:text-[56px] font-dm-serif tracking-tight mb-3` (uses Instrument Serif)
+- **Label:** `text-[10px] md:text-xs font-semibold text-white/40 uppercase tracking-wider`
+
+The 5 stats with their AnimatedCounter props:
+1. `value={500} suffix=&quot;K+&quot;` / Label: &quot;Acres Harvested Annually&quot;
+2. `value={99.8} decimals={1} suffix=&quot;%&quot;` / Label: &quot;Crop Recovery Rate&quot;
+3. `value={50} suffix=&quot;+&quot;` / Label: &quot;Modern Combines Deployed&quot;
+4. `value={15} suffix=&quot;+&quot;` / Label: &quot;Crop Varieties Supported&quot;
+5. `value={24} suffix=&quot;/7&quot;` / Label: &quot;Uptime During Season&quot;
+
+### AnimatedCounter Component
+
+A helper component that animates from 0 to a target value on scroll into view:
+- Props: `value: number`, `suffix?: string` (default &quot;&quot;), `prefix?: string` (default &quot;&quot;), `decimals?: number` (default 0)
+- Uses `useRef&lt;HTMLSpanElement&gt;`, `useInView(ref, { once: true, margin: &quot;-50px&quot; })` from `motion/react`
+- On `inView`, calls `animate(0, value, { duration: 1.5, ease: &quot;easeOut&quot;, onUpdate(val) { ref.current.textContent = prefix + val.toFixed(decimals) + suffix } })`
+- Returns `&lt;span ref={ref}&gt;{prefix}0{suffix}&lt;/span&gt;` as initial render
+
+### Typewriter Component
+
+A reusable character-by-character reveal animation triggered on scroll:
+- Props: `text: string`, `delay?: number` (default 0), `speed?: number` (default 0.015), `className?: string` (default &quot;&quot;)
+- Uses `useRef`, `useInView(ref, { once: true, margin: &quot;-10px&quot; })` from `motion/react`
+- Renders a `motion.span` with `initial=&quot;hidden&quot;` and `animate={inView ? &quot;visible&quot; : &quot;hidden&quot;}`
+- Parent variants: hidden = `{ opacity: 1 }`, visible = `{ opacity: 1, transition: { staggerChildren: speed, delayChildren: delay } }`
+- Splits text into individual characters, each wrapped in `motion.span` with variants: hidden = `{ opacity: 0 }`, visible = `{ opacity: 1 }`
+
+### Right Column: Logo-Masked Video
+
+- Wrapper: `flex justify-center lg:justify-end items-center shrink-0 lg:w-1/2`
+- Inner `motion.div`:
+- `initial={{ opacity: 0, scale: 0.9 }}`
+- `whileInView={{ opacity: 1, scale: 1.2 }}`
+- `viewport={{ once: true, margin: &quot;-100px&quot; }}`
+- `transition={{ duration: 0.8, delay: 0, ease: &quot;easeOut&quot; }}`
+- Classes: `w-full max-w-[500px] lg:max-w-none lg:w-[120%] aspect-square origin-center`
+- Uses CSS `mask-image` (both `-webkit-mask-image` and `mask-image`) with an inline SVG data URI of a triangular/mountain-like logo shape. The exact SVG path data:
+```
+m53.54,45.42c2.19-3.79,7.67-3.79,9.86,0l4.54,7.87c1.17,2.02,1.17,4.51,0,6.54l-8.15,13.81c-1.68,2.91.42,6.55,3.78,6.55h17.81c3.45,0,5.61-3.74,3.89-6.73l-28.76-49.81c-2.95-5.12-10.34-5.12-13.29,0l-28.46,49.3c-1.86,3.22.46,7.24,4.18,7.24h10.23c2.55,0,4.91-1.36,6.19-3.57l18.18-31.19Z
+```
+- SVG viewBox: `0 0 100 100`
+- Mask properties: `maskSize: &#39;contain&#39;`, `maskRepeat: &#39;no-repeat&#39;`, `maskPosition: &#39;center&#39;`
+- Full inline style object:
+```js
+{
+WebkitMaskImage: `url(&quot;data:image/svg+xml,%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 100 100&#39;%3E%3Cpath d=&#39;m53.54,45.42c2.19-3.79,7.67-3.79,9.86,0l4.54,7.87c1.17,2.02,1.17,4.51,0,6.54l-8.15,13.81c-1.68,2.91.42,6.55,3.78,6.55h17.81c3.45,0,5.61-3.74,3.89-6.73l-28.76-49.81c-2.95-5.12-10.34-5.12-13.29,0l-28.46,49.3c-1.86,3.22.46,7.24,4.18,7.24h10.23c2.55,0,4.91-1.36,6.19-3.57l18.18-31.19Z&#39;/%3E%3C/svg%3E&quot;)`,
+WebkitMaskSize: &#39;contain&#39;,
+WebkitMaskRepeat: &#39;no-repeat&#39;,
+WebkitMaskPosition: &#39;center&#39;,
+maskImage: `url(&quot;data:image/svg+xml,%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 100 100&#39;%3E%3Cpath d=&#39;m53.54,45.42c2.19-3.79,7.67-3.79,9.86,0l4.54,7.87c1.17,2.02,1.17,4.51,0,6.54l-8.15,13.81c-1.68,2.91.42,6.55,3.78,6.55h17.81c3.45,0,5.61-3.74,3.89-6.73l-28.76-49.81c-2.95-5.12-10.34-5.12-13.29,0l-28.46,49.3c-1.86,3.22.46,7.24,4.18,7.24h10.23c2.55,0,4.91-1.36,6.19-3.57l18.18-31.19Z&#39;/%3E%3C/svg%3E&quot;)`,
+maskSize: &#39;contain&#39;,
+maskRepeat: &#39;no-repeat&#39;,
+maskPosition: &#39;center&#39;,
+}
+```
+
+- Inside the masked div, a `&lt;video&gt;` element:
+- Attributes: `autoPlay`, `loop`, `muted`, `playsInline`
+- Classes: `w-full h-full object-cover`
+- Source: `https://app-uploads.krea.ai/wan-videos/7f348c17-c3aa-40c9-9d5b-a2bed9a72c2e.mp4` (type `video/mp4`)
+
+### Mobile Responsiveness Summary
+
+- Section padding: `py-8 px-6` on mobile, `md:py-24 md:px-12`, `lg:px-[120px]`
+- Layout stacks vertically on mobile (`flex-col`), goes side-by-side at `lg:` (`flex-row`)
+- Heading uses fluid typography: `clamp(1.5rem, 4vw, 3.5rem)`
+- Stats grid: 2 columns on mobile (`grid-cols-2`), auto-sized on `md:` (`grid-cols-[max-content_max-content]`)
+- Stat numbers: `text-4xl` on mobile, `md:text-5xl`, `lg:text-[56px]`
+- Video mask: `max-w-[500px]` on mobile, full width at `lg:` with `lg:w-[120%]`
+
+---</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="nexacore-process.html">NexaCore Process<small>Process &amp; Stats · features</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

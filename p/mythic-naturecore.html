@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mythic Naturecore — Landing Page 提示词 | MotionSites Prompts</title>
+<meta name="description" content="以深色背景搭配优雅衬线字体，呈现沉浸式自然主题的3D视差滚动着陆页，带有硬件加速动画和鼠标追踪特效。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/mythic-naturecore.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mythic Naturecore — Landing Page 提示词">
+<meta property="og:description" content="以深色背景搭配优雅衬线字体，呈现沉浸式自然主题的3D视差滚动着陆页，带有硬件加速动画和鼠标追踪特效。">
+<meta property="og:url" content="https://prompt-site.shop/p/mythic-naturecore.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/mythic-naturecore.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Mythic Naturecore","description":"以深色背景搭配优雅衬线字体，呈现沉浸式自然主题的3D视差滚动着陆页，带有硬件加速动画和鼠标追踪特效。","url":"https://prompt-site.shop/p/mythic-naturecore.html","inLanguage":"zh-CN","genre":"Landing Page","dateCreated":"2026-05-31T13:59:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-landing_page">Landing Page</a></div><h1>Mythic Naturecore</h1><div class="chip-row"><span class="chip">Landing Page</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-05-31</span><span>正文：7,881 字符</span></div><div class="hero-media"><img src="../assets/previews/mythic-naturecore.webp" alt="Mythic Naturecore 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>以深色背景搭配优雅衬线字体，呈现沉浸式自然主题的3D视差滚动着陆页，带有硬件加速动画和鼠标追踪特效。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Recreate a high-fidelity, premium interactive landing page named &quot;Reverie&quot; using React, TypeScript, and a combination of Tailwind CSS and inline styles. The project must have a smooth, hardware-accelerated scroll-linked animation system, 3D/parallax mouse-tracking effects, responsive layouts, and elegant micro-animations.
+
+---
+
+1. Typography &amp; Global Styles
+
+- Fonts:
+- Load the following Google Fonts:
+- Headers: `&#39;Viaoda Libre&#39;, serif` (elegant serif font).
+- Body, nav links, and captions: `&#39;Imprima&#39;, sans-serif` (clean, sleek sans-serif font).
+- Global Reset &amp; Base CSS:
+- `html, body { margin: 0; padding: 0; background: #0a0608; scroll-behavior: auto; }`
+- Body font should default to `&#39;Imprima&#39;, sans-serif`.
+- Add `scrollbar-gutter: stable;` to the `html` tag to prevent layout shifts.
+- Include an animation utility:
+```css
+@keyframes bobUp {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-6px); }
+}
+```
+
+---
+
+2. Assets Asset Mapping
+
+Define these exact asset constants at the top of the file:
+```typescript
+const PORTAL_BG = &#39;https://res.cloudinary.com/dsdhxhhqh/image/upload/v1779974947/portal_bg_mu60k9.png&#39;;
+const CURTAIN_LEFT = &#39;https://res.cloudinary.com/dsdhxhhqh/image/upload/v1779975070/curtain_left_cdht6q.png&#39;;
+const CURTAIN_RIGHT = &#39;https://res.cloudinary.com/dsdhxhhqh/image/upload/v1779975071/curtain_right_a9bn3i.png&#39;;
+const WORLD_BG = &#39;https://res.cloudinary.com/dsdhxhhqh/image/upload/v1779975077/world_bg_jzzcn1.jpg&#39;;
+
+// The cards MUST remain in this exact order (Card 3, Card 1, Card 2)
+const CARD_IMAGES = [
+&#39;https://res.cloudinary.com/dsdhxhhqh/image/upload/v1779975070/card_3_nbwm25.jpg&#39;,
+&#39;https://res.cloudinary.com/dsdhxhhqh/image/upload/v1779975070/card_2_wr6al6.jpg&#39;, // Representing Card 1
+&#39;https://res.cloudinary.com/dsdhxhhqh/image/upload/v1779975070/card_1_jz8otj.jpg&#39;, // Representing Card 2
+];
+```
+
+---
+
+3. State Management &amp; Mathematical Helpers
+
+- Math Utilities:
+- Easing curve: `easeInOut(t) = t &lt; 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t`
+- Linear Interpolation: `lerp(a, b, t) = a + (b - a) * t`
+- Constraint: `clamp(val, min, max) = Math.max(min, Math.min(max, val))`
+- Parallax Magnitudes:
+- `MAG.world = 6`, `MAG.portal = 7`, `MAG.curtainL = 14`, `MAG.curtainR = 14`
+- Hook for Responsiveness:
+- Implement a `useIsMobile()` hook responding to media query max-width of `767px` to dynamically update layouts.
+- Scroll Tracking:
+- The page height must be exactly `480vh`. Inside, a single sticky container spans `100vh`.
+- Calculate normalized `scrollProgress` from `0` to `1` by reading window scroll position relative to the scrollable height.
+- Smooth Mouse Tracking (Parallax):
+- Normalize coordinates `rx`, `ry` between `-1` and `1` relative to the center of the viewport.
+- Implement a `requestAnimationFrame` render loop (`tick`) to smoothly interpolate current position towards target cursor position (lerp step speed: `0.07`) to eliminate frame-rate stutters.
+- Entrance Animation Delays:
+- On mount, transition curtains open after `100ms`, fade UI in after `600ms`. Disable entry CSS transitions after `2200ms` so mouse movement doesn&#39;t experience lag or delay.
+
+---
+
+4. Animation Timelines (Scroll &amp; Mouse Parallax)
+
+Apply these precise styling updates in the render loop on every frame:
+1. World Layer (`WORLD_BG`):
+- Scale: Lerps from `1` (at start) to `1.18` (at maximum scroll).
+- Parallax: `transform = scale(${scale}) translate3d(${rx * 6}px, ${ry * 6}px, 0)`
+2. Portal Frame (`PORTAL_BG`):
+- Scale: Lerps from `1` to `7.5` (creating an immersive zoom-through effect).
+- Origin: `52% 38%`
+- Opacity: Starts at `1`, fades out after `65%` scroll: `clamp(1 - (scrollProgress - 0.65) / 0.2, 0, 1)`
+- Parallax: `transform = scale(${scale}) translate3d(${rx * 7}px, ${ry * 7}px, 0)`
+3. Curtain Left (`CURTAIN_LEFT`):
+- Initial Opening Offset: `62%` shift left.
+- Scroll Offset: Moves further leftward up to `150%` as eased progress goes `0` to `1`.
+- Curtain Scroll Scale: Lerps from `1` to `1.3`.
+- Parallax &amp; GPU Layer: `transform = translateX(calc(-${totalShift}% + ${rx * 14}px)) translateY(${ry * 14 * 0.3}px) scale(${curtainScrollScale}) translateZ(0)`
+4. Curtain Right (`CURTAIN_RIGHT`):
+- Symmetrically mirrors Curtain Left.
+- Parallax &amp; GPU Layer: `transform = translateX(calc(${totalShift}% + ${rx * 14}px)) translateY(${ry * 14 * 0.3}px) scale(${curtainScrollScale}) translateZ(0)`
+
+---
+
+5. Layout &amp; Components
+
+Navigation Bar
+- Position: Absolute at the top, `zIndex: 50`. Responsive padding: `18px 20px` (mobile), `22px 48px` (desktop).
+- Desktop (&gt;=768px): Split navigation.
+- Left side: Links `Worlds`, `Atelier`, `Immersions`.
+- Center: SVG Star Logo (clean star shape in path `M14 2l2.09 6.42H23l-5.45 ...` inside a `28x28` viewport).
+- Right side: Links `Craft`, `Codex`, `Connect`.
+- Mobile (&lt;768px): Centered star logo with an `Explore` link on the left and a `Connect` link on the right.
+- Link Styling: uppercase, `12px`, letter spacing `0.12em`, white color with `0.9` opacity, no text decoration.
+
+Scene 1: Hero Section (Entrance)
+- Opacity: Fades out smoothly on scroll: `clamp(1 - scrollProgress / 0.22, 0, 1)`.
+- Entrance Transition: Slide upward by `20px` on mount with opacity transition `0.9s ease` delayed by `300ms`.
+- Responsive Layout:
+- Mobile (&lt;768px): Center-aligned vertical column. Text is dark brown (`#3b1a0a`). Heading: `FALL › INTO REVERIE` (Viaoda Libre). Subheading paragraph (max-width `280px`). Below it, displays a single card with image `CARD_IMAGES[0]`, showing a rounded white play button icon and &quot;View Reel&quot;.
+- Tablet (768px - 1099px): Center-aligned column. Text is dark brown (`#3b1a0a`). Headline and paragraph (max-width `400px`). Shows all 3 cards in a horizontal row:
+- Card 3: Image `CARD_IMAGES[0]`, Play button + &quot;View Reel&quot;
+- Card 1: Image `CARD_IMAGES[1]`, &quot;32 World Patrons&quot; in large elegant text
+- Card 2: Image `CARD_IMAGES[2]`, Play button + &quot;View Reel&quot;
+- Desktop (&gt;=1100px): Split-screen horizontal layout. Text is white.
+- Left Container: Aligned to the left (top `46%`, left `60px`). Title: `FALL › INTO REVERIE` (Viaoda Libre). Subheading paragraph. Max-width `440px`.
+- Right Container: Aligned to the right (top `50%`, right `40px`). Row of 3 card containers (`158px x 158px`) with rounded corners (`28px`), bottom linear gradient, glassmorphic bottom blur (`backdropFilter: &#39;blur(6px)&#39;`), play icon buttons or patron metrics overlay.
+- Card Interactive Styling:
+- Backdrop blur filter on bottom labels: `backdropFilter: &#39;blur(6px)&#39;`, linear gradient to top `rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.18) 60%, transparent 100%`.
+- Slider Dots (Bottom Left):
+- Absolutely positioned at bottom left (`60px` desktop, centered mobile).
+- Renders 4 horizontal pill indicators: first indicator is wide (`28px`), other three are thin (`14px`), colored in white with opacities.
+- Scroll Cue (Descend):
+- Absolutely positioned at `bottom: 36px`, centered horizontally. Hidden on mobile.
+- Text: uppercase &quot;Descend&quot; in `10px`, letter-spacing `0.22em`, color `rgba(255,255,255,0.6)`.
+- Icon: A chevron SVG surrounded by a `34px x 34px` round circular border animated with the `bobUp 1.8s ease-in-out infinite` bounce animation.
+
+Scene 2: Call to Action (Forge Beyond)
+- Opacity: Fades in on scroll: `clamp((scrollProgress - 0.68) / 0.16, 0, 1)`.
+- Layout: Centered vertical flex container (`zIndex: 46`), active only when opacity is visible.
+- Content:
+- Centered text wrapper.
+- Heading: `FORGE BEYOND THE REAL` (Viaoda Libre, size clamp `38px` to `78px`, color `#ffffff`, letter spacing `0.03em`, line-height `1.05`, elegant text shadow `0 2px 20px rgba(0,0,0,0.4)`).
+- Paragraph: `Singular voyages to astonishing destinations, shaped for those who seek beauty beyond the ordinary and the known.` (Imprima, size `20px` desktop / `14px` mobile, max-width `480px` desktop / `260px` mobile, line-height `1.6`, color `rgba(255,255,255,0.82)`).
+```</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="motionz-premium-landing-page.html">MotionZ Premium Landing Page<small>Landing Page · landing-page</small></a><a href="future-state.html">Future-State<small>Landing Page · hero</small></a><a href="3d-story.html">3D Story<small>Landing Page · hero</small></a><a href="financial-suite.html">Financial Suite<small>Landing Page · hero</small></a><a href="prompt-hero.html">PROMPT<small>Landing Page · hero</small></a><a href="health-portal.html">Health Portal<small>Landing Page · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

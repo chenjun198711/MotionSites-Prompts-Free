@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nexar — Productivity 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色全屏背景视频上，白色药丸形导航栏与三栏响应式网格布局形成对比，任务卡片带有渐入上移动画，适合项目管理仪表盘。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/nexar-hero.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nexar — Productivity 提示词">
+<meta property="og:description" content="深色全屏背景视频上，白色药丸形导航栏与三栏响应式网格布局形成对比，任务卡片带有渐入上移动画，适合项目管理仪表盘。">
+<meta property="og:url" content="https://prompt-site.shop/p/nexar-hero.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Nexar","description":"深色全屏背景视频上，白色药丸形导航栏与三栏响应式网格布局形成对比，任务卡片带有渐入上移动画，适合项目管理仪表盘。","url":"https://prompt-site.shop/p/nexar-hero.html","inLanguage":"zh-CN","genre":"Productivity","dateCreated":"2026-07-14T02:55:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-productivity">Productivity</a></div><h1>Nexar</h1><div class="chip-row"><span class="chip">Productivity</span><span class="chip">mobile</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-07-14</span><span>正文：8,357 字符</span></div><div class="hero-media"><video src="../assets/previews/nexar-hero.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>深色全屏背景视频上，白色药丸形导航栏与三栏响应式网格布局形成对比，任务卡片带有渐入上移动画，适合项目管理仪表盘。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">PROMPT:
+
+Build a project management dashboard called &quot;Nexar&quot; using React, TypeScript, Tailwind CSS, Vite, and Lucide React icons. The design should have a fullscreen looping background video, a white pill-shaped header, a 3-column responsive grid layout, and task cards with staggered fade-up animations. Use Google Fonts &quot;Instrument Serif&quot; for display/serif text.
+
+BACKGROUND:
+
+A fullscreen looping .mp4 video plays behind all content. The video is fixed position, covers the entire viewport via object-cover, and sits at z-index: -10.
+
+Video URL:
+
+
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260403_054410_6b17f7f9-d11e-44f1-90b0-75ee563d1971.mp4
+Attributes: autoPlay, loop, muted, playsInline.
+
+FONTS:
+
+Load &quot;Instrument Serif&quot; (regular + italic) from Google Fonts in index.html:
+
+
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+Define a utility class .font-serif-display in index.css with font-family: &#39;Instrument Serif&#39;, serif;. Use this class for the brand name &quot;nexar&quot;, the greeting &quot;Hey, Alex!&quot;, and the &quot;Speak now to Nexar!&quot; heading.
+
+ANIMATIONS:
+
+Custom fadeUp keyframe animation defined in index.css:
+
+From: opacity: 0; transform: translateY(24px)
+To: opacity: 1; transform: translateY(0)
+Timing: 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards
+Class: .animate-fade-up (starts with opacity: 0)
+Each element has a staggered animationDelay via inline style prop, starting at 0s for the header and incrementing by ~0.05-0.1s per element (0s, 0.1s, 0.15s, 0.2s, 0.25s, 0.3s, 0.35s, 0.4s, 0.45s, 0.5s, 0.55s, 0.6s).
+LAYOUT:
+
+Root container: min-h-screen relative p-4 sm:p-6 lg:p-8 overflow-x-hidden
+Max width wrapper: max-w-[1800px] mx-auto
+Main grid: flex flex-col lg:grid lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-7
+Left column: lg:col-span-3
+Center column: lg:col-span-6 with inner width constrained to lg:w-[85%] xl:w-[85%] 2xl:w-[60%] centered
+Right column: lg:col-span-3
+HEADER (white pill bar):
+
+Full-width white rounded-full bar (bg-white rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-sm) containing:
+
+Left: A 5x5/6x6 black rounded-md square with a 2x2 grid of tiny white rounded dots inside, followed by the word &quot;nexar&quot; in text-2xl sm:text-3xl font-serif-display
+Center nav (hidden on mobile, hidden lg:flex): Links &quot;Workspace&quot; (active, black, font-medium), &quot;Actions&quot;, &quot;Performance&quot;, &quot;AI Insights&quot; (gray-500, hover gray-900)
+Right: A toggle pill (bg-gray-100 rounded-full) with &quot;Solo&quot; (inactive, gray) and &quot;Crew&quot; (active, bg-black text-white rounded-full) buttons, plus a black circle notification bell icon (filled white)
+SECTION HEADER ROW (below header):
+
+A row with border-b border-black/10 pb-4 sm:pb-6 mb-4 sm:mb-6 containing:
+
+Left (col-span-3): Orange-red gradient circle avatar (bg-gradient-to-br from-red-400 to-orange-500) with white User icon inside, plus &quot;Hey, Alex!&quot; in text-[28px] sm:text-[36px] lg:text-[42px] font-serif-display
+Center (col-span-6): &quot;Active Items&quot; text in text-[20px] sm:text-[24px] lg:text-[26px] tracking-[-0.04em]
+Right (col-span-3): &quot;Crew:&quot; label, 3 overlapping circular team member avatar images (-space-x-2), and &quot;+9&quot; counter
+Team member avatar image URLs:
+
+
+https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260403_075317_744395c6-7168-48c6-a1f6-5b9b7bd58f87.png&amp;w=1280&amp;q=85
+
+https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260403_075333_2caea84e-742e-4846-9284-ed8532c44c99.png&amp;w=1280&amp;q=85
+
+https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260403_075354_70a33cfd-3c9c-45ef-a7bb-d371cb8aa0af.png&amp;w=1280&amp;q=85
+LEFT COLUMN:
+
+Project Selector Pill: Light blue (bg-[#DBECFC]) rounded-full pill with a white circle containing a yellow X icon (two crossing lines, stroke #EAB308, strokeWidth 3.5), title &quot;Zenith Launch&quot;, subtitle &quot;Product &amp; Strategy&quot;, and a ChevronDown icon.
+
+Productivity Score: Giant number &quot;85%&quot; in text-[80px] sm:text-[100px] lg:text-[120px] xl:text-[140px] tracking-[-0.04em] with &quot;Current efficiency&quot; subtitle below.
+
+Sprint Metrics Card: Rounded card (rounded-[20px] sm:rounded-[28px]) with a background image:
+
+
+https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260403_055416_630ff6c1-4b72-4cb6-a563-0c7e41124fe1.png&amp;w=1280&amp;q=85
+(cover, top center). Contains &quot;Sprint Metrics&quot; header with an &quot;Analytics&quot; pill badge, three stat columns: &quot;26h / Sessions&quot;, &quot;11h / Standups&quot;, &quot;6h / Audits&quot;. Has an absolutely positioned white floating circle button at bottom center (-bottom-4 left-1/2 -translate-x-1/2) containing a pencil/edit SVG icon.
+
+CENTER COLUMN (3 TaskCards stacked vertically):
+
+Create a reusable TaskCard component in src/components/TaskCard.tsx. It accepts props: icon (Lucide icon component), title, tagText, tagColor (&#39;green&#39;|&#39;yellow&#39;|&#39;red&#39;), details (array of {label, value}), bottomLeftContent (ReactNode), buttonText, buttonVariant (&#39;dark&#39;|&#39;light&#39;|&#39;black&#39;), buttonIcon (optional ReactNode).
+
+TaskCard layout: White rounded card (bg-white rounded-[20px] sm:rounded-[28px] px-4 sm:px-6 py-4 sm:py-5 shadow-sm) with 3 rows separated by border-b border-black/10:
+
+Row 1: Icon + title (left) and colored pill tag (right)
+Row 2: 3-column detail grid (label in gray-500, value in gray-900 font-medium). Third detail column is narrower (flex-[0.5] max-w-[120px]).
+Row 3: Custom bottom-left content + action button
+Tag colors: green = bg-green-500 text-white, yellow = bg-yellow-400 text-gray-900, red = bg-red-500 text-white.
+
+Button variants: dark = bg-[#ECECEC] text-gray-900, black = bg-black text-white, light = bg-gray-100 text-gray-900.
+
+Card 1 - &quot;Sprint Planning Call&quot;:
+
+Icon: Phone, Tag: &quot;Session&quot; (green)
+Details: Time: &quot;Today: 10:00 AM&quot;, With: &quot;Product &amp; Growth&quot;, Alert: &quot;15 min&quot;
+Bottom: 3 overlapping avatar images + &quot;+7&quot; + &quot;Set to begin?&quot; text
+Button: &quot;Enter session&quot; (dark variant)
+No rotation
+Card 2 - &quot;Layout Critique&quot;:
+
+Icon: BarChart2, Tag: &quot;Action&quot; (yellow)
+Details: Focus: &quot;Zenith Platform&quot;, Details: &quot;Verify the layout of landing screen&quot;, Due By: &quot;Mar 22&quot;
+Bottom: &quot;Assignees:&quot; label + 2 overlapping avatar images
+Button: &quot;Let AI begin&quot; (black variant) with Sparkles icon
+Rotated 2 degrees clockwise (rotate-[2deg])
+Card 3 - &quot;Zenith Crew Check&quot;:
+
+Icon: Phone, Tag: &quot;Session&quot; (green)
+Details: Time: &quot;Fri: 5:30 PM&quot;, With: &quot;Sales Lead &amp; Team&quot;, Alert: &quot;10 min&quot;
+Bottom: 3 overlapping avatar images + &quot;+5&quot; + &quot;Scheduled&quot; text
+Button: &quot;Show details&quot; (light variant)
+No rotation
+RIGHT COLUMN:
+
+Fast Commands List: Title row with star emoji in white circle + &quot;Fast commands&quot; heading (text-[20px] sm:text-[24px] lg:text-[26px] xl:text-[30px] tracking-[-0.04em]) + &quot;+ Add Item&quot; button. Three list items separated by border-t border-black/10, each with description text and a filled Play icon (Lucide Play with fill-gray-700):
+
+&quot;Review session notes and extract key discussion insights&quot;
+&quot;Generate PDF report with finished items from this week&quot;
+&quot;Update timeline view based on revised action items in sprint&quot;
+Voice Input Card: Light blue (bg-[#DBECFC]) rounded card with &quot;Audio Input&quot; blue pill badge (bg-blue-500 text-white), &quot;Speak now to Nexar!&quot; heading in font-serif-display, and a waveform visualization made of 35 thin vertical bars (w-0.5 bg-blue-400 rounded-full) with varying heights: [8, 16, 12, 28, 20, 36, 42, 24, 40, 16, 44, 32, 48, 28, 20, 36, 14, 32, 22, 40, 18, 30, 12, 26, 16, 34, 20, 38, 24, 28, 16, 22, 12, 20, 8] each multiplied by 0.8 for pixel height. Has a floating white circle microphone button at bottom center (same positioning as Sprint Metrics card).
+
+DEPENDENCIES:
+
+react, react-dom (^18.3.1)
+lucide-react (^0.344.0) -- icons used: ChevronDown, User, ChevronRight, Mic, Phone, Bell, Play, BarChart2, Sparkles
+@supabase/Bolt Database-js (^2.57.4)
+tailwindcss (^3.4.1), postcss, autoprefixer
+Vite (^5.4.2), @vitejs/plugin-react
+TypeScript
+Vite config: Exclude lucide-react from optimizeDeps.
+
+Tailwind config: Default with content scanning ./index.html and ./src/**/*.{js,ts,jsx,tsx}.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><p class="muted">暂无同分类条目。</p><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cybersecurity Hero — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色背景上的网络安全产品落地页，包含渐变粉紫弧线装饰的圆角卡片、动态图标流水线和五枚单色品牌标志。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/cybersecurity-hero.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cybersecurity Hero — Hero Section 提示词">
+<meta property="og:description" content="深色背景上的网络安全产品落地页，包含渐变粉紫弧线装饰的圆角卡片、动态图标流水线和五枚单色品牌标志。">
+<meta property="og:url" content="https://prompt-site.shop/p/cybersecurity-hero.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/cybersecurity-hero.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Cybersecurity Hero","description":"深色背景上的网络安全产品落地页，包含渐变粉紫弧线装饰的圆角卡片、动态图标流水线和五枚单色品牌标志。","url":"https://prompt-site.shop/p/cybersecurity-hero.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-05-01T08:35:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Cybersecurity Hero</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-05-01</span><span>正文：11,772 字符</span></div><div class="hero-media"><img src="../assets/previews/cybersecurity-hero.webp" alt="Cybersecurity Hero 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色背景上的网络安全产品落地页，包含渐变粉紫弧线装饰的圆角卡片、动态图标流水线和五枚单色品牌标志。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a **single-page React + TypeScript (Vite)** landing hero for a product called **&quot;Xero&quot;** that recreates the following section exactly. Use the **Inter** Google Font (weights 300, 400, 500, 600, 700, 800). Do not use Tailwind utility classes for the hero — write plain CSS in a global stylesheet. No purple/indigo branding outside the specified pink-magenta gradient arc.
+
+## Layout &amp; Structure
+
+Render three top-level blocks centered on a black page (`#0a0a0f`), each constrained to `max-width: 1600px`, in this vertical order:
+
+1. **`&lt;nav&gt;`** — sticky-style top bar (not actually sticky, just at top)
+2. **`&lt;section class=&quot;hero-card&quot;&gt;`** — the rounded dark hero card with the animated icon pipeline
+3. **`&lt;div class=&quot;brands&quot;&gt;`** — a row of 5 monochrome brand logos
+
+The body uses `display: flex; flex-direction: column; align-items: center; padding: 14px;` and `font-family: &#39;Inter&#39;, sans-serif;`.
+
+### CSS Variables (on `:root`)
+```
+--bg: #0a0a0f;
+--surface: #111118;
+--text: #f0f0f5;
+--text-muted: #8888a8;
+--accent: #c8a0e0;
+--accent-pink: #b04090;
+--border: rgba(255, 255, 255, 0.08);
+```
+
+## NAVBAR
+
+- Grid layout: `grid-template-columns: 1fr auto 1fr; padding: 12px 24px; margin-bottom: 14px;`
+- **Left**: `&lt;span class=&quot;nav-logo&quot;&gt;Xero&lt;/span&gt;` — `font-size: 1.05rem; font-weight: 700; letter-spacing: -0.01em;`
+- **Center**: `&lt;ul class=&quot;nav-links&quot;&gt;` with three `&lt;a&gt;` items: **Method**, **Pricing**, **Docs**. Color `--text-muted`, `font-size: 0.85rem`, gap 32px, hover transitions to `--text` over 0.2s.
+- **Right**: `&lt;div class=&quot;nav-actions&quot;&gt;` containing two pill buttons:
+- `.btn-login` — `rgba(255,255,255,0.06)` bg, 1px border `--border`, white text, padding `7px 18px`, `border-radius: 999px`, `font-size: 0.82rem`, `font-weight: 500`. Hover: bg `rgba(255,255,255,0.12)`.
+- `.btn-signup` — solid white bg, black `#0a0a0f` text, same dimensions, `font-weight: 600`. Hover: `opacity: 0.88`.
+- The `.nav-menu` wrapper uses `display: contents` on desktop so the `ul` and actions become direct grid children.
+
+### Mobile (≤ 768px)
+- Nav becomes flex with space-between.
+- A `.menu-toggle` hamburger appears: 24×14 button with two 2px-tall white spans. When `.active`, span 1 rotates `translateY(6px) rotate(45deg)` and span 2 rotates `translateY(-6px) rotate(-45deg)` to form an X.
+- `.nav-menu.active` slides in from `right: -100%` to `right: 0` over 0.4s `cubic-bezier(0.4, 0, 0.2, 1)` as a full-screen `var(--bg)` overlay with column-stacked links and full-width buttons.
+- Toggling sets `document.body.style.overflow = &#39;hidden&#39;`.
+
+## HERO CARD
+
+Outer `.hero-card` styles:
+- `width: 100%; max-width: 1600px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.07); overflow: hidden; position: relative; background: #0d0b12; padding: 80px 40px 70px; min-height: 640px;`
+- `display: flex; flex-direction: column; align-items: center; text-align: center;`
+
+### `::before` Gradient Arc (the signature visual)
+A radial gradient positioned at `50% -70%` with **many manually-tuned stops** producing a smooth dark→pink→white arc near the top:
+```
+background:
+radial-gradient(circle at 50% -70%,
+transparent 60%,
+rgba(176,48,136,0.03) 63%,
+rgba(176,48,136,0.08) 65%,
+rgba(176,48,136,0.16) 67%,
+rgba(176,48,136,0.28) 69%,
+rgba(176,48,136,0.40) 71%,
+rgba(176,48,136,0.52) 73%,
+rgba(176,48,136,0.64) 75%,
+rgba(176,48,136,0.74) 77%,
+rgba(176,48,136,0.82) 79%,
+rgba(210,70,175,0.92) 85%,
+rgba(240,110,210,0.88) 87%,
+rgba(255,205,250,0.92) 91%,
+rgba(255,240,255,0.98) 93%,
+#ffffff 95%),
+radial-gradient(circle at 50% 35%, rgba(120,40,180,0.08) 0%, transparent 50%);
+z-index: 0; pointer-events: none;
+```
+
+### `.hero-grid` Overlay
+A separate absolutely-positioned div with crosshatch grid:
+```
+background-image:
+linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
+background-size: 40px 40px;
+mask-image: radial-gradient(circle at 50% -70%, transparent 60%, black 78%);
+```
+This makes the grid only visible inside the arc area.
+
+## ICON PIPELINE (the animated centerpiece)
+
+Container `.icon-pipeline`: `position: relative; display: flex; align-items: center; justify-content: center; max-width: 700px; margin-bottom: 52px; z-index: 1;`
+
+Children in this exact order:
+
+1. **`&lt;svg class=&quot;beam-svg&quot;&gt;`** — absolutely-positioned over the whole pipeline (`overflow: visible`), containing:
+- A `&lt;filter id=&quot;glow&quot;&gt;` with `feGaussianBlur stdDeviation=&quot;2&quot;` then `feComposite ... operator=&quot;over&quot;`.
+- A `&lt;linearGradient id=&quot;beam-gradient&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;` with stops:
+- `0%` `#b04090` opacity 0
+- `20%` `#b04090` opacity 0.8
+- `50%` `#fff` opacity 1
+- `80%` `#c8a0e0` opacity 0.8
+- `100%` `#c8a0e0` opacity 0
+- Two `&lt;path&gt;` elements both stroked with `url(#beam-gradient)`:
+- Glow path: `stroke-width=&quot;2&quot;`, `filter=&quot;url(#glow)&quot;`, `opacity: 0.6`.
+- Core path: `stroke-width=&quot;0.8&quot;`.
+
+2. **Left node** `.icon-node.node-light-right` (id `node-stack`) — Lucide-style **layers** SVG (3 stacked diamonds): `&lt;polygon points=&quot;12 2 2 7 12 12 22 7 12 2&quot;/&gt;&lt;polyline points=&quot;2 17 12 22 22 17&quot;/&gt;&lt;polyline points=&quot;2 12 12 17 22 12&quot;/&gt;`.
+
+3. **`.pipeline-line`** — `width: 160px; height: 1px;` linear gradient `90deg, rgba(255,255,255,0.15), rgba(255,255,255,0.07)`.
+
+4. **Center wrapper** with `position: relative;` containing:
+- **`.splash`** — 100×100 absolutely centered, `border-radius: 50%`, `background: radial-gradient(circle, rgba(255,77,200,0.6) 0%, transparent 70%)`, initial `opacity: 0; transform: scale(0.4); z-index: 2;`
+- **`.icon-node-center`** (id `node-x`) — 64×64 round, `background: #1e1e2c`, neumorphic shadow (see below), containing the **Xero &quot;X&quot; logoipsum** SVG (`viewBox=&quot;0 0 40 40&quot;`) — the multi-cut path provided in the source.
+
+5. **`.pipeline-line.right`** — same 160×1 line, gradient reversed.
+
+6. **Right node** `.icon-node.node-light-left` (id `node-shield`) — Lucide-style **shield-check** SVG: `&lt;path d=&quot;M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z&quot;/&gt;&lt;polyline points=&quot;9 12 11 14 15 10&quot;/&gt;`.
+
+### Side Node Styling
+`.icon-node`: 46×46 round, `background: #1a1a24`, `cursor: pointer`, `z-index: 3`, with **neumorphic** shadow stack:
+```
+box-shadow:
+6px 6px 12px rgba(0,0,0,0.4),
+-4px -4px 10px rgba(255,255,255,0.03),
+inset 1px 1px 1px rgba(255,255,255,0.05),
+inset 4px 4px 8px rgba(0,0,0,0.4);
+```
+Plus an `::after` dotted outer ring at `inset: -7px` (`border: 1px dotted #1a1a24`).
+Hover: `translateY(-1px)` and stronger shadows. Active: inset-only shadows.
+Inner SVG: 20×20, stroke `rgba(255,255,255,0.7)`, `stroke-width: 1.5`, fill none, round caps.
+
+### Center Node Styling
+`.icon-node-center`: 64×64, `background: #1e1e2c`, similar but stronger neumorphic shadow:
+```
+8px 8px 16px rgba(0,0,0,0.5),
+-6px -6px 14px rgba(255,255,255,0.04),
+inset 1px 1px 2px rgba(255,255,255,0.06),
+inset 6px 6px 12px rgba(0,0,0,0.5);
+```
+Inner Xero SVG: 28×28, `fill: white`.
+
+### Side-Light Glows
+- `.node-light-right::before` — half-circle radial glow on the right side: `radial-gradient(circle at right, rgba(200,200,200,0.45) 0%, transparent 70%)`, `opacity: 0` default, `opacity: 1` when `.active` (300ms transition).
+- `.node-light-left::before` — same but on left, color `rgba(200,100,255,0.5)`.
+
+### Splash Keyframe
+```
+@keyframes splash-anim {
+0% { transform: scale(0.4); opacity: 0.8; }
+40% { opacity: 0.6; }
+100% { transform: scale(1.4); opacity: 0; }
+}
+```
+Triggered by adding `.animate` (0.8s ease-out forwards).
+
+## BEAM ANIMATION (JavaScript / requestAnimationFrame)
+
+Implement a state machine with four phases. On mount and on every window `resize`, recompute the SVG path:
+
+```
+const pRect = pipeline.getBoundingClientRect();
+const sRect = nodeStack.getBoundingClientRect();
+const xRect = nodeX.getBoundingClientRect();
+const shRect = nodeShield.getBoundingClientRect();
+const startX = sRect.left + sRect.width/2 - pRect.left;
+const startY = sRect.top + sRect.height/2 - pRect.top;
+// midX/midY from nodeX, endX/endY from nodeShield
+const d = `M ${startX},${startY} L ${midX},${midY} L ${endX},${endY}`;
+```
+Set this `d` on **both** beam paths.
+
+The gradient is animated by mutating `x1` / `x2` of `#beam-gradient` (in `userSpaceOnUse`) so the bright window slides along. Use `halfWidth = 5` (percentage units), `center = percentage * 100`:
+```
+gradient.x1 = (center - 5) + &#39;%&#39;
+gradient.x2 = (center + 5) + &#39;%&#39;
+y1 = y2 = &#39;0%&#39;
+```
+
+State machine in a `requestAnimationFrame` loop, tracking `lastStateChange` timestamp:
+
+| State | Duration | Behavior |
+|---|---|---|
+| **`p1`** | 800 ms | `percentage` interpolates `0 → 0.5`. While `p &lt; 0.4`, add `.active` to `node-stack`; remove after. At end: switch to `splash`, hide both beam paths (`opacity: 0`), add `.animate` to splash. |
+| **`splash`** | 800 ms | Wait. After elapsed: switch to `p2`, remove `.animate`, restore `opacity: 1` on both beam paths. |
+| **`p2`** | 800 ms | `percentage` interpolates `0.5 → 1.0`. While `p &gt; 0.6`, add `.active` to `node-shield`. At end: remove `.active`, switch to `idle`. |
+| **`idle`** | 1000 ms | Wait, then loop back to `p1`. |
+
+Total cycle ≈ 3.4 seconds, infinite.
+
+## HERO TEXT
+
+`.hero-content` `max-width: 620px; z-index: 1;`
+
+```html
+&lt;h1 class=&quot;hero-heading&quot;&gt;
+The simple way
+&lt;strong&gt;encryption your data&lt;/strong&gt;
+&lt;/h1&gt;
+&lt;p class=&quot;hero-sub&quot;&gt;
+Fully managed data encrypting service and annotation&lt;br&gt;
+platform for teams of all industries.
+&lt;/p&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn-cta&quot;&gt;Get Started&lt;/a&gt;
+```
+
+- `.hero-heading`: `font-size: clamp(2.4rem, 5.5vw, 4rem); font-weight: 300; line-height: 1.1; letter-spacing: -0.02em;`
+- `.hero-heading strong`: `display: block; font-weight: 400; margin-top: 4px;` with `background: linear-gradient(to right, #ffffff, #a98597); -webkit-background-clip: text; -webkit-text-fill-color: transparent;`
+- `.hero-sub`: 0.9rem, `rgba(255,255,255,0.4)`, `max-width: 440px`, `margin: 0 auto 36px`.
+- `.btn-cta`: white pill, black text, `padding: 12px 32px; border-radius: 999px; font-weight: 600;`. Hover: `opacity: 0.9; translateY(-1px)`.
+
+## BRANDS ROW
+
+`.brands`: flex row, `gap: 64px; padding: 32px 24px 10px; flex-wrap: wrap; justify-content: center;`
+
+Five `.brand-item` blocks (each: flex, gap 10, color `rgba(255,255,255,0.35)`, font-size 1.1rem, font-weight 500, white-space nowrap, with a 22×22 SVG):
+
+1. **Expedia** — `&lt;circle cx=12 cy=12 r=10 fill=current /&gt;&lt;path fill=&quot;var(--bg)&quot; d=&quot;M8 9h8v2H8zm0 4h6v2H8z&quot;/&gt;` then text `Expedia`.
+2. **asana** — three filled circles: `(12,7,r=4)`, `(5,16,r=3.5)`, `(19,16,r=3.5)`, text `asana`.
+3. **zenefits** — three stroked horizontal polylines (lengths 16/8/16) at y=8/12/16, text `zenefits`.
+4. **HubSpot** — small filled circle `(15.5,8.5,r=2.5)`, stroked circle `(8.5,8.5,r=2)`, paths connecting them; text `HubSp&lt;span class=&quot;hubspot-dot&quot;&gt;&lt;/span&gt;t` where `.hubspot-dot` is a 6×6 round superscript dot.
+5. **loom** — circle `(12,12,r=9)` plus vertical/horizontal/diagonal stroke lines forming a globe-with-X, text `loom`.
+
+## Responsive Breakpoints
+
+- `≤ 860px`: pipeline `gap: 0; margin-bottom: 40px;` `.pipeline-line { width: 80px }`.
+- `≤ 768px`: enable mobile hamburger menu, `.icon-node` shrinks to 38×38, `.icon-node-center` to 52×52, `.hero-card { padding: 60px 20px 60px; min-height: auto }`, `.brands { gap: 32px }`.
+- `≤ 480px`: `.hero-card { border-radius: 16px }`, `.brands { gap: 24px }`.
+
+## Z-Index Stack (critical for splash/beam layering)
+
+- `0` — gradient arc + grid overlay
+- `1` — pipeline container, hero text
+- `2` — beam SVG, splash
+- `3` — all icon nodes
+- `4` — node side-light glows
+- `1000-1001` — mobile nav overlay and toggle
+
+Implement all of the above exactly. Use `useRef` for the pipeline, the three nodes, both beam paths, the gradient, and the splash. Use one `useEffect` to set up the resize listener and the `requestAnimationFrame` loop, and clean both up on unmount.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

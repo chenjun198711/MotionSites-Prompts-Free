@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apex Program Accordion — Components 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色背景的课程大纲手风琴组件，使用Material Symbols图标和framer-motion动画，展示可展开的课程模块列表。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/apex-program-accordion.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Apex Program Accordion — Components 提示词">
+<meta property="og:description" content="深色背景的课程大纲手风琴组件，使用Material Symbols图标和framer-motion动画，展示可展开的课程模块列表。">
+<meta property="og:url" content="https://prompt-site.shop/p/apex-program-accordion.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/apex-program-accordion.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Apex Program Accordion","description":"深色背景的课程大纲手风琴组件，使用Material Symbols图标和framer-motion动画，展示可展开的课程模块列表。","url":"https://prompt-site.shop/p/apex-program-accordion.html","inLanguage":"zh-CN","genre":"Components","dateCreated":"2026-06-04T07:31:26.024602+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-components">Components</a></div><h1>Apex Program Accordion</h1><div class="chip-row"><span class="chip">Components</span><span class="chip">faq</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-04</span><span>正文：11,996 字符</span></div><div class="hero-media"><img src="../assets/previews/apex-program-accordion.webp" alt="Apex Program Accordion 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色背景的课程大纲手风琴组件，使用Material Symbols图标和framer-motion动画，展示可展开的课程模块列表。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text"># Recreate the &quot;Course Curriculum&quot; Section — Exact Prompt
+
+Build a React + TypeScript + TailwindCSS section called `CurriculumSection` that exactly matches the spec below.
+
+## Stack &amp; Global Setup
+
+- React 18 + Vite + TypeScript
+- TailwindCSS with HSL semantic tokens
+- `framer-motion` for animations
+- `clsx` + `tailwind-merge` exposed as `cn()` helper in `@/lib/utils`
+- Dark theme background: `#000000` (or whatever the page bg is; section uses `bg-background`)
+- Body font: **Inter** (loaded globally)
+- Icon font: **Material Symbols Outlined** (loaded globally via Google Fonts link, with variable axes FILL, wght, GRAD, opsz)
+- Tailwind token: `colors.landing.surface = &quot;rgba(255,255,255,0.10)&quot;`
+- Foreground text token resolves to white/near-white via HSL
+
+```html
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&quot; rel=&quot;stylesheet&quot; /&gt;
+```
+
+## Helper Components (exact code)
+
+### `cn` helper — `@/lib/utils.ts`
+```ts
+import { clsx, type ClassValue } from &quot;clsx&quot;;
+import { twMerge } from &quot;tailwind-merge&quot;;
+export function cn(...inputs: ClassValue[]) { return twMerge(clsx(inputs)); }
+```
+
+### `MIcon` — Material Symbols icon (`@/components/landing/icons/MIcon.tsx`)
+```tsx
+import { CSSProperties } from &quot;react&quot;;
+interface MIconProps { name: string; size?: number; className?: string; filled?: boolean; weight?: number; style?: CSSProperties; }
+export const MIcon = ({ name, size = 16, className = &quot;&quot;, filled = false, weight = 400, style }: MIconProps) =&gt; (
+&lt;span aria-hidden=&quot;true&quot;
+className={`material-symbols-outlined select-none leading-none inline-flex items-center justify-center ${className}`}
+style={{
+fontSize: size, width: size, height: size,
+fontVariationSettings: `&#39;FILL&#39; ${filled ? 1 : 0}, &#39;wght&#39; ${weight}, &#39;GRAD&#39; 0, &#39;opsz&#39; ${Math.min(48, Math.max(20, size))}`,
+...style,
+}}&gt;{name}&lt;/span&gt;
+);
+```
+
+### `FadeUp` — scroll reveal (`@/components/landing/primitives/FadeUp.tsx`)
+- Uses `framer-motion` `motion.div` with `initial={{opacity:0, y:24}}`, `whileInView={{opacity:1, y:0}}`, `viewport={{ once:true, amount:0.3 }}`, transition `{ duration:0.6, delay, ease:[0.22,1,0.36,1] }`
+- Honors `prefers-reduced-motion` (skip the y translate)
+- Props: `delay`, `duration=0.6`, `y=24`, `once=true`, `amount=0.3`, `className`, children
+
+### `SpotlightBorder` — mouse-tracked 1px gradient border (`@/components/landing/effects/SpotlightBorder.tsx`)
+- A wrapper with `padding: 1px` whose background is a radial gradient following the cursor.
+- Uses CSS masks (`linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)` with `mask-composite: exclude` / `-webkit-mask-composite: xor`) so only the 1px border ring is visible.
+- A global `window` `mousemove` listener writes `--spot-x` / `--spot-y` CSS variables on the element via `getBoundingClientRect()`.
+- Background style:
+```
+radial-gradient(${size}px circle at var(--spot-x,-200px) var(--spot-y,-200px), rgba(255,255,255,${intensity}), rgba(255,255,255,0) 60%)
+```
+- Props: `radius` (&#39;xl&#39;|&#39;2xl&#39;|&#39;3xl&#39;|&#39;full&#39;, default &#39;3xl&#39;), `size` (default 300), `intensity` (default 0.35), `as` (&#39;div&#39;|&#39;button&#39;|&#39;section&#39;), `className`, children.
+- Renders the parent `Tag` with `relative` + `rounded-*`, and an absolutely-positioned `&lt;span aria-hidden&gt;` filling `inset-0` with the mask style above.
+
+## Section: `CurriculumSection`
+
+File: `src/components/landing/curriculum/CurriculumSection.tsx`
+
+### Data (verbatim)
+```ts
+const modules = [
+{ title: &quot;Module 1&quot;, subtitle: &quot;Foundations of AI Design&quot;,
+lessons: [
+&quot;Intro to The Future of Design and Building, how it started and where it&#39;s going.&quot;,
+&quot;AI Design Philosophy / Why and what makes good AI design&quot;,
+&quot;What is Claude and 10+ other best AI tools for design&quot;,
+&quot;Setting up Claude&quot;,
+]},
+{ title: &quot;Module 2&quot;, subtitle: &quot;Building with AI&quot;,
+lessons: [
+&quot;Creating the Branding/Logo with AI&quot;,
+&quot;Pitch Deck Build&quot;,
+&quot;Landing Page wireframes&quot;,
+&quot;Design a Landing Page with AI&quot;,
+&quot;Building High-end web app&quot;,
+&quot;GitHub &amp; Vercel Deploy&quot;,
+&quot;Creating social media design with AI&quot;,
+]},
+{ title: &quot;Module 3&quot;, subtitle: &quot;Launch &amp; Growth&quot;,
+lessons: [
+&quot;Getting Seen, Launch Videos&quot;,
+&quot;Building a portfolio&quot;,
+&quot;X (Twitter) Strategy for Designers&quot;,
+&quot;Making money selling digital products as a designer&quot;,
+]},
+{ title: &quot;Module 4&quot;, subtitle: &quot;Making Money as an AI Designer&quot;,
+lessons: [
+&quot;Finding Clients + Making Money&quot;,
+&quot;How to Make Clients Find You&quot;,
+&quot;Selling AI Powered templates&quot;,
+]},
+];
+```
+
+### Layout &amp; Structure
+
+- `&lt;section&gt;` root: `relative w-full bg-background py-12 sm:py-16`
+- Inner container: `mx-auto max-w-[1080px] px-4 sm:px-6`
+
+**Header (centered, mb-12):**
+- Pill badge wrapped in `&lt;FadeUp delay={0}&gt;`:
+- `inline-flex items-center gap-2 rounded-full bg-landing-surface border border-white/10 px-3 py-1 text-xs text-foreground/80 backdrop-blur`
+- Inside: `&lt;span class=&quot;h-1.5 w-1.5 rounded-full bg-foreground/70&quot; /&gt;` then text `&quot;Course Curriculum&quot;`
+- `mb-6`
+- Heading in `&lt;FadeUp delay={0.1}&gt;`:
+- `&lt;h2 class=&quot;text-3xl sm:text-4xl font-normal tracking-[-0.02em] leading-[1.05] text-foreground&quot;&gt;A fully modern curriculum.&lt;/h2&gt;`
+
+**Accordion container:**
+- `&lt;SpotlightBorder radius=&quot;2xl&quot; size={520} intensity={0.5} className=&quot;mx-auto w-full p-2 sm:p-3&quot;&gt;`
+- Inside: a div `rounded-2xl border border-white/10 px-6 sm:px-8` with inline style `backgroundColor: &quot;#161616&quot;`
+- Map `modules`, each wrapped in `&lt;FadeUp delay={0.15 * i} className=&quot;border-b border-white/10 last:border-b-0&quot;&gt;` containing the `ModuleAccordion`.
+
+### `ModuleAccordion` component (inside same file)
+
+State: `openIndex` (number|null) controlled by parent; initial value `0` (Module 1 open on mount). Click toggles: open if closed, close if same index.
+
+**Header button** (`&lt;button&gt;` full width):
+- Class: `flex w-full items-center justify-between gap-4 py-6 text-left`
+- Left content (div):
+- Eyebrow: `&lt;div class=&quot;text-[11px] uppercase tracking-[0.2em] text-foreground/50&quot;&gt;{title}&lt;/div&gt;`
+- Subtitle: `&lt;div class=&quot;mt-2 text-lg sm:text-xl font-normal text-foreground&quot;&gt;{subtitle}&lt;/div&gt;`
+- Right icon container:
+- `flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.04] transition-transform duration-300`
+- When open: add `rotate-180`
+- Icon: `&lt;MIcon name=&quot;expand_more&quot; size={16} className=&quot;text-foreground/80&quot; /&gt;`
+
+**Collapse body:**
+- Wrap in `&lt;AnimatePresence initial={false}&gt;`
+- When open, render `motion.div` with:
+- `initial={{ height: 0, opacity: 0 }}`
+- `animate={{ height: &quot;auto&quot;, opacity: 1 }}`
+- `exit={{ height: 0, opacity: 0 }}`
+- `transition={{ duration: 0.3, ease: &quot;easeInOut&quot; }}`
+- `className=&quot;overflow-hidden&quot;`
+- Inside: `&lt;ul class=&quot;pb-6&quot;&gt;` mapping each lesson:
+- `&lt;li class=&quot;flex items-center gap-3 border-t border-white/10 py-4 text-sm text-foreground/85&quot;&gt;`
+- Check bullet: `&lt;span class=&quot;flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/[0.06]&quot;&gt;&lt;MIcon name=&quot;check&quot; size={12} className=&quot;text-foreground&quot; /&gt;&lt;/span&gt;`
+- Lesson text follows the bullet.
+
+### Behavior Specs
+- Module 1 starts open on first render.
+- Only one module open at a time. Clicking the open module closes it (openIndex set to null).
+- The chevron rotates 180° smoothly (300ms) when its module opens.
+- Collapse animates height + opacity over 300ms easeInOut.
+- The whole accordion card has a 1px border that picks up a soft white glow following the cursor anywhere on the page (SpotlightBorder, size=520, intensity=0.5).
+- Pill, heading, and each module row fade up on scroll (intersection ≥30%, fires once). Modules stagger by 0.15s per index.
+
+### Tailwind config additions
+```ts
+// tailwind.config.ts theme.extend.colors
+landing: { surface: &quot;rgba(255, 255, 255, 0.10)&quot; }
+```
+Background tokens (`bg-background`, `text-foreground`) come from your HSL CSS variables in `index.css`.
+
+## Full Component Source (drop-in)
+
+```tsx
+import { useState } from &quot;react&quot;;
+import { motion, AnimatePresence } from &quot;framer-motion&quot;;
+import { cn } from &quot;@/lib/utils&quot;;
+import { MIcon } from &quot;@/components/landing/icons/MIcon&quot;;
+import { SpotlightBorder } from &quot;@/components/landing/effects/SpotlightBorder&quot;;
+import { FadeUp } from &quot;@/components/landing/primitives/FadeUp&quot;;
+
+type Module = { title: string; subtitle: string; lessons: string[] };
+
+const modules: Module[] = [ /* ...data above verbatim... */ ];
+
+const ModuleAccordion = ({ module, isOpen, onToggle }:{
+module: Module; isOpen: boolean; onToggle: () =&gt; void;
+}) =&gt; (
+&lt;div&gt;
+&lt;button onClick={onToggle} className=&quot;flex w-full items-center justify-between gap-4 py-6 text-left&quot;&gt;
+&lt;div&gt;
+&lt;div className=&quot;text-[11px] uppercase tracking-[0.2em] text-foreground/50&quot;&gt;{module.title}&lt;/div&gt;
+&lt;div className=&quot;mt-2 text-lg sm:text-xl font-normal text-foreground&quot;&gt;{module.subtitle}&lt;/div&gt;
+&lt;/div&gt;
+&lt;div className={cn(&quot;flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.04] transition-transform duration-300&quot;, isOpen &amp;&amp; &quot;rotate-180&quot;)}&gt;
+&lt;MIcon name=&quot;expand_more&quot; size={16} className=&quot;text-foreground/80&quot; /&gt;
+&lt;/div&gt;
+&lt;/button&gt;
+&lt;AnimatePresence initial={false}&gt;
+{isOpen &amp;&amp; (
+&lt;motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: &quot;auto&quot;, opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3, ease: &quot;easeInOut&quot; }} className=&quot;overflow-hidden&quot;&gt;
+&lt;ul className=&quot;pb-6&quot;&gt;
+{module.lessons.map((lesson, i) =&gt; (
+&lt;li key={i} className=&quot;flex items-center gap-3 border-t border-white/10 py-4 text-sm text-foreground/85&quot;&gt;
+&lt;span className=&quot;flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/[0.06]&quot;&gt;
+&lt;MIcon name=&quot;check&quot; size={12} className=&quot;text-foreground&quot; /&gt;
+&lt;/span&gt;
+{lesson}
+&lt;/li&gt;
+))}
+&lt;/ul&gt;
+&lt;/motion.div&gt;
+)}
+&lt;/AnimatePresence&gt;
+&lt;/div&gt;
+);
+
+export const CurriculumSection = () =&gt; {
+const [openIndex, setOpenIndex] = useState&lt;number | null&gt;(0);
+return (
+&lt;section className=&quot;relative w-full bg-background py-12 sm:py-16&quot;&gt;
+&lt;div className=&quot;mx-auto max-w-[1080px] px-4 sm:px-6&quot;&gt;
+&lt;div className=&quot;mb-12 flex flex-col items-center text-center&quot;&gt;
+&lt;FadeUp delay={0}&gt;
+&lt;span className=&quot;mb-6 inline-flex items-center gap-2 rounded-full bg-landing-surface border border-white/10 px-3 py-1 text-xs text-foreground/80 backdrop-blur&quot;&gt;
+&lt;span className=&quot;h-1.5 w-1.5 rounded-full bg-foreground/70&quot; /&gt;
+Course Curriculum
+&lt;/span&gt;
+&lt;/FadeUp&gt;
+&lt;FadeUp delay={0.1}&gt;
+&lt;h2 className=&quot;text-3xl sm:text-4xl font-normal tracking-[-0.02em] leading-[1.05] text-foreground&quot;&gt;
+A fully modern curriculum.
+&lt;/h2&gt;
+&lt;/FadeUp&gt;
+&lt;/div&gt;
+&lt;SpotlightBorder radius=&quot;2xl&quot; size={520} intensity={0.5} className=&quot;mx-auto w-full p-2 sm:p-3&quot;&gt;
+&lt;div className=&quot;rounded-2xl border border-white/10 px-6 sm:px-8&quot; style={{ backgroundColor: &quot;#161616&quot; }}&gt;
+{modules.map((m, i) =&gt; (
+&lt;FadeUp key={m.title} delay={0.15 * i} className=&quot;border-b border-white/10 last:border-b-0&quot;&gt;
+&lt;ModuleAccordion module={m} isOpen={openIndex === i} onToggle={() =&gt; setOpenIndex(openIndex === i ? null : i)} /&gt;
+&lt;/FadeUp&gt;
+))}
+&lt;/div&gt;
+&lt;/SpotlightBorder&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+);
+};
+```
+
+## Acceptance Checklist
+- [ ] Centered pill &quot;● Course Curriculum&quot; + heading &quot;A fully modern curriculum.&quot; (Inter, normal weight, tight tracking)
+- [ ] Card bg `#161616`, 1px white/10 border, rounded-2xl, mouse-tracked spotlight glow on border (size 520, intensity 0.5)
+- [ ] 4 module rows separated by `border-white/10`, last row no border
+- [ ] Each row: tiny uppercase eyebrow &quot;Module N&quot; (tracking 0.2em, foreground/50) + subtitle (text-lg sm:text-xl)
+- [ ] Right-side 36px circular chevron button, rotates 180° on open (300ms)
+- [ ] Module 1 open by default; only one open at a time; click open module to close
+- [ ] Lessons list inside collapse: each lesson row separated by top border, 20px circular check bullet, text-sm foreground/85
+- [ ] Collapse animates height + opacity 300ms easeInOut
+- [ ] Pill, heading, and each module fade up on scroll (once, amount 0.3), modules stagger 0.15s
+- [ ] Respects `prefers-reduced-motion`</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="animated-cards.html">Animated Cards<small>Components · carousel</small></a><a href="scroll-marquee.html">Scroll Marquee<small>Components · carousel</small></a><a href="flowmate-carousal.html">FlowMate Carousal<small>Components · carousel</small></a><a href="bento-grid-stats.html">Bento Grid Stats<small>Components · features</small></a><a href="glassmorphic-feature-tabs.html">Glassmorphic Feature Tabs<small>Components · features</small></a><a href="feedback-slider.html">Feedback Slider<small>Components · carousel</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

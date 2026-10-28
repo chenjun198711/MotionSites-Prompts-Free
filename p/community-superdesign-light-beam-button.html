@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Light Beam Button — Components 提示词 | MotionSites Prompts</title>
+<meta name="description" content="A high-performance button with a rotating light beam border effect using CSS @property and conic gradients. Features a shiny hover state and gradient borde">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/community-superdesign-light-beam-button.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Light Beam Button — Components 提示词">
+<meta property="og:description" content="A high-performance button with a rotating light beam border effect using CSS @property and conic gradients. Features a shiny hover state and gradient borde">
+<meta property="og:url" content="https://prompt-site.shop/p/community-superdesign-light-beam-button.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/community-superdesign-light-beam-button.png">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Light Beam Button","description":"A high-performance button with a rotating light beam border effect using CSS @property and conic gradients. Features a shiny hover state and gradient border animation.","url":"https://prompt-site.shop/p/community-superdesign-light-beam-button.html","inLanguage":"zh-CN","genre":"Components","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-components">Components</a></div><h1>Light Beam Button</h1><div class="chip-row"><span class="chip">Components</span><span class="chip">components</span><span class="chip">社区公开收藏</span></div><div class="facts"><span>正文：5,890 字符</span></div><div class="hero-media"><img src="../assets/previews/community-superdesign-light-beam-button.png" alt="Light Beam Button 动效预览" loading="lazy"><div class="media-note">本地预览图 · png</div></div><h2>简介</h2><p>A high-performance button with a rotating light beam border effect using CSS @property and conic gradients. Features a shiny hover state and gradient border animation.</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">You are given a task to integrate an existing React component in the codebase
+
+~~~/README.md
+# LightBeamButton
+
+A futuristic button component featuring a rotating light beam border effect, implemented with high-performance CSS `@property` animations.
+
+## Features
+- 🚀 **Hardware Accelerated**: Uses CSS variables and transforms for 60fps animations
+- 🎨 **Customizable**: Supports custom classes and children
+- 💡 **Visual Effects**: Includes rotating gradient border, internal glow, and hover shine
+- 🌙 **Dark Mode Optimized**: Designed specifically for dark-themed interfaces
+
+## Usage
+
+```tsx
+import { LightBeamButton } from &#39;@/sd-components/218cf3c1-df31-4f2a-9aa0-6968d34dc15b&#39;;
+import { ArrowRight } from &#39;lucide-react&#39;;
+
+function MyComponent() {
+return (
+&lt;LightBeamButton onClick={() =&gt; console.log(&#39;Action&#39;)}&gt;
+Start Building &lt;ArrowRight size={16} /&gt;
+&lt;/LightBeamButton&gt;
+);
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | `ReactNode` | Required | Content to display inside the button |
+| `className` | `string` | `undefined` | Additional CSS classes |
+| `onClick` | `() =&gt; void` | `undefined` | Click handler |
+| `gradientColors` | `[string, string, string]` | `[&#39;#8b5cf6&#39;, &#39;#06b6d4&#39;, &#39;#8b5cf6&#39;]` | Array of 3 colors for the gradient beam |
+
+## Dependencies
+
+- `framer-motion`: For interaction states (hover/tap)
+- `clsx`, `tailwind-merge`: For class handling
+~~~
+
+~~~/src/App.tsx
+import React from &#39;react&#39;;
+import { LightBeamButton } from &#39;./Component&#39;;
+import { ArrowRight, Sparkles } from &#39;lucide-react&#39;;
+
+export default function App() {
+return (
+&lt;div className=&quot;flex min-h-screen w-full flex-col items-center justify-center gap-12 bg-[#030303] p-8 text-white&quot;&gt;
+&lt;div className=&quot;text-center space-y-4&quot;&gt;
+&lt;h2 className=&quot;text-2xl font-serif text-neutral-400&quot;&gt;LightBeam Button&lt;/h2&gt;
+&lt;p className=&quot;text-neutral-600 max-w-md mx-auto&quot;&gt;
+A high-performance button with CSS @property animation for a rotating light beam effect.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div className=&quot;flex flex-col gap-8 items-center&quot;&gt;
+{/* Default Variant */}
+&lt;LightBeamButton onClick={() =&gt; console.log(&#39;Clicked&#39;)}&gt;
+Start Building &lt;ArrowRight size={16} /&gt;
+&lt;/LightBeamButton&gt;
+
+{/* Text Only */}
+&lt;LightBeamButton className=&quot;px-10&quot;&gt;
+Explore Protocol
+&lt;/LightBeamButton&gt;
+
+{/* With Icon Left */}
+&lt;LightBeamButton&gt;
+&lt;Sparkles size={16} className=&quot;text-violet-400&quot; /&gt;
+&lt;span&gt;Mint NFT&lt;/span&gt;
+&lt;/LightBeamButton&gt;
+&lt;/div&gt;
+
+&lt;div className=&quot;mt-12 p-6 border border-white/5 rounded-2xl bg-white/5 backdrop-blur-sm max-w-lg&quot;&gt;
+&lt;h3 className=&quot;text-sm font-medium text-neutral-400 mb-4&quot;&gt;Dark Background Recommended&lt;/h3&gt;
+&lt;p className=&quot;text-xs text-neutral-500&quot;&gt;
+This component relies on &quot;screen&quot; or additive blending concepts visually, so it works best on dark backgrounds (#000000 to #1a1a1a).
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+);
+}
+~~~
+
+~~~/package.json
+{
+&quot;name&quot;: &quot;light-beam-button&quot;,
+&quot;version&quot;: &quot;1.0.0&quot;,
+&quot;description&quot;: &quot;A high-performance button with a rotating light beam border effect&quot;,
+&quot;dependencies&quot;: {
+&quot;react&quot;: &quot;^18.2.0&quot;,
+&quot;react-dom&quot;: &quot;^18.2.0&quot;,
+&quot;framer-motion&quot;: &quot;^10.16.4&quot;,
+&quot;clsx&quot;: &quot;^2.1.0&quot;,
+&quot;tailwind-merge&quot;: &quot;^2.2.1&quot;,
+&quot;lucide-react&quot;: &quot;^0.344.0&quot;
+}
+}
+~~~
+
+~~~/src/Component.tsx
+import React from &#39;react&#39;;
+import { motion } from &#39;framer-motion&#39;;
+import { clsx, type ClassValue } from &#39;clsx&#39;;
+import { twMerge } from &#39;tailwind-merge&#39;;
+
+function cn(...inputs: ClassValue[]) {
+return twMerge(clsx(inputs));
+}
+
+export interface LightBeamButtonProps extends React.ButtonHTMLAttributes&lt;HTMLButtonElement&gt; {
+children: React.ReactNode;
+className?: string;
+gradientColors?: [string, string, string]; // Optional custom gradient colors
+}
+
+/**
+* LightBeamButton
+*
+* A high-performance button with a rotating light beam border effect.
+* Uses CSS @property for smooth gradient rotation animations on the border.
+*/
+export function LightBeamButton({
+children,
+className,
+onClick,
+gradientColors = [&quot;#8b5cf6&quot;, &quot;#06b6d4&quot;, &quot;#8b5cf6&quot;], // Violet -&gt; Cyan -&gt; Violet
+...props
+}: LightBeamButtonProps) {
+// Construct the gradient string dynamically based on props
+const gradientString = `conic-gradient(from var(--gradient-angle), transparent 0%, ${gradientColors[0]} 40%, ${gradientColors[1]} 50%, transparent 60%, transparent 100%)`;
+
+return (
+&lt;&gt;
+&lt;style&gt;{`
+@property --gradient-angle {
+syntax: &quot;&lt;angle&gt;&quot;;
+initial-value: 0deg;
+inherits: false;
+}
+@keyframes border-spin {
+from { --gradient-angle: 0deg; }
+to { --gradient-angle: 360deg; }
+}
+.animate-border-spin {
+animation: border-spin 2s linear infinite;
+}
+`}&lt;/style&gt;
+
+&lt;motion.button
+whileHover={{ scale: 1.02 }}
+whileTap={{ scale: 0.98 }}
+onClick={onClick}
+className={cn(
+&quot;group relative isolate overflow-hidden rounded-full bg-neutral-950 px-8 py-3 text-sm font-medium text-white transition-all hover:bg-neutral-900&quot;,
+&quot;shadow-[0_0_20px_-5px_rgba(139,92,246,0.3)] hover:shadow-[0_0_25px_-5px_rgba(139,92,246,0.5)]&quot;,
+className
+)}
+{...props}
+&gt;
+&lt;span className=&quot;relative z-10 flex items-center gap-2&quot;&gt;{children}&lt;/span&gt;
+
+{/* Gradient Border Simulation */}
+&lt;div
+className=&quot;absolute inset-0 -z-10 rounded-full p-[1px] animate-border-spin&quot;
+style={{
+&#39;--gradient-angle&#39;: &#39;0deg&#39;,
+background: gradientString
+} as React.CSSProperties}
+/&gt;
+
+{/* Inner Background (keeps text readable) */}
+&lt;div className=&quot;absolute inset-[1px] -z-10 rounded-full bg-neutral-950&quot; /&gt;
+
+{/* Shine Effect Overlay */}
+&lt;div className=&quot;absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(139,92,246,0.15)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500&quot; /&gt;
+&lt;/motion.button&gt;
+&lt;/&gt;
+);
+}
+
+export default LightBeamButton;
+~~~
+
+Implementation Guidelines
+
+1. Analyze the component structure, styling, animation implementations
+2. Review the component&#39;s arguments and state
+3. Think through what is the best place to adopt this component/style into the design we are doing
+4. Then adopt the component/design to our current system
+
+Help me integrate this into my design</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：superdesigndev/superdesign-prompts<br>原始文件：<code>prompts/light-beam-button/README.md</code><br>许可证：CC0-1.0<br>作者：Jason Zhou<br><a href="https://github.com/superdesigndev/superdesign-prompts/blob/main/prompts/light-beam-button/README.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="animated-cards.html">Animated Cards<small>Components · carousel</small></a><a href="scroll-marquee.html">Scroll Marquee<small>Components · carousel</small></a><a href="flowmate-carousal.html">FlowMate Carousal<small>Components · carousel</small></a><a href="apex-program-accordion.html">Apex Program Accordion<small>Components · faq</small></a><a href="bento-grid-stats.html">Bento Grid Stats<small>Components · features</small></a><a href="glassmorphic-feature-tabs.html">Glassmorphic Feature Tabs<small>Components · features</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

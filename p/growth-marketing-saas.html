@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Growth Marketing SaaS — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色渐变背景上，固定导航栏与全屏视差仪表盘和前景草地图像结合，营造沉浸式增长营销SaaS品牌首页。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/growth-marketing-saas.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Growth Marketing SaaS — Hero Section 提示词">
+<meta property="og:description" content="深色渐变背景上，固定导航栏与全屏视差仪表盘和前景草地图像结合，营造沉浸式增长营销SaaS品牌首页。">
+<meta property="og:url" content="https://prompt-site.shop/p/growth-marketing-saas.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/growth-marketing-saas.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Growth Marketing SaaS","description":"深色渐变背景上，固定导航栏与全屏视差仪表盘和前景草地图像结合，营造沉浸式增长营销SaaS品牌首页。","url":"https://prompt-site.shop/p/growth-marketing-saas.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-05-23T09:11:43.906875+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Growth Marketing SaaS</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-05-23</span><span>正文：14,669 字符</span></div><div class="hero-media"><img src="../assets/previews/growth-marketing-saas.webp" alt="Growth Marketing SaaS 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色渐变背景上，固定导航栏与全屏视差仪表盘和前景草地图像结合，营造沉浸式增长营销SaaS品牌首页。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a single landing page with only a fixed Navbar and a full-screen Hero section that contains a parallax dashboard mock and a foreground grass image. Use React + Vite + TypeScript + Tailwind + framer-motion + lucide-react. No backend.
+
+1. Global setup
+
+`index.html` — add fonts in `&lt;head&gt;`
+```html
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot; /&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin /&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0..1,0&quot; rel=&quot;stylesheet&quot; /&gt;
+```
+
+Body background must be `#08020e`.
+
+`tailwind.config.ts` — extend
+```ts
+fontFamily: { inter: [&#39;Inter&#39;,&#39;ui-sans-serif&#39;,&#39;system-ui&#39;,&#39;sans-serif&#39;] },
+colors: {
+landing: {
+surface: &quot;rgba(255,255,255,0.10)&quot;,
+&quot;surface-hover&quot;: &quot;rgba(255,255,255,0.16)&quot;,
+border: &quot;rgba(255,255,255,0.10)&quot;,
+&quot;border-strong&quot;: &quot;rgba(255,255,255,0.20)&quot;,
+text: &quot;rgba(255,255,255,0.80)&quot;,
+&quot;text-muted&quot;: &quot;rgba(255,255,255,0.60)&quot;,
+},
+}
+```
+
+`src/index.css` — add
+```css
+body { background-color: #08020e; margin: 0; min-height: 100vh; color: white; }
+
+.landing-root {
+--background: 0 0% 0%;
+--foreground: 0 0% 98%;
+--radius: 0.75rem;
+background-color: hsl(var(--background));
+color: hsl(var(--foreground));
+}
+
+/* Liquid glass utility */
+.liquid-glass {
+background: rgba(255,255,255,0.01);
+background-blend-mode: luminosity;
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border: none;
+box-shadow: inset 0 1px 1px rgba(255,255,255,0.1);
+position: relative;
+overflow: hidden;
+}
+.liquid-glass::before {
+content: &#39;&#39;; position: absolute; inset: 0;
+border-radius: inherit; padding: 1.4px;
+background: linear-gradient(180deg,
+rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor; mask-composite: exclude;
+pointer-events: none;
+}
+
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+```
+
+Wrap the page in `&lt;div className=&quot;landing-root font-inter min-h-screen relative overflow-x-hidden&quot;&gt;`.
+
+2. Asset URLs (all remote — no local files)
+
+- Hero background video: `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260521_014404_fadafdb1-4df6-4699-be9c-77d25f39a3d0.mp4`
+- Dashboard live-preview video: `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_115001_bcdaa3b4-03de-47e7-ad63-ae3e392c32d4.mp4`
+- Foreground grass PNG: `https://miptxtnhvjrkpmnjgdhk.supabase.co/storage/v1/object/public/training-assets/landing%2Fhero-bottom-bg.png`
+
+3. Components
+
+`MIcon` (Google Material Symbols)
+```tsx
+export const MIcon = ({ name, size = 16, className = &quot;&quot;, filled = false, weight = 400, style }: {
+name: string; size?: number; className?: string; filled?: boolean; weight?: number; style?: React.CSSProperties;
+}) =&gt; (
+&lt;span aria-hidden className={`material-symbols-outlined select-none leading-none inline-flex items-center justify-center ${className}`}
+style={{ fontSize: size, width: size, height: size,
+fontVariationSettings: `&#39;FILL&#39; ${filled?1:0}, &#39;wght&#39; ${weight}, &#39;GRAD&#39; 0, &#39;opsz&#39; ${Math.min(48,Math.max(20,size))}`,
+...style }}&gt;{name}&lt;/span&gt;
+);
+```
+
+`AnimatedText` — text slides up on hover, replacement slides in from below (40px, 0.2s easeInOut). Uses framer-motion `motion.div` parent (`overflow-hidden`) with two stacked `motion.span` children; rest variant `{y:0}` / `{y:40}`, hover variant `{y:-40}` / `{y:0}`.
+
+`FadeUp` — framer-motion wrapper: `initial={{opacity:0, y:24}}`, `whileInView={{opacity:1, y:0}}`, `viewport={{once:true, amount:0.3}}`, `transition={{ duration:0.6, delay, ease:[0.22,1,0.36,1] }}`. Honors `useReducedMotion`. Accepts `delay`, `duration`, `y` props.
+
+`PrimaryButton` — white pill CTA
+- Classes: `inline-flex items-center justify-center rounded-full bg-white/80 hover:bg-white text-black leading-none transition-colors h-12 px-9 text-sm font-medium`
+- Wraps children in `&lt;AnimatedText&gt;`.
+
+`SecondaryButton` — glass pill
+- Classes: `inline-flex items-center justify-center rounded-full bg-landing-surface hover:bg-landing-surface-hover border border-landing-border text-foreground backdrop-blur-[2.5px] font-medium leading-none h-8 px-4 text-sm` (size=sm)
+- Wraps children in `&lt;AnimatedText&gt;`.
+
+`HeroBadge`
+```tsx
+&lt;div className=&quot;inline-flex items-center justify-center rounded-full bg-landing-surface border border-landing-border px-4 h-7 text-sm text-landing-text&quot;&gt;
+{children}
+&lt;/div&gt;
+```
+
+4. Navbar (fixed, transparent)
+
+```tsx
+const navItems = [
+{ name: &quot;About&quot;, href: &quot;#about&quot; },
+{ name: &quot;Features&quot;, href: &quot;#features&quot; },
+{ name: &quot;What you get&quot;, href: &quot;#what-you-get&quot; },
+{ name: &quot;Pricing&quot;, href: &quot;#pricing&quot; },
+];
+```
+
+- `&lt;nav className=&quot;fixed top-0 left-0 right-0 z-50 w-full bg-transparent&quot;&gt;`
+- Inner: `mx-auto flex h-16 max-w-[1080px] items-center justify-between px-6 lg:px-0`
+- Left logo: `&lt;a href=&quot;/&quot; className=&quot;flex items-center gap-2 text-foreground&quot;&gt;` with `&lt;MIcon name=&quot;rocket_launch&quot; size={20} /&gt;` + `&lt;span className=&quot;text-base font-semibold tracking-tight&quot;&gt;UI Rocket&lt;/span&gt;`
+- Center (lg only): `flex items-center gap-8`, each link `text-sm text-landing-text hover:text-foreground transition-colors`, wrap label in `&lt;AnimatedText&gt;`. Smooth-scroll on click via `document.getElementById(id)?.scrollIntoView({behavior:&quot;smooth&quot;})`.
+- Right actions (lg only): `flex items-center gap-5` → &quot;Login&quot; link (same style as nav links, wrapped in AnimatedText) + `&lt;SecondaryButton href=&quot;/auth&quot; size=&quot;sm&quot;&gt;Get started&lt;/SecondaryButton&gt;`
+- Mobile: menu button (`MIcon name=&quot;menu&quot; size={24}`) opens a right-side sheet (use shadcn Sheet) with the same items stacked.
+
+5. Hero section
+
+```tsx
+const HERO_VIDEO = &quot;https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260521_014404_fadafdb1-4df6-4699-be9c-77d25f39a3d0.mp4&quot;;
+const GRASS_IMG = &quot;https://miptxtnhvjrkpmnjgdhk.supabase.co/storage/v1/object/public/training-assets/landing%2Fhero-bottom-bg.png&quot;;
+```
+
+Inside the Hero component, set up scroll-linked parallax:
+```ts
+const sectionRef = useRef&lt;HTMLElement&gt;(null);
+const { scrollYProgress } = useScroll({ target: sectionRef, offset: [&quot;start start&quot;, &quot;end start&quot;] });
+const dashboardY = useTransform(scrollYProgress, [0, 1], [&quot;0%&quot;, &quot;-25%&quot;]);
+const grassY = useTransform(scrollYProgress, [0, 1], [&quot;0%&quot;, &quot;20%&quot;]);
+const contentY = useTransform(scrollYProgress, [0, 1], [&quot;0%&quot;, &quot;-60%&quot;]);
+const contentOpacity= useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+```
+
+Structure:
+```tsx
+&lt;section ref={sectionRef} id=&quot;hero&quot; className=&quot;relative w-full min-h-screen&quot;&gt;
+{/* 1) Background video — full bleed, no overlay */}
+&lt;video src={HERO_VIDEO} autoPlay muted loop playsInline
+className=&quot;absolute inset-0 w-full h-full object-cover z-0&quot; /&gt;
+
+{/* 2) Centered copy + CTA, with scroll fade/translate */}
+&lt;motion.div style={{ y: contentY, opacity: contentOpacity }}
+className=&quot;relative z-20 flex flex-col items-center text-center px-4 sm:px-6 pt-28 sm:pt-36 md:pt-44 max-w-[980px] mx-auto&quot;&gt;
+&lt;FadeUp delay={0}&gt;
+&lt;HeroBadge&gt;Founder member sale special&lt;/HeroBadge&gt;
+&lt;/FadeUp&gt;
+&lt;FadeUp delay={0.1}&gt;
+&lt;h1 className=&quot;mt-8 text-foreground text-[38px] sm:text-[52px] md:text-[64px] leading-[1.05] tracking-[-0.03em] max-w-[960px]&quot;&gt;
+Are you a designer or builder who wants to stay ahead of AI?
+&lt;/h1&gt;
+&lt;/FadeUp&gt;
+&lt;FadeUp delay={0.2}&gt;
+&lt;p className=&quot;mt-6 text-landing-text text-base sm:text-lg leading-[1.5] max-w-[520px]&quot;&gt;
+Learn to turn your ideas into stunning websites with AI
+&lt;/p&gt;
+&lt;/FadeUp&gt;
+&lt;FadeUp delay={0.3} className=&quot;mt-10&quot;&gt;
+&lt;PrimaryButton as=&quot;button&quot;&gt;Get course&lt;/PrimaryButton&gt;
+&lt;/FadeUp&gt;
+&lt;/motion.div&gt;
+
+{/* 3) Dashboard mock — slower parallax (-25%) */}
+&lt;motion.div style={{ y: dashboardY }}
+className=&quot;relative z-10 mt-8 sm:mt-10 md:mt-12 px-4 sm:px-6&quot;&gt;
+&lt;DashboardMock /&gt;
+&lt;/motion.div&gt;
+
+{/* 4) Foreground grass — in front of dashboard, drifts down 20% */}
+&lt;motion.img src={GRASS_IMG} alt=&quot;&quot; aria-hidden style={{ y: grassY }}
+className=&quot;pointer-events-none select-none absolute left-0 right-0 bottom-[-40px] sm:bottom-[-100px] lg:bottom-[-220px] w-full z-30 object-cover&quot; /&gt;
+&lt;/section&gt;
+```
+
+6. DashboardMock — liquid-glass wrapper with two-column grid
+
+```tsx
+&lt;div className=&quot;liquid-glass w-full max-w-[1100px] aspect-[3/4] sm:aspect-[16/10] lg:aspect-[16/9] rounded-2xl mx-auto overflow-hidden p-2 sm:p-3&quot;&gt;
+&lt;div className=&quot;grid h-full grid-cols-1 sm:grid-cols-[minmax(220px,320px)_1fr] gap-2 sm:gap-3&quot;&gt;
+&lt;div className=&quot;min-h-0 hidden sm:block&quot;&gt;&lt;ChatPanel animateMessagesIn /&gt;&lt;/div&gt;
+&lt;div className=&quot;min-h-0&quot;&gt;&lt;LivePreviewHero /&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+```
+
+`ChatPanel` (left column)
+- Container: `flex h-full flex-col overflow-hidden rounded-2xl border border-white/10`, inline style `background: rgba(8,8,10,0.6); backdropFilter: blur(24px); WebkitBackdropFilter: blur(24px)`.
+- Header: `flex items-center gap-2 px-4 py-3 border-b border-white/5`. Circle `w-7 h-7 rounded-full bg-white/5 flex items-center justify-center` with `&lt;MIcon name=&quot;auto_awesome&quot; size={14} className=&quot;text-white/80&quot; /&gt;`. Text column: `Vibe Design course` (`text-sm font-medium text-white`) + subtitle `Learn how to build website with AI` (`text-[11px] text-white/40`).
+- Messages list: `flex-1 overflow-y-auto scrollbar-hide px-4 py-5 space-y-4`. Each row wrapped in `&lt;FadeUp delay={i*0.12} y={16}&gt;`. Layout:
+- Row: `flex justify-end` (user) or `flex justify-start` (assistant).
+- Bubble: `max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed`; user = `bg-white/15 text-white/90`; assistant = `bg-white/5 text-white/70 border border-white/5`.
+- Seed messages (exact text):
+1. assistant — &quot;Welcome to the Vibe Design course! I&#39;ll guide you through building stunning websites with AI. What would you like to learn first?&quot;
+2. user — &quot;I want to learn how to build a hero section with a cinematic video background using AI.&quot;
+3. assistant — &quot;Great choice! In this course, you&#39;ll learn how to create full-screen looping videos, liquid glass nav bars, email signups, and manifesto buttons — all with AI assistance. Let&#39;s dive in!&quot;
+- Input: outer `p-3 border-t border-white/5`. Inner `liquid-glass rounded-2xl flex items-end gap-2 p-2` with a `&lt;textarea rows={1}&gt;` (`flex-1 resize-none bg-transparent px-3 py-2 text-sm text-white placeholder:text-white/40 focus:outline-none max-h-32`, placeholder &quot;Ask about the course...&quot;) and a send button `bg-white text-black rounded-xl p-2 hover:bg-white/90` containing `&lt;MIcon name=&quot;arrow_upward&quot; size={16} className=&quot;text-black&quot; /&gt;`. Enter (no shift) sends; appends a user message then a canned assistant reply. After updates, scroll list to bottom smoothly.
+
+`LivePreviewHero` (right column)
+Uses `lucide-react` icons `Globe, ArrowRight, Instagram, Twitter`.
+
+- Outer: `relative w-full h-full min-h-[500px] overflow-hidden rounded-2xl bg-black`.
+- Background video (with JS fade-in/out loop):
+```tsx
+&lt;video ref={videoRef} src={DASHBOARD_VIDEO} muted autoPlay playsInline preload=&quot;auto&quot;
+className=&quot;absolute inset-0 w-full h-full object-cover translate-y-[17%]&quot;
+style={{ opacity: 0 }} /&gt;
+```
+Behavior (in `useEffect`):
+- On `loadeddata`: set opacity 0, `play()`, fade opacity to 1 over 500ms via `requestAnimationFrame` linear tween.
+- On `timeupdate`: when `duration - currentTime &lt; 0.55s` and not already fading out, fade opacity to 0 over 500ms.
+- On `ended`: snap opacity to 0, after 100ms reset `currentTime=0`, `play()`, reset fadingOut flag, fade back to 1.
+- Cleanup all listeners and cancel RAF on unmount.
+
+- Inner content stack (`relative z-10 flex flex-col min-h-full h-full`):
+
+Mini-nav `relative z-20 px-3 sm:px-4 py-3`, inside a `rounded-full px-2 sm:px-4 py-1.5 flex items-center justify-between max-w-5xl mx-auto`:
+- Left group `flex items-center gap-3 sm:gap-5`: `Globe size={14} text-white` + `&lt;span className=&quot;text-white font-semibold text-xs sm:text-sm&quot;&gt;Asme&lt;/span&gt;`. After it, `hidden md:flex items-center gap-5` of links `Features`, `Pricing`, `About` each `text-white/80 hover:text-white text-[11px] font-medium`.
+- Right group `flex items-center gap-2 sm:gap-3`: &quot;Sign Up&quot; link (`text-white text-[11px] font-medium hidden sm:inline`) + glass pill `&lt;a className=&quot;liquid-glass rounded-full px-3 sm:px-4 py-1 text-white text-[11px] font-medium&quot;&gt;Login&lt;/a&gt;`.
+
+Hero block `relative z-10 flex-1 flex flex-col items-center justify-center px-4 sm:px-6 py-4 text-center -translate-y-[8%] sm:-translate-y-[15%]`:
+- `&lt;h1 className=&quot;text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-4 sm:mb-5 tracking-tight whitespace-nowrap&quot; style={{ fontFamily: &quot;&#39;Instrument Serif&#39;, serif&quot; }}&gt;Built for the curious&lt;/h1&gt;`
+- Inner column `max-w-sm w-full space-y-3`:
+- Email pill `liquid-glass rounded-full pl-4 pr-1.5 py-1.5 flex items-center gap-2`: `&lt;input type=&quot;email&quot; placeholder=&quot;Enter your email&quot; className=&quot;flex-1 bg-transparent text-white placeholder:text-white/40 text-xs focus:outline-none&quot; /&gt;` + circular submit `bg-white rounded-full p-1.5 text-black` with `&lt;ArrowRight size={14} /&gt;`.
+- Paragraph `text-white/80 text-[11px] leading-relaxed px-2`: &quot;Stay updated with the latest news and insights. Subscribe to our newsletter today and never miss out on exciting updates.&quot;
+- Centered glass pill button: `liquid-glass rounded-full px-5 py-1.5 text-white text-[11px] font-medium hover:bg-white/5 transition-colors` → label &quot;Manifesto&quot;.
+
+Socials row `relative z-10 flex justify-center gap-2 pb-4 sm:pb-6` — three glass round buttons (`liquid-glass rounded-full p-2 text-white/80 hover:text-white hover:bg-white/5 transition-all`) wrapping `Instagram`, `Twitter`, `Globe` icons at `size={14}`.
+
+7. Page assembly
+
+```tsx
+export default function Page() {
+return (
+&lt;div className=&quot;landing-root font-inter min-h-screen relative overflow-x-hidden&quot;&gt;
+&lt;Navbar /&gt;
+&lt;Hero /&gt;
+&lt;/div&gt;
+);
+}
+```
+
+8. Behavioral notes (must match)
+
+- Hero video is autoplay/muted/loop/playsInline with no dark overlay.
+- Z-index stack: video `z-0`, dashboard `z-10`, copy/CTA `z-20`, grass `z-30`, navbar `z-50`.
+- Hero copy fades + translates up to `-60%` during scroll through the section, fully fading by 60% scroll progress.
+- Dashboard parallaxes up (`-25%`); grass drifts down (`+20%`) — creates depth.
+- All button labels animate with the &quot;text slides up, replacement slides in from below&quot; effect via `AnimatedText`.
+- Inter is the global UI font; the dashboard hero `&lt;h1&gt;` &quot;Built for the curious&quot; uses Instrument Serif.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

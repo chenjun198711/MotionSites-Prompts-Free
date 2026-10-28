@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Remote Dev Collective — Agency Website 提示词 | MotionSites Prompts</title>
+<meta name="description" content="DE/HELPERS 远程开发团队单页落地站，React + Framer Motion 还原。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/remote-dev-collective.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Remote Dev Collective — Agency Website 提示词">
+<meta property="og:description" content="DE/HELPERS 远程开发团队单页落地站，React + Framer Motion 还原。">
+<meta property="og:url" content="https://prompt-site.shop/p/remote-dev-collective.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/remote-dev-collective.jpg">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Remote Dev Collective","description":"DE/HELPERS 远程开发团队单页落地站，React + Framer Motion 还原。","url":"https://prompt-site.shop/p/remote-dev-collective.html","inLanguage":"zh-CN","genre":"Agency Website","dateCreated":"2026-08-14T08:39:05.666Z","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-agency_website">Agency Website</a></div><h1>Remote Dev Collective</h1><div class="chip-row"><span class="chip">Agency Website</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-08-14</span><span>正文：11,063 字符</span></div><div class="hero-media"><img src="../assets/previews/remote-dev-collective.jpg" alt="Remote Dev Collective 动效预览" loading="lazy"><div class="media-note">本地预览图 · jpeg</div></div><h2>简介</h2><p>DE/HELPERS 远程开发团队单页落地站，React + Framer Motion 还原。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Recreate this exact single-page landing site pixel-for-pixel. Stack: React 18 + TypeScript + Vite + Tailwind CSS 3 + Framer Motion + Lucide React. No other UI libraries.
+
+═══════════════════════════════════════
+PAGE TITLE
+═══════════════════════════════════════
+DE&lt;/HELPERS - Outsourced Development Team
+
+═══════════════════════════════════════
+FONT (exact)
+═══════════════════════════════════════
+Load this stylesheet in &lt;head&gt;:
+https://db.onlinewebfonts.com/c/0e6de1ec911a2e267ff136bbdd384a44?family=Helvetica+Neue+Light
+
+Global body font-family:
+&#39;Helvetica Neue Light&#39;, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif
+
+Antialiased text. Selection color: background rgba(168, 85, 247, 0.4), color #fff.
+html { scroll-behavior: smooth; }
+body background #000, color #fff.
+
+═══════════════════════════════════════
+ROOT BACKGROUND COLOR
+═══════════════════════════════════════
+Page root wrapper background: #0A061A (deep purple-black, NOT pure black).
+
+═══════════════════════════════════════
+BACKGROUND VIDEO (exact CloudFront URL — mandatory)
+═══════════════════════════════════════
+Sticky full-viewport video behind the first two sections:
+
+URL (exact):
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260721_194026_53c6f9fd-f0d7-4d7d-be62-cdd53b253fb3.mp4
+
+Attributes: autoPlay, muted, loop, playsInline
+CSS: w-full h-full object-cover
+
+Structure technique (exact):
+1. Outer relative z-0 container
+2. Inside: sticky top-0 h-screen w-full overflow-hidden containing the &lt;video&gt;
+3. Over the video bottom: absolute inset-x-0 bottom-0 h-[40%] pointer-events-none with linear-gradient(to bottom, transparent, #0A061A)
+4. Content overlay: relative z-10 -mt-[100vh] containing Nav + Hero + About
+5. Third section (TextFill + stats) sits BELOW in relative z-10 with NO video behind it — solid #0A061A only
+6. After text section: empty spacer div h-[10vh]
+
+═══════════════════════════════════════
+LIQUID GLASS CLASS (exact CSS — use on testimonial card + About card)
+═══════════════════════════════════════
+.liquid-glass {
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.005) 0%,
+    rgba(255, 255, 255, 0.002) 40%,
+    rgba(255, 255, 255, 0.001) 100%
+  );
+  backdrop-filter: blur(18px) saturate(1.4) brightness(1.05);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4) brightness(1.05);
+  border: none;
+  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass::before {
+  content: &#39;&#39;;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(180deg,
+    rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.025) 15%,
+    rgba(255,255,255,0.005) 40%, rgba(255,255,255,0.005) 60%,
+    rgba(255,255,255,0.025) 85%, rgba(255,255,255,0.06) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.liquid-glass::after {
+  content: &#39;&#39;;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.01) 0%, transparent 50%),
+    radial-gradient(ellipse at center, transparent 55%, rgba(255, 255, 255, 0.005) 80%, rgba(255, 255, 255, 0.01) 100%);
+  pointer-events: none;
+}
+
+═══════════════════════════════════════
+1) FIXED NAV
+═══════════════════════════════════════
+fixed top-0 left-0 right-0 z-50
+padding: px-6 sm:px-8 md:px-12 py-5 md:py-6
+flex items-center justify-between
+
+LOGO (left):
+text-white font-light text-lg tracking-wide
+Literal text: DE&lt;/HELPERS
+where &quot;HELPERS&quot; is wrapped in &lt;span className=&quot;font-normal&quot;&gt; so HELPERS is slightly heavier than &quot;DE&lt;/&quot;
+
+DESKTOP NAV (hidden md:flex, items-center gap-2):
+Links: &quot;About&quot;, &quot;Our cases&quot;, &quot;Services&quot;, &quot;Prices&quot;
+All href=&quot;#&quot;
+Active item = &quot;About&quot;: border border-white/60 text-white, px-4 py-2 rounded-full text-sm
+Inactive: text-white/70 hover:text-white, px-4 py-2 rounded-full text-sm, transition-all duration-300
+CTA &quot;Hire us&quot;: bg-white text-black text-sm font-medium px-5 py-2 rounded-full hover:bg-white/90 transition-all duration-300 ml-4
+
+MOBILE MENU BUTTON (md:hidden):
+w-10 h-10, Menu / X icons from lucide-react size={24}
+AnimatePresence mode=&quot;wait&quot;:
+- Open icon: initial {opacity:0, rotate:90} → animate {opacity:1, rotate:0} → exit {opacity:0, rotate:-90}, duration 0.2
+- Close icon: initial {opacity:0, rotate:-90} → animate {opacity:1, rotate:0} → exit {opacity:0, rotate:90}, duration 0.2
+
+MOBILE FULLSCREEN OVERLAY (AnimatePresence, md:hidden, z-[55]):
+- Overlay fade duration 0.3
+- Backdrop: absolute inset-0 bg-black/95 backdrop-blur-xl
+- Close X button absolute top-5 right-6
+- Centered column of links gap-6:
+  - Each link text-2xl font-light; active white, inactive white/60
+  - Stagger: initial {opacity:0, y:20} animate {opacity:1, y:0}, delay 0.15 + i*0.05, duration 0.3
+  - &quot;Hire us&quot; pill: mt-4 bg-white text-black text-lg font-medium px-8 py-3 rounded-full, delay 0.4
+
+═══════════════════════════════════════
+2) HERO SECTION
+═══════════════════════════════════════
+padding: px-6 sm:px-8 md:px-12 pt-24 md:pt-32 pb-20 md:pb-40
+Inner: max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start
+
+LEFT COLUMN:
+H1 (white, font-light, leading-[1.1], tracking-tight):
+text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+Exact line breaks:
+Outsourced
+development
+team
+
+Subcopy: text-white/50 text-sm mt-6 font-light
+&quot;Built off-site. Feels in-house.&quot;
+
+RIGHT COLUMN (flex flex-col items-start md:items-end gap-4):
+Avatar stack (flex -space-x-2 mb-2) — 4 overlapping circular avatars, each w-8 h-8 rounded-full border-2 border-black/50 object-cover:
+1. https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=100
+2. https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=100
+3. https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=100
+4. https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=100
+
+Testimonial card: max-w-sm w-full rounded-2xl liquid-glass p-5
+Text: text-white/90 text-sm font-light leading-relaxed
+Exact copy:
+&quot;Working with this team felt like unlocking a cheat code. I sent them a Figma + a wild idea, and a week later I had a working prototype with pixel-perfect animations. Fully remote, yet fully in sync.&quot;
+
+═══════════════════════════════════════
+3) ABOUT + FEATURES SECTION
+═══════════════════════════════════════
+section: px-6 sm:px-8 md:px-12 pb-20 min-h-screen flex items-center
+Inner max-w-7xl mx-auto w-full
+
+Outer card: w-full rounded-3xl liquid-glass
+
+TOP ROW (p-8 md:p-12 pb-0, flex flex-col md:flex-row items-start justify-between gap-8 mb-12):
+Left H2: text-white text-3xl md:text-4xl font-light — &quot;About our team&quot;
+Right (max-w-md):
+Paragraph text-white/70 text-sm font-light leading-relaxed mb-6:
+&quot;We&#39;re a remote-first dev team that speaks the language of both startups and enterprise. From rapid prototyping to scalable architecture — we translate your vision into clean, elegant code. Always on time. Always in style.&quot;
+CTA button: inline-flex items-center gap-2 bg-white text-black text-sm font-medium px-6 py-3 rounded-full hover:bg-white/90
+Label: &quot;Work with us&quot; + lucide ArrowUpRight size={16}
+
+FEATURE GRID (grid-cols-1 md:grid-cols-3 gap-3, p-6 md:p-12 pt-8 md:pt-10):
+Each card: p-6 md:p-8 flex flex-col justify-between min-h-[260px] rounded-2xl bg-black/40
+
+01 — Smart development
+&quot;We&#39;re not just coders — we solve problems. Expect fast, scalable, future-proof solutions tailored to your needs.&quot;
+
+02 — Super-fast delivery
+&quot;We deliver MVPs in weeks, not months. Agile workflows and zero overhead mean you move faster than your competitors.&quot;
+
+03 — Global &amp; synced
+&quot;Remote doesn&#39;t mean distant. Our team works across time zones with seamless communication and reliable updates.&quot;
+
+Number: text-white/40 text-xs font-light mb-2 block
+Title: text-white text-xl md:text-2xl font-light
+Desc: text-white/60 text-sm font-light leading-relaxed
+Number/title at top of card, description at bottom (justify-between).
+
+═══════════════════════════════════════
+4) TEXT FILL + STATS SECTION (no video bg)
+═══════════════════════════════════════
+section: relative flex flex-col justify-end px-6 sm:px-8 md:px-12 py-16 md:py-24
+max-w-7xl mx-auto
+
+MANIFESTO TEXT (exact Unicode apostrophes/em dash):
+&quot;You don’t need to see us to know we’re working. Our process is silent. Our output — loud and clear. Remote-first means frictionless. Just aligned teams, focused on your next release.&quot;
+(Use curly apostrophe U+2019 and em dash U+2014)
+
+Typography: text-2xl leading-snug tracking-tight sm:text-3xl md:text-5xl lg:text-6xl lg:leading-[1.15] mb-20 md:mb-32
+font-normal (via letter spans)
+
+CHARACTER FILL ANIMATION (Framer Motion + useInView):
+- useInView(containerRef, { once: true, margin: &#39;-20% 0px&#39; })
+- Split into words (inline-block whitespace-nowrap), then each character into AnimatedLetter
+- Each letter: relative inline-block; invisible spacer span for layout; absolute motion.span overlaid
+- initial opacity 0.3 (dim white)
+- when visible: animate to opacity 1, color white
+- transition: duration 0.05, delay = (index / totalChars) * 1.5
+- Spaces rendered as \u00A0
+Result: letters sequentially &quot;fill&quot; from dim to bright over ~1.5s when section enters viewport.
+
+STATS GRID (grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12):
+Each stat: relative rounded-lg overflow-hidden with CornerBrackets + inner px-6 py-8
+
+01 — 241 — Projects were done
+02 — 98% — Client satisfaction rate
+03 — 36 devs — Our talent pool scales with your needs
+
+num: text-white/40 text-xs font-light block mb-3
+value: text-white text-3xl md:text-4xl font-light block mb-2
+label: text-white/50 text-xs font-light
+
+CORNER BRACKETS (exact SVG corners on each stat card):
+Four absolute SVGs, size 20×20, stroke rgba(255,255,255,0.35), strokeWidth 2.5, strokeLinecap round, fill none, corner radius r=5:
+- top-left:     M0 20 L0 5 Q0 0 5 0 L20 0
+- top-right:    M0 0 L15 0 Q20 0 20 5 L20 20
+- bottom-left:  M0 0 L0 15 Q0 20 5 20 L20 20
+- bottom-right: M20 0 L20 15 Q20 20 15 20 L0 20
+
+BOTTOM CTA (flex justify-center):
+&quot;Let&#39;s work&quot; — bg-white text-black text-sm px-8 py-3 rounded-full
+hover:bg-[#B440CB] hover:text-white transition-all duration-300
+
+═══════════════════════════════════════
+VISUAL RULES / DO NOT
+═══════════════════════════════════════
+- DO use the exact CloudFront mp4 URL above — no substitutes
+- DO use Helvetica Neue Light from the onlinewebfonts link
+- DO implement liquid-glass with ::before mask border + ::after radial highlights exactly
+- DO use sticky video + -mt-[100vh] overlay pattern so video stays pinned under hero+about while scrolling
+- DO keep all copy character-exact including curly quotes/em dash
+- DO NOT use Inter/Roboto/system fonts as primary
+- DO NOT use purple-on-white themes; stay on #0A061A dark
+- DO NOT put video behind the text-fill/stats section
+- DO NOT add extra sections, cards, or nav items
+- Icons only from lucide-react: Menu, X, ArrowUpRight
+` ` `
+
+---</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><p class="muted">暂无同分类条目。</p><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

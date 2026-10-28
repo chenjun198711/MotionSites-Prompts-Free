@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cinematic Brand — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="全屏电影级品牌着陆页，深色背景上循环播放动态视频，中央展示品牌名&quot;VERTX&quot;与标语，营造沉浸式视觉冲击。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/cinematic-brand.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cinematic Brand — Hero Section 提示词">
+<meta property="og:description" content="全屏电影级品牌着陆页，深色背景上循环播放动态视频，中央展示品牌名&quot;VERTX&quot;与标语，营造沉浸式视觉冲击。">
+<meta property="og:url" content="https://prompt-site.shop/p/cinematic-brand.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/cinematic-brand.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Cinematic Brand","description":"全屏电影级品牌着陆页，深色背景上循环播放动态视频，中央展示品牌名\"VERTX\"与标语，营造沉浸式视觉冲击。","url":"https://prompt-site.shop/p/cinematic-brand.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-05-27T08:41:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Cinematic Brand</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-05-27</span><span>正文：6,020 字符</span></div><div class="hero-media"><img src="../assets/previews/cinematic-brand.webp" alt="Cinematic Brand 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>全屏电影级品牌着陆页，深色背景上循环播放动态视频，中央展示品牌名&quot;VERTX&quot;与标语，营造沉浸式视觉冲击。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a full-screen cinematic hero landing page for a brand called &quot;VERTX&quot;. Use React, TypeScript, Vite, Tailwind CSS, Framer Motion, and Lucide React icons.
+
+## Font
+
+Use the custom font **&quot;Quire Sans Pro&quot;** loaded from this CDN in `index.html`:
+```
+https://db.onlinewebfonts.com/c/5a981c7d02abe9aec215dbe4606407e2?family=Quire+Sans+Pro
+```
+Set it as the default `sans` font family in `tailwind.config.js`:
+```js
+fontFamily: {
+sans: [&#39;&quot;Quire Sans Pro&quot;&#39;, &#39;sans-serif&#39;],
+},
+```
+
+## Page Title
+`Nexora — Beyond the Interface`
+
+## Background Video
+
+Use this CloudFront video URL as a full-screen looping background:
+```
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260606_170109_f96e01a5-b0db-4274-b24d-8d97e99ec928.mp4
+```
+The `&lt;video&gt;` element should be `absolute inset-0`, `object-cover`, with attributes: `autoPlay`, `muted`, `loop`, `playsInline`, `preload=&quot;auto&quot;`. Also use a `useRef` + `useEffect` to call `.play()` on mount as a fallback for autoplay.
+
+## Navbar (fixed, top, z-50)
+
+- Animates in from top using Framer Motion: `initial={{ y: -24, opacity: 0 }}`, `animate={{ y: 0, opacity: 1 }}`, `transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}`.
+- Outer: `fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4`.
+- Inner container: `mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:h-16 sm:px-6`.
+- **Logo (left):** Lucide `Hexagon` icon (strokeWidth 1.5, 24x24, white) + text &quot;VERTX&quot; (`text-[15px] font-semibold tracking-tight text-white sm:text-base`). The Hexagon rotates 30deg on hover via a `group` + `group-hover:rotate-[30deg]` with `transition-transform duration-300`.
+- **Right side:** Two buttons:
+1. &quot;Contact&quot; -- ghost style: `rounded-full border border-white/15 bg-white/5 px-5 py-2 text-[13px] font-medium text-white/80 backdrop-blur-sm transition-all hover:border-white/30 hover:text-white hover:scale-105 active:scale-100`.
+2. &quot;Sign Up&quot; -- primary style with `btn-glow` class: `rounded-full bg-slate-950 px-5 py-2 text-[13px] font-medium text-white transition-transform hover:scale-105 active:scale-100`.
+
+## Hero Content (centered, shifted up 50px)
+
+The content wrapper: `relative z-10 flex min-h-screen flex-col items-center justify-center px-5 pt-20 text-center sm:px-6 sm:pt-24` with inline style `marginTop: &#39;-50px&#39;`.
+
+### 1. Eyebrow text
+Wrapped in a `FadeUp` component (delay=0, mb-4 sm:mb-6):
+- A `&lt;p&gt;` with: `flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.25em] text-white/60 sm:gap-3 sm:text-xs md:text-sm md:tracking-[0.3em]`.
+- Starts with a small horizontal line: `&lt;span className=&quot;inline-block h-px w-4 bg-white/40 sm:w-6&quot; /&gt;`.
+- Text: **&quot;The future is unfolding&quot;**.
+
+### 2. Main Heading (h1)
+`max-w-4xl text-[1.75rem] font-medium leading-[1.15] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl`.
+- Uses a `TypingEffect` component that splits the text into individual characters, each animated with Framer Motion (`initial={{ opacity: 0 }}`, `animate={{ opacity: 1 }}`, staggered with `delay: i * 0.045`, `duration: 0.15`). Words are kept as `inline-block` spans so they wrap naturally, with `&amp;nbsp;` between words.
+- Text: **&quot;Innovation that reshapes the fabric of experience&quot;**.
+
+### 3. Subheading
+Wrapped in `FadeUp` (delay=2.4, mt-4 sm:mt-6):
+- `max-w-xs text-xs font-light leading-relaxed text-white/50 sm:max-w-xl sm:text-sm md:text-base lg:text-lg`.
+- Text: **&quot;We craft platforms where insight, power, and design converge -- giving rise to something the world hasn&#39;t seen.&quot;** (use an em dash).
+
+### 4. Buttons row
+Container: `mt-8 flex w-full max-w-sm flex-col items-center gap-3 sm:mt-10 sm:w-auto sm:max-w-none sm:flex-row sm:gap-5`. Stacks vertically on mobile, horizontal on sm+.
+
+- **&quot;Begin Now&quot; button** (FadeUp delay=2.8): `btn-glow flex w-full items-center justify-center gap-2.5 rounded-full bg-slate-950 py-2.5 pl-6 pr-3 text-sm font-medium text-white transition-transform hover:scale-105 active:scale-100 sm:w-auto sm:gap-3 sm:py-3.5 sm:pl-10 sm:pr-5 sm:text-lg`. Contains a circular play icon on the right: a `&lt;span&gt;` styled as `flex h-7 w-7 items-center justify-center rounded-full border border-white/30 sm:h-9 sm:w-9` with a Lucide `Play` icon (`h-3 w-3 fill-current sm:h-4 sm:w-4`).
+
+- **&quot;Watch the story&quot; button** (FadeUp delay=3.0): `w-full rounded-full border border-white/15 bg-white/5 px-6 py-2.5 text-sm font-medium text-white/80 backdrop-blur-sm transition-all hover:border-white/30 hover:text-white hover:scale-105 active:scale-100 sm:w-auto sm:px-10 sm:py-3.5 sm:text-lg`.
+
+## FadeUp Component
+
+A reusable animation wrapper using Framer Motion:
+- Props: `children`, `className`, `delay` (default 0), `duration` (default 0.6), `y` (default 24).
+- Uses `useInView` with `{ once: true }` to trigger only when scrolled into view.
+- `initial={{ opacity: 0, y }}`, animates to `{ opacity: 1, y: 0 }` when in view.
+- Easing: `[0.25, 0.46, 0.45, 0.94]`.
+
+## TypingEffect Component
+
+A character-by-character reveal animation:
+- Props: `text`, `className`, `charDelay` (default 0.045).
+- Uses `useInView` with `{ once: true }`.
+- Splits text by spaces into words, then each word into characters. Each character is a `&lt;motion.span&gt;` with `initial={{ opacity: 0 }}`, `animate={{ opacity: 1 }}` (when in view), `transition={{ duration: 0.15, delay: globalCharIndex * charDelay }}`. Characters and words are `inline-block`. Words are separated by `&amp;nbsp;`.
+
+## Custom CSS (index.css)
+
+The `btn-glow` class creates an inner white glow effect on primary buttons:
+```css
+.btn-glow {
+outline: 1.5px solid rgba(255, 255, 255, 0.6);
+outline-offset: -1.5px;
+box-shadow: inset 0 0 14px 0 rgba(255, 255, 255, 0.7);
+}
+
+@media (min-width: 640px) {
+.btn-glow {
+outline-width: 2px;
+outline-offset: -2px;
+}
+}
+```
+
+## Outer Section
+The root `&lt;section&gt;` wrapping everything: `relative min-h-screen w-full overflow-hidden bg-black`.
+
+## Dependencies
+- `react`, `react-dom` (v18)
+- `framer-motion`
+- `lucide-react`
+- `tailwindcss`, `autoprefixer`, `postcss`
+- Vite + TypeScript</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

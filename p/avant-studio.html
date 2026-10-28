@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Avant Studio — Creative 提示词 | MotionSites Prompts</title>
+<meta name="description" content="VANTA 前卫 AI 创意工作室单文件静态站，纯黑背景的先锋编辑式设计。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/avant-studio.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Avant Studio — Creative 提示词">
+<meta property="og:description" content="VANTA 前卫 AI 创意工作室单文件静态站，纯黑背景的先锋编辑式设计。">
+<meta property="og:url" content="https://prompt-site.shop/p/avant-studio.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Avant Studio","description":"VANTA 前卫 AI 创意工作室单文件静态站，纯黑背景的先锋编辑式设计。","url":"https://prompt-site.shop/p/avant-studio.html","inLanguage":"zh-CN","genre":"Creative","dateCreated":"2026-08-14T08:39:05.666Z","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-creative">Creative</a></div><h1>Avant Studio</h1><div class="chip-row"><span class="chip">Creative</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-08-14</span><span>正文：10,705 字符</span></div><div class="hero-media"><video src="../assets/previews/avant-studio.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>VANTA 前卫 AI 创意工作室单文件静态站，纯黑背景的先锋编辑式设计。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Recreate a single-file static HTML page (`index.html`) that matches this site **exactly**. No frameworks. One HTML file with embedded CSS and JS.
+
+---
+
+## Identity &amp; document
+
+- **Title:** `VANTA. — Avant-garde AI creative`
+- **Lang:** `en`
+- **Viewport:** `width=device-width, initial-scale=1`
+- **Page background:** pure black `#000000`
+- **Aesthetic:** avant-garde AI creative studio landing hero — black full-bleed video, white Inter type, absolute editorial composition on desktop, stacked mobile layout
+
+---
+
+## Fonts (exact)
+
+Load Google Fonts Inter weight 400 only:
+
+` ` `
+https://fonts.googleapis.com/css2?family=Inter:wght@400&amp;display=swap
+` ` `
+
+With preconnect to `fonts.googleapis.com` and `fonts.gstatic.com` (crossorigin).
+
+**Body type stack (exact):**
+`&quot;Inter&quot;,&quot;Inter var&quot;,system-ui,-apple-system,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif`
+
+**Global typography rules:**
+- `font-weight: 400` everywhere (no bold)
+- `letter-spacing: -0.02em` on all elements (`*`)
+- `-webkit-font-smoothing: antialiased`
+- `text-rendering: optimizeLegibility`
+- Text color default: `#ffffff`
+
+---
+
+## CSS variables (exact)
+
+` ` `css
+:root {
+  --bg: #000000;
+  --cream: #ffffff;
+  --ink: #000000;
+  --white: #ffffff;
+  --muted: rgba(255,255,255,.82);
+  --hair: rgba(255,255,255,.16);
+  --pad-x: 24px;
+  --pad-t: 22px;
+  --col: 46%;          /* left anchor of the centre column */
+  --ease: cubic-bezier(.23,1,.32,1);
+}
+` ` `
+
+---
+
+## Media assets (exact CloudFront URLs — do not substitute)
+
+### 1. Background hero video
+` ` `
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260724_061251_5b1af666-7df5-4284-abea-a19a14d1cc10.mp4
+` ` `
+- Element: `&lt;video class=&quot;hero-bg&quot; muted playsinline preload=&quot;auto&quot; src=&quot;…&quot;&gt;`
+- **Not autoplay / not loop** — scroll-scrubbed via JS (`currentTime`)
+- CSS: `position:fixed; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; background:#000`
+- Horizontal scroll-driven shift via `transform: translate3d(var(--shift, 0px), 0, 0)` and `will-change: transform`
+- **No dark overlay / full opacity:** companion `.hero-scrim` exists but `background: transparent` (video at 100% visual strength)
+
+### 2. Logo / brand video
+` ` `
+https://d8j0ntlcm91z4.cloudfront.net/user_3GJaYKPxdnQG0Q9O26lu6DPmcHu/hf_20260723_195927_ed99d7a6-2edd-42cb-ae51-494cc41a854d.mp4
+` ` `
+- Native size of this clip: **1470×630** (aspect ≈ 2.333∶1)
+- Element: `&lt;video class=&quot;brand&quot; autoplay muted loop playsinline preload=&quot;auto&quot; src=&quot;…&quot;&gt;`
+- JS must call `.play().catch(() =&gt; {})` as autoplay safety-net
+- Wrapper structure (critical for Safari blend):
+  ` ` `
+  .brand-layer (fixed, mix-blend-mode: lighten, z-index:2, pointer-events:none)
+    └── .brand-frame (overflow:hidden crop box)
+          └── video.brand
+  ` ` `
+- **`mix-blend-mode: lighten` MUST be on `.brand-layer`**, not nested inside overflow:hidden — Safari kills blend if nested under fixed/overflow ancestors
+- Desktop frame: **294×126px** (exact aspect of 1470×630)
+- Video fills frame: `width:294px; height:126px; object-fit:cover` (no negative margin crop)
+
+---
+
+## DOM structure (exact order &amp; copy)
+
+` ` `html
+&lt;video class=&quot;hero-bg&quot; …src=BACKGROUND_URL&gt;&lt;/video&gt;
+&lt;div class=&quot;hero-scrim&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;brand-layer&quot; role=&quot;img&quot; aria-label=&quot;VANTA&quot;&gt;
+  &lt;div class=&quot;brand-frame&quot;&gt;
+    &lt;video class=&quot;brand&quot; …src=LOGO_URL&gt;&lt;/video&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;main class=&quot;hero&quot;&gt;
+  &lt;p class=&quot;meta&quot;&gt;
+    &lt;span&gt;Based in Berlin&lt;/span&gt;
+    &lt;span&gt;Worldwide (12:50 PM)&lt;/span&gt;
+  &lt;/p&gt;
+
+  &lt;div class=&quot;actions&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn--pill btn--fill&quot;&gt;Book a call&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn--pill btn--ghost&quot;&gt;Menu&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;p class=&quot;approach&quot;&gt;Our creative approach&lt;/p&gt;
+
+  &lt;div class=&quot;title-block&quot;&gt;
+    &lt;p class=&quot;bullet&quot;&gt;Open to new collaborations&lt;/p&gt;
+    &lt;h2 class=&quot;headline&quot;&gt;
+      &lt;span&gt;Avant-garde work&lt;/span&gt;
+      &lt;span&gt;that performs&lt;/span&gt;
+    &lt;/h2&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;divider&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;cta&quot;&gt;
+    &lt;p class=&quot;cta__line&quot;&gt;Let&#39;s build something that performs&lt;/p&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn--cta&quot;&gt;Start a project&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;ul class=&quot;services&quot;&gt;
+    &lt;li&gt;AI Creative&lt;/li&gt;
+    &lt;li&gt;Performance&lt;/li&gt;
+    &lt;li&gt;Brand Films&lt;/li&gt;
+    &lt;li&gt;Motion &amp;amp; 3D&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/main&gt;
+
+&lt;div class=&quot;scroll-spacer&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;
+` ` `
+
+Buttons are decorative only (`cursor: default`, no navigation).
+
+---
+
+## Desktop layout (≥901px) — absolute editorial grid
+
+`.hero` is **fixed, full viewport**, `overflow:hidden`, `z-index:1`, `min-height:100svh`.
+
+All clusters absolutely positioned:
+
+| Element | Position |
+|--------|----------|
+| `.brand-layer` | `top: var(--pad-t)` (22px), `left: var(--pad-x)` (24px) |
+| `.meta` | `top: calc(var(--pad-t) + 6px)`, `left: var(--col)` (46%) — 13px, muted, two stacked spans, line-height 1.55 |
+| `.actions` | `top: calc(var(--pad-t) + 2px)`, `right: var(--pad-x)`, flex, gap 10px |
+| `.approach` | `top: 27%`, `left: var(--pad-x)` — 14px muted |
+| `.title-block` | `top: 27%`, `left: var(--col)`, `right: var(--pad-x)` |
+| `.divider` | `top: 70%`, `left: var(--col)`, `right: var(--pad-x)`, height 1px, `--hair` |
+| `.cta` | `top: 75.5%`, `left: var(--col)` |
+| `.services` | `top: 70.4%`, `left: var(--pad-x)`, width **290px** |
+
+**Bullet:** flex row, 9px gap, white 7×7px circle `::before`, text “Open to new collaborations”, 14px, margin-bottom 18px.
+
+**Headline:**
+- `font-size: clamp(40px, 5.5vw, 72px)`
+- `line-height: 0.98`
+- Each line in its own `&lt;span&gt;` with `display:block; white-space:nowrap`
+- Lines: “Avant-garde work” / “that performs”
+
+**Buttons:**
+- Base: 14px, no border-radius, transparent 1px border, inherit font
+- `.btn--pill`: padding `11px 18px`
+- `.btn--fill`: white bg, black text (“Book a call”)
+- `.btn--ghost`: `background: rgba(255,255,255,.10)`, white text (“Menu”)
+- `.btn--cta`: padding `15px 26px`, white bg, black text, 15px (“Start a project”)
+- CTA line above: 14px muted, margin-bottom 16px
+
+**Services list:** no bullets; each `li` has `border-top: 1px solid var(--hair)`, padding `9px 2px`, 15px, color `rgba(255,255,255,.9)`; list has `border-bottom: 1px solid var(--hair)`.
+
+**Scroll spacer:** `height: 350vh` (creates scroll room for scrubbing).
+
+---
+
+## Desktop animations / scroll engine (exact)
+
+Implement an IIFE with this behavior:
+
+### Constants
+- `K = 0.1` (lerp smoothing)
+- `DEADBAND = 0.02` (seconds — don’t seek unless delta exceeds this)
+- Min seek interval: **30ms**
+- At most **one seek in flight**; clear `seeking` on `seeked`
+- `MASK_START = 0.3` (title wipe begins at 30% through video)
+- `SHIFT_PX = 225` (initial left shift of bg video in px)
+- `CENTER_BY = 0.6` (video fully re-centered by 60% through duration)
+- Mobile gate: `matchMedia(&#39;(max-width: 900px)&#39;)` — wipe + shift **desktop only**
+- If `prefers-reduced-motion: reduce`, skip entire scrub engine (leave video on frame 0)
+
+### On `loadedmetadata`
+- `pause()` the bg video
+- Set `currentTime = 0.001`
+
+### Scroll mapping
+` ` `
+progress = clamp(scrollY / (scrollHeight - innerHeight), 0, 1)
+targetTime = progress * video.duration
+` ` `
+
+### rAF tick (always-on, never stop)
+1. Lerp: `curTime += (targetTime - curTime) * K`
+2. Seek if not seeking, `|curTime - currentTime| &gt; DEADBAND`, and `now - lastSeek &gt; 30`
+3. Desktop only, given `p = curTime / duration`:
+   - **Title wipe:** `--wipe = clamp((p - 0.3) / 0.7, 0, 1)` on `.title-block`
+   - **Video shift:** `--shift = (-225 * (1 - clamp(p / 0.6, 0, 1)))px`
+
+### Title wipe mask CSS (exact)
+` ` `css
+--wipe: 0; /* 0 = fully visible; 1 = wiped L→R */
+mask-image: linear-gradient(
+  to right,
+  transparent calc(var(--wipe) * 85% - 60%),
+  #000 calc(var(--wipe) * 85%)
+);
+mask-repeat: no-repeat;
+` ` `
+(Also `-webkit-mask-image` / `-webkit-mask-repeat`.)
+
+### Micro-interactions
+- Button transition: `transform`, `background-color`, `border-color` over **160ms** with `--ease`
+- `:active` → `scale(0.98)`
+- Hover only when `(hover:hover) and (pointer:fine)`:
+  - fill/cta hover → `#fff`
+  - ghost hover → `rgba(255,255,255,.16)`
+- Reduced motion: disable button transitions/active scale
+- Focus-visible: `outline: 2px solid #fff; outline-offset: 3px`
+
+---
+
+## Mobile layout (max-width: 900px)
+
+This is a **separate composition**, not a crushed desktop grid.
+
+### Tokens
+` ` `css
+--pad-x: 20px;
+--pad-t: 14px;
+--header-h: 72px;
+` ` `
+
+### Changes
+- `.scroll-spacer { height: 0 }` — no scroll scrub UI
+- Disable title mask entirely (`mask-image: none`)
+- `.hero-bg`: `transform: none; object-position: center center` (no horizontal shift)
+- Logo: **168×72px**
+- `.brand-layer` / `.actions`: respect `env(safe-area-inset-*)`
+- `.actions`: **fixed** top-right, z-index 2, gap 8px; pill buttons `10px 14px` / 13px
+- `.hero`: `position: relative`, flex column, `min-height: 100svh` and `100dvh`, padding top = safe-area + header-h + 28px, sides/bottom use safe-area
+- Absolute clusters → `position: static`
+- Flex **order:** approach(1) → title-block(2) → meta(3) → divider(4) → cta(5) → services(6)
+- Approach 13px; bullet 13px mb 14px; meta 12px, color `rgba(255,255,255,.72)`, mt 22px
+- Headline: `clamp(34px, 9.2vw, 52px)`, line-height 1.02; spans `white-space: normal; max-width: 12ch`
+- CTA line 13px, max-width 22ch; CTA button **full width**, padding `16px 22px`, 15px, centered text
+- Services full width; li padding `12px 2px`
+
+### Short viewport (`max-width:900px` and `max-height:700px`)
+Tighter padding/margins; headline `clamp(30px, 8.4vw, 44px)`.
+
+### Narrow phones (`max-width:400px`)
+- `--header-h: 64px`
+- Logo **149×64px**
+- Actions **column** stack, gap 6px; pills `9px 12px` / 12px, centered text
+
+---
+
+## What NOT to do
+
+- Do not use Inter bold, serif display fonts, purple gradients, cards, rounded-full pills, glow effects, or emoji
+- Do not darken the background video with a scrim (opacity must stay 100% / scrim transparent)
+- Do not put `mix-blend-mode` on the logo video inside the overflow crop — put **`lighten` on `.brand-layer`**
+- Do not autoplay/loop the background video — only scrub it
+- Do not wire real button destinations — decorative only
+- Single file, no build step
+
+---
+
+## Acceptance checklist
+
+1. Black page, Inter 400, letter-spacing -0.02em  
+2. Logo video = exact logo CloudFront URL, Lighten blend, 294×126 desktop  
+3. BG video = exact bg CloudFront URL, full opacity, fixed cover  
+4. Desktop absolute layout at the percentages/offsets above  
+5. Scroll (350vh) scrubs video with lerp + gated seeks; shifts bg left→center; wipes title L→R from 30%→100%  
+6. Mobile ≤900px stacks in the specified order with fixed compact header; no scrub spacer  
+7. Copy strings match character-for-character including “Worldwide (12:50 PM)” and “Motion &amp; 3D”</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="keel.html">Keel<small>Creative · creative</small></a><a href="skyflora.html">Skyflora<small>Creative · creative</small></a><a href="creative-matter.html">Creative Matter<small>Creative · creative</small></a><a href="ai-future-studio.html">AI Future Studio<small>Creative · creative</small></a><a href="ai-film-studio.html">AI Film Studio<small>Creative · creative</small></a><a href="sparkform.html">Sparkform<small>Creative · creative</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

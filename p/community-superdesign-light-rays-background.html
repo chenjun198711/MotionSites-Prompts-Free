@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Light Rays Background — Animations &amp; Backgrounds 提示词 | MotionSites Prompts</title>
+<meta name="description" content="A minimalist showcase of a high-end WebGL light rays background effect with mouse interaction and atmospheric motion. Source: ReactBits">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/community-superdesign-light-rays-background.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Light Rays Background — Animations &amp; Backgrounds 提示词">
+<meta property="og:description" content="A minimalist showcase of a high-end WebGL light rays background effect with mouse interaction and atmospheric motion. Source: ReactBits">
+<meta property="og:url" content="https://prompt-site.shop/p/community-superdesign-light-rays-background.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Light Rays Background","description":"A minimalist showcase of a high-end WebGL light rays background effect with mouse interaction and atmospheric motion. Source: ReactBits","url":"https://prompt-site.shop/p/community-superdesign-light-rays-background.html","inLanguage":"zh-CN","genre":"Animations & Backgrounds","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-animations___backgrounds">Animations &amp; Backgrounds</a></div><h1>Light Rays Background</h1><div class="chip-row"><span class="chip">Animations &amp; Backgrounds</span><span class="chip">background</span><span class="chip">社区公开收藏</span></div><div class="facts"><span>正文：15,178 字符</span></div><div class="hero-media"><video src="../assets/community/superdesign/light-rays-background/preview.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>A minimalist showcase of a high-end WebGL light rays background effect with mouse interaction and atmospheric motion. Source: ReactBits</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">You are given a task to integrate an existing React component in the codebase
+
+~~~/README.md
+# LightRays
+
+A high-end, high-performance WebGL light ray background effect. It creates cinematic, atmospheric lighting that responds to mouse movement and animates organically.
+
+## Features
+- **WebGL Accelerated**: Smooth 60fps performance using OGL.
+- **Interactive**: Rays can tilt and follow mouse movement.
+- **Customizable**: Control origin, color, spread, speed, distortion, and more.
+- **Lightweight**: Zero external heavy dependencies (uses OGL).
+
+## Dependencies
+- `ogl`: ^1.0.11
+- `framer-motion`: latest
+- `lucide-react`: latest
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `raysOrigin` | `RaysOrigin` | `&#39;top-center&#39;` | The starting point of the rays |
+| `raysColor` | `string` | `&#39;#ffffff&#39;` | The hex color of the light rays |
+| `raysSpeed` | `number` | `1` | Animation speed multiplier |
+| `lightSpread` | `number` | `1` | Width of the light beam |
+| `rayLength` | `number` | `2` | Length of rays relative to container |
+| `pulsating` | `boolean` | `false` | Enable breathing intensity effect |
+| `followMouse` | `boolean` | `true` | Whether rays tilt towards mouse |
+| `mouseInfluence` | `number` | `0.1` | Intensity of mouse tracking |
+| `noiseAmount` | `number` | `0.0` | Amount of film grain/noise |
+| `distortion` | `number` | `0.0` | Wave distortion amount |
+
+## Usage
+
+```tsx
+import { LightRays } from &#39;@/sd-components/f0a75623-66d9-49e2-a9a9-aacf9ca7fe87&#39;;
+
+function MyPage() {
+return (
+&lt;div className=&quot;relative w-full h-[600px] bg-slate-950 overflow-hidden&quot;&gt;
+&lt;LightRays
+raysOrigin=&quot;top-center&quot;
+raysColor=&quot;#00ffff&quot;
+raysSpeed={1.5}
+lightSpread={0.8}
+rayLength={1.2}
+followMouse={true}
+/&gt;
+&lt;div className=&quot;relative z-10&quot;&gt;
+&lt;h1&gt;Cinematic Lighting&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+);
+}
+```
+~~~
+
+~~~/src/App.tsx
+import { LightRays } from &#39;./Component&#39;;
+import { motion } from &#39;framer-motion&#39;;
+import { ArrowLeft } from &#39;lucide-react&#39;;
+
+/**
+* Demo application for LightRays component.
+* Showcases a high-end atmospheric background with a minimalist interface.
+*/
+
+export default function App() {
+return (
+&lt;main className=&quot;relative w-full h-screen bg-[#1A1A1B] flex items-center justify-center overflow-hidden&quot;&gt;
+{/* The background effect */}
+&lt;LightRays
+raysOrigin=&quot;top-center&quot;
+raysColor=&quot;#00ffff&quot;
+raysSpeed={1.5}
+lightSpread={1.2}
+rayLength={1.8}
+followMouse={true}
+mouseInfluence={0.3}
+noiseAmount={0.03}
+distortion={0.08}
+/&gt;
+
+{/* Minimalist Overlay */}
+&lt;div className=&quot;relative z-10 flex flex-col items-center text-center px-6&quot;&gt;
+&lt;motion.div
+initial={{ opacity: 0, y: 20 }}
+animate={{ opacity: 1, y: 0 }}
+transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+className=&quot;space-y-6&quot;
+&gt;
+&lt;h1 className=&quot;text-5xl md:text-7xl font-medium tracking-tight text-white/90&quot;&gt;
+LightRays
+&lt;/h1&gt;
+
+&lt;div className=&quot;h-px w-24 bg-gradient-to-r from-transparent via-[#00ffff]/50 to-transparent mx-auto&quot; /&gt;
+
+&lt;p className=&quot;text-white/40 text-lg md:text-xl font-light max-w-md mx-auto&quot;&gt;
+High-end WebGL atmospheric lighting. Interactive, lightweight, and cinematic.
+&lt;/p&gt;
+&lt;/motion.div&gt;
+&lt;/div&gt;
+
+{/* Required Reply Button as per instructions */}
+&lt;motion.button
+initial={{ opacity: 0 }}
+animate={{ opacity: 1 }}
+transition={{ delay: 1 }}
+onClick={() =&gt; window.history.back()}
+className=&quot;fixed bottom-12 right-12 z-20 flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white/70 hover:bg-white/10 hover:text-white transition-all backdrop-blur-md group&quot;
+&gt;
+&lt;ArrowLeft className=&quot;w-4 h-4 group-hover:-translate-x-1 transition-transform&quot; /&gt;
+&lt;span className=&quot;text-sm font-medium&quot;&gt;Reply&lt;/span&gt;
+&lt;/motion.button&gt;
+
+{/* Subtle floating shadow container as per style guide */}
+&lt;div className=&quot;fixed inset-24 pointer-events-none rounded-[40px] shadow-[0_0_80px_rgba(0,0,0,0.2)] border border-white/5&quot; /&gt;
+&lt;/main&gt;
+);
+}
+~~~
+
+~~~/package.json
+{
+&quot;name&quot;: &quot;light-rays-showcase&quot;,
+&quot;description&quot;: &quot;Atmospheric WebGL light rays background effect&quot;,
+&quot;dependencies&quot;: {
+&quot;ogl&quot;: &quot;^1.0.11&quot;,
+&quot;lucide-react&quot;: &quot;latest&quot;,
+&quot;framer-motion&quot;: &quot;latest&quot;,
+&quot;clsx&quot;: &quot;latest&quot;,
+&quot;tailwind-merge&quot;: &quot;latest&quot;
+}
+}
+~~~
+
+~~~/src/Component.tsx
+import { useRef, useEffect, useState } from &#39;react&#39;;
+import { Renderer, Program, Triangle, Mesh } from &#39;ogl&#39;;
+
+/**
+* LightRays Background Component
+*
+* A high-performance WebGL-based light ray effect that simulates atmospheric lighting.
+* Supports various origins, mouse following, and organic movement.
+*/
+
+export type RaysOrigin =
+| &#39;top-center&#39;
+| &#39;top-left&#39;
+| &#39;top-right&#39;
+| &#39;right&#39;
+| &#39;left&#39;
+| &#39;bottom-center&#39;
+| &#39;bottom-right&#39;
+| &#39;bottom-left&#39;;
+
+interface LightRaysProps {
+/** The starting point of the light rays */
+raysOrigin?: RaysOrigin;
+/** Primary color of the rays (hex) */
+raysColor?: string;
+/** Animation speed multiplier */
+raysSpeed?: number;
+/** Spread/width of the light beam */
+lightSpread?: number;
+/** Length of the rays relative to container size */
+rayLength?: number;
+/** Enable pulsing intensity */
+pulsating?: boolean;
+/** Distance before rays fade out */
+fadeDistance?: number;
+/** Color saturation (0 to 1) */
+saturation?: number;
+/** Whether rays should tilt towards the mouse */
+followMouse?: boolean;
+/** Intensity of mouse influence (0 to 1) */
+mouseInfluence?: number;
+/** Amount of grain/noise texture */
+noiseAmount?: number;
+/** Amount of wave distortion */
+distortion?: number;
+/** Additional CSS classes */
+className?: string;
+}
+
+const DEFAULT_COLOR = &#39;#ffffff&#39;;
+
+const hexToRgb = (hex: string): [number, number, number] =&gt; {
+const m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+return m ? [parseInt(m[1], 16) / 255, parseInt(m[2], 16) / 255, parseInt(m[3], 16) / 255] : [1, 1, 1];
+};
+
+const getAnchorAndDir = (
+origin: RaysOrigin,
+w: number,
+h: number
+): { anchor: [number, number]; dir: [number, number] } =&gt; {
+const outside = 0.2;
+switch (origin) {
+case &#39;top-left&#39;:
+return { anchor: [0, -outside * h], dir: [0.7, 0.7] };
+case &#39;top-right&#39;:
+return { anchor: [w, -outside * h], dir: [-0.7, 0.7] };
+case &#39;left&#39;:
+return { anchor: [-outside * w, 0.5 * h], dir: [1, 0] };
+case &#39;right&#39;:
+return { anchor: [(1 + outside) * w, 0.5 * h], dir: [-1, 0] };
+case &#39;bottom-left&#39;:
+return { anchor: [0, (1 + outside) * h], dir: [0.7, -0.7] };
+case &#39;bottom-center&#39;:
+return { anchor: [0.5 * w, (1 + outside) * h], dir: [0, -1] };
+case &#39;bottom-right&#39;:
+return { anchor: [w, (1 + outside) * h], dir: [-0.7, -0.7] };
+default: // &quot;top-center&quot;
+return { anchor: [0.5 * w, -outside * h], dir: [0, 1] };
+}
+};
+
+type Vec2 = [number, number];
+type Vec3 = [number, number, number];
+
+interface Uniforms {
+iTime: { value: number };
+iResolution: { value: Vec2 };
+rayPos: { value: Vec2 };
+rayDir: { value: Vec2 };
+raysColor: { value: Vec3 };
+raysSpeed: { value: number };
+lightSpread: { value: number };
+rayLength: { value: number };
+pulsating: { value: number };
+fadeDistance: { value: number };
+saturation: { value: number };
+mousePos: { value: Vec2 };
+mouseInfluence: { value: number };
+noiseAmount: { value: number };
+distortion: { value: number };
+}
+
+export function LightRays({
+raysOrigin = &#39;top-center&#39;,
+raysColor = DEFAULT_COLOR,
+raysSpeed = 1,
+lightSpread = 1,
+rayLength = 2,
+pulsating = false,
+fadeDistance = 1.0,
+saturation = 1.0,
+followMouse = true,
+mouseInfluence = 0.1,
+noiseAmount = 0.02,
+distortion = 0.05,
+className = &#39;&#39;
+}: LightRaysProps) {
+const containerRef = useRef&lt;HTMLDivElement&gt;(null);
+const uniformsRef = useRef&lt;Uniforms | null&gt;(null);
+const rendererRef = useRef&lt;Renderer | null&gt;(null);
+const mouseRef = useRef({ x: 0.5, y: 0.5 });
+const smoothMouseRef = useRef({ x: 0.5, y: 0.5 });
+const animationIdRef = useRef&lt;number | null&gt;(null);
+const meshRef = useRef&lt;Mesh | null&gt;(null);
+const cleanupFunctionRef = useRef&lt;(() =&gt; void) | null&gt;(null);
+const [isVisible, setIsVisible] = useState(false);
+const observerRef = useRef&lt;IntersectionObserver | null&gt;(null);
+
+useEffect(() =&gt; {
+if (!containerRef.current) return;
+observerRef.current = new IntersectionObserver(
+entries =&gt; {
+const entry = entries[0];
+setIsVisible(entry.isIntersecting);
+},
+{ threshold: 0.1 }
+);
+observerRef.current.observe(containerRef.current);
+return () =&gt; {
+if (observerRef.current) {
+observerRef.current.disconnect();
+observerRef.current = null;
+}
+};
+}, []);
+
+useEffect(() =&gt; {
+if (!isVisible || !containerRef.current) return;
+if (cleanupFunctionRef.current) {
+cleanupFunctionRef.current();
+cleanupFunctionRef.current = null;
+}
+
+const initializeWebGL = async () =&gt; {
+if (!containerRef.current) return;
+await new Promise(resolve =&gt; setTimeout(resolve, 10));
+if (!containerRef.current) return;
+
+const renderer = new Renderer({
+dpr: Math.min(window.devicePixelRatio, 2),
+alpha: true
+});
+rendererRef.current = renderer;
+const gl = renderer.gl;
+
+gl.canvas.style.width = &#39;100%&#39;;
+gl.canvas.style.height = &#39;100%&#39;;
+gl.canvas.style.display = &#39;block&#39;;
+
+while (containerRef.current.firstChild) {
+containerRef.current.removeChild(containerRef.current.firstChild);
+}
+containerRef.current.appendChild(gl.canvas);
+
+const vert = `
+attribute vec2 position;
+varying vec2 vUv;
+void main() {
+vUv = position * 0.5 + 0.5;
+gl_Position = vec4(position, 0.0, 1.0);
+}
+`;
+
+const frag = `
+precision highp float;
+uniform float iTime;
+uniform vec2 iResolution;
+uniform vec2 rayPos;
+uniform vec2 rayDir;
+uniform vec3 raysColor;
+uniform float raysSpeed;
+uniform float lightSpread;
+uniform float rayLength;
+uniform float pulsating;
+uniform float fadeDistance;
+uniform float saturation;
+uniform vec2 mousePos;
+uniform float mouseInfluence;
+uniform float noiseAmount;
+uniform float distortion;
+varying vec2 vUv;
+
+float noise(vec2 st) {
+return fract(sin(dot(st.xy, vec2(12.9898,78.233))) * 43758.5453123);
+}
+
+float rayStrength(vec2 raySource, vec2 rayRefDirection, vec2 coord,
+float seedA, float seedB, float speed) {
+vec2 sourceToCoord = coord - raySource;
+vec2 dirNorm = normalize(sourceToCoord);
+float cosAngle = dot(dirNorm, rayRefDirection);
+
+float d = distortion * sin(iTime * 1.5 + length(sourceToCoord) * 0.005);
+float distortedAngle = cosAngle + d;
+
+float spreadFactor = pow(max(distortedAngle, 0.0), 1.0 / max(lightSpread, 0.001));
+float distance = length(sourceToCoord);
+float maxDistance = max(iResolution.x, iResolution.y) * rayLength;
+float lengthFalloff = clamp((maxDistance - distance) / maxDistance, 0.0, 1.0);
+
+float fadeFactor = fadeDistance * max(iResolution.x, iResolution.y);
+float fadeFalloff = clamp((fadeFactor - distance) / fadeFactor, 0.0, 1.0);
+
+float pulse = pulsating &gt; 0.5 ? (0.85 + 0.15 * sin(iTime * speed * 4.0)) : 1.0;
+
+float baseStrength = clamp(
+(0.5 + 0.2 * sin(distortedAngle * seedA + iTime * speed)) +
+(0.3 + 0.2 * cos(-distortedAngle * seedB + iTime * speed * 0.8)),
+0.0, 1.0
+);
+
+return baseStrength * lengthFalloff * fadeFalloff * spreadFactor * pulse;
+}
+
+void main() {
+vec2 fragCoord = gl_FragCoord.xy;
+vec2 coord = vec2(fragCoord.x, fragCoord.y);
+
+vec2 finalRayDir = normalize(rayDir);
+if (mouseInfluence &gt; 0.0) {
+vec2 mouseScreenPos = mousePos * iResolution.xy;
+vec2 mouseDirection = normalize(mouseScreenPos - rayPos);
+finalRayDir = normalize(mix(finalRayDir, mouseDirection, mouseInfluence));
+}
+
+float r1 = rayStrength(rayPos, finalRayDir, coord, 45.2, 31.4, 0.8 * raysSpeed);
+float r2 = rayStrength(rayPos, finalRayDir, coord, 28.5, 19.8, 1.2 * raysSpeed);
+float r3 = rayStrength(rayPos, finalRayDir, coord, 12.1, 56.2, 0.5 * raysSpeed);
+
+float combined = (r1 * 0.4 + r2 * 0.4 + r3 * 0.2);
+combined = pow(combined, 0.7); // Boost mid-tones for visibility
+combined *= 1.5; // Overall intensity boost
+vec3 finalColor = raysColor * combined;
+
+if (noiseAmount &gt; 0.0) {
+float n = noise(coord * 0.01 + iTime * 0.05);
+finalColor *= (1.0 - noiseAmount + noiseAmount * n);
+}
+
+if (saturation != 1.0) {
+float gray = dot(finalColor, vec3(0.299, 0.587, 0.114));
+finalColor = mix(vec3(gray), finalColor, saturation);
+}
+
+gl_FragColor = vec4(finalColor, combined);
+}
+`;
+
+const uniforms: Uniforms = {
+iTime: { value: 0 },
+iResolution: { value: [1, 1] },
+rayPos: { value: [0, 0] },
+rayDir: { value: [0, 1] },
+raysColor: { value: hexToRgb(raysColor) },
+raysSpeed: { value: raysSpeed },
+lightSpread: { value: lightSpread },
+rayLength: { value: rayLength },
+pulsating: { value: pulsating ? 1.0 : 0.0 },
+fadeDistance: { value: fadeDistance },
+saturation: { value: saturation },
+mousePos: { value: [0.5, 0.5] },
+mouseInfluence: { value: mouseInfluence },
+noiseAmount: { value: noiseAmount },
+distortion: { value: distortion }
+};
+uniformsRef.current = uniforms;
+
+const geometry = new Triangle(gl);
+const program = new Program(gl, {
+vertex: vert,
+fragment: frag,
+uniforms,
+transparent: true
+});
+const mesh = new Mesh(gl, { geometry, program });
+meshRef.current = mesh;
+
+const updatePlacement = () =&gt; {
+if (!containerRef.current || !renderer) return;
+const { clientWidth: wCSS, clientHeight: hCSS } = containerRef.current;
+renderer.setSize(wCSS, hCSS);
+const dpr = renderer.dpr;
+const w = wCSS * dpr;
+const h = hCSS * dpr;
+
+uniforms.iResolution.value = [w, h];
+const { anchor, dir } = getAnchorAndDir(raysOrigin, w, h);
+uniforms.rayPos.value = anchor;
+uniforms.rayDir.value = dir;
+};
+
+const loop = (t: number) =&gt; {
+if (!rendererRef.current || !uniformsRef.current || !meshRef.current) return;
+
+uniforms.iTime.value = t * 0.001;
+
+if (followMouse &amp;&amp; mouseInfluence &gt; 0.0) {
+const smoothing = 0.95;
+smoothMouseRef.current.x = smoothMouseRef.current.x * smoothing + mouseRef.current.x * (1 - smoothing);
+smoothMouseRef.current.y = smoothMouseRef.current.y * smoothing + mouseRef.current.y * (1 - smoothing);
+uniforms.mousePos.value = [smoothMouseRef.current.x, 1.0 - smoothMouseRef.current.y];
+}
+
+renderer.render({ scene: mesh });
+animationIdRef.current = requestAnimationFrame(loop);
+};
+
+window.addEventListener(&#39;resize&#39;, updatePlacement);
+updatePlacement();
+animationIdRef.current = requestAnimationFrame(loop);
+
+cleanupFunctionRef.current = () =&gt; {
+if (animationIdRef.current) cancelAnimationFrame(animationIdRef.current);
+window.removeEventListener(&#39;resize&#39;, updatePlacement);
+if (renderer.gl.canvas.parentNode) {
+renderer.gl.canvas.parentNode.removeChild(renderer.gl.canvas);
+}
+};
+};
+
+initializeWebGL();
+return () =&gt; cleanupFunctionRef.current?.();
+}, [isVisible, raysOrigin, raysColor, raysSpeed, lightSpread, rayLength, pulsating, fadeDistance, saturation, followMouse, mouseInfluence, noiseAmount, distortion]);
+
+useEffect(() =&gt; {
+const handleMouseMove = (e: MouseEvent) =&gt; {
+if (!containerRef.current) return;
+const rect = containerRef.current.getBoundingClientRect();
+mouseRef.current = {
+x: (e.clientX - rect.left) / rect.width,
+y: (e.clientY - rect.top) / rect.height
+};
+};
+
+if (followMouse) {
+window.addEventListener(&#39;mousemove&#39;, handleMouseMove);
+return () =&gt; window.removeEventListener(&#39;mousemove&#39;, handleMouseMove);
+}
+}, [followMouse]);
+
+return (
+&lt;div
+ref={containerRef}
+className={`absolute inset-0 w-full h-full pointer-events-none overflow-hidden ${className}`}
+/&gt;
+);
+}
+
+export default LightRays;
+~~~
+
+Implementation Guidelines
+
+1. Analyze the component structure, styling, animation implementations
+2. Review the component&#39;s arguments and state
+3. Think through what is the best place to adopt this component/style into the design we are doing
+4. Then adopt the component/design to our current system
+
+Help me integrate this into my design</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：superdesigndev/superdesign-prompts<br>原始文件：<code>prompts/light-rays-background/README.md</code><br>许可证：CC0-1.0<br>作者：Jason Zhou<br><a href="https://github.com/superdesigndev/superdesign-prompts/blob/main/prompts/light-rays-background/README.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="community-superdesign-the-stacking-cards-effect.html">The &quot;Stacking Cards&quot; Effect<small>Animations &amp; Backgrounds · landing-page</small></a><a href="community-superdesign-hover-reveal-effect.html">Hover reveal effect<small>Animations &amp; Backgrounds · landing-page</small></a><a href="community-superdesign-scroll-journey-line.html">Scroll Journey Line<small>Animations &amp; Backgrounds · background</small></a><a href="community-superdesign-gooey-gradient-background.html">Gooey Gradient Background<small>Animations &amp; Backgrounds · background</small></a><a href="community-superdesign-horizontal-gallery.html">Horizontal Gallery<small>Animations &amp; Backgrounds · background</small></a><a href="community-superdesign-parallax-stars-background.html">Parallax Stars Background<small>Animations &amp; Backgrounds · background</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

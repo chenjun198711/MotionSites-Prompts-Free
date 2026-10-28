@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>No-Code Waitlist — Waitlist &amp; Coming Soon 提示词 | MotionSites Prompts</title>
+<meta name="description" content="全屏暗色英雄页，黑色背景搭配全屏视频，玻璃态导航栏居中，邮件输入框引导用户加入等待列表。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/no-code-waitlist.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="No-Code Waitlist — Waitlist &amp; Coming Soon 提示词">
+<meta property="og:description" content="全屏暗色英雄页，黑色背景搭配全屏视频，玻璃态导航栏居中，邮件输入框引导用户加入等待列表。">
+<meta property="og:url" content="https://prompt-site.shop/p/no-code-waitlist.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/no-code-waitlist.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"No-Code Waitlist","description":"全屏暗色英雄页，黑色背景搭配全屏视频，玻璃态导航栏居中，邮件输入框引导用户加入等待列表。","url":"https://prompt-site.shop/p/no-code-waitlist.html","inLanguage":"zh-CN","genre":"Waitlist & Coming Soon","dateCreated":"2026-05-20T06:10:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-waitlist___coming_soon">Waitlist &amp; Coming Soon</a></div><h1>No-Code Waitlist</h1><div class="chip-row"><span class="chip">Waitlist &amp; Coming Soon</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-05-20</span><span>正文：6,518 字符</span></div><div class="hero-media"><img src="../assets/previews/no-code-waitlist.webp" alt="No-Code Waitlist 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>全屏暗色英雄页，黑色背景搭配全屏视频，玻璃态导航栏居中，邮件输入框引导用户加入等待列表。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a full-screen dark hero section landing page in React + Vite + Tailwind CSS v4 + Motion (framer-motion) + Lucide React icons + hls.js. The page should be a single screen (100vh, no scroll) with a black background, a fullscreen background video, a glassmorphism navbar, and a centered hero with an email capture CTA.
+&gt;
+&gt; **Dependencies:** `react`, `react-dom`, `motion`, `hls.js`, `lucide-react`, `tailwindcss` v4 with `@tailwindcss/vite`, `@vitejs/plugin-react`
+&gt;
+&gt; **Fonts:** Import Google Fonts:
+&gt; - `Inter` (weights 300, 400, 500, 600) -- used as the base sans-serif font
+&gt; - `Instrument Serif` (regular and italic) -- used for the hero heading
+&gt;
+&gt; **CSS (`index.css`):**
+&gt; - Import both Google Font URLs, then `@import &quot;tailwindcss&quot;;`
+&gt; - Set `@theme { --font-sans: &quot;Inter&quot;, ui-sans-serif, system-ui, sans-serif; }`
+&gt; - `:root` variables: `--background: #000000; --foreground: #ffffff;`
+&gt; - `body`: background-color var(--background), color var(--foreground), font-family var(--font-sans), `-webkit-font-smoothing: antialiased`, `letter-spacing: -0.01em`
+&gt; - `.liquid-glass` class: `background: rgba(255,255,255,0.01)`, `background-blend-mode: luminosity`, `backdrop-filter: blur(4px)`, `-webkit-backdrop-filter: blur(4px)`, `border: none`, `box-shadow: inset 0 1px 1px rgba(255,255,255,0.1)`, `position: relative`, `overflow: hidden`. It has a `::before` pseudo-element for a gradient border effect: `padding: 1.4px`, `background: linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%, rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%)`, masked with `-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)` and `-webkit-mask-composite: xor; mask-composite: exclude;`
+&gt; - `.glass-pill` class: `background: rgba(255,255,255,0.04)`, `backdrop-filter: blur(16px) saturate(180%)`, `border-radius: 9999px`, `box-shadow: none !important`
+&gt;
+&gt; **Background Video component:**
+&gt; - Renders an absolutely positioned `&lt;div&gt;` covering the full parent (`absolute inset-0 overflow-hidden pointer-events-none`)
+&gt; - Contains a `&lt;video&gt;` element: `autoPlay`, `muted`, `loop`, `playsInline`, classes `w-full h-full object-cover opacity-100`
+&gt; - Video source URL: `https://stream.mux.com/kimF2ha9zLrX64H00UgLGPflCzNtl1T0215MlAmeOztv8.m3u8` (this is an HLS stream from Mux, NOT CloudFront)
+&gt; - Uses `hls.js`: if the browser natively supports HLS (`video.canPlayType(&quot;application/vnd.apple.mpegurl&quot;)`), set `video.src` directly; otherwise instantiate `new Hls()`, `loadSource`, `attachMedia`
+&gt;
+&gt; **Navbar component:**
+&gt; - Animates in with `motion.nav`: `initial={{ y: -20, opacity: 0 }}`, `animate={{ y: 0, opacity: 1 }}`
+&gt; - Classes: `relative z-20 px-6 py-6 w-full`
+&gt; - Inner container: `liquid-glass rounded-full px-6 py-3 flex items-center justify-between max-w-5xl mx-auto`
+&gt; - Left side (`flex items-center gap-8`):
+&gt; - Logo: `Globe` icon from lucide-react (w-6 h-6 text-white) + &quot;Asme&quot; text (`text-white font-semibold text-lg`), in a `flex items-center gap-2` wrapper
+&gt; - Nav links: &quot;Features&quot;, &quot;Pricing&quot;, &quot;About&quot; -- hidden on mobile (`hidden md:flex`), `items-center gap-8 text-white/80 text-sm font-medium`, each link has `hover:text-white transition-colors duration-300`
+&gt; - Right side (`flex items-center gap-4`):
+&gt; - &quot;Sign Up&quot; plain text button: `text-white hover:text-white/80 transition-colors text-sm font-medium cursor-pointer`
+&gt; - &quot;Login&quot; glassmorphism button: `liquid-glass rounded-full px-6 py-2 text-sm font-medium text-white hover:opacity-90 transition-opacity cursor-pointer`
+&gt;
+&gt; **Hero component:**
+&gt; - `&lt;section&gt;` with `relative flex-1 flex flex-col items-center justify-center px-6`
+&gt; - Content wrapper: `relative z-10 text-center max-w-5xl mx-auto flex flex-col items-center justify-center w-full gap-12`
+&gt; - **Tagline** (motion.p): text &quot;BUILD A NO-CODE AI APP IN MINUTES&quot;, `text-white/80 text-[10px] md:text-[11px] font-medium tracking-[0.2em] uppercase mb-4`, animates `initial={{ opacity: 0, y: 10 }}`, `animate={{ opacity: 1, y: 0 }}`, `transition={{ delay: 0.1 }}`
+&gt; - **Heading** (motion.h1): text &quot;A new way to think and create with computers&quot; (with `&lt;br className=&quot;hidden md:block&quot; /&gt;` after &quot;create&quot;), `fontFamily: &quot;&#39;Instrument Serif&#39;, serif&quot;` set via inline style, classes `text-4xl md:text-[64px] font-medium tracking-[-0.01em] leading-[1.1] mb-6 bg-gradient-to-b from-white via-white/95 to-white/70 bg-clip-text text-transparent max-w-4xl`, animates `initial={{ opacity: 0, y: 20 }}`, `animate={{ opacity: 1, y: 0 }}`, `transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}`
+&gt; - **CTA area** (motion.div): `min-h-[50px] mt-2`, animates with `delay: 0.4`. Uses `AnimatePresence mode=&quot;wait&quot;` to toggle between:
+&gt; - **Button state**: &quot;Get early access&quot; -- `px-10 py-3 text-[14px] font-medium border border-white/10 rounded-full hover:border-white/30 hover:bg-white/[0.02] transition-all duration-300 text-white/90 backdrop-blur-sm cursor-pointer`. On click, switches to email form.
+&gt; - **Email form state**: a `&lt;form&gt;` with `flex items-center gap-2 pl-5 pr-1.5 py-1.5 text-[14px] font-medium border border-white/20 rounded-full bg-white/[0.02] backdrop-blur-sm w-full max-w-[320px] focus-within:border-white/40 transition-colors duration-300`. Contains an email `&lt;input&gt;` (transparent background, white text, `placeholder-white/45`, `autoFocus`) and a submit button with either `ArrowRight` icon (default) or `Check` icon (after submit). Both states animate scale 0.95 to 1 with 0.2s duration.
+&gt; - **Typewriter placeholder**: when the email form opens, the placeholder text &quot;Enter Your Email Here For Early Access&quot; types in character by character at 60ms intervals. After submission, it types &quot;You Will Receive Notifications By Email&quot; instead. After 4 seconds, it resets back to the button state.
+&gt; - **&quot;Play Video Demo&quot;** link below (motion.div with `delay: 0.8` fade-in): `text-white/80 hover:text-white/40 transition-colors duration-300 text-[13px] font-medium tracking-wide`
+&gt;
+&gt; **App root layout:**
+&gt; - `&lt;main&gt;` with `relative bg-black h-screen w-screen flex flex-col overflow-hidden selection:bg-white selection:text-black shrink-0`
+&gt; - Render order: `BackgroundVideo`, `Navbar`, `Hero`
+&gt; - Text selection is styled white bg with black text
+
+---
+
+Key clarification: The video URL is **not** from CloudFront. It is an HLS stream hosted on **Mux**: `https://stream.mux.com/kimF2ha9zLrX64H00UgLGPflCzNtl1T0215MlAmeOztv8.m3u8`. The `.m3u8` format requires hls.js for non-Safari browsers.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="solace-sign-in.html">Solace sign-in<small>Waitlist &amp; Coming Soon · form</small></a><a href="novadesk-signup.html">NovaDesk Signup<small>Waitlist &amp; Coming Soon · hero</small></a><a href="aurora-onboard.html">Aurora Onboard<small>Waitlist &amp; Coming Soon · mobile</small></a><a href="community-superdesign-softly-digital-wellness-app.html">Softly - Digital Wellness App<small>Waitlist &amp; Coming Soon · landing-page</small></a><a href="community-superdesign-bold-editorial-style.html">Bold Editorial Style<small>Waitlist &amp; Coming Soon · landing-page</small></a><a href="community-superdesign-minimalist-beta-capture.html">Minimalist Beta Capture<small>Waitlist &amp; Coming Soon · landing-page</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

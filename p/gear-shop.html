@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gear Shop — E-commerce 提示词 | MotionSites Prompts</title>
+<meta name="description" content="暖珊瑚色耳机电商应用，三台iPhone 15 Pro并排展示，背景有同心圆装饰，适合展示音频产品。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/gear-shop.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gear Shop — E-commerce 提示词">
+<meta property="og:description" content="暖珊瑚色耳机电商应用，三台iPhone 15 Pro并排展示，背景有同心圆装饰，适合展示音频产品。">
+<meta property="og:url" content="https://prompt-site.shop/p/gear-shop.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/gear-shop.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Gear Shop","description":"暖珊瑚色耳机电商应用，三台iPhone 15 Pro并排展示，背景有同心圆装饰，适合展示音频产品。","url":"https://prompt-site.shop/p/gear-shop.html","inLanguage":"zh-CN","genre":"E-commerce","dateCreated":"2026-07-09T01:35:34.456589+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-e-commerce">E-commerce</a></div><h1>Gear Shop</h1><div class="chip-row"><span class="chip">E-commerce</span><span class="chip">mobile</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-07-09</span><span>正文：7,043 字符</span></div><div class="hero-media"><img src="../assets/previews/gear-shop.webp" alt="Gear Shop 动效预览" loading="lazy"><div class="media-note">本地预览图 · png</div></div><h2>简介</h2><p>暖珊瑚色耳机电商应用，三台iPhone 15 Pro并排展示，背景有同心圆装饰，适合展示音频产品。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a static Vite HTML page that displays 3 iPhone 15 Pro mockup screens side by side (stacking vertically on screens under 1000px). The design is an audio/headphones e-commerce app with a warm coral/peach color palette. Use only vanilla HTML and inline CSS -- no frameworks.
+
+---
+
+## LAYOUT &amp; BACKGROUND
+
+- Page background: `#F6E2DE` with a fixed SVG overlay showing concentric circles (coral `#e2574c` stroked circles at r=260 opacity 0.5, r=180 opacity 0.7, white `#ffffff` circle at r=100, filled coral dot at r=26).
+- 3 screens sit centered in a flex row with `gap: 28px`, wrapped in `zoom: 0.744`. On `max-width: 1000px`, stack vertically.
+- Each screen is `390px x 844px`, `border-radius: 44px`, `box-shadow: 0 30px 60px rgba(190, 120, 110, 0.28)`, `overflow: hidden`.
+
+---
+
+## FONT
+
+- Custom font &quot;Substance&quot; loaded via `@font-face` with weights 100-900 (thin, extralight, light, regular, medium, bold, extrabold, black) from `.otf` files in `assets/fonts/`.
+- Fallback stack: `-apple-system, BlinkMacSystemFont, &#39;Helvetica Neue&#39;, Helvetica, sans-serif`.
+- Prices use system font: `-apple-system, BlinkMacSystemFont, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif`.
+
+---
+
+## iOS CHROME (on every screen)
+
+- **Dynamic Island**: absolute positioned, `top: 11px`, centered horizontally, `120px x 35px`, `border-radius: 22px`, solid black.
+- **Status bar**: absolute top, flex row with 140px gap, centered. Left: time &quot;9:41&quot; in SF Pro/system font, `font-weight: 600`, `16px`. Right: signal bars SVG (4 rects), WiFi SVG, battery SVG. Screen 1 uses white icons; Screens 2-3 use black icons.
+- **Home indicator**: absolute bottom, centered bar `134px x 5px`, `border-radius: 100px`. White `rgba(255,255,255,0.75)` on Screen 1, dark `rgba(0,0,0,0.28)` on Screens 2-3.
+
+---
+
+## SCREEN 1: HERO
+
+- Background: `#F3B7AE`
+- Full-bleed cover image: `https://order-twine-70493179.figma.site/_components/v2/1fb0bd10fd40f9a9e279e8076f3762dd0f7d9889/image-4.d020e935.png` with Ken Burns animation (scale 1.16 to 1 over 16s) + fade in over 1.4s.
+- **&quot;20 new arrivals&quot; badge**: absolute `top: 62px; left: 24px`, white pill (`border-radius: 999px`), `padding: 12px 20px`, `font-size: 13px`, `font-weight: 500`, with fire emoji. Shadow: `0 8px 20px rgba(160, 80, 70, 0.18)`. Animates in from left.
+- **Play button**: absolute `top: 268px; right: 19px`, `120x124px` SVG with:
+- Two concentric stroke circles (`#FFE8DD`, r=64.4 and r=44.4)
+- Radial gradient glow ring (r=40)
+- Solid radial gradient button (r=30.5) going from `#FCB6AD` center to `#E5665B` edge
+- White play triangle with glow filter (`feGaussianBlur stdDeviation=&quot;3.2&quot;`)
+- Pop animation (scale 0.8 to 1 with spring easing `cubic-bezier(0.34, 1.5, 0.5, 1)`)
+- **Headline**: absolute `left: 28px; bottom: 150px`
+- Line 1: &quot;- old tracks -&quot; (using centered dots), `font-size: 32px`, `font-weight: 200`, color `#d6837b`, `-webkit-text-stroke: 1.5px #d6837b`
+- Line 2: &quot;With new sounds&quot;, `font-size: 75px`, `line-height: 0.95`, `font-weight: 500`, white, `text-shadow: 0 2px 18px rgba(120, 40, 30, 0.18)`
+
+---
+
+## SCREEN 2: NEW ARRIVALS
+
+- Background: `#fdbdb4`
+- **Top bar** (below status bar, `padding: 62px 24px 20px 24px`):
+- Search pill: white, `border-radius: 999px`, `height: 52px`, with search icon SVG (`stroke-width: 2.5`) + &quot;search&quot; text
+- Avatar: `52px` circle, image from `https://images.unsplash.com/photo-1516726817505-f5ed825624d8?w=120&amp;h=120&amp;fit=crop&amp;crop=faces`
+- **Content sheet**: `background: #FBE7E2`, `border-radius: 60px 60px 0 0`, `margin-top: 26px`, `padding: 56px 20px 0 20px`
+- &quot;New arrivals&quot; heading: `font-size: 38px`, `font-weight: 400`, `-webkit-text-stroke: 0.6px #111111`, line break between &quot;New&quot; and &quot;arrivals&quot;
+- Hamburger menu icon SVG (3 lines of decreasing length)
+- **Filter pills row**: &quot;All&quot; (filled black `#111111`, white text), &quot;Headphones&quot; and &quot;Speakers&quot; (transparent with `1.5px solid #111111` border). All `font-size: 16px`, `padding: 15px 28-30px`, `border-radius: 999px`.
+- **Product grid**: 2-column CSS grid, `gap: 14px`, each card is `background: #f2cfcb`, `border-radius: 26px`, centered content:
+- Airpods Pro: `https://order-twine-70493179.figma.site/_components/v2/1fb0bd10fd40f9a9e279e8076f3762dd0f7d9889/image-3.82d4333a.png` -- $499.00
+- Speakers: `https://order-twine-70493179.figma.site/_components/v2/1fb0bd10fd40f9a9e279e8076f3762dd0f7d9889/image-2.04df17d2.png` -- $359.00
+- Headphones: `https://order-twine-70493179.figma.site/_components/v2/1fb0bd10fd40f9a9e279e8076f3762dd0f7d9889/image.a862e80a.png` -- $650.00
+- Earphones: `https://order-twine-70493179.figma.site/_components/v2/1fb0bd10fd40f9a9e279e8076f3762dd0f7d9889/image-1.3ff69aba.png` -- $60.00
+- Product names: `17px`, `font-weight: 500`, `#111111`. Prices: `14px`, `font-weight: 600`, `#7c6a66`, system font.
+- **Floating cart pill**: absolute centered bottom `26px`, black `#111111` pill, &quot;$1080.00&quot; in white `13px font-weight: 300` + white circle with shopping bag SVG icon + small red dot indicator (`#e2574c`, 5px). Shadow: `0 12px 28px rgba(60, 20, 15, 0.35)`.
+
+---
+
+## SCREEN 3: PRODUCT DETAIL
+
+- Background: `#fdbdb4`
+- **Top bar**: flex space-between, `padding: 62px 28px 0 28px`. Left: 3 white vertical dots SVG. Right: white hamburger icon SVG.
+- **Product image**: centered, `330x330px`, `https://order-twine-70493179.figma.site/_components/v2/1fb0bd10fd40f9a9e279e8076f3762dd0f7d9889/image.a862e80a.png`, scale-in animation.
+- **Color swatches row**: 4 items, each `72x72px`, `border-radius: 22px`, `background: #FBDFD9`, containing a `42px` circle with `11px` colored border:
+- Navy blue: `#1e3a6e`
+- Green: `#9fd6a0`
+- Gray: `#c9c2c0`
+- Coral: `#ef8177`
+- **Bottom sheet**: `background: #FBE7E2`, `border-radius: 60px 60px 0 0`, `margin-top: 28px`, `padding: 34px 26px 44px 26px`
+- &quot;Apple Airpods&quot; heading: `font-size: 45px`, `font-weight: 400`, `-webkit-text-stroke: 0.5px #111111`
+- Description: &quot;A mesh textile wraps the ear cushions to provide pillow-like softness&quot;, `font-size: 18px`, `line-height: 1.5`, color `#b0a6a1`
+- Footer row: &quot;$499.00&quot; (`22px`, `font-weight: 500`, system font) + &quot;Add to cart&quot; pill (`background: #F6C6BE`, `border-radius: 999px`) with shopping bag SVG icon
+
+---
+
+## ANIMATIONS (all use `animation-fill-mode: backwards`)
+
+- **dcRise**: translateY(28px) + opacity 0 to normal, 0.85s, `cubic-bezier(0.22, 1, 0.36, 1)`
+- **dcRiseSm**: translateY(16px) + opacity, same easing
+- **dcFade**: opacity 0 to 1
+- **dcInLeft**: translateX(-18px) + opacity
+- **dcPop**: scale(0.8) + opacity, spring easing `cubic-bezier(0.34, 1.5, 0.5, 1)`
+- **dcScale**: scale(0.9) + opacity, 1s duration
+- **dcRiseC**: translateX(-50%) translateY(18px) to translateX(-50%) translateY(0) (for centered absolute elements)
+- **dcKen**: scale(1.16) to scale(1), 16s ease-out
+- **Stagger delays**: `.dc-d1` through `.dc-d10` (0.08s to 1.16s increments)
+- **Stagger children**: `.dc-stagger &gt; *` uses dcRiseSm starting at 0.38s with 0.12s increments; `.dc-stagger2 &gt; *` starts at 0.64s
+- Respect `prefers-reduced-motion: reduce` by disabling all animations.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="futuristic-eyewear.html">Futuristic Eyewear<small>E-commerce · hero</small></a><a href="fine-jewelry-shop.html">Fine Jewelry Shop<small>E-commerce · mobile</small></a><a href="performance-eyewear.html">Performance Eyewear<small>E-commerce · hero</small></a><a href="jewelry-store.html">Jewelry Store<small>E-commerce · hero</small></a><a href="outdoor-apparel.html">Outdoor Apparel<small>E-commerce · hero</small></a><a href="oyla.html">OYLA<small>E-commerce · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

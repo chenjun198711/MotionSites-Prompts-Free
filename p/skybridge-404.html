@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skybridge 404 — 404 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Skybridge 全视口 404 错误页，React + Tailwind CSS v4 实现。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/skybridge-404.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Skybridge 404 — 404 提示词">
+<meta property="og:description" content="Skybridge 全视口 404 错误页，React + Tailwind CSS v4 实现。">
+<meta property="og:url" content="https://prompt-site.shop/p/skybridge-404.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Skybridge 404","description":"Skybridge 全视口 404 错误页，React + Tailwind CSS v4 实现。","url":"https://prompt-site.shop/p/skybridge-404.html","inLanguage":"zh-CN","genre":"404","dateCreated":"2026-08-14T08:39:05.666Z","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-404">404</a></div><h1>Skybridge 404</h1><div class="chip-row"><span class="chip">404</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-08-14</span><span>正文：7,106 字符</span></div><div class="hero-media"><video src="../assets/previews/skybridge-404.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>Skybridge 全视口 404 错误页，React + Tailwind CSS v4 实现。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Create a single-page, full-viewport 404 error screen in React + Vite + Tailwind CSS v4. Match this composition precisely.
+
+PAGE / CANVAS
+- The page must occupy the full viewport: `min-height: 100svh`.
+- Use a black fallback background.
+- Do not add page scrolling horizontally. Allow vertical scrolling only if a very short viewport requires it.
+- The page should be responsive while preserving the desktop composition at larger sizes.
+- Use no cards, buttons, nav links, gradients outside the 404 numerals, texture, glass, dark overlay, blur overlay, or any additional UI.
+
+BACKGROUND VIDEO
+- Add this exact MP4 as the full-page background:
+  `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260801_001207_ec20d138-aa45-4b2b-ab8c-bdc71607f240.mp4`
+- Use a semantic `&lt;video&gt;` element, placed as the first child inside the page.
+- Required video attributes:
+  - `autoPlay`
+  - `loop`
+  - `muted`
+  - `playsInline`
+  - `aria-hidden=&quot;true&quot;`
+- The video must be absolutely positioned at `inset: 0`, with `width: 100%`, `height: 100%`, and `object-fit: cover`.
+- Video opacity must be exactly `1` / `100%`.
+- Do not apply any dark, black, colored, translucent, gradient, blur, blend-mode, or tint overlay over the video.
+- The logo and 404 content must appear above the video with a higher z-index.
+- Do not add animated CSS effects to the video; let the video’s own motion be the only background animation.
+
+FONT
+- Use the exact imported Figma font face:
+  - Family / CSS family: `&quot;Geist Mono:SemiBold&quot;`
+  - Weight: `600`
+  - Style: `normal`
+  - Format: `woff2`
+  - Source URL: `https://static.figma.com/font/GeistMono_wght__1`
+- Declare it using:
+  ` ` `css
+  @font-face {
+    font-family: &quot;Geist Mono:SemiBold&quot;;
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(&quot;https://static.figma.com/font/GeistMono_wght__1&quot;) format(&quot;woff2&quot;);
+  }
+Use this font for the large “404” and the message text.
+Preserve its compact mono character and semibold weight.
+HEADER LOGO
+
+Position the logo centered horizontally at the top of the page.
+On desktop:
+top: 80px
+left: 50%
+transform: translateX(-50%)
+Total logo frame size: 233px × 40px.
+Use white fill only.
+The mark is a geometric pixel-like symbol, 54px × 40px, built from these exact SVG paths:
+&lt;svg viewBox=&quot;0 0 54 40&quot; fill=&quot;none&quot;&gt;
+  &lt;path d=&quot;M38 0H26V12H38V0Z&quot; fill=&quot;white&quot;/&gt;
+  &lt;path d=&quot;M54 12H38V28H54V12Z&quot; fill=&quot;white&quot;/&gt;
+  &lt;path d=&quot;M38 28H26V40H38V28Z&quot; fill=&quot;white&quot;/&gt;
+  &lt;path d=&quot;M26 12H16V22H26V12Z&quot; fill=&quot;white&quot;/&gt;
+  &lt;path d=&quot;M16 22H8V30H16V22Z&quot; fill=&quot;white&quot;/&gt;
+  &lt;path d=&quot;M16 2H6V12H16V2Z&quot; fill=&quot;white&quot;/&gt;
+  &lt;path d=&quot;M6 12H0V18H6V12Z&quot; fill=&quot;white&quot;/&gt;
+&lt;/svg&gt;
+Position the logotype 14px to the right of the mark.
+The logotype SVG should use viewBox=&quot;0 0 164.311 100&quot;, white fill, and this exact path:
+&lt;path d=&quot;M122.498 37.4573H131.321L139.533 51.6222L147.772 37.4573H156.595V56.0604H152.449V37.6433L141.739 56.0604H137.354L126.617 37.6433V56.0604H122.498V37.4573ZM95.921 48.8317C92.785 48.8317 90.261 46.307 90.261 43.1445C90.261 40.0086 92.785 37.4573 95.921 37.4573H119.972V41.6031H95.921C95.071 41.6031 94.38 42.2941 94.38 43.1445C94.38 44.0215 95.071 44.7125 95.921 44.7125H114.285C117.421 44.7125 119.972 47.2372 119.972 50.3997C119.972 53.5357 117.421 56.0604 114.285 56.0604H90.261V51.9411H114.285C115.136 51.9411 115.827 51.2501 115.827 50.3997C115.827 49.5227 115.136 48.8317 114.285 48.8317H95.921ZM80.857 37.4573C84.843 37.4573 88.086 40.6995 88.086 44.7125C88.086 48.6989 84.843 51.9411 80.857 51.9411H62.254V56.0604H58.135V37.4573H80.857ZM80.83 47.7953C82.558 47.7953 83.94 46.4133 83.94 44.7125C83.94 42.985 82.558 41.6031 80.83 41.6031H62.254V47.7953H80.83ZM35.975 41.6031C33.105 41.6031 30.7927 43.9152 30.7927 46.7588C30.7927 49.629 33.105 51.9411 35.975 51.9411H51.336V48.6989H35.576V44.5796H55.482V56.0604H35.975C30.8192 56.0604 26.6734 51.9145 26.6734 46.7588C26.6734 41.6297 30.8192 37.4573 35.975 37.4573H55.482V41.6031H35.975ZM0 56.0604V37.4573H4.1192V51.9411H24.9281V56.0604H0ZM164.311 36.4177C164.311 37.7529 163.228 38.8354 161.893 38.8354C160.558 38.8354 159.475 37.7529 159.475 36.4177C159.475 35.0824 160.558 34 161.893 34C163.228 34 164.311 35.0824 164.311 36.4177Z&quot; fill=&quot;white&quot;/&gt;
+Do not animate the logo.
+CENTERED 404 CONTENT
+
+Position the main content group in the exact center of the viewport:
+position: absolute
+top: 50%
+left: 50%
+transform: translate(-50%, -50%)
+Desktop content width: 483px.
+The group is a vertically centered flex column with align-items: center, text-align: center, and a 44px gap between its three elements.
+It contains exactly:
+The large 404 heading
+A thin horizontal divider
+The error message
+404 HEADING
+
+Heading text: 404
+Use the exact Geist Mono SemiBold font face.
+Desktop font size: 295.751px.
+Font weight: 600.
+Line height: 1.1.
+Letter spacing: -24.6459px.
+Center aligned.
+The heading needs enough bottom padding / room for the font baseline so the lower portions of the numerals are never cropped.
+Do not constrain it with a clipping container.
+Apply a text-only gradient:
+linear-gradient(
+  247.3282658084845deg,
+  rgb(255, 255, 255) 2.5334%,
+  rgba(255, 255, 255, 0.4) 93.612%
+)
+Use background-clip: text and -webkit-background-clip: text, with transparent text color.
+No text shadow, no glow, no animation.
+DIVIDER
+
+Directly below the 404 heading, after the 44px vertical gap.
+Width: 425px.
+Height: 1px.
+Solid white.
+No rounded ends, opacity changes, or animation.
+MESSAGE
+
+Directly below the divider, after another 44px vertical gap.
+Exact copy: The path may be broken, but the journey isn&#39;t. Let&#39;s get you back.
+Use the same Geist Mono SemiBold font.
+Desktop font size: 24px.
+Font weight: 600.
+Line height: 1.1.
+Letter spacing: -2px.
+White, centered.
+Width should follow the main content width.
+No CTA, link styling, hover effects, or animation.
+LAYERING
+
+Background video: lowest layer.
+Header logo: above video.
+Center 404 content: above video.
+Do not use any layer between the video and the page content.
+RESPONSIVE MOBILE BEHAVIOR
+
+At max-width: 640px:
+Move the header logo to top: 32px.
+Visually scale the 233px × 40px logo frame down to 75% while keeping it horizontally centered.
+Set the central content width to min(100% - 40px, 360px).
+Reduce the vertical gap between content elements to 28px.
+Scale the 404 heading using: font-size: clamp(140px, 52vw, 200px).
+Use a tighter 404 letter spacing around -0.09em.
+Ensure the 404 has height: auto, min-height: 0, and bottom padding so it is not clipped.
+Make the divider full width of the mobile content group.
+Scale message text with: font-size: clamp(16px, 4.5vw, 20px).
+Use approximately -1.3px letter spacing for the mobile message.
+Maintain the same centered composition and no-overlay treatment on all screen sizes.
+ACCESSIBILITY / IMPLEMENTATION
+
+Use a semantic &lt;main&gt; for the page.
+Use an &lt;h1&gt; for the 404 number.
+Mark decorative SVG and video as aria-hidden.
+Give the brand wrapper an aria-label=&quot;LGPSM&quot;.
+Use React JSX and CSS/Tailwind utilities as appropriate.
+Do not add any interface functionality, transition, fade-in, hover state, mouse-following effect, or extra content.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><p class="muted">暂无同分类条目。</p><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

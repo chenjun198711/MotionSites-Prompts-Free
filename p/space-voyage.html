@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Space Voyage — Landing Page 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Build a full-screen cinematic hero section for a space travel website using React, Vite, TypeScript, Tailwind CSS, and the motion/react (Framer Motion">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/space-voyage.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Space Voyage — Landing Page 提示词">
+<meta property="og:description" content="Build a full-screen cinematic hero section for a space travel website using React, Vite, TypeScript, Tailwind CSS, and the motion/react (Framer Motion">
+<meta property="og:url" content="https://prompt-site.shop/p/space-voyage.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/space-voyage.gif">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Space Voyage","description":"Build a full-screen cinematic hero section for a space travel website using React, Vite, TypeScript, Tailwind CSS, and the motion/react (Framer Motion","url":"https://prompt-site.shop/p/space-voyage.html","inLanguage":"zh-CN","genre":"Landing Page","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-landing_page">Landing Page</a></div><h1>Space Voyage</h1><div class="chip-row"><span class="chip">Landing Page</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>正文：5,681 字符</span></div><div class="hero-media"><img src="../assets/previews/space-voyage.gif" alt="Space Voyage 动效预览" loading="lazy"><div class="media-note">本地预览图 · gif</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a full-screen cinematic hero section for a space travel website using React, Vite, TypeScript, Tailwind CSS, and the motion/react (Framer Motion) library. Recreate every detail exactly as described below.
+
+1. Fonts
+Import Instrument Serif (italic) and Barlow (weights 300, 400, 500, 600) from Google Fonts:
+@import url(&#39;https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Barlow:wght@300;400;500;600&amp;display=swap&#39;);
+Register them in tailwind.config.ts:
+fontFamily: {
+heading: [&quot;&#39;Instrument Serif&#39;&quot;, &quot;serif&quot;],
+body: [&quot;&#39;Barlow&#39;&quot;, &quot;sans-serif&quot;],
+}
+Set --radius: 9999px for fully rounded elements. Use an HSL-based color system where --background: 213 45% 67% (muted sky blue) and --foreground: 0 0% 100% (white).
+
+2. Background Video
+Use a full-screen &lt;video&gt; element positioned absolute inset-0 with object-cover, z-0, and these attributes: autoPlay loop muted playsInline preload=&quot;auto&quot;.
+Video URL: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260306_115329_5e00c9c5-4d69-49b7-94c3-9c31c60bb644.mp4
+Poster image: /images/hero_bg.jpeg
+Overlay: A div with absolute inset-0 bg-black/5 z-0 on top of the video.
+In index.html, add preload hints in &lt;head&gt;:
+&lt;link rel=&quot;preload&quot; as=&quot;image&quot; href=&quot;/images/hero_bg.jpeg&quot; type=&quot;image/jpeg&quot; /&gt;
+&lt;link rel=&quot;preload&quot; as=&quot;video&quot; href=&quot;https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260306_115329_5e00c9c5-4d69-49b7-94c3-9c31c60bb644.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+
+3. Liquid Glass CSS
+Define two utility classes in index.css under @layer components:
+.liquid-glass (light):
+.liquid-glass {
+background: rgba(255, 255, 255, 0.01);
+background-blend-mode: luminosity;
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border: none;
+box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+position: relative;
+overflow: hidden;
+}
+.liquid-glass::before {
+content: &#39;&#39;;
+position: absolute;
+inset: 0;
+border-radius: inherit;
+padding: 1.4px;
+background: linear-gradient(180deg,
+rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+pointer-events: none;
+}
+.liquid-glass-strong (heavy, for CTA buttons):
+.liquid-glass-strong {
+background: rgba(255, 255, 255, 0.01);
+background-blend-mode: luminosity;
+backdrop-filter: blur(50px);
+-webkit-backdrop-filter: blur(50px);
+border: none;
+box-shadow: 4px 4px 4px rgba(0,0,0,0.05), inset 0 1px 1px rgba(255,255,255,0.15);
+position: relative;
+overflow: hidden;
+}
+Same ::before pseudo-element as .liquid-glass but with 0.5 and 0.2 alpha values instead of 0.45 and 0.15.
+
+4. Navbar
+Fixed position: fixed top-4 left-0 right-0 z-50, with px-8 lg:px-16. Contains:
+Left: A logo image (h-12 w-12).
+Center (desktop only): A liquid-glass rounded-full pill containing nav links: &quot;Home&quot;, &quot;Voyages&quot;, &quot;Worlds&quot;, &quot;Innovation&quot;, &quot;Plan Launch&quot; — each styled px-3 py-2 text-sm font-medium text-foreground/90 font-body.
+Inside pill, last item: A solid white button bg-white text-black rounded-full px-3.5 py-1.5 text-sm font-medium font-body with text &quot;Claim a Spot&quot; and an ArrowUpRight icon (lucide-react, h-4 w-4).
+
+5. Hero Content (centered)
+Wrapper: flex-1 flex flex-col items-center justify-center text-center px-4 pt-24.
+a) Badge:
+A liquid-glass rounded-full px-1 py-1 container with:
+A solid white pill: bg-white text-black rounded-full px-3 py-1 text-xs font-semibold font-body with text &quot;New&quot;.
+Adjacent text: text-sm text-foreground/90 pr-3 font-body — &quot;Maiden Crewed Voyage to Mars Arrives 2026&quot;.
+mb-2 bottom margin.
+b) Heading:
+Use a custom BlurText component (word-by-word blur-in animation from bottom). Props:
+text=&quot;Venture Past Our Sky Across the Universe&quot;
+className=&quot;text-6xl md:text-7xl lg:text-[5.5rem] font-heading italic text-foreground leading-[0.8] max-w-2xl justify-center tracking-[-4px]&quot;
+delay={100}
+animateBy=&quot;words&quot;
+direction=&quot;bottom&quot;
+The BlurText component splits text by words, uses IntersectionObserver to trigger, and animates each word with motion.span from {filter: &#39;blur(10px)&#39;, opacity: 0, y: 50} through {filter: &#39;blur(5px)&#39;, opacity: 0.5, y: -5} to {filter: &#39;blur(0px)&#39;, opacity: 1, y: 0} with stepDuration: 0.35 and staggered delay of 100ms per word.
+c) Subheading:
+A motion.p with classes mt-1 text-sm md:text-base text-white max-w-2xl font-body font-light leading-tight. Text: &quot;Discover the universe in ways once unimaginable. Our pioneering vessels and breakthrough engineering bring deep-space exploration within reach—secure and extraordinary.&quot;
+Animation: initial={{ filter: &#39;blur(10px)&#39;, opacity: 0, y: 20 }} → animate={{ filter: &#39;blur(0px)&#39;, opacity: 1, y: 0 }}, duration: 0.6, delay: 0.8.
+d) CTA Buttons:
+A motion.div with flex items-center gap-6 mt-4, same blur-in animation with delay: 1.1.
+Primary: liquid-glass-strong rounded-full px-5 py-2.5 text-sm font-medium text-foreground font-body — &quot;Start Your Voyage&quot; + ArrowUpRight icon (h-5 w-5).
+Secondary: Plain text button — &quot;View Liftoff&quot; + Play icon (h-4 w-4 fill-current).
+
+6. Partners Bar (bottom)
+Positioned at bottom: flex flex-col items-center gap-4 pb-8.
+A liquid-glass rounded-full px-3.5 py-1 text-xs font-medium text-white font-body label: &quot;Collaborating with top aerospace pioneers globally&quot;.
+A row of 5 partner names: &quot;Aeon&quot;, &quot;Vela&quot;, &quot;Apex&quot;, &quot;Orbit&quot;, &quot;Zeno&quot; — each styled text-2xl md:text-3xl font-heading italic text-white tracking-tight, spaced gap-12 md:gap-16.
+
+7. Z-Index Layering
+Video + overlay: z-0
+All content (navbar, hero, partners): wrapped in a relative z-10 container.
+Navbar: z-50.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：giglianepefrei/motionsites.ai-prompt-library<br>原始文件：<code>giglianepefrei_fetch\prompts/Space_Voyage.md</code><br>许可证：NOASSERTION<br><a href="https://github.com/giglianepefrei/motionsites.ai-prompt-library/blob/main/giglianepefrei_fetch%5Cprompts/Space_Voyage.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="motionz-premium-landing-page.html">MotionZ Premium Landing Page<small>Landing Page · landing-page</small></a><a href="future-state.html">Future-State<small>Landing Page · hero</small></a><a href="3d-story.html">3D Story<small>Landing Page · hero</small></a><a href="financial-suite.html">Financial Suite<small>Landing Page · hero</small></a><a href="prompt-hero.html">PROMPT<small>Landing Page · hero</small></a><a href="health-portal.html">Health Portal<small>Landing Page · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

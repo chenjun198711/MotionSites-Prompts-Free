@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LearnHub — Education 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色背景上并排展示3部iPhone手机模型，用于教育类移动应用展示，手机模型在移动端垂直堆叠。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/skills-lea.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LearnHub — Education 提示词">
+<meta property="og:description" content="深色背景上并排展示3部iPhone手机模型，用于教育类移动应用展示，手机模型在移动端垂直堆叠。">
+<meta property="og:url" content="https://prompt-site.shop/p/skills-lea.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"LearnHub","description":"深色背景上并排展示3部iPhone手机模型，用于教育类移动应用展示，手机模型在移动端垂直堆叠。","url":"https://prompt-site.shop/p/skills-lea.html","inLanguage":"zh-CN","genre":"Education","dateCreated":"2026-07-07T00:16:11.110815+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-education">Education</a></div><h1>LearnHub</h1><div class="chip-row"><span class="chip">Education</span><span class="chip">mobile</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-07-07</span><span>正文：7,578 字符</span></div><div class="hero-media"><video src="../assets/previews/skills-lea.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>深色背景上并排展示3部iPhone手机模型，用于教育类移动应用展示，手机模型在移动端垂直堆叠。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a mobile app showcase with 3 iPhone mockups displayed side-by-side (stacking vertically on mobile) on a dark background. Use React + Vite + TypeScript + Tailwind CSS + lucide-react for icons. Use the **Space Grotesk** font from Google Fonts (weights 300-700) as the default sans-serif font via Tailwind config.
+
+---
+
+## Global Setup
+
+- **Font**: Space Grotesk (Google Fonts: `https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap`)
+- **Tailwind config**: Override `fontFamily.sans` with `[&#39;&quot;Space Grotesk&quot;&#39;, &#39;sans-serif&#39;]`
+- **Page background**: `#0a0a0f`
+- **Body CSS**: `font-family: &#39;Inter&#39;, sans-serif` (overridden by Tailwind&#39;s Space Grotesk)
+- **Root**: `width: 100%; height: 100vh`
+- **Hide scrollbars** with `.no-scrollbar` utility (webkit + ms + firefox)
+
+---
+
+## PhoneFrame Component
+
+A reusable wrapper for each phone screen:
+- Outer container: `w-[320px] h-[650px]` (sm: `340x700`, md: `370x760`), `shrink-0`
+- Inner frame: `rounded-[50px]`, `border-[6px] border-zinc-700/80`, `bg-black`, `overflow-hidden`
+- Shadow: `box-shadow: 0 0 60px rgba(0,0,0,0.8), 0 0 120px rgba(80,50,120,0.3)`
+- **Dynamic Island**: Absolute positioned pill at top center - `w-[100px] h-[28px] bg-black rounded-full`, `top-[12px]`, `z-30`
+- **Home Indicator**: Absolute at bottom center - `w-[120px] h-[4px] bg-white/30 rounded-full`, `bottom-2`, `z-20`
+
+---
+
+## Layout Container
+
+```
+div: relative w-full min-h-screen flex items-center justify-center bg-[#0a0a0f] py-10 gap-6 md:gap-10 flex-col md:flex-row px-4
+```
+
+---
+
+## Screen 1 - Onboarding
+
+Full-screen background video with text overlay at the bottom.
+
+- **Background video** (autoPlay, muted, playsInline, absolute inset-0 object-cover):
+```
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260706_072800_64c47fd8-8c4a-431c-ab02-d8c84e461474.mp4
+```
+
+- **Bottom overlay** (absolute bottom-0 left-0 right-0, px-8 pb-10, z-10):
+- Heading: `text-white text-[42px] leading-[1.15] font-light tracking-tight mb-8`
+- Text: &quot;Learn more &amp;&quot; (line break) &quot;improve **your**&quot; (line break) &quot;**skills.**&quot; (bold words use `font-medium`)
+- Centered circular button: `w-14 h-14 rounded-full bg-white` with ArrowRight icon (w-6 h-6, text-black, strokeWidth 2.5)
+- Hover: `scale-110`, active: `scale-95`, transition 300ms
+- Shadow: `0 0 20px rgba(255,255,255,0.2)`
+
+---
+
+## Screen 2 - Dashboard (Explore)
+
+Scrollable screen with background image, header, heading, filter tabs, and a 2-column card grid.
+
+- **Background image** (absolute inset-0 object-cover):
+```
+https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260706_013750_18427eb2-0d19-44fd-a5ab-8ee7c40fa18f.png&amp;w=1280&amp;q=85
+```
+
+- **Header** (z-10, flex between, px-5 pt-14 pb-4):
+- Left: Avatar (w-11 h-11 rounded-full, gradient border `from-amber-400 to-orange-500`, border-2 border-amber-400/50)
+- Avatar image: `https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=100`
+- Below avatar: &quot;Welcome back&quot; (text-zinc-400 text-xs) + &quot;Adam William&quot; (text-white text-sm font-medium)
+- Right: Search icon button (w-11 h-11 rounded-full bg-white/10, Search icon w-5 h-5 text-white)
+
+- **Heading** (px-5 pt-12 pb-5):
+- &quot;Let&#39;s explore&quot; (font-light) + line break + &quot;**new fields**&quot; (font-medium)
+- `text-white text-[42px] leading-[1.2]`
+
+- **Filter Tabs** (horizontal scroll, gap-2, px-5 pb-2, no-scrollbar):
+- &quot;All&quot;: `px-5 py-3 rounded-full bg-white text-black text-xs font-medium`
+- Others (&quot;Programming&quot;, &quot;Design&quot;, &quot;Marketing&quot;, &quot;Business&quot;, &quot;Finance&quot;): `bg-[#524755] text-white text-xs font-medium`
+
+- **Cards Grid** (grid-cols-2 gap-3 px-6 pb-24 pt-2):
+- 4 cards, each with `rounded-[28px] overflow-hidden`, aspect ratio 1:1 via `paddingBottom: &#39;100%&#39;`
+- Each card has a **video background** (autoPlay, muted, playsInline, crossOrigin=&quot;anonymous&quot;, absolute inset-0 object-cover):
+- Card 0: `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260706_092940_b96cc608-4646-48fa-b73d-19be2b96f9c9.mp4`
+- Card 1: `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260706_091634_79fb6336-cd01-4002-b9e5-c20c548c6646.mp4`
+- Card 2: `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260706_110013_a8872d8b-6678-48e1-a6ab-db071ac6e5ec.mp4`
+- Card 3: `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260706_100911_5fcfc40c-a4be-4900-aca4-82f09b746d51.mp4`
+- Card overlay (absolute inset-0 flex-col justify-end p-3):
+- Tag pill: colored bg, `text-[9px] text-white px-2 py-0.5 rounded-full font-medium w-fit mb-1`
+- Card 0: &quot;Design&quot; `bg-[#6875CA]`
+- Card 1: &quot;Programming&quot; `bg-[#C6A64F]`
+- Card 2: &quot;Design&quot; `bg-[#65C4C8]`
+- Card 3: &quot;Information&quot; `bg-[#D282AC]`
+- Title: `text-[#1F111D] text-sm font-semibold drop-shadow-lg`
+- Card 0: &quot;UI/UX Design&quot;
+- Card 1: &quot;Advanced .Net&quot;
+- Card 2: &quot;Digital art&quot;
+- Card 3: &quot;Copywriting&quot;
+- Arrow button (absolute top-3 right-3): `w-10 h-10 rounded-full bg-white`, ArrowRight icon `w-4 h-4 text-black -rotate-45 strokeWidth-2.5`
+
+- **Bottom Nav** (absolute bottom-4, centered with -translate-x-1/2, z-20):
+- White pill: `bg-white rounded-full px-2 py-2 flex items-center gap-1`
+- Home button: `w-12 h-12 rounded-full text-zinc-400 hover:text-zinc-600`
+- Settings button: `w-14 h-14 rounded-full bg-black text-white`
+
+---
+
+## Screen 3 - Lesson Schedule
+
+Scrollable screen with background image, back/share buttons, title, interactive calendar, and a bottom card.
+
+- **Background image**: Same as Screen 2 (the higgs.ai URL above)
+
+- **Header** (flex between, px-5 pt-14 pb-4):
+- Left: Back button (ArrowLeft icon, w-11 h-11 rounded-full bg-white/10)
+- Right: Share button (Share2 icon, same style)
+
+- **Title** (px-6 pt-4 pb-6):
+- &quot;**Lesson**&quot; + line break + &quot;**schedule**&quot; (both font-medium)
+- `text-white text-[42px] leading-[1.15] font-light`
+
+- **Calendar Component** (interactive, useState for month/year/selectedDay):
+- Default state: August 2024, day 16 selected
+- Month header: month name + year (text-white text-xl font-semibold) with chevron nav buttons (hover:bg-white/10)
+- Day labels row: `[&#39;MON&#39;, &#39;THU&#39;, &#39;WED&#39;, &#39;TUE&#39;, &#39;FRI&#39;, &#39;SAT&#39;, &#39;SUN&#39;]` - text-zinc-500 text-[10px] font-medium
+- Days grid (7 columns, gap-y-2):
+- Current month days: text-white, hover:bg-white/10
+- Other month days: text-zinc-600
+- Selected day: `backgroundColor: &#39;#B8C1FF&#39;, color: &#39;#1F111D&#39;`, font-bold, scale-110
+- Highlighted days (day 12 current month, day 3 next month): `border: 2px dotted rgba(161,161,170,0.6)`, border-radius 50%
+- Full 6-row grid (42 cells total with prev/next month fill)
+
+- **Bottom Card** (mx-4 mb-6 mt-4, rounded-[28px], overflow-hidden):
+- Background video (absolute inset-0 object-cover, autoPlay muted playsInline):
+```
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260706_110653_41933aaf-9ec1-423f-851a-043b3407ef44.mp4
+```
+- Content (relative p-5 pr-16):
+- Time badge: `backdrop-blur-sm text-white text-[11px] font-medium px-3 py-1 rounded-full mb-2`, background `#6276CA`
+- Text: &quot;05:00 - 06:00 PM&quot;
+- Title: `text-[#1F111D] text-lg font-bold leading-tight` - &quot;Components &amp;&quot; + line break + &quot;Variants&quot;
+- Subtitle: `text-[#1F111D]/70 text-xs mt-1` - &quot;Adrian Smith&quot;
+- Arrow button (absolute top-4 right-4): `w-12 h-12 rounded-full bg-white`, ArrowRight icon `w-5 h-5 text-black -rotate-45`
+
+---
+
+## Dependencies
+
+- react, react-dom (^18.3.1)
+- lucide-react (^0.344.0)
+- tailwindcss (^3.4.1)
+- vite + @vitejs/plugin-react
+- TypeScript</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="adaptive-learning.html">Adaptive Learning<small>Education · hero</small></a><a href="bite-sized-courses.html">Bite-Sized Courses<small>Education · mobile</small></a><a href="fun-404-page.html">Fun 404 Page<small>Education · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sentinel — Cybersecurity 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Sentra AI 安全产品暗色落地站，含启动屏、全屏视频 Hero 与产品栅格区块。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/sentinel.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sentinel — Cybersecurity 提示词">
+<meta property="og:description" content="Sentra AI 安全产品暗色落地站，含启动屏、全屏视频 Hero 与产品栅格区块。">
+<meta property="og:url" content="https://prompt-site.shop/p/sentinel.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/sentinel.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Sentinel","description":"Sentra AI 安全产品暗色落地站，含启动屏、全屏视频 Hero 与产品栅格区块。","url":"https://prompt-site.shop/p/sentinel.html","inLanguage":"zh-CN","genre":"Cybersecurity","dateCreated":"2026-08-14T08:39:05.666Z","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-cybersecurity">Cybersecurity</a></div><h1>Sentinel</h1><div class="chip-row"><span class="chip">Cybersecurity</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-08-14</span><span>正文：12,591 字符</span></div><div class="hero-media"><img src="../assets/previews/sentinel.webp" alt="Sentinel 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>Sentra AI 安全产品暗色落地站，含启动屏、全屏视频 Hero 与产品栅格区块。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a single-page dark-themed landing site for a fictional AI security product called &quot;Sentra&quot; using **Vite + React 18 + TypeScript + Tailwind CSS + lucide-react**. The page has 4 parts: a canvas splash screen, a fixed navbar, a full-screen video Hero, an &quot;About&quot; section, and a &quot;Products&quot; bento-grid section. Follow every detail below exactly.
+
+## Project setup
+
+- Vite React-TS template, Tailwind CSS v3, lucide-react for icons.
+- Path alias `@` → `./src` (configure in vite.config.ts via `resolve.alias` and tsconfig paths).
+- File structure:
+  - `src/App.tsx`
+  - `src/components/SplashScreen.tsx`
+  - `src/components/Navbar.tsx`
+  - `src/components/Hero.tsx`
+  - `src/components/About.tsx`
+  - `src/components/Products.tsx`
+  - `src/hooks/useReveal.ts`
+
+## Fonts (index.html)
+
+- `&lt;title&gt;AI-Native Security Platform&lt;/title&gt;`
+- Load two fonts in `&lt;head&gt;`:
+  1. `&lt;link href=&quot;https://db.onlinewebfonts.com/c/8cb707a9b8a73f8a7403336b861c3074?family=BubbledotICG-FinePos&quot; rel=&quot;stylesheet&quot;&gt;` — a retro dot-matrix display font
+  2. `&lt;link href=&quot;https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;`
+
+## Global CSS (index.css)
+
+- Tailwind base/components/utilities directives.
+- `html, body { overflow-x:hidden; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }`
+- `body { font-family:&#39;JetBrains Mono&#39;, monospace; background:#000; }`
+
+## Tailwind config
+
+Extend theme with:
+- `fontFamily`: `bubbledot: [&#39;BubbledotICG-FinePos&#39;,&#39;monospace&#39;]`, `jetbrains: [&#39;JetBrains Mono&#39;,&#39;monospace&#39;]`
+- Keyframes + animations (all `0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards`):
+  - `fade-up`: from `opacity:0; translateY(30px)` → `opacity:1; translateY(0)`
+  - `fade-in`: from `opacity:0` → `opacity:1`
+  - `scale-in`: from `opacity:0; scale(0.95)` → `opacity:1; scale(1)`
+
+## App.tsx
+
+- State `showSplash` (initially true). Renders in order: fixed background video layer, `{showSplash &amp;&amp; &lt;SplashScreen onComplete={() =&gt; setShowSplash(false)} /&gt;}`, `&lt;Navbar /&gt;`, `&lt;Hero /&gt;`, `&lt;About /&gt;`, `&lt;Products /&gt;`, all inside `&lt;div className=&quot;relative&quot;&gt;`.
+-Fixed background video behind everything, as the FIRST child of the root div: &lt;div className=&quot;fixed inset-0 z-0 pointer-events-none&quot;&gt; (do NOT use a negative z-index; instead give Navbar, Hero, About, and Products relative z-10 so they stack above it, and never put a bg-black on the root div or the Hero section) containing:
+  - `&lt;video src=&quot;https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260723_002250_8de0b140-0dc3-4082-a021-51112f01618c.mp4&quot; autoPlay loop muted playsInline className=&quot;w-full h-full object-cover&quot; /&gt;`
+  - overlay `&lt;div className=&quot;absolute inset-0 bg-black/30&quot; /&gt;`
+
+## SplashScreen.tsx — canvas &quot;pixel iris&quot; reveal
+
+Full-screen fixed overlay (`fixed inset-0 z-[9999]`, `transition-opacity duration-400`, opacity 0 when fading, `pointerEvents:&#39;none&#39;` while fading) containing a `&lt;canvas&gt;` sized to the window.
+Animation logic (requestAnimationFrame):
+- Black rect fills the canvas; a circular hole is punched from the center outward using `globalCompositeOperation = &#39;destination-out&#39;`.
+- `maxRadius = Math.sqrt(w*w + h*h) / 2`, `blockSize = 10`, `duration = 1800` ms, easing `easeOutCubic (1 - (1-t)^3)`.
+- Pre-generate 360 ring blocks: each `{ angle: (2πi/360) + (Math.random()-0.5)*0.02, offsetFactor: 0.85 + Math.random()*0.3 }`.
+- Each frame: clear, fill black, punch a filled circle of radius `currentRadius - blockSize*2`, then punch each of the 360 blocks as `blockSize`-square rects at `r = currentRadius * offsetFactor`, plus a second ring of 180 blocks at `r = currentRadius * (0.92 + Math.random()*0.12)` with size `blockSize*0.8` — giving a noisy pixelated edge to the expanding circle.
+- On completion set `fading=true`, then call `onComplete()` after 400 ms.
+- Handle window resize by re-sizing the canvas; clean up rAF and listeners on unmount.
+
+## Navbar.tsx
+
+Nav links array: `[&#39;About&#39;,&#39;Products&#39;,&#39;Media&#39;,&#39;FAQ&#39;,&#39;Contact&#39;]`. State: `active` (default &#39;About&#39;), `mobileOpen`, `isDark`.
+- Scroll listener (passive): `isDark = scrollY &gt; window.innerHeight * 0.7` (logo/hamburger flip to black over light sections).
+- When `mobileOpen`, set `document.body.style.overflow=&#39;hidden&#39;`.
+- `&lt;nav className=&quot;fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-10 py-4&quot;&gt;`, flex justify-between:
+  1. **Logo**: inline SVG 32×32, viewBox `0 0 256 256`, single path with fill white (black when `isDark`, white when mobile menu open), `transition-colors duration-300`. Path (a 4-petal pinwheel of quarter-circles):
+     `M 0 128 C 70.692 128 128 185.308 128 256 L 64 256 C 64 220.654 35.346 192 0 192 Z M 256 192 C 220.654 192 192 220.654 192 256 L 128 256 C 128 185.308 185.308 128 256 128 Z M 128 0 C 128 70.692 70.692 128 0 128 L 0 64 C 35.346 64 64 35.346 64 0 Z M 192 0 C 192 35.346 220.654 64 256 64 L 256 128 C 185.308 128 128 70.692 128 0 Z`
+  2. **Center pill (desktop only, `hidden lg:flex`)**: white rounded-lg bar with shadow-sm; each link is a button `px-5 py-2.5 text-sm font-jetbrains font-medium rounded-lg`; active = `bg-black text-white`, inactive = `text-black/70 hover:text-black`.
+  3. **Desktop CTA**: black rounded-lg button composed of a `w-9 h-9 m-0.5 bg-white/10 rounded-md` square holding a ChevronRight (w-4 h-4, white, `group-hover:translate-x-0.5`) + label &quot;Request a Demo&quot; (`px-4 py-2.5 text-sm font-jetbrains font-medium text-white`).
+  4. **Mobile hamburger (`lg:hidden`)**: `w-10 h-10 rounded-lg bg-white/10 backdrop-blur-md border border-white/10`; Menu and X icons cross-fade/rotate (Menu hides via `rotate-90 opacity-0 scale-75` when open; X shown; both `transition-all duration-300 ease-out`); Menu icon color flips black when `isDark`.
+- **Mobile overlay menu**: fixed inset-0 z-40, `transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]`, backdrop `bg-black` at 95% opacity (click closes). Content column `pt-24 pb-10 px-6` justify-between:
+  - Links as large buttons (`text-2xl font-jetbrains font-medium rounded-xl px-4 py-4`), active = `text-white bg-white/10`, else `text-white/60`; staggered entrance `translate-y-8 → 0` with `transitionDelay = 150 + i*70` ms opening (and `(n-i)*30` ms closing); each shows a ChevronRight on the right only when active.
+  - Bottom: full-width white CTA button (&quot;Request a Demo&quot; + ChevronRight, `rounded-xl text-lg`, `active:scale-[0.98]`), delayed `150 + n*70 + 50` ms; caption below: &quot;AI-Native Security Platform&quot; (`text-white/30 text-xs`, centered).
+
+## Hero.tsx
+
+`&lt;section className=&quot;relative w-full h-screen flex flex-col&quot;&gt;` (transparent — the fixed App background video shows through).
+- Centered top content (`pt-40 sm:pt-52`):
+  - Eyebrow: &quot;AI-Native Security Platform&quot; — `font-jetbrains text-xs sm:text-sm tracking-[0.3em] uppercase text-white/70 mb-10 sm:mb-16`, `opacity-0 animate-fade-up` with `animationDelay:&#39;0.3s&#39;`.
+  - H1: &quot;See Risk. Stop Spread.&quot; — `font-bubbledot text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[0.95] tracking-tight`, fade-up delay 0.5s.
+- Bottom bar (`mt-auto`, flex col→row at sm, items-end justify-between, `pb-8 sm:pb-12`):
+  - Left: &quot;Identify weak signals, map attack paths, and stop incidents before they escalate.&quot; — `font-jetbrains text-xs sm:text-sm text-white/60 max-w-sm leading-relaxed`, fade-up delay 0.7s.
+  - Right CTA (fade-up delay 0.9s): black `rounded-xl` group button; inner `w-11 h-11 m-0.5 rounded-lg` square in **#F64302** (orange) with white ChevronRight (`w-5 h-5`, `group-hover:translate-x-0.5`); label &quot;Request a Demo&quot; `px-5 py-3.5 text-base font-jetbrains font-medium text-white`.
+
+## useReveal.ts hook
+
+`useReveal(threshold = 0.15)` → `{ ref, visible }`. IntersectionObserver on ref; when intersecting, set visible true and unobserve. Sections pass `0.1`.
+
+## About.tsx
+
+`&lt;section ref={ref} className=&quot;relative w-full min-h-screen overflow-hidden bg-[#f0eded]&quot;&gt;` — light section.
+- Absolute-fill background video: `src=&quot;https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260722_225830_b3939dce-a958-415e-8f05-189499b2412e.mp4&quot;` autoPlay loop muted playsInline, object-cover.
+- Overlay column `min-h-screen px-4 sm:px-6 lg:px-10 pt-28 pb-10 sm:pb-16 justify-between`. All items start `opacity-0` and get `animate-fade-up` only when `visible`:
+  - Top-left (max-w-xs sm:max-w-sm): paragraph &quot;A unified security system that connects key signals and surfaces real threats before they escalate.&quot; (`text-xs sm:text-sm text-black/80`, delay 0.1s) + CTA (delay 0.25s): white rounded-xl shadow-sm button, inner `w-11 h-11 m-0.5` **black** rounded-lg square with white ChevronRight, label &quot;Request a Demo&quot; in black.
+  - Bottom row (col→row at md, items-end justify-between):
+    - Left (max-w-md, delay 0.4s) H2 `text-2xl sm:text-3xl lg:text-4xl font-medium text-black leading-snug`: “Meet Sentra. Built to `&lt;span class=&quot;text-black/40&quot;&gt;connect signals&lt;/span&gt;` and surface real risk”
+    - Right (max-w-lg, text-right, delay 0.55s) `text-xl sm:text-2xl lg:text-3xl font-medium`: “Trace risky activity and understand how `&lt;span class=&quot;text-black/40&quot;&gt;isolated events&lt;/span&gt;` connect into `&lt;span class=&quot;font-bold&quot;&gt;real attack paths&lt;/span&gt;`”
+
+## Products.tsx — 3-column bento grid
+
+`&lt;section ref={ref} className=&quot;w-full min-h-screen md:h-screen bg-[#E8E5E9] p-2 sm:p-3&quot;&gt;` with `grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3` filling the height. Each column card: `rounded-2xl overflow-hidden min-h-[500px] md:min-h-0`, entrance `animate-scale-in` when visible (delays 0.1s / 0.25s / 0.4s); inner elements use `animate-fade-up` with the delays given below.
+
+**Column 1** — background image card:
+- `&lt;img&gt;` absolute-fill object-cover, src:
+  `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260722_191209_40d3e692-2aac-48e5-ba92-550850a7db90.png&amp;w=1920&amp;q=85` (alt &quot;Trace&quot;)
+- Content column `justify-between p-5 sm:p-6`:
+  - Top (delay 0.3s): &quot;01&quot; in `font-bubbledot text-5xl sm:text-6xl text-black/80 tracking-tight`; below it &quot;A unified layer for connecting the signals most teams investigate separately.&quot; (`text-xs sm:text-sm text-black/70 mt-4`).
+  - Bottom stack (gap-2):
+    - Bar card (delay 0.45s): `bg-[#EBE8EB] rounded-xl pl-4 py-2 pr-2` flex between — text &quot;From fragmented alerts to one system view&quot; + `w-11 h-11` black rounded-lg square with white ChevronRight (w-4 h-4).
+    - 5-col grid row (gap-2): left card `col-span-3` (delay 0.55s) `bg-[#EBE8EB] rounded-xl p-4` — &quot;The challenge is knowing what connects, what moves, and what matters now.&quot; with &quot;Trace&quot; below in `font-bubbledot text-5xl sm:text-6xl text-black mt-3`; right card `col-span-2` (delay 0.65s) justify-end items-end — &quot;W/04&quot; in bubbledot 5xl/6xl.
+
+**Column 2** — video card:
+- `&lt;video&gt;` absolute-fill object-cover autoPlay loop muted playsInline, src:
+  `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260722_230022_88a58d3b-c44b-42c2-b2de-5a5e06086a14.mp4`
+- Content `justify-between p-6 sm:p-8`:
+  - Top (delay 0.45s), white/70 xs–sm text: paragraph 1 &quot;A unified security system designed to correlate events across identities, endpoints, cloud assets, and behavior — so teams can see what matters before threats escalate.&quot;; paragraph 2 (mt-4) &quot;Sentra connects weak signals across the environment, reconstructs attack paths, and helps teams act before risk escalates.&quot;; then &quot;S/01&quot; in `font-bubbledot text-5xl sm:text-6xl text-white mt-8`.
+  - Bottom (delay 0.6s): `w-12 h-12 bg-[#F64302] rounded-xl` square with white ChevronRight (w-5 h-5).
+
+**Column 3** — white container `bg-white rounded-2xl p-2 sm:p-3 flex flex-col gap-2 sm:gap-3`:
+- Row 1 (flex-1, inner gap-2): video tile (delay 0.55s, uses `animate-fade-in` not fade-up) `rounded-xl overflow-hidden flex-1 min-h-0` with absolute-fill video src:
+  `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260723_003358_7f4eb81b-8e3e-47cb-9542-e1172cb3a8d3.mp4`
+  then bar card (delay 0.65s) identical to Column 1&#39;s bar: &quot;From fragmented alerts to one system view&quot; + black square ChevronRight.
+- Row 2 (flex-1, delay 0.75s): `bg-[#EBE8EB] rounded-xl p-5 sm:p-6 flex flex-col justify-end` — &quot;A/01&quot; in bubbledot black 5xl/6xl, then &quot;Act where risk is real&quot; in `font-jetbrains text-xl sm:text-2xl text-black leading-snug mt-2`.
+
+## Key palette reference
+
+- Page black: `#000`; hero overlay `bg-black/30`
+- Accent orange: `#F64302`
+- About bg: `#f0eded`; Products bg: `#E8E5E9`; inner cards: `#EBE8EB`; white cards `#fff`
+- All easing: `cubic-bezier(0.16, 1, 0.3, 1)` (&quot;ease-out-expo&quot; feel)</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="cyber-layer.html">Cyber Layer<small>Cybersecurity · cybersecurity</small></a><a href="imperial-vpn.html">Imperial VPN<small>Cybersecurity · hero</small></a><a href="mythic-vpn.html">Mythic VPN<small>Cybersecurity · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

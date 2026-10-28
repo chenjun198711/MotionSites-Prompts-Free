@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Model Infrastructure — Developer 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Build a single-page landing page for an AI infrastructure company called &quot;Prime Intellect.&quot; The design is dark, minimal, editorial, and cinematic -- i">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/model-infrastructure.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Model Infrastructure — Developer 提示词">
+<meta property="og:description" content="Build a single-page landing page for an AI infrastructure company called &quot;Prime Intellect.&quot; The design is dark, minimal, editorial, and cinematic -- i">
+<meta property="og:url" content="https://prompt-site.shop/p/model-infrastructure.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Model Infrastructure","description":"Build a single-page landing page for an AI infrastructure company called \"Prime Intellect.\" The design is dark, minimal, editorial, and cinematic -- i","url":"https://prompt-site.shop/p/model-infrastructure.html","inLanguage":"zh-CN","genre":"Developer","dateCreated":"2026-07-14T01:03:46.608042+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-developer">Developer</a></div><h1>Model Infrastructure</h1><div class="chip-row"><span class="chip">Developer</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-07-14</span><span>正文：11,826 字符</span></div><div class="hero-media"><video src="../assets/previews/model-infrastructure.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">```
+**Build a single-page landing page for an AI infrastructure company called &quot;Prime Intellect.&quot; The design is dark, minimal, editorial, and cinematic -- inspired by Linear, Vercel, and high-end tech aesthetics. Use React 18, TypeScript, Vite, Tailwind CSS 3.4, the `geist` font package (v1.7.2), and `lucide-react` for icons. No other UI libraries.**
+
+---
+
+## Global Setup
+
+### `package.json` dependencies
+- `react`, `react-dom` (^18.3.1)
+- `geist` (^1.7.2)
+- `lucide-react` (^0.344.0)
+- Tailwind CSS 3.4, PostCSS, Autoprefixer as devDeps
+- Vite 5.4, TypeScript 5.5
+
+### `tailwind.config.js`
+- Content: `[&#39;./index.html&#39;, &#39;./src/**/*.{js,ts,jsx,tsx}&#39;]`
+- No theme extensions, no plugins
+
+### Background Color
+- The entire page background is `#0e0e0e` (near-black)
+- `html, body { overflow-x: hidden; }`
+
+---
+
+## Fonts (`index.css` -- `@font-face` declarations BEFORE `@tailwind` directives)
+
+` ` `css
+@font-face {
+  font-family: &#39;Geist&#39;;
+  src: url(&#39;/node_modules/geist/dist/fonts/geist-sans/Geist-Regular.woff2&#39;) format(&#39;woff2&#39;);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: &#39;Geist&#39;;
+  src: url(&#39;/node_modules/geist/dist/fonts/geist-sans/Geist-Medium.woff2&#39;) format(&#39;woff2&#39;);
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: &#39;Geist&#39;;
+  src: url(&#39;/node_modules/geist/dist/fonts/geist-sans/Geist-SemiBold.woff2&#39;) format(&#39;woff2&#39;);
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: &#39;Geist&#39;;
+  src: url(&#39;/node_modules/geist/dist/fonts/geist-sans/Geist-Bold.woff2&#39;) format(&#39;woff2&#39;);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: &#39;Geist Mono&#39;;
+  src: url(&#39;/node_modules/geist/dist/fonts/geist-mono/GeistMono-Regular.woff2&#39;) format(&#39;woff2&#39;);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+` ` `
+
+Body: `font-family: &#39;Geist&#39;, -apple-system, BlinkMacSystemFont, sans-serif;` with `-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;`
+
+`.font-mono` override: `font-family: &#39;Geist Mono&#39;, monospace;`
+
+---
+
+## CSS Animations (in `index.css`)
+
+### Shimmer (heading text effect)
+` ` `css
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.text-shimmer { position: relative; }
+
+.text-shimmer::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    105deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(219, 255, 212, 0.34) 42%,
+    rgba(255, 255, 255, 0.68) 50%,
+    rgba(120, 231, 114, 0.28) 58%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0.3;
+  animation: shimmer 5s ease-in-out infinite;
+}
+` ` `
+
+### Blinking cursor (terminal prompt)
+` ` `css
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.cursor-blink::after {
+  content: &#39;\2588&#39;;
+  animation: blink 1.2s step-end infinite;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 1px;
+}
+` ` `
+
+### Mobile menu panel transition
+` ` `css
+.mobile-menu-panel {
+  transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.mobile-menu-item {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+` ` `
+
+### Partner grid borders
+` ` `css
+.partner-grid &gt; * {
+  border-right: 1px solid #202020;
+  border-bottom: 1px solid #202020;
+}
+.partner-grid &gt; *:nth-child(2n) { border-right: none; }
+
+@media (min-width: 640px) {
+  .partner-grid &gt; * { border-right: 1px solid #202020; }
+  .partner-grid &gt; *:nth-child(2n) { border-right: 1px solid #202020; }
+  .partner-grid &gt; *:nth-child(3n) { border-right: none; }
+}
+
+@media (min-width: 768px) {
+  .partner-grid &gt; * { border-right: 1px solid #202020; }
+  .partner-grid &gt; *:nth-child(3n) { border-right: 1px solid #202020; }
+  .partner-grid &gt; *:nth-child(5n) { border-right: none; }
+}
+` ` `
+
+---
+
+## App-Level Layout (`App.tsx`)
+
+- Outer wrapper: `min-h-screen bg-[#0e0e0e]`
+- Scroll state: `useState(false)`, triggers at `scrollY &gt; 10` (passive listener)
+- Content div (non-fixed): contains Hero then Partners, stacked vertically with no gap.
+
+---
+
+## Component 1: AnnouncementBar
+
+- `relative z-10 flex items-center justify-center py-2 px-4 bg-black/10 backdrop-blur-md border-b border-white/[0.06] font-mono`
+- Single `&lt;a&gt;` link: `flex items-center gap-1 text-[11px] text-white/70 uppercase tracking-wider hover:text-white/90 transition-colors`
+- Text: **&quot;Announcing our $130m Series A&quot;**
+- Followed by `ChevronRight` icon from lucide-react (w-3 h-3)
+
+---
+
+## Component 2: Navbar
+
+### Container
+`&lt;nav&gt;` with `flex items-center justify-between px-5 md:px-8 py-3 font-mono`
+
+### Left: Logo
+- `flex items-center gap-2`
+- SVG (w-5 h-5, white fill): `&lt;path d=&quot;M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5&quot; /&gt;`
+- Text: **&quot;Prime Intellect&quot;** -- `text-white text-sm font-semibold tracking-tight uppercase`
+
+### Center: Product Navigation (hidden below `lg:`)
+- `flex items-center gap-1`
+- 4 items in order: Training (01), Inference (02), Compute (03), Research (04)
+- Each item: `flex items-center gap-2 px-3.5 py-1.5 text-[11px] uppercase tracking-wider text-white/80 bg-[#6C757E]/60 hover:bg-[#6C757E]/80 transition-colors`
+- Number span: `text-white/40 text-[10px]`
+- NO border-radius (sharp rectangular pills)
+
+### Right: Links + CTAs (hidden below `md:`)
+- `flex items-center gap-5`
+- Text links: **Docs**, **Blog**, **Careers** (with badge), **Book a Call**
+- Each: `text-[11px] uppercase tracking-wider text-white/60 hover:text-white transition-colors`
+- Careers badge: `text-[10px] text-white/40 bg-white/[0.06] px-1.5 py-0.5 rounded-sm` -- text &quot;24&quot;
+
+### Mobile Hamburger Button (visible below `md:`)
+- `relative z-[110] flex items-center justify-center w-9 h-9 text-white`
+- Contains overlapping `Menu` and `X` icons (lucide-react, both w-5 h-5)
+- Animated swap: `transition-all duration-300 ease-out`
+  - When closed: Menu at `opacity-100 rotate-0 scale-100`, X at `opacity-0 -rotate-90 scale-75`
+  - When open: Menu at `opacity-0 rotate-90 scale-75`, X at `opacity-100 rotate-0 scale-100`
+
+### Mobile Menu Overlay
+- Body scroll locked when open (`overflow: hidden`)
+
+**Panel Content:**
+
+1. **Products section** (pt-20 pb-8 px-6):
+   - Label: `text-[10px] uppercase tracking-[0.2em] text-white/30 mb-3 px-1` -- &quot;Products&quot;
+   - Items: Training, Inference, Compute, Research -- each `px-3 py-3 text-sm text-white/80 hover:text-white hover:bg-white/[0.04] rounded`
+   - Right-aligned number: `text-[10px] text-white/30 font-mono`
+   - Staggered animation: delays 80ms, 130ms, 180ms, 230ms; from `translateX(20px) opacity-0` to `translateX(0) opacity-1`
+
+2. **Resources section:**
+   - Label: &quot;Resources&quot; same style
+   - Items: Docs, Blog, Careers (with badge &quot;24&quot;), Book a Call
+   - `px-3 py-3 text-sm text-white/60 hover:text-white hover:bg-white/[0.04] rounded`
+   - Staggered delays: 280ms, 330ms, 380ms, 430ms
+
+3. **Bottom CTAs (mt-auto):**
+   - Login: `flex items-center justify-center py-3 text-[11px] uppercase tracking-wider text-white/90 bg-[#3B3B34] hover:bg-[#3B3B34]/80 rounded`
+   - Start Training: `flex items-center justify-center gap-1.5 py-3 text-[11px] uppercase tracking-wider text-[#0e0e0e] font-medium bg-white hover:bg-white/90 rounded` + ChevronRight
+   - Entry at 500ms delay, from `translateY(16px) opacity-0`
+
+---
+
+## Component 3: Hero
+
+### Section Container
+`relative min-h-[85vh] sm:min-h-[78vh] flex flex-col justify-end px-5 md:px-8 pt-24 sm:pt-20 pb-6 sm:pb-8`
+
+### Full-Bleed Background Video
+- `&lt;video&gt;` with `absolute inset-0 w-full h-full object-cover`
+- Attributes: `autoPlay`, `muted`, `loop`, `playsInline`
+
+### Bottom Gradient Overlay
+- `absolute inset-x-0 bottom-0 h-64 sm:h-48 bg-gradient-to-t from-[#0e0e0e] to-transparent`
+
+### Content Container
+- `relative flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 sm:gap-8`
+
+### Left Column
+`flex flex-col items-start gap-3 sm:gap-4 max-w-lg`
+
+1. **Eyebrow + Heading (h1, flexed as column with gap-1.5):**
+   - Eyebrow: `text-white/30 text-[10px] sm:text-[11px] uppercase tracking-[0.2em] font-medium` -- **&quot;The Open Superintelligence Stack&quot;**
+   - Heading: `text-white/90 text-[26px] sm:text-[32px] md:text-[36px] font-normal leading-[1.15]` with class `text-shimmer` and `data-text=&quot;Own Your Intelligence&quot;` -- **&quot;Own Your Intelligence&quot;**
+
+2. **Description:**
+   - `text-white/45 text-[13px] sm:text-[15px] leading-[1.7] max-w-md`
+   - **&quot;Train, deploy, and continuously improve your own models on an integrated compute, training, inference, and sandbox stack.&quot;**
+
+3. **CTA Buttons:**
+   - Container: `flex items-center gap-1.5 text-[11px] uppercase tracking-wider font-medium mt-1`
+   - **Start Training (primary):** `group flex items-center gap-1.5 bg-white text-[#0e0e0e] font-medium px-3 sm:px-3.5 py-2 hover:bg-white/90 transition-colors` + `ChevronRight` (w-3 h-3 opacity-60, `group-hover:translate-x-0.5 transition-transform`) -- NO border-radius
+   - **Book a Call (secondary):** `flex items-center px-3 sm:px-3.5 py-2 text-white/90 bg-[#3B3B34] backdrop-blur-md hover:bg-[#3B3B34]/80 transition-colors` -- NO border-radius
+
+4. **Terminal pip command:**
+   - `text-white/46 text-xs sm:text-sm font-mono mt-1`
+   - Green dollar sign: `&lt;span className=&quot;text-[#78e772]&quot;&gt;$&lt;/span&gt;`
+   - Space, then: `&lt;span className=&quot;cursor-blink text-white/45&quot;&gt;pip install prime&lt;/span&gt;` (animating block cursor)
+
+### Right Column: &quot;Backed By&quot;
+- Container: `relative text-sm pb-3 pr-4 pt-3 shrink-0 lg:translate-y-2`
+- Label: `text-white/50 text-[11px] sm:text-xs mb-2` -- **&quot;Backed by&quot;**
+- Names row: `flex flex-wrap items-center gap-x-2 sm:gap-x-2.5 gap-y-1.5`
+- Each name: `text-white/60 whitespace-nowrap text-[12px] sm:text-[13px]`
+- Separator: `/` in `text-white/25` (between each name, not before the first)
+
+---
+
+## Component 4: Partners Grid
+
+### Section
+`bg-[#0e0e0e] px-5 md:px-8`
+
+### Grid Container
+- `partner-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 border border-[#202020]`
+- Internal borders handled by the `.partner-grid` CSS (right + bottom borders on cells, last in row has no right border depending on breakpoint)
+
+### Grid Cells (10 total)
+- Each cell: `relative flex items-center justify-center h-[80px] sm:h-[100px] p-3 sm:p-4 group transition-colors hover:bg-white/[0.02]`
+- Cells with links are `&lt;a&gt;` elements; others are `&lt;div&gt;`
+
+### Partner Badges (on cells with links)
+- `absolute top-0 right-0 flex items-center gap-1 px-1.5 sm:px-2 py-1 sm:py-1.5 text-[9px] sm:text-[10px] uppercase tracking-wider text-white/50 bg-white/[0.04] border-l border-b border-[#202020]`
+- Visibility: `opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity`
+- Contains `ArrowUpRight` icon (lucide-react, w-2.5 h-2.5 opacity-50)
+
+### 10 Partners (in order):
+
+| # | Name | Display Style | Link Label |
+|---|------|--------------|------------|
+| 1 | ramp | `text-lg font-medium tracking-tight` with green `/` after (`text-[#78e772]`) | &quot;Case study&quot; |
+| 2 | NVIDIA | `text-xl font-bold uppercase tracking-widest` | &quot;Read more&quot; |
+| 3 | zapier | `text-lg font-medium` with `_` prefix in `text-white/40` | &quot;Case study&quot; |
+| 4 | character.ai | `text-sm` wrapped in parentheses: `(character.ai)` | none |
+| 5 | Goodfire | `text-xs uppercase tracking-[0.3em] font-medium` | none |
+| 6 | inception | `text-base font-medium tracking-tight` | none |
+| 7 | Arcee | `text-lg italic font-light` | none |
+| 8 | Browserbase | `text-sm font-medium` | &quot;Read more&quot; |
+| 9 | Flapping Airplanes | `text-sm` | none |
+| 10 | standard intelligence | Two lines: each `block text-[10px] tracking-wider`, container `text-xs leading-tight text-center` | none |
+
+All partner text uses base class `text-white/60 text-center`.
+
+---
+
+## Key Design Principles
+
+---
+```</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="codeveil.html">Codeveil<small>Developer · developer</small></a><a href="shipping-infrastructure.html">Shipping Infrastructure<small>Developer · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

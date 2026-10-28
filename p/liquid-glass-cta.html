@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Liquid Glass CTA — CTA Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="全屏电影级CTA区域，HLS视频背景搭配液态玻璃质感，居中文字与双按钮，底部极简页脚栏。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/liquid-glass-cta.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Liquid Glass CTA — CTA Section 提示词">
+<meta property="og:description" content="全屏电影级CTA区域，HLS视频背景搭配液态玻璃质感，居中文字与双按钮，底部极简页脚栏。">
+<meta property="og:url" content="https://prompt-site.shop/p/liquid-glass-cta.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/liquid-glass-cta.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Liquid Glass CTA","description":"全屏电影级CTA区域，HLS视频背景搭配液态玻璃质感，居中文字与双按钮，底部极简页脚栏。","url":"https://prompt-site.shop/p/liquid-glass-cta.html","inLanguage":"zh-CN","genre":"CTA Section","dateCreated":"2026-06-06T12:49:19.037469+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-cta_section">CTA Section</a></div><h1>Liquid Glass CTA</h1><div class="chip-row"><span class="chip">CTA Section</span><span class="chip">cta</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-06-06</span><span>正文：9,308 字符</span></div><div class="hero-media"><img src="../assets/previews/liquid-glass-cta.webp" alt="Liquid Glass CTA 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>全屏电影级CTA区域，HLS视频背景搭配液态玻璃质感，居中文字与双按钮，底部极简页脚栏。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a &quot;CTA + Footer&quot; section component for a React + Vite + Tailwind CSS project. This is a cinematic full-width call-to-action section with an HLS video background, centered text, two CTA buttons, and a minimal footer bar at the bottom. Black background, white text, liquid glassmorphism effects.
+
+---
+
+### FONTS (import in index.css or HTML head)
+
+```
+https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Barlow:wght@300;400;500;600&amp;display=swap
+```
+
+- Headings: `Instrument Serif` italic -- Tailwind class `font-heading`
+- Body: `Barlow` -- Tailwind class `font-body`
+
+Add to `tailwind.config.ts` under `theme.extend.fontFamily`:
+```js
+heading: [&quot;&#39;Instrument Serif&#39;&quot;, &quot;serif&quot;],
+body: [&quot;&#39;Barlow&#39;&quot;, &quot;sans-serif&quot;],
+```
+
+Base styles in `index.css`:
+```css
+body {
+font-family: &#39;Barlow&#39;, sans-serif;
+background: #000;
+color: #fff;
+}
+h1, h2, h3 {
+font-family: &#39;Instrument Serif&#39;, serif;
+}
+```
+
+---
+
+### LIQUID GLASS CSS (add to index.css inside `@layer components`)
+
+```css
+@layer components {
+.liquid-glass-strong {
+background: rgba(255, 255, 255, 0.01);
+background-blend-mode: luminosity;
+backdrop-filter: blur(50px);
+-webkit-backdrop-filter: blur(50px);
+border: none;
+box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.05),
+inset 0 1px 1px rgba(255, 255, 255, 0.15);
+position: relative;
+overflow: hidden;
+}
+
+.liquid-glass-strong::before {
+content: &#39;&#39;;
+position: absolute;
+inset: 0;
+border-radius: inherit;
+padding: 1.4px;
+background: linear-gradient(
+180deg,
+rgba(255, 255, 255, 0.5) 0%,
+rgba(255, 255, 255, 0.2) 20%,
+rgba(255, 255, 255, 0) 40%,
+rgba(255, 255, 255, 0) 60%,
+rgba(255, 255, 255, 0.2) 80%,
+rgba(255, 255, 255, 0.5) 100%
+);
+-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+pointer-events: none;
+}
+}
+```
+
+The `::before` pseudo-element uses a mask-composite trick to render a thin glowing gradient border that fades out in the middle of each side.
+
+---
+
+### DEPENDENCIES
+
+```
+npm install lucide-react hls.js
+```
+
+- `ArrowUpRight` icon from `lucide-react`
+- `hls.js` for streaming the Mux HLS video
+
+---
+
+### HLS VIDEO URL (Mux)
+
+```
+https://stream.mux.com/8wrHPCX2dC3msyYU9ObwqNdm00u3ViXvOSHUMRYSEe5Q.m3u8
+```
+
+This is an HLS stream that requires `hls.js` to play in non-Safari browsers. Safari supports HLS natively via `&lt;video&gt;`.
+
+---
+
+### EXACT COMPONENT CODE
+
+```tsx
+import { useEffect, useRef } from &quot;react&quot;;
+import { ArrowUpRight } from &quot;lucide-react&quot;;
+import Hls from &quot;hls.js&quot;;
+
+const CtaFooter = () =&gt; {
+const videoRef = useRef&lt;HTMLVideoElement&gt;(null);
+
+useEffect(() =&gt; {
+const video = videoRef.current;
+if (!video) return;
+
+const src = &quot;https://stream.mux.com/8wrHPCX2dC3msyYU9ObwqNdm00u3ViXvOSHUMRYSEe5Q.m3u8&quot;;
+
+if (Hls.isSupported()) {
+const hls = new Hls();
+hls.loadSource(src);
+hls.attachMedia(video);
+return () =&gt; hls.destroy();
+} else if (video.canPlayType(&quot;application/vnd.apple.mpegurl&quot;)) {
+video.src = src;
+}
+}, []);
+
+return (
+&lt;section className=&quot;relative py-32 px-6 md:px-16 lg:px-24 text-center overflow-hidden&quot;&gt;
+{/* Background HLS Video */}
+&lt;video
+ref={videoRef}
+autoPlay
+loop
+muted
+playsInline
+className=&quot;absolute inset-0 w-full h-full object-cover z-0&quot;
+/&gt;
+
+{/* Top fade */}
+&lt;div
+className=&quot;absolute top-0 left-0 right-0 z-[1] pointer-events-none&quot;
+style={{ height: &#39;200px&#39;, background: &#39;linear-gradient(to bottom, black, transparent)&#39; }}
+/&gt;
+{/* Bottom fade */}
+&lt;div
+className=&quot;absolute bottom-0 left-0 right-0 z-[1] pointer-events-none&quot;
+style={{ height: &#39;200px&#39;, background: &#39;linear-gradient(to top, black, transparent)&#39; }}
+/&gt;
+
+{/* Content */}
+&lt;div className=&quot;relative z-10&quot;&gt;
+&lt;h2 className=&quot;text-5xl md:text-6xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.85] max-w-3xl mx-auto mb-4&quot;&gt;
+Your next website starts here.
+&lt;/h2&gt;
+&lt;p className=&quot;text-white/60 font-body font-light text-sm md:text-base max-w-xl mx-auto mb-8&quot;&gt;
+Book a free strategy call. See what AI&amp;#8209;powered design can do. No commitment, no pressure. Just possibilities.
+&lt;/p&gt;
+&lt;div className=&quot;flex items-center justify-center gap-6&quot;&gt;
+&lt;button className=&quot;liquid-glass-strong rounded-full px-6 py-3 text-sm font-medium text-white flex items-center gap-2 hover:bg-white/10 transition-all font-body&quot;&gt;
+Book a Call
+&lt;ArrowUpRight className=&quot;h-5 w-5&quot; /&gt;
+&lt;/button&gt;
+&lt;button className=&quot;bg-white text-black rounded-full px-6 py-3 text-sm font-medium flex items-center gap-2 hover:bg-white/90 transition-colors font-body&quot;&gt;
+View Pricing
+&lt;ArrowUpRight className=&quot;h-4 w-4&quot; /&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+
+{/* Footer */}
+&lt;div className=&quot;mt-32 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4&quot;&gt;
+&lt;p className=&quot;text-white/40 font-body font-light text-xs&quot;&gt;
+&amp;copy; 2026 Studio. All rights reserved.
+&lt;/p&gt;
+&lt;div className=&quot;flex items-center gap-6&quot;&gt;
+{[&quot;Privacy&quot;, &quot;Terms&quot;, &quot;Contact&quot;].map((link) =&gt; (
+&lt;a key={link} href=&quot;#&quot; className=&quot;text-white/40 hover:text-white/70 font-body font-light text-xs transition-colors&quot;&gt;
+{link}
+&lt;/a&gt;
+))}
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+);
+};
+
+export default CtaFooter;
+```
+
+---
+
+### SECTION STRUCTURE BREAKDOWN
+
+```
+&lt;section&gt; (relative, py-32, px-6 md:px-16 lg:px-24, text-center, overflow-hidden)
+|
++-- &lt;video&gt; (absolute inset-0, full cover, z-0, autoPlay loop muted playsInline)
+|
++-- Top gradient fade (absolute top-0, 200px tall, black-&gt;transparent, z-[1])
++-- Bottom gradient fade (absolute bottom-0, 200px tall, transparent&lt;-black, z-[1])
+|
++-- Content wrapper (relative z-10)
+|
++-- &lt;h2&gt; heading
++-- &lt;p&gt; subtext
++-- Button row (flex, centered, gap-6)
+| +-- &quot;Book a Call&quot; (liquid-glass-strong, rounded-full)
+| +-- &quot;View Pricing&quot; (bg-white text-black, rounded-full)
+|
++-- Footer bar (mt-32, border-t border-white/10)
++-- Copyright (left)
++-- Links: Privacy, Terms, Contact (right)
+```
+
+---
+
+### HLS VIDEO SETUP PATTERN
+
+The `useEffect` hook initializes `hls.js` for non-Safari browsers and falls back to native HLS for Safari:
+
+1. Check `Hls.isSupported()` -- if true, create an `Hls` instance, load the `.m3u8` source, attach to the `&lt;video&gt;` element
+2. If not supported but the browser can play `application/vnd.apple.mpegurl` (Safari), set `video.src` directly
+3. Cleanup: `hls.destroy()` on unmount
+
+The `&lt;video&gt;` element uses `autoPlay loop muted playsInline` -- all four attributes are required for autoplay to work across browsers (especially mobile).
+
+---
+
+### VIDEO OVERLAY FADE PATTERN
+
+Two absolutely positioned `&lt;div&gt;` elements create black gradient fades at the top and bottom edges, making the video blend seamlessly into the surrounding black background:
+
+- **Top fade**: `height: 200px`, `background: linear-gradient(to bottom, black, transparent)`, `z-[1]`, `pointer-events-none`
+- **Bottom fade**: `height: 200px`, `background: linear-gradient(to top, black, transparent)`, `z-[1]`, `pointer-events-none`
+
+Content sits at `z-10` above both the video and the fades.
+
+---
+
+### RESPONSIVE BEHAVIOR
+
+| Breakpoint | Heading size | Padding | Footer layout |
+|---|---|---|---|
+| Mobile (default) | `text-5xl` | `px-6` | Stacked column (`flex-col`) |
+| Tablet (`md:`) | `text-6xl` | `px-16` | Horizontal row (`md:flex-row`) |
+| Desktop (`lg:`) | `text-7xl` | `px-24` | Horizontal row |
+
+- Button row always horizontal (`flex items-center justify-center gap-6`), buttons stack naturally if viewport is very narrow
+- Footer: `flex-col md:flex-row` -- copyright and links stack on mobile, sit side-by-side on tablet+
+- Subtext constrained to `max-w-xl mx-auto`
+- Heading constrained to `max-w-3xl mx-auto`
+
+---
+
+### TYPOGRAPHY DETAILS
+
+| Element | Classes |
+|---|---|
+| Heading | `text-5xl md:text-6xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.85] max-w-3xl mx-auto mb-4` |
+| Subtext | `text-white/60 font-body font-light text-sm md:text-base max-w-xl mx-auto mb-8` |
+| Glass button text | `text-sm font-medium text-white font-body` |
+| Solid button text | `text-sm font-medium` (inherits `text-black` from `bg-white text-black`) |
+| Copyright | `text-white/40 font-body font-light text-xs` |
+| Footer links | `text-white/40 hover:text-white/70 font-body font-light text-xs transition-colors` |
+
+---
+
+### BUTTON DETAILS
+
+**Primary CTA (&quot;Book a Call&quot;):**
+`liquid-glass-strong rounded-full px-6 py-3 text-sm font-medium text-white flex items-center gap-2 hover:bg-white/10 transition-all font-body`
+- Glass background with gradient border via `::before`
+- `ArrowUpRight` icon at `h-5 w-5`
+
+**Secondary CTA (&quot;View Pricing&quot;):**
+`bg-white text-black rounded-full px-6 py-3 text-sm font-medium flex items-center gap-2 hover:bg-white/90 transition-colors font-body`
+- Solid white background, black text
+- `ArrowUpRight` icon at `h-4 w-4` (slightly smaller than the primary)
+
+---
+
+### EXACT TEXT CONTENT
+
+**Heading**: &quot;Your next website starts here.&quot;
+**Subtext**: &quot;Book a free strategy call. See what AI-powered design can do. No commitment, no pressure. Just possibilities.&quot;
+**Button 1**: &quot;Book a Call&quot;
+**Button 2**: &quot;View Pricing&quot;
+**Copyright**: &quot;(c) 2026 Studio. All rights reserved.&quot;
+**Footer links**: &quot;Privacy&quot;, &quot;Terms&quot;, &quot;Contact&quot;
+
+---
+
+### PARENT CONTEXT
+
+This section sits on a `bg-black` parent container as the last section of the page. The top gradient fade blends the video into the section above (which also has a black background). The footer bar is part of this same component -- there is no separate footer component.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="nimbus-ops.html">Nimbus Ops<small>CTA Section · cta</small></a><a href="orbis-cta.html">Orbis CTA<small>CTA Section · cta</small></a><a href="rocket-cta.html">Rocket CTA<small>CTA Section · cta</small></a><a href="global-cta-footer.html">Global CTA Footer<small>CTA Section · cta</small></a><a href="editorial-collection-cta.html">Editorial Collection CTA<small>CTA Section · cta</small></a><a href="mouse-trail-cta.html">Mouse Trail CTA<small>CTA Section · cta</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

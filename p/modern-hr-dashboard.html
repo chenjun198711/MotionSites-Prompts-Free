@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Modern HR Dashboard — HR 提示词 | MotionSites Prompts</title>
+<meta name="description" content="基于React和Tailwind CSS构建的现代HR仪表盘，采用黄色强调色和深灰色文字，包含响应式卡片布局、图表和图标组件，适用于企业人力资源管理数据可视化。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/modern-hr-dashboard.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Modern HR Dashboard — HR 提示词">
+<meta property="og:description" content="基于React和Tailwind CSS构建的现代HR仪表盘，采用黄色强调色和深灰色文字，包含响应式卡片布局、图表和图标组件，适用于企业人力资源管理数据可视化。">
+<meta property="og:url" content="https://prompt-site.shop/p/modern-hr-dashboard.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/modern-hr-dashboard.png">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Modern HR Dashboard","description":"基于React和Tailwind CSS构建的现代HR仪表盘，采用黄色强调色和深灰色文字，包含响应式卡片布局、图表和图标组件，适用于企业人力资源管理数据可视化。","url":"https://prompt-site.shop/p/modern-hr-dashboard.html","inLanguage":"zh-CN","genre":"HR","dateCreated":"2026-07-15T08:31:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hr">HR</a></div><h1>Modern HR Dashboard</h1><div class="chip-row"><span class="chip">HR</span><span class="chip">mobile</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-07-15</span><span>正文：13,250 字符</span></div><div class="hero-media"><img src="../assets/previews/modern-hr-dashboard.png" alt="Modern HR Dashboard 动效预览" loading="lazy"><div class="media-note">本地预览图 · png</div></div><h2>简介</h2><p>基于React和Tailwind CSS构建的现代HR仪表盘，采用黄色强调色和深灰色文字，包含响应式卡片布局、图表和图标组件，适用于企业人力资源管理数据可视化。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">**Build an HR dashboard called &quot;Talvex&quot; using React, TypeScript, Vite, Tailwind CSS, Recharts, and Lucide React icons. The page must be fully responsive across mobile, tablet, and desktop. Here is every specification:**
+
+---
+
+## Font
+
+Use &quot;Sofia Pro Regular&quot; loaded from this external stylesheet in `index.html`:
+```
+https://db.onlinewebfonts.com/c/060e116a70e3096c52db16f61aaab194?family=Sofia+Pro+Regular
+```
+Set `font-family: &quot;Sofia Pro Medium&quot;, sans-serif` on all elements via CSS `*` selector with `-webkit-font-smoothing: antialiased`. The root `&lt;div&gt;` inline style uses `&quot;Sofia Pro Regular&quot;, sans-serif`.
+
+---
+
+## Color Palette
+
+- Yellow accent: `#FFD85F`
+- Dark gray (text, dark fills): `#303030`
+- Light gray (secondary text, borders): `#898989`
+- Card backgrounds: `white/60` with `backdrop-blur-3xl`
+- Card shadows: `0 2px 20px rgba(0,0,0,0.06)`
+- Profile photo card shadow: `0 2px 20px rgba(0,0,0,0.10)`
+
+---
+
+## Background
+
+A full-screen fixed SVG background covering the viewport with `preserveAspectRatio=&quot;xMidYMid slice&quot;`. Viewbox is `0 0 1280 832`.
+
+- Base: a rect filling `1280x832` with `#E3E5E6`
+- On top: a large yellow `#FFD85F` blob path with a heavy Gaussian blur (`stdDeviation=&quot;250&quot;`), creating a warm diffused glow in the lower portion:
+```
+M904 404C942.8 189.6 1234.83 123.333 1376 117V1093.5H-227V792.5C-161.5 706.167 0.5 556.6 124.5 649C248.5 741.4 473.833 727.5 571 709C665.833 696.667 865.2 618.4 904 404Z
+```
+The filter uses `feFlood` -&gt; `feBlend` -&gt; `feGaussianBlur` with filter region `x=&quot;-727&quot; y=&quot;-383&quot; width=&quot;2603&quot; height=&quot;1976.5&quot;`.
+
+---
+
+## Layout Structure
+
+Two layout containers layered on top of the SVG (both `relative z-10`, `max-w-[1400px] mx-auto`):
+
+1. **Desktop (lg+):** `hidden lg:flex`, `h-screen`, `px-6 py-6`, `flex-col overflow-hidden`. The dashboard grid area is `flex-1 min-h-0`.
+2. **Mobile/Tablet (&lt;lg):** `lg:hidden`, `min-h-screen`, `px-4 sm:px-6 py-6`, `flex flex-col gap-0 overflow-y-auto`, with a `h-6` spacer at the bottom.
+
+Both contain: Navbar, WelcomeRow, DashboardGrid (in that order).
+
+---
+
+## Navbar
+
+Full-width nav with `mb-4`.
+
+**Left:** &quot;Talvex&quot; text in a pill — `border border-[#898989]/30 rounded-full px-5 py-2 text-[#303030] text-base select-none`.
+
+**Right (flex items-center gap-2):**
+
+1. **Nav links (desktop only, hidden lg:flex):** Pill container `bg-white/60 border border-[#898989]/20 rounded-full px-1 py-1 shadow-sm`, containing buttons for: `Dashboard, People, Hiring, Devices, Apps, Salary, Calendar, Reviews`. Each button: `px-4 py-2 rounded-full text-sm transition-all duration-200`. Active state: `bg-[#303030] text-white`. Inactive: `text-[#898989] hover:text-[#303030]`. Default active = &quot;Dashboard&quot;.
+
+2. **Configs button (hidden sm:flex):** `bg-white/60 border border-[#898989]/20 rounded-full px-4 py-2.5 text-sm text-[#303030] shadow-sm hover:bg-white/80 transition-colors`. Contains Settings icon (14px) + &quot;Configs&quot; text.
+
+3. **Bell button:** Same pill style (`bg-white/60 border border-[#898989]/20 rounded-full px-3.5 py-2.5 shadow-sm hover:bg-white/80`). Bell icon 15px. Yellow notification dot: `absolute top-1.5 right-1.5 w-2 h-2 bg-[#FFD85F] rounded-full`.
+
+4. **Profile avatar:** `w-10 h-10` circular pill button with image:
+```
+https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=80
+```
+
+5. **Hamburger (lg:hidden only):** `w-10 h-10`, toggles between Menu and X icons (16px). Opens a dropdown: `mt-2 bg-white/80 backdrop-blur-xl border border-[#898989]/20 rounded-2xl p-2 shadow-md flex flex-wrap gap-1` with same nav buttons.
+
+---
+
+## Welcome Row
+
+`w-full mb-4`. Flex row on sm+ (`flex-col sm:flex-row sm:items-end sm:justify-between gap-4 sm:gap-8`).
+
+**Left side (flex-[3]):**
+- Greeting: `text-3xl sm:text-4xl lg:text-5xl tracking-tight text-[#303030] leading-tight` — &quot;Good morning, Kasven&quot;
+- Segment bar below: 4 flex segments with proportional widths (flex: 15, 15, 60, 10):
+- &quot;Screenings&quot; 15% — dark gray pill `bg-[#303030] text-white rounded-full px-3 py-2`
+- &quot;Placed&quot; 15% — yellow pill `bg-[#FFD85F] text-[#303030] rounded-full`
+- &quot;Sprint cycle&quot; 60% — hatched pattern pill using `repeating-linear-gradient(-45deg, #e5e5e5 0px, #e5e5e5 2px, #f5f5f5 2px, #f5f5f5 10px)` with `border: 1px solid #ddd`
+- &quot;Return&quot; 10% — outlined pill `border border-[#898989]/40 bg-white/60`
+- Each segment has a label above (`text-xs text-[#303030] mb-1`)
+
+**Right side (flex-[2]):** 3 stat blocks, each with:
+- An icon badge: `bg-[#898989]/15 rounded-lg p-1.5 mb-1` with Users or Monitor icon (14px, `text-[#898989]`)
+- Large number: `text-3xl sm:text-4xl lg:text-5xl text-[#303030] leading-none`
+- Label: `text-xs text-[#303030]`
+- Stats: 78 Members (Users icon), 56 Openings (Users icon), 203 Launches (Monitor icon)
+
+---
+
+## Dashboard Grid
+
+Three breakpoint layouts:
+
+**Mobile (&lt;md):** Single column `flex flex-col gap-3`. Cards in order: ProfilePhotoCard, ProgressCard, TimeTrackerCard, OnboardingColumn, AccordionCard, CalendarCard. No wrapper divs — cards render directly.
+
+**Tablet (md to lg):** 2-column CSS grid `gap-3`, `gridTemplateColumns: &#39;1fr 1fr&#39;`, `alignItems: &#39;stretch&#39;`. Cards: ProfilePhotoCard, ProgressCard, TimeTrackerCard, AccordionCard (2x2), then CalendarCard and OnboardingColumn each `col-span-2`.
+
+**Desktop (lg+):** 4-column CSS grid `gap-1 h-full`, `gridTemplateColumns: &#39;repeat(4, 1fr)&#39;`, `gridTemplateRows: &#39;1fr 1fr&#39;`. Each cell has `h-full min-h-0`:
+- Col 1, Row 1: ProfilePhotoCard
+- Col 2, Row 1: ProgressCard
+- Col 3, Row 1: TimeTrackerCard
+- Col 4, Row 1-2 (spans both): OnboardingColumn
+- Col 1, Row 2: AccordionCard
+- Col 2-3, Row 2: CalendarCard
+
+---
+
+## Card 1: Profile Photo Card
+
+Rounded-3xl with overflow hidden. Uses `aspect-[4/3] lg:aspect-auto` (natural aspect on mobile, fills parent on desktop). `lg:h-full`. Shadow `0 2px 20px rgba(0,0,0,0.10)`.
+
+**Image:**
+```
+https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600
+```
+`w-full h-full object-cover object-top`.
+
+**Blur overlay at bottom (35% height):** An absolutely positioned div with:
+- `backdropFilter: &#39;blur(18px) saturate(140%)&#39;`
+- `maskImage: &#39;linear-gradient(to top, black 40%, transparent 100%)&#39;`
+- `background: &#39;linear-gradient(to top, rgba(0,0,0,0.28) 0%, transparent 100%)&#39;`
+
+**Info bar:** Absolute bottom-3 left-3 right-3, flex between, `px-4 py-3 rounded-2xl`:
+- Left: &quot;Nora Elliston&quot; (`text-white text-sm font-medium`) + &quot;UI/UX Architect&quot; (`text-white/70 text-xs`)
+- Right: &quot;$1,200&quot; in a pill `border: 1px solid rgba(255,255,255,0.35)`, `text-white text-xs font-medium`
+
+---
+
+## Card 2: Activity (Progress) Card
+
+`bg-white/60 backdrop-blur-3xl rounded-3xl p-5`, `flex flex-col gap-3 lg:h-full`.
+
+**Header:** &quot;Activity&quot; (`text-lg text-[#303030]`) + arrow-up-right button (white circle `w-8 h-8`).
+
+**Stat:** &quot;6.1 h&quot; (`text-4xl text-[#303030]`) + &quot;Logged hrs / this week&quot; (`text-xs text-[#898989]` with `&lt;br /&gt;`).
+
+**Bar chart area:** `h-48 lg:flex-1 lg:h-auto min-h-0` wrapping a Recharts `ResponsiveContainer`.
+
+**Bar chart data:**
+```
+S:3.5, M:5.0, T:4.2, W:6.0, T:4.8, F:7.2, S:2.0
+```
+- `barCategoryGap=&quot;30%&quot;`, margins `top:20 right:0 left:0 bottom:0`
+- XAxis: `fill: #898989, fontSize: 11, fontFamily: &#39;Sofia Pro Regular&#39;`, no axis/tick lines
+- Bar radius `[6,6,6,6]`. All bars `#303030` except Friday (index 5) which is `#FFD85F`
+- Custom tooltip: only shows on the Friday bar (value 7.2), displays &quot;5h 23m&quot; in a yellow pill `bg-[#FFD85F] text-[#303030] text-xs rounded-full px-3 py-1 shadow-md`. Cursor disabled, position `y: -30`.
+
+---
+
+## Card 3: Focus Timer Card
+
+Same card wrapper as Activity card. Title: &quot;Focus timer&quot;.
+
+**Ring (SVG 180x180):**
+- Center: cx=90, cy=90, radius=68
+- Yellow arc stroke (`#FFD85F`, strokeWidth 10) covering 70% of circumference, starting from top (rotated -90deg)
+- 60 tick marks around the ring (tickInner = r-4, tickOuter = r+4). Ticks in the progress zone are hidden; remaining ticks are `#898989` at 90% opacity, strokeWidth 1.2, round linecap.
+- Center text: &quot;02:35&quot; (fontSize 22, fill #303030) and &quot;Deep Focus&quot; below (fontSize 10, fill #898989)
+
+**Controls:** Below ring, full width flex between:
+- Left: Play + Pause buttons (white circles `w-10 h-10`, icons 14px)
+- Right: Reset button (dark circle `bg-[#303030]`, RotateCcw icon in white)
+
+---
+
+## Card 4: Onboarding / Induction Column
+
+Same card wrapper. `flex flex-col gap-4 lg:h-full`.
+
+**Header:** &quot;Induction&quot; (`text-lg`) + &quot;18%&quot; (`text-4xl`).
+
+**Stacked bar (3 segments, flex row):**
+- 30% yellow `bg-[#FFD85F] rounded-xl h-10` with &quot;Task&quot; label inside
+- 25% dark `bg-[#303030] rounded-xl h-10`
+- 20% gray `bg-[#898989] rounded-xl h-10`
+- Each has a percentage label above (`text-xs text-[#898989]`)
+
+**Task list (dark panel):** `bg-[#303030] rounded-3xl p-5 flex flex-col gap-2 flex-1`.
+- Header: &quot;Pending Actions&quot; (`text-lg text-white`) + &quot;2/8&quot; (`text-base text-[#898989]`)
+- 5 task rows, each: `flex items-center gap-3 py-2 border-b border-white/5 last:border-0`
+- Icon circle: `w-8 h-8 rounded-full bg-white/10`, icon 13px `text-white/60`
+- Title + time. Done tasks: `line-through text-white/30`. Undone: `text-white`
+- Time: `text-xs text-white/30`
+- Checkbox: done = yellow circle `w-5 h-5 bg-[#FFD85F]` with Check icon 10px; undone = `border border-white/20` circle
+
+**Tasks data:**
+1. Screening, Sep 13 08:30, done, Monitor icon
+2. Sync Session, Sep 13 10:30, done, Users icon
+3. Sprint Recap, Sep 13 13:00, not done, MessageSquare icon
+4. Set Q3 Targets, Sep 13 14:45, not done, Pencil icon
+5. Policy Walkthru, Sep 13 16:30, not done, Link icon
+
+---
+
+## Card 5: Accordion Card
+
+`bg-white/60 backdrop-blur-3xl rounded-3xl overflow-hidden lg:h-full`. No padding on the outer container.
+
+4 accordion items separated by `border-t border-[#898989]/15`:
+1. &quot;Retirement savings&quot;
+2. &quot;Hardware&quot; (expandable, open by default)
+3. &quot;Earnings breakdown&quot;
+4. &quot;Perks &amp; Benefits&quot;
+
+Each item button: `px-5 py-4 hover:bg-[#898989]/8 transition-colors`, with ChevronDown/Up (15px, `text-[#898989]`).
+
+**Expanded &quot;Hardware&quot; content:** `px-5 pb-4 flex items-center gap-3 border-t border-[#898989]/15`:
+- Thumbnail: `w-12 h-10 rounded-lg` with image:
+```
+https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&amp;cs=tinysrgb&amp;w=120
+```
+- Text: &quot;ThinkPad Pro&quot; (`text-sm text-[#303030]`) + &quot;Edition X1&quot; (`text-xs text-[#898989]`)
+- MoreVertical icon button
+
+---
+
+## Card 6: Calendar Card
+
+Same card wrapper. `lg:h-full flex flex-col`.
+
+**Month header:** Flex between — &quot;July&quot; (`text-sm text-[#898989]`), &quot;August 2024&quot; (`text-base text-[#303030]`), &quot;September&quot; in outlined pill (`border border-[#898989]/25 rounded-full px-4 py-1`).
+
+**Day headers (ml-14 sm:ml-16 mb-2):** 6 days — Mon 22, Tue 23, Wed 24, Thu 25, Fri 26, Sat 27. Day 24 is highlighted (`text-[#303030]`), others `text-[#898989]`.
+
+**Time grid area:** `h-40 lg:flex-1`.
+- Left column (`w-14 sm:w-16`): times 8:00am, 9:00am, 10:00am, 11:00am
+- Right: relative container with dashed vertical column lines (`border-l border-dashed border-[#898989]/20`)
+- **Event 1:** Dark card `bg-[#303030] rounded-2xl`, absolute positioned `left: 16.66%, right: 33%, top: 4px, height: 58px`. &quot;Monthly All-Hands&quot; + &quot;Recap milestones across squads&quot; (hidden on small screens). 3 avatar group.
+- **Event 2:** White card `bg-white border border-[#898989]/25 rounded-2xl`, `left: 55%, right: 0%, top: 84px, height: 56px`. &quot;Induction Briefing&quot; + &quot;Orientation for new joiners&quot;. 2 avatar group.
+
+**Avatar group images:**
+```
+https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=60
+https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=60
+https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=60
+```
+Each avatar: `w-6 h-6 rounded-full object-cover border-2 border-white`, overlapping with `marginLeft: -6px` after the first.
+
+---
+
+## Responsive Behavior Summary
+
+- Cards use `lg:h-full` so they fill parent on desktop but size to content on mobile/tablet.
+- Profile photo card uses `aspect-[4/3] lg:aspect-auto`.
+- Activity chart uses `h-48 lg:flex-1 lg:h-auto`.
+- Calendar event area uses `h-40 lg:flex-1`.
+- Tablet grid uses `alignItems: &#39;stretch&#39;` so same-row cards match height.
+- Mobile is a simple vertical stack with no fixed heights.
+- Segment bar text is `text-xs sm:text-sm`.
+- Calendar event descriptions are `hidden sm:block`.
+- Configs button is `hidden sm:flex`.
+- Nav links desktop only; hamburger mobile only.
+
+---
+
+## Dependencies (package.json)
+
+- react 18.3.1, react-dom 18.3.1
+- recharts 3.8.1
+- lucide-react 0.344.0
+- @supabase/supabase-js 2.57.4
+- Tailwind CSS 3.4.1 with autoprefixer and postcss
+- Vite 5.4.2, TypeScript 5.5.3
+
+---
+
+## Tailwind Config
+
+Extend `borderRadius` with `3xl: &#39;24px&#39;` and `4xl: &#39;32px&#39;`. Custom colors: `yellow.DEFAULT: &#39;#FFD85F&#39;`, `dark-gray: &#39;#303030&#39;`, `light-gray: &#39;#898989&#39;`. Font family sans set to Century Gothic (fallback only, actual rendering uses Sofia Pro from the external sheet).
+
+---
+
+## CSS (index.css)
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+font-family: &quot;Sofia Pro Medium&quot;, sans-serif;
+-webkit-font-smoothing: antialiased;
+}
+
+:root {
+scrollbar-width: thin;
+scrollbar-color: #e5e5e5 transparent;
+}
+```</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><p class="muted">暂无同分类条目。</p><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

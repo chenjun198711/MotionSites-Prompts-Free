@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Creator Guild — Community 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Nexus/Circle 创作者社群全视口落地页，React + Tailwind 精确还原布局与交互。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/creator-guild.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Creator Guild — Community 提示词">
+<meta property="og:description" content="Nexus/Circle 创作者社群全视口落地页，React + Tailwind 精确还原布局与交互。">
+<meta property="og:url" content="https://prompt-site.shop/p/creator-guild.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Creator Guild","description":"Nexus/Circle 创作者社群全视口落地页，React + Tailwind 精确还原布局与交互。","url":"https://prompt-site.shop/p/creator-guild.html","inLanguage":"zh-CN","genre":"Community","dateCreated":"2026-08-14T08:39:05.666Z","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-community">Community</a></div><h1>Creator Guild</h1><div class="chip-row"><span class="chip">Community</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-08-14</span><span>正文：8,285 字符</span></div><div class="hero-media"><video src="../assets/previews/creator-guild.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>Nexus/Circle 创作者社群全视口落地页，React + Tailwind 精确还原布局与交互。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Recreate this exact full-viewport landing page called &quot;Nexus/Circle&quot; as a single React + TypeScript + Vite + Tailwind CSS page. Do not invent extra sections, cards, navbars, or features. Match layout, typography, colors, videos, cursor, and interaction exactly.
+
+═══════════════════════════════════════
+STACK &amp; GLOBAL SETUP
+═══════════════════════════════════════
+- React 18 + TypeScript + Vite
+- Tailwind CSS (utility classes only; no custom theme extensions required)
+- lucide-react for icons only (Settings, Heart)
+- No other UI libraries, no Framer Motion, no GSAP
+- Page title: &quot;Nexus/Circle&quot;
+- Single full-screen section: 100vw × 100vh, overflow hidden
+- Body font: Inter from Google Fonts
+
+Exact Google Fonts link in index.html:
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot; /&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin /&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+
+Global CSS:
+body { font-family: &#39;Inter&#39;, sans-serif; }
+
+═══════════════════════════════════════
+CLOUDFRONT VIDEO URLS (EXACT — DO NOT CHANGE)
+═══════════════════════════════════════
+Video 1 (background loop, always visible underneath):
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260730_181344_3a592329-bd0b-4dc6-9ac6-cfb250e5ecdd.mp4
+
+Video 2 (overlay reveal video, starts hidden at opacity 0):
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260730_214302_820066a8-f3de-43f3-ab1d-96bd8b2716e6.mp4
+
+Both videos:
+- position: absolute; inset: 0; width/height 100%; object-fit: cover
+- muted, playsInline
+- Video 1: autoPlay + loop, opacity always 1
+- Video 2: NO autoPlay, NO loop; controlled by click; opacity transitions with style {{ opacity: showSecond ? 1 : 0, transition: &#39;opacity 600ms ease&#39; }}
+
+═══════════════════════════════════════
+INTERACTION / ANIMATION BEHAVIOR (EXACT)
+═══════════════════════════════════════
+State:
+- showSecond: boolean (false initially)
+- fading: boolean (false initially)
+
+Touch detection hook:
+- isTouch = &#39;ontouchstart&#39; in window || navigator.maxTouchPoints &gt; 0
+- On touch devices: hide custom cursor, use normal cursor (cursor: auto)
+- On desktop: cursor: none on the section, show custom cursor
+
+Custom cursor (desktop only):
+- Fixed 90×90px circle
+- centered on mouse with transform -translate-x-1/2 -translate-y-1/2
+- z-index 50, pointer-events: none
+- backdrop-filter: blur(8px)
+- backgroundColor: rgba(0,0,0,0.45)
+- willChange: &#39;left, top&#39;
+- Inner text: white, text-sm, font-medium, tracking-wide, select-none
+- Label text: &quot;open&quot; when showSecond is false; &quot;close&quot; when showSecond is true
+- Position updated on window mousemove via left/top = clientX/clientY (no lag/lerp)
+
+Click anywhere on the section toggles:
+OPEN (when not showing second and not fading):
+1. Set second video currentTime = 1
+2. Call secondVideo.play()
+3. setShowSecond(true) → fades Video 2 in over 600ms ease
+
+CLOSE (when showing second, or during showSecond/fading click):
+1. If already fading or not showSecond, no-op for close path guards
+2. setFading(true); setShowSecond(false) → Video 2 fades out over 600ms ease
+3. After setTimeout 600ms: setFading(false); pause second video
+4. Also auto-close when Video 2 fires onEnded (same close path)
+
+Guard: if fading is true, ignore open attempts.
+
+No other motion/animations exist. Only the 600ms opacity crossfade on Video 2 and the cursor label swap.
+
+═══════════════════════════════════════
+LAYOUT STRUCTURE
+═══════════════════════════════════════
+&lt;section&gt; relative w-full h-screen overflow-hidden, onClick=toggle, cursor none (desktop)
+
+  [custom cursor div — desktop only]
+
+  &lt;video&gt; Video 1 absolute cover
+
+  &lt;video&gt; Video 2 absolute cover with opacity transition
+
+  &lt;div class=&quot;relative z-10 h-full flex flex-col justify-between
+              p-5 sm:p-8 md:p-12 lg:p-16&quot;&gt;
+
+    ── TOP ROW ──
+    flex items-start justify-between gap-4
+
+    LEFT COLUMN (flex flex-col gap-2 sm:gap-3 max-w-[65%] sm:max-w-sm):
+      1) Brand wordmark &quot;Nexus/&quot;
+         - text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+         - font-bold tracking-tight
+         - Gradient text EXACT:
+           background: linear-gradient(135deg, #ffffff 0%, #c084fc 50%, #a855f7 100%)
+           -webkit-background-clip: text
+           -webkit-text-fill-color: transparent
+
+      2) Settings icon from lucide-react
+         - class: w-6 h-6 sm:w-8 sm:h-8 text-white/70
+         - strokeWidth={1.5}
+
+      3) Tagline paragraph
+         - text-white/90
+         - text-base sm:text-lg md:text-xl lg:text-2xl
+         - leading-snug tracking-tight
+         - Exact copy with line break:
+           &quot;A guild and space &quot; + &lt;span class=&quot;font-semibold&quot;&gt;for&lt;/span&gt;
+           &lt;br /&gt;
+           &lt;span class=&quot;font-semibold&quot;&gt;forward-looking creation&lt;/span&gt;
+
+    RIGHT:
+      &quot;/Circle&quot;
+      - text-xl sm:text-3xl md:text-4xl lg:text-5xl
+      - font-semibold tracking-tight shrink-0
+      - color EXACT: #36306E
+
+    ── BOTTOM ROW ──
+    flex items-end justify-between gap-4
+
+    LEFT:
+      flex flex-col gap-1
+      Big number &quot;150+&quot;
+        - text-5xl sm:text-7xl md:text-8xl lg:text-[10rem]
+        - font-bold leading-[0.85] tracking-tighter
+        - Gradient text EXACT:
+          background: linear-gradient(135deg, #ffffff 0%, #d8b4fe 40%, #a855f7 100%)
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+
+      Caption &quot;curious minds on board&quot;
+        - text-xs sm:text-sm md:text-base
+        - tracking-widest uppercase mt-1
+        - Gradient text EXACT:
+          background: linear-gradient(90deg, #ffffff 0%, #c084fc 100%)
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+
+    RIGHT:
+      flex flex-col items-end gap-2
+
+      Patrons card:
+        - border rounded-2xl
+        - px-4 py-3 sm:px-6 sm:py-4
+        - backdrop-blur-sm bg-white/5
+        - flex flex-col items-center gap-1
+        - borderColor EXACT: rgba(54,48,110,0.3)
+
+        Inside card (top to bottom, centered):
+          &quot;Secured to&quot;
+            - text-xs sm:text-sm tracking-wide
+            - text-white/90 on mobile; sm:text-[#36306E] from sm breakpoint up
+
+          Row: &quot;200&quot; + Heart icon
+            - &quot;200&quot;: text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold
+              text-white on mobile; sm:text-[#36306E] from sm up
+            - Heart (lucide-react): w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10
+              text-white on mobile; sm:text-[#36306E] from sm up
+              strokeWidth={1.2}
+            - flex items-center gap-2
+
+          &quot;patrons&quot;
+            - text-xs sm:text-sm tracking-wide
+            - text-white/70 on mobile; sm:text-[rgba(54,48,110,0.7)] from sm up
+
+      Below card, right-aligned:
+        &quot;12.4K&quot;
+        - text-xs sm:text-sm font-medium tracking-wide
+        - text-white/60 on mobile; sm:text-[rgba(54,48,110,0.6)] from sm up
+
+═══════════════════════════════════════
+COLOR TOKENS USED
+═══════════════════════════════════════
+- White: #ffffff
+- Soft purple light: #c084fc, #d8b4fe
+- Purple: #a855f7
+- Deep indigo/purple brand: #36306E
+- Deep indigo translucent borders/text: rgba(54,48,110,0.3), rgba(54,48,110,0.6), rgba(54,48,110,0.7)
+- Cursor fill: rgba(0,0,0,0.45)
+- White translucencies: white/90, white/70, white/60, white/5
+
+═══════════════════════════════════════
+RESPONSIVE RULES (KEEP EXACT BREAKPOINTS)
+═══════════════════════════════════════
+Padding: p-5 → sm:p-8 → md:p-12 → lg:p-16
+&quot;Nexus/&quot; and &quot;/Circle&quot; scale: 2xl/xl → 3xl → 4xl → 5xl
+&quot;150+&quot; scales up to lg:text-[10rem] with leading-[0.85]
+Patrons card and Heart scale up at sm/md/lg
+From sm breakpoint upward, patrons card text/icon switches from white translucencies to #36306E / rgba(54,48,110,*) so it remains readable over the brighter video areas
+
+═══════════════════════════════════════
+EXPLICIT NON-GOALS
+═══════════════════════════════════════
+- No navbar, footer, buttons, forms, or extra sections
+- No scroll (single locked viewport)
+- No sound on videos
+- No loading spinner / intro preloader
+- No cards except the one &quot;Secured to / 200 ♥ / patrons&quot; box
+- Do not replace Inter with another font
+- Do not change CloudFront URLs or video filenames
+- Do not add hover styles beyond the custom cursor label change
+` ` `
+
+---</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="social-hangouts.html">Social Hangouts<small>Community · mobile</small></a><a href="church-community.html">Church Community<small>Community · mobile</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

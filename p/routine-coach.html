@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Routine Coach — Wellness 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Steadyflow 日常习惯养成应用营销落地页，React + Framer Motion 实现。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/routine-coach.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Routine Coach — Wellness 提示词">
+<meta property="og:description" content="Steadyflow 日常习惯养成应用营销落地页，React + Framer Motion 实现。">
+<meta property="og:url" content="https://prompt-site.shop/p/routine-coach.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Routine Coach","description":"Steadyflow 日常习惯养成应用营销落地页，React + Framer Motion 实现。","url":"https://prompt-site.shop/p/routine-coach.html","inLanguage":"zh-CN","genre":"Wellness","dateCreated":"2026-08-14T08:39:05.666Z","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-wellness">Wellness</a></div><h1>Routine Coach</h1><div class="chip-row"><span class="chip">Wellness</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-08-14</span><span>正文：14,275 字符</span></div><div class="hero-media"><video src="../assets/previews/routine-coach.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>Steadyflow 日常习惯养成应用营销落地页，React + Framer Motion 实现。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a pixel-accurate recreation of the **Steadyflow** marketing landing page: a single-page React + Vite + TypeScript + Tailwind CSS + Framer Motion site. Page title: `Steadyflow - Daily routines that never break`. Page background: `rgb(247, 247, 247)`. Smooth scroll on `html`. Antialiased text. `overflow-x: hidden` on body.
+
+Stack: React 18, Vite 5, Tailwind 3, Framer Motion 12, Lucide React. No router needed (single page). App composition in order:
+
+1. `Navbar` (fixed)
+2. `Hero`
+3. `Achievements`
+4. `Counter`
+
+---
+
+## Fonts (exact)
+
+**Google Fonts (in `&lt;head&gt;`):**
+- `Google Sans Flex` weight 500 — https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@500&amp;display=swap
+- `Geist` weight 700 — https://fonts.googleapis.com/css2?family=Geist:wght@700&amp;display=swap (loaded; primary UI uses the two below)
+
+**Custom @font-face:**
+` ` `css
+@font-face {
+  font-family: &#39;Stack Sans Headline&#39;;
+  src: url(&#39;https://framerusercontent.com/modules/VqG9xS8K2qN3B8RHWMKb/UQYzREmGJ3JWCi77B0rN/StackSans-Medium.woff2&#39;) format(&#39;woff2&#39;);
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+` ` `
+
+**Usage rules:**
+- Headlines / big numbers / brand display → `&#39;Stack Sans Headline&#39;, sans-serif`, weight 500
+- Body / UI / CTAs / nav → `&#39;Google Sans Flex&#39;, sans-serif`, weight 500/medium/semibold as specified
+
+---
+
+## Color system
+
+| Token | Value |
+|--------|--------|
+| Page bg / curve fill | `rgb(247, 247, 247)` |
+| Near-black (hero fallback, nav buttons, overlays) | `rgb(19, 21, 21)` |
+| Accent blue | `#4382BC` |
+| Logo fill | `#5BB8F0` |
+| Muted gray text | `rgb(73, 77, 77)` |
+| Soft gray (card job labels) | `rgb(184, 184, 184)` |
+| White | `#fff` / `rgb(255,255,255)` |
+| Nav pill shadow | `0px 8px 20px rgba(5, 8, 12, 0.1)` |
+
+---
+
+## Assets (exact URLs — do not substitute)
+
+### Hero background video (MUST use this exact URL)
+` ` `
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260728_015819_1b3ec855-d586-4018-96c8-8bf90cada037.mp4
+` ` `
+Attributes: `autoPlay` `muted` `loop` `playsInline`, `object-cover`, absolute fill of hero.
+
+### Counter section video
+` ` `
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260625_213350_6343fcfb-2892-4dcc-8573-1161447cacf5.mp4
+` ` `
+With `mix-blend-mode: darken`, tall crop (`h-[800px]` desktop / `h-[500px]` mobile), container `max-w-[1080px]`, height `440px` / `280px` mobile, `aspect-ratio: 2.45` on wrapper. Bottom fade gradient: `linear-gradient(to bottom, transparent, #F6F6F6)`.
+
+### Cloud overlay image (Counter)
+` ` `
+https://res.cloudinary.com/dy5er7kv5/image/upload/v1782423467/clouds_vtypge.png
+` ` `
+Absolute, full width, `bottom: -60px` (−30px mobile), `pointer-events: none`.
+
+### Stars SVG (Achievements)
+` ` `
+https://framerusercontent.com/images/FfmG8vzlH3tOeU2kFU0oUxANr9Y.svg
+` ` `
+Height 16px.
+
+### Video overlay (modal iframe)
+` ` `
+https://www.youtube.com/embed/b-jRHsYdomY?autoplay=0&amp;mute=1
+` ` `
+Title: `Habitline Demo`. Max width 800px, `aspect-video`, `rounded-[20px]`.
+
+### Achievement card images (higgs.ai CDN → CloudFront originals)
+1. Maya: `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260625_213624_40d877b4-92a9-44d3-be3c-5d3332db4402.png&amp;w=1280&amp;q=85`
+2. Daniel gray: `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260625_213908_9574cadd-4c04-4380-af84-a753e484415a.png&amp;w=1280&amp;q=85`
+3. Aaron Lee: `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260625_213950_c1686b87-f412-4878-b7fe-96ba5085ba01.png&amp;w=1280&amp;q=85`
+4. Priya: `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260625_214012_f14ffda8-1f1c-48bc-893f-1ad05f6bc2d9.png&amp;w=1280&amp;q=85`
+5. Leo: `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260625_214103_cadf49e5-cae8-42e2-9bec-955b7347f850.png&amp;w=1280&amp;q=85`
+6. Ramya: `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260625_214142_c7344da9-f597-42b7-8c31-7ca5228503fb.png&amp;w=1280&amp;q=85`
+
+### Avatar strip images
+1. `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260625_223420_17676c11-c7c0-46d4-89f2-dc3ac2a54835.png&amp;w=1280&amp;q=85`
+2. `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260625_223437_0de72ad0-bb6a-4c9e-b398-2fa61fe9ca26.png&amp;w=1280&amp;q=85`
+3. `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260625_223443_0b27ccfe-9b4c-4e2d-bd00-9ff50a2daed1.png&amp;w=1280&amp;q=85`
+
+### Brand logo SVG path (28×28 desktop / 24×24 mobile, viewBox `0 0 256 256`, fill `#5BB8F0`)
+` ` `
+M 228 0 C 172.772 0 128 44.772 128 100 L 128 0 L 0 0 L 0 28 C 0 83.228 44.772 128 100 128 L 0 128 L 0 256 L 28 256 C 83.228 256 128 211.228 128 156 L 128 256 L 256 256 L 256 228 C 256 172.772 211.228 128 156 128 L 256 128 L 256 0 Z
+` ` `
+
+---
+
+## Shared motion primitives
+
+**Hero spring fade-up:**
+` ` `js
+{ type: &#39;spring&#39;, duration: 0.6, bounce: 0, delay }
+// initial: { opacity: 0, y: 20 } → animate: { opacity: 1, y: 0 }
+` ` `
+Delays: pill `0.1`, headline `0.2`, subtitle `0.3`, CTAs `0.4`, phone `0.6`.
+
+**CTA / store button hover:** `whileHover={{ scale: 0.95 }}`, spring `{ type: &#39;spring&#39;, duration: 0.45, bounce: 0.25 }`.
+
+**Section scroll fade-up (Achievements + Counter):** trigger with `useInView(ref, { once: true, margin: &#39;-100px&#39; })`, transition `{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94], delay }`, same `opacity 0→1`, `y 20→0`.
+
+**Marquee CSS:**
+` ` `css
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.3333%); }
+}
+.marquee-track { animation: marquee 60s linear infinite; width: max-content; }
+.marquee-container:hover .marquee-track { animation-play-state: paused; }
+` ` `
+Render cards array **tripled** (`[...CARDS, ...CARDS, ...CARDS]`), gap `30px`, `cursor-ew-resize`.
+
+---
+
+## 1. Navbar
+
+### Desktop (`lg+`, fixed, `z-10`, `py-[30px]`, centered)
+Three white rounded pills (`rounded-[20px]`) in a row, max width `1260px`, horizontal padding `30px`.
+
+**Scroll behavior:** when `window.scrollY &gt; 50`, animate container `gap` from `0px` → `12px` and `justifyContent` from `space-between` → `center`. Duration `0.45`, ease `[0.44, 0, 0.56, 1]`.
+
+**Left — Brand pill:** white bg, `p-[16px]`, gap `10px`, logo + “Steadyflow” at `18px` semibold `rgb(19,21,21)`.
+
+**Center — Nav menu pill:** white, `px-[32px]`, `h-[64px]`. Links (14px medium, hover opacity 0.7):
+- How it works
+- Features
+- Results
+- AI Coaching  
+All `href=&quot;#&quot;`, gap `32px`.
+
+**Right — Store pill:** white, `p-[6px]`, gap `6px`. Two buttons `52×52`, `rounded-[14px]`, bg `rgb(19,21,21)`:
+- Apple App Store → `https://www.apple.com/in/app-store/` (white Apple glyph SVG)
+- Google Play → `https://play.google.com/store/` (multicolor Play glyph: `#4285F4`, `#34A853`, `#EA4335`, `#FBBC05`)
+
+### Mobile/tablet (`&lt; lg`)
+Single white bar: `max-w-[360px]` / `md:max-w-[760px]`, `rounded-[16px]`, `p-[10px]`, shadow same. Brand left (16px name). Right: smaller store buttons (`40/44px`, `rounded-[12px]`) + hamburger (`32/40px`, `rounded-[10px]`, dark bg) that morphs two white bars into an X (rotate ±45, duration 0.3).
+
+**Mobile menu:** when open, lock `body.overflow = hidden`. Backdrop: fixed inset, `backdrop-blur-md bg-black/40`, fade 0.3s. Panel below nav (`top 80/100px`): white `rounded-[16px]`, `p-[24px]`, links 16px, enter/exit `y ±20`, ease `[0.44, 0, 0.56, 1]`, duration 0.45.
+
+---
+
+## 2. Hero (`#hero`)
+
+- Full width, centered, overflow hidden, fallback bg `rgb(19, 21, 21)`.
+- Absolute full-bleed looping muted hero video (URL above), `object-cover`.
+- **Bottom curved SVG fade** to page bg: absolute `z-[2]`, oversized horizontally (`left/right` −60/−100/−180/−250px by breakpoint), `bottom: -10px`. SVG viewBox `0 0 5688 1886`, path filled `rgb(247,247,247)` with Gaussian blur `stdDeviation=&quot;125&quot;`. Exact path:
+` ` `
+M2733.25 1264.78C706.858 1264.78 -50.5828 573.265 -177 202.5V2088.5H5865V202.5C5664.75 539.923 4759.65 1264.78 2733.25 1264.78Z
+` ` `
+
+**Content column:** `max-w-[980px]`, `px-[30px]`, gap `80px`, `paddingTop: clamp(160px, 15vw, 200px)`, `pb-[120px]`, `z-[1]`.
+
+### Copy stack (centered, gap 40px between copy group and CTAs; 20px inside copy group)
+
+1. **Pill:** frosted — border `1px solid rgba(255,255,255,0.2)`, bg `rgba(255,255,255,0.1)`, `rounded-full`, `pl-[6px] pr-[18px] py-[6px]`. Inner dark chip “New” (`rgb(19,21,21)` bg, white 14px) + “A gentler path to daily growth” (white 14px).
+
+2. **H1:** “Daily routines that” + line break at `lg` + “never break”. White, Stack Sans Headline, `44 / 60 / 90px` (sm/md/lg), `line-height: 1em`, `text-wrap: balance`, centered.
+
+3. **Subtitle:** “We show each routine at its ideal moment so your schedule always feels balanced.” White, Google Sans Flex 500, `18 / 20 / 22px`, `line-height: 1.4em`, `max-w-[500px]`.
+
+4. **CTAs** (gap 20px, wrap):
+   - Primary link `/contact`: white bg, text `rgb(19,21,21)`, `rounded-full`, `px-[34px] py-[16px]`, 16px — **“Begin your streak today”**
+   - Secondary button opens video modal: frosted same as pill, `h-[54px] px-[28px]`, Lucide `Play` 16 filled white + **“See it live”**
+
+### Phone mockup (glass UI, not a screenshot)
+
+- Width `300 / 340px`, `rounded-[44px]`, `backdrop-blur-xl`
+- bg `rgba(13, 17, 23, 0.55)`, border `1px solid rgba(255,255,255,0.12)`
+- shadow: `0px 0px 0px 8px rgba(255,255,255,0.05), 0px 60px 120px rgba(0,0,0,0.5)`
+- padding `20px 16px 12px`
+- Black notch pill `90×26`
+- Header: “Good morning!” (20px Stack Sans white) + “Your daily routines are waiting.” (12px white/40); Bell icon button + blue Plus button
+- Stats card (dark `rgba(0,0,0,0.35)`, `rounded-[16px]`): Flame in `#4382BC`, **18** Day streak | **21** Check-ins this week; 7 weekday bars M–S with `today` on second Thursday colored blue; active days blue bars height ~14–28px
+- “Today&#39;s Habits” + “3 of 4 completed”
+- Habit rows (stagger fade from left, delay `0.8 + i*0.12`, duration 0.4):
+  1. 🚶 Morning walk — At least 20 minutes — 85% — 12/14 — completed
+  2. 💧 Hydrate before lunch — Before 12:00 pm — 100% — 9/9 — completed
+  3. 📖 Read 15 pages — Before winding down — 67% — 6/9 — not completed  
+  Completed = blue filled check circle; incomplete = empty ring. Percent + 40×3px progress bar in `#4382BC`.
+- Dashed “Create a routine” / “Start something new” row with blue Plus
+- Bottom nav: Today (blue Home), Habits, Stats, Profile (inactive white/25)
+
+### VideoOverlay modal
+Fixed `z-[100]`, backdrop `rgba(19,21,21,0.9)`, fade 0.3s. Close button top-right `30px`, `40×40`, bg `rgb(247,247,247)`, `rounded-[8px]`, X from two rotated bars. Video panel scales `0.9→1` with opacity.
+
+---
+
+## 3. Achievements
+
+Section: `pt-[200px]` (`130px` ≤810px), overflow hidden, light page bg.
+
+Header row in `max-w-[1260px] px-[30px]`:  
+- Left H2 (flex 0.7): **“What people are building with Steadyflow”** — Stack Sans, `48 / 42 / 38px`, `rgb(19,21,21)`, `line-height 1.2`  
+- Right column width 320px: AvatarStrip + stars SVG + “Loved everywhere” (`rgb(73,77,77)`, 18px)
+
+**AvatarStrip:** three 40px circular overlapping avatars (`margin-left: -8px`, white 2px border) + dark count chip cycling every 2s through `51+`, `52+`, `53+`, `54+` with spring scale animation (`duration 0.7, bounce 0`).
+
+**Cards (380×480 / 320×450 ≤810px), `rounded-[20px]`, full-bleed photo + vertical gradient:**
+` ` `
+linear-gradient(180deg, rgb(19,21,21) 0%, rgba(255,255,255,0) 50%, rgb(19,21,21) 100%)
+` ` `
+Padding 40/20. Top: `Name · Job`. Bottom: optional large stat + description.
+
+| Name | Job | Stat | Description |
+|------|-----|------|-------------|
+| Maya | Student | — | Maintained 21-day streak using Steadyflow |
+| Daniel gray | Founder | 87% | Boosted his weekly follow-through |
+| Aaron Lee | Remote Engineer | — | No longer drops routines on weekends after switching to Steadyflow |
+| Priya | Busy Parent | — | Tracked 40 deep-work sessions this month with Routine Stacks |
+| Leo | Creative Professional | 10 Days | Nailed hydration goals |
+| Ramya | Software Developer | — | At last keeps her schedule on track with time-blocked routine groups |
+
+Marquee starts `mt-[50px]`.
+
+---
+
+## 4. Counter (`#counter`)
+
+`pt-[200px]` (`130px` ≤810px), centered, `max-w-[1260px]`, internal gap `60px`.
+
+**Top cluster (`max-w-[500px]`):**
+1. White pill border `1px solid rgba(19,21,21,0.1)`: **“Real streaks, real progress”**
+2. H2: **“How people stay on track every single day”** (same headline scale as Achievements)
+3. Giant **“84,000+”** in `#4382BC`, Stack Sans, `120 / 100 / 60px`, `line-height 1`
+4. Sub: **“Habits completed this quarter”** (`rgb(73,77,77)`)
+
+**Visual:** Counter video + Cloudinary cloud + absolute blurred white slab under (`1600×300`, blur 10px, `bottom: -240px`).
+
+**Three stats row** (`max-w-[840px]`, gap 50/32): animated count-up (1s cubic ease-out `1 - (1-p)^3`) when in view:
+
+| Value | Suffix (color `#4382BC`) | Description |
+|------|---------------------------|-------------|
+| 93 | % | Of users report feeling more consistent |
+| 38 | (none) | Habits built on average per user monthly |
+| 41 | + | Regions with growing Steadyflow communities |
+
+Numbers: Stack Sans `68px` / `40px` mobile, `line-height 0.9`. Descriptions Google Sans Flex 18/16, `rgb(73,77,77)`.
+
+---
+
+## Implementation constraints
+
+- Match all copy, spacing numbers, radii, shadows, blend modes, and URLs exactly — no redesign.
+- Hero video **must** be the `hf_20260728_015819_…` CloudFront URL.
+- Use Framer Motion for listed animations; Lucide for icons (`Play`, `Check`, `Flame`, `Plus`, `Bell`, `Home`, `CheckCircle2`, `BarChart3`, `User`, `Clock`, `ChevronRight`).
+- Responsive breakpoints used in source: `md`, `lg`, and custom `max-[810px]` / `md:max-[1024px]`.
+- Do not add extra sections (no footer in this page).</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="mindora.html">Mindora<small>Wellness · wellness</small></a><a href="nature-ritual.html">Nature Ritual<small>Wellness · wellness</small></a><a href="mindful-companion.html">Mindful Companion<small>Wellness · hero</small></a><a href="breathstone.html">Breathstone<small>Wellness · hero</small></a><a href="fitness-dashboard.html">Fitness Dashboard<small>Wellness · mobile</small></a><a href="inner-quest.html">Inner Quest<small>Wellness · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

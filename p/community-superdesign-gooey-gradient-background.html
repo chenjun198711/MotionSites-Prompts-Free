@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gooey Gradient Background — Animations &amp; Backgrounds 提示词 | MotionSites Prompts</title>
+<meta name="description" content="A mesmerizing, interactive gooey liquid gradient background with animated blobs and mouse-following effect. Perfect for immersive landing pages.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/community-superdesign-gooey-gradient-background.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gooey Gradient Background — Animations &amp; Backgrounds 提示词">
+<meta property="og:description" content="A mesmerizing, interactive gooey liquid gradient background with animated blobs and mouse-following effect. Perfect for immersive landing pages.">
+<meta property="og:url" content="https://prompt-site.shop/p/community-superdesign-gooey-gradient-background.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Gooey Gradient Background","description":"A mesmerizing, interactive gooey liquid gradient background with animated blobs and mouse-following effect. Perfect for immersive landing pages.","url":"https://prompt-site.shop/p/community-superdesign-gooey-gradient-background.html","inLanguage":"zh-CN","genre":"Animations & Backgrounds","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-animations___backgrounds">Animations &amp; Backgrounds</a></div><h1>Gooey Gradient Background</h1><div class="chip-row"><span class="chip">Animations &amp; Backgrounds</span><span class="chip">background</span><span class="chip">社区公开收藏</span></div><div class="facts"><span>正文：9,282 字符</span></div><div class="hero-media"><video src="../assets/previews/community-superdesign-gooey-gradient-background.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>A mesmerizing, interactive gooey liquid gradient background with animated blobs and mouse-following effect. Perfect for immersive landing pages.</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Here is a reference implementation of a Gooey Gradient Background
+
+~~~/README.md
+# Gooey Gradient Background
+
+A mesmerizing, interactive gooey liquid gradient background with animated blobs and mouse-following effect. This component creates an immersive visual experience using SVG filters and CSS animations.
+
+## Features
+
+- 🎨 **Liquid &quot;Gooey&quot; Effect**: Uses SVG `feColorMatrix` and `feGaussianBlur` filters to create merging blob effects.
+- 🖱️ **Interactive**: Includes a mouse-following gradient blob that interacts with the background.
+- 🌈 **Vibrant Gradients**: Complex, multi-layered gradient animations.
+- 🚀 **Performance Optimized**: Uses CSS transforms and `requestAnimationFrame` for smooth rendering.
+- 📱 **Responsive**: Adapts to container size.
+
+## Usage
+
+```tsx
+import { GooeyGradientBackground } from &#39;@/sd-components/942b8e8e-129e-4697-b695-3b1397a42949&#39;;
+
+export default function HeroSection() {
+return (
+&lt;div className=&quot;h-screen w-full&quot;&gt;
+&lt;GooeyGradientBackground&gt;
+&lt;div className=&quot;flex items-center justify-center h-full&quot;&gt;
+&lt;h1 className=&quot;text-white text-6xl font-bold&quot;&gt;Welcome&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/GooeyGradientBackground&gt;
+&lt;/div&gt;
+);
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | `ReactNode` | `undefined` | Content to render on top of the background |
+| `className` | `string` | `&#39;&#39;` | Additional classes for the container |
+
+## Implementation Details
+
+The component uses a combination of:
+1. **CSS Keyframes**: For independent movement of 5 distinct gradient blobs.
+2. **SVG Filters**: A hidden SVG provides the `#goo` filter reference used by the container.
+3. **React Ref &amp; JS**: Handles the mouse interaction logic to update the `transform` of the interactive blob without triggering React re-renders.
+~~~
+
+~~~/src/App.tsx
+import React from &#39;react&#39;;
+import { GooeyGradientBackground } from &#39;./Component&#39;;
+
+export default function App() {
+return (
+&lt;div className=&quot;w-full h-screen&quot;&gt;
+&lt;GooeyGradientBackground&gt;
+&lt;div className=&quot;flex flex-col items-center justify-center w-full h-full text-white/90&quot;&gt;
+&lt;h1 className=&quot;text-[96px] leading-none font-light select-none tracking-wide drop-shadow-sm&quot; style={{ fontFamily: &#39;Dongle, sans-serif&#39; }}&gt;
+Bubbles
+&lt;/h1&gt;
+&lt;p className=&quot;text-2xl mt-4 font-light opacity-80 max-w-md text-center px-4&quot; style={{ fontFamily: &#39;Dongle, sans-serif&#39; }}&gt;
+Move your mouse to interact with the gradient field.
+&lt;/p&gt;
+
+&lt;div className=&quot;mt-12 flex gap-4&quot;&gt;
+&lt;button className=&quot;px-8 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xl hover:bg-white/20 transition-all cursor-pointer&quot; style={{ fontFamily: &#39;Dongle, sans-serif&#39; }}&gt;
+Get Started
+&lt;/button&gt;
+&lt;button className=&quot;px-8 py-3 bg-transparent border border-white/20 rounded-full text-xl hover:bg-white/5 transition-all cursor-pointer&quot; style={{ fontFamily: &#39;Dongle, sans-serif&#39; }}&gt;
+Learn More
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/GooeyGradientBackground&gt;
+&lt;/div&gt;
+);
+}
+~~~
+
+~~~/package.json
+{
+&quot;name&quot;: &quot;gooey-gradient-background&quot;,
+&quot;description&quot;: &quot;A mesmerizing, interactive gooey liquid gradient background with animated blobs&quot;,
+&quot;dependencies&quot;: {
+&quot;react&quot;: &quot;^18.2.0&quot;,
+&quot;react-dom&quot;: &quot;^18.2.0&quot;,
+&quot;lucide-react&quot;: &quot;^0.344.0&quot;
+}
+}
+~~~
+
+~~~/src/Component.css
+.gooey-wrapper {
+/* Using the specific colors from the design */
+--color-bg1: rgb(108, 0, 162);
+--color-bg2: rgb(0, 17, 82);
+--color1: 18, 113, 255;
+--color2: 221, 74, 255;
+--color3: 100, 220, 255;
+--color4: 200, 50, 50;
+--color5: 180, 180, 50;
+--color-interactive: 140, 100, 255;
+--circle-size: 80%;
+--blending: hard-light;
+
+font-family: &#39;Dongle&#39;, sans-serif;
+width: 100%;
+height: 100%;
+position: relative;
+overflow: hidden;
+}
+
+@keyframes moveInCircle {
+0% { transform: rotate(0deg); }
+50% { transform: rotate(180deg); }
+100% { transform: rotate(360deg); }
+}
+
+@keyframes moveVertical {
+0% { transform: translateY(-50%); }
+50% { transform: translateY(50%); }
+100% { transform: translateY(-50%); }
+}
+
+@keyframes moveHorizontal {
+0% { transform: translateX(-50%) translateY(-10%); }
+50% { transform: translateX(50%) translateY(10%); }
+100% { transform: translateX(-50%) translateY(-10%); }
+}
+
+.gradient-bg {
+width: 100%;
+height: 100%;
+position: absolute;
+overflow: hidden;
+background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+top: 0;
+left: 0;
+z-index: 0;
+}
+
+.gradient-bg svg {
+position: fixed;
+top: 0;
+left: 0;
+width: 0;
+height: 0;
+}
+
+.gradients-container {
+filter: url(#goo) blur(40px);
+width: 100%;
+height: 100%;
+}
+
+.g1 {
+position: absolute;
+background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+mix-blend-mode: var(--blending);
+width: var(--circle-size);
+height: var(--circle-size);
+top: calc(50% - var(--circle-size) / 2);
+left: calc(50% - var(--circle-size) / 2);
+transform-origin: center center;
+animation: moveVertical 30s ease infinite;
+opacity: 1;
+}
+
+.g2 {
+position: absolute;
+background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+mix-blend-mode: var(--blending);
+width: var(--circle-size);
+height: var(--circle-size);
+top: calc(50% - var(--circle-size) / 2);
+left: calc(50% - var(--circle-size) / 2);
+transform-origin: calc(50% - 400px);
+animation: moveInCircle 20s reverse infinite;
+opacity: 1;
+}
+
+.g3 {
+position: absolute;
+background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+mix-blend-mode: var(--blending);
+width: var(--circle-size);
+height: var(--circle-size);
+top: calc(50% - var(--circle-size) / 2 + 200px);
+left: calc(50% - var(--circle-size) / 2 - 500px);
+transform-origin: calc(50% + 400px);
+animation: moveInCircle 40s linear infinite;
+opacity: 1;
+}
+
+.g4 {
+position: absolute;
+background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+mix-blend-mode: var(--blending);
+width: var(--circle-size);
+height: var(--circle-size);
+top: calc(50% - var(--circle-size) / 2);
+left: calc(50% - var(--circle-size) / 2);
+transform-origin: calc(50% - 200px);
+animation: moveHorizontal 40s ease infinite;
+opacity: 0.7;
+}
+
+.g5 {
+position: absolute;
+background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+mix-blend-mode: var(--blending);
+width: calc(var(--circle-size) * 2);
+height: calc(var(--circle-size) * 2);
+top: calc(50% - var(--circle-size));
+left: calc(50% - var(--circle-size));
+transform-origin: calc(50% - 800px) calc(50% + 200px);
+animation: moveInCircle 20s ease infinite;
+opacity: 1;
+}
+
+.interactive {
+position: absolute;
+background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+mix-blend-mode: var(--blending);
+width: 100%;
+height: 100%;
+top: -50%;
+left: -50%;
+opacity: 0.7;
+/* Will be controlled by JS for performance */
+}
+~~~
+
+~~~/src/Component.tsx
+import React, { useEffect, useRef } from &#39;react&#39;;
+import &#39;./Component.css&#39;;
+
+interface GooeyGradientBackgroundProps {
+/**
+* Content to render on top of the background
+*/
+children?: React.ReactNode;
+/**
+* Additional class names for the container
+*/
+className?: string;
+}
+
+/**
+* A mesmerizing, interactive gooey liquid gradient background with animated blobs.
+* Features:
+* - Pure CSS animations for background blobs
+* - SVG filter for the &quot;gooey&quot; liquid effect
+* - Interactive mouse-following blob
+* - Responsive and container-aware
+*/
+export function GooeyGradientBackground({ children, className = &#39;&#39; }: GooeyGradientBackgroundProps) {
+const interactiveRef = useRef&lt;HTMLDivElement&gt;(null);
+
+useEffect(() =&gt; {
+let curX = 0;
+let curY = 0;
+let tgX = 0;
+let tgY = 0;
+
+const handleMouseMove = (event: MouseEvent) =&gt; {
+tgX = event.clientX;
+tgY = event.clientY;
+};
+
+const animate = () =&gt; {
+if (!interactiveRef.current) return;
+
+curX += (tgX - curX) / 20;
+curY += (tgY - curY) / 20;
+
+interactiveRef.current.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+requestAnimationFrame(animate);
+};
+
+window.addEventListener(&#39;mousemove&#39;, handleMouseMove);
+animate();
+
+return () =&gt; {
+window.removeEventListener(&#39;mousemove&#39;, handleMouseMove);
+};
+}, []);
+
+return (
+&lt;div className={`gooey-wrapper w-full h-full relative overflow-hidden ${className}`}&gt;
+&lt;div className=&quot;gradient-bg&quot;&gt;
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;defs&gt;
+&lt;filter id=&quot;goo&quot;&gt;
+&lt;feGaussianBlur in=&quot;SourceGraphic&quot; stdDeviation=&quot;10&quot; result=&quot;blur&quot; /&gt;
+&lt;feColorMatrix in=&quot;blur&quot; mode=&quot;matrix&quot; values=&quot;1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 18 -8&quot; result=&quot;goo&quot; /&gt;
+&lt;feBlend in=&quot;SourceGraphic&quot; in2=&quot;goo&quot; /&gt;
+&lt;/filter&gt;
+&lt;/defs&gt;
+&lt;/svg&gt;
+&lt;div className=&quot;gradients-container&quot;&gt;
+&lt;div className=&quot;g1&quot;&gt;&lt;/div&gt;
+&lt;div className=&quot;g2&quot;&gt;&lt;/div&gt;
+&lt;div className=&quot;g3&quot;&gt;&lt;/div&gt;
+&lt;div className=&quot;g4&quot;&gt;&lt;/div&gt;
+&lt;div className=&quot;g5&quot;&gt;&lt;/div&gt;
+&lt;div ref={interactiveRef} className=&quot;interactive&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+{/* Content Layer */}
+&lt;div className=&quot;relative z-10 w-full h-full&quot;&gt;
+{children}
+&lt;/div&gt;
+&lt;/div&gt;
+);
+}
+
+export default GooeyGradientBackground;
+~~~
+
+Implementation Guidelines
+
+1. Analyze the component structure, styling, animation implementations
+2. Review the component&#39;s arguments and state
+3. Think through what is the best place to adopt this component/style into the design we are doing
+4. Then adopt the component/design to our current system
+
+Help me integrate this into my design</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：superdesigndev/superdesign-prompts<br>原始文件：<code>prompts/gooey-gradient-background/README.md</code><br>许可证：CC0-1.0<br>作者：Jason Zhou<br><a href="https://github.com/superdesigndev/superdesign-prompts/blob/main/prompts/gooey-gradient-background/README.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="community-superdesign-the-stacking-cards-effect.html">The &quot;Stacking Cards&quot; Effect<small>Animations &amp; Backgrounds · landing-page</small></a><a href="community-superdesign-hover-reveal-effect.html">Hover reveal effect<small>Animations &amp; Backgrounds · landing-page</small></a><a href="community-superdesign-scroll-journey-line.html">Scroll Journey Line<small>Animations &amp; Backgrounds · background</small></a><a href="community-superdesign-horizontal-gallery.html">Horizontal Gallery<small>Animations &amp; Backgrounds · background</small></a><a href="community-superdesign-parallax-stars-background.html">Parallax Stars Background<small>Animations &amp; Backgrounds · background</small></a><a href="community-superdesign-exploded-view-assembly.html">&quot;Exploded View&quot; Assembly<small>Animations &amp; Backgrounds · landing-page</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

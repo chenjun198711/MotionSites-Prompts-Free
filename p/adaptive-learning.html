@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Adaptive Learning — Education 提示词 | MotionSites Prompts</title>
+<meta name="description" content="LEARNIQ 在线教育平台 EdTech Hero 落地页，React + TypeScript + Vite + Tailwind 实现，完整还原布局、文案、字体与动效。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/adaptive-learning.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Adaptive Learning — Education 提示词">
+<meta property="og:description" content="LEARNIQ 在线教育平台 EdTech Hero 落地页，React + TypeScript + Vite + Tailwind 实现，完整还原布局、文案、字体与动效。">
+<meta property="og:url" content="https://prompt-site.shop/p/adaptive-learning.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Adaptive Learning","description":"LEARNIQ 在线教育平台 EdTech Hero 落地页，React + TypeScript + Vite + Tailwind 实现，完整还原布局、文案、字体与动效。","url":"https://prompt-site.shop/p/adaptive-learning.html","inLanguage":"zh-CN","genre":"Education","dateCreated":"2026-08-14T08:39:05.666Z","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-education">Education</a></div><h1>Adaptive Learning</h1><div class="chip-row"><span class="chip">Education</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-08-14</span><span>正文：7,874 字符</span></div><div class="hero-media"><video src="../assets/previews/adaptive-learning.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>LEARNIQ 在线教育平台 EdTech Hero 落地页，React + TypeScript + Vite + Tailwind 实现，完整还原布局、文案、字体与动效。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">**Recreate this exact LEARNIQ EdTech hero landing page as a single React + TypeScript + Vite + Tailwind CSS component. Match every detail below precisely — layout, copy, spacing, colors, fonts, video URL, icons, interactions, and animations.**
+
+### Tech stack
+- React 18 + TypeScript + Vite
+- Tailwind CSS 3
+- `lucide-react` icons only: `Search`, `User`, `Menu`, `X`, `ArrowDown`
+- No other UI libraries, no Framer Motion, no GSAP — all motion via CSS transitions / Tailwind classes
+
+### Font (exact)
+Load this stylesheet in `index.html`:
+` ` `
+https://db.onlinewebfonts.com/c/95cecf452d3208890088a5b4c19c7ecf?family=Helvetica+Neue+ME
+` ` `
+Apply globally:
+` ` `css
+* {
+  font-family: &#39;Helvetica Neue ME&#39;, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif;
+}
+` ` `
+Page title: `LEARNIQ Hero`
+
+### Full-bleed background video (exact URL — do not substitute)
+` ` `
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260803_204252_e2617fe0-8301-4523-af74-2fb3874a65df.mp4
+` ` `
+Video attributes: `autoPlay`, `loop`, `muted`, `playsInline`  
+Classes: `absolute inset-0 w-full h-full object-cover object-center`  
+Content sits in a `relative z-10` layer over the video. The video is a white/silver DNA double-helix of glowing particles on a white background — it must fill the entire viewport behind all UI.
+
+### Overall structure
+One `&lt;section className=&quot;relative min-h-screen w-full overflow-hidden&quot;&gt;` containing:
+1. Background video
+2. Content column (`flex flex-col min-h-screen`)
+3. Mobile menu overlay (`fixed inset-0 z-50`)
+
+Content column order:
+1. **Nav** (top)
+2. **`flex-1` spacer** (pushes hero copy to the lower half)
+3. **Two-column main content** (bottom of viewport, above the bar)
+4. **Frosted bottom info bar** (`mt-auto`)
+
+### Navigation
+Horizontal bar: `flex items-center justify-between px-5 sm:px-8 lg:px-12 py-5 sm:py-6`
+
+**Left:**
+- Brand wordmark: `LEARNIQ` — `text-black text-base sm:text-lg font-bold tracking-wider`
+- Menu button: lucide `Menu` size 18, strokeWidth 2 + label `Menu` (`hidden sm:inline`), `text-black text-sm`, `hover:opacity-70 transition-opacity`, gap `gap-2` / `gap-4 sm:gap-6` from logo
+- Clicking Menu opens the slide-in panel
+
+**Right:**
+- Search icon button: lucide `Search` size 20, strokeWidth 1.5
+- User icon button: lucide `User` size 20, strokeWidth 1.5
+- Both: `text-black hover:opacity-70 transition-opacity`, gap `gap-3 sm:gap-4`
+
+### Main content area (two columns)
+Container: `flex flex-col md:flex-row items-start justify-between gap-8 md:gap-12 px-5 sm:px-8 lg:px-12 pb-6 sm:pb-8 w-full`
+
+#### Left column (`flex-1 max-w-sm`)
+1. Eyebrow: `VISION OF LEARNIQ`  
+   `text-xs tracking-[0.2em] uppercase text-neutral-500 mb-3 sm:mb-4`
+2. H1 (exact line breaks with `&lt;br /&gt;`):
+` ` `
+Intelligent
+pathways to
+Growth &amp;
+Mastery
+` ` `
+   Classes: `text-3xl sm:text-4xl lg:text-5xl xl:text-[3.4rem] font-light leading-[1.1] text-black tracking-tight`
+3. CTA (margin `mt-10 sm:mt-14`): pill outline button  
+   Text: `Start Your Journey`  
+   Classes: `inline-block border border-black text-black text-xs tracking-[0.15em] uppercase px-6 sm:px-7 py-3 sm:py-3.5 rounded-full hover:bg-black hover:text-white transition-colors duration-300`  
+   `href=&quot;#&quot;`
+
+#### Right column (`flex-1 max-w-xs`)
+1. Body copy with responsive line breaks (`&lt;br className=&quot;hidden sm:block&quot; /&gt;` after each line):
+` ` `
+Realize your strengths.
+Understand your unique style,
+and receive tailored guidance
+to help you learn, adapt, and
+excel faster.
+` ` `
+   Classes: `text-sm lg:text-[15px] leading-relaxed text-neutral-700`
+2. Secondary CTA (margin `mt-10 sm:mt-14`): filled pill  
+   Lucide `ArrowDown` size 14 strokeWidth 2 + text `Dive in deeper`  
+   Classes: `inline-flex items-center gap-2 bg-neutral-800 text-white text-xs tracking-wide px-6 py-3 rounded-full hover:bg-black transition-colors duration-300`  
+   `href=&quot;#&quot;`
+
+### Bottom frosted info bar
+Outer: `mt-auto px-4 sm:px-6 lg:px-8`  
+Inner panel:
+` ` `
+backdrop-blur-xl bg-[#F0F0F0]/75 border border-b-0 border-neutral-300/50 rounded-t-2xl
+` ` `
+Inner flex: `px-6 sm:px-8 lg:px-12 py-6 sm:py-8 lg:py-10 flex flex-col md:flex-row md:items-start md:justify-between gap-6 md:gap-12 lg:gap-16`
+
+**Left block** (`flex items-start gap-4 sm:gap-6 lg:gap-8 flex-shrink-0`):
+- Huge number `01`: `text-4xl sm:text-5xl lg:text-6xl font-extralight text-black leading-none`
+- Beside it:
+  - Date `2024-08-30`: `text-xs text-neutral-500 mb-1.5`
+  - H2 `Reshaping Learning With Adaptive Science`: `text-base sm:text-lg lg:text-xl font-medium text-black leading-snug max-w-[220px]`
+
+**Right block** (`flex-1 max-w-xl`):
+Exact paragraph:
+` ` `
+LEARNIQ is a worldwide EdTech platform committed to transforming education through adaptive, science-backed methods. Working alongside top researchers and learning experts, LEARNIQ delivers meaningful insights that enable students at every level to unlock peak performance. Available internationally since May 2024.
+` ` `
+Classes: `text-sm leading-relaxed text-neutral-600`
+
+### Mobile / slide-in menu (exact interaction + animation)
+State: `menuOpen` boolean. When open, set `document.body.style.overflow = &#39;hidden&#39;`; restore on close/unmount.
+
+Overlay wrapper:
+` ` `
+fixed inset-0 z-50 transition-all duration-500 ease-in-out
+` ` `
+- Open: `visible` / Closed: `invisible`
+
+**Backdrop:**
+` ` `
+absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-500 ease-in-out
+` ` `
+- Open: `opacity-100` / Closed: `opacity-0`
+- Click closes menu
+
+**Panel (slides from left):**
+` ` `
+absolute top-0 left-0 h-full w-full sm:w-[380px] bg-white shadow-2xl
+transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
+` ` `
+- Open: `translate-x-0` / Closed: `-translate-x-full`
+
+**Panel header:** logo `LEARNIQ` (same styles as nav) + close button lucide `X` size 22 strokeWidth 1.5, `hover:opacity-70`
+
+**Menu links** (exact labels + stagger delays):
+| Label | Delay when opening |
+|---|---|
+| Home | 75ms |
+| Evaluations | 150ms |
+| Our Mission | 225ms |
+| The Process | 300ms |
+| Insights | 375ms |
+| Contact | 450ms |
+
+Each link:
+` ` `
+block py-3.5 text-2xl sm:text-3xl font-light text-black tracking-tight border-b border-neutral-100
+transition-all duration-500 ease-out
+` ` `
+- Open: `opacity-100 translate-y-0` with `transitionDelay: item.delay`
+- Closed: `opacity-0 translate-y-4` with `transitionDelay: 0ms`
+- Click closes menu; `href=&quot;#&quot;`
+
+**Menu footer** (absolute bottom):
+` ` `
+Reach out now   → text-xs tracking-[0.15em] uppercase text-neutral-400 mb-4
+hello@learniq.co → text-sm text-neutral-600
+` ` `
+Footer motion: same fade/slide as links, `transitionDelay: 500ms` when open, `0ms` when closed.
+
+### Visual / UX constraints
+- Aesthetic: minimal Swiss/Helvetica editorial EdTech — black type on translucent white video, frosted light-gray bottom sheet, pill CTAs, generous whitespace
+- Hero must read as one composition: DNA video is the dominant full-bleed visual plane; type sits over it; bottom bar anchors the viewport
+- Fully responsive: stacked columns on mobile, side-by-side from `md:` up; nav paddings and type scale as specified
+- No cards in the hero content (only the bottom bar is a frosted rounded-top panel)
+- No purple gradients, no cream paper theme, no newspaper columns — match this exact black/white/neutral system
+
+### Acceptance checklist
+- [ ] Exact CloudFront `.mp4` URL above, looping muted autoplay cover video
+- [ ] Exact Helvetica Neue ME webfont URL and global stack
+- [ ] Exact copy, line breaks, date `2024-08-30`, email `hello@learniq.co`
+- [ ] Exact Tailwind classes / spacing / type sizes listed
+- [ ] Outline CTA + filled ArrowDown CTA with specified hover transitions (300ms colors)
+- [ ] Menu: 500ms slide + blur backdrop + staggered link fade/rise (75→450ms) + footer at 500ms
+- [ ] Body scroll lock while menu open
+- [ ] Lucide icons at the exact sizes/strokeWidths listed</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="bite-sized-courses.html">Bite-Sized Courses<small>Education · mobile</small></a><a href="fun-404-page.html">Fun 404 Page<small>Education · hero</small></a><a href="skills-lea.html">LearnHub<small>Education · mobile</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

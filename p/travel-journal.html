@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Travel Journal — Travel 提示词 | MotionSites Prompts</title>
+<meta name="description" content="手机旅行日记应用界面，采用真实iPhone手机壳样式居中展示，深色背景搭配圆角边框和动态岛设计，适合旅行记录场景。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/travel-journal.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Travel Journal — Travel 提示词">
+<meta property="og:description" content="手机旅行日记应用界面，采用真实iPhone手机壳样式居中展示，深色背景搭配圆角边框和动态岛设计，适合旅行记录场景。">
+<meta property="og:url" content="https://prompt-site.shop/p/travel-journal.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Travel Journal","description":"手机旅行日记应用界面，采用真实iPhone手机壳样式居中展示，深色背景搭配圆角边框和动态岛设计，适合旅行记录场景。","url":"https://prompt-site.shop/p/travel-journal.html","inLanguage":"zh-CN","genre":"Travel","dateCreated":"2026-07-06T07:19:05.156262+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-travel">Travel</a></div><h1>Travel Journal</h1><div class="chip-row"><span class="chip">Travel</span><span class="chip">mobile</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-07-06</span><span>正文：5,071 字符</span></div><div class="hero-media"><video src="../assets/previews/travel-journal.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>手机旅行日记应用界面，采用真实iPhone手机壳样式居中展示，深色背景搭配圆角边框和动态岛设计，适合旅行记录场景。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Create a mobile travel app UI mockup displayed inside a realistic iPhone-style phone frame, centered on a white webpage. Tech stack: React + TypeScript, Tailwind CSS, Lucide React icons, Vite. Font: Google Fonts &quot;Inter&quot; (weights 300-900).
+
+---
+
+**PAGE WRAPPER:**
+
+Full viewport (`h-screen w-screen`), solid white background, flexbox centered, overflow hidden.
+
+---
+
+**PHONE FRAME:**
+
+- Dimensions: 375px x 780px
+- Background: `#0a0a0c`
+- Border-radius: 52px
+- Overflow: hidden
+- Box-shadow (layered bezel effect):
+```
+inset 0 0 0 2px rgba(255, 255, 255, 0.08),
+0 0 0 1px rgba(0, 0, 0, 0.6),
+0 0 0 10px #1a1a1e,
+0 0 0 11px rgba(255, 255, 255, 0.06),
+0 0 60px rgba(0, 0, 0, 0.5)
+```
+
+**Dynamic Island notch:** Absolute, top-0, centered horizontally, 120px wide, 28px tall, solid black, `rounded-b-2xl`, z-50.
+
+---
+
+**HEADER (absolute, top):**
+
+- Z-index: 30
+- `backdrop-filter: blur(12px)` with `background-color: rgba(10, 10, 12, 0.75)`
+- Padding: `px-6 pt-14 pb-4`
+- Left side: Button with &quot;Asia&quot; text (text-lg, font-semibold, white) + ChevronDown icon (size 18, text-white/70)
+- Right side: Calendar icon button (size 22, text-white/70)
+
+---
+
+**SCROLLABLE CONTENT:**
+
+- `overflow-y-auto` with hidden scrollbar
+- Padding: `px-6 pt-28 pb-24`
+- Vertical spacing: `space-y-4` (16px gap)
+
+---
+
+**DESTINATION CARDS (4 total):**
+
+Each card:
+- Full width, height 200px, rounded-2xl, overflow hidden, position relative
+- Full-bleed background image (`absolute inset-0, object-cover`)
+- Gradient overlay: `bg-gradient-to-t from-black/20 to-transparent`
+- **Top-left:** liquid-glass pill (`rounded-full px-3 py-1`) with &quot;{N} moments&quot; text (text-white/90, text-xs, font-normal)
+- **Top-right:** liquid-glass circle (w-8 h-8, rounded-full) with MoreHorizontal icon (size 16, text-white/80)
+- **Bottom:** Destination name in 96px bold font, centered horizontally, clipped in an 80px tall container with `overflow: hidden`. Color: `rgba(255, 255, 255, 0.55)`, tracking-tight, leading-none, margin-top 2px
+
+**Card data with exact image URLs:**
+
+1. **Tokyo** - 23 moments
+`https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260704_101902_e8f0f37b-18b7-4c14-bb5c-99f0724d2646.png&amp;w=1280&amp;q=85`
+
+2. **Seoul** - 18 moments
+`https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260704_101935_4b17f250-8ddb-4ff2-b63d-dfd3497d4428.png&amp;w=1280&amp;q=85`
+
+3. **Bali** - 29 moments
+`https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260704_101958_7116d6bf-fd6f-496f-b3cf-007688cd5123.png&amp;w=1280&amp;q=85`
+
+4. **Rome** - 15 moments
+`https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260704_143008_72ee7299-04a8-474c-ae73-220d45b24a20.png&amp;w=1280&amp;q=85`
+
+---
+
+**FLOATING BOTTOM NAV BAR:**
+
+- Absolute, bottom-6, centered horizontally, z-30
+- liquid-glass pill (`rounded-full, flex, gap-6, px-6 py-2`)
+- 3 nav items (flex-col, items-center, gap-0.5):
+- &quot;Feed&quot; + Home icon (size 20) -- inactive (`text-white/50`)
+- &quot;Account&quot; + User icon (size 20) -- inactive (`text-white/50`)
+- &quot;Trips&quot; + FileText icon (size 20) -- active (`text-white`)
+- Label style: `text-[10px] font-medium`
+
+---
+
+**LIQUID-GLASS CSS:**
+
+```css
+.liquid-glass {
+background: rgba(255, 255, 255, 0.01);
+background-blend-mode: luminosity;
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border: none;
+box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+position: relative;
+overflow: hidden;
+}
+
+.liquid-glass::before {
+content: &#39;&#39;;
+position: absolute;
+inset: 0;
+border-radius: inherit;
+padding: 1.4px;
+background: linear-gradient(180deg,
+rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+pointer-events: none;
+}
+```
+
+---
+
+**STAGGERED ENTRANCE ANIMATION:**
+
+Each card starts at `opacity: 0` and `transform: translateY(24px)`. On component mount, a `setTimeout` triggers a state change that transitions to `opacity: 1` and `translateY(0)`. Transition: `transition-all duration-700 ease-out`. Stagger delay: first card 150ms, each subsequent +120ms (150, 270, 390, 510ms). Implemented with React `useState` + `useEffect`.
+
+---
+
+**SCROLLBAR HIDING:**
+
+```css
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+```
+
+---
+
+**GLOBAL:**
+
+```css
+* { font-family: &#39;Inter&#39;, sans-serif; }
+```
+
+Load in HTML head:
+```html
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot; /&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin /&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+```</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="way-farer.html">Way Farer<small>Travel · travel</small></a><a href="frostbound.html">Frostbound<small>Travel · travel</small></a><a href="mountain-retreat.html">Mountain Retreat<small>Travel · travel</small></a><a href="ai-trip-planner.html">AI Trip Planner<small>Travel · hero</small></a><a href="mostar-guide.html">Mostar Guide<small>Travel · hero</small></a><a href="places-organizer.html">Places Organizer<small>Travel · mobile</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

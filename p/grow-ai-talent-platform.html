@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grow AI Talent Platform — SaaS 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Build a dark-themed landing page hero section with a navbar, headline, CTA button, background video with fade-in/out loop, and a logo marquee. Use Rea">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/grow-ai-talent-platform.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Grow AI Talent Platform — SaaS 提示词">
+<meta property="og:description" content="Build a dark-themed landing page hero section with a navbar, headline, CTA button, background video with fade-in/out loop, and a logo marquee. Use Rea">
+<meta property="og:url" content="https://prompt-site.shop/p/grow-ai-talent-platform.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Grow AI Talent Platform","description":"Build a dark-themed landing page hero section with a navbar, headline, CTA button, background video with fade-in/out loop, and a logo marquee. Use Rea","url":"https://prompt-site.shop/p/grow-ai-talent-platform.html","inLanguage":"zh-CN","genre":"SaaS","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-saas">SaaS</a></div><h1>Grow AI Talent Platform</h1><div class="chip-row"><span class="chip">SaaS</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>正文：5,395 字符</span></div><div class="hero-media"><video src="../assets/previews/grow-ai-talent-platform.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a dark-themed landing page hero section with a navbar, headline, CTA button, background video with fade-in/out loop, and a logo marquee. Use React + Vite + Tailwind CSS + TypeScript with shadcn/ui. Install @fontsource/geist-sans.
+
+1. Theme &amp; Design Tokens (index.css)
+Set up a single dark theme (no light mode toggle). All colors in HSL:
+:root {
+--background: 260 87% 3%;
+--foreground: 40 6% 95%;
+--card: 240 6% 9%;
+--card-foreground: 40 6% 95%;
+--popover: 240 6% 9%;
+--popover-foreground: 40 6% 95%;
+--primary: 262 83% 58%;
+--primary-foreground: 0 0% 100%;
+--secondary: 240 4% 16%;
+--secondary-foreground: 40 6% 95%;
+--muted: 240 4% 16%;
+--muted-foreground: 240 5% 65%;
+--accent: 262 83% 58%;
+--accent-foreground: 0 0% 100%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 100%;
+--border: 240 4% 20%;
+--input: 240 4% 20%;
+--ring: 262 83% 58%;
+--radius: 0.75rem;
+--hero-heading: 40 10% 96%;
+--hero-sub: 40 6% 82%;
+}
+
+Body font: &#39;Geist Sans&#39;, &#39;Inter&#39;, system-ui, sans-serif
+Import these font weights:
+@import &quot;@fontsource/geist-sans/400.css&quot;;
+@import &quot;@fontsource/geist-sans/500.css&quot;;
+@import &quot;@fontsource/geist-sans/600.css&quot;;
+@import &quot;@fontsource/geist-sans/700.css&quot;;
+
+2. Liquid Glass Utility (index.css)
+Add a .liquid-glass utility class in @layer utilities:
+.liquid-glass {
+background: rgba(255, 255, 255, 0.01);
+background-blend-mode: luminosity;
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border: none;
+box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+position: relative;
+overflow: hidden;
+}
+
+.liquid-glass::before {
+content: &#39;&#39;;
+position: absolute;
+inset: 0;
+border-radius: inherit;
+padding: 1.4px;
+background: linear-gradient(180deg,
+rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+pointer-events: none;
+}
+
+3. Tailwind Config
+Add these to tailwind.config.ts:
+All the semantic color tokens mapped to hsl(var(--token))
+A hero color group: hero.heading and hero.sub
+A marquee keyframe: 0% { transform: translateX(0%) } → 100% { transform: translateX(-50%) }
+Animation: marquee: &quot;marquee 20s linear infinite&quot;
+
+4. Button Variants
+In the shadcn button.tsx, add two custom variants:
+hero: &quot;bg-primary text-primary-foreground rounded-full px-6 py-3 text-base font-medium hover:bg-primary/90&quot;
+heroSecondary: &quot;liquid-glass text-foreground rounded-full px-6 py-3 text-base font-normal hover:bg-white/5&quot;
+
+5. Navbar Component
+Full-width, py-5 px-8, flex row, justify-between
+Left: A logo image (32px height). Use a logo.png from src/assets/logo.png
+Center: Nav items as plain buttons: &quot;Features&quot; (with ChevronDown icon), &quot;Solutions&quot;, &quot;Plans&quot;, &quot;Learning&quot; (with ChevronDown icon). Text is text-foreground/90 text-base, gap-1 between items
+Right: &quot;Sign Up&quot; button using heroSecondary variant, size=&quot;sm&quot;, rounded-full px-4 py-2
+Below the navbar, add a full-width 1px gradient divider: mt-[3px] w-full h-px bg-gradient-to-r from-transparent via-foreground/20 to-transparent
+
+6. Hero Section
+Section with bg-background relative overflow-hidden
+Contains the Navbar at the top
+Below navbar + divider, centered content with pt-20 px-4
+Headline &quot;Grow&quot;: text-[230px] font-normal leading-[1.02] tracking-[-0.024em], font-family &#39;General Sans&#39;, sans-serif, bg-clip-text text-transparent with background-image: linear-gradient(223deg, #E8E8E9 0%, #3A7BBF 104.15%)
+Subtext: text-hero-sub text-center text-lg leading-8 max-w-md mt-4 opacity-80, two lines: &quot;The most powerful AI ever deployed&quot; / &quot;in talent acquisition&quot; (split with &lt;br/&gt;)
+CTA Button: heroSecondary variant, text &quot;Schedule a Consult&quot;, px-[29px] py-[24px], wrapped in a div with mt-8 mb-[66px]
+
+7. Social Proof / Video Section
+Immediately below the hero, a separate &lt;section&gt; with relative w-full overflow-hidden.
+Background Video: &lt;video&gt; element: autoPlay muted playsInline, absolute inset-0 w-full h-full object-cover, initial style={{ opacity: 0 }}
+Source URL: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260308_114720_3dabeb9e-2c39-4907-b747-bc3544e2d5b7.mp4
+Fade logic (JavaScript): Use requestAnimationFrame to continuously read currentTime and duration. Fade in over 0.5s at the start, fade out over 0.5s at the end. On ended, set opacity to 0, wait 100ms, reset currentTime = 0, and play() again. This creates a seamless manual loop with fade transitions.
+Gradient overlays: absolute inset-0 bg-gradient-to-b from-background via-transparent to-background
+Content (z-10): flex flex-col items-center pt-16 pb-24 px-4 gap-20
+A h-40 spacer div for video visibility
+
+Logo Marquee at max-w-5xl:
+Left side: text &quot;Relied on by brands / across the globe&quot; in text-foreground/50 text-sm, with &lt;br/&gt;, whitespace-nowrap shrink-0
+Right side: horizontally scrolling marquee using animate-marquee (the 20s infinite animation)
+Logos are placeholder brands: Vortex, Nimbus, Prysma, Cirrus, Kynder, Halcyn — duplicated for seamless loop
+Each logo: a small liquid-glass w-6 h-6 rounded-lg square with the first letter, plus the brand name in text-base font-semibold text-foreground
+Gap between logos: gap-16
+
+8. Page Composition
+The Index page simply renders &lt;HeroSection /&gt; then &lt;SocialProofSection /&gt; sequentially with no wrapper styling.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：giglianepefrei/motionsites.ai-prompt-library<br>原始文件：<code>giglianepefrei_fetch\prompts/Grow_AI_Talent_Platform.md</code><br>许可证：NOASSERTION<br><a href="https://github.com/giglianepefrei/motionsites.ai-prompt-library/blob/main/giglianepefrei_fetch%5Cprompts/Grow_AI_Talent_Platform.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="intelligent-performance.html">Intelligent Performance<small>SaaS · saas</small></a><a href="junglemind.html">JungleMind<small>SaaS · saas</small></a><a href="global-talent.html">Global Talent<small>SaaS · saas</small></a><a href="skytrace.html">Skytrace<small>SaaS · saas</small></a><a href="peakline-redshift.html">Peakline Redshift<small>SaaS · saas</small></a><a href="quantum-lucid.html">Quantum Lucid<small>SaaS · saas</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

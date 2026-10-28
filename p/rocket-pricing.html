@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rocket Pricing — Pricing Page 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色背景的定价页面，使用卡片式布局展示不同套餐，包含价格、功能列表和行动按钮，适合SaaS产品定价展示。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/rocket-pricing.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rocket Pricing — Pricing Page 提示词">
+<meta property="og:description" content="深色背景的定价页面，使用卡片式布局展示不同套餐，包含价格、功能列表和行动按钮，适合SaaS产品定价展示。">
+<meta property="og:url" content="https://prompt-site.shop/p/rocket-pricing.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/rocket-pricing.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Rocket Pricing","description":"深色背景的定价页面，使用卡片式布局展示不同套餐，包含价格、功能列表和行动按钮，适合SaaS产品定价展示。","url":"https://prompt-site.shop/p/rocket-pricing.html","inLanguage":"zh-CN","genre":"Pricing Page","dateCreated":"2026-06-04T09:56:36.26485+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-pricing_page">Pricing Page</a></div><h1>Rocket Pricing</h1><div class="chip-row"><span class="chip">Pricing Page</span><span class="chip">pricing</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-06-04</span><span>正文：8,029 字符</span></div><div class="hero-media"><img src="../assets/previews/rocket-pricing.webp" alt="Rocket Pricing 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色背景的定价页面，使用卡片式布局展示不同套餐，包含价格、功能列表和行动按钮，适合SaaS产品定价展示。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a `PricingSection` React component that matches the spec below exactly.
+
+## Stack &amp; global setup
+
+- React 18 + Vite + TypeScript, TailwindCSS, `framer-motion`, `clsx` + `tailwind-merge` exposed as `cn()` from `@/lib/utils`.
+- Dark theme. Page background `#000000`. Font: Inter (`font-inter`). Icons: Google **Material Symbols Outlined** (loaded globally).
+- Tailwind config must include semantic HSL tokens plus:
+```ts
+theme.extend.colors.landing = {
+surface: &quot;rgba(255,255,255,0.10)&quot;,
+&quot;surface-hover&quot;: &quot;rgba(255,255,255,0.16)&quot;,
+border: &quot;rgba(255,255,255,0.10)&quot;,
+}
+```
+- `--background` / `--foreground` HSL tokens drive `bg-background` (dark) and `text-foreground` (near-white).
+
+## Helper components (reuse exact behavior)
+
+### `MIcon`
+Material Symbols span. Props: `name`, `size=20`, `weight=400`, `fill=0`, `grade=0`, `opticalSize=24`, `className`.
+```tsx
+&lt;span
+className={cn(&quot;material-symbols-outlined select-none leading-none&quot;, className)}
+style={{
+fontSize: size,
+fontVariationSettings: `&#39;FILL&#39; ${fill}, &#39;wght&#39; ${weight}, &#39;GRAD&#39; ${grade}, &#39;opsz&#39; ${opticalSize}`,
+}}
+&gt;{name}&lt;/span&gt;
+```
+
+### `FadeUp`
+`framer-motion` wrapper: `initial={{opacity:0, y:24}}`, `whileInView={{opacity:1, y:0}}`, `viewport={{once:true, amount:0.3}}`, `transition={{duration:0.6, delay, ease:[0.22,1,0.36,1]}}`. Props: `children`, `delay=0`, `className`.
+
+### `SpotlightBorder`
+1px gradient border that follows the cursor via CSS masks.
+- Props: `children`, `className`, `radius=&quot;2xl&quot;`, `size=520`, `intensity=0.5`.
+- Wrapper sets CSS vars `--spot-x`, `--spot-y` (default `-9999px`) updated on `pointermove` relative to element.
+- Two stacked layers using `-webkit-mask` + `mask` `linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)` with `mask-composite: exclude` to produce a 1px ring; the ring is painted with `radial-gradient(circle var(--size) at var(--spot-x) var(--spot-y), rgba(255,255,255, var(--intensity)), transparent 60%)`.
+- Outer ring: `rounded-2xl border border-white/10`. Inner highlight ring: thinner, brighter on hover. Pointer events on inner content only.
+
+### `PrimaryButton` / `SecondaryButton`
+- Both: `inline-flex items-center justify-center rounded-full`, Inter, leading-none, hover text-up-from-below animation (`AnimatedText`).
+- PrimaryButton: `bg-white/80 hover:bg-white text-black`. Size `sm` = `h-8 px-4 text-sm`.
+- SecondaryButton: `bg-landing-surface hover:bg-landing-surface-hover border border-landing-border text-foreground backdrop-blur-[2.5px] font-medium`. Size `sm` = `h-8 px-4 text-sm`.
+
+## Section structure — `PricingSection`
+
+```tsx
+&lt;section id=&quot;pricing&quot; className=&quot;relative w-full bg-background py-12 sm:py-16&quot;&gt;
+&lt;div className=&quot;mx-auto max-w-[1080px] px-4 sm:px-6&quot;&gt;
+{/* HEADER */}
+&lt;div className=&quot;mb-14 flex flex-col items-start gap-10 lg:flex-row lg:items-end lg:justify-between&quot;&gt;
+&lt;div className=&quot;max-w-2xl&quot;&gt;
+&lt;FadeUp&gt;
+&lt;span className=&quot;mb-6 inline-flex items-center gap-2 rounded-full bg-landing-surface border border-white/10 px-3 py-1 text-xs text-foreground/80 backdrop-blur&quot;&gt;
+&lt;span className=&quot;h-1.5 w-1.5 rounded-full bg-foreground/70&quot; /&gt;
+Pricing
+&lt;/span&gt;
+&lt;/FadeUp&gt;
+&lt;FadeUp delay={0.1}&gt;
+&lt;h2 className=&quot;text-3xl sm:text-4xl font-normal tracking-[-0.02em] leading-[1.05] text-foreground&quot;&gt;
+Clear pricing plans
+&lt;br className=&quot;hidden sm:block&quot; /&gt; that scale with you.
+&lt;/h2&gt;
+&lt;/FadeUp&gt;
+&lt;/div&gt;
+&lt;FadeUp delay={0.2}&gt;
+&lt;p className=&quot;max-w-sm text-sm sm:text-base text-foreground/60&quot;&gt;
+One-time payment. Lifetime access. Pick the plan that fits how far
+you want to go.
+&lt;/p&gt;
+&lt;/FadeUp&gt;
+&lt;/div&gt;
+
+{/* CARDS */}
+&lt;div className=&quot;mx-auto grid max-w-3xl grid-cols-1 gap-6 md:grid-cols-2&quot;&gt;
+{plans.map(p =&gt; &lt;PricingCard key={p.name} plan={p} /&gt;)}
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+```
+
+## Plans data (exact)
+
+```ts
+type Feature = { text: string; included: boolean };
+type Plan = {
+name: string; price: string; originalPrice?: string; description: string;
+features: Feature[]; featured?: boolean; badge?: string; bg: string;
+};
+
+const plans: Plan[] = [
+{
+name: &quot;Course&quot;,
+price: &quot;159&quot;, originalPrice: &quot;497&quot;,
+description: &quot;Once. Lifetime. 68% off.&quot;,
+bg: &quot;#161616&quot;,
+features: [
+{ text: &quot;All courses and videos&quot;, included: true },
+{ text: &quot;All modules. Lifetime access.&quot;, included: true },
+{ text: &quot;AI Builder&quot;, included: true },
+{ text: &quot;Unlimited Templates&quot;, included: false },
+{ text: &quot;Unlimited Motion Videos&quot;, included: false },
+],
+},
+{
+name: &quot;Course + Lovable Templates&quot;,
+price: &quot;239&quot;, originalPrice: &quot;697&quot;,
+description: &quot;Once. Lifetime. Best deal.&quot;,
+bg: &quot;#252525&quot;,
+features: [
+{ text: &quot;All courses and videos&quot;, included: true },
+{ text: &quot;All modules. Lifetime access.&quot;, included: true },
+{ text: &quot;AI Builder&quot;, included: true },
+{ text: &quot;Unlimited Templates&quot;, included: true },
+{ text: &quot;Unlimited Motion Videos&quot;, included: true },
+],
+featured: true,
+badge: &quot;Best Value&quot;,
+},
+];
+```
+
+## `PricingCard`
+
+```tsx
+&lt;SpotlightBorder radius=&quot;2xl&quot; size={460} intensity={0.5}
+className=&quot;relative h-full p-2 sm:p-3&quot;&gt;
+&lt;div
+className=&quot;relative flex h-full flex-col rounded-2xl border border-white/10 p-7 sm:p-8&quot;
+style={{ backgroundColor: plan.bg }}
+&gt;
+{plan.badge &amp;&amp; (
+&lt;div className=&quot;absolute -top-3 left-1/2 -translate-x-1/2 rounded-full border border-white/15 bg-white px-3 py-1 text-xs font-medium text-black&quot;&gt;
+{plan.badge}
+&lt;/div&gt;
+)}
+
+&lt;FadeUp delay={0}&gt;
+&lt;div className=&quot;text-[11px] uppercase tracking-[0.2em] text-foreground/60&quot;&gt;
+{plan.name}
+&lt;/div&gt;
+&lt;/FadeUp&gt;
+&lt;div className=&quot;mt-3 border-t border-white/10&quot; /&gt;
+
+&lt;FadeUp delay={0.1}&gt;
+&lt;div className=&quot;mt-10 flex items-baseline gap-2&quot;&gt;
+&lt;span className=&quot;text-[2.75rem] leading-none font-normal tracking-tight text-foreground&quot;&gt;${plan.price}&lt;/span&gt;
+{plan.originalPrice &amp;&amp; (
+&lt;span className=&quot;text-lg text-foreground/40 line-through&quot;&gt;${plan.originalPrice}&lt;/span&gt;
+)}
+&lt;/div&gt;
+&lt;/FadeUp&gt;
+
+&lt;FadeUp delay={0.2}&gt;
+&lt;p className=&quot;mt-4 text-sm leading-relaxed text-foreground/60&quot;&gt;{plan.description}&lt;/p&gt;
+&lt;/FadeUp&gt;
+
+&lt;FadeUp delay={0.3}&gt;
+&lt;div className=&quot;mt-7&quot;&gt;
+{plan.featured
+? &lt;PrimaryButton href=&quot;/auth?mode=signup&quot; size=&quot;sm&quot;&gt;Get Started&lt;/PrimaryButton&gt;
+: &lt;SecondaryButton href=&quot;/auth?mode=signup&quot; size=&quot;sm&quot;&gt;Get Started&lt;/SecondaryButton&gt;}
+&lt;/div&gt;
+&lt;/FadeUp&gt;
+
+&lt;FadeUp delay={0.4}&gt;
+&lt;ul className=&quot;mt-7 flex flex-1 flex-col gap-2&quot;&gt;
+{plan.features.map((f, i) =&gt; (
+&lt;li key={f.text}
+className={cn(
+&quot;flex items-center gap-3 py-4 text-sm&quot;,
+i !== 0 &amp;&amp; &quot;border-t border-white/10&quot;,
+f.included ? &quot;text-foreground/85&quot; : &quot;text-foreground/40&quot;
+)}&gt;
+&lt;span className={cn(
+&quot;flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border&quot;,
+f.included ? &quot;border-white/20 bg-white/[0.06]&quot; : &quot;border-white/10 bg-transparent&quot;
+)}&gt;
+{f.included
+? &lt;MIcon name=&quot;check&quot; size={12} className=&quot;text-foreground&quot; /&gt;
+: &lt;MIcon name=&quot;close&quot; size={12} className=&quot;text-foreground/50&quot; /&gt;}
+&lt;/span&gt;
+{f.text}
+&lt;/li&gt;
+))}
+&lt;/ul&gt;
+&lt;/FadeUp&gt;
+&lt;/div&gt;
+&lt;/SpotlightBorder&gt;
+```
+
+## Acceptance checklist
+
+- Section id `pricing`, `bg-background`, vertical padding `py-12 sm:py-16`, max width `1080px`.
+- Header: pill (&quot;Pricing&quot; with dot), heading &quot;Clear pricing plans / that scale with you.&quot; (line break ≥sm), right-aligned paragraph (max-w-sm) on `lg+`. All three with staggered `FadeUp` delays 0, 0.1, 0.2.
+- Cards grid: `max-w-3xl mx-auto`, `gap-6`, 1 col → 2 cols at `md`.
+- Card 1 bg `#161616`, card 2 bg `#252525` with &quot;Best Value&quot; pill (`-top-3`, white bg, black text), featured uses `PrimaryButton`, other uses `SecondaryButton`.
+- `SpotlightBorder` 1px cursor-following ring on each card (size 460, intensity 0.5).
+- Card content order: eyebrow (uppercase, `text-[11px] tracking-[0.2em]`), divider, price row (`$2.75rem` + line-through original `text-foreground/40`), description, button, feature list.
+- Feature rows: `py-4`, divided by `border-t border-white/10` except first. Included = 20px circle `border-white/20 bg-white/[0.06]` with check; excluded = transparent circle with close, text `text-foreground/40`.
+- Inner card `FadeUp` stagger: 0, 0.1, 0.2, 0.3, 0.4.
+- Buttons link to `/auth?mode=signup`.
+- All colors via HSL tokens / declared landing surface tokens; never hardcode hex outside the two card backgrounds and `#000000`.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="3d-studio-pricing.html">3D Studio Pricing<small>Pricing Page · hero</small></a><a href="nimbus-pricing.html">NimBus Pricing<small>Pricing Page · pricing</small></a><a href="nex-max-upgrade.html">Nex Max Upgrade<small>Pricing Page · pricing</small></a><a href="saas-pricing-flow.html">SaaS Pricing Flow<small>Pricing Page · hero</small></a><a href="package-fits-pricing.html">What Package Fits You<small>Pricing Page · hero</small></a><a href="community-superdesign-gridwright-design-the-web-type-the-prompt-swiss-grid-signal-red.html">Gridwright — Design the web, type the prompt (Swiss Grid / Signal Red)<small>Pricing Page · landing-page</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

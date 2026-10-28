@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bento Grid Stats — Components 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色背景的Bento网格统计卡片区，展示&quot;为什么选择我们&quot;的核心数据，卡片从缩放淡入动画依次出现。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/bento-grid-stats.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bento Grid Stats — Components 提示词">
+<meta property="og:description" content="深色背景的Bento网格统计卡片区，展示&quot;为什么选择我们&quot;的核心数据，卡片从缩放淡入动画依次出现。">
+<meta property="og:url" content="https://prompt-site.shop/p/bento-grid-stats.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/bento-grid-stats.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Bento Grid Stats","description":"深色背景的Bento网格统计卡片区，展示\"为什么选择我们\"的核心数据，卡片从缩放淡入动画依次出现。","url":"https://prompt-site.shop/p/bento-grid-stats.html","inLanguage":"zh-CN","genre":"Components","dateCreated":"2026-06-04T06:35:12.444949+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-components">Components</a></div><h1>Bento Grid Stats</h1><div class="chip-row"><span class="chip">Components</span><span class="chip">features</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-04</span><span>正文：6,745 字符</span></div><div class="hero-media"><img src="../assets/previews/bento-grid-stats.webp" alt="Bento Grid Stats 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色背景的Bento网格统计卡片区，展示&quot;为什么选择我们&quot;的核心数据，卡片从缩放淡入动画依次出现。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a &quot;Why Us?&quot; bento grid section as a React + TypeScript component using Tailwind CSS 3 and Framer Motion. Font is `&#39;DM Sans&#39;, sans-serif` (Google Fonts: `https://fonts.googleapis.com/css?family=DM+Sans:500,400`). Dark background `#0f0f0f`. Here is the exact specification:
+
+---
+
+**Section Container:**
+
+- `&lt;section&gt;` with `bg-[#0f0f0f] px-6 py-24 sm:px-10 lg:px-16 lg:py-32`, inline style `fontFamily: &quot;&#39;DM Sans&#39;, sans-serif&quot;`
+
+- Inner wrapper: `mx-auto max-w-7xl`
+
+- All animations use easing `[0.22, 1, 0.36, 1]`, triggered once on scroll via Framer Motion `useInView` with `{ once: true, margin: &quot;-60px&quot; }`
+
+- Each card uses a shared `CardMotion` wrapper that animates from `opacity: 0, scale: 0.95` to `opacity: 1, scale: 1`, duration `0.65s`, with staggered delays
+
+---
+
+**Layout:**
+
+- On mobile (`md:hidden`): single column, cards stacked vertically with `gap-4`
+
+- On desktop (`md:grid md:grid-cols-6 md:gap-4`): explicit 6-column grid with `gridTemplateRows: &quot;repeat(10, minmax(46px, auto))&quot;`. Card placements:
+
+- Header card: `gridColumn: &quot;1 / 3&quot;`, `gridRow: &quot;1 / 5&quot;`
+
+- Speed card (5x): `gridColumn: &quot;3 / 5&quot;`, `gridRow: &quot;1 / 6&quot;`
+
+- Text card (dark): `gridColumn: &quot;5 / 7&quot;`, `gridRow: &quot;1 / 5&quot;`
+
+- Income card (32M+): `gridColumn: &quot;1 / 3&quot;`, `gridRow: &quot;5 / 11&quot;`
+
+- Photo card (100+): `gridColumn: &quot;3 / 5&quot;`, `gridRow: &quot;6 / 11&quot;`
+
+- Projects card (200+): `gridColumn: &quot;5 / 7&quot;`, `gridRow: &quot;5 / 11&quot;`
+
+---
+
+**Shared &quot;Plus Button&quot; component:**
+
+- A `&lt;span&gt;` with `inline-flex h-7 w-7 shrink-0 items-center justify-center border text-xs font-light`, containing the text &quot;+&quot;. Has a `dark` variant: when `dark=true` uses `border-black/20 text-black`, otherwise `border-white/30 text-white`.
+
+---
+
+**Card 1 -- Header Card (no background):**
+
+- Delay `0`. Classes: `flex h-full flex-col justify-end pb-4 pr-4`
+
+- Label: &quot;why us?&quot; in `mb-4 inline-block text-sm tracking-[0.15em] text-white/70`
+
+- Heading: `text-[clamp(1.6rem,2.6vw,2.4rem)] font-light leading-[1.2] tracking-tight`
+
+- Line 1: &quot;Seamless&quot; in `text-white`
+
+- Line 2: &quot;Brand, Identity,&quot; in `text-[#666]`
+
+- Line 3: &quot;and Web&quot; in `text-[#666]`
+
+- Each line separated by `&lt;br /&gt;`
+
+---
+
+**Card 2 -- Income Card (32M+), white background:**
+
+- Delay `0.08`. Classes: `flex h-full flex-col bg-white p-7`
+
+- Top row: flex between the stat and a dark PlusBtn
+
+- Stat: &quot;32M +&quot; in `text-[clamp(1.8rem,3.5vw,2.8rem)] font-light leading-none tracking-tight text-black`
+
+- Subtitle: &quot;Income produced for our customers.&quot; in `mt-2 text-[13px] leading-snug text-[#777]`
+
+- Bottom (pushed down with `mt-auto pt-8`): A staircase dot chart
+
+- 26 columns, each a `flex flex-col-reverse gap-[2px]` of 15 cells
+
+- Each cell is `h-[5px] w-[5px] sm:h-[7px] sm:w-[7px]`
+
+- Filled cells (`bg-black`) are computed: for column `c`, base = `floor(c * 0.55)`, active rows = `[base]`, add `base+1` if `c` is odd, add `base-1` if `c &gt; 4` (filter negatives)
+
+- Columns separated by `gap-[2px]`
+
+- Below the chart: year labels `[&quot;2016&quot;, &quot;2018&quot;, &quot;2022&quot;, &quot;2024&quot;, &quot;2026&quot;]` in `mt-3 flex justify-between pr-2 text-[10px] tracking-wide text-[#aaa]`
+
+---
+
+**Card 3 -- Speed Card (5x), white background:**
+
+- Delay `0.12`. Classes: `flex h-full flex-col bg-white p-7`
+
+- Top area (`flex flex-1 items-start justify-center pt-2`): An SVG diagram `viewBox=&quot;0 0 200 180&quot;`, `h-auto w-full max-w-[240px]`:
+
+- 3 concentric circles centered at `(110, 80)` with radii `75`, `50`, `25`, `stroke=&quot;#222&quot;`, `strokeWidth=&quot;0.8&quot;`, opacities `0.2`, `0.3`, `0.4`
+
+- 4 small black squares with icons at specific positions:
+
+- `rect(68, 42, 16, 16)` with &quot;+&quot; text (white, fontSize 11, fontWeight 300)
+
+- `rect(102, 36, 20, 20)` with lightning bolt emoji (&amp;#9889;, white, fontSize 13)
+
+- `rect(82, 128, 14, 14)` with minus sign (&amp;minus;, white, fontSize 11, fontWeight 300)
+
+- `rect(138, 128, 14, 14)` with inner white square `rect(142, 132, 6, 6)`
+
+- Bottom (`mt-2`):
+
+- &quot;5x&quot; centered, `text-[clamp(2rem,3.5vw,3rem)] font-light tracking-tight text-black`
+
+- &quot;Quicker than competing firms.&quot; centered, `mt-1 text-[13px] text-[#777]`
+
+---
+
+**Card 4 -- Text Card, dark background:**
+
+- Delay `0.18`. Classes: `flex h-full flex-col bg-[#1a1a1a] p-7`
+
+- Top right: a light PlusBtn (white variant), wrapped in `flex justify-end`
+
+- Bottom (pushed down with `mt-auto space-y-5 pb-1`): Two paragraphs:
+
+- &quot;We partner with ambitious brands to craft unified digital identities that merge strategy, design, and code into one seamless experience.&quot;
+
+- &quot;We accelerate the journey from concept to launch, eliminating the friction of scattered teams and misaligned visions.&quot;
+
+- Both: `text-[13px] leading-[1.7] text-white/60`
+
+---
+
+**Card 5 -- Projects Card (200+), white background:**
+
+- Delay `0.22`. Classes: `relative flex h-full flex-col bg-white p-7`
+
+- Top: A `relative h-24 w-full` container with 7 scattered black squares (`bg-black`), each positioned absolutely with percentage left/top and pixel sizes:
+
+```
+
+(55%, 2%, 30px), (80%, 0%, 24px), (70%, 28%, 16px),
+
+(92%, 18%, 14px), (58%, 22%, 10px), (88%, 36%, 10px),
+
+(46%, 14%, 8px)
+
+```
+
+- Stat: &quot;200 +&quot; in `mt-4 text-[clamp(1.8rem,3.5vw,2.8rem)] font-light leading-none tracking-tight text-black`
+
+- Description: &quot;Delivering projects globally, assisting our clients in reaching their objectives.&quot; in `mt-3 max-w-[210px] text-[13px] leading-[1.7] text-[#777]`
+
+---
+
+**Card 6 -- Photo Card (100+), dark overlay on image:**
+
+- Delay `0.28`. Classes: `relative h-full overflow-hidden bg-black`
+
+- Background image: `https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800`, absolutely positioned, `object-cover opacity-55`
+
+- Gradient overlay: `bg-gradient-to-t from-black/60 via-transparent to-black/30`
+
+- Content container: `relative flex h-full min-h-[380px] flex-col justify-between p-6`
+
+- **Top left**: A logo-like mark -- bold &quot;N&quot; (`text-[1.6rem] font-bold leading-none text-white`) with 3 small white squares beside it: one `10x10`, and two stacked `7x7` (the bottom one at `opacity 50%`), arranged with `gap-[3px]`
+
+- **Top right**: &quot;4.9 / 5&quot; in `text-base font-light leading-none text-white`, with 5 white star SVGs below (`width=&quot;11&quot; height=&quot;11&quot;`, star path: `M6 0l1.8 3.6L12 4.2 8.9 7.1l.7 4.2L6 9.3 2.4 11.3l.7-4.2L0 4.2l4.2-.6z`)
+
+- **Middle left**: Two small white rectangles: `18x18 bg-white/70` and `18x26 bg-white/40`, with `gap-2`
+
+- **Bottom**: flex between stat and a white square
+
+- &quot;100 +&quot; in `text-[clamp(1.8rem,3.5vw,2.8rem)] font-light leading-none text-white`
+
+- &quot;Joyful clients and growing.&quot; in `mt-2 text-[13px] text-white/60`
+
+- A plain `h-12 w-12 bg-white` square on the right
+
+---
+
+**Dependencies:** React 18, Framer Motion (v12+), Tailwind CSS 3. Uses `useRef`, `useInView`, and `motion` from framer-motion. No other libraries.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="animated-cards.html">Animated Cards<small>Components · carousel</small></a><a href="scroll-marquee.html">Scroll Marquee<small>Components · carousel</small></a><a href="flowmate-carousal.html">FlowMate Carousal<small>Components · carousel</small></a><a href="apex-program-accordion.html">Apex Program Accordion<small>Components · faq</small></a><a href="glassmorphic-feature-tabs.html">Glassmorphic Feature Tabs<small>Components · features</small></a><a href="feedback-slider.html">Feedback Slider<small>Components · carousel</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

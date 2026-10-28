@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Live Language Classes — SaaS 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Build a single-page React + TypeScript + Vite + Tailwind CSS app that reproduces the  first section  of an English-learning dashboard. Use Lucide-Reac">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/live-language-classes.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Live Language Classes — SaaS 提示词">
+<meta property="og:description" content="Build a single-page React + TypeScript + Vite + Tailwind CSS app that reproduces the  first section  of an English-learning dashboard. Use Lucide-Reac">
+<meta property="og:url" content="https://prompt-site.shop/p/live-language-classes.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Live Language Classes","description":"Build a single-page React + TypeScript + Vite + Tailwind CSS app that reproduces the  first section  of an English-learning dashboard. Use Lucide-Reac","url":"https://prompt-site.shop/p/live-language-classes.html","inLanguage":"zh-CN","genre":"SaaS","dateCreated":"2026-07-20T03:02:09.646238+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-saas">SaaS</a></div><h1>Live Language Classes</h1><div class="chip-row"><span class="chip">SaaS</span><span class="chip">mobile</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-07-20</span><span>正文：18,893 字符</span></div><div class="hero-media"><video src="../assets/previews/live-language-classes.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">```
+Build a single-page React + TypeScript + Vite + Tailwind CSS app that reproduces the **first section** of an English-learning dashboard. Use Lucide-React for icons. The page is the hero/landing section titled **&quot;Let&#39;s Talk from the Start&quot;** — a video-call classroom with a live chat panel. No routing, no other sections, no Supabase, no auth. Just this one screen, full-viewport on desktop.
+
+## Global setup
+
+### Fonts (index.html)
+- Preconnect to `https://fonts.googleapis.com` and `https://fonts.gstatic.com` (crossorigin).
+- Load Google Font **Urbanist** weights 400, 500, 600, 700:
+  `https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&amp;display=swap`
+- Page title: &quot;English Learning Dashboard&quot;.
+
+### Global CSS (index.css)
+- Tailwind base/components/utilities.
+- `:root` CSS variables:
+  - `--color-black: rgb(0,0,0)`
+  - `--color-white: rgb(255,255,255)`
+  - `--color-glass-white: rgba(255,255,255,0.6)`
+  - `--color-accent-red: rgba(249,85,85,1)`
+  - `--color-success-green: rgb(41,192,18)`
+  - `--color-muted-gray: rgb(160,160,160)`
+  - `--color-light-gray-icon: rgb(187,187,187)`
+  - `--color-dark-overlay: rgba(0,0,0,0.2)`
+- `* { box-sizing: border-box; }`
+- `body`: `font-family: &#39;Urbanist&#39;,&#39;Plus Jakarta Sans&#39;,&#39;Manrope&#39;,&#39;Inter&#39;,sans-serif; `-webkit-font-smoothing: antialiased`, `-moz-osx-font-smoothing: grayscale`, `background: #f2f0f8`, `min-height: 100vh`, `overflow-x: auto`.
+
+### Keyframe animations (index.css)
+Define and expose these utility classes (all use `cubic-bezier(0.16,1,0.3,1)` unless noted, all `both` fill-mode):
+- `fadeInUp`: opacity 0→1, translateY(24px)→0, 0.7s. → `.animate-fade-in-up`
+- `fadeInDown`: translateY(-16px)→0, 0.5s. → `.animate-fade-in-down`
+- `fadeInScale`: opacity 0→1, scale(0.92)→1, 0.8s. → `.animate-fade-in-scale`
+- `slideInLeft`: translateX(-30px)→0, 0.7s. → `.animate-slide-in-left`
+- `slideInRight`: translateX(30px)→0, 0.7s. → `.animate-slide-in-right`
+- `chatBubbleIn`: 0% opacity0 translateY(16px) scale(0.9); 60% translateY(-2px) scale(1.01); 100% opacity1 translateY(0) scale(1); 0.5s. → `.animate-chat-bubble`
+- `chatBubbleInRight`: same but start translateX(30px) scale(0.9), 60% translateX(-2px). → `.animate-chat-bubble-right`
+- `typingDot`: 0%,60%,100% opacity0.3 translateY0; 30% opacity1 translateY(-4px); 1.4s infinite. → `.typing-dot` with nth-child(2) delay 0.2s, nth-child(3) delay 0.4s.
+- `float`: 0%,100% translateY(0) rotate(-12deg); 50% translateY(-8px) rotate(-10deg); 3s ease-in-out infinite. → `.animate-float`
+
+### Responsive zoom hack (index.css)
+` ` `css
+@media (max-width: 1199px) { #root { zoom: 0.85; } }
+` ` `
+
+## Layout structure
+
+Root `&lt;div&gt;`: `w-full min-h-screen relative` with inline style `background: linear-gradient(135deg, rgba(236,233,252,0.7) 0%, rgba(243,238,229,1) 100%)`.
+
+Main content wrapper: `lg:pl-[100px]` (leaves room for fixed sidebar).
+
+### Fixed top bar
+`fixed top-0 right-0 left-0 lg:left-[100px] z-30 flex items-center justify-between px-5 py-3`. Contains: empty `hidden lg:block` spacer on the left, `&lt;TopNav/&gt;` centered (`mx-auto`, `hidden md:block`), and `&lt;TopRightUtility/&gt;` on the right (`flex-shrink-0`).
+
+### Section 1 (the hero)
+`&lt;section data-section=&quot;0&quot;&gt;` with classes `flex flex-col p-3 sm:p-5 pt-[70px] lg:pt-[80px] xl:tall:h-screen xl:tall:max-h-screen xl:tall:overflow-hidden`.
+
+**Header row**: `pt-4 lg:pt-6 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-3 flex-shrink-0`.
+- `&lt;h1&gt;` &quot;Let&#39;s Talk from the Start&quot;: `text-[24px] sm:text-[28px] lg:text-[40px] xl:text-[46px] font-medium text-black leading-none lg:pl-0 animate-fade-in-up` with `animationDelay: &#39;0.15s&#39;`.
+- `&lt;CoachChips/&gt;` wrapper: `animate-fade-in-up`, `animationDelay: &#39;0.3s&#39;`.
+
+**Body row**: `pt-4 lg:pt-5 flex flex-col lg:flex-row gap-3 xl:tall:flex-1 xl:tall:min-h-0`.
+- VideoCard wrapper: `flex-[1.8] min-w-0 animate-fade-in-scale`, delay `0.4s`.
+- ChatPanel wrapper: `flex-1 min-w-0 lg:max-w-[440px] xl:max-w-[480px] animate-slide-in-right`, delay `0.55s`.
+
+## Sidebar (fixed, left) — `Sidebar` component
+
+Fixed container: `fixed left-0 top-0 bottom-0 w-[80px] flex flex-col items-center py-[30px] pl-[20px] z-40 transition-transform duration-300 lg:translate-x-0`. Inner: `animate-slide-in-left h-full flex flex-col`.
+
+**Logo**: `w-[60px] h-[60px] bg-black rounded-[18px] flex items-center justify-center overflow-hidden flex-shrink-0` containing `&lt;img&gt;` `https://framerusercontent.com/images/QP3sofr3Nrny7jzPrzvgthcZ8.png?width=180&amp;height=180` (object-cover, 60×60).
+
+**Main icon blob**: wrapper `relative mt-[80px] lg:mt-[120px]` sized 64×360, renders `&lt;SidebarBlob height={360} lobes={6}/&gt;` then an absolute inset-0 flex-col items-center justify-between holding 6 icon tiles (64×60 each, rounded-[18px]):
+1. VideoIcon → section 0 (active when activeSection===0)
+2. PieChartIcon → section -1 (inactive)
+3. ChecklistIcon → section 1
+4. FolderIcon → -1
+5. MailIcon → -1
+6. SettingsIcon → -1
+
+Active tile: `bg-black`, inline `boxShadow: &#39;inset 0 0 12px 2px rgba(255,255,255,0.5)&#39;`, icon `text-white` `filled`. Inactive: `hover:bg-black`, icon `text-black group-hover:text-white`. Transition 200ms.
+
+**Theme toggle blob**: `relative mt-auto` sized 64×120, `&lt;SidebarBlob height={120} lobes={2}/&gt;` with two 64×60 tiles: SunIcon (active black tile, white icon, inset glow) and MoonIcon (hover-black, black→white icon).
+
+### SidebarBlob SVG component
+Width 64, given `height` and `lobes`. `lobeH = height/lobes`, `pinchDepth=9`, `r=20`, `spread=22`. Build a closed blob path with pinches between lobes on both edges (see code: loop building `pathRight` then `pathLeft` with cubic beziers). Render `&lt;svg width=64 height viewBox=&quot;0 0 64 height&quot; fill=&quot;none&quot; className=&quot;absolute inset-0&quot;&gt;` with a `&lt;defs&gt;` filter `sidebar-glow-${lobes}` (feFlood white opacity 0.7 → feComposite in → feGaussianBlur stdDeviation 4 → feComposite in), then two `&lt;path d={d}&gt;`: first `fill=&quot;rgba(255,255,255,0.92)&quot;`, second `fill=&quot;rgba(255,255,255,0.5)&quot; filter=url(#sidebar-glow-${lobes})`.
+
+## TopNav — `TopNav` component
+Items: `[&#39;Dashboard&#39;,&#39;Speaking&#39;,&#39;Progress&#39;,&#39;Courses&#39;]`. sectionMap: `{Dashboard:2, Speaking:0, Progress:-1, Courses:-1}`. Active item = the one whose mapped section equals `activeSection`.
+
+Render `&lt;nav className=&quot;hidden md:block mx-auto&quot;&gt;` containing `&lt;BlobContainer width={507} lobes={4} height={60}&gt;`. Inside, map items to `&lt;button&gt;` `flex-1 h-[60px] rounded-[18px] text-[16px] font-medium transition-all duration-200`. Active: `bg-black/90 text-white` + inline `boxShadow: &#39;inset 0 0 12px 2px rgba(255,255,255,0.5)&#39;`. Inactive: `text-black hover:bg-black/90 hover:text-white`. onClick navigates only if sectionMap≥0.
+
+## TopRightUtility
+`&lt;BlobContainer width={178} lobes={3} height={60}&gt;` with three flex-1 60px-tall children:
+1. Search button (hover bg-black/90, SearchIcon 28px black→white).
+2. Bell button (same hover).
+3. Profile avatar: `w-[54px] h-[54px] rounded-[18px] overflow-hidden` with `&lt;img src=&quot;https://framerusercontent.com/images/Yp9r5prd7RdO6pI9LBTeM1N2uxw.png&quot;&gt;` object-cover.
+
+## BlobContainer component (core reusable blob)
+Props: `width, lobes, height=60, bg=&#39;rgba(255,255,255,0.60)&#39;, blur=true, children, className=&#39;&#39;`. Uses `useId()` for a unique clipPath id and `useBlobPath(width, lobes, height)` to generate the blob path (pinchDepth=8, r=20, spread=22; pinches on top and bottom edges between lobes).
+
+Render:
+- Root `relative flex items-center` sized width×height (+className).
+- Hidden `&lt;svg width=0 height=0&gt;` with `&lt;defs&gt;&lt;clipPath id clipPathUnits=&quot;userSpaceOnUse&quot;&gt;&lt;path d/&gt;&lt;/clipPath&gt;&lt;/defs&gt;`.
+- Absolute inset-0 div with `clipPath: url(#id)`, `WebkitClipPath`, `background: bg`, and `backdropFilter: blur(24px)` / `WebkitBackdropFilter` when blur=true.
+- Absolute inset-0 `&lt;svg width height viewBox&gt;` with `&lt;path d fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.15)&quot; strokeWidth=1&gt;` (pointer-events-none).
+- Relative content div `flex items-center w-full h-full` also clipped via the same clipPath, holding children.
+
+## GlassCard component
+Props: `children, className=&#39;&#39;`. Root `relative rounded-[18px]` + className, inline `background: rgba(255,255,255,0.6)`, `boxShadow: &#39;inset 0px 0px 5px rgba(221,221,221,0.5)&#39;`, `backdropFilter: &#39;blur(8px)&#39;`, `WebkitBackdropFilter: &#39;blur(8px)&#39;`. Plus an absolute inset-0 rounded-[18px] pointer-events-none border overlay using the gradient-mask trick: `padding: 1.5px`, `background: linear-gradient(162deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.2) 100%)`, `WebkitMask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)`, `WebkitMaskComposite: xor`, `maskComposite: exclude`.
+
+## CoachChips component
+Two coaches:
+1. Isabella Collins — Language Coach — `https://framerusercontent.com/images/CyLJLVV8UGC7ng7KqoUZvwF9q0.png?width=224&amp;height=224`
+2. Liam Johnson — Speaking Mentor — `https://framerusercontent.com/images/vLCwMzYDl3zUQZdwzLwiHOtkTs.png`
+
+Container: `flex flex-row items-center gap-2 sm:gap-3 flex-shrink-0`. Each coach is a `&lt;GlassCard&gt;` `flex-1 sm:flex-initial flex items-center gap-3 pl-[5px] pr-6 sm:pr-[22px] py-[5px] sm:py-[3px]` containing a 14×14 (w-14 h-14) rounded-[18px] overflow-hidden avatar image, then a flex-col gap-0 with name (`text-[15px] sm:text-[16px] font-medium text-black whitespace-nowrap`) and role (`text-[13px] sm:text-[14px] font-normal text-[#a0a0a0] whitespace-nowrap`).
+
+## VideoCard component
+Outer: `min-h-[320px] lg:h-[450px] xl:h-full`. Inside a `&lt;GlassCard className=&quot;w-full h-full lg:overflow-hidden&quot;&gt;` with `p-1.5 flex flex-col lg:h-full`.
+
+**Media area**: `flex gap-3 aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:flex-1 lg:min-h-0`.
+
+*Thumbnails column* (`hidden md:flex w-[180px] lg:w-[220px] xl:w-[260px] flex-col gap-3 flex-shrink-0`), three `flex-1 rounded-[18px] overflow-hidden relative min-h-0` tiles, each an image object-cover with a bottom-left label chip `bg-[rgba(0,0,0,0.2)] backdrop-blur-xl text-white text-[14px] font-medium px-3 py-1.5 rounded-[11px]` (WebkitBackdropFilter blur(24px)):
+1. Sophia — `https://framerusercontent.com/images/UdLuwJVnNqzikbdCbwoMH6YMu4.png`
+2. Jack — `https://framerusercontent.com/images/k69zlZLfKDyfEsIVIyZYZwUH9wQ.png`
+3. Liam — `https://framerusercontent.com/images/rjQedfhqIeAXdy1x3CVVTKXCzk.png`
+
+*Main video*: `flex-1 rounded-[18px] overflow-hidden relative` with `&lt;img src=&quot;https://framerusercontent.com/images/ojrVd1wjK92ZEBpdjPkR9uc.png&quot;&gt;` object-cover. Centered bottom overlay (`absolute bottom-5 left-1/2 -translate-x-1/2`) containing `&lt;BlobContainer width={248} lobes={4} height={56} bg=&quot;rgba(20,20,20,0.75)&quot; blur={false}&gt;` with four flex-1 56px buttons:
+1. CameraIcon (hover bg-white/15, text-white/90→white)
+2. HeadphonesIcon
+3. MicrophoneIcon
+4. PhoneOffIcon on `bg-[#f95555] hover:bg-[#e04444]` with `boxShadow: &#39;0 4px 12px rgba(249,85,85,0.4)&#39;`, text-white. All 28px icons.
+
+**Transcript**: `px-[14px] pt-3 pb-2 flex-shrink-0` with `&lt;p&gt;` `text-[15px] sm:text-[16px] lg:text-[18px] xl:text-[20px] font-medium text-black leading-6 sm:leading-7 lg:leading-8` and exact text:
+&gt; &quot;Hi everyone, and welcome to your very first English lesson! My name is Isabella, and I&#39;m so excited to help you start your English journey. In this lesson, we&#39;ll learn how to say hello, introduce yourself, and ask simple questions. Let&#39;s begin!&quot;
+
+**Bottom controls**: `px-[14px] pb-2 flex items-center justify-between flex-shrink-0 mt-1 sm:mt-0`.
+- Left: `&lt;BlobContainer width={240} lobes={2} height={56} blur={false}&gt;` with two flex-1 56px buttons — &quot;Transcription&quot; (`bg-black text-white text-[14px] font-medium rounded-[18px]` + inset white glow boxShadow) and &quot;Subtitle&quot; (`text-[14px] font-medium text-black`).
+- Right (hidden on small): a `relative` 280×56 div rendering `&lt;RecorderBlob/&gt;` then an absolute inset-0 flex row: a flex-1 area with a 40-bar waveform (`w-[2px] rounded-full`, bars 22 in `bg-black/50` and rest `bg-black/15`, heights from `Math.sin(i*0.4)*10 + 12 + Math.sin(i*1.2)*5` clamped min 4px) with a red playhead `h-[32px] w-[1.5px] bg-red-500` at `left: 22*3.5 px`; and a 50×50 `bg-black rounded-[14px]` record button with inset glow holding a `w-3.5 h-3.5 bg-red-500 rounded-full` dot.
+
+### RecorderBlob SVG
+Width 280, height 56, pinchX = width-56 = 224, pinchDepth=8, r=20, spread=22. Closed path with a single pinch on top and bottom at pinchX. `&lt;svg width=280 height=56 viewBox=&quot;0 0 280 56&quot;&gt;` with a `&lt;defs&gt;` filter `recorder-glow` (feFlood white 0.7 → composite in → gaussianBlur stdDeviation 3 → composite in), then two paths: `fill=&quot;rgba(255,255,255,0.82)&quot;` and `fill=&quot;rgba(255,255,255,0.5)&quot; filter=url(#recorder-glow)`.
+
+## ChatPanel component
+Outer `lg:h-[450px] xl:h-full`. Inside `&lt;GlassCard className=&quot;w-full h-full lg:overflow-hidden flex flex-col&quot;&gt;`.
+
+**Header**: `px-5 pt-5 pb-3 flex items-start justify-between flex-shrink-0`. Left: flex-col gap-[5px] with `&lt;h2&gt;` &quot;Room Chat&quot; (`text-[24px] lg:text-[28px] font-medium text-black leading-tight`) and a row with a 3.5×3.5 status dot (outer `bg-[#29c012] opacity-20` + inner 2×2 `bg-[#29c012]` at left-3 top-3) plus &quot;67 People in chat&quot; (`text-[14px] text-[#29c012]`). Right: 44×44 `bg-white border border-gray-200 rounded-[14px]` button with ExpandIcon 24px (hover bg-black, icon black→white).
+
+**Chat area**: `flex-1 min-h-[300px] mx-1.5 mb-1.5 rounded-[18px] flex flex-col relative lg:min-h-0 overflow-hidden backdrop-blur-xl`, inline `background: linear-gradient(180deg, rgba(255,235,230,0.5) 0%, rgba(255,225,220,0.5) 100%)`, `WebkitBackdropFilter: blur(24px)`. Add the gradient-border overlay (1px padding, white→transparent gradient, mask trick).
+
+**Messages** (`flex-1 p-4 pb-[140px] flex flex-col gap-4 overflow-y-auto min-h-0`), revealed progressively via state `visibleMessages` (0→4) and `showTyping` typing indicator. Timer delays: `[800, 2200, 3800, 5500]` ms; each fires `showTyping=true` then 600ms later `showTyping=false; setVisibleMessages(i+1)`.
+
+1. **Anna M.** (visible≥1): `animate-chat-bubble`, flex gap-1.5 items-end. Avatar 50×50 rounded-[15px] `https://framerusercontent.com/images/vvPLPw59fpFHr4f5fTzD3clqPs.png`. Bubble `rounded-[18px_18px_18px_6px] p-[15px] flex-1` `background: rgba(255,255,255,0.9)` with header row (name `text-[16px] font-medium text-black` + &quot;07:23 AM&quot; `text-[14px] text-[#a0a0a0]`) and message `text-[16px] font-medium text-black`: &quot;Let&#39;s help each other out! 🤗 Maybe we can do a quick quiz together later? 📝&quot;
+2. **You** (visible≥2): `animate-chat-bubble-right`, items-end. Black bubble `rounded-[18px] bg-black p-[15px] max-w-[304px] w-full` + inset white glow. Header &quot;You&quot; white + DoubleCheckIcon 16px white/60 + &quot;07:34 AM&quot;. Text: &quot;Sure, absolutely! That sounds great! 🙌&quot;
+3. **You** (visible≥3): same, `rounded-[18px_18px_6px_18px]`. Text: &quot;By the way, could you send me an invitation to the next English lesson?&quot;
+4. **Jake T.** (visible≥4): `animate-chat-bubble`. Avatar `https://framerusercontent.com/images/CKUL4OElXdNJgyym2CEdnemp9I.png`. White bubble with &quot;Jake T.&quot; + &quot;07:40 AM&quot; and text &quot;Yes, of course! Here you go 😄&quot; then a **promo card**: `rounded-[10px] p-4 flex flex-col gap-4` `background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(51,51,51,1) 100%)`. Top row: &quot;Unlock Your English Potential&quot; (white, w-[126px], text-[16px] font-medium) + two overlapping 48×48 avatars (`-space-x-2`, 2.5px white borders) — z-10 `https://framerusercontent.com/images/UdLuwJVnNqzikbdCbwoMH6YMu4.png` and z-0 `https://framerusercontent.com/images/k69zlZLfKDyfEsIVIyZYZwUH9wQ.png`. Bottom: white &quot;Join Now&quot; button `bg-white text-black text-[14px] font-medium py-2 rounded-lg` with `boxShadow: &#39;inset 0 0 6px 1px rgba(0,0,0,0.32)&#39;`.
+
+**Typing indicator** (when showTyping): `animate-chat-bubble`, white bubble `rounded-[18px] px-5 py-4` `background: rgba(255,255,255,0.9)` with three `typing-dot` `w-2 h-2 bg-black/50 rounded-full`.
+
+**Bottom panel** (`absolute bottom-0 left-0 right-0 z-10`): a backdrop layer `absolute inset-0 backdrop-blur-xl bg-white/30` with `WebkitBackdropFilter: blur(24px)` and a mask `linear-gradient(to bottom, transparent 0%, black 40%)`. Then a relative div containing:
+
+## State &amp; behavior
+- `activeSection` state (number) updated by an IntersectionObserver watching all `[data-section]` elements (threshold 0.3); on intersect, set to `Number(dataset.section)`.
+- `scrollToSection(index)` scrolls the matching `[data-section=&quot;${index}&quot;]` into view smoothly.
+- `sidebarOpen` state toggled by a mobile menu button (`fixed top-4 right-4 z-50 lg:hidden w-10 h-10 rounded-[12px]` showing MenuIcon/CloseIcon 28px) and a mobile overlay (`fixed inset-0 bg-black/10 backdrop-blur-sm z-40 lg:hidden`). Sidebar uses `lg:translate-x-0` and `translate-x-0`/`-translate-x-full` based on sidebarOpen.
+
+## Exact asset URLs (use verbatim)
+- Logo: `https://framerusercontent.com/images/QP3sofr3Nrny7jzPrzvgthcZ8.png?width=180&amp;height=180`
+- Profile: `https://framerusercontent.com/images/Yp9r5prd7RdO6pI9LBTeM1N2uxw.png`
+- Isabella coach: `https://framerusercontent.com/images/CyLJLVV8UGC7ng7KqoUZvwF9q0.png?width=224&amp;height=224`
+- Liam coach: `https://framerusercontent.com/images/vLCwMzYDl3zUQZdwzLwiHOtkTs.png`
+- Sophia thumb: `https://framerusercontent.com/images/UdLuwJVnNqzikbdCbwoMH6YMu4.png`
+- Jack thumb: `https://framerusercontent.com/images/k69zlZLfKDyfEsIVIyZYZwUH9wQ.png`
+- Liam thumb: `https://framerusercontent.com/images/rjQedfhqIeAXdy1x3CVVTKXCzk.png`
+- Main video: `https://framerusercontent.com/images/ojrVd1wjK92ZEBpdjPkR9uc.png`
+- Anna M. avatar: `https://framerusercontent.com/images/vvPLPw59fpFHr4f5fTzD3clqPs.png`
+- Jake T. avatar: `https://framerusercontent.com/images/CKUL4OElXdNJgyym2CEdnemp9I.png`
+
+## Icons (lucide-react)
+Use these exact icons: `Video, PieChart, ListChecks, Folder, Mail, Settings, Search, Bell, Sun, Moon, CheckCheck, Menu, X, Play, Volume2, Maximize2, ChevronLeft, ChevronRight, Pause, VolumeX, ChevronDown, ChevronUp, Check, Lock, BookOpen, Image, Pencil, FileText, MessageSquare, Headphones, Mic, PhoneOff, File, AudioLines, Video, Send, Camera`. Size 28 unless noted. Stroke width default except video controls (2.5).
+
+## Design notes
+- All glass surfaces use `rgba(255,255,255,0.6)` with inset shadow `0px 0px 5px rgba(221,221,221,0.5)` and blur(8px), plus the gradient border overlay.
+- Blob containers use `rgba(255,255,255,0.60)` default bg with blur(24px), except the dark video control blob (`rgba(20,20,20,0.75)`, no blur) and the two no-blur bottom controls.
+- Rounded corners: tiles 18px, blobs 18px, cards 18-24px, avatars 13-18px.
+- 8px spacing system; gap-3 (12px) and gap-2 (8px) dominate.
+- Black active state always has `boxShadow: &#39;inset 0 0 12px 2px rgba(255,255,255,0.5)&#39;`.
+- Red accent `#f95555` for hang-up and record dot; green `#29c012` for online status; muted gray `#a0a0a0` for timestamps.
+- All text is Urbanist, weights 400/500/600/700, black color `text-black`.
+- Entrance animations staggered: title 0.15s, chips 0.3s, video 0.4s, chat 0.55s.
+```</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="intelligent-performance.html">Intelligent Performance<small>SaaS · saas</small></a><a href="junglemind.html">JungleMind<small>SaaS · saas</small></a><a href="global-talent.html">Global Talent<small>SaaS · saas</small></a><a href="skytrace.html">Skytrace<small>SaaS · saas</small></a><a href="peakline-redshift.html">Peakline Redshift<small>SaaS · saas</small></a><a href="quantum-lucid.html">Quantum Lucid<small>SaaS · saas</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

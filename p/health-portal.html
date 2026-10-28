@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Health Portal — Landing Page 提示词 | MotionSites Prompts</title>
+<meta name="description" content="牙科诊所单页着陆页，包含全屏分区、启动画面和固定导航栏，采用React+Tailwind构建的现代医疗健康界面。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/health-portal.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Health Portal — Landing Page 提示词">
+<meta property="og:description" content="牙科诊所单页着陆页，包含全屏分区、启动画面和固定导航栏，采用React+Tailwind构建的现代医疗健康界面。">
+<meta property="og:url" content="https://prompt-site.shop/p/health-portal.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/health-portal.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Health Portal","description":"牙科诊所单页着陆页，包含全屏分区、启动画面和固定导航栏，采用React+Tailwind构建的现代医疗健康界面。","url":"https://prompt-site.shop/p/health-portal.html","inLanguage":"zh-CN","genre":"Landing Page","dateCreated":"2026-06-26T08:53:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-landing_page">Landing Page</a></div><h1>Health Portal</h1><div class="chip-row"><span class="chip">Landing Page</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-06-26</span><span>正文：16,788 字符</span></div><div class="hero-media"><img src="../assets/previews/health-portal.webp" alt="Health Portal 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>牙科诊所单页着陆页，包含全屏分区、启动画面和固定导航栏，采用React+Tailwind构建的现代医疗健康界面。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Create a single-page dental clinic landing page using **React + Vite + TypeScript + Tailwind CSS**. No external UI libraries, no icon libraries. Everything lives in one `App.tsx` file. The page has 3 full-screen sections, a splash screen, and a fixed navbar.
+
+---
+
+### SETUP
+
+**Font:** &quot;Open Sauce One&quot; loaded via these exact links in `index.html` `&lt;head&gt;`:
+```html
+&lt;link href=&quot;https://db.onlinewebfonts.com/c/1cd1e7d71e048159076fd90b39846902?family=Open+Sauce+One&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href=&quot;https://db.onlinewebfonts.com/c/42acf9aa4a6dc2f2886a3f682e337ead?family=Open+Sauce+One+Bold&quot; rel=&quot;stylesheet&quot;&gt;
+```
+
+**Title:** &quot;Dental Health - Quality Healthcare&quot;
+
+**Global CSS (index.css):**
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+html, body, #root {
+height: 100%;
+margin: 0;
+padding: 0;
+}
+body {
+font-family: &#39;Open Sauce One&#39;, -apple-system, BlinkMacSystemFont, sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+}
+```
+
+**Tailwind config:** Default, no extensions. Content: `[&#39;./index.html&#39;, &#39;./src/**/*.{js,ts,jsx,tsx}&#39;]`.
+
+---
+
+### IMAGE URLS (use these EXACT URLs)
+
+```ts
+const HERO_IMAGE = &#39;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260624_113640_ccf3cf97-d447-425b-a134-d7b09fc743fc.png&amp;w=1280&amp;q=85&#39;;
+
+const SECTION2_IMAGE = &#39;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260624_114219_414dfe80-f15c-4e25-bf52-b13721f4bd88.png&amp;w=1280&amp;q=85&#39;;
+
+const SECTION3_IMG1 = &#39;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260624_115253_c19ab167-8dd5-48b4-967d-b9f0d9d6e8fb.png&amp;w=1280&amp;q=85&#39;;
+
+const SECTION3_IMG2 = &#39;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260624_115237_fc519057-6e87-4abf-999a-9610b8b085b4.png&amp;w=1280&amp;q=85&#39;;
+
+const SECTION3_BG = &#39;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260624_114355_752ba9e6-0942-4abb-9047-5d9bb16632e9.png&amp;w=1280&amp;q=85&#39;;
+```
+
+---
+
+### DATA CONSTANTS
+
+```ts
+const featureBars = [&#39;Advanced Dentistry&#39;, &#39;High Quality Equipment&#39;, &#39;Friendly Staff&#39;];
+
+const services = [
+{ name: &#39;Dental\nVeneers&#39;, num: &#39;01&#39;, active: true },
+{ name: &#39;Dental\nCrowns&#39;, num: &#39;02&#39;, active: false },
+{ name: &#39;Teeth\nWhitening&#39;, num: &#39;03&#39;, active: false },
+{ name: &#39;Dental\nImplants&#39;, num: null, active: false },
+];
+```
+
+---
+
+### CORE TECHNICAL CONCEPT: &quot;MASKED CARDS&quot;
+
+Sections 1 and 2 use a single large background image shared across multiple cards. Each card shows a different &quot;window&quot; into the same image, creating a cohesive mosaic effect. Implementation:
+
+**`useMaskPositions` hook:**
+- Takes a ref to the section container and a ref to an array of card elements.
+- Uses `ResizeObserver` on the section container.
+- For each card, computes `{ x, y, sw, sh }` where x/y is the card&#39;s top-left offset relative to the section, sw/sh is the section&#39;s width/height.
+
+**`useImageWidth` hook:**
+- Loads the image in a `new Image()` object.
+- Calculates: `renderWidth = img.naturalWidth * (sectionHeight / img.naturalHeight)`.
+- Returns how wide the image would be if scaled to fill the section height.
+
+**`MaskedCard` component:**
+- Props: `bgImage`, `position` (from useMaskPositions), `imageWidth` (from useImageWidth), `focalX` (0-1 float), `className`, `children`, `cardRef`, `style`.
+- Calculates `overflow = imageWidth &gt; position.sw ? imageWidth - position.sw : 0`, then `focalOffset = overflow * focalX`.
+- Applies inline style:
+```
+backgroundImage: url(bgImage)
+backgroundSize: auto [position.sh]px
+backgroundPosition: -[position.x + focalOffset]px -[position.y]px
+backgroundRepeat: no-repeat
+```
+- `focalX` values: Section 1 mobile=0.7, desktop=0.8. Section 2 mobile=0.65, desktop=0.8.
+
+**`useIsMobile` hook:**
+- Listens to `window.matchMedia(&#39;(max-width: 767px)&#39;)` change events.
+- Returns boolean.
+
+---
+
+### ANIMATION: `useStaggeredReveal` hook
+
+- Takes `count` (number of elements) and `threshold` (IntersectionObserver threshold, default 0.15).
+- Returns `{ containerRef, getAnimStyle }`.
+- `containerRef` is attached to the section; when it crosses the threshold, `visible` becomes true (fires once).
+- `getAnimStyle(index)` returns:
+```css
+opacity: visible ? 1 : 0
+transform: visible ? &#39;translateY(0)&#39; : &#39;translateY(24px)&#39;
+transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1) [index*120]ms,
+transform 0.6s cubic-bezier(0.16,1,0.3,1) [index*120]ms
+```
+
+---
+
+### SPLASH SCREEN
+
+- Fixed overlay covering viewport, `z-[100]`, white background.
+- Number counter displayed at **bottom-left** (`items-end justify-start`).
+- Counter style: `text-7xl md:text-9xl font-bold tabular-nums p-6 md:p-10 leading-none`, black text.
+- Counts from 0 to 100 over exactly 2000ms (20ms per step, 100 steps).
+- After reaching 100: wait 200ms, then set `exiting=true` which triggers `opacity-0` with `transition-opacity duration-700`.
+- After 900ms total from reaching 100, call `onComplete()` which removes splash from DOM.
+
+---
+
+### NAVBAR
+
+**Container:** `fixed top-0 left-0 right-0 z-50`, `flex items-center justify-between`, `px-4 md:px-6 py-2 md:py-3`, `bg-white/80 backdrop-blur-md`.
+
+**Logo (left side):**
+- Two lines stacked: &quot;Dental&quot; and &quot;Health&quot;
+- Wrapper: `flex flex-col`
+- Text: `text-xl md:text-2xl font-extrabold uppercase tracking-tight leading-none`
+- Second line has `-mt-1.5 md:-mt-2` for tight spacing
+- Below logo text: &quot;quality healthcare&quot; in `text-[8px] md:text-[9px] font-medium leading-none mt-1.5 md:mt-2`
+
+**Desktop nav (hidden on mobile with `hidden md:block`):**
+- &quot;Menu&quot; button: `px-6 py-3 bg-white rounded-full border border-black text-sm font-semibold`, hover: `hover:bg-black hover:text-white transition-colors duration-200`
+- &quot;Dental Emergency&quot; text: `text-sm font-semibold text-black`
+
+**Mobile hamburger (visible only on mobile with `md:hidden`):**
+- Container: `w-10 h-10 flex items-center justify-center`, `relative`
+- 3 spans, each: `absolute h-0.5 w-6 bg-black rounded-full`
+- Transition: `transition-all duration-300 ease-[cubic-bezier(0.76,0,0.24,1)]`
+- Closed state: top span `-translate-y-2`, middle `opacity-100 scale-x-100`, bottom `translate-y-2`
+- Open state: top `rotate-45 translate-y-0`, middle `opacity-0 scale-x-0`, bottom `-rotate-45 translate-y-0`
+
+**Mobile menu overlay (`md:hidden`):**
+- Outer: `fixed inset-0 z-40`, pointer-events toggled based on open state
+- Backdrop: `absolute inset-0 bg-black/20 backdrop-blur-sm`, fades opacity. Clicking closes menu.
+- Panel: `absolute top-0 right-0 h-full w-[85%] max-w-sm bg-white shadow-2xl`, slides with `translate-x-0` (open) / `translate-x-full` (closed), `duration-500 ease-[cubic-bezier(0.76,0,0.24,1)]`
+- Content: `flex flex-col justify-center h-full px-8 gap-1`
+- Nav links: [&#39;Home&#39;, &#39;Services&#39;, &#39;About&#39;, &#39;Gallery&#39;, &#39;Contact&#39;]
+- Each: `text-4xl font-bold text-black hover:text-neutral-500`
+- Staggered entrance: `opacity-0 translate-x-8` -&gt; `opacity-100 translate-x-0`, `transitionDelay: ${100 + i * 60}ms` when open
+- `transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)]`
+- Bottom section: `mt-8 pt-8 border-t border-neutral-200`, delayed 450ms
+- &quot;Dental Emergency&quot; text: `text-sm font-semibold text-black mb-4`
+- Button: `w-full px-6 py-4 bg-black rounded-full text-white text-sm font-semibold hover:bg-neutral-800 transition-colors duration-200`, text &quot;Book Appointment&quot;
+- When open: `document.body.style.overflow = &#39;hidden&#39;`. Cleanup on unmount.
+
+---
+
+### SECTION 1 - HERO
+
+**Container:** `&lt;section&gt;`, `h-screen w-full overflow-hidden flex flex-col`, `pt-24 md:pt-24 px-3 md:px-5 pb-1.5 md:pb-2 gap-1.5 md:gap-2`
+
+Attach both `section1Ref` and `s1Reveal.containerRef` to this element.
+
+Uses `HERO_IMAGE` as shared background via MaskedCard technique.
+
+**3 Feature Bars** (mapped from `featureBars` array):
+- Each is a `MaskedCard` with: `w-full h-14 md:h-20 shrink-0 rounded-xl md:rounded-2xl overflow-hidden relative`
+- Animated with `s1Reveal.getAnimStyle(i)` for i=0,1,2
+- Content: `&lt;span&gt;` centered vertically and horizontally (`flex items-center justify-center h-full`), `text-black text-lg md:text-3xl font-bold text-center`, `relative z-10`
+
+**Main Hero Card** (4th card, index 3):
+- `MaskedCard`: `w-full flex-1 min-h-0 rounded-xl md:rounded-2xl overflow-hidden relative`
+- Animated with `s1Reveal.getAnimStyle(3)`
+- **Top-left text:** `absolute top-4 left-4 md:top-7 md:left-7`, `text-black text-xs md:text-sm font-semibold leading-4 md:leading-5 max-w-[200px] md:max-w-[300px] z-10`
+- Content: &quot;We wish to provide professional dental services&quot; `&lt;br/&gt;` &quot;that match the current technologies&quot;
+- **Bottom-left block:** `absolute bottom-5 left-3 md:bottom-8 md:left-4 z-10`
+- Label: `block text-black text-xs md:text-sm font-semibold mb-1 md:mb-2`, text &quot;Trusted Dentist in West New York&quot;
+- Heading: `&lt;h1&gt;` with `text-black text-[clamp(3rem,11vw,11rem)] font-bold leading-[0.79] tracking-tight`, content: &quot;Dental&quot; `&lt;br/&gt;` &quot;Care&quot;
+- **Bottom-right text:** `absolute bottom-6 right-4 md:bottom-10 md:right-8`, `text-white text-xs md:text-sm font-semibold z-10`, content: &quot;Free Consultation&quot;
+
+---
+
+### SECTION 2 - SMILE GALLERY
+
+**Container:** `&lt;section&gt;`, `min-h-screen md:h-screen w-full overflow-hidden flex flex-col`, `pt-1.5 md:pt-2 px-3 md:px-5 pb-1.5 md:pb-2 gap-1.5 md:gap-2`
+
+Attach both `section2Ref` and `s2Reveal.containerRef` to this element.
+
+Uses `SECTION2_IMAGE` as shared background via MaskedCard technique.
+
+**Grid container:** `flex-1 min-h-0 grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto_auto_auto] md:grid-rows-[1fr_1fr_0.8fr] gap-1.5 md:gap-2`
+
+**Card 0 - Top Left (&quot;Smile Gallery&quot;):**
+- `MaskedCard`: `rounded-xl md:rounded-2xl overflow-hidden relative min-h-[160px] md:min-h-0`
+- Animated: `s2Reveal.getAnimStyle(0)`
+- Heading: `absolute top-4 left-5 md:top-6 md:left-7`, `text-white md:text-black text-2xl md:text-3xl font-bold z-10`, text &quot;Smile Gallery&quot;
+- Subtitle: `absolute bottom-4 left-5 md:bottom-6 md:left-7`, `text-white md:text-black text-xs md:text-sm font-semibold z-10`, text &quot;Our cosmetic dental work&quot;
+
+**Card 1 - Top Right (spans 2 rows on desktop):**
+- `MaskedCard`: `md:row-span-2 rounded-xl md:rounded-2xl overflow-hidden relative min-h-[200px] md:min-h-0`
+- Animated: `s2Reveal.getAnimStyle(1)`
+- Text: `absolute bottom-16 left-5 md:bottom-20 md:left-7`, `text-white text-xs md:text-sm font-semibold leading-4 md:leading-5 z-10`, content: &quot;If you want a gorgeous smile,&quot; `&lt;br/&gt;` &quot;call us to ask about a smile makeover.&quot;
+- Button: `absolute bottom-4 right-4 md:bottom-6 md:right-6`, `px-5 py-3 md:px-8 md:py-5 bg-white rounded-full text-black text-base md:text-xl font-bold z-10 hover:scale-105 transition-transform`, text &quot;Call Us&quot;
+
+**Card 2 - Bottom Left (&quot;Smile makeover&quot;):**
+- `MaskedCard`: `rounded-xl md:rounded-2xl overflow-hidden relative min-h-[160px] md:min-h-0`
+- Animated: `s2Reveal.getAnimStyle(2)`
+- Heading: `absolute top-4 left-5 md:top-6 md:left-7`, `text-white md:text-black text-[clamp(3rem,7vw,6rem)] font-bold leading-[0.9] z-10`, content: &quot;Smile&quot; `&lt;br/&gt;` &quot;makeover&quot;
+
+**Card 3 - Bottom Full Width (Services):**
+- `MaskedCard`: `col-span-1 md:col-span-2 rounded-xl md:rounded-2xl overflow-hidden relative min-h-[200px] md:min-h-0`
+- Animated: `s2Reveal.getAnimStyle(3)`
+- Inner container: `absolute inset-0 z-10 flex flex-wrap md:flex-nowrap gap-1.5 md:gap-2 p-2 md:p-3`
+- 4 service sub-cards mapped from `services` array:
+- Container: `flex-1 min-w-[calc(50%-4px)] md:min-w-0 rounded-xl md:rounded-2xl p-3 md:p-5 flex flex-col justify-between`
+- Active: `bg-white/90 backdrop-blur-md`
+- Inactive: `bg-white/20 backdrop-blur-xl`
+- Service name: `&lt;h3&gt;` with `text-xl md:text-4xl font-bold leading-[1.05] whitespace-pre-line`, color: active=`text-black`, inactive=`text-white`
+- Number badge (if `svc.num` exists): `self-end w-8 h-8 md:w-12 md:h-12 rounded-full border flex items-center justify-center text-xs md:text-sm font-semibold`
+- Active: `border-black text-black`
+- Inactive: `border-white text-white`
+
+---
+
+### SECTION 3 - IMPLANT DENTISTRY
+
+**Container:** `&lt;section&gt;`, `min-h-screen md:h-screen w-full overflow-hidden flex flex-col`, `pt-1.5 md:pt-2 px-3 md:px-5 pb-1.5 md:pb-2 gap-1.5 md:gap-2`
+
+Attach `s3Reveal.containerRef` to this element.
+
+Does NOT use MaskedCard technique. Uses regular `&lt;img&gt;` tags and solid backgrounds.
+
+**Grid:** `flex-1 min-h-0 grid grid-cols-1 md:grid-cols-2 gap-1.5 md:gap-2`
+
+#### LEFT COLUMN: `flex flex-col gap-1.5 md:gap-2`
+
+**1. Heading Card:**
+- `&lt;div&gt;`: `rounded-xl md:rounded-2xl bg-stone-50 p-5 md:p-7 flex flex-col justify-between flex-[1.2] min-h-[180px] md:min-h-0`
+- Animated: `s3Reveal.getAnimStyle(0)`
+- Heading: `&lt;h2&gt;` with `text-[clamp(3rem,7vw,6.5rem)] font-bold leading-[0.95] text-black`, content: &quot;Implant&quot; `&lt;br/&gt;` &quot;Dentistry&quot;
+- Subtitle: `&lt;p&gt;` with `text-xs md:text-sm font-semibold text-black`, text &quot;Restore Missing Teeth&quot;
+
+**2. Two Image Cards (side by side):**
+- Wrapper: `&lt;div&gt;` with `flex gap-1.5 md:gap-2 flex-1 min-h-[140px] md:min-h-0`
+- Animated: `s3Reveal.getAnimStyle(1)`
+- Left image: `&lt;div className=&quot;flex-1 rounded-xl md:rounded-2xl overflow-hidden&quot;&gt;&lt;img src={SECTION3_IMG1} alt=&quot;Dental implant procedure&quot; className=&quot;w-full h-full object-cover&quot; /&gt;&lt;/div&gt;`
+- Right image: `&lt;div className=&quot;flex-1 rounded-xl md:rounded-2xl overflow-hidden&quot;&gt;&lt;img src={SECTION3_IMG2} alt=&quot;Dental restoration&quot; className=&quot;w-full h-full object-cover&quot; /&gt;&lt;/div&gt;`
+
+**3. Consultation Card:**
+- `&lt;div&gt;`: `rounded-xl md:rounded-2xl bg-zinc-200 p-5 md:p-7 flex items-end justify-between flex-[0.8] min-h-[160px] md:min-h-0`
+- Animated: `s3Reveal.getAnimStyle(2)`
+- Left content block:
+- Label: `&lt;p&gt;` with `text-xs md:text-sm font-semibold text-black mb-2 md:mb-3`, text &quot;Consultation&quot;
+- Heading: `&lt;h3&gt;` with `text-xl md:text-3xl font-bold text-black leading-6 md:leading-8`, content: &quot;Dental&quot; `&lt;br/&gt;` &quot;Restoration&quot; `&lt;br/&gt;` &quot;Services&quot;
+- Button: `px-5 py-3 md:px-8 md:py-5 bg-white rounded-full text-black text-base md:text-xl font-bold hover:scale-105 transition-transform`, text &quot;Book Online&quot;
+
+#### RIGHT COLUMN: Single tall image card
+
+- `&lt;div&gt;`: `rounded-xl md:rounded-2xl overflow-hidden relative min-h-[350px] md:min-h-0`
+- Animated: `s3Reveal.getAnimStyle(3)`
+- Background image: `&lt;img src={SECTION3_BG} alt=&quot;Smiling patient&quot; className=&quot;w-full h-full object-cover&quot; /&gt;`
+- **Overlay container:** `absolute bottom-3 left-3 right-3 md:bottom-5 md:left-5 md:right-5 flex gap-1.5 md:gap-2`
+
+**Overlay Card 1 (white, left):**
+- `flex-1 bg-white rounded-xl md:rounded-2xl p-3 md:p-5 flex flex-col justify-between h-36 md:h-52`
+- Heading: `&lt;h4&gt;` with `text-lg md:text-2xl font-bold text-black leading-5 md:leading-7`, content: &quot;The Process&quot; `&lt;br/&gt;` &quot;of Installing&quot; `&lt;br/&gt;` &quot;Implants&quot;
+- Arrow icon: `self-end w-9 h-9 md:w-12 md:h-12 rounded-full border border-black flex items-center justify-center`
+- SVG: `width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;0 0 14 14&quot; fill=&quot;none&quot;`, class `rotate-[-45deg]`
+- Path: `d=&quot;M1 7h12m0 0L8 2m5 5L8 12&quot;` with `stroke=&quot;currentColor&quot; strokeWidth=&quot;1.5&quot; strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot;`
+
+**Overlay Card 2 (glass, right):**
+- `flex-1 bg-white/20 backdrop-blur-xl rounded-xl md:rounded-2xl p-3 md:p-5 flex flex-col justify-between h-36 md:h-52`
+- Heading: `&lt;h4&gt;` with `text-lg md:text-2xl font-bold text-white leading-5 md:leading-7`, content: &quot;Caring&quot; `&lt;br/&gt;` &quot;for Dental&quot; `&lt;br/&gt;` &quot;Implants&quot;
+- Arrow icon: `self-end w-9 h-9 md:w-12 md:h-12 rounded-full border border-white flex items-center justify-center`
+- Same SVG as above but with added class `text-white`
+
+---
+
+### OUTER WRAPPER
+
+The entire app is wrapped in `&lt;div className=&quot;bg-white&quot;&gt;` containing:
+1. `{showSplash &amp;&amp; &lt;SplashScreen /&gt;}` (conditionally rendered)
+2. `&lt;Navbar /&gt;`
+3. Section 1
+4. Section 2
+5. Section 3
+
+---
+
+### KEY DESIGN RULES
+
+- **Spacing between sections:** Only `pb-1.5 md:pb-2` on each section and `pt-1.5 md:pt-2` on sections 2 and 3 -- virtually seamless.
+- **Border radius:** All cards use `rounded-xl md:rounded-2xl` with `overflow-hidden`.
+- **Color palette:** Strictly black, white, and translucent white (`bg-white/20`, `bg-white/90`) with `backdrop-blur-md` or `backdrop-blur-xl`.
+- **Background fills:** `bg-stone-50` and `bg-zinc-200` for Section 3 solid cards.
+- **Typography:** Heavy bold/extrabold, `clamp()` for responsive headings, extremely tight leading (0.79, 0.9, 0.95, 1.05).
+- **Interactions:** `hover:scale-105 transition-transform` on CTA buttons.
+- **Responsive:** Single `md:` (768px) breakpoint. Stacked on mobile, grid on desktop.
+- **No external packages** beyond React and Tailwind.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="motionz-premium-landing-page.html">MotionZ Premium Landing Page<small>Landing Page · landing-page</small></a><a href="future-state.html">Future-State<small>Landing Page · hero</small></a><a href="3d-story.html">3D Story<small>Landing Page · hero</small></a><a href="financial-suite.html">Financial Suite<small>Landing Page · hero</small></a><a href="prompt-hero.html">PROMPT<small>Landing Page · hero</small></a><a href="cosmos-interface.html">Cosmos Interface<small>Landing Page · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

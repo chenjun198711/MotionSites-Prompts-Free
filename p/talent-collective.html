@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Talent Collective — Agency 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Build a single full-viewport React + TypeScript + Tailwind CSS page for a creative studio called  Kollektiva . The app renders only this one section (">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/talent-collective.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Talent Collective — Agency 提示词">
+<meta property="og:description" content="Build a single full-viewport React + TypeScript + Tailwind CSS page for a creative studio called  Kollektiva . The app renders only this one section (">
+<meta property="og:url" content="https://prompt-site.shop/p/talent-collective.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/talent-collective.jpg">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Talent Collective","description":"Build a single full-viewport React + TypeScript + Tailwind CSS page for a creative studio called  Kollektiva . The app renders only this one section (","url":"https://prompt-site.shop/p/talent-collective.html","inLanguage":"zh-CN","genre":"Agency","dateCreated":"2026-08-14T10:12:37.572Z","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-agency">Agency</a></div><h1>Talent Collective</h1><div class="chip-row"><span class="chip">Agency</span><span class="chip">agency</span><span class="chip">yilai-ai 公开页面</span></div><div class="facts"><span>收录时间：2026-08-14</span><span>正文：9,770 字符</span></div><div class="hero-media"><img src="../assets/previews/talent-collective.jpg" alt="Talent Collective 动效预览" loading="lazy"><div class="media-note">本地预览图 · jpeg</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a single full-viewport React + TypeScript + Tailwind CSS page for a creative studio called **Kollektiva**. The app renders only this one section (no nav, no other pages). Stack: Vite + React 18 + Tailwind 3. Font: **Geist** (Google Fonts weights 300, 400, 500). Title: `Kollektiva`.
+
+### Font setup
+
+In `index.html`:
+```html
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot; /&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin /&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+```
+
+In Tailwind config, extend:
+```js
+fontFamily: { geist: [&#39;Geist&#39;, &#39;system-ui&#39;, &#39;sans-serif&#39;] }
+```
+
+In CSS, add this keyframe:
+```css
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+```
+
+### Overall structure
+
+One `&lt;section&gt;` that is:
+- `relative`, `h-screen`, `w-full`, `overflow-hidden`
+- `font-geist`, text white
+- Full-bleed stacked background portraits (one per team member)
+- A light dark gradient overlay on top of the backgrounds
+- A content layer (`z-10`) with two vertical zones: top (headline + description) and bottom (avatar picker + meta footer)
+
+### Background portraits (exact asset URLs)
+
+Render **all 8** backgrounds as absolutely positioned `inset-0` layers with `bg-cover bg-center`. Only the active index has `opacity: 1`; others `opacity: 0`. Transition: `transition-opacity duration-700 ease-out` (700ms opacity crossfade).
+
+Use these exact image URLs (same URL for full-bleed background AND circular avatar thumbnail):
+
+1. **Andrei Baranov** — Design Chief  
+   `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260727_225202_f9e684f3-dc19-469a-8142-eb391bfc601b.png&amp;w=1280&amp;q=85`  
+   Description: `Andrei sets the visual direction of every project. He turns rough ideas into clear, confident design languages that feel effortless yet leave a lasting impression.`
+
+2. **Daria Lebedeva** — Interface Expert  
+   `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260727_225149_7937e8ea-3b0a-46ab-919f-775627695a23.png&amp;w=1280&amp;q=85`  
+   Description: `Daria crafts interfaces people understand at first glance. Every screen she designs balances clarity and character, making complex products feel simple and warm.`
+
+3. **Ivan Sorokin** — Concept Chief  
+   `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260727_225153_f2b1fc04-776a-4f2e-879b-b764ea762e77.png&amp;w=1280&amp;q=85`  
+   Description: `Ivan shapes the ideas behind the work. He digs into every brief until the core story emerges, then builds concepts that give each project its reason to exist.`
+
+4. **Anna Fedorova** — Brand Consultant  
+   `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260727_225847_f456fd9c-8938-4103-836d-51b0e88a9510.png&amp;w=1280&amp;q=85`  
+   Description: `Anna helps brands find their voice. From positioning to tone, she builds identities that stay consistent everywhere and grow stronger with every appearance.`
+
+5. **Pavel Smirnov** — Movement Artist  
+   `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260727_225854_3958a522-6203-4f84-a7fa-3b3f1dcd7256.png&amp;w=1280&amp;q=85`  
+   Description: `Pavel brings stillness to life. His motion work adds rhythm and personality to every product, guiding attention with transitions that feel natural and precise.`
+
+6. **Olga Kravtsova** — UX Specialist  
+   `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260727_231111_fcefaa07-6851-4fdc-ac7b-98754ac9d5c4.png&amp;w=1280&amp;q=85`  
+   Description: `Olga studies how people actually use what we make. Her research keeps every decision grounded in real behavior, so the work serves users and not assumptions.`
+
+7. **Igor Zakharenko** — Graphic Creator  
+   `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260727_231124_9a1505aa-8c44-4046-aff8-1aa0bc7b3ef3.png&amp;w=1280&amp;q=85`  
+   Description: `Igor gives every project its finishing touch. From typography to illustration, he sweats the visual details that separate good work from unforgettable work.`
+
+8. **Ksenia Romanova** — Studio Head  
+   `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260727_230413_62e8b331-89be-4d35-84fe-330ba9b1b64f.png&amp;w=1280&amp;q=85`  
+   Description: `Ksenia keeps the studio moving as one. She connects people, plans, and priorities so every project ships on time without losing the craft it deserves.`
+
+Default active index: `0` (Andrei Baranov).
+
+### Gradient overlay
+
+Above backgrounds, below content:
+`absolute inset-0 bg-gradient-to-b from-black/20 via-black/5 to-black/25`  
+(top 20% black, middle 5%, bottom 25% — soft vignette, not heavy).
+
+### Content layout
+
+Content wrapper:
+`relative z-10 flex h-full flex-col justify-between`
+Padding:
+- mobile: `px-6 pb-6 pt-10`
+- sm: `px-10 pb-8 pt-14`
+- lg: `px-16`
+
+#### Top zone — headline + bio
+
+Flex column on mobile (`flex-col gap-8`); from `md` up: `md:flex-row md:items-start md:justify-between md:gap-16`.
+
+**Left — H1 (static, never changes):**
+Exact copy (non-breaking space before “day”):
+&gt; Kollektiva is the talent you build with each day
+
+Styles:
+- `max-w-xl`
+- `text-3xl` → `sm:text-5xl` → `lg:text-7xl`
+- `font-normal`, `leading-[1.1]`, `tracking-tight`
+- white
+
+**Right — description (changes with active slide):**
+- `max-w-xs`
+- `text-sm font-medium leading-relaxed text-white/80` → `sm:text-base`
+- `md:pt-2`
+- On change: remount with `key={slide.name}` and class `animate-[fadeIn_0.5s_ease]` (0.5s fade + 4px upward settle)
+
+#### Bottom zone
+
+Outer: `flex flex-col gap-8`
+
+##### Avatar picker row
+
+- Horizontal flex: `flex items-end gap-2` → `sm:gap-3`
+- Mobile: `overflow-x-auto` with hidden scrollbar (`[scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden`), `pb-1`
+- Desktop sm+: `sm:overflow-visible sm:pb-0`
+
+Each avatar is a `&lt;button&gt;`:
+- `flex shrink-0 flex-col items-center gap-2`
+- `aria-label={`Show ${name}`}`
+- `onClick` sets active index
+
+Per button, top to bottom:
+1. **Active indicator dot:** `h-1 w-1 rounded-full bg-white`  
+   Active: `opacity-100`; inactive: `opacity-0`  
+   Transition: `transition-opacity duration-300`  
+   (dot fades in/out in place — does NOT slide between avatars)
+2. **Circular thumbnail:** outer `block h-10 w-10 overflow-hidden rounded-full` → `sm:h-14 sm:w-14`  
+   Inner `&lt;img&gt;`: same slide image URL, `h-full w-full object-cover`, `alt={name}`
+
+Order of avatars must match slides array order 1→8 above.
+
+##### Meta footer
+
+Below avatars:
+- Top border: `border-t border-white/20`
+- `pt-5`
+- `flex flex-wrap items-center justify-between gap-4`
+- `text-sm font-medium`
+
+Four items left→right (space-between):
+
+1. **Name** (always visible): white, remounts with `key={slide.name}` + `animate-[fadeIn_0.5s_ease]`
+2. **Role** (hidden on mobile, visible `sm:`+): `text-white/70`, remounts with `key={slide.role}` (no fade animation on role)
+3. **Static tenure** (hidden until `md`): `text-white/70` — exact text: `In the business since 2020` (does not change per person)
+4. **WhatsApp link:** `&lt;a href=&quot;#&quot;&gt;WhatsApp&lt;/a&gt;` with `underline underline-offset-4 transition-colors hover:text-white/70`
+
+### Interaction &amp; animation summary
+
+| Interaction | Behavior |
+|---|---|
+| Click avatar | Set `active` index |
+| Background change | 700ms opacity crossfade (`ease-out`) |
+| Description + name change | 500ms `fadeIn` (opacity 0→1, translateY 4px→0) via CSS keyframe + React `key` remount |
+| Active dot | 300ms opacity toggle on the active avatar only |
+| WhatsApp hover | color → `white/70` |
+| No autoplay | Manual selection only |
+| No carousel arrows | Avatars only |
+| No blur on background | Cover + center only |
+| No extra cards, badges, stats, or secondary CTAs | |
+
+### Responsive behavior checklist
+
+- **Mobile:** stacked headline over bio; horizontally scrollable avatar row (40×40px circles); footer shows Name + WhatsApp only (role/tenure hidden)
+- **sm:** larger type, 56×56 avatars, role visible, no avatar scroll
+- **md:** headline and bio side-by-side; tenure visible
+- **lg:** headline `text-7xl`, horizontal padding `px-16`
+
+### Visual character
+
+Studio portrait photography on soft light gray / off-white seamless backgrounds (Asian / East-European creative professionals, soft studio lighting). White Geist sans-serif type over full-bleed portraits with a subtle black gradient vignette. Minimal, editorial, no purple, no cards, no pills, no glow. One composition filling the first viewport.
+
+### What NOT to include
+
+- Do not use the unused local files in `/public/images/` (those are unrelated mockups)
+- No Lucide icons, no Supabase, no extra sections
+- No Russian copy — English only as specified
+- No Telegram link — the live page uses **WhatsApp**
+- Brand name is **Kollektiva**, not Pragmatica
+- Exactly **8** people (not 9)
+- No separate large “action circle” on the right of the avatar row
+
+### App wiring
+
+`App.tsx` renders only `&lt;Hero /&gt;`. Import via `@/components/Hero`. State: single `useState(0)` for active slide index.
+
+---</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="northstar.html">Northstar<small>Agency · agency</small></a><a href="global-hubs.html">Global Hubs<small>Agency · agency</small></a><a href="build-unit.html">Build Unit<small>Agency · agency</small></a><a href="intelligent-operations.html">Intelligent Operations<small>Agency · hero</small></a><a href="immersive-studio.html">Immersive Studio<small>Agency · hero</small></a><a href="product-studio.html">Product Studio<small>Agency · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

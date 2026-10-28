@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HAVENORBI — 3D 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Copy and paste this prompt: Create a pixel-accurate standalone HTML recreation of the current hero page. Return a complete  footer.html  with inline C">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/havenorbi.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HAVENORBI — 3D 提示词">
+<meta property="og:description" content="Copy and paste this prompt: Create a pixel-accurate standalone HTML recreation of the current hero page. Return a complete  footer.html  with inline C">
+<meta property="og:url" content="https://prompt-site.shop/p/havenorbi.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/havenorbi.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"HAVENORBI","description":"Copy and paste this prompt: Create a pixel-accurate standalone HTML recreation of the current hero page. Return a complete  footer.html  with inline C","url":"https://prompt-site.shop/p/havenorbi.html","inLanguage":"zh-CN","genre":"3D","dateCreated":"2026-09-11T17:06:00.432Z","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-3d">3D</a></div><h1>HAVENORBI</h1><div class="chip-row"><span class="chip">3D</span><span class="chip">3d</span><span class="chip">yilai-ai 公开页面</span></div><div class="facts"><span>收录时间：2026-09-11</span><span>正文：10,732 字符</span></div><div class="hero-media"><img src="../assets/previews/havenorbi.webp" alt="HAVENORBI 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Copy and paste this prompt:
+Create a pixel-accurate standalone HTML recreation of the current hero page. Return a complete `footer.html` with inline CSS and JavaScript. Do not redesign, simplify, add content, add overlays, or change the wording.
+
+ASSETS
+
+Use this exact CloudFront video:
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260909_102143_0afe0d98-f953-49c3-87c3-cc9b77a9fcd8.mp4
+
+Create these local assets:
+- `public/hero-background.mp4`: the original video.
+- `public/hero-scrub.mp4`: an all-keyframe H.264 version for instant cursor-controlled seeking.
+- `public/hero-poster.jpg`: the first video frame.
+- `public/fonts/Anton-Regular.ttf`
+- `public/fonts/DMSans-Regular.woff2`
+- `public/logo.svg`: use as the favicon.
+
+The video is 1920×1080, approximately 7.04 seconds, at 24 fps.
+
+Use this conversion for the scrubbable video:
+`ffmpeg -i hero-background.mp4 -c:v libx264 -crf 20 -preset fast -g 1 -keyint_min 1 -sc_threshold 0 -pix_fmt yuv420p -movflags +faststart -an hero-scrub.mp4`
+
+TYPOGRAPHY
+
+Load fonts with `@font-face`:
+- Headline: Anton, weight 400, with Impact as fallback.
+- Navigation and descriptive text: DM Sans, weight 400, with Arial as fallback.
+- Disable synthetic font styles with `font-synthesis:none`.
+
+PAGE STRUCTURE
+
+Create a single full-screen `&lt;main class=&quot;hero&quot;&gt;`.
+
+Its children, in this exact order, must be:
+1. Background video wrapper.
+2. Transparent foreground-character canvas.
+3. Navigation header.
+4. Main headline.
+5. Right-side tagline.
+6. Bottom-left description.
+
+Set:
+- Hero minimum height: `100svh`
+- Position: relative
+- Overflow: hidden
+- Isolation: isolate
+- Body margin: 0
+- Text color: `#ffffff`
+- Fallback body background: `#06122b`
+- No tint, gradient, dimming layer, blur, or overlay.
+
+BACKGROUND VIDEO
+
+Use a full-viewport muted `&lt;video&gt;` with:
+- `id=&quot;hero-video&quot;`
+- `muted`
+- `playsinline`
+- `preload=&quot;auto&quot;`
+- Poster: `./public/hero-poster.jpg`
+- Absolute positioning with `inset:0`
+- Width and height: 100%
+- `object-fit:cover`
+- `object-position:center`
+- Pointer events disabled
+
+The background-video wrapper must be absolute, fill the hero, and use `z-index:-1`.
+
+NAVIGATION
+
+Position the navigation relatively with:
+- `z-index:3`
+- Flex row
+- Vertically centered
+- Space between
+- Padding: `2.15vw 2.58vw`
+- Font size: `1.13vw`
+- Line height: `1.2`
+- Uppercase
+
+Left:
+`✱ OLIVIA STUDIO`
+
+Use a flex row, `gap:.35vw`, and no wrapping. Make the star `1.35em`.
+
+Centered navigation:
+`PROJECTS   BLOG   ABOUT   RESUME`
+
+Place this group absolutely at 50% left and translate it by `-50%`. Use a flex row and `gap:3.9vw`. These are plain visual labels with no external links.
+
+Right:
+`// HIRE ME` followed by a circular northeast arrow.
+
+Use `gap:.9vw`. The circle is `2.25vw × 2.25vw`, has a `1.5px` white border, and a 50% radius. Draw the arrow as an inline SVG using:
+`M6 18 18 6M7 6h11v11`
+with no fill, currentColor stroke, stroke width 2, rounded caps and joins.
+
+HEADLINE
+
+Text:
+`HAVENORBI`
+
+Position:
+- Absolute
+- Left: `2.58vw`
+- Top: `7vw`
+- Margin: 0
+- Anton 400
+- Font size: `23.5vw`
+- Line height: 1
+- Letter spacing: 0
+- No wrapping
+- Uppercase white text
+
+RIGHT TAGLINE
+
+Text on two lines:
+`// DESIGN THAT`
+`SPEAKS YOUR BRAND`
+
+Position:
+- Absolute
+- Left: `71.5%`
+- Top: `56.7%`
+- Margin: 0
+- DM Sans 400
+- Font size: `1.61vw`
+- Line height: `1.45`
+- Uppercase
+
+Make each line a block. Add `2.85vw` left padding to the second line.
+
+BOTTOM-LEFT DESCRIPTION
+
+Use exactly these three lines:
+`// I’M OLIVIA — A FREELANCE UI/UX DESIGNER`
+`HELPING STARTUPS AND BUSINESSES BUILD`
+`CLEAN, INTUITIVE DIGITAL PRODUCTS.`
+
+Position:
+- Absolute
+- Left: `3.95vw`
+- Bottom: `7.7vh`
+- Margin: 0
+- DM Sans 400
+- Font size: `1.075vw`
+- Line height: `1.75`
+- Uppercase
+
+Make every line a block. Add `3.6vw` left padding to the second line only.
+
+CHARACTER-OVER-TEXT EFFECT
+
+The astronaut must remain visually above the headline and descriptive text while the rest of the video stays behind them.
+
+Do this with a transparent `&lt;canvas&gt;`:
+- `id=&quot;hero-character&quot;`
+- Internal dimensions: 1920×1080
+- Absolute with `inset:0`
+- CSS width and height: 100%
+- Same centered cover crop as the video
+- `z-index:2`
+- Pointer events disabled
+
+The headline, tagline, and description remain at their default stacking level beneath the canvas. Keep navigation at `z-index:3`, above the astronaut.
+
+Draw the current video frame into the canvas, then use `globalCompositeOperation=&quot;destination-in&quot;` with a character-shaped matte. Clear and redraw it whenever the displayed video frame changes. This leaves only the astronaut visible in the foreground canvas while everything outside the astronaut becomes transparent.
+
+Use this exact Path2D silhouette in 1920×1080 video coordinates:
+
+M 738 451
+C 755 394 803 345 865 327
+C 927 308 1000 321 1045 352
+C 1096 386 1123 444 1124 489
+L 1130 489
+C 1140 505 1141 532 1134 550
+L 1116 551
+C 1111 577 1107 597 1095 611
+Q 1110 611 1106 630
+L 1101 650
+C 1111 669 1113 693 1118 727
+C 1124 751 1117 782 1106 795
+Q 1092 808 1069 800
+L 1058 838 L 1055 878
+Q 1004 886 934 881
+L 929 836 L 921 836 L 920 879
+Q 862 887 800 880
+L 798 832
+C 783 835 778 819 775 809
+L 762 837
+Q 753 858 739 847
+Q 730 839 743 815
+L 754 785
+Q 726 786 716 774
+L 718 743
+C 705 730 710 691 727 672
+L 748 654
+Q 740 642 747 631
+L 751 613
+C 741 598 736 574 737 550
+L 694 556 L 704 535
+C 670 533 644 510 640 482
+C 632 455 649 428 674 418
+C 700 406 727 416 739 433 Z
+
+Fill the matte white and apply `blur(0.7px)` to slightly feather its outer edge.
+
+Preserve these thin tubes using white strokes with round joins and caps:
+- Width 8: `M 703 550 C 696 600 701 639 744 660`
+- Width 20: `M 813 752 C 797 774 786 811 776 836 M 1040 763 C 1052 797 1060 826 1068 847`
+
+Draw the poster through the same matte before the video becomes ready, preventing the foreground astronaut from flashing or disappearing during loading.
+
+Use `requestVideoFrameCallback` to refresh the composited foreground when available, with `requestAnimationFrame` as fallback. Draw only when `video.currentTime` changes. Also redraw on `loadeddata` and `seeked`.
+
+CURSOR-TO-EYE INTERACTION
+
+On desktop, the video must not play continuously. Cursor position controls the video frame so the astronaut’s animated eyes appear to follow the cursor.
+
+Use the eye’s source-video center:
+- X: 922
+- Y: 507
+
+Convert this point into viewport coordinates using the video’s centered `object-fit:cover` scale:
+
+`scale = max(renderedWidth / 1920, renderedHeight / 1080)`
+
+`eyeX = rect.left + rect.width / 2 + (922 - 960) * scale`
+`eyeY = rect.top + rect.height / 2 + (507 - 540) * scale`
+
+Calculate:
+`angle = atan2(pointerY - eyeY, pointerX - eyeX)`
+
+Normalize the angle into 0–2π. Find the closest calibrated sample below using circular angular distance. Seek to that sample’s time plus `1/240` second.
+
+Use this exact calibration array of `[angle, videoTime]` pairs:
+
+[[0.140436,1.83333],[0.272074,1.875],[0.37721,1.91667],
+[0.487211,1.95833],[0.758188,2],[1.03816,0.29167],
+[1.291266,0.33333],[1.29251,0.25],[1.531114,0.375],
+[1.748845,0.41667],[1.914354,0.45833],[2.135974,0.5],
+[2.297991,0.54167],[2.424228,0.58333],[2.628603,0.625],
+[2.795553,0.66667],[2.908785,0.70833],[3.044833,0.75],
+[3.145293,0.79167],[3.38155,0.83333],[3.539566,0.875],
+[3.681233,0.91667],[3.830669,0.95833],[4.018275,1],
+[4.15919,1.04167],[4.284155,1.08333],[4.381621,1.125],
+[4.551081,1.16667],[4.625911,1.20833],[4.726682,1.25],
+[4.804165,1.29167],[4.920395,1.33333],[5.015693,1.375],
+[5.109664,1.41667],[5.191176,1.45833],[5.37081,1.5],
+[5.453795,1.54167],[5.537064,1.58333],[5.663308,1.625],
+[5.858054,1.66667],[5.962517,1.70833],[6.064804,1.75],
+[6.194798,1.79167]]
+
+Ignore pointer positions within 8px of the eye center.
+
+Throttle seeking through `requestAnimationFrame`. Do not issue another seek while `video.seeking` is true. Only seek when the difference between current and requested time is greater than `1/48` second. Clamp the requested time to no later than `video.duration - 1/24`.
+
+Listen for:
+- `pointermove`
+- `resize`
+- `scroll`
+- `pageshow`
+- Changes to the mobile media query
+- Changes to `prefers-reduced-motion`
+
+DESKTOP VIDEO LOADING
+
+For hosted desktop pages, fetch `./public/hero-scrub.mp4` once, convert it to a Blob URL, and assign that Blob URL to the video. This enables reliable rapid seeking even when the hosting service does not support byte-range requests correctly.
+
+For `file://` pages, use `./public/hero-scrub.mp4` directly because browsers block local fetch calls.
+
+If the local desktop video fails, fall back to the exact CloudFront URL.
+
+MOBILE BEHAVIOR
+
+At widths of 700px or below:
+- Use `./public/hero-background.mp4`.
+- Enable looping.
+- Play the video normally if reduced motion is not enabled.
+- Disable cursor scrubbing.
+- If reduced motion is enabled, pause the video.
+
+Mobile layout:
+- Hero minimum height: `max(740px,100svh)`
+- Navigation: `padding:24px 20px 0`
+- Wrap navigation
+- Gap: 28px
+- Font size: 12px
+- Center navigation becomes a normal third flex item
+- Center navigation width: 100%
+- `justify-content:space-between`
+- Gap: 12px
+- Circular arrow: 28×28px
+- Title: top 144px, left `2.58vw`, font size `23.5vw`
+- Tagline: right 22px, left auto, top 40%, font size 18px, line height 1.5
+- Second tagline line left padding: 24px
+- Description: left/right 22px, bottom 36px, font size 12px, line height 1.8
+- Second description line left padding: 20px
+
+At widths of 360px or below:
+- Navigation horizontal padding: 16px
+- Navigation font size: 11px
+- Description left/right: 16px
+- Description font size: 11px
+
+FINAL REQUIREMENTS
+
+- The page must fill the viewport without scrollbars caused by the hero.
+- Preserve the exact capitalization, punctuation, line breaks, spacing, font sizes, and positions above.
+- Do not add clickable external links.
+- Do not add buttons, sections, cards, transitions, filters, shaders, gradients, overlays, or decorative elements.
+- The full video stays behind the content.
+- Only the astronaut-shaped foreground copy appears above the large title and descriptions.
+- The foreground character and background video must always show the same frame.
+- Navigation remains above the foreground astronaut.
+- Desktop interaction must feel immediate and make the eyes point toward the cursor.
+- Mobile video plays normally beneath the page content.
+- Deliver one production-ready standalone HTML page and the listed local assets.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="alethia.html">Alethia<small>3D · 3d</small></a><a href="cast-and-render.html">Cast and Render<small>3D · 3d</small></a><a href="space-planet.html">Space planet<small>3D · 3d</small></a><a href="3d-character-studio.html">3D Character Studio<small>3D · 3d</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

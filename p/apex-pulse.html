@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apex Pulse — Landing Page 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色电影感无人机技术着陆页，滚动视频背景配合渐显动画，呈现科技与军事美学。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/apex-pulse.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Apex Pulse — Landing Page 提示词">
+<meta property="og:description" content="深色电影感无人机技术着陆页，滚动视频背景配合渐显动画，呈现科技与军事美学。">
+<meta property="og:url" content="https://prompt-site.shop/p/apex-pulse.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/apex-pulse.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Apex Pulse","description":"深色电影感无人机技术着陆页，滚动视频背景配合渐显动画，呈现科技与军事美学。","url":"https://prompt-site.shop/p/apex-pulse.html","inLanguage":"zh-CN","genre":"Landing Page","dateCreated":"2026-06-23T07:04:22.246778+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-landing_page">Landing Page</a></div><h1>Apex Pulse</h1><div class="chip-row"><span class="chip">Landing Page</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-23</span><span>正文：7,063 字符</span></div><div class="hero-media"><img src="../assets/previews/apex-pulse.webp" alt="Apex Pulse 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色电影感无人机技术着陆页，滚动视频背景配合渐显动画，呈现科技与军事美学。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a dark, cinematic drone/UAV technology landing page called **&quot;AETHER_X&quot;** using React + Vite + TypeScript + Tailwind CSS. The site has a scroll-driven video background and two content sections with reveal-on-scroll animations. Here is the exact specification:
+
+---
+
+### Font &amp; Global Styles
+
+- Load **Helvetica Neue Regular** via this stylesheet in `index.html`:
+```
+https://db.onlinewebfonts.com/c/0d49fc455f4a8951a42daf952412a713?family=Helvetica+Neue+Regular
+```
+- Body: `font-family: &#39;Helvetica Neue Regular&#39;, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif`, background `#0a0a0a`, color `#fff`, antialiased.
+- In `tailwind.config.js`, set `fontFamily.sans` and `fontFamily.mono` to `&#39;&quot;Flexo Soft Medium&quot;&#39;, &#39;system-ui&#39;, &#39;sans-serif&#39;`.
+- Selection highlight: `rgba(255, 255, 255, 0.2)`.
+- Page title: `AETHER_X — Where Sky Meets Machine Logic`
+
+---
+
+### Dependencies
+
+Only: `react`, `react-dom`, `lucide-react`, `@supabase/supabase-js`. Tailwind + PostCSS + Autoprefixer + Vite for tooling.
+
+---
+
+### Architecture (5 components)
+
+```
+App.tsx
+-&gt; ScrollVideo (fixed fullscreen background)
+-&gt; Navbar (fixed top)
+-&gt; main
+-&gt; SectionOne (hero, bottom-aligned)
+-&gt; spacer div (h-[80vh], aria-hidden)
+-&gt; SectionTwo (full-height, justify-between)
+```
+
+---
+
+### Component 1: `Reveal.tsx` (scroll-triggered animation wrapper)
+
+- Props: `children`, `delay` (ms, default 0), `className`, `as` (&#39;div&#39; | &#39;span&#39;, default &#39;div&#39;)
+- Uses `IntersectionObserver` with `threshold: 0.15`
+- Animates from `translate-y-8 opacity-0` to `translate-y-0 opacity-100`
+- Transition: `duration-700 ease-out will-change-transform`
+- `transitionDelay` applied via inline style from `delay` prop
+
+---
+
+Component 2: ScrollVideo.tsx (frame-extracted scroll-synced video)
+Video URL (CloudFront):
+
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260622_230900_ef8565a6-16eb-4fe9-98e4-4b972d3f436d.mp4
+Architecture principle: The &lt;video&gt; element starts visible as a live fallback. The rAF loop starts immediately on mount and seeks the video on scroll. Once frame extraction finishes, the canvas becomes visible and the video is hidden -- seamless handoff with zero blank frames.
+Implementation:
+1. State: framesReady boolean (default false). framesRef holds extracted ImageBitmap[].
+2. First useEffect (frame extraction, runs once):
+* Fetch video as blob, create object URL
+* Extract up to 120 frames at max width 1280px using createImageBitmap + sequential seek-based extraction (derive frame count from video.duration * 24, clamped between 30-120)
+* On success: store frames in framesRef.current, set framesReady = true
+* On failure or cancellation: do nothing -- the video fallback stays visible permanently
+* Cleanup: set cancelled flag, revoke object URL, close all ImageBitmaps
+3. Second useEffect (rAF scroll-sync loop, deps: [framesReady]):
+* Starts immediately on mount (when framesReady is still false) -- this is critical
+* Re-runs when framesReady flips to true (cleans up old loop, starts new one with frame drawing)
+* Scroll handler: maps scrollY / (scrollHeight - innerHeight) to 0-1 progress, clamped
+* Resize handler: sets canvas dimensions to clientWidth * dpr x clientHeight * dpr (dpr capped at 2)
+* Tick function (rAF):
+* Smooth interpolation: smoothed += (targetProgress - smoothed) * 0.1
+* If frames exist (frames.length &gt; 1): map smoothed to frame index, draw to canvas with cover-fit math
+* Else if video element exists (fallback): seek video.currentTime to smoothed * duration (with seek-lock to avoid stacking seeks)
+* Cover-fit draw: scale = max(canvasW/frameW, canvasH/frameH), center the scaled frame
+4. Render structure:  &lt;div class=&quot;fixed inset-0 -z-10 bg-[#0a0a0a]&quot;&gt;
+5. {!framesReady &amp;&amp; &lt;video ... visible, muted, playsInline, preload=&quot;auto&quot;, object-cover /&gt;}
+6. &lt;canvas ... class includes &#39;invisible&#39; when !framesReady, removes it when framesReady /&gt;
+7. &lt;div class=&quot;absolute inset-0 bg-black/20&quot; /&gt; (overlay)
+8. &lt;/div&gt;
+9.   
+Key detail: The &lt;video&gt; is conditionally rendered (!framesReady), so it is present and visible during loading. The canvas starts with invisible class and only becomes visible when framesReady flips. This guarantees something is always on screen -- the video during load, the canvas after extraction.
+
+
+
+### Component 3: `Navbar.tsx`
+
+- Fixed top, z-50, flex between, responsive padding (`px-5 py-4 sm:px-8 sm:py-5 md:px-12`)
+- Left: custom SVG logo (white, 32x32, scales to 36x36 on sm+). SVG path:
+```
+M 160 88 L 194 34 L 216 0 L 256 0 L 256 40 L 221.5 93.5 L 200 128 L 256 128 L 256 256 L 96 256 L 96 168 L 64.246 220 L 40 256 L 0 256 L 0 216 L 34 162 L 56 128 L 0 128 L 0 0 L 160 0 Z
+```
+- Right: pill button &quot;Join The Fleet&quot; -- `rounded-full bg-white text-black uppercase tracking-wider text-xs (sm:text-sm)`, hover: `bg-white/90 scale-105`
+- Both wrapped in `&lt;Reveal&gt;` (logo delay 0, button delay 150)
+
+---
+
+### Component 4: `SectionOne.tsx` (Hero)
+
+- Full viewport height, content at bottom (`flex-col justify-end`)
+- 2-column grid on sm+, single column mobile
+- **Column 1:** Large heading with 3 stacked `&lt;Reveal as=&quot;span&quot;&gt;` lines:
+- &quot;Relentless.&quot; (delay 100)
+- &quot;Sovereign.&quot; (delay 250)
+- &quot;Unyielding.&quot; (delay 400)
+- Font size: `clamp(2.5rem, 8vw, 6rem)`, font-medium, leading-[1.05], tracking-tight, drop-shadow-lg
+- **Column 2:** 3 stats in a flex-wrap row (right-aligned on sm+), delay 550:
+- `360` + degree symbol + &quot;Sensor Array&quot;
+- `12` + degree symbol + &quot;Thermal Scan&quot;
+- `98` + % + &quot;Precision&quot;
+- Values: `text-2xl sm:text-3xl md:text-4xl font-bold tabular-nums`
+- Labels: `text-[10px] sm:text-xs uppercase tracking-wider text-white/50`
+
+---
+
+### Component 5: `SectionTwo.tsx`
+
+- Full viewport, `flex-col justify-between`, responsive padding
+- **Top-right block** (self-end, max-w-sm):
+- Heading (delay 100): &quot;Precision / built into / every line.&quot; -- `text-3xl sm:text-4xl md:text-5xl font-semibold leading-[1.1]`
+- Stat row (delay 250, mt-8): 2-column grid `[auto_1fr]`
+- Left: &quot;99.7%&quot; bold + label &quot;Fleet Ready&quot;
+- Right: paragraph &quot;Proven in 14,000+ sorties with unmatched operational readiness and zero downtime.&quot; -- `text-xs sm:text-sm text-white/70`
+
+- **Bottom area** (mt-auto pt-16 sm:pt-20, 2-col grid on sm+):
+- Column 1 (delay 400): 3 stats in flex row:
+- `240 km` / &quot;Reach&quot;
+- `85 kg` / &quot;Capacity&quot;
+- `42 km/h` / &quot;Glide Speed&quot;
+- Column 2 (delay 550, sm:ml-auto):
+- 4 stats: `grid-cols-2 sm:flex`. First stat has `border border-white/30 rounded-lg`:
+- `160 km` / &quot;Reach&quot;
+- `5.8 hrs` / &quot;Endurance&quot;
+- `52 km/h` / &quot;Max Pace&quot;
+- `18 kg` / &quot;Carry&quot;
+- 2 pill buttons below:
+- &quot;Schedule a Call&quot; -- outline style (`border border-white/60 rounded-full`), hover: `border-white bg-white/10`
+- &quot;Full Details&quot; -- solid white, text-black, hover: `bg-white/90 scale-105`
+
+---
+
+### Key responsive breakpoints:
+- Mobile: single column, smaller text, reduced padding
+- `sm` (640px): 2-column grids activate, larger text
+- `md` (768px): max padding/text sizes
+
+### Color palette:
+- Background: `#0a0a0a`
+- Text: white, `white/70`, `white/60`, `white/50`
+- Borders: `white/30`, `white/60`
+- Overlay: `black/20`</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="motionz-premium-landing-page.html">MotionZ Premium Landing Page<small>Landing Page · landing-page</small></a><a href="future-state.html">Future-State<small>Landing Page · hero</small></a><a href="3d-story.html">3D Story<small>Landing Page · hero</small></a><a href="financial-suite.html">Financial Suite<small>Landing Page · hero</small></a><a href="prompt-hero.html">PROMPT<small>Landing Page · hero</small></a><a href="health-portal.html">Health Portal<small>Landing Page · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

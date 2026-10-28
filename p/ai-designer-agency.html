@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Designer Agency — Landing Page 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Prompt to recreate this landing page: Build a dark-themed, single-page landing page for an AI web design agency called &quot;VIRALMEDIA&quot;. The design uses a">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/ai-designer-agency.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI Designer Agency — Landing Page 提示词">
+<meta property="og:description" content="Prompt to recreate this landing page: Build a dark-themed, single-page landing page for an AI web design agency called &quot;VIRALMEDIA&quot;. The design uses a">
+<meta property="og:url" content="https://prompt-site.shop/p/ai-designer-agency.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"AI Designer Agency","description":"Prompt to recreate this landing page: Build a dark-themed, single-page landing page for an AI web design agency called \"VIRALMEDIA\". The design uses a","url":"https://prompt-site.shop/p/ai-designer-agency.html","inLanguage":"zh-CN","genre":"Landing Page","dateCreated":"2026-03-27T04:03:07.349635+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-landing_page">Landing Page</a></div><h1>AI Designer Agency</h1><div class="chip-row"><span class="chip">Landing Page</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-03-27</span><span>正文：7,394 字符</span></div><div class="hero-media"><video src="../assets/previews/ai-designer-agency.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Prompt to recreate this landing page:
+
+Build a dark-themed, single-page landing page for an AI web design agency called &quot;VIRALMEDIA&quot;. The design uses a pure black background (#000) with white text, a signature &quot;liquid glass&quot; glassmorphism effect, and two Google Fonts: Barlow (body/UI) and Instrument Serif (italic accent text). Use React, Tailwind CSS, Framer Motion, and hls.js. All buttons are rounded-full.
+
+DESIGN SYSTEM (index.css)
+
+Color tokens (all HSL, dark-only — no light mode):
+
+--background: 0 0% 0% (pure black)
+--foreground: 0 0% 100% (pure white)
+--card: 0 0% 9%, --card-foreground: 0 0% 100%
+--primary: 0 0% 97%, --primary-foreground: 0 0% 9%
+--secondary: 0 0% 15%, --secondary-foreground: 0 0% 100%
+--muted: 0 0% 15%, --muted-foreground: 0 0% 75%
+--accent: 0 0% 15%, --accent-foreground: 0 0% 100%
+--border: 0 0% 20%, --input: 0 0% 20%, --ring: 0 0% 100%
+--radius: 2px
+--font-body: &#39;Barlow&#39;, sans-serif
+--font-accent: &#39;Instrument Serif&#39;, serif
+
+Liquid Glass CSS classes:
+
+.liquid-glass — subtle glassmorphism: background: rgba(255,255,255,0.01), background-blend-mode: luminosity, backdrop-filter: blur(4px), no border, box-shadow: inset 0 1px 1px rgba(255,255,255,0.1). Has a ::before pseudo-element for a gradient border effect using linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%, transparent 40%, transparent 60%, rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%) with mask-composite: exclude and padding: 1.4px.
+
+.liquid-glass-strong — stronger variant: same as above but backdrop-filter: blur(50px), box-shadow: 4px 4px 4px rgba(0,0,0,0.05), inset 0 1px 1px rgba(255,255,255,0.15), and slightly higher gradient opacity values (0.5/0.2 instead of 0.45/0.15).
+
+Tailwind config: Set fontFamily: { body: [&#39;Barlow&#39;, &#39;sans-serif&#39;], accent: [&#39;Instrument Serif&#39;, &#39;serif&#39;] } at the theme root level (not in extend).
+
+SECTION 1: NAVBAR (fixed)
+
+Fixed top, full-width, z-50, px-8 py-6, flex row with space-between
+Left: Logo text &quot;VIRALMEDIA&quot; — text-xl font-semibold tracking-tight font-body text-foreground
+Center (hidden on mobile): Nav links [&#39;Work&#39;, &#39;Services&#39;, &#39;About&#39;, &#39;Blog&#39;, &#39;Contact&#39;] — each px-4 py-2 text-sm font-medium text-foreground rounded-sm hover:bg-white/10
+Right: &quot;Get Started&quot; button — liquid-glass-strong rounded-full px-6 py-2.5 text-sm font-medium text-foreground
+
+SECTION 2: HERO (full viewport height)
+
+Container: relative w-full h-screen overflow-hidden
+Background video (behind everything): Absolutely positioned, object-cover object-bottom. On mobile: -translate-y-[100px], on md+: no translate. Video URL: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260326_073936_8dd07fdb-4f6b-4220-a3f0-9dedfaab0c88.mp4 (autoPlay, loop, muted, playsInline)
+Bottom gradient overlay: absolute inset-x-0 bottom-0 h-60 bg-gradient-to-t from-background to-transparent
+Content (z-10, flex column, justify-end, pb-10 md:pb-20):
+Avatar row: 3 overlapping circular avatars (pravatar.cc, w-8 h-8 rounded-full border-2 border-background, -space-x-2) + text &quot;7,000+ brands already transformed&quot; in text-muted-foreground text-sm
+Heading: text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-[-1px] md:tracking-[-2px] — &quot;Build Stunning with &quot; + &lt;span className=&quot;font-accent italic font-normal&quot;&gt;AI Magic&lt;/span&gt;
+Subtitle: text-sm md:text-lg text-muted-foreground whitespace-normal md:whitespace-nowrap — &quot;AI-powered websites crafted for beauty, speed, and lasting performance.&quot;
+Email form: liquid-glass rounded-full p-1.5 md:p-2 max-w-lg w-full with transparent input and a solid white bg-foreground text-background rounded-full SUBSCRIBE button. Button uses motion.button with whileHover={{ scale: 1.03 }} and whileTap={{ scale: 0.98 }}
+
+SECTION 3: ABOUT (scroll-reveal text)
+
+bg-background py-32 px-8, max-w-4xl mx-auto text-center
+Uses a ScrollRevealText component: splits text into individual words, each wrapped in a motion.span. Uses useScroll with offset: [&quot;start 0.9&quot;, &quot;start 0.3&quot;] and useTransform to animate each word&#39;s opacity from 0.15 to 1 as user scrolls through
+Text: &quot;We blend artificial intelligence with human creativity to craft digital experiences that captivate, convert, and scale — building ambitious brands that truly thrive and lead in the modern web.&quot;
+Typography: text-3xl md:text-4xl lg:text-5xl font-medium tracking-[-1px] leading-relaxed font-body
+
+SECTION 4: SELECTED WORK (2×2 project grid)
+
+bg-background py-32 pb-16 px-8, max-w-6xl mx-auto
+Header: &quot;Selected &quot; + italic accent &quot;Work&quot; — text-4xl md:text-5xl font-medium tracking-[-2px] text-center mb-4
+Subtitle: &quot;A curated collection of projects where bold design meets intelligent technology.&quot; — text-muted-foreground text-lg text-center max-w-2xl mx-auto mb-16
+Grid: grid-cols-1 md:grid-cols-2 gap-6
+4 project cards, each with framer-motion fade-up (y: 40→0, staggered by i * 0.1):
+Image container: aspect-[4/3] liquid-glass rounded-2xl overflow-hidden
+Project title: text-xl font-medium text-foreground font-body
+Category: text-sm text-muted-foreground font-body mt-1
+Projects data:
+&quot;Nova Finance&quot; / &quot;Brand &amp; Web Design&quot; / https://motionsites.ai/assets/hero-grow-ai-preview-BlQ8tAQ-.gif
+&quot;Pulse Health&quot; / &quot;AI Web Development&quot; / https://motionsites.ai/assets/hero-evr-ventures-preview-DZxeVFEX.gif
+&quot;Drift Studios&quot; / &quot;Website Optimization&quot; / https://motionsites.ai/assets/hero-wealth-preview-B70idl_u.gif
+&quot;Arc Commerce&quot; / &quot;Brand &amp; Development&quot; / https://motionsites.ai/assets/hero-neuralyn-preview-Br4FRDQA.gif
+
+SECTION 5: VIDEO SHOWCASE (parallax overlap)
+
+h-[650px] overflow-hidden -mt-[325px] z-0 — overlaps upward into the previous section
+Full-bleed autoplay video: https://media.cleanshot.cloud/media/21620/nKosRonaEKSufJVJ4VtouFhOPkqgJ3dPoQ8ZP52S.mp4
+Top &amp; bottom gradient fades: h-32 bg-gradient-to-b/t from-background to-transparent z-10
+
+SECTION 6: CTA (full-screen with HLS video background)
+
+w-full h-screen overflow-hidden flex items-center justify-center z-10
+HLS video background using hls.js: Stream URL https://stream.mux.com/4IMYGcL01xjs7ek5ANO17JC4VQVUTsojZlnw4fXzwSxc.m3u8 (with Safari native HLS fallback)
+Top/bottom gradient fades: h-40, plus a bg-black/30 overlay
+Content (z-10, centered, max-w-3xl):
+Heading: &quot;Ready to &quot; + italic accent &quot;Transform&quot; + &quot; Your Brand?&quot; — text-4xl md:text-5xl lg:text-6xl font-medium tracking-[-2px] mb-6
+Subtitle: &quot;Let&#39;s build something extraordinary together.&quot; — text-lg text-muted-foreground mb-10
+Two buttons side by side: &quot;START A PROJECT&quot; (solid bg-foreground text-background rounded-full px-10 py-4) and &quot;BOOK A CALL&quot; (liquid-glass-strong rounded-full px-10 py-4)
+All elements animate in with framer-motion y: 30/20→0 staggered
+
+SECTION 7: FOOTER
+
+bg-background border-t border-border px-8 py-16, max-w-6xl mx-auto
+4-column grid (md:grid-cols-4):
+Logo &quot;VIRALMEDIA&quot; + description &quot;AI-powered web design agency crafting digital experiences that convert.&quot;
+Services: Brand Design, AI Web Design, AI Web Development, Optimization
+Company: About, Work, Blog, Careers
+Connect: Twitter, LinkedIn, Instagram, Dribbble
+Bottom bar: copyright &quot;© 2026 VIRALMEDIA. All rights reserved.&quot; + Privacy/Terms links
+All links: text-muted-foreground text-sm hover:text-foreground transition-colors
+
+KEY DEPENDENCIES
+
+framer-motion (animations)
+hls.js (HLS video streaming in CTA)
+Google Fonts: Barlow (400, 500, 600) and Instrument Serif (400 italic) — load via &lt;link&gt; in index.html</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：giglianepefrei/motionsites.ai-prompt-library<br>原始文件：<code>giglianepefrei_fetch\prompts/AI_Designer_Agency.md</code><br>许可证：NOASSERTION<br><a href="https://github.com/giglianepefrei/motionsites.ai-prompt-library/blob/main/giglianepefrei_fetch%5Cprompts/AI_Designer_Agency.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="motionz-premium-landing-page.html">MotionZ Premium Landing Page<small>Landing Page · landing-page</small></a><a href="future-state.html">Future-State<small>Landing Page · hero</small></a><a href="3d-story.html">3D Story<small>Landing Page · hero</small></a><a href="financial-suite.html">Financial Suite<small>Landing Page · hero</small></a><a href="prompt-hero.html">PROMPT<small>Landing Page · hero</small></a><a href="health-portal.html">Health Portal<small>Landing Page · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

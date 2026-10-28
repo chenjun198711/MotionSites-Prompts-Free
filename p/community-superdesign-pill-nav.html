@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pill Nav — Components 提示词 | MotionSites Prompts</title>
+<meta name="description" content="A premium, minimalist pill-shaped navigation component with GSAP-powered hover effects, rotating logo animation, and responsive mobile menu. Features a uni">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/community-superdesign-pill-nav.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pill Nav — Components 提示词">
+<meta property="og:description" content="A premium, minimalist pill-shaped navigation component with GSAP-powered hover effects, rotating logo animation, and responsive mobile menu. Features a uni">
+<meta property="og:url" content="https://prompt-site.shop/p/community-superdesign-pill-nav.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Pill Nav","description":"A premium, minimalist pill-shaped navigation component with GSAP-powered hover effects, rotating logo animation, and responsive mobile menu. Features a unique 'rising circle' background effect on hover.","url":"https://prompt-site.shop/p/community-superdesign-pill-nav.html","inLanguage":"zh-CN","genre":"Components","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-components">Components</a></div><h1>Pill Nav</h1><div class="chip-row"><span class="chip">Components</span><span class="chip">components</span><span class="chip">社区公开收藏</span></div><div class="facts"><span>正文：16,027 字符</span></div><div class="hero-media"><video src="../assets/community/superdesign/pill-nav/preview.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>A premium, minimalist pill-shaped navigation component with GSAP-powered hover effects, rotating logo animation, and responsive mobile menu. Features a unique &#39;rising circle&#39; background effect on hover.</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">You are given a task to integrate an existing React component in the codebase
+
+~~~/README.md
+# PillNav Component
+
+A premium, minimalist pill-shaped navigation component built with React, GSAP, and Tailwind CSS. It features distinctive hover animations where a background circle &quot;rises&quot; to fill the pill, and a rotating logo interaction.
+
+## Features
+
+- **GSAP Animations**: Fluid, high-performance animations for hover states and entrance.
+- **Responsive**: Fully functional mobile menu with smooth transitions.
+- **Smart Link Handling**: Automatically detects and handles both internal (React Router) and external links.
+- **Customizable**: Control colors, easing, and load animations via props.
+- **Aesthetic**: Minimalist design with high attention to detail.
+
+## Dependencies
+
+- `gsap`: ^3.12.0
+- `react-router-dom`: ^6.28.0
+- `lucide-react`: latest
+- `framer-motion`: latest (optional for additional effects)
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `logo` | `string` | - | **Required**. URL/path to the logo image. |
+| `items` | `PillNavItem[]` | - | **Required**. Array of navigation items `{ label, href, ariaLabel? }`. |
+| `activeHref` | `string` | - | The href of the current active page. |
+| `logoAlt` | `string` | `&quot;Logo&quot;` | Alt text for the logo. |
+| `baseColor` | `string` | `hsl(var(--primary))` | Background color of the main nav containers. |
+| `pillColor` | `string` | `hsl(var(--background))` | Default background color of individual pills. |
+| `pillTextColor` | `string` | `hsl(var(--foreground))` | Default text color of individual pills. |
+| `hoveredPillTextColor`| `string` | `hsl(var(--primary-foreground))` | Text color when a pill is hovered. |
+| `ease` | `string` | `&quot;power3.out&quot;` | GSAP easing function for animations. |
+| `initialLoadAnimation`| `boolean`| `true` | Whether to play entrance animation on mount. |
+
+## Usage Example
+
+```tsx
+import { PillNav } from &#39;@/sd-components/386926b7-61c2-45ee-b7bf-f86e750ca9ca&#39;;
+
+const MyNav = () =&gt; {
+const items = [
+{ label: &#39;Home&#39;, href: &#39;/&#39; },
+{ label: &#39;Products&#39;, href: &#39;/products&#39; },
+{ label: &#39;About&#39;, href: &#39;/about&#39; }
+];
+
+return (
+&lt;PillNav
+logo=&quot;/logo.svg&quot;
+items={items}
+activeHref=&quot;/&quot;
+/&gt;
+);
+};
+```
+~~~
+
+~~~/src/App.tsx
+import React from &#39;react&#39;;
+import { HashRouter } from &#39;react-router-dom&#39;;
+import { PillNav } from &#39;./Component&#39;;
+import { Rocket } from &#39;lucide-react&#39;;
+
+export default function App() {
+const navItems = [
+{ label: &#39;Home&#39;, href: &#39;/&#39; },
+{ label: &#39;Collection&#39;, href: &#39;/collection&#39; },
+{ label: &#39;About&#39;, href: &#39;/about&#39; },
+{ label: &#39;Contact&#39;, href: &#39;/contact&#39; }
+];
+
+return (
+&lt;HashRouter&gt;
+&lt;div className=&quot;min-h-screen bg-[#F9F9F9] flex flex-col items-center justify-center p-20&quot;&gt;
+&lt;div className=&quot;w-full max-w-2xl bg-white/50 backdrop-blur-sm rounded-[40px] shadow-2xl shadow-black/5 p-12 flex items-center justify-center relative overflow-visible&quot;&gt;
+&lt;PillNav
+logo={&lt;Rocket size={24} /&gt;}
+items={navItems}
+activeHref=&quot;/&quot;
+baseColor=&quot;#1A1A1B&quot;
+pillColor=&quot;#F9F9F9&quot;
+hoveredPillTextColor=&quot;#FFFFFF&quot;
+pillTextColor=&quot;#1A1A1B&quot;
+/&gt;
+&lt;/div&gt;
+
+&lt;div className=&quot;mt-12 text-center&quot;&gt;
+&lt;h1 className=&quot;text-2xl font-medium text-slate-900 tracking-tight&quot;&gt;Pill Navigation&lt;/h1&gt;
+&lt;p className=&quot;text-slate-500 mt-2 max-w-md mx-auto text-balance&quot;&gt;
+A premium navigation component with GSAP animations. Hover over the links to see the rising background effect.
+&lt;/p&gt;
+&lt;/div&gt;
+
+{/* Reply Button (as requested by system prompt) */}
+&lt;button
+onClick={() =&gt; window.location.reload()}
+className=&quot;fixed bottom-8 right-8 px-6 py-3 bg-slate-900 text-white rounded-full font-medium shadow-xl hover:scale-105 active:scale-95 transition-transform flex items-center gap-2&quot;
+&gt;
+&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; strokeWidth=&quot;2.5&quot; strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot;&gt;
+&lt;path d=&quot;M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8&quot; /&gt;
+&lt;path d=&quot;M3 3v5h5&quot; /&gt;
+&lt;/svg&gt;
+Replay Animation
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/HashRouter&gt;
+);
+}
+~~~
+
+~~~/package.json
+{
+&quot;name&quot;: &quot;pill-nav-showcase&quot;,
+&quot;description&quot;: &quot;A premium pill-shaped navigation with GSAP animations&quot;,
+&quot;dependencies&quot;: {
+&quot;react&quot;: &quot;^18.0.0&quot;,
+&quot;react-dom&quot;: &quot;^18.0.0&quot;,
+&quot;gsap&quot;: &quot;^3.12.0&quot;,
+&quot;react-router-dom&quot;: &quot;^6.28.0&quot;,
+&quot;lucide-react&quot;: &quot;latest&quot;,
+&quot;framer-motion&quot;: &quot;latest&quot;,
+&quot;clsx&quot;: &quot;latest&quot;,
+&quot;tailwind-merge&quot;: &quot;latest&quot;
+}
+}
+~~~
+
+~~~/src/Component.tsx
+/**
+* PillNav - A premium, GSAP-powered navigation component.
+* Features:
+* - Rising circle background animation on hover
+* - Rotating logo animation
+* - Responsive mobile menu with GSAP transitions
+* - Support for both React Router Link and standard anchor tags
+* - Customizable colors and easing
+*/
+
+import React, { useEffect, useRef, useState } from &#39;react&#39;;
+import { Link } from &#39;react-router-dom&#39;;
+import { gsap } from &#39;gsap&#39;;
+import { Menu, X, Rocket } from &#39;lucide-react&#39;;
+
+export type PillNavItem = {
+label: string;
+href: string;
+ariaLabel?: string;
+};
+
+export interface PillNavProps {
+/** Logo icon component or source URL (image or SVG) */
+logo: React.ReactNode | string;
+/** Alt text for the logo */
+logoAlt?: string;
+/** Navigation items array */
+items: PillNavItem[];
+/** The current active href for highlighting */
+activeHref?: string;
+/** Optional extra class names for the nav container */
+className?: string;
+/** GSAP easing function */
+ease?: string;
+/** The base background color of the nav pills and logo container */
+baseColor?: string;
+/** The color of the pill when not hovered */
+pillColor?: string;
+/** Text color when the pill is hovered */
+hoveredPillTextColor?: string;
+/** Default text color for the pills */
+pillTextColor?: string;
+/** Callback for mobile menu toggle */
+onMobileMenuClick?: () =&gt; void;
+/** Whether to play an entrance animation on mount */
+initialLoadAnimation?: boolean;
+}
+
+export const PillNav: React.FC&lt;PillNavProps&gt; = ({
+logo,
+logoAlt = &#39;Logo&#39;,
+items,
+activeHref,
+className = &#39;&#39;,
+ease = &#39;power3.out&#39;,
+baseColor = &#39;hsl(var(--primary))&#39;,
+pillColor = &#39;hsl(var(--background))&#39;,
+hoveredPillTextColor = &#39;hsl(var(--primary-foreground))&#39;,
+pillTextColor,
+onMobileMenuClick,
+initialLoadAnimation = true
+}) =&gt; {
+const resolvedPillTextColor = pillTextColor ?? &#39;hsl(var(--foreground))&#39;;
+const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+const containerRef = useRef&lt;HTMLDivElement&gt;(null);
+const circleRefs = useRef&lt;Array&lt;HTMLSpanElement | null&gt;&gt;([]);
+const tlRefs = useRef&lt;Array&lt;gsap.core.Timeline | null&gt;&gt;([]);
+const activeTweenRefs = useRef&lt;Array&lt;gsap.core.Tween | null&gt;&gt;([]);
+const logoImgRef = useRef&lt;HTMLImageElement | null&gt;(null);
+const logoTweenRef = useRef&lt;gsap.core.Tween | null&gt;(null);
+const hamburgerRef = useRef&lt;HTMLButtonElement | null&gt;(null);
+const mobileMenuRef = useRef&lt;HTMLDivElement | null&gt;(null);
+const navItemsRef = useRef&lt;HTMLDivElement | null&gt;(null);
+const logoRef = useRef&lt;HTMLAnchorElement | HTMLDivElement | null&gt;(null);
+
+const renderLogo = () =&gt; {
+if (typeof logo === &#39;string&#39;) {
+return (
+&lt;img
+src={logo}
+alt={logoAlt}
+ref={logoImgRef}
+className=&quot;w-8 h-8 object-contain pointer-events-none&quot;
+/&gt;
+);
+}
+return (
+&lt;div ref={logoImgRef} className=&quot;flex items-center justify-center&quot;&gt;
+{logo}
+&lt;/div&gt;
+);
+};
+
+useEffect(() =&gt; {
+const layout = () =&gt; {
+circleRefs.current.forEach((circle, index) =&gt; {
+if (!circle?.parentElement) return;
+
+const pill = circle.parentElement as HTMLElement;
+const rect = pill.getBoundingClientRect();
+const { width: w, height: h } = rect;
+
+// Calculate the radius for the expanding circle to cover the pill
+const R = ((w * w) / 4 + h * h) / (2 * h);
+const D = Math.ceil(2 * R) + 2;
+const delta = Math.ceil(R - Math.sqrt(Math.max(0, R * R - (w * w) / 4))) + 1;
+const originY = D - delta;
+
+circle.style.width = `${D}px`;
+circle.style.height = `${D}px`;
+circle.style.bottom = `-${delta}px`;
+
+gsap.set(circle, {
+xPercent: -50,
+scale: 0,
+transformOrigin: `50% ${originY}px`
+});
+
+const label = pill.querySelector&lt;HTMLElement&gt;(&#39;.pill-label&#39;);
+const white = pill.querySelector&lt;HTMLElement&gt;(&#39;.pill-label-hover&#39;);
+
+if (label) gsap.set(label, { y: 0 });
+if (white) gsap.set(white, { y: h + 12, opacity: 0 });
+
+tlRefs.current[index]?.kill();
+const tl = gsap.timeline({ paused: true });
+
+tl.to(circle, {
+scale: 1.2,
+xPercent: -50,
+duration: 0.8,
+ease,
+overwrite: &#39;auto&#39;
+}, 0);
+
+if (label) {
+tl.to(label, {
+y: -(h + 8),
+duration: 0.6,
+ease,
+overwrite: &#39;auto&#39;
+}, 0);
+}
+
+if (white) {
+gsap.set(white, { y: Math.ceil(h + 20), opacity: 0 });
+tl.to(white, {
+y: 0,
+opacity: 1,
+duration: 0.6,
+ease,
+overwrite: &#39;auto&#39;
+}, 0);
+}
+
+tlRefs.current[index] = tl;
+});
+};
+
+layout();
+
+const onResize = () =&gt; layout();
+window.addEventListener(&#39;resize&#39;, onResize);
+
+if (document.fonts) {
+document.fonts.ready.then(layout).catch(() =&gt; {});
+}
+
+// Initial load animation
+if (initialLoadAnimation) {
+const logo = logoRef.current;
+const navItems = navItemsRef.current;
+
+if (logo) {
+gsap.set(logo, { scale: 0, opacity: 0 });
+gsap.to(logo, {
+scale: 1,
+opacity: 1,
+duration: 0.8,
+ease: &quot;back.out(1.7)&quot;
+});
+}
+
+if (navItems) {
+const listItems = navItems.querySelectorAll(&#39;li&#39;);
+gsap.set(listItems, { opacity: 0, x: -20 });
+gsap.to(listItems, {
+opacity: 1,
+x: 0,
+duration: 0.6,
+stagger: 0.05,
+ease: &quot;power2.out&quot;,
+delay: 0.2
+});
+}
+}
+
+return () =&gt; window.removeEventListener(&#39;resize&#39;, onResize);
+}, [items, ease, initialLoadAnimation]);
+
+const handleEnter = (i: number) =&gt; {
+const tl = tlRefs.current[i];
+if (!tl) return;
+activeTweenRefs.current[i]?.kill();
+activeTweenRefs.current[i] = tl.tweenTo(tl.duration(), {
+duration: 0.4,
+ease,
+overwrite: &#39;auto&#39;
+});
+};
+
+const handleLeave = (i: number) =&gt; {
+const tl = tlRefs.current[i];
+if (!tl) return;
+activeTweenRefs.current[i]?.kill();
+activeTweenRefs.current[i] = tl.tweenTo(0, {
+duration: 0.3,
+ease,
+overwrite: &#39;auto&#39;
+});
+};
+
+const handleLogoEnter = () =&gt; {
+const img = logoImgRef.current;
+if (!img) return;
+logoTweenRef.current?.kill();
+logoTweenRef.current = gsap.to(img, {
+rotate: 360,
+duration: 0.8,
+ease: &quot;elastic.out(1, 0.5)&quot;,
+overwrite: &#39;auto&#39;,
+onComplete: () =&gt; gsap.set(img, { rotate: 0 })
+});
+};
+
+const toggleMobileMenu = () =&gt; {
+const newState = !isMobileMenuOpen;
+setIsMobileMenuOpen(newState);
+
+const menu = mobileMenuRef.current;
+if (menu) {
+if (newState) {
+gsap.set(menu, { display: &#39;block&#39;, opacity: 0, y: -20 });
+gsap.to(menu, {
+opacity: 1,
+y: 0,
+duration: 0.4,
+ease: &quot;power3.out&quot;
+});
+} else {
+gsap.to(menu, {
+opacity: 0,
+y: -20,
+duration: 0.3,
+ease: &quot;power3.in&quot;,
+onComplete: () =&gt; {
+gsap.set(menu, { display: &#39;none&#39; });
+}
+});
+}
+}
+onMobileMenuClick?.();
+};
+
+const isExternalLink = (href: string) =&gt;
+href.startsWith(&#39;http://&#39;) ||
+href.startsWith(&#39;https://&#39;) ||
+href.startsWith(&#39;//&#39;) ||
+href.startsWith(&#39;mailto:&#39;) ||
+href.startsWith(&#39;tel:&#39;) ||
+href.startsWith(&#39;#&#39;);
+
+const isRouterLink = (href?: string) =&gt; href &amp;&amp; !isExternalLink(href);
+
+const cssVars = {
+&#39;--base&#39;: baseColor,
+&#39;--pill-bg&#39;: pillColor,
+&#39;--hover-text&#39;: hoveredPillTextColor,
+&#39;--pill-text&#39;: resolvedPillTextColor,
+&#39;--nav-h&#39;: &#39;48px&#39;,
+&#39;--logo-size&#39;: &#39;40px&#39;,
+&#39;--pill-pad-x&#39;: &#39;20px&#39;,
+&#39;--pill-gap&#39;: &#39;6px&#39;
+} as React.CSSProperties;
+
+return (
+&lt;div className={`relative z-[1000] w-full max-w-4xl mx-auto ${className}`} style={cssVars}&gt;
+&lt;nav
+className=&quot;w-full flex items-center justify-between md:justify-center p-4 gap-4&quot;
+aria-label=&quot;Primary&quot;
+&gt;
+{/* Logo Section */}
+&lt;div
+ref={el =&gt; { logoRef.current = el as HTMLDivElement; }}
+onMouseEnter={handleLogoEnter}
+className=&quot;flex-shrink-0&quot;
+&gt;
+{isRouterLink(items[0]?.href) ? (
+&lt;Link
+to={items[0].href}
+className=&quot;flex items-center justify-center rounded-full overflow-hidden transition-transform hover:scale-105 active:scale-95&quot;
+style={{
+width: &#39;var(--nav-h)&#39;,
+height: &#39;var(--nav-h)&#39;,
+background: &#39;var(--base)&#39;,
+color: &#39;var(--pill-bg)&#39;
+}}
+&gt;
+{renderLogo()}
+&lt;/Link&gt;
+) : (
+&lt;a
+href={items[0]?.href || &#39;#&#39;}
+className=&quot;flex items-center justify-center rounded-full overflow-hidden transition-transform hover:scale-105 active:scale-95&quot;
+style={{
+width: &#39;var(--nav-h)&#39;,
+height: &#39;var(--nav-h)&#39;,
+background: &#39;var(--base)&#39;,
+color: &#39;var(--pill-bg)&#39;
+}}
+&gt;
+{renderLogo()}
+&lt;/a&gt;
+)}
+&lt;/div&gt;
+
+{/* Desktop Menu */}
+&lt;div
+ref={navItemsRef}
+className=&quot;hidden md:flex items-center rounded-full px-1.5&quot;
+style={{
+height: &#39;var(--nav-h)&#39;,
+background: &#39;var(--base)&#39;
+}}
+&gt;
+&lt;ul
+role=&quot;menubar&quot;
+className=&quot;list-none flex items-stretch m-0 p-0 h-full&quot;
+style={{ gap: &#39;var(--pill-gap)&#39; }}
+&gt;
+{items.map((item, i) =&gt; {
+const isActive = activeHref === item.href;
+
+const pillStyle: React.CSSProperties = {
+background: &#39;var(--pill-bg)&#39;,
+color: &#39;var(--pill-text)&#39;,
+paddingLeft: &#39;var(--pill-pad-x)&#39;,
+paddingRight: &#39;var(--pill-pad-x)&#39;
+};
+
+const PillContent = (
+&lt;&gt;
+&lt;span
+className=&quot;hover-circle absolute left-1/2 bottom-0 rounded-full z-[1] block pointer-events-none&quot;
+style={{
+background: &#39;var(--base)&#39;,
+willChange: &#39;transform&#39;
+}}
+aria-hidden=&quot;true&quot;
+ref={el =&gt; {
+circleRefs.current[i] = el;
+}}
+/&gt;
+&lt;span className=&quot;label-stack relative inline-block leading-none z-[2] overflow-hidden py-1&quot;&gt;
+&lt;span
+className=&quot;pill-label relative z-[2] inline-block&quot;
+style={{ willChange: &#39;transform&#39; }}
+&gt;
+{item.label}
+&lt;/span&gt;
+&lt;span
+className=&quot;pill-label-hover absolute left-0 top-1 z-[3] inline-block w-full text-center&quot;
+style={{
+color: &#39;var(--hover-text)&#39;,
+willChange: &#39;transform, opacity&#39;
+}}
+aria-hidden=&quot;true&quot;
+&gt;
+{item.label}
+&lt;/span&gt;
+&lt;/span&gt;
+{isActive &amp;&amp; (
+&lt;span
+className=&quot;absolute left-1/2 -bottom-1 -translate-x-1/2 w-1 h-1 rounded-full z-[4]&quot;
+style={{ background: &#39;var(--base)&#39; }}
+aria-hidden=&quot;true&quot;
+/&gt;
+)}
+&lt;/&gt;
+);
+
+const basePillClasses = &quot;relative overflow-hidden inline-flex items-center justify-center h-[calc(var(--nav-h)-12px)] self-center no-underline rounded-full box-border font-medium text-sm uppercase tracking-wider cursor-pointer transition-colors duration-200 hover:z-10&quot;;
+
+return (
+&lt;li key={item.href} role=&quot;none&quot; className=&quot;flex items-center&quot;&gt;
+{isRouterLink(item.href) ? (
+&lt;Link
+role=&quot;menuitem&quot;
+to={item.href}
+className={basePillClasses}
+style={pillStyle}
+aria-label={item.ariaLabel || item.label}
+onMouseEnter={() =&gt; handleEnter(i)}
+onMouseLeave={() =&gt; handleLeave(i)}
+&gt;
+{PillContent}
+&lt;/Link&gt;
+) : (
+&lt;a
+role=&quot;menuitem&quot;
+href={item.href}
+className={basePillClasses}
+style={pillStyle}
+aria-label={item.ariaLabel || item.label}
+onMouseEnter={() =&gt; handleEnter(i)}
+onMouseLeave={() =&gt; handleLeave(i)}
+&gt;
+{PillContent}
+&lt;/a&gt;
+)}
+&lt;/li&gt;
+);
+})}
+&lt;/ul&gt;
+&lt;/div&gt;
+
+{/* Mobile Hamburger */}
+&lt;button
+ref={hamburgerRef}
+onClick={toggleMobileMenu}
+aria-label=&quot;Toggle menu&quot;
+aria-expanded={isMobileMenuOpen}
+className=&quot;md:hidden flex items-center justify-center rounded-full transition-transform active:scale-90&quot;
+style={{
+width: &#39;var(--nav-h)&#39;,
+height: &#39;var(--nav-h)&#39;,
+background: &#39;var(--base)&#39;,
+color: &#39;var(--pill-bg)&#39;
+}}
+&gt;
+{isMobileMenuOpen ? &lt;X size={20} /&gt; : &lt;Menu size={20} /&gt;}
+&lt;/button&gt;
+&lt;/nav&gt;
+
+{/* Mobile Menu Dropdown */}
+&lt;div
+ref={mobileMenuRef}
+className=&quot;md:hidden absolute top-full left-4 right-4 mt-2 rounded-2xl overflow-hidden shadow-2xl z-[999] hidden border border-border/10&quot;
+style={{
+background: &#39;var(--base)&#39;
+}}
+&gt;
+&lt;ul className=&quot;list-none m-0 p-2 flex flex-col gap-1&quot;&gt;
+{items.map((item) =&gt; {
+const isActive = activeHref === item.href;
+return (
+&lt;li key={item.href}&gt;
+{isRouterLink(item.href) ? (
+&lt;Link
+to={item.href}
+className={`block py-3 px-6 text-sm font-semibold uppercase tracking-widest rounded-xl transition-all ${
+isActive
+? &#39;bg-background text-foreground&#39;
+: &#39;text-primary-foreground/70 hover:bg-background/10 hover:text-primary-foreground&#39;
+}`}
+onClick={() =&gt; setIsMobileMenuOpen(false)}
+&gt;
+{item.label}
+&lt;/Link&gt;
+) : (
+&lt;a
+href={item.href}
+className={`block py-3 px-6 text-sm font-semibold uppercase tracking-widest rounded-xl transition-all ${
+isActive
+? &#39;bg-background text-foreground&#39;
+: &#39;text-primary-foreground/70 hover:bg-background/10 hover:text-primary-foreground&#39;
+}`}
+onClick={() =&gt; setIsMobileMenuOpen(false)}
+&gt;
+{item.label}
+&lt;/a&gt;
+)}
+&lt;/li&gt;
+);
+})}
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+);
+};
+
+export default PillNav;
+~~~
+
+Implementation Guidelines
+
+1. Analyze the component structure, styling, animation implementations
+2. Review the component&#39;s arguments and state
+3. Think through what is the best place to adopt this component/style into the design we are doing
+4. Then adopt the component/design to our current system
+
+Help me integrate this into my design</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：superdesigndev/superdesign-prompts<br>原始文件：<code>prompts/pill-nav/README.md</code><br>许可证：CC0-1.0<br>作者：Jason Zhou<br><a href="https://github.com/superdesigndev/superdesign-prompts/blob/main/prompts/pill-nav/README.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="animated-cards.html">Animated Cards<small>Components · carousel</small></a><a href="scroll-marquee.html">Scroll Marquee<small>Components · carousel</small></a><a href="flowmate-carousal.html">FlowMate Carousal<small>Components · carousel</small></a><a href="apex-program-accordion.html">Apex Program Accordion<small>Components · faq</small></a><a href="bento-grid-stats.html">Bento Grid Stats<small>Components · features</small></a><a href="glassmorphic-feature-tabs.html">Glassmorphic Feature Tabs<small>Components · features</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

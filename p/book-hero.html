@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Book Hero — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色背景上展示书籍封面跑马灯，搭配微光点阵纹理，营造沉浸式图书展示氛围。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/book-hero.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Book Hero — Hero Section 提示词">
+<meta property="og:description" content="深色背景上展示书籍封面跑马灯，搭配微光点阵纹理，营造沉浸式图书展示氛围。">
+<meta property="og:url" content="https://prompt-site.shop/p/book-hero.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/book-hero.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Book Hero","description":"深色背景上展示书籍封面跑马灯，搭配微光点阵纹理，营造沉浸式图书展示氛围。","url":"https://prompt-site.shop/p/book-hero.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-05-14T15:03:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Book Hero</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-05-14</span><span>正文：16,180 字符</span></div><div class="hero-media"><img src="../assets/previews/book-hero.webp" alt="Book Hero 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色背景上展示书籍封面跑马灯，搭配微光点阵纹理，营造沉浸式图书展示氛围。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot; /&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+&lt;title&gt;Foliom — Book Marquee&lt;/title&gt;
+&lt;link href=&quot;https://db.onlinewebfonts.com/c/d34add1e23bb969e5eb43cc5a4fab3d0?family=Lawrence+W00+Regular&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;style&gt;
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 100%; height: 100%; overflow: hidden; }
+body { font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, sans-serif; background: #000; }
+
+body::before {
+content: &quot;&quot;;
+position: fixed;
+inset: 0;
+background-image:
+radial-gradient(rgba(255, 240, 200, 0.025) 1px, transparent 1px),
+radial-gradient(rgba(255, 240, 200, 0.015) 1px, transparent 1px);
+background-size: 3px 3px, 7px 7px;
+pointer-events: none;
+z-index: 0;
+}
+
+:root {
+--book-overlap: 115px;
+--hover-push: 60px;
+}
+
+/* ---- Hero ---- */
+.hero {
+position: relative;
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+background: #000;
+}
+
+.hero-title {
+position: absolute;
+top: 130px;
+left: 50%;
+transform: translateX(-50%);
+font-family: &#39;Lawrence W00 Regular&#39;, Georgia, &#39;Times New Roman&#39;, serif;
+font-weight: 400;
+color: #f5f1ea;
+font-size: clamp(120px, 26vw, 420px);
+line-height: 0.9;
+letter-spacing: -0.02em;
+white-space: nowrap;
+z-index: 1;
+user-select: none;
+pointer-events: none;
+}
+
+/* ---- Categories ---- */
+.hero-categories {
+position: absolute;
+bottom: 40px;
+left: 0;
+right: 0;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 10px;
+z-index: 20;
+padding: 0 20px;
+}
+
+.hero-category-pill {
+padding: 8px 22px;
+border: 1px solid rgba(245, 241, 234, 0.2);
+border-radius: 999px;
+color: rgba(245, 241, 234, 0.75);
+font-size: 14px;
+letter-spacing: 0.03em;
+background: rgba(255, 255, 255, 0.04);
+backdrop-filter: blur(8px);
+transition: all 300ms ease;
+text-decoration: none;
+cursor: pointer;
+}
+
+.hero-category-pill:hover {
+color: #f5f1ea;
+border-color: rgba(245, 241, 234, 0.5);
+background: rgba(255, 255, 255, 0.1);
+}
+
+/* ---- Navbar ---- */
+.navbar {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 200;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 20px 48px;
+color: #f5f1ea;
+}
+
+.nav-brand {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.nav-mark {
+width: 28px;
+height: 32px;
+border: 1.5px solid #f5f1ea;
+border-radius: 4px;
+position: relative;
+flex-shrink: 0;
+}
+.nav-mark::after {
+content: &quot;&quot;;
+position: absolute;
+inset: 4px;
+background: #f5f1ea;
+border-radius: 2px;
+clip-path: polygon(0 0, 60% 0, 60% 100%, 0 100%);
+}
+
+.nav-brand-text {
+font-family: &#39;Lawrence W00 Regular&#39;, Georgia, serif;
+font-size: 1.875rem;
+letter-spacing: -0.025em;
+color: #f5f1ea;
+}
+
+.nav-links {
+display: flex;
+align-items: center;
+gap: 32px;
+font-size: 14px;
+color: rgba(255, 255, 255, 0.85);
+}
+.nav-links a {
+color: inherit;
+text-decoration: none;
+transition: color 200ms;
+}
+.nav-links a:hover { color: #fff; }
+
+.nav-right {
+display: flex;
+align-items: center;
+gap: 24px;
+font-size: 14px;
+}
+.nav-right a {
+color: rgba(255, 255, 255, 0.85);
+text-decoration: none;
+transition: color 200ms;
+}
+.nav-right a:hover { color: #fff; }
+
+.nav-cta {
+background: #f5f1ea !important;
+color: #0a0a0a !important;
+padding: 10px 20px;
+border-radius: 999px;
+font-weight: 500;
+transition: background 200ms;
+}
+.nav-cta:hover { background: #fff !important; }
+
+.nav-mobile-toggle {
+display: none;
+background: none;
+border: none;
+color: #f5f1ea;
+cursor: pointer;
+padding: 8px;
+}
+
+/* ---- Marquee ---- */
+.marquee-mask {
+position: absolute;
+top: 62%;
+left: 50%;
+transform: translate(-50%, -50%) rotate(var(--marquee-tilt, -7deg));
+width: 140vw;
+height: calc(286px + 40vw);
+overflow: visible;
+z-index: 10;
+}
+
+.marquee-fade {
+position: absolute;
+inset: 0;
+overflow: hidden;
+mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+-webkit-mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.marquee-track {
+position: absolute;
+top: 50%;
+left: 0;
+transform: translateY(-50%);
+display: flex;
+align-items: center;
+width: max-content;
+padding: 60px 0;
+animation: marquee-scroll 60s linear infinite;
+will-change: transform;
+}
+
+.marquee-mask:has(.book:hover) .marquee-track {
+animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+from { transform: translate(0, -50%); }
+to { transform: translate(-50%, -50%); }
+}
+
+/* ---- Book wrapper ---- */
+.book-wrap {
+position: relative;
+width: 200px;
+height: 286px;
+flex-shrink: 0;
+margin-right: calc(-1 * var(--book-overlap));
+transition:
+margin 500ms cubic-bezier(0.2, 0.7, 0.2, 1),
+transform 500ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.book-wrap:last-child { margin-right: 0; }
+
+.book-wrap:has(+ .book-wrap .book:hover) {
+margin-right: calc(-1 * var(--book-overlap) + var(--hover-push));
+}
+.book-wrap:has(.book:hover) {
+margin-left: var(--hover-push);
+z-index: 9999 !important;
+}
+
+/* ---- Book ---- */
+.book {
+position: relative;
+height: 286px;
+cursor: pointer;
+transform: rotate(7deg);
+transition: transform 450ms cubic-bezier(0.2, 0.7, 0.2, 1);
+will-change: transform;
+}
+.book:hover {
+transform: rotate(7deg) translateY(-28px) scale(1.06);
+z-index: 100;
+}
+
+.book-layer {
+position: absolute;
+top: 0;
+left: 0;
+width: 200px;
+height: 286px;
+border-radius: 2px;
+transform-origin: 0 0;
+}
+
+.book-back-cover {
+box-shadow:
+inset 0 0 0 1px rgba(0, 0, 0, 0.6),
+inset 2px 0 6px rgba(0, 0, 0, 0.5),
+inset -2px 0 6px rgba(0, 0, 0, 0.5);
+z-index: 1;
+filter: brightness(0.7);
+}
+
+.book-page {
+background: linear-gradient(90deg,
+#8a7649 0%, #c9b88a 6%, #f3e7c9 22%, #fbf3dc 50%,
+#f3e7c9 78%, #c9b88a 94%, #8a7649 100%);
+box-shadow:
+inset 0 1px 0 rgba(255, 255, 255, 0.4),
+inset 0 -1px 0 rgba(120, 90, 40, 0.25);
+}
+
+.book-front-cover {
+z-index: 1000;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+box-shadow:
+0 0 0 1px rgba(0, 0, 0, 0.3),
+inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+inset 8px 0 18px -8px rgba(0, 0, 0, 0.5),
+inset -3px 0 8px -4px rgba(255, 255, 255, 0.08),
+8px 16px 30px rgba(0, 0, 0, 0.6);
+}
+.book-front-cover::before {
+content: &quot;&quot;;
+position: absolute;
+inset: 0;
+pointer-events: none;
+background: linear-gradient(90deg,
+rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0) 6%,
+rgba(0, 0, 0, 0) 94%, rgba(255, 255, 255, 0.10) 100%);
+border-radius: inherit;
+}
+
+.book-hinge {
+position: absolute;
+top: 0;
+left: 0;
+height: 5px;
+box-shadow:
+inset 0 1px 0 rgba(255, 255, 255, 0.08),
+inset 0 -1px 0 rgba(0, 0, 0, 0.6),
+0 1px 2px rgba(0, 0, 0, 0.4);
+border-radius: 1px;
+z-index: 0;
+filter: brightness(0.6);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+:root {
+--book-overlap: 90px;
+--hover-push: 30px;
+}
+.navbar { padding: 20px 24px; }
+.nav-links, .nav-right { display: none; }
+.nav-mobile-toggle { display: block; }
+.hero-title {
+top: 100px;
+font-size: clamp(60px, 18vw, 180px);
+}
+.hero-categories { bottom: 30px; gap: 8px; padding: 0 16px; }
+.hero-category-pill { padding: 6px 16px; font-size: 12px; }
+.marquee-mask { top: 58%; height: calc(200px + 30vw); }
+.book-wrap { width: 140px; height: 200px; }
+.book { height: 200px; }
+.book-layer { width: 140px; height: 200px; }
+}
+
+@media (max-width: 480px) {
+:root {
+--book-overlap: 70px;
+--hover-push: 20px;
+}
+.hero-title {
+top: 80px;
+font-size: clamp(48px, 16vw, 140px);
+}
+.hero-categories { bottom: 20px; gap: 6px; padding: 0 12px; }
+.hero-category-pill { padding: 5px 12px; font-size: 11px; }
+.marquee-mask { top: 55%; }
+.book-wrap { width: 110px; height: 157px; }
+.book { height: 157px; }
+.book-layer { width: 110px; height: 157px; }
+}
+
+@media (max-width: 360px) {
+.hero-title {
+top: 72px;
+font-size: clamp(40px, 14vw, 100px);
+}
+.hero-categories { bottom: 16px; gap: 5px; padding: 0 10px; }
+.hero-category-pill { padding: 4px 10px; font-size: 10px; }
+.book-wrap { width: 90px; height: 128px; }
+.book { height: 128px; }
+.book-layer { width: 90px; height: 128px; }
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;section class=&quot;hero&quot;&gt;
+&lt;!-- Navbar --&gt;
+&lt;nav class=&quot;navbar&quot;&gt;
+&lt;div class=&quot;nav-brand&quot;&gt;
+&lt;div class=&quot;nav-mark&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;nav-brand-text&quot;&gt;Foliom&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;nav-links&quot;&gt;
+&lt;a href=&quot;#&quot;&gt;Catalogs&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;Editions&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;Hub&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;Info&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;nav-right&quot;&gt;
+&lt;a href=&quot;#&quot;&gt;Join us&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;nav-cta&quot;&gt;Build Your List&lt;/a&gt;
+&lt;/div&gt;
+&lt;button class=&quot;nav-mobile-toggle&quot; aria-label=&quot;Toggle menu&quot;&gt;
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;4&quot; x2=&quot;20&quot; y1=&quot;12&quot; y2=&quot;12&quot;/&gt;&lt;line x1=&quot;4&quot; x2=&quot;20&quot; y1=&quot;6&quot; y2=&quot;6&quot;/&gt;&lt;line x1=&quot;4&quot; x2=&quot;20&quot; y1=&quot;18&quot; y2=&quot;18&quot;/&gt;&lt;/svg&gt;
+&lt;/button&gt;
+&lt;/nav&gt;
+
+&lt;!-- Title --&gt;
+&lt;h1 class=&quot;hero-title&quot;&gt;Foliom&lt;/h1&gt;
+
+&lt;!-- Categories --&gt;
+&lt;div class=&quot;hero-categories&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;hero-category-pill&quot;&gt;Romance&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;hero-category-pill&quot;&gt;Short Story&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;hero-category-pill&quot;&gt;Memoir&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;hero-category-pill&quot;&gt;Classic&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;hero-category-pill&quot;&gt;Fantasy&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!-- Marquee --&gt;
+&lt;div class=&quot;marquee-mask&quot; style=&quot;--marquee-tilt: -7deg;&quot; id=&quot;marquee&quot;&gt;&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;script&gt;
+const PAGE_STEP = 1.1;
+const PAGE_INSET = 8;
+const SKEW = &#39;30deg&#39;;
+
+const BOOKS = [
+{ title: &#39;Shadows of\nthe Archive&#39;, cover: &#39;linear-gradient(150deg, #2a1a0e 0%, #3d2517 100%)&#39;, coverImage: &#39;book-1.png&#39;, pageCount: 22 },
+{ title: &#39;The Temple\nof Lost Suns&#39;, cover: &#39;linear-gradient(150deg, #c46828 0%, #8a4520 100%)&#39;, coverImage: &#39;book-2.png&#39;, pageCount: 18 },
+{ title: &#39;Serpent\n&amp; Thorn&#39;, cover: &#39;linear-gradient(150deg, #1a0a10 0%, #2e1018 100%)&#39;, coverImage: &#39;book-3.png&#39;, pageCount: 26 },
+{ title: &#39;The Last\nMessage&#39;, cover: &#39;linear-gradient(150deg, #161618 0%, #2a2a2e 100%)&#39;, coverImage: &#39;book-4.png&#39;, pageCount: 14 },
+{ title: &#39;All the Light\nWe Cannot See&#39;, cover: &#39;linear-gradient(150deg, #6a7a50 0%, #4a5a38 100%)&#39;, coverImage: &#39;book-5.png&#39;, pageCount: 20 },
+{ title: &#39;The Roommate\nRisk&#39;, cover: &#39;linear-gradient(150deg, #e8645a 0%, #c44a40 100%)&#39;, coverImage: &#39;book-6.png&#39;, pageCount: 28 },
+{ title: &#39;Ashes of\nAeloria&#39;, cover: &#39;linear-gradient(150deg, #1a1a22 0%, #2a2a30 100%)&#39;, coverImage: &#39;book-7.png&#39;, pageCount: 16 },
+{ title: &#39;Own Your\nTime&#39;, cover: &#39;linear-gradient(150deg, #e85a10 0%, #c84a08 100%)&#39;, coverImage: &#39;book-8.png&#39;, pageCount: 24 },
+{ title: &#39;The Quiet\nWitness&#39;, cover: &#39;linear-gradient(150deg, #1a1e24 0%, #2a3038 100%)&#39;, coverImage: &#39;book-9.png&#39;, pageCount: 30 },
+{ title: &#39;The Light\nWe Carry&#39;, cover: &#39;linear-gradient(150deg, #0e1a30 0%, #1a2a48 100%)&#39;, coverImage: &#39;book-10.png&#39;, pageCount: 19 },
+{ title: &#39;The Bright\nBeyond&#39;, cover: &#39;linear-gradient(150deg, #0c1428 0%, #1a2040 100%)&#39;, coverImage: &#39;book-11.png&#39;, pageCount: 22 },
+{ title: &#39;The Spaces\nBetween&#39;, cover: &#39;linear-gradient(150deg, #c8b8a0 0%, #a89878 100%)&#39;, coverImage: &#39;book-12.png&#39;, pageCount: 15 },
+{ title: &#39;Sunshine and\nSecond Chances&#39;, cover: &#39;linear-gradient(150deg, #f5e6b8 0%, #e8c870 100%)&#39;, coverImage: &#39;book-13.png&#39;, pageCount: 20 },
+{ title: &#39;The Stories\nWe Keep&#39;, cover: &#39;linear-gradient(150deg, #b8a0d0 0%, #9480b8 100%)&#39;, coverImage: &#39;book-14.png&#39;, pageCount: 18 },
+{ title: &#39;The Right Swing\nWrong Timing&#39;, cover: &#39;linear-gradient(150deg, #f0b8c8 0%, #e8a0b0 100%)&#39;, coverImage: &#39;book-15.png&#39;, pageCount: 16 },
+{ title: &#39;Cover 16&#39;, cover: &#39;linear-gradient(150deg, #2a3040 0%, #1a2030 100%)&#39;, coverImage: &#39;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260528_045156_4a79ba3c-ba56-4cd4-834b-d9728f56d1a4.png&amp;w=1920&amp;q=85&#39;, pageCount: 20 },
+{ title: &#39;Cover 17&#39;, cover: &#39;linear-gradient(150deg, #3a2a18 0%, #2a1a10 100%)&#39;, coverImage: &#39;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260528_044451_68c948df-6c4c-45eb-974e-923486a41e41.png&amp;w=1920&amp;q=85&#39;, pageCount: 24 },
+{ title: &#39;Cover 18&#39;, cover: &#39;linear-gradient(150deg, #1a2838 0%, #0e1828 100%)&#39;, coverImage: &#39;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260528_043853_b2f3c7c8-5d47-43bc-9ce4-2fa8d717e42b.png&amp;w=1920&amp;q=85&#39;, pageCount: 18 },
+{ title: &#39;Cover 19&#39;, cover: &#39;linear-gradient(150deg, #28201a 0%, #1a1410 100%)&#39;, coverImage: &#39;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260528_043838_240c7443-18d6-4d61-be4a-2d01e2dd65a6.png&amp;w=1920&amp;q=85&#39;, pageCount: 26 },
+{ title: &#39;Cover 20&#39;, cover: &#39;linear-gradient(150deg, #2a3828 0%, #1a2818 100%)&#39;, coverImage: &#39;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260528_043832_62031210-1de3-47a6-ac3f-78eb84e99858.png&amp;w=1920&amp;q=85&#39;, pageCount: 22 },
+{ title: &#39;Cover 21&#39;, cover: &#39;linear-gradient(150deg, #382a20 0%, #281a12 100%)&#39;, coverImage: &#39;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260528_043220_eb34b2f8-8a78-4b29-bbbc-d61e137aedad.png&amp;w=1920&amp;q=85&#39;, pageCount: 14 },
+{ title: &#39;Cover 22&#39;, cover: &#39;linear-gradient(150deg, #1a2028 0%, #101820 100%)&#39;, coverImage: &#39;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260528_043212_ce1559e3-e0a6-48c8-887f-1331a8e989c5.png&amp;w=1920&amp;q=85&#39;, pageCount: 28 },
+{ title: &#39;Cover 23&#39;, cover: &#39;linear-gradient(150deg, #302818 0%, #201810 100%)&#39;, coverImage: &#39;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260528_032638_9520b937-d7e8-4f6a-88ba-8bbd1e8ecbfe.png&amp;w=1920&amp;q=85&#39;, pageCount: 16 },
+{ title: &#39;Cover 24&#39;, cover: &#39;linear-gradient(150deg, #20282e 0%, #141c22 100%)&#39;, coverImage: &#39;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260528_043201_f749ce8e-72f6-46eb-8440-0f6bdbf2a782.png&amp;w=1920&amp;q=85&#39;, pageCount: 19 },
+];
+
+function createBook(book) {
+const depth = PAGE_STEP * (book.pageCount + 1);
+const bookEl = document.createElement(&#39;div&#39;);
+bookEl.className = &#39;book&#39;;
+bookEl.style.width = `${200 + depth + 1.1}px`;
+
+// Hinge
+const hinge = document.createElement(&#39;div&#39;);
+hinge.className = &#39;book-hinge&#39;;
+hinge.style.width = `${depth + 1}px`;
+hinge.style.background = book.cover;
+bookEl.appendChild(hinge);
+
+// Back cover
+const back = document.createElement(&#39;div&#39;);
+back.className = &#39;book-layer book-back-cover&#39;;
+back.style.background = book.cover;
+back.style.transform = `translateX(${depth}px) skewY(${SKEW})`;
+bookEl.appendChild(back);
+
+// Pages
+for (let i = 1; i &lt;= book.pageCount; i++) {
+const t = i / book.pageCount;
+const page = document.createElement(&#39;div&#39;);
+page.className = &#39;book-layer book-page&#39;;
+page.style.transform = `translateX(${PAGE_STEP * i}px) skewY(${SKEW})`;
+page.style.zIndex = 2 + (book.pageCount - i);
+page.style.filter = `brightness(${(1 - t * 0.06).toFixed(3)})`;
+page.style.top = `${PAGE_INSET / 2}px`;
+page.style.height = `calc(100% - ${PAGE_INSET}px)`;
+bookEl.appendChild(page);
+}
+
+// Front cover
+const front = document.createElement(&#39;div&#39;);
+front.className = &#39;book-layer book-front-cover&#39;;
+front.style.transform = `skewY(${SKEW})`;
+if (book.coverImage) {
+front.style.backgroundImage = `url(${book.coverImage})`;
+front.style.backgroundSize = &#39;cover&#39;;
+front.style.backgroundPosition = &#39;center&#39;;
+} else {
+front.style.background = book.cover;
+}
+bookEl.appendChild(front);
+
+return bookEl;
+}
+
+function buildMarquee() {
+const marquee = document.getElementById(&#39;marquee&#39;);
+const fade = document.createElement(&#39;div&#39;);
+fade.className = &#39;marquee-fade&#39;;
+
+const track = document.createElement(&#39;div&#39;);
+track.className = &#39;marquee-track&#39;;
+
+const allBooks = [...BOOKS, ...BOOKS];
+const total = allBooks.length;
+
+allBooks.forEach((book, i) =&gt; {
+const wrap = document.createElement(&#39;div&#39;);
+wrap.className = &#39;book-wrap&#39;;
+wrap.style.zIndex = total - i;
+wrap.appendChild(createBook(book));
+track.appendChild(wrap);
+});
+
+fade.appendChild(track);
+marquee.appendChild(fade);
+}
+
+buildMarquee();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

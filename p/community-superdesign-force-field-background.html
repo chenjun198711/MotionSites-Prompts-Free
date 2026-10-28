@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Force Field Background — Animations &amp; Backgrounds 提示词 | MotionSites Prompts</title>
+<meta name="description" content="An interactive, particle-based force field background effect that reacts to mouse movement. Uses p5.js to render particles based on image brightness maps, ">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/community-superdesign-force-field-background.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Force Field Background — Animations &amp; Backgrounds 提示词">
+<meta property="og:description" content="An interactive, particle-based force field background effect that reacts to mouse movement. Uses p5.js to render particles based on image brightness maps, ">
+<meta property="og:url" content="https://prompt-site.shop/p/community-superdesign-force-field-background.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/community-superdesign-force-field-background.png">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Force Field Background","description":"An interactive, particle-based force field background effect that reacts to mouse movement. Uses p5.js to render particles based on image brightness maps, creating a fluid, magnetic visual experience.","url":"https://prompt-site.shop/p/community-superdesign-force-field-background.html","inLanguage":"zh-CN","genre":"Animations & Backgrounds","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-animations___backgrounds">Animations &amp; Backgrounds</a></div><h1>Force Field Background</h1><div class="chip-row"><span class="chip">Animations &amp; Backgrounds</span><span class="chip">background</span><span class="chip">社区公开收藏</span></div><div class="facts"><span>正文：16,234 字符</span></div><div class="hero-media"><img src="../assets/previews/community-superdesign-force-field-background.png" alt="Force Field Background 动效预览" loading="lazy"><div class="media-note">本地预览图 · png</div></div><h2>简介</h2><p>An interactive, particle-based force field background effect that reacts to mouse movement. Uses p5.js to render particles based on image brightness maps, creating a fluid, magnetic visual experience.</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">You are given a task to integrate an existing React component in the codebase
+
+~~~/README.md
+# ForceFieldBackground
+
+A high-performance, interactive particle system background that reacts to mouse movement with a magnetic &quot;force field&quot; effect. Built with p5.js and React.
+
+## Features
+
+- **Interactive Force Field**: Particles disperse as the mouse moves through them.
+- **Image-Based Mapping**: Particles are generated based on the brightness map of an underlying image (defaults to a mountain landscape).
+- **Dynamic Physics**: Fluid motion with friction and restoration forces.
+- **Customizable**: Control hue, saturation, particle density, stroke width, and force field physics.
+- **Production Ready**: Responsive canvas resizing, proper React cleanup, and TypeScript support.
+
+## Dependencies
+
+- `p5`: For high-performance canvas rendering
+- `react`: Core framework
+
+## Usage
+
+```tsx
+import { ForceFieldBackground } from &#39;@/sd-components/febbd3b8-b30b-407b-a997-55442e42be27&#39;;
+
+function MyPage() {
+return (
+&lt;div className=&quot;relative w-screen h-screen&quot;&gt;
+&lt;ForceFieldBackground
+hue={210}
+spacing={10}
+forceStrength={15}
+/&gt;
+
+&lt;div className=&quot;absolute inset-0 z-10 flex items-center justify-center pointer-events-none&quot;&gt;
+&lt;h1 className=&quot;text-white text-6xl font-bold mix-blend-overlay&quot;&gt;
+Hello World
+&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+);
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `imageUrl` | string | (Mountain Image) | Source image URL for particle mapping |
+| `hue` | number | 210 | Base color hue (0-360) |
+| `saturation` | number | 100 | Color saturation (0-100) |
+| `spacing` | number | 10 | Grid spacing (lower = more particles) |
+| `density` | number | 2.0 | Random density factor |
+| `minStroke` | number | 2 | Minimum particle size |
+| `maxStroke` | number | 6 | Maximum particle size |
+| `forceStrength` | number | 10 | Strength of cursor repulsion |
+| `magnifierRadius` | number | 150 | Radius of interaction area |
+| `friction` | number | 0.9 | Movement friction (0.5-0.99) |
+| `restoreSpeed` | number | 0.05 | Speed of return to origin |
+
+## Notes
+
+- The component automatically fills its parent container. Ensure the parent has dimensions.
+- Mouse interaction is relative to the canvas.
+- For best performance, avoid setting `spacing` lower than 5 on large screens.
+~~~
+
+~~~/src/App.tsx
+import React, { useState } from &#39;react&#39;;
+import { ForceFieldBackground } from &#39;./Component&#39;;
+import { RefreshCw, Zap, Sliders, Maximize, Palette } from &#39;lucide-react&#39;;
+
+export default function App() {
+const [params, setParams] = useState({
+hue: 210,
+saturation: 100,
+minStroke: 2,
+maxStroke: 6,
+spacing: 10,
+forceStrength: 10,
+magnifierRadius: 150
+});
+
+const randomize = () =&gt; {
+setParams({
+...params,
+hue: Math.floor(Math.random() * 360),
+minStroke: parseFloat((Math.random() * 3 + 1).toFixed(1)),
+maxStroke: parseFloat((Math.random() * 8 + 4).toFixed(1)),
+spacing: Math.floor(Math.random() * 8 + 8),
+magnifierRadius: Math.floor(Math.random() * 100 + 100)
+});
+};
+
+return (
+&lt;div className=&quot;relative w-full min-h-screen font-sans text-white bg-black overflow-hidden&quot;&gt;
+{/* Background Component */}
+&lt;div className=&quot;absolute inset-0 z-0&quot;&gt;
+&lt;ForceFieldBackground
+hue={params.hue}
+saturation={params.saturation}
+minStroke={params.minStroke}
+maxStroke={params.maxStroke}
+spacing={params.spacing}
+forceStrength={params.forceStrength}
+magnifierRadius={params.magnifierRadius}
+/&gt;
+&lt;/div&gt;
+
+{/* Foreground Content Overlay */}
+&lt;div className=&quot;relative z-10 flex flex-col items-center justify-center min-h-screen pointer-events-none&quot;&gt;
+&lt;div className=&quot;text-center space-y-8 p-8 max-w-4xl mix-blend-difference&quot;&gt;
+&lt;h1 className=&quot;text-7xl md:text-9xl font-bold tracking-tighter leading-none bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50&quot;
+style={{ fontFamily: &#39;&quot;Inter&quot;, sans-serif&#39; }}&gt;
+FORCE FIELD
+&lt;/h1&gt;
+&lt;p className=&quot;text-xl md:text-2xl font-light tracking-[0.5em] text-white/80 uppercase&quot;&gt;
+Interactive Particle System
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+{/* Floating Controls (Pointer events enabled) */}
+&lt;div className=&quot;fixed bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-4 pointer-events-auto&quot;&gt;
+&lt;div className=&quot;bg-black/40 backdrop-blur-md border border-white/10 p-4 rounded-2xl shadow-2xl flex items-center gap-6 animate-in slide-in-from-bottom-10 fade-in duration-700&quot;&gt;
+
+&lt;div className=&quot;flex flex-col gap-2&quot;&gt;
+&lt;div className=&quot;flex items-center gap-2 text-xs text-white/50 uppercase tracking-wider&quot;&gt;
+&lt;Palette className=&quot;w-3 h-3&quot; /&gt; Hue
+&lt;/div&gt;
+&lt;input
+type=&quot;range&quot; min=&quot;0&quot; max=&quot;360&quot;
+value={params.hue}
+onChange={(e) =&gt; setParams({...params, hue: parseInt(e.target.value)})}
+className=&quot;w-24 accent-white h-1 bg-white/20 rounded-full appearance-none cursor-pointer&quot;
+/&gt;
+&lt;/div&gt;
+
+&lt;div className=&quot;w-px h-8 bg-white/10&quot; /&gt;
+
+&lt;div className=&quot;flex flex-col gap-2&quot;&gt;
+&lt;div className=&quot;flex items-center gap-2 text-xs text-white/50 uppercase tracking-wider&quot;&gt;
+&lt;Maximize className=&quot;w-3 h-3&quot; /&gt; Radius
+&lt;/div&gt;
+&lt;input
+type=&quot;range&quot; min=&quot;50&quot; max=&quot;300&quot;
+value={params.magnifierRadius}
+onChange={(e) =&gt; setParams({...params, magnifierRadius: parseInt(e.target.value)})}
+className=&quot;w-24 accent-white h-1 bg-white/20 rounded-full appearance-none cursor-pointer&quot;
+/&gt;
+&lt;/div&gt;
+
+&lt;div className=&quot;w-px h-8 bg-white/10&quot; /&gt;
+
+&lt;div className=&quot;flex flex-col gap-2&quot;&gt;
+&lt;div className=&quot;flex items-center gap-2 text-xs text-white/50 uppercase tracking-wider&quot;&gt;
+&lt;Zap className=&quot;w-3 h-3&quot; /&gt; Force
+&lt;/div&gt;
+&lt;input
+type=&quot;range&quot; min=&quot;0&quot; max=&quot;30&quot;
+value={params.forceStrength}
+onChange={(e) =&gt; setParams({...params, forceStrength: parseInt(e.target.value)})}
+className=&quot;w-24 accent-white h-1 bg-white/20 rounded-full appearance-none cursor-pointer&quot;
+/&gt;
+&lt;/div&gt;
+
+&lt;button
+onClick={randomize}
+className=&quot;ml-4 p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors border border-white/10 group&quot;
+title=&quot;Randomize Parameters&quot;
+&gt;
+&lt;RefreshCw className=&quot;w-5 h-5 text-white/80 group-hover:rotate-180 transition-transform duration-500&quot; /&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div className=&quot;fixed top-8 right-8 z-20 pointer-events-none&quot;&gt;
+&lt;div className=&quot;bg-black/20 backdrop-blur-sm border border-white/5 px-4 py-2 rounded-full text-xs text-white/30 font-mono&quot;&gt;
+FPS: 60 • POINTS: {(1280/params.spacing * 720/params.spacing * 0.5).toFixed(0)}
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+);
+}
+~~~
+
+~~~/package.json
+{
+&quot;name&quot;: &quot;force-field-background&quot;,
+&quot;description&quot;: &quot;Interactive p5.js force field background component&quot;,
+&quot;dependencies&quot;: {
+&quot;p5&quot;: &quot;^1.9.0&quot;,
+&quot;lucide-react&quot;: &quot;^0.344.0&quot;
+}
+}
+~~~
+
+~~~/src/Component.tsx
+import React, { useEffect, useRef, useState } from &#39;react&#39;;
+import p5 from &#39;p5&#39;;
+
+export interface ForceFieldBackgroundProps {
+/**
+* URL of the image to use as the base for the particle field
+* @default &quot;https://cdn.pixabay.com/photo/2024/12/13/20/29/alps-9266131_1280.jpg&quot;
+*/
+imageUrl?: string;
+/**
+* Base hue for the color palette (0-360)
+* @default 210
+*/
+hue?: number;
+/**
+* Color saturation (0-100)
+* @default 100
+*/
+saturation?: number;
+/**
+* Brightness threshold for particle visibility (0-255)
+* @default 255
+*/
+threshold?: number;
+/**
+* Minimum stroke weight for particles
+* @default 2
+*/
+minStroke?: number;
+/**
+* Maximum stroke weight for particles
+* @default 6
+*/
+maxStroke?: number;
+/**
+* Spacing between particles (lower = more density)
+* @default 10
+*/
+spacing?: number;
+/**
+* Noise scale for particle placement irregularity
+* @default 0
+*/
+noiseScale?: number;
+/**
+* Density factor (probability of particle existence)
+* @default 2.0
+*/
+density?: number;
+/**
+* Invert the source image brightness mapping
+* @default true
+*/
+invertImage?: boolean;
+/**
+* Invert the wireframe/particle visibility condition
+* @default true
+*/
+invertWireframe?: boolean;
+/**
+* Enable the magnifier/force field effect
+* @default true
+*/
+magnifierEnabled?: boolean;
+/**
+* Radius of the force field effect around the cursor
+* @default 150
+*/
+magnifierRadius?: number;
+/**
+* Strength of the force pushing particles away
+* @default 10
+*/
+forceStrength?: number;
+/**
+* Friction factor for particle movement (0-1)
+* @default 0.9
+*/
+friction?: number;
+/**
+* Speed at which particles return to original position
+* @default 0.05
+*/
+restoreSpeed?: number;
+/**
+* Additional CSS class names
+*/
+className?: string;
+}
+
+/**
+* ForceFieldBackground
+*
+* An interactive, particle-based background that reacts to mouse movement.
+* It uses an underlying image to determine particle color and size, creating
+* a &quot;force field&quot; effect where particles are pushed away by the cursor.
+*/
+export function ForceFieldBackground({
+imageUrl = &quot;https://cdn.pixabay.com/photo/2024/12/13/20/29/alps-9266131_1280.jpg&quot;,
+hue = 210,
+saturation = 100,
+threshold = 255,
+minStroke = 2,
+maxStroke = 6,
+spacing = 10,
+noiseScale = 0,
+density = 2.0,
+invertImage = true,
+invertWireframe = true,
+magnifierEnabled = true,
+magnifierRadius = 150,
+forceStrength = 10,
+friction = 0.9,
+restoreSpeed = 0.05,
+className = &quot;&quot;,
+}: ForceFieldBackgroundProps) {
+const containerRef = useRef&lt;HTMLDivElement&gt;(null);
+const p5InstanceRef = useRef&lt;p5 | null&gt;(null);
+const [isLoading, setIsLoading] = useState(true);
+const [error, setError] = useState&lt;string | null&gt;(null);
+
+// Keep latest props in ref to access inside p5 closure without re-instantiating
+const propsRef = useRef({
+hue, saturation, threshold, minStroke, maxStroke, spacing, noiseScale,
+density, invertImage, invertWireframe, magnifierEnabled, magnifierRadius,
+forceStrength, friction, restoreSpeed
+});
+
+useEffect(() =&gt; {
+propsRef.current = {
+hue, saturation, threshold, minStroke, maxStroke, spacing, noiseScale,
+density, invertImage, invertWireframe, magnifierEnabled, magnifierRadius,
+forceStrength, friction, restoreSpeed
+};
+}, [hue, saturation, threshold, minStroke, maxStroke, spacing, noiseScale, density, invertImage, invertWireframe, magnifierEnabled, magnifierRadius, forceStrength, friction, restoreSpeed]);
+
+useEffect(() =&gt; {
+if (!containerRef.current) return;
+
+// Cleanup previous instance if exists
+if (p5InstanceRef.current) {
+p5InstanceRef.current.remove();
+}
+
+const sketch = (p: p5) =&gt; {
+let originalImg: p5.Image;
+let img: p5.Image;
+let palette: p5.Color[] = [];
+let points: {
+pos: p5.Vector;
+originalPos: p5.Vector;
+vel: p5.Vector;
+}[] = [];
+
+// Internal state tracking to detect changes
+let lastHue = -1;
+let lastSaturation = -1;
+let lastSpacing = -1;
+let lastNoiseScale = -1;
+let lastDensity = -1;
+let lastInvertImage: boolean | null = null;
+let magnifierX = 0;
+let magnifierY = 0;
+let magnifierInertia = 0.1;
+
+p.preload = () =&gt; {
+// Use p5&#39;s loadImage with callbacks
+p.loadImage(
+imageUrl,
+(loadedImg) =&gt; {
+originalImg = loadedImg;
+setIsLoading(false);
+},
+(err) =&gt; {
+console.error(&quot;Failed to load image&quot;, err);
+setError(&quot;Failed to load image&quot;);
+setIsLoading(false);
+}
+);
+};
+
+p.setup = () =&gt; {
+if (!originalImg) return; // Should be loaded by preload
+
+// Create canvas to fill parent
+const { clientWidth, clientHeight } = containerRef.current!;
+p.createCanvas(clientWidth, clientHeight);
+
+// Initialize magnifier position
+magnifierX = p.width / 2;
+magnifierY = p.height / 2;
+
+processImage();
+generatePalette(propsRef.current.hue, propsRef.current.saturation);
+generatePoints();
+};
+
+p.windowResized = () =&gt; {
+if (!containerRef.current || !originalImg) return;
+const { clientWidth, clientHeight } = containerRef.current;
+p.resizeCanvas(clientWidth, clientHeight);
+processImage();
+generatePoints();
+};
+
+function processImage() {
+if (!originalImg) return;
+img = originalImg.get();
+// Resize image to match canvas for 1:1 pixel mapping
+if (p.width &gt; 0 &amp;&amp; p.height &gt; 0) {
+img.resize(p.width, p.height);
+}
+img.filter(p.GRAY);
+
+if (propsRef.current.invertImage) {
+img.loadPixels();
+for (let i = 0; i &lt; img.pixels.length; i += 4) {
+img.pixels[i] = 255 - img.pixels[i];
+img.pixels[i + 1] = 255 - img.pixels[i + 1];
+img.pixels[i + 2] = 255 - img.pixels[i + 2];
+}
+img.updatePixels();
+}
+lastInvertImage = propsRef.current.invertImage;
+}
+
+function generatePalette(h: number, s: number) {
+palette = [];
+p.push();
+p.colorMode(p.HSL);
+for (let i = 0; i &lt; 12; i++) {
+let lightness = p.map(i, 0, 11, 95, 5);
+palette.push(p.color(h, s, lightness));
+}
+p.pop();
+}
+
+function generatePoints() {
+if (!img) return;
+points = [];
+const { spacing, density, noiseScale } = propsRef.current;
+
+// Guard against infinite loop or too many points
+const safeSpacing = Math.max(2, spacing);
+
+for (let y = 0; y &lt; img.height; y += safeSpacing) {
+for (let x = 0; x &lt; img.width; x += safeSpacing) {
+if (p.random() &gt; density) continue;
+
+let nx = p.noise(x * noiseScale, y * noiseScale) - 0.5;
+let ny = p.noise((x + 500) * noiseScale, (y + 500) * noiseScale) - 0.5;
+let px = x + nx * safeSpacing;
+let py = y + ny * safeSpacing;
+
+points.push({
+pos: p.createVector(px, py),
+originalPos: p.createVector(px, py),
+vel: p.createVector(0, 0)
+});
+}
+}
+
+lastSpacing = spacing;
+lastNoiseScale = noiseScale;
+lastDensity = density;
+}
+
+function applyForceField(mx: number, my: number) {
+const props = propsRef.current;
+if (!props.magnifierEnabled) return;
+
+for (let pt of points) {
+// Repel force
+let dir = p5.Vector.sub(pt.pos, p.createVector(mx, my));
+let d = dir.mag();
+
+if (d &lt; props.magnifierRadius) {
+dir.normalize();
+let force = dir.mult(props.forceStrength / Math.max(1, d)); // Avoid div by zero
+pt.vel.add(force);
+}
+
+// Friction
+pt.vel.mult(props.friction);
+
+// Restore force (spring back to original)
+let restore = p5.Vector.sub(pt.pos, pt.originalPos).mult(-props.restoreSpeed);
+pt.vel.add(restore);
+
+// Update position
+pt.pos.add(pt.vel);
+}
+}
+
+p.draw = () =&gt; {
+if (!img) return;
+p.background(0);
+
+const props = propsRef.current;
+
+// Check for prop changes that require regeneration
+if (props.hue !== lastHue || props.saturation !== lastSaturation) {
+generatePalette(props.hue, props.saturation);
+lastHue = props.hue;
+lastSaturation = props.saturation;
+}
+
+if (props.invertImage !== lastInvertImage) {
+processImage(); // This sets lastInvertImage
+}
+
+if (props.spacing !== lastSpacing || props.noiseScale !== lastNoiseScale || props.density !== lastDensity) {
+generatePoints();
+}
+
+// Mouse interaction
+// Use lerp for smooth movement of the &#39;magnifier&#39; center
+magnifierX = p.lerp(magnifierX, p.mouseX, magnifierInertia);
+magnifierY = p.lerp(magnifierY, p.mouseY, magnifierInertia);
+
+applyForceField(magnifierX, magnifierY);
+
+img.loadPixels();
+p.noFill();
+
+for (let pt of points) {
+let x = pt.pos.x;
+let y = pt.pos.y;
+let d = p.dist(x, y, magnifierX, magnifierY);
+
+let px = p.constrain(p.floor(x), 0, img.width - 1);
+let py = p.constrain(p.floor(y), 0, img.height - 1);
+
+// Access pixel data (RGBA)
+let index = (px + py * img.width) * 4;
+// Just use R channel since it&#39;s grayscale
+let brightness = img.pixels[index];
+
+// Guard against undefined brightness if image resized or not ready
+if (brightness === undefined) continue;
+
+let condition = props.invertWireframe
+? brightness &lt; props.threshold
+: brightness &gt; props.threshold;
+
+if (condition) {
+let shadeIndex = Math.floor(p.map(brightness, 0, 255, 0, palette.length - 1));
+shadeIndex = p.constrain(shadeIndex, 0, palette.length - 1);
+
+let strokeSize = p.map(brightness, 0, 255, props.minStroke, props.maxStroke);
+
+if (props.magnifierEnabled &amp;&amp; d &lt; props.magnifierRadius) {
+let factor = p.map(d, 0, props.magnifierRadius, 2, 1); // 2x size at center
+strokeSize *= factor;
+}
+
+if (palette[shadeIndex]) {
+p.stroke(palette[shadeIndex]);
+p.strokeWeight(strokeSize);
+p.point(x, y);
+}
+}
+}
+};
+};
+
+const myP5 = new p5(sketch, containerRef.current);
+p5InstanceRef.current = myP5;
+
+return () =&gt; {
+myP5.remove();
+};
+}, [imageUrl]); // Re-init if imageUrl changes
+
+return (
+&lt;div
+className={`relative w-full h-full overflow-hidden bg-black ${className}`}
+ref={containerRef}
+&gt;
+{isLoading &amp;&amp; (
+&lt;div className=&quot;absolute inset-0 flex items-center justify-center text-white/50 text-xs tracking-widest uppercase&quot;&gt;
+Initializing Force Field...
+&lt;/div&gt;
+)}
+{error &amp;&amp; (
+&lt;div className=&quot;absolute inset-0 flex items-center justify-center text-red-500/50 text-xs tracking-widest uppercase&quot;&gt;
+{error}
+&lt;/div&gt;
+)}
+&lt;/div&gt;
+);
+}
+
+export default ForceFieldBackground;
+~~~
+
+Implementation Guidelines
+
+1. Analyze the component structure, styling, animation implementations
+2. Review the component&#39;s arguments and state
+3. Think through what is the best place to adopt this component/style into the design we are doing
+4. Then adopt the component/design to our current system
+
+Help me integrate this into my design</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：superdesigndev/superdesign-prompts<br>原始文件：<code>prompts/force-field-background/README.md</code><br>许可证：CC0-1.0<br>作者：Jason Zhou<br><a href="https://github.com/superdesigndev/superdesign-prompts/blob/main/prompts/force-field-background/README.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="community-superdesign-the-stacking-cards-effect.html">The &quot;Stacking Cards&quot; Effect<small>Animations &amp; Backgrounds · landing-page</small></a><a href="community-superdesign-hover-reveal-effect.html">Hover reveal effect<small>Animations &amp; Backgrounds · landing-page</small></a><a href="community-superdesign-scroll-journey-line.html">Scroll Journey Line<small>Animations &amp; Backgrounds · background</small></a><a href="community-superdesign-gooey-gradient-background.html">Gooey Gradient Background<small>Animations &amp; Backgrounds · background</small></a><a href="community-superdesign-horizontal-gallery.html">Horizontal Gallery<small>Animations &amp; Backgrounds · background</small></a><a href="community-superdesign-parallax-stars-background.html">Parallax Stars Background<small>Animations &amp; Backgrounds · background</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mythic VPN — Cybersecurity 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Build a premium VPN landing page called &quot;Legion VPN&quot; using React, Vite, Tailwind CSS v4 ( @tailwindcss/vite  plugin), Motion (the  motion/react  packa">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/mythic-vpn.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mythic VPN — Cybersecurity 提示词">
+<meta property="og:description" content="Build a premium VPN landing page called &quot;Legion VPN&quot; using React, Vite, Tailwind CSS v4 ( @tailwindcss/vite  plugin), Motion (the  motion/react  packa">
+<meta property="og:url" content="https://prompt-site.shop/p/mythic-vpn.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Mythic VPN","description":"Build a premium VPN landing page called \"Legion VPN\" using React, Vite, Tailwind CSS v4 ( @tailwindcss/vite  plugin), Motion (the  motion/react  packa","url":"https://prompt-site.shop/p/mythic-vpn.html","inLanguage":"zh-CN","genre":"Cybersecurity","dateCreated":"2026-07-16T02:06:51.254654+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-cybersecurity">Cybersecurity</a></div><h1>Mythic VPN</h1><div class="chip-row"><span class="chip">Cybersecurity</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-07-16</span><span>正文：12,249 字符</span></div><div class="hero-media"><video src="../assets/previews/mythic-vpn.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">```
+**Build a premium VPN landing page called &quot;Legion VPN&quot; using React, Vite, Tailwind CSS v4 (`@tailwindcss/vite` plugin), Motion (the `motion/react` package), and Lucide React icons.**
+
+## Tech Stack &amp; Setup
+
+- React 19, Vite 6, TypeScript
+- Tailwind CSS v4 with `@tailwindcss/vite` plugin (NOT PostCSS config — use `@import &quot;tailwindcss&quot;` in CSS)
+- `motion` package (import from `motion/react`, NOT `framer-motion`)
+- `lucide-react` for icons: `ArrowDown`, `ArrowUpRight`, `Shield`, `Globe`, `Lock`, `Server`, `Menu`, `X`
+
+## Fonts (Google Fonts)
+
+Import in CSS:
+` ` `
+@import url(&#39;https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..40,100..900&amp;family=Manrope:wght@200..800&amp;display=swap&#39;);
+` ` `
+
+Define Tailwind theme tokens:
+- `--font-sans`: &quot;Manrope&quot;, ui-sans-serif, system-ui, sans-serif
+- `--font-display`: &quot;Imbue&quot;, serif
+
+## Color Palette
+
+- Page background: pure black (`#000`)
+- Second section background: `#0F141B`
+- Text: white with various opacities (100%, 95%, 90%, 80%, 64%)
+- Borders: `white/20`, `white/25` with top highlights at `white/40` or `white/45`
+- Card backgrounds: transparent with `white/[0.05]` overlays
+- Marquee strip: solid white background with `#0F141B` text
+
+## Asset URLs
+
+**Hero Background Video:**
+` ` `
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260715_071354_779855cb-27e5-46f1-b462-d054ab8687fe.mp4
+` ` `
+
+**Second Section Background Video:**
+` ` `
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260715_073605_45372917-433f-45a0-b30b-f4efa8d1cd17.mp4
+` ` `
+
+**Helmet Card Image:**
+` ` `
+https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260715_081559_0fd94d82-1ce5-4690-b35e-13ae5cc1ca43.png&amp;w=1280&amp;q=85
+` ` `
+
+**Video Poster / Fallback Image:** `/helmet.jpg` (local file in public folder)
+
+## Page Structure
+
+### 1. Fixed Full-Screen Video Background
+
+- Fixed positioning covering the entire viewport, `z-0`, pointer-events-none
+- Layer 1: Static fallback `&lt;img&gt;` of `/helmet.jpg` covering full area with `object-cover`, always visible
+- Layer 2: `&lt;video&gt;` element on top, starts `opacity-0` and transitions to `opacity-100` over 1500ms once playing/loaded
+- Video attributes: `autoPlay`, `loop`, `muted`, `playsInline`, `poster=&quot;/helmet.jpg&quot;`
+- Scale the video to `scale-[1.01]` to prevent edge gaps
+- UseEffect for autoplay recovery: try `.play()` immediately, and also on first click/touchstart interaction
+
+### 2. Header (motion animated, slides from y:-40 to y:0, duration 1.2s, cubic-bezier [0.16, 1, 0.3, 1])
+
+**Left: Logo**
+- Custom SVG logo (57x56 viewBox, white fill, 48x48px rendered) — here is the exact SVG path data:
+` ` `svg
+&lt;svg viewBox=&quot;0 0 57 56&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+  &lt;path d=&quot;M8.61805 6.56531C8.60358 6.57818 8.58911 6.58943 8.57624 6.60229C8.21287 6.92872 7.85913 7.26477 7.51505 7.6121C2.87 12.2866 0 18.7284 0 25.8407C0 31.0539 1.54194 35.907 4.19648 39.9689C4.19648 39.9689 4.19809 39.9705 4.19809 39.9721C4.26241 40.0718 4.32832 40.1699 4.39425 40.268C4.9184 41.0463 6.09535 40.9337 6.4539 40.0654L18.9565 9.81992C16.802 6.73733 13.6683 4.87367 8.61805 6.56531Z&quot; fill=&quot;white&quot;/&gt;
+  &lt;path d=&quot;M35.0869 12.4188L41.2852 29.9801C42.5377 33.5354 44.3256 37.7195 46.7116 41.1398C49.8598 36.8544 51.7201 31.5656 51.7201 25.841C51.7201 11.9074 40.7031 0.549946 26.9062 0C31.3841 2.08883 33.4534 7.7925 35.0869 12.4188Z&quot; fill=&quot;white&quot;/&gt;
+  &lt;path d=&quot;M56.2272 49.0769C51.5838 50.0722 47.8423 47.6779 44.9032 44.0165C42.2326 41.0802 39.8224 36.7643 37.8448 30.9271L31.3459 11.7353C30.7896 10.0919 30.1673 8.36164 29.3924 6.76004C29.3924 6.76004 28.8586 5.31119 27.7459 3.96366C26.241 1.91342 24.2714 0.459756 21.5413 0.335938C20.9399 0.437243 20.345 0.557849 19.7582 0.700963C18.0185 1.12227 16.3496 1.71728 14.7674 2.47144C13.0117 3.30601 11.3668 4.3335 9.85547 5.52505C20.3724 2.11764 23.7086 11.2304 26.1059 18.0195L32.3042 35.5807C33.7432 39.6667 35.8897 44.5841 38.84 48.2166C40.0668 47.5027 41.2309 46.6906 42.3194 45.7917C46.5577 50.2878 51.4294 51.3683 56.2706 49.585L56.2272 49.0769Z&quot; fill=&quot;white&quot;/&gt;
+  &lt;path d=&quot;M35.9593 49.6562C35.9593 49.6562 35.9609 49.6562 35.9625 49.6562C33.2774 46.7184 30.8543 42.3912 28.867 36.5267L22.3682 17.3349C22.1366 16.6482 21.8922 15.9471 21.6301 15.246C21.1767 14.0303 19.4612 14.0159 18.9917 15.2251L12.1423 32.8169L8.05836 43.1887C7.81558 43.8078 7.97153 44.5121 8.45228 44.9704C13.0475 49.1545 19.1557 51.7048 25.8588 51.7048C28.2561 51.7048 30.5762 51.3784 32.7805 50.769C37.1442 55.7844 42.2347 57.0452 47.2913 55.1831L47.2479 54.6749C42.6237 55.667 38.8903 53.2952 35.9576 49.6562H35.9593Z&quot; fill=&quot;white&quot;/&gt;
+&lt;/svg&gt;
+` ` `
+- Text next to logo: &quot;Legion VPN&quot; — `font-display`, uppercase, `tracking-[0.12em]`, font-medium, 24px
+
+**Center: Glass Pill Navigation**
+- Items: `[&#39;Features&#39;, &#39;Servers&#39;, &#39;Pricing&#39;, &#39;Download&#39;]`
+- Container: `border border-white/20 border-t-white/40 border-b-white/10`, `bg-gradient-to-tr from-white/[0.02] via-white/[0.12] to-white/[0.01]`, `backdrop-blur-3xl`, height 64px, `rounded-full`, padding 12px horizontal / 8px vertical
+- Active tab: animated background pill using Motion&#39;s `layoutId=&quot;activePill&quot;` with `bg-white/[0.15] rounded-full`, spring animation (stiffness 380, damping 30)
+- Button text: `text-xs font-bold tracking-wider uppercase`
+- Hidden on mobile (`hidden md:flex`)
+
+**Right: Action Buttons**
+- Circle button: 64x64px, rounded-full, white gradient background (`from-white to-gray-100`), border `white/25` with `border-t-white/45`, contains `ArrowUpRight` icon 24px
+- &quot;Contact Us&quot; button: same style, 64px height, `px-6`, `text-xs font-bold uppercase tracking-wider`
+- Hidden on mobile
+
+**Mobile: Hamburger menu** button (md:hidden), opens an AnimatePresence drawer with nav items + action buttons
+
+### 3. Hero Content (12-column grid, `items-end`)
+
+**Left Column (col-span-6):**
+- Heading: `font-display`, responsive sizing `text-[10vw] sm:text-[7vw] lg:text-[5vw] xl:text-[5.4vw]`, `leading-[0.82]`, uppercase, normal weight
+- Text: &quot;Conquer the web&quot; / &quot;— Unseen,&quot; (font-light, 95% opacity) / &quot;Untouchable,&quot; (90% opacity) / &quot;Imperial&quot; (80% opacity)
+- Animation: slides from y:50, delay 0.2s, duration 1.4s
+- Vertical divider: 1px wide, 220px tall, gradient from `white/40` via `white/15` to transparent, animated scaleY from 0 to 1
+- Description paragraph: `font-sans text-sm md:text-base text-white/64 leading-relaxed font-light`, width 320px
+- Text: &quot;Encrypt your traffic, hide your IP, and bypass any restrictions. Full online anonymity — no logs, no limits, no compromises.&quot;
+
+**Right Column (col-span-6):**
+
+*Glass Card (340x460px, rounded-[3rem]):*
+- Border: `border-white/20`, transparent background
+- Contains a DUPLICATED video element inside, positioned absolutely to align pixel-perfectly with the background video
+- The duplicate video has an SVG filter applied: `filter: url(#liquid-glass-refraction)`
+- A requestAnimationFrame loop syncs the duplicate video&#39;s position (offset by the card&#39;s getBoundingClientRect) and currentTime (within 30ms drift tolerance) with the main background video
+- Overlay: `bg-white/[0.05]` with inset box shadows for glass edge highlights
+- Shield icon in a circle (56px, `bg-white/5 border-white/10`, 80px backdrop-blur)
+- Typography: 40px/40px heading &quot;Protect the web / — Unbreakable, / Invisible, Absolute&quot; in font-display uppercase
+- Sub-text: 12px/19px description
+- Animation: slides from y:60, delay 0.4s, duration 1.5s
+
+*Helmet Card (220x320px, rounded-[2.5rem]):*
+- Border: `border-white/20`, transparent background, overflow hidden
+- Contains the helmet mask image scaled to `1.40` with `rotate(15deg)`, hover scales to 1.46 rotate 18deg
+- Uses `motion.img` with `initial`/`whileHover` props
+- Animation: slides from y:80 scale:0.95, delay 0.6s, duration 1.6s
+
+### 4. Second Section
+
+**Full-width, min-h-screen, bg-[#0F141B], z-20:**
+
+**Background Video:**
+- Same as section bg video URL (second CloudFront URL)
+- Scaled 1.20 from `transform-origin: right bottom`
+- z-10, pointer-events-none
+
+**Dark overlay:** `bg-[#0F141B]/10 mix-blend-multiply`, z-15
+
+**Marquee Strip:**
+- Full width, solid white background, height `h-10 md:h-[52px]`
+- Text color: `#0F141B`
+- Font: font-display, uppercase, font-light, `text-xl md:text-[28px] lg:text-[32px]`
+- Content repeated 4x twice (for seamless loop): &quot;YOUR DATA. YOUR PRIVACY. YOUR CONTROL. • ENCRYPTED TRAFFIC • COMPLETE ANONYMITY • NO LOGS • NO TRACKING • UNBREAKABLE DIGITAL PROTECTION • &quot;
+- CSS animation: `marquee 25s linear infinite`, translates -50% on x-axis
+- z-30
+
+**Large Background Logo SVG:**
+- Same Legion VPN logo paths, scaled to 598x594px (viewBox 480x477)
+- Positioned absolute, top 100px from marquee, left-aligned with content padding
+- White color at 8% opacity
+- z-10, pointer-events-none
+
+**Text Content (positioned 200px below marquee top):**
+- Heading: 72px/64px, font-display, uppercase, normal weight
+- Text: (4 non-breaking spaces indent) &quot;Protect the web —&quot; / &quot;Unbreakable, Invisible,&quot; (font-light, 95% opacity) / &quot;Absolute&quot; (90% opacity)
+- Paragraph: 14px, `text-white/64`, font-light, width 480px, lorem about encryption
+- Button: &quot;Secure Your Connection&quot; with ArrowUpRight, same white gradient pill style as header buttons, 64px height
+
+**Three Info Cards (BorderGlowCard component):**
+- Grid: 3 columns on md+, gap-6, max-width 1100px
+- Each card has a traveling border glow animation
+
+**BorderGlowCard Component:**
+- Takes `startProgress` prop (0, 0.33, 0.66) to offset animation start
+- Uses an invisible SVG `&lt;rect&gt;` with `rx=&quot;32&quot; ry=&quot;32&quot;` as a path guide
+- `getPointAtLength()` to get x,y coordinates along the rect perimeter
+- Sets CSS variables `--glow-x` and `--glow-y` via requestAnimationFrame, 7-second loop duration
+- Three layered divs use CSS mask-composite (content-box XOR to show border only):
+  - **Tail layer**: 2px padding, opacity 0.15, blur 4px, radial-gradient circle 110px
+  - **Medium layer**: 1.2px padding, opacity 0.28, blur 2px, radial-gradient circle 75px
+  - **Core layer**: 0.9px padding, opacity 0.78, drop-shadow, radial-gradient circle 35px
+- Static border underneath: `0.8px solid rgba(255, 255, 255, 0.14)`
+
+**Card Content:**
+1. &quot;NO LOGS&quot; — 32px font-display, with 11px uppercase tracking-widest description
+2. &quot;256-BIT&quot; — same style, &quot;MILITARY-GRADE ENCRYPTION...&quot;
+3. &quot;120+&quot; — same style, &quot;GLOBAL SERVER LOCATIONS...&quot;
+
+Cards have `hover:-translate-y-1` transition.
+
+### 5. SVG Filters (placed at the bottom of the component, invisible)
+
+**Filter: `liquid-glass-refraction`** (applied to duplicate video in glass card)
+- `feTurbulence`: fractalNoise, baseFrequency=&quot;0.012 0.015&quot;, numOctaves=3
+- Boost SourceAlpha to heightmap (matrix with alpha * 100)
+- Gaussian blur stdDeviation=45
+- Invert to edge mask (feFuncA linear slope=-1.3 intercept=1)
+- Multiply turbulence by edge mask (zero distortion in center, active at edges)
+- Per-channel chromatic dispersion displacement:
+  - Red: scale=65
+  - Green: scale=56
+  - Blue: scale=47
+- Screen blend all channels together
+
+**Filter: `lens-refraction`** (defined but used conceptually)
+- Heightmap from boosted alpha + blur stdDeviation=40
+- X/Y gradient derivatives via offset +/-2px and arithmetic composite (k2=10, k3=-10, k4=0.5)
+- Color matrix to separate into R and G channels
+- Recombine into lens map
+- Per-channel displacement: R=10, G=9, B=8
+- Screen blend
+
+### 6. CSS Animations
+
+` ` `css
+@keyframes marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes liquid-blob-1 { /* morphing border-radius + translate + scale + rotate, 14s */ }
+@keyframes liquid-blob-2 { /* same pattern, 16s */ }
+@keyframes liquid-blob-3 { /* same pattern, 20s */ }
+@keyframes spin-slow { /* 360deg rotation with scale pulse, 28s */ }
+` ` `
+
+### 7. Motion Animation Easing
+
+All entrance animations use: `ease: [0.16, 1, 0.3, 1]` (custom cubic-bezier — aggressive ease-out)
+
+### 8. Responsive Behavior
+
+- Mobile: single column layout, hamburger menu, smaller font sizes
+- Tablet/Desktop: 12-column grid, glass pill nav, side-by-side cards
+- Breakpoint: `md:` for nav visibility, `lg:` for grid columns and spacing
+- Max container width: 1800px with auto margins
+```</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="cyber-layer.html">Cyber Layer<small>Cybersecurity · cybersecurity</small></a><a href="sentinel.html">Sentinel<small>Cybersecurity · hero</small></a><a href="imperial-vpn.html">Imperial VPN<small>Cybersecurity · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

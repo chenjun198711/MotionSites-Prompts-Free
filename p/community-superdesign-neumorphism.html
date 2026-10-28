@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Neumorphism — Design Systems &amp; Styles 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Neumorphism creates the illusion of physical depth through carefully balanced dual shadows Source: designprompts.dev">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/community-superdesign-neumorphism.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Neumorphism — Design Systems &amp; Styles 提示词">
+<meta property="og:description" content="Neumorphism creates the illusion of physical depth through carefully balanced dual shadows Source: designprompts.dev">
+<meta property="og:url" content="https://prompt-site.shop/p/community-superdesign-neumorphism.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/community-superdesign-neumorphism.png">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Neumorphism","description":"Neumorphism creates the illusion of physical depth through carefully balanced dual shadows Source: designprompts.dev","url":"https://prompt-site.shop/p/community-superdesign-neumorphism.html","inLanguage":"zh-CN","genre":"Design Systems & Styles","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-design_systems___styles">Design Systems &amp; Styles</a></div><h1>Neumorphism</h1><div class="chip-row"><span class="chip">Design Systems &amp; Styles</span><span class="chip">design-systems-styles</span><span class="chip">社区公开收藏</span></div><div class="facts"><span>正文：10,068 字符</span></div><div class="hero-media"><img src="../assets/previews/community-superdesign-neumorphism.png" alt="Neumorphism 动效预览" loading="lazy"><div class="media-note">本地预览图 · png</div></div><h2>简介</h2><p>Neumorphism creates the illusion of physical depth through carefully balanced dual shadows Source: designprompts.dev</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">&lt;design-system&gt;
+
+# Neumorphism (Soft UI) Design System
+
+## Design Philosophy
+
+**Core Principles**: Neumorphism creates the illusion of physical depth through carefully balanced dual shadows—one light source from the top-left, one dark shadow falling bottom-right—on monochromatic backgrounds. Elements appear to either extrude from the surface (convex/raised) or be pressed into it (concave/inset). The effect mimics soft, pillowed physical objects with realistic lighting, creating a &quot;molded from the same material&quot; aesthetic. Every element feels like it&#39;s part of the same continuous surface, either raised or pressed, never flat.
+
+**Vibe**: Tactile, calm, modern, and physically grounded. This is UI that feels like cooler matte plastic or soft ceramic. It is satisfying and tangible. The aesthetic is deliberately restrained, utilizing a cooler grey palette to feel fresh and distinct from &quot;warm&quot; legacy neumorphism. The design prioritizes accessibility with WCAG AA compliant contrast ratios while maintaining the soft aesthetic.
+
+**Unique Visual Signatures**:
+
+- **Dual opposing RGB shadows** (top-left light, bottom-right dark) using alpha transparency for smoother, more realistic blending than solid hex shadows.
+
+- **Monochromatic &quot;Cool Grey&quot; discipline** `#E0E5EC`) where shadows and highlights do all the visual heavy lifting. No flat backgrounds.
+
+- **Same-surface illusion**: Elements appear to be part of the same material as the background—molded, not placed.
+
+- **Deep Inset States**: Wells for icons and inputs that feel significantly deeper `insetDeep`) than standard pressed states, creating true 3D depth.
+
+- **Soft, Hyper-Rounded Corners**: `32px` for containers and `16px` for smaller elements, reinforcing the pillowed, organic aesthetic.
+
+- **Complex Nested Depth**: Visuals formed by nesting elements (Extruded → Inset → Extruded) to showcase the physics of the system.
+
+- **Smooth Micro-interactions**: 300ms transitions with scale, rotation, and shadow depth changes. Floating animations for ambient motion.
+
+- **Mobile-First Responsive**: Fully responsive with touch-friendly targets (44px minimum), hamburger menu, and maintained neumorphic aesthetic on all screen sizes.
+
+---
+
+## Design Token System (The DNA)
+
+### Colors (Light Mode - Cool Monochromatic)
+
+The entire palette is built around a single base cool grey. **All visual interest comes from shadow play, not color variety.**
+
+- **Background**: `#E0E5EC` — The base &quot;cool clay&quot; surface. Everything is molded from this.
+
+- **Foreground**: `#3D4852` — Dark blue-grey for primary text. Excellent contrast (7.5:1 ratio) for optimal readability.
+
+- **Muted**: `#6B7280` — Cool grey for secondary text with WCAG AA compliant contrast (4.6:1 ratio on the background).
+
+- **Accent**: `#6C63FF` — Soft violet for interactive highlights. Used sparingly for CTAs and focus states.
+
+- **Accent Light**: `#8B84FF` — Lighter violet for gradients and hover states.
+
+- **Accent Secondary**: `#38B2AC` — Teal for success states, checkmarks, and positive indicators.
+
+- **Border**: `transparent` — Neumorphism **never** uses borders; shadows define all edges.
+
+**Shadow Colors** (CRITICAL - RGBA for Smoothness):
+
+- **Shadow Light**: `rgba(255, 255, 255, 0.5-0.6)` — Pure white with transparency for the light-source shadow (top-left).
+
+- **Shadow Dark**: `rgb(163, 177, 198, 0.6-0.7)` — A specific cool blue-grey shadow color that matches the background tone perfectly (bottom-right).
+
+### Typography
+
+- **Display Font**: **&quot;Plus Jakarta Sans&quot;** (500, 600, 700, 800) — Modern geometric sans for headlines. Applied via `.font-display` class.
+
+- **Body Font**: **&quot;DM Sans&quot;** (400, 500, 700) — Clean, highly legible sans-serif for all body text and UI elements.
+
+- **Weights**:
+
+- Display Headings: `font-extrabold` (800) with `tracking-tight`
+
+- Headings: `font-bold` (700) with `tracking-tight`
+
+- Body: `font-normal` (400) to `font-medium` (500)
+
+- **Colors**:
+
+- Primary: `#3D4852` (excellent contrast)
+
+- Secondary/Muted: `#6B7280` (WCAG AA compliant)
+
+- **Scale**: Responsive scale from `text-sm` (14px) to `text-7xl` (72px) for hero headlines
+
+### Radius
+
+- **Container / Card**: `32px` `rounded-[32px]`) — Very soft, friendly corners.
+
+- **Base / Button**: `16px` `rounded-2xl`).
+
+- **Inner Elements**: `12px` `rounded-xl`) or `9999px` `rounded-full`).
+
+### Shadows &amp; Effects (The Physics)
+
+Shadows are defined using `rgba` for a premium, smooth finish.
+
+**Extruded (Standard)** — The default resting state:
+
+~~~css
+
+box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255,0.5);
+~~~
+
+- **Tailwind**: `shadow-[9px_9px_16px_rgb(163,177,198,0.6),-9px_-9px_16px_rgba(255,255,255,0.5)]`
+
+**Extruded Hover (Lifted)** — For hover states:
+
+~~~css
+
+box-shadow: 12px 12px 20px rgb(163,177,198,0.7), -12px -12px 20px rgba(255,255,255,0.6);
+~~~
+
+- **Tailwind**: `shadow-[12px_12px_20px_rgb(163,177,198,0.7),-12px_-12px_20px_rgba(255,255,255,0.6)]`
+
+**Extruded Small** — For smaller elements:
+
+~~~css
+
+box-shadow: 5px 5px 10px rgb(163,177,198,0.6), -5px -5px 10px rgba(255,255,255,0.5);
+~~~
+
+**Inset (Pressed)** — For standard pressed states or shallow wells:
+
+~~~css
+
+box-shadow: inset 6px 6px 10px rgb(163,177,198,0.6), inset -6px -6px 10px rgba(255,255,255,0.5);
+~~~
+
+**Inset Deep** — For inputs, active wells, and deep &quot;carved&quot; elements:
+
+~~~css
+
+box-shadow: inset 10px 10px 20px rgb(163,177,198,0.7), inset -10px -10px 20px rgba(255,255,255,0.6);
+~~~
+
+- **Tailwind**: `shadow-[inset_10px_10px_20px_rgb(163,177,198,0.7),inset_-10px_-10px_20px_rgba(255,255,255,0.6)]`
+
+**Inset Small** — For subtle tracks or pills:
+
+~~~css
+
+box-shadow: inset 3px 3px 6px rgb(163,177,198,0.6), inset -3px -3px 6px rgba(255,255,255,0.5);
+~~~
+
+---
+
+## Component Styling
+
+### Buttons
+
+- **Shape**: `rounded-2xl`
+
+- **Transition**: `duration-300 ease-out`
+
+- **Default State**: Extruded shadow.
+
+- **Hover State**: `translate-y-[-1px]` (slight lift) + `Extruded Hover` shadow.
+
+- **Active/Pressed State**: `translate-y-[0.5px]` (physical press) + `Inset Small` shadow (or standard inset depending on size).
+
+- **Primary**: Accent background `#6C63FF`. Active state uses specific rgba inset shadows to work on color.
+
+- **Secondary**: Background `#E0E5EC` (match page).
+
+### Cards
+
+- **Shape**: `rounded-[32px]` (Significant rounding).
+
+- **Background**: `#E0E5EC`.
+
+- **Padding**: `p-8` to `p-20` depending on prominence.
+
+- **Hover**: `translate-y-[-2px]` + `Extruded Hover` shadow.
+
+- **Feature**: Use nested depth. Card is Extruded -&gt; Icon well inside is Inset Deep -&gt; Icon inside is distinct.
+
+### Inputs
+
+- **Shape**: `rounded-2xl`.
+
+- **Background**: `#E0E5EC`.
+
+- **Default**: `Inset` shadow.
+
+- **Focus**: `Inset Deep` shadow + Accent color Ring (offset by 2px with background color).
+
+- **Placeholder**: `#A0AEC0`.
+
+### Visual Decorations
+
+- **Icon Wells**: Always use `Inset Deep` or `Inset` shadows for icon containers. This makes them look &quot;drilled&quot; into the card.
+
+- **Decorations**: Use concentric circles of alternating Extruded and Inset shadows to create abstract, tactile background art.
+
+---
+
+## Layout Principles
+
+- **Spacing**: Open and airy. Use `py-32` for hero sections to let the shadows breathe. `gap-12` for grids.
+
+- **Container**: `max-w-7xl` for a wide, modern feel.
+
+- **Background**: The page background must be `#E0E5EC` globally. No gradients on the root background.
+
+## Animation &amp; Micro-interactions
+
+- **Duration**: `300ms` for UI elements, `500ms` for nested depth circles (weightier, physics-based feel).
+
+- **Easing**: `ease-out` for natural deceleration.
+
+- **Properties**: `transform` (scale, translateY, rotate), `box-shadow` (depth changes).
+
+- **Hover Effects**:
+
+- Cards: `-translate-y-1` (1px lift) + enhanced shadow depth
+
+- Buttons: `-translate-y-1` on hover, `translate-y-0.5` on active (press down)
+
+- Nested circles: `scale-105` (5% scale up) + `rotate-180` on inner element
+
+- **Floating Animation**: Custom `@keyframes float` with 3s ease-in-out infinite loop for ambient motion on decorative elements.
+
+- **Smooth Scrolling**: `scroll-behavior: smooth` for anchor navigation.
+
+## Accessibility
+
+- **Contrast**:
+
+- Primary text `#3D4852` on `#E0E5EC`: 7.5:1 (WCAG AAA)
+
+- Muted text `#6B7280` on `#E0E5EC`: 4.6:1 (WCAG AA)
+
+- **Focus States**: Visible 2px accent rings `ring-2 ring-[#6C63FF]`) with 2px offset on `#E0E5EC` background. Mandatory on all interactive elements.
+
+- **Touch Targets**: Minimum 44x44px for mobile (buttons use `h-12 w-12` = 48px minimum).
+
+- **Mobile Navigation**: Hamburger menu with clear open/close states (Menu/X icons).
+
+- **Keyboard Navigation**: Full keyboard support with visible focus indicators on all links and buttons.
+
+## Responsive Design
+
+- **Mobile First**: Design starts with mobile view and enhances upward.
+
+- **Breakpoints**: `md:` (768px) for tablet, `lg:` (1024px) for desktop.
+
+- **Mobile Adaptations**:
+
+- Hero visual shows on all screens with `max-w-md` constraint on mobile
+
+- Hamburger menu replaces desktop navigation below `md:` breakpoint
+
+- Grid layouts collapse: 3-column → 1-column, 2-column → 1-column
+
+- Font sizes scale down: `text-7xl` → `text-5xl` on mobile
+
+- Padding reduces: `p-16` → `p-8` on cards
+
+- **Navigation**: Sticky header with backdrop blur. Mobile menu slides down from header with extruded shadow.
+
+---
+
+## Anti-Patterns (Do Not Do)
+
+- **Hard Hex Shadows**: Do not use opaque hex codes for shadows (e.g., `#A3B1C6`). Use `rgb(... 0.6)` for transparency and blending.
+
+- **White Backgrounds**: Never use `bg-white` for cards. They must match the body background `#E0E5EC`.
+
+- **Flat Buttons**: Buttons must have depth (shadows). No flat designs.
+
+- **Sharp Corners**: `rounded-lg` is too sharp. Use `rounded-2xl` (16px) or `rounded-3xl` (24px) minimum.
+
+- **Poor Contrast**: Never use `#8B95A5` or `#A0AEC0` for body text. Use `#6B7280` or darker for WCAG compliance.
+
+- **Missing Focus States**: All interactive elements must have visible focus indicators.
+
+- **Block Display for Fonts**: Use `display=swap` in Google Fonts URL, not `display=block`.
+
+&lt;/design-system&gt;</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：superdesigndev/superdesign-prompts<br>原始文件：<code>prompts/neumorphism/README.md</code><br>许可证：CC0-1.0<br>作者：Jason Zhou<br><a href="https://github.com/superdesigndev/superdesign-prompts/blob/main/prompts/neumorphism/README.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="community-superdesign-red-noir-style.html">Red Noir Style<small>Design Systems &amp; Styles · landing-page</small></a><a href="community-superdesign-deep-red-style-5b01cb.html">Deep Red Style<small>Design Systems &amp; Styles · design-systems-styles</small></a><a href="community-superdesign-glassmorphism-style.html">Glassmorphism Style<small>Design Systems &amp; Styles · landing-page</small></a><a href="community-superdesign-mosaic-grid-architecture-style.html">Mosaic Grid Architecture Style<small>Design Systems &amp; Styles · landing-page</small></a><a href="community-superdesign-neural-noir-interface-style.html">Neural Noir Interface Style<small>Design Systems &amp; Styles · landing-page</small></a><a href="community-superdesign-cinematic-style.html">Cinematic Style<small>Design Systems &amp; Styles · landing-page</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

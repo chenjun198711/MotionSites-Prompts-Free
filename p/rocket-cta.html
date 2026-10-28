@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rocket CTA — CTA Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色背景上的毛玻璃CTA区块，使用半透明白色面板和模糊效果，搭配Inter字体和图标，营造现代科技感。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/rocket-cta.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rocket CTA — CTA Section 提示词">
+<meta property="og:description" content="深色背景上的毛玻璃CTA区块，使用半透明白色面板和模糊效果，搭配Inter字体和图标，营造现代科技感。">
+<meta property="og:url" content="https://prompt-site.shop/p/rocket-cta.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/rocket-cta.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Rocket CTA","description":"深色背景上的毛玻璃CTA区块，使用半透明白色面板和模糊效果，搭配Inter字体和图标，营造现代科技感。","url":"https://prompt-site.shop/p/rocket-cta.html","inLanguage":"zh-CN","genre":"CTA Section","dateCreated":"2026-06-04T15:37:53.70377+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-cta_section">CTA Section</a></div><h1>Rocket CTA</h1><div class="chip-row"><span class="chip">CTA Section</span><span class="chip">cta</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-06-04</span><span>正文：11,335 字符</span></div><div class="hero-media"><img src="../assets/previews/rocket-cta.webp" alt="Rocket CTA 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色背景上的毛玻璃CTA区块，使用半透明白色面板和模糊效果，搭配Inter字体和图标，营造现代科技感。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a pixel-faithful recreation of the landing CTA section. Use React 18 + Vite + TypeScript, TailwindCSS, `framer-motion`, `clsx` + `tailwind-merge` as `cn()`. Dark theme background (`#000000`), Inter font, Material Symbols Outlined for icons. Use the white-alpha &quot;landing&quot; palette in `tailwind.config.ts`:
+
+```ts
+landing: {
+surface: &quot;rgba(255, 255, 255, 0.10)&quot;,
+&quot;surface-hover&quot;: &quot;rgba(255, 255, 255, 0.16)&quot;,
+border: &quot;rgba(255, 255, 255, 0.10)&quot;,
+&quot;border-strong&quot;: &quot;rgba(255, 255, 255, 0.20)&quot;,
+text: &quot;rgba(255, 255, 255, 0.80)&quot;,
+&quot;text-muted&quot;: &quot;rgba(255, 255, 255, 0.60)&quot;,
+}
+```
+
+Add a global `.liquid-glass` utility (frosted translucent surface):
+```css
+.liquid-glass {
+background: rgba(255,255,255,0.06);
+border: 1px solid rgba(255,255,255,0.10);
+backdrop-filter: blur(20px) saturate(140%);
+-webkit-backdrop-filter: blur(20px) saturate(140%);
+box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 10px 30px rgba(0,0,0,0.25);
+}
+```
+
+Add keyframes in `index.css` for the inner Velorah hero animation:
+```css
+@keyframes fade-rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+.animate-fade-rise { animation: fade-rise .8s ease-out both; }
+.animate-fade-rise-delay { animation: fade-rise .8s ease-out .25s both; }
+.animate-fade-rise-delay-2 { animation: fade-rise .8s ease-out .5s both; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { scrollbar-width: none; }
+```
+
+Load fonts in `index.html`: Inter (400/500/600), Instrument Serif (400 + italic), Material Symbols Outlined.
+
+---
+
+## Assets
+
+- Foreground &quot;grass / horizon&quot; PNG that overlays the bottom of the section — load directly from this URL (no local asset):
+`https://res.cloudinary.com/dy5er7kv5/image/upload/q_auto/f_auto/v1780586778/cta-bg_mlwy5s.png`
+- CloudFront video URL used **inside** the Velorah dashboard preview (exact):
+`https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260314_131748_f2ca2a28-fed7-44c8-b9a9-bd9acdd5ec31.mp4`
+
+---
+
+## Helper components (must exist)
+
+### `FadeUp` (`framer-motion`)
+```tsx
+&lt;motion.div
+initial={{ opacity: 0, y: y ?? 24 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true, amount: 0.3 }}
+transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
+/&gt;
+```
+
+### `MIcon` — Material Symbols Outlined span, supports `name`, `size`, `fill`, `weight`, `grade`, `opticalSize`, applied via `fontVariationSettings: &quot;&#39;FILL&#39; x, &#39;wght&#39; y, &#39;GRAD&#39; z, &#39;opsz&#39; s&quot;`.
+
+### `PrimaryButton` (landing primitive)
+- White pill, black text, `rounded-full`, sizes `sm/md/lg` (default `lg`: `h-12 px-9 text-sm font-medium`).
+- Class: `inline-flex items-center justify-center rounded-full bg-white/80 hover:bg-white text-black leading-none transition-colors`.
+- Wraps children in an `AnimatedText` component that slides current text up and reveals duplicate from below on hover (200–300ms ease).
+- Polymorphic via `as=&quot;a&quot; | &quot;button&quot;`, default `a`.
+
+### `ChatPanel` (left side of the dashboard mock)
+- Vertical flex column inside `rounded-2xl border border-white/10`, background `rgba(8,8,10,0.6)` + `backdrop-filter: blur(24px)`.
+- Header row: 28px circular `bg-white/5` with `MIcon name=&quot;auto_awesome&quot; size={14}`, then two-line label: **&quot;Vibe Design course&quot;** (text-sm font-medium white) + **&quot;Learn how to build website with AI&quot;** (text-[11px] white/40).
+- Messages scroll area (`scrollbar-hide`, `space-y-4`, px-4 py-5). Seed messages:
+1. assistant — &quot;Welcome to the Vibe Design course! I&#39;ll guide you through building stunning websites with AI. What would you like to learn first?&quot;
+2. user — &quot;I want to learn how to build a hero section with a cinematic video background using AI.&quot;
+3. assistant — &quot;Great choice! In this course, you&#39;ll learn how to create full-screen looping videos, liquid glass nav bars, email signups, and manifesto buttons — all with AI assistance. Let&#39;s dive in!&quot;
+- Message bubbles: `max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed`. User = `bg-white/15 text-white/90` (right-aligned). Assistant = `bg-white/5 text-white/70 border border-white/5` (left).
+- Props: `initialScroll?: &quot;top&quot; | &quot;bottom&quot;` (CTA uses `&quot;top&quot;`), `animateMessagesIn?: boolean` (CTA passes `true`, each message wrapped in `FadeUp delay={i * 0.12} y={16}`).
+- Input row: `.liquid-glass rounded-2xl` containing a 1-row autosize `&lt;textarea&gt;` (transparent, placeholder &quot;Ask about the course...&quot;) + white square send button (`bg-white text-black rounded-xl p-2`) with `MIcon name=&quot;arrow_upward&quot; size={16}`. Enter (no shift) sends. Pushing user msg also pushes a canned assistant reply.
+
+### `VelorahHeroPreview` (right side of the dashboard mock)
+```tsx
+const VIDEO_SRC = &quot;https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260314_131748_f2ca2a28-fed7-44c8-b9a9-bd9acdd5ec31.mp4&quot;;
+```
+- Wrapper: `relative w-full h-full overflow-hidden rounded-2xl`, inline `backgroundColor: &quot;hsl(201 100% 13%)&quot;` (deep teal as the video-loading color).
+- `&lt;video autoPlay loop muted playsInline preload=&quot;auto&quot;&gt;` absolutely positioned, `object-cover`, `z-0`.
+- Nav row (`relative z-10 flex items-center justify-between px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4`):
+- Left brand: `Velorah®` with `font-family: &#39;Instrument Serif&#39;, serif`, `text-sm sm:text-base md:text-lg`, `tracking-tight`, `®` as `&lt;sup className=&quot;text-[0.5em]&quot;&gt;`.
+- Center (hidden &lt; md): `Home` (white) · `Studio` · `About` · `Journal` · `Reach Us` — `text-[9px] lg:text-[10px] text-white/60` with `hover:text-white` on the inactive items.
+- Right: `.liquid-glass rounded-full px-2.5 sm:px-3 py-1 text-[9px] sm:text-[10px] text-white` reading **Begin Journey**.
+- Hero block (`flex flex-col items-center text-center px-3 sm:px-4 pt-3 sm:pt-5 md:pt-7 pb-6`):
+- `&lt;h1&gt;` Instrument Serif, `font-normal leading-[0.95] tracking-[-0.03em]`, `text-lg sm:text-2xl md:text-3xl lg:text-4xl max-w-[90%]`, class `animate-fade-rise`. Content: `Where &lt;em class=&quot;not-italic text-white/55&quot;&gt;dreams&lt;/em&gt; rise &lt;em class=&quot;not-italic text-white/55&quot;&gt;through the silence.&lt;/em&gt;`
+- Paragraph `animate-fade-rise-delay text-white/60 text-[9px] sm:text-[11px] md:text-xs leading-relaxed max-w-[80%] sm:max-w-sm md:max-w-md mt-2 sm:mt-3 md:mt-4`: &quot;We&#39;re designing tools for deep thinkers, bold creators, and quiet rebels. Amid the chaos, we build digital spaces for sharp focus and inspired work.&quot;
+- Pill button `animate-fade-rise-delay-2 liquid-glass rounded-full px-4 sm:px-5 md:px-6 py-1.5 sm:py-2 md:py-2.5 text-[9px] sm:text-[10px] text-white mt-3 sm:mt-4 md:mt-5` reading **Begin Journey**.
+
+### `CtaDashboardMock`
+Frame around ChatPanel + VelorahHeroPreview:
+```tsx
+&lt;div className=&quot;liquid-glass w-full max-w-[1100px] aspect-[3/4] sm:aspect-[16/10] lg:aspect-[16/9] rounded-2xl mx-auto overflow-hidden p-2 sm:p-3&quot;&gt;
+&lt;div className=&quot;grid h-full grid-cols-1 sm:grid-cols-[minmax(220px,320px)_1fr] gap-2 sm:gap-3&quot;&gt;
+&lt;div className=&quot;min-h-0 hidden sm:block&quot;&gt;&lt;ChatPanel initialScroll=&quot;top&quot; animateMessagesIn /&gt;&lt;/div&gt;
+&lt;div className=&quot;min-h-0&quot;&gt;&lt;VelorahHeroPreview /&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+```
+
+---
+
+## `CtaSection` — exact layout &amp; behavior
+
+```tsx
+const sectionRef = useRef&lt;HTMLElement&gt;(null);
+const isMobile = useIsMobile(); // tailwind md breakpoint hook
+const { scrollYProgress } = useScroll({ target: sectionRef, offset: [&quot;start end&quot;, &quot;end start&quot;] });
+const dashboardY = useTransform(scrollYProgress, [0, 1], [&quot;120px&quot;, &quot;-120px&quot;]);
+const grassY = useTransform(scrollYProgress, [0, 1], isMobile ? [&quot;80px&quot;, &quot;-40px&quot;] : [&quot;200px&quot;, &quot;-200px&quot;]);
+```
+
+Markup:
+```tsx
+&lt;section
+ref={sectionRef}
+id=&quot;cta&quot;
+className=&quot;relative w-full&quot;
+style={{ background: &quot;linear-gradient(to bottom, transparent 0%, #14191E 100%)&quot; }}
+&gt;
+&lt;div className=&quot;relative mx-auto max-w-[1080px] px-4 sm:px-6 pt-24 sm:pt-32 md:pt-40 pb-[440px] sm:pb-[520px] md:pb-[440px]&quot;&gt;
+&lt;div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-start&quot;&gt;
+{/* Left column */}
+&lt;div className=&quot;relative z-20 max-w-[400px]&quot;&gt;
+&lt;FadeUp delay={1}&gt;
+&lt;h2 className=&quot;text-3xl sm:text-4xl font-normal tracking-[-0.02em] leading-[1.05] text-foreground&quot;&gt;
+Learn how can one go from 0 to $11.5k with AI in 60 days.
+&lt;/h2&gt;
+&lt;/FadeUp&gt;
+&lt;FadeUp delay={0.1}&gt;
+&lt;p className=&quot;mt-6 text-landing-text text-base sm:text-lg leading-[1.5] max-w-[380px]&quot;&gt;
+Learn to turn your ideas into stunning websites with AI — the same skills agencies charge $5,000 for. Join the UI Rocket training and start building like a pro today.
+&lt;/p&gt;
+&lt;/FadeUp&gt;
+&lt;FadeUp delay={0.2} className=&quot;mt-10&quot;&gt;
+&lt;PrimaryButton as=&quot;button&quot;&gt;Start for free&lt;/PrimaryButton&gt;
+&lt;/FadeUp&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+{/* Dashboard pinned to right edge, behind grass, parallax Y */}
+&lt;motion.div
+style={{ y: dashboardY }}
+className=&quot;absolute top-[440px] sm:top-[460px] md:top-[500px] lg:top-20 left-4 right-4 sm:left-auto sm:-right-[8%] md:-right-[10%] lg:-right-[12%] z-10 sm:w-[85%] md:w-[80%] lg:w-[68%]&quot;
+&gt;
+&lt;CtaDashboardMock /&gt;
+&lt;/motion.div&gt;
+
+{/* Foreground grass — in front of dashboard, parallax Y */}
+&lt;motion.img
+src=&quot;https://res.cloudinary.com/dy5er7kv5/image/upload/q_auto/f_auto/v1780586778/cta-bg_mlwy5s.png&quot;
+alt=&quot;&quot;
+aria-hidden
+style={{ y: grassY }}
+className=&quot;pointer-events-none select-none absolute left-0 right-0 bottom-[-40px] sm:bottom-[-80px] lg:bottom-[-140px] w-full z-30 object-cover&quot;
+/&gt;
+&lt;/section&gt;
+```
+
+### Behavior summary
+- Section fades from transparent → `#14191E` vertically.
+- On scroll, the dashboard translates from `+120px` → `-120px` (parallax up). The grass image translates `+200px` → `-200px` desktop, `+80px` → `-40px` mobile, on top of the dashboard (`z-30` over `z-10`).
+- Left column stays static, on top of the grass (`z-20` left text container would otherwise be covered — keep grass at `z-30` to overlap the dashboard while the heading visually sits left of it).
+- Headline `Learn how can one go from 0 to $11.5k with AI in 60 days.` enters with a delayed FadeUp; paragraph + button stagger in afterward.
+- Mobile (&lt; sm): dashboard stacks below the heading (`top-[440px]`), chat panel hides (`hidden sm:block`), only the Velorah preview shows.
+- Button is `PrimaryButton as=&quot;button&quot;` reading **Start for free**; hover triggers the AnimatedText slide.
+
+---
+
+## Acceptance checklist
+- [ ] Section bg: `transparent → #14191E` linear gradient bottom.
+- [ ] Inter font globally; Instrument Serif used in Velorah brand + headline; Material Symbols Outlined for icons.
+- [ ] Headline copy is exactly: `Learn how can one go from 0 to $11.5k with AI in 60 days.`
+- [ ] Subtext copy is exactly the paragraph above; button label exactly `Start for free`.
+- [ ] `CtaDashboardMock` uses `.liquid-glass` frame, aspect `3/4 → 16/10 → 16/9`, ChatPanel left (hidden on mobile) + Velorah right.
+- [ ] Velorah `&lt;video&gt;` uses the exact CloudFront URL, `autoPlay loop muted playsInline preload=&quot;auto&quot;`, fallback bg `hsl(201 100% 13%)`.
+- [ ] Velorah inner copy/animation classes match (`animate-fade-rise`, `-delay`, `-delay-2`).
+- [ ] `useScroll` + `useTransform` parallax: dashboard `120 → -120`, grass `200 → -200` (desktop) / `80 → -40` (mobile).
+- [ ] Grass image loaded from Cloudinary URL (`https://res.cloudinary.com/dy5er7kv5/image/upload/q_auto/f_auto/v1780586778/cta-bg_mlwy5s.png`) sits at `z-30` over dashboard (`z-10`), pointer-events-none, full width.
+- [ ] FadeUp entrance order: heading (delay 1) → paragraph (0.1) → button (0.2).
+- [ ] PrimaryButton: white pill, black text, AnimatedText hover slide.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="liquid-glass-cta.html">Liquid Glass CTA<small>CTA Section · cta</small></a><a href="nimbus-ops.html">Nimbus Ops<small>CTA Section · cta</small></a><a href="orbis-cta.html">Orbis CTA<small>CTA Section · cta</small></a><a href="global-cta-footer.html">Global CTA Footer<small>CTA Section · cta</small></a><a href="editorial-collection-cta.html">Editorial Collection CTA<small>CTA Section · cta</small></a><a href="mouse-trail-cta.html">Mouse Trail CTA<small>CTA Section · cta</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

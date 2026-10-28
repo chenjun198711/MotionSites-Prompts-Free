@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Feedback Slider — Components 提示词 | MotionSites Prompts</title>
+<meta name="description" content="用户评价反馈滑块组件，展示&quot;用户怎么说&quot;板块，包含评价卡片和导航箭头，采用现代简洁风格。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/feedback-slider.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Feedback Slider — Components 提示词">
+<meta property="og:description" content="用户评价反馈滑块组件，展示&quot;用户怎么说&quot;板块，包含评价卡片和导航箭头，采用现代简洁风格。">
+<meta property="og:url" content="https://prompt-site.shop/p/feedback-slider.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/feedback-slider.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Feedback Slider","description":"用户评价反馈滑块组件，展示\"用户怎么说\"板块，包含评价卡片和导航箭头，采用现代简洁风格。","url":"https://prompt-site.shop/p/feedback-slider.html","inLanguage":"zh-CN","genre":"Components","dateCreated":"2026-06-04T05:26:46.586653+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-components">Components</a></div><h1>Feedback Slider</h1><div class="chip-row"><span class="chip">Components</span><span class="chip">carousel</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-04</span><span>正文：7,193 字符</span></div><div class="hero-media"><img src="../assets/previews/feedback-slider.webp" alt="Feedback Slider 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>用户评价反馈滑块组件，展示&quot;用户怎么说&quot;板块，包含评价卡片和导航箭头，采用现代简洁风格。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a React + TypeScript + Tailwind CSS + Vite project with a single section called &quot;What builders say&quot;. Use `lucide-react` for icons. Reproduce it exactly as specified below.
+
+### Fonts (load globally in `src/index.css`, before `@tailwind` directives)
+
+```css
+@font-face {
+font-family: &#39;PP Neue Montreal&#39;;
+src: url(&#39;https://assets.website-files.com/6009ec8cda7f305645c9d91b/60176f9bb43e36419997ecfe_PPNeueMontreal-Book.otf&#39;) format(&#39;opentype&#39;);
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+@font-face {
+font-family: &#39;PP Neue Montreal&#39;;
+src: url(&#39;https://assets.website-files.com/6009ec8cda7f305645c9d91b/60176f9b39c5673e51a86f5a_PPNeueMontreal-Medium.otf&#39;) format(&#39;opentype&#39;);
+font-weight: 500;
+font-style: normal;
+font-display: swap;
+}
+@font-face {
+font-family: &#39;PP Mondwest&#39;;
+src: url(&#39;/PPMondwest-Regular.woff2&#39;) format(&#39;woff2&#39;);
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+font-family: &#39;PP Neue Montreal&#39;, -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, sans-serif;
+}
+
+@keyframes fadeInUp {
+0% { opacity: 0; transform: translateY(30px); }
+100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+animation: fadeInUp 0.8s ease-out forwards;
+opacity: 0;
+}
+```
+
+Place `PPMondwest-Regular.woff2` in the `public/` folder.
+
+### In-view hook (`src/hooks/useInViewAnimation.ts`)
+
+`IntersectionObserver` with `threshold = 0.1`, returns `{ ref, isInView }`. Once `isInView` becomes true, it stays true.
+
+### Component (`src/components/TestimonialCarousel.tsx`)
+
+**Data** — Array of 5 testimonials with `id`, `quote`, `author`, `role`, `company`, `avatar`. Use Pexels stock photos for avatars (resized w=200, h=200, dpr=2):
+
+1. Marcus Anderson — CEO, Data.storage — &quot;With very little guidance team delivered designs that were consistently spot on. We&#39;ve received so much positive feedback about the design, our community loves it.&quot; — `https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=200&amp;h=200&amp;dpr=2`
+2. alexwu — Founder, Nexgate — &quot;Viktor led the creation of our best fundraising deck to date! Knows how to merge sophisticated UX with simple cryptonative design&quot; — `https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=200&amp;h=200&amp;dpr=2`
+3. James Mitchell — VP Product, LaunchPad — &quot;Working with Viktor transformed our product vision into something truly exceptional. The attention to detail and strategic thinking was outstanding.&quot; — `https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=200&amp;h=200&amp;dpr=2`
+4. Rachel Foster — Co-founder, Nexus Labs — &quot;The design quality exceeded our expectations. Viktor brought a level of polish and professionalism that elevated our entire brand.&quot; — `https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=200&amp;h=200&amp;dpr=2`
+5. David Zhang — Head of Design, Paradigm Labs — &quot;Incredible work from start to finish. The team&#39;s ability to understand our vision and execute flawlessly was remarkable.&quot; — `https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=200&amp;h=200&amp;dpr=2`
+
+**State / sizing**
+- `offset` (px, starts at 0), `isPaused` (false).
+- `isMobile = window.innerWidth &lt; 768`.
+- `cardWidth = isMobile ? window.innerWidth - 48 : 427.5`.
+- `gap = 24`. `cardWithGap = cardWidth + gap`.
+- Render `[...testimonials, ...testimonials, ...testimonials]` (tripled) to give the illusion of an infinite loop.
+
+**Auto-advance**
+- `setInterval` every 3000ms: `offset += cardWithGap`. When `offset &gt;= cardWithGap * testimonials.length`, reset to 0.
+- Pause on `onMouseEnter`, resume on `onMouseLeave` of the carousel wrapper.
+
+**Prev/Next buttons** decrement/increment `offset` by `cardWithGap` with the same wrap logic.
+
+**Section layout**
+- `&lt;section className=&quot;w-full py-20 bg-white&quot;&gt;` wrapper with `ref` from the in-view hook.
+- Inner container: `max-w-7xl mx-auto px-6`, then a `w-full md:pr-6` wrapper.
+- Header row: `flex flex-col md:flex-row md:items-start md:justify-between mb-16 md:max-w-4xl md:ml-auto gap-6 md:gap-0`.
+- Left (flex-1): heading `text-[32px] md:text-[40px] lg:text-[44px] leading-[1.1] text-[#0D212C] tracking-tight font-normal`. Text: `What ` then a `&lt;span&gt;` with inline style `fontFamily: &quot;&#39;PP Mondwest&#39;, serif&quot;` reading `builders`, then ` say`.
+- Right column: `flex flex-col items-start md:items-end gap-2`.
+- Row of 5 `Star` icons from lucide-react, `w-5 h-5 fill-black text-black`.
+- Row: `Clutch` in `text-xl font-semibold text-[#0D212C]` and `5/5` in `text-base text-[#273C46]`.
+- Apply fade-in animations: heading delay `0.1s`, Clutch block delay `0.2s`, carousel delay `0.3s`, button row delay `0.4s`. Each element uses `isInView ? &#39;animate-fade-in-up&#39; : &#39;opacity-0&#39;` plus `style={{ animationDelay: isInView ? &#39;Xs&#39; : &#39;0s&#39; }}`.
+
+**Carousel container**
+```
+relative overflow-hidden md:max-w-4xl md:ml-auto py-6 md:pl-6 -mx-6 md:mx-0
+```
+Inner track: `flex gap-6 pl-6 md:pl-0` with inline style `transform: translateX(-${offset}px)` and `transition: &#39;transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)&#39;`.
+
+**Card**
+- `bg-white rounded-[32px] md:rounded-[40px] px-6 md:pl-10 md:pr-24 py-8 md:pt-[2.36rem] md:pb-[2.63rem] flex flex-col justify-between flex-shrink-0 shadow-[0_4px_16px_rgba(0,0,0,0.08)]`
+- Width set via inline style to `cardWidth` px.
+- Per-card exit animation: compute `distanceFromEdge = offset % (cardWithGap * testimonials.length)`, `cardPosition = index * cardWithGap`, `relativePosition = cardPosition - distanceFromEdge`. If `relativePosition &lt; -cardWidth / 2`, compute `exitProgress = min(1, abs(relativePosition) / cardWidth)`, set `opacity = max(0, 1 - exitProgress * 2)` and `scale = max(0.85, 1 - exitProgress * 0.15)`. Apply via inline style with `transition: &#39;opacity 0.4s ease-out, transform 0.4s ease-out&#39;`.
+- Card content top: a quote glyph rendered as inline SVG, `className=&quot;w-8 h-8 text-[#0D212C]&quot;`, `fill=&quot;currentColor&quot;`, `viewBox=&quot;0 0 24 24&quot;`, path `d=&quot;M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z&quot;`. Margin `mb-6`.
+- Quote `&lt;p&gt;`: `text-base text-[#0D212C] leading-relaxed mb-8`.
+- Author row: `flex items-center gap-4`, avatar `&lt;img&gt;` `w-12 h-12 rounded-full object-cover`, then a column with author name `font-semibold text-[#0D212C] text-sm` and a sub-row `text-sm text-[#273C46] flex items-center gap-1` containing a `↳` glyph in `text-xs` and `{role}, {company}`.
+
+**Nav buttons row**
+- Container: `flex gap-4 mt-8 md:max-w-4xl md:ml-auto md:pl-6`.
+- Each button: `w-12 h-12 rounded-full border border-[#0D212C]/20 flex items-center justify-center hover:bg-[#0D212C]/5 transition-colors`. Icons `ChevronLeft` / `ChevronRight` from lucide-react, `w-5 h-5 text-[#0D212C]`. Add `aria-label`.
+
+### Colors used
+- Text dark: `#0D212C`
+- Text muted: `#273C46`
+- Card shadow: `0 4px 16px rgba(0,0,0,0.08)`
+- Background: white
+
+### Required dependencies
+`react`, `react-dom`, `lucide-react`, plus Vite + Tailwind toolchain.
+
+---</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="animated-cards.html">Animated Cards<small>Components · carousel</small></a><a href="scroll-marquee.html">Scroll Marquee<small>Components · carousel</small></a><a href="flowmate-carousal.html">FlowMate Carousal<small>Components · carousel</small></a><a href="apex-program-accordion.html">Apex Program Accordion<small>Components · faq</small></a><a href="bento-grid-stats.html">Bento Grid Stats<small>Components · features</small></a><a href="glassmorphic-feature-tabs.html">Glassmorphic Feature Tabs<small>Components · features</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

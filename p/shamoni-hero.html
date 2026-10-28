@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shamoni — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="沉浸式滚动驱动着陆页，全屏视差背景与动态文字动画，营造奢华品牌展示体验。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/shamoni-hero.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shamoni — Hero Section 提示词">
+<meta property="og:description" content="沉浸式滚动驱动着陆页，全屏视差背景与动态文字动画，营造奢华品牌展示体验。">
+<meta property="og:url" content="https://prompt-site.shop/p/shamoni-hero.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/shamoni-hero.jpg">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Shamoni","description":"沉浸式滚动驱动着陆页，全屏视差背景与动态文字动画，营造奢华品牌展示体验。","url":"https://prompt-site.shop/p/shamoni-hero.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-05-21T10:00:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Shamoni</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-05-21</span><span>正文：19,606 字符</span></div><div class="hero-media"><img src="../assets/previews/shamoni-hero.jpg" alt="Shamoni 动效预览" loading="lazy"><div class="media-note">本地预览图 · jpeg</div></div><h2>简介</h2><p>沉浸式滚动驱动着陆页，全屏视差背景与动态文字动画，营造奢华品牌展示体验。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build an immersive, highly interactive, scroll-driven landing page using React, Vite, Tailwind CSS (v4), and `motion/react` (Framer Motion).
+
+Please set up the application with the exact files, dependencies, URLs, CSS variables, and mathematical Framer Motion values provided below.
+
+### Setup &amp; Dependencies
+Install the following libraries:
+`npm install motion react react-dom lucide-react`
+`npm install -D tailwindcss @tailwindcss/vite`
+
+Ensure Tailwind V4 is correctly initialized via `@tailwindcss/vite` in `vite.config.ts`.
+
+---
+
+### 1. Global Styles (`src/index.css`)
+Import the necessary Google Fonts and set up the Tailwind V4 `@theme` overrides:
+
+```css
+@import url(&#39;https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@300;400;500;600&amp;family=Great+Vibes&amp;display=swap&#39;);
+@import &quot;tailwindcss&quot;;
+
+@theme {
+--font-serif: &quot;Instrument Serif&quot;, serif;
+--font-sans: &quot;Manrope&quot;, sans-serif;
+--font-script: &quot;Great Vibes&quot;, cursive;
+}
+2. Orbit Images Component Styles (src/components/OrbitImages.css)
+This CSS provides the absolute positioning offsets for our custom rotation gallery.
+
+code
+CSS
+.orbit-container {
+position: relative;
+margin-left: auto;
+margin-right: auto;
+}
+
+.orbit-scaling-container {
+width: 100%;
+height: 100%;
+position: relative;
+}
+
+.orbit-scaling-container--responsive {
+position: absolute;
+left: 50%;
+top: 50%;
+transform-origin: center center;
+}
+
+.orbit-rotation-wrapper {
+width: 100%;
+height: 100%;
+transform-origin: center center;
+position: relative;
+}
+
+.orbit-path-svg {
+position: absolute;
+inset: 0;
+pointer-events: none;
+}
+
+.orbit-item {
+position: absolute;
+will-change: transform;
+user-select: none;
+}
+
+.orbit-center-content {
+position: absolute;
+inset: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 10;
+}
+
+.orbit-image {
+width: 100%;
+height: 100%;
+object-fit: contain;
+border-radius: 50%;
+}
+3. Orbit Images React Component (src/components/OrbitImages.tsx)
+Create this mathematically precise component that maps motion paths over SVG strings using offsetPath and offsetDistance. It accepts Framer Motion MotionValues as overrides to allow the parent App.tsx to infinitely control its radius, spread, item size, and rotation during scroll.
+
+code
+Tsx
+// @ts-nocheck
+import { useMemo, useEffect, useRef, useState } from &#39;react&#39;;
+import { motion, useMotionValue, useTransform, animate, useMotionTemplate } from &#39;motion/react&#39;;
+import &#39;./OrbitImages.css&#39;;
+
+function generateEllipsePath(cx, cy, rx, ry) {
+return `M ${cx - rx} ${cy} A ${rx} ${ry} 0 1 0 ${cx + rx} ${cy} A ${rx} ${ry} 0 1 0 ${cx - rx} ${cy}`;
+}
+
+function generateCirclePath(cx, cy, r) {
+return generateEllipsePath(cx, cy, r, r);
+}
+
+function generateSquarePath(cx, cy, size) {
+const h = size / 2;
+return `M ${cx - h} ${cy - h} L ${cx + h} ${cy - h} L ${cx + h} ${cy + h} L ${cx - h} ${cy + h} Z`;
+}
+
+function generateRectanglePath(cx, cy, w, h) {
+const hw = w / 2;
+const hh = h / 2;
+return `M ${cx - hw} ${cy - hh} L ${cx + hw} ${cy - hh} L ${cx + hw} ${cy + hh} L ${cx - hw} ${cy + hh} Z`;
+}
+
+function generateTrianglePath(cx, cy, size) {
+const height = (size * Math.sqrt(3)) / 2;
+const hs = size / 2;
+return `M ${cx} ${cy - height / 1.5} L ${cx + hs} ${cy + height / 3} L ${cx - hs} ${cy + height / 3} Z`;
+}
+
+function generateStarPath(cx, cy, outerR, innerR, points) {
+const step = Math.PI / points;
+let path = &#39;&#39;;
+for (let i = 0; i &lt; 2 * points; i++) {
+const r = i % 2 === 0 ? outerR : innerR;
+const angle = i * step - Math.PI / 2;
+const x = cx + r * Math.cos(angle);
+const y = cy + r * Math.sin(angle);
+path += i === 0 ? `M ${x} ${y}` : ` L ${x} ${y}`;
+}
+return path + &#39; Z&#39;;
+}
+
+function generateHeartPath(cx, cy, size) {
+const s = size / 30;
+return `M ${cx} ${cy + 12 * s} C ${cx - 20 * s} ${cy - 5 * s}, ${cx - 12 * s} ${cy - 18 * s}, ${cx} ${cy - 8 * s} C ${cx + 12 * s} ${cy - 18 * s}, ${cx + 20 * s} ${cy - 5 * s}, ${cx} ${cy + 12 * s}`;
+}
+
+function generateInfinityPath(cx, cy, w, h) {
+const hw = w / 2;
+const hh = h / 2;
+return `M ${cx} ${cy} C ${cx + hw * 0.5} ${cy - hh}, ${cx + hw} ${cy - hh}, ${cx + hw} ${cy} C ${cx + hw} ${cy + hh}, ${cx + hw * 0.5} ${cy + hh}, ${cx} ${cy} C ${cx - hw * 0.5} ${cy + hh}, ${cx - hw} ${cy + hh}, ${cx - hw} ${cy} C ${cx - hw} ${cy - hh}, ${cx - hw * 0.5} ${cy - hh}, ${cx} ${cy}`;
+}
+
+function generateWavePath(cx, cy, w, amplitude, waves) {
+const pts = [];
+const segs = waves * 20;
+const hw = w / 2;
+for (let i = 0; i &lt;= segs; i++) {
+const x = cx - hw + (w * i) / segs;
+const y = cy + Math.sin((i / segs) * waves * 2 * Math.PI) * amplitude;
+pts.push(i === 0 ? `M ${x} ${y}` : `L ${x} ${y}`);
+}
+for (let i = segs; i &gt;= 0; i--) {
+const x = cx - hw + (w * i) / segs;
+const y = cy - Math.sin((i / segs) * waves * 2 * Math.PI) * amplitude;
+pts.push(`L ${x} ${y}`);
+}
+return pts.join(&#39; &#39;) + &#39; Z&#39;;
+}
+
+function OrbitItem({ item, index, totalItems, pathValue, itemSizeValue, rotationValue, progress, fill, scaleStrength, focalPoint = 50 }) {
+const itemOffset = fill ? (index / totalItems) * 100 : 0;
+
+const offsetPercentage = useTransform(progress, (p) =&gt; {
+return (((p + itemOffset) % 100) + 100) % 100;
+});
+
+const offsetDistance = useTransform(offsetPercentage, (p) =&gt; `${p}%`);
+
+const itemScale = useTransform(() =&gt; {
+const rawPos = offsetPercentage.get();
+const strength = scaleStrength ? scaleStrength.get() : 0;
+
+let dist = Math.abs(rawPos - focalPoint);
+if (dist &gt; 50) dist = 100 - dist;
+
+let targetScale = 1;
+if (dist &lt; 20) {
+const ratio = dist / 20;
+const cosCurve = (Math.cos(ratio * Math.PI) + 1) / 2;
+targetScale = 0.4 + (cosCurve * 0.6);
+} else {
+targetScale = 0.4;
+}
+
+return 1 - strength * (1 - targetScale);
+});
+
+const offsetPath = useMotionTemplate`path(&quot;${pathValue}&quot;)`;
+
+return (
+&lt;motion.div
+className=&quot;orbit-item&quot;
+style={{
+width: itemSizeValue,
+height: itemSizeValue,
+offsetPath,
+offsetRotate: &#39;0deg&#39;,
+offsetAnchor: &#39;center center&#39;,
+offsetDistance,
+scale: itemScale,
+zIndex: useTransform(itemScale, s =&gt; Math.round(s * 100)),
+pointerEvents: &#39;auto&#39;
+}}
+&gt;
+&lt;motion.div style={{ transform: useTransform(rotationValue, r =&gt; `rotate(${-r}deg)`), width: &#39;100%&#39;, height: &#39;100%&#39; }}&gt;{item}&lt;/motion.div&gt;
+&lt;/motion.div&gt;
+);
+}
+
+export default function OrbitImages({
+images = [],
+altPrefix = &#39;Orbiting image&#39;,
+shape = &#39;ellipse&#39;,
+customPath,
+baseWidth = 1400,
+radiusX = 700,
+radiusY = 170,
+radius = 300,
+starPoints = 5,
+starInnerRatio = 0.5,
+rotation = -8,
+duration = 40,
+itemSize = 64,
+direction = &#39;normal&#39;,
+fill = true,
+width = 100,
+height = 100,
+className = &#39;&#39;,
+showPath = false,
+pathColor = &#39;rgba(0,0,0,0.1)&#39;,
+pathWidth = 2,
+easing = &#39;linear&#39;,
+paused = false,
+centerContent,
+responsive = false,
+progressOverride,
+radiusXOverride,
+radiusYOverride,
+itemSizeOverride,
+rotationOverride,
+translateXOverride,
+focusStrength,
+}) {
+const containerRef = useRef(null);
+const [scale, setScale] = useState(1);
+
+const designCenterX = baseWidth / 2;
+const designCenterY = baseWidth / 2;
+
+const currentRadiusX = radiusXOverride || useMotionValue(radiusX);
+const currentRadiusY = radiusYOverride || useMotionValue(radiusY);
+const currentItemSize = itemSizeOverride || useMotionValue(itemSize);
+const currentRotation = rotationOverride || useMotionValue(rotation);
+const currentTranslateX = translateXOverride || useMotionValue(0);
+
+const pathValue = useTransform([currentRadiusX, currentRadiusY], ([rx, ry]) =&gt; {
+switch (shape) {
+case &#39;circle&#39;: return generateCirclePath(designCenterX, designCenterY, rx);
+case &#39;ellipse&#39;: return generateEllipsePath(designCenterX, designCenterY, rx, ry);
+case &#39;square&#39;: return generateSquarePath(designCenterX, designCenterY, rx * 2);
+case &#39;rectangle&#39;: return generateRectanglePath(designCenterX, designCenterY, rx * 2, ry * 2);
+case &#39;triangle&#39;: return generateTrianglePath(designCenterX, designCenterY, rx * 2);
+case &#39;star&#39;: return generateStarPath(designCenterX, designCenterY, rx, rx * starInnerRatio, starPoints);
+case &#39;heart&#39;: return generateHeartPath(designCenterX, designCenterY, rx * 2);
+case &#39;infinity&#39;: return generateInfinityPath(designCenterX, designCenterY, rx * 2, ry * 2);
+case &#39;wave&#39;: return generateWavePath(designCenterX, designCenterY, rx * 2, ry, 3);
+case &#39;custom&#39;: return customPath || generateCirclePath(designCenterX, designCenterY, rx);
+default: return generateEllipsePath(designCenterX, designCenterY, rx, ry);
+}
+});
+
+useEffect(() =&gt; {
+if (!responsive || !containerRef.current) return;
+const updateScale = () =&gt; {
+if (!containerRef.current) return;
+setScale(containerRef.current.clientWidth / baseWidth);
+};
+updateScale();
+const observer = new ResizeObserver(updateScale);
+observer.observe(containerRef.current);
+return () =&gt; observer.disconnect();
+}, [responsive, baseWidth]);
+
+const internalProgress = useMotionValue(0);
+
+useEffect(() =&gt; {
+if (paused || progressOverride) return;
+const controls = animate(internalProgress, direction === &#39;reverse&#39; ? -100 : 100, {
+duration,
+ease: easing,
+repeat: Infinity,
+repeatType: &#39;loop&#39;,
+});
+return () =&gt; controls.stop();
+}, [internalProgress, duration, easing, direction, paused, progressOverride]);
+
+const activeProgress = progressOverride || internalProgress;
+const containerWidth = responsive ? &#39;100%&#39; : (typeof width === &#39;number&#39; ? width : &#39;100%&#39;);
+const containerHeight = responsive ? &#39;auto&#39; : (typeof height === &#39;number&#39; ? height : (typeof width === &#39;number&#39; ? width : &#39;auto&#39;));
+
+const items = images.map((src, index) =&gt; (
+&lt;motion.img
+key={src}
+src={src}
+alt={`${altPrefix} ${index + 1}`}
+draggable={false}
+className=&quot;orbit-image&quot;
+whileHover={{ scale: 1.2 }}
+transition={{ duration: 0.3 }}
+style={{ cursor: &quot;pointer&quot;, pointerEvents: &quot;auto&quot; }}
+/&gt;
+));
+
+return (
+&lt;div ref={containerRef} className={`orbit-container ${className}`} style={{ width: containerWidth, height: containerHeight, aspectRatio: responsive ? &#39;1 / 1&#39; : undefined }} aria-hidden=&quot;true&quot;&gt;
+&lt;div className={responsive ? &#39;orbit-scaling-container orbit-scaling-container--responsive&#39; : &#39;orbit-scaling-container&#39;} style={{ width: responsive ? baseWidth : &#39;100%&#39;, height: responsive ? baseWidth : &#39;100%&#39;, transform: responsive ? `translate(-50%, -50%) scale(${scale})` : undefined }}&gt;
+&lt;motion.div className=&quot;orbit-rotation-wrapper&quot; style={{ rotate: currentRotation, x: currentTranslateX }}&gt;
+{showPath &amp;&amp; (
+&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; viewBox={`0 0 ${baseWidth} ${baseWidth}`} className=&quot;orbit-path-svg&quot;&gt;
+&lt;path d={pathValue.get()} fill=&quot;none&quot; stroke={pathColor} strokeWidth={pathWidth / scale} /&gt;
+&lt;/svg&gt;
+)}
+{items.map((item, index) =&gt; (
+&lt;OrbitItem key={index} item={item} index={index} totalItems={items.length} pathValue={pathValue} itemSizeValue={currentItemSize} rotationValue={currentRotation} progress={activeProgress} fill={fill} scaleStrength={focusStrength} focalPoint={50} /&gt;
+))}
+&lt;/motion.div&gt;
+&lt;/div&gt;
+{centerContent &amp;&amp; &lt;div className=&quot;orbit-center-content&quot;&gt;{centerContent}&lt;/div&gt;}
+&lt;/div&gt;
+);
+}
+4. Main Page App Component (src/App.tsx)
+Implement the exact layout, UI timelines (scrollYProgress transforms), background &lt;video&gt;, typography mask, and the heavily orchestrated Framer Motion timeline values. Do not change any numbers in the arrays.
+
+code
+Tsx
+import { motion, useMotionTemplate, useScroll, useTransform, useAnimationFrame, useMotionValue } from &#39;motion/react&#39;;
+import { useRef } from &#39;react&#39;;
+import OrbitImages from &#39;./components/OrbitImages&#39;;
+
+const orbitImagesData = [
+&quot;https://aspect-slam-99684872.figma.site/_components/v2/79eebc3801de595030a9e7fa875de4a77ede4f07/3644e7bae80f5a458c3c087d313204cc67952aff.3644e7ba.png&quot;,
+&quot;https://aspect-slam-99684872.figma.site/_components/v2/79eebc3801de595030a9e7fa875de4a77ede4f07/85346ab4899007b001b3df5d5da04a9d0e4e9ea4.85346ab4.png&quot;,
+&quot;https://aspect-slam-99684872.figma.site/_components/v2/79eebc3801de595030a9e7fa875de4a77ede4f07/ff5f9bb7c566be349d20a775a29eab9ff591311b.ff5f9bb7.png&quot;,
+&quot;https://aspect-slam-99684872.figma.site/_components/v2/79eebc3801de595030a9e7fa875de4a77ede4f07/22e1b6bbc71c4977a49b6bbd991ed75be483cf0e.22e1b6bb.png&quot;,
+&quot;https://aspect-slam-99684872.figma.site/_components/v2/79eebc3801de595030a9e7fa875de4a77ede4f07/874d9530b2ec45092a4c71a1fd74564599b7e3c8.874d9530.png&quot;,
+&quot;https://aspect-slam-99684872.figma.site/_components/v2/79eebc3801de595030a9e7fa875de4a77ede4f07/2adc4a2c178d6aaa68dda80fc42e7628372522d1.2adc4a2c.png&quot;,
+];
+
+export default function App() {
+const containerRef = useRef&lt;HTMLDivElement&gt;(null);
+
+const { scrollYProgress } = useScroll({
+target: containerRef,
+offset: [&quot;start start&quot;, &quot;end end&quot;]
+});
+
+const rx = useTransform(scrollYProgress, [0, 0.08, 1], [&quot;0%&quot;, &quot;55%&quot;, &quot;55%&quot;]);
+const ry = useTransform(scrollYProgress, [0, 0.08, 1], [&quot;0%&quot;, &quot;55%&quot;, &quot;55%&quot;]);
+const clipPath = useMotionTemplate`ellipse(${rx} ${ry} at 50% 50%)`;
+
+const textOpacity = useTransform(scrollYProgress, [0.03, 0.08, 0.15, 0.22, 0.90, 0.98, 1], [0, 1, 1, 0, 0, 1, 1]);
+const textBlurVal = useTransform(scrollYProgress, [0.03, 0.08, 0.15, 0.22, 0.90, 0.98, 1], [15, 0, 0, 15, 15, 0, 0]);
+const filterText = useMotionTemplate`blur(${textBlurVal}px)`;
+const yElement = useTransform(scrollYProgress, [0.03, 0.08, 0.15, 0.22, 0.90, 0.98, 1], [20, 0, 0, 20, 20, 0, 0]);
+
+const targetRadius = 650;
+
+const orbitItemSize = useTransform(scrollYProgress, [0.15, 0.25, 0.85, 0.95, 1], [80, 520, 520, 80, 80]);
+const orbitRx = useTransform(scrollYProgress, [0.15, 0.25, 0.85, 0.95, 1], [330, targetRadius, targetRadius, 330, 330]);
+const orbitRy = useTransform(scrollYProgress, [0.15, 0.25, 0.85, 0.95, 1], [140, targetRadius, targetRadius, 140, 140]);
+const orbitRotation = useTransform(scrollYProgress, [0.15, 0.25, 0.85, 0.95, 1], [-15, 0, 0, -15, -15]);
+const orbitTx = useTransform(scrollYProgress, [0.15, 0.25, 0.85, 0.95, 1], [0, -targetRadius, -targetRadius, 0, 0]);
+const focusStrength = useTransform(scrollYProgress, [0.15, 0.25, 0.85, 0.95, 1], [0, 1, 1, 0, 0]);
+
+const orbitProgress = useMotionValue(0);
+const prevScroll = useRef(0);
+
+useAnimationFrame((time, delta) =&gt; {
+const pos = scrollYProgress.get();
+const scrollDelta = pos - prevScroll.current;
+prevScroll.current = pos;
+
+let frameSpeed = 0;
+if (pos &gt; 0.15 &amp;&amp; pos &lt; 0.85) {
+frameSpeed = (scrollDelta * 200);
+} else {
+frameSpeed = (delta / 1000) * 2.5;
+}
+
+orbitProgress.set(orbitProgress.get() + frameSpeed);
+});
+
+return (
+&lt;div ref={containerRef} className=&quot;relative w-full h-[600vh] bg-black&quot;&gt;
+&lt;div className=&quot;sticky top-0 w-full h-screen overflow-hidden text-white&quot;&gt;
+
+&lt;video autoPlay loop muted playsInline className=&quot;absolute inset-0 w-full h-full object-cover z-0&quot;&gt;
+&lt;source src=&quot;https://stream.mux.com/OD2Ny6q9anbQ9h7Vie3KnqDxFpzHM9sjwfhF029lfd600.m3u8&quot; type=&quot;video/mp4&quot; /&gt;
+&lt;/video&gt;
+
+&lt;div className=&quot;absolute inset-0 bg-black/10 z-0&quot;&gt;&lt;/div&gt;
+
+&lt;div className=&quot;absolute z-10 w-[80vw]&quot; style={{ left: &#39;3vw&#39;, bottom: &#39;3vw&#39; }}&gt;
+&lt;svg viewBox=&quot;0 10 350 72&quot; className=&quot;w-full h-auto drop-shadow-2xl overflow-visible&quot; preserveAspectRatio=&quot;xMinYMax meet&quot;&gt;
+&lt;text x=&quot;-3&quot; y=&quot;80&quot; fontFamily=&quot;&#39;Instrument Serif&#39;, serif&quot; fill=&quot;#FDFFB7&quot; className=&quot;select-none&quot;&gt;
+&lt;tspan fontSize=&quot;90&quot;&gt;Shamoni&lt;/tspan&gt;
+&lt;tspan fontSize=&quot;28.8&quot; dx=&quot;4&quot; dy=&quot;-40&quot;&gt;©&lt;/tspan&gt;
+&lt;/text&gt;
+&lt;/svg&gt;
+&lt;/div&gt;
+
+&lt;motion.div
+className=&quot;absolute z-20 flex items-center justify-center overflow-hidden&quot;
+style={{ clipPath, rotate: -15, width: &#39;150vw&#39;, height: &#39;150vh&#39;, left: &#39;-25vw&#39;, top: &#39;-25vh&#39; }}
+&gt;
+&lt;div className=&quot;absolute inset-0 bg-white&quot; /&gt;
+&lt;div className=&quot;relative flex flex-col items-center justify-center&quot; style={{ width: &#39;100vw&#39;, height: &#39;100vh&#39;, transform: &#39;rotate(15deg)&#39; }}&gt;
+&lt;motion.div className=&quot;w-[90vw] max-w-[1200px] aspect-square relative z-0&quot;&gt;
+&lt;OrbitImages
+images={orbitImagesData}
+shape=&quot;ellipse&quot;
+direction=&quot;normal&quot;
+duration={40}
+fill={true}
+showPath={false}
+responsive={true}
+baseWidth={800}
+progressOverride={orbitProgress}
+radiusXOverride={orbitRx}
+radiusYOverride={orbitRy}
+itemSizeOverride={orbitItemSize}
+rotationOverride={orbitRotation}
+translateXOverride={orbitTx}
+focusStrength={focusStrength}
+/&gt;
+&lt;/motion.div&gt;
+&lt;/div&gt;
+&lt;/motion.div&gt;
+
+&lt;div className=&quot;absolute inset-0 z-[60] pointer-events-none&quot;&gt;
+&lt;div className=&quot;absolute top-[48%] left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-50&quot;&gt;
+&lt;motion.div
+className=&quot;flex flex-col items-center whitespace-nowrap pointer-events-auto&quot;
+style={{ filter: filterText, opacity: textOpacity, WebkitFontSmoothing: &#39;antialiased&#39;, WebkitBackfaceVisibility: &#39;hidden&#39;, transform: &#39;translateZ(0)&#39; }}
+&gt;
+&lt;div className=&quot;flex items-baseline text-black leading-none mb-1&quot;&gt;
+&lt;span className=&quot;font-serif text-[45px] md:text-[55px] italic tracking-tight text-black&quot;&gt;M&lt;/span&gt;
+&lt;span className=&quot;font-serif text-[45px] md:text-[55px] tracking-tight text-black&quot;&gt;aster the Elements&lt;/span&gt;
+&lt;/div&gt;
+&lt;span className=&quot;font-sans text-[28px] md:text-[36px] tracking-tight text-black mt-[-5px]&quot;&gt;embrace&lt;/span&gt;
+&lt;/motion.div&gt;
+&lt;/div&gt;
+
+&lt;motion.div
+className=&quot;absolute top-32 right-[calc(6vw+150px)] md:right-[214px] flex flex-col items-start text-left pointer-events-auto cursor-text&quot;
+style={{ y: yElement, filter: filterText, opacity: textOpacity }}
+&gt;
+&lt;span className=&quot;font-serif text-[40px] leading-none mb-3 text-black&quot;&gt;2K26&lt;/span&gt;
+&lt;span className=&quot;font-serif text-[16px] uppercase tracking-widest text-black leading-[20px] text-left&quot;&gt;
+JOIN AN EXCLUSIVE&lt;br /&gt;COMMUNITY
+&lt;/span&gt;
+&lt;/motion.div&gt;
+
+&lt;motion.div
+className=&quot;absolute bottom-8 left-8 md:bottom-16 md:left-16 flex flex-col items-start text-black pointer-events-auto cursor-text&quot;
+style={{ y: yElement, filter: filterText, opacity: textOpacity }}
+&gt;
+&lt;span className=&quot;font-serif text-[40px] leading-none mb-1 text-black&quot;&gt;0651&lt;/span&gt;
+&lt;span className=&quot;font-serif text-[16px] uppercase tracking-widest text-black&quot;&gt;COLLECTION&lt;/span&gt;
+&lt;/motion.div&gt;
+
+&lt;div className=&quot;absolute bottom-16 right-[6vw] md:right-[10vw] flex flex-col items-start z-10 pointer-events-auto&quot;&gt;
+&lt;motion.p
+className=&quot;font-serif text-[16px] uppercase tracking-widest text-black leading-[20px] mb-6 text-left w-[240px] cursor-text&quot;
+style={{ y: yElement, filter: filterText, opacity: textOpacity }}
+&gt;
+JOIN AN EXCLUSIVE COMMUNITY OF SAILORS. WHETHER YOU CRAVE THE THRILL OF THE OPEN
+&lt;/motion.p&gt;
+&lt;motion.div className=&quot;flex gap-0 pointer-events-auto items-center&quot; style={{ y: yElement, filter: filterText, opacity: textOpacity }}&gt;
+&lt;button className=&quot;bg-black hover:bg-black/90 transition-colors text-white rounded-[40px] px-8 py-3.5 font-serif tracking-[0.1em] uppercase text-[12px] md:text-[14px] z-10&quot;&gt;
+BUY COLLECTION
+&lt;/button&gt;
+&lt;button className=&quot;bg-black hover:bg-black/90 transition-colors w-[46px] h-[46px] flex items-center justify-center rounded-[50%] text-white -ml-2 z-0&quot;&gt;
+&lt;svg width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; strokeWidth=&quot;1.5&quot; strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; className=&quot;ml-1&quot;&gt;
+&lt;path d=&quot;M5 12h14M12 5l7 7-7 7&quot;/&gt;
+&lt;/svg&gt;
+&lt;/button&gt;
+&lt;/motion.div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;motion.header
+className=&quot;fixed top-0 left-0 w-full p-6 md:p-10 flex justify-between items-start z-[100] pointer-events-none&quot;
+style={{ opacity: textOpacity, filter: filterText }}
+&gt;
+&lt;div className=&quot;flex items-start text-black select-none leading-none pointer-events-auto&quot; style={{ fontFamily: &quot;&#39;Instrument Serif&#39;, serif&quot;, WebkitFontSmoothing: &quot;antialiased&quot; }}&gt;
+&lt;span style={{ fontSize: &#39;40px&#39; }}&gt;Shamoni&lt;/span&gt;
+&lt;span style={{ fontSize: &#39;14px&#39;, marginLeft: &#39;4px&#39;, marginTop: &#39;4px&#39; }}&gt;©&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;button className=&quot;group relative flex items-center justify-center w-[72px] h-[44px] hover:scale-105 transition-transform duration-300 cursor-pointer pointer-events-auto&quot; aria-label=&quot;Menu&quot;&gt;
+&lt;div className=&quot;absolute inset-0 bg-black rounded-[50%] -rotate-15&quot;&gt;&lt;/div&gt;
+&lt;svg className=&quot;relative z-10&quot; width=&quot;24&quot; height=&quot;10&quot; viewBox=&quot;0 0 24 10&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;M1 1H23M1 9H23&quot; stroke=&quot;white&quot; strokeWidth=&quot;2&quot; strokeLinecap=&quot;round&quot; /&gt;
+&lt;/svg&gt;
+&lt;/button&gt;
+&lt;/motion.header&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+);
+}</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

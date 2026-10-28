@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mouse Trail CTA — CTA Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="大型圆角白色卡片，内含巨大衬线标题和带头像的深色药丸按钮，鼠标在卡片内移动时产生渐隐旋转的图片拖尾效果。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/mouse-trail-cta.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mouse Trail CTA — CTA Section 提示词">
+<meta property="og:description" content="大型圆角白色卡片，内含巨大衬线标题和带头像的深色药丸按钮，鼠标在卡片内移动时产生渐隐旋转的图片拖尾效果。">
+<meta property="og:url" content="https://prompt-site.shop/p/mouse-trail-cta.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/mouse-trail-cta.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Mouse Trail CTA","description":"大型圆角白色卡片，内含巨大衬线标题和带头像的深色药丸按钮，鼠标在卡片内移动时产生渐隐旋转的图片拖尾效果。","url":"https://prompt-site.shop/p/mouse-trail-cta.html","inLanguage":"zh-CN","genre":"CTA Section","dateCreated":"2026-06-04T05:27:41.412941+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-cta_section">CTA Section</a></div><h1>Mouse Trail CTA</h1><div class="chip-row"><span class="chip">CTA Section</span><span class="chip">cta</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-04</span><span>正文：5,659 字符</span></div><div class="hero-media"><img src="../assets/previews/mouse-trail-cta.webp" alt="Mouse Trail CTA 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>大型圆角白色卡片，内含巨大衬线标题和带头像的深色药丸按钮，鼠标在卡片内移动时产生渐隐旋转的图片拖尾效果。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a React + TypeScript + Tailwind CSS + Vite section called &quot;Partner with us&quot;. It&#39;s a large rounded white card with a giant serif heading, a dark pill button containing a portrait avatar, and an interactive mouse-trail effect that drops fading, slightly rotated images wherever the user moves the cursor inside the card.
+
+### Fonts (global, in `src/index.css` before `@tailwind` directives)
+
+```css
+@font-face {
+font-family: &#39;PP Neue Montreal&#39;;
+src: url(&#39;https://assets.website-files.com/6009ec8cda7f305645c9d91b/60176f9bb43e36419997ecfe_PPNeueMontreal-Book.otf&#39;) format(&#39;opentype&#39;);
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+@font-face {
+font-family: &#39;PP Neue Montreal&#39;;
+src: url(&#39;https://assets.website-files.com/6009ec8cda7f305645c9d91b/60176f9b39c5673e51a86f5a_PPNeueMontreal-Medium.otf&#39;) format(&#39;opentype&#39;);
+font-weight: 500;
+font-style: normal;
+font-display: swap;
+}
+@font-face {
+font-family: &#39;PP Mondwest&#39;;
+src: url(&#39;/PPMondwest-Regular.woff2&#39;) format(&#39;woff2&#39;);
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+font-family: &#39;PP Neue Montreal&#39;, -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, sans-serif;
+}
+
+@keyframes fadeInUp {
+0% { opacity: 0; transform: translateY(30px); }
+100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+animation: fadeInUp 0.8s ease-out forwards;
+opacity: 0;
+}
+```
+
+Place `PPMondwest-Regular.woff2` in `public/`. Also place a square portrait JPG in `public/` (e.g., `viktor.jpg`) to use as the avatar inside the CTA button.
+
+### In-view hook (`src/hooks/useInViewAnimation.ts`)
+
+`IntersectionObserver` with `threshold = 0.1`. Returns `{ ref, isInView }`. Sticky once true.
+
+### Component (`src/components/PartnerSection.tsx`)
+
+**Props**
+- `images: string[]` — a list of image URLs used as the trail. Use the same GIF/animation URLs you have on the rest of the page (any 8+ rectangular assets).
+
+**State / refs**
+- `trailImages: TrailImage[]` where `TrailImage = { id: number; x: number; y: number; timestamp: number; src: string; rotation: number }`.
+- `isHovered: boolean` (default false).
+- `sectionRef` — ref on the inner rounded card (for bounding-rect math).
+- `lastSpawnTime` — `useRef(0)` for spawn throttling.
+- `imageIdCounter` — `useRef(0)` monotonically increasing id.
+- `animationRef`, `isInView` from `useInViewAnimation()` placed on the outer `
+
+`.
+
+**Mouse trail behaviour**
+- `onMouseEnter` sets `isHovered = true`; `onMouseLeave` sets it false.
+- `onMouseMove`:
+- Bail if `!isHovered` or `!sectionRef.current`.
+- Throttle: ignore if `Date.now() - lastSpawnTime.current &lt; 80` ms.
+- Compute `(x, y)` relative to the section&#39;s `getBoundingClientRect()` (subtract `rect.left`, `rect.top`).
+- Pick a random image from `images`. Compute `rotation = (Math.random() - 0.5) * 20` degrees.
+- Push a new `TrailImage` with a fresh id, `timestamp = Date.now()`.
+- Cleanup loop: `setInterval` every 50 ms removes any trail entry whose age `&gt; 1000` ms.
+
+**Per-image fade math** (applied as inline style on the trail wrapper):
+- `age = now - img.timestamp`, `progress = min(age / 1000, 1)`.
+- `opacity = 1 - progress`.
+- `scale = 1 - progress * 0.15`.
+- Position: `left = img.x - 50`, `top = img.y - 50`.
+- Transform: `scale(${scale}) rotate(${img.rotation}deg)`.
+
+**Markup**
+
+Outer wrapper:
+```html
+
+
+
+```
+Inner rounded card (this is the trail surface — attach `sectionRef`, `onMouseMove`, `onMouseEnter`, `onMouseLeave` here):
+```
+w-full max-w-7xl mx-auto py-48 bg-white relative overflow-hidden
+shadow-[0_0_0_0.5px_rgba(0,0,0,0.05),0_4px_30px_rgba(0,0,0,0.08)]
+rounded-[40px]
+```
+
+Inside the card, a centered content block above the trail:
+```html
+
+
+
+```
+
+Heading:
+```
+text-[48px] md:text-[64px] lg:text-[80px] leading-[1.1]
+text-[#0D212C] tracking-tight font-normal mb-12
+```
+- Inline style `fontFamily: &quot;&#39;PP Mondwest&#39;, serif&quot;`.
+- Text: `Partner with us`.
+- Animation: when `isInView`, class `animate-fade-in-up`; else `opacity-0`. Inline `animationDelay: isInView ? &#39;0.1s&#39; : &#39;0s&#39;`.
+
+CTA button (centered with `mx-auto`):
+```
+bg-[#051A24] text-white px-6 py-3.5 rounded-full
+flex items-center gap-3
+shadow-[0_1px_2px_0_rgba(5,26,36,0.1),0_4px_4px_0_rgba(5,26,36,0.09),0_9px_6px_0_rgba(5,26,36,0.05),0_17px_7px_0_rgba(5,26,36,0.01),0_26px_7px_0_rgba(5,26,36,0),inset_0_2px_8px_0_rgba(255,255,255,0.5)]
+hover:bg-[#0D212C] transition-colors duration-200
+```
+- Animation: `animate-fade-in-up` (or `opacity-0`) with `animationDelay: &#39;0.2s&#39;`.
+- Contents:
+1. `` of the portrait: `w-10 h-10 rounded-full object-cover`, `src` = portrait JPG path, `alt=&quot;Viktor Oddy&quot;`.
+2. `Start chat with Viktor`.
+
+After the centered content block, render the trail images list (still inside the card, not behind `z-10`):
+```jsx
+{trailImages.map((img) =&gt; (
+
+
+
+
+
+
+))}
+```
+
+### Colors used
+- Dark text / button bg: `#051A24` (button), `#0D212C` (heading and button hover).
+- Card surface: `white`.
+- Card shadow: `0 0 0 0.5px rgba(0,0,0,0.05), 0 4px 30px rgba(0,0,0,0.08)`.
+- Button shadow (layered + inset highlight): as listed above.
+
+### Behaviour summary
+- Section fades in on scroll via `IntersectionObserver` (heading delay 0.1s, button delay 0.2s).
+- Hovering the rounded card drops a randomized, rotated thumbnail every ~80 ms at the cursor; each thumbnail fades out and shrinks slightly over 1 second, then is removed.
+- Trail thumbnails are 96 px wide (`w-24`), centered on the cursor (offset by 50 px), absolutely positioned, `pointer-events-none`, with `rounded-xl` and a soft `shadow-lg`.
+
+### Required dependencies
+`react`, `react-dom`, plus Vite + Tailwind toolchain. No `lucide-react` needed for this section.
+
+---</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="liquid-glass-cta.html">Liquid Glass CTA<small>CTA Section · cta</small></a><a href="nimbus-ops.html">Nimbus Ops<small>CTA Section · cta</small></a><a href="orbis-cta.html">Orbis CTA<small>CTA Section · cta</small></a><a href="rocket-cta.html">Rocket CTA<small>CTA Section · cta</small></a><a href="global-cta-footer.html">Global CTA Footer<small>CTA Section · cta</small></a><a href="editorial-collection-cta.html">Editorial Collection CTA<small>CTA Section · cta</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quantum Core — Data Intelligence 提示词 | MotionSites Prompts</title>
+<meta name="description" content="PROMPT — Recreate the &quot;Apogee&quot; Hero Section Exactly Build a pixel-exact, fully mobile-responsive hero landing section called  &quot;Apogee&quot; . Follow every ">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/quantum-core.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Quantum Core — Data Intelligence 提示词">
+<meta property="og:description" content="PROMPT — Recreate the &quot;Apogee&quot; Hero Section Exactly Build a pixel-exact, fully mobile-responsive hero landing section called  &quot;Apogee&quot; . Follow every ">
+<meta property="og:url" content="https://prompt-site.shop/p/quantum-core.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/quantum-core.jpg">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Quantum Core","description":"PROMPT — Recreate the \"Apogee\" Hero Section Exactly Build a pixel-exact, fully mobile-responsive hero landing section called  \"Apogee\" . Follow every ","url":"https://prompt-site.shop/p/quantum-core.html","inLanguage":"zh-CN","genre":"Data Intelligence","dateCreated":"2026-08-20T16:48:27.663Z","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-data_intelligence">Data Intelligence</a></div><h1>Quantum Core</h1><div class="chip-row"><span class="chip">Data Intelligence</span><span class="chip">data-intelligence</span><span class="chip">yilai-ai 公开页面</span></div><div class="facts"><span>收录时间：2026-08-20</span><span>正文：27,911 字符</span></div><div class="hero-media"><img src="../assets/previews/quantum-core.jpg" alt="Quantum Core 动效预览" loading="lazy"><div class="media-note">本地预览图 · jpeg</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text"># PROMPT — Recreate the &quot;Apogee&quot; Hero Section Exactly
+
+Build a pixel-exact, fully mobile-responsive hero landing section called **&quot;Apogee&quot;**. Follow every specification below literally — exact hex values, exact pixel numbers, exact class names, exact animation delays, exact copy. Do not substitute, round, simplify, or &quot;improve&quot; any value. Where a bracketed Tailwind arbitrary value is given (e.g. `text-[15.5px]`), use that arbitrary value verbatim rather than the nearest Tailwind preset.
+
+---
+
+## 1. STACK &amp; PROJECT SETUP
+
+- **Vite 5** + **React 18.3** + **TypeScript 5.5** + **Tailwind CSS 3.4** + **PostCSS/Autoprefixer**
+- Icons: **`lucide-react`** (v0.446) — use only `ChevronDown`, `Menu`, `X`
+- `package.json` type: `&quot;module&quot;`. Scripts: `dev: vite`, `build: vite build`, `lint: eslint .`, `preview: vite preview`, `typecheck: tsc --noEmit -p tsconfig.app.json`
+
+**`vite.config.ts`:**
+```ts
+import { defineConfig } from &#39;vite&#39;;
+import react from &#39;@vitejs/plugin-react&#39;;
+import { fileURLToPath, URL } from &#39;node:url&#39;;
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      &#39;@&#39;: fileURLToPath(new URL(&#39;./src&#39;, import.meta.url)),
+    },
+  },
+  optimizeDeps: {
+    exclude: [&#39;lucide-react&#39;],
+  },
+});
+```
+
+**`tsconfig.app.json`** must include the matching path alias so `@/foo` resolves to `src/foo`:
+```json
+&quot;baseUrl&quot;: &quot;.&quot;,
+&quot;paths&quot;: { &quot;@/*&quot;: [&quot;src/*&quot;] }
+```
+
+**`tailwind.config.js`** — stock, no theme extensions (all styling uses arbitrary values):
+```js
+/** @type {import(&#39;tailwindcss&#39;).Config} */
+export default {
+  content: [&#39;./index.html&#39;, &#39;./src/**/*.{js,ts,jsx,tsx}&#39;],
+  theme: { extend: {} },
+  plugins: [],
+};
+```
+
+**File structure:**
+```
+index.html
+src/main.tsx
+src/App.tsx
+src/index.css
+src/components/Hero.tsx
+```
+
+`src/App.tsx` renders nothing but the hero:
+```tsx
+import Hero from &#39;@/components/Hero&#39;;
+
+function App() {
+  return &lt;Hero /&gt;;
+}
+
+export default App;
+```
+
+`src/main.tsx` uses `createRoot` + `&lt;StrictMode&gt;`, importing `./App.tsx` and `./index.css`.
+
+---
+
+## 2. `index.html` — FONT &amp; HEAD
+
+Page title: **`Apogee`**. Viewport meta: `width=device-width, initial-scale=1.0`.
+
+Load the **Suisse Intl** webfont with this exact stylesheet link in `&lt;head&gt;`:
+```html
+&lt;link href=&quot;https://db.onlinewebfonts.com/c/13ab13418f633c1b0516fed6e30bedbc?family=Suisse+Int%27l&quot; rel=&quot;stylesheet&quot;&gt;
+```
+
+Root div id is `root`; module script is `/src/main.tsx`.
+
+---
+
+## 3. `src/index.css` — GLOBAL CSS &amp; KEYFRAMES
+
+Exactly this file, in this order:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: &#39;Suisse Intl&#39;, -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-down {
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-left {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fade-right {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fade-scale {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bar-grow {
+  from { transform: scaleY(0); opacity: 0; }
+  to   { transform: scaleY(1); opacity: 1; }
+}
+
+.animate-fade-up    { animation: fade-up    0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-fade-down  { animation: fade-down  0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-fade-left  { animation: fade-left  0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-fade-right { animation: fade-right 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-fade-scale { animation: fade-scale 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+.animate-bar-grow {
+  animation: bar-grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+```
+
+**Critical:** every animation uses `forwards` fill mode and the easing `cubic-bezier(0.16, 1, 0.3, 1)`. Elements start at `opacity-0` in markup and are revealed by the animation — never by JS state or IntersectionObserver.
+
+---
+
+## 4. `src/components/Hero.tsx`
+
+Single file containing four things in this order: the `BAR_HEIGHTS` constant, the `Animate` helper, the `RevenueCard` component, the default-exported `Hero`, then the `Nav` component (function declarations, so hoisting allows `Nav` to be defined after `Hero`).
+
+### 4.1 The `BAR_HEIGHTS` constant — use these 32 numbers exactly, in this order
+
+```ts
+const BAR_HEIGHTS = [
+  23, 40, 53, 40, 33, 14, 7, 17, 75, 65,
+  88, 75, 65, 47, 33, 88, 4, 7, 9, 14,
+  95, 65, 79, 37, 7, 40, 17, 20, 62, 47,
+  92, 72,
+];
+```
+
+### 4.2 `Animate` — the reusable entrance-animation wrapper
+
+Props: `children: React.ReactNode`, `delay?: number` (default `0`), `className?: string` (default `&#39;&#39;`), `direction?: &#39;up&#39; | &#39;down&#39; | &#39;left&#39; | &#39;right&#39; | &#39;scale&#39;` (default `&#39;up&#39;`).
+
+It maps direction → class via a lookup object (`up: &#39;animate-fade-up&#39;`, `down: &#39;animate-fade-down&#39;`, `left: &#39;animate-fade-left&#39;`, `right: &#39;animate-fade-right&#39;`, `scale: &#39;animate-fade-scale&#39;`) and renders:
+
+```tsx
+&lt;div
+  className={`opacity-0 ${directionClass} ${className}`}
+  style={{ animationDelay: `${delay}ms` }}
+&gt;
+  {children}
+&lt;/div&gt;
+```
+
+### 4.3 `Hero` — the outer section (default export)
+
+```
+&lt;section class=&quot;relative w-full h-screen overflow-hidden bg-[#080A19]&quot;&gt;
+```
+
+**Background video** — first child, absolutely positioned, covering, with this EXACT source URL:
+
+```
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260813_092641_de52eb87-daf2-41db-92cb-7a56eae012a5.mp4
+```
+
+```tsx
+&lt;video
+  className=&quot;absolute inset-0 w-full h-full object-cover&quot;
+  src=&quot;https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260813_092641_de52eb87-daf2-41db-92cb-7a56eae012a5.mp4&quot;
+  autoPlay
+  loop
+  muted
+  playsInline
+/&gt;
+```
+(It is a dark deep-blue/red nebula clip. There is **no** dark gradient overlay — the `#080A19` section background only shows while the video loads.)
+
+**Content wrapper:** `&lt;div className=&quot;relative z-10 h-full flex flex-col&quot;&gt;` containing `&lt;Nav /&gt;`, then:
+
+```
+&lt;div class=&quot;flex-1 flex items-center py-8&quot;&gt;
+  &lt;div class=&quot;w-full max-w-[1800px] mx-auto px-5 sm:px-8 md:px-[82px] flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 lg:gap-12&quot;&gt;
+    &lt;div class=&quot;max-w-[593px]&quot;&gt; …copy block… &lt;/div&gt;
+    &lt;RevenueCard /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+```
+
+**Copy block (left column), in order:**
+
+1. `&lt;Animate delay={300} direction=&quot;up&quot;&gt;` wrapping an `&lt;h1&gt;`:
+   - classes: `text-white text-[36px] sm:text-[52px] md:text-[64px] lg:text-[72px] font-normal leading-[0.95] mb-5 sm:mb-8`
+   - text: **`Elevate your essential data to new heights`**
+
+2. `&lt;Animate delay={500} direction=&quot;up&quot;&gt;` wrapping a `&lt;p&gt;`:
+   - classes: `text-white/80 text-[16px] sm:text-[18px] md:text-[20px] font-[450] leading-[1.3] max-w-[370px] mb-7 sm:mb-10`
+   - text: **`Advanced reasoning systems and predictive models built for the unknown`**
+
+3. `&lt;Animate delay={700} direction=&quot;up&quot;&gt;` wrapping `&lt;div className=&quot;flex flex-wrap gap-3 sm:gap-4&quot;&gt;` with two buttons:
+   - **`Book a demo`** — `h-[46px] sm:h-[51px] px-5 sm:px-[27px] bg-[#E9E9E9] rounded-[12px] text-[#0A0707] text-[14px] sm:text-[15.5px] font-[450] leading-[15.5px] transition-opacity hover:opacity-90`
+   - **`Talk with the team`** — `h-[46px] sm:h-[51px] px-5 sm:px-[27px] rounded-[12px] border border-white text-white text-[14px] sm:text-[15.5px] font-[450] leading-[15.5px] transition-opacity hover:opacity-80`
+
+### 4.4 `RevenueCard` — the glassmorphic stat card (right column)
+
+Wrapper: `&lt;Animate delay={900} direction=&quot;scale&quot; className=&quot;w-full max-w-[405px] mx-auto lg:mx-0&quot;&gt;`
+(so it is **centered on mobile, left-aligned in its column on `lg`**).
+
+Card shell:
+```
+w-full rounded-[24px] sm:rounded-[33px] bg-[rgba(17,16,15,0.35)] backdrop-blur-[20px] p-5 sm:p-8 pb-5 sm:pb-6
+```
+
+**Contents, in order:**
+
+1. Label `&lt;p&gt;`: **`Revenue Growth`** — `text-white text-[16px] sm:text-[20px] font-[450] leading-[20px] mb-3 sm:mb-4`
+
+2. Amount `&lt;p className=&quot;mb-2 sm:mb-3&quot;&gt;` containing **two spans**, so the cents are dimmed:
+   - `&lt;span class=&quot;text-white text-[28px] sm:text-[46px] font-[450] leading-[1]&quot;&gt;$14,205,890&lt;/span&gt;`
+   - `&lt;span class=&quot;text-white/20 text-[28px] sm:text-[46px] font-[450] leading-[1]&quot;&gt;.00&lt;/span&gt;`
+
+3. Delta row `&lt;div className=&quot;flex items-center gap-[10px] mb-6 sm:mb-8&quot;&gt;`:
+   - badge span **`+32.4%`** — `px-[6px] py-[7px] bg-white/20 rounded-[6px] text-white text-[12px] sm:text-[14px] font-[450] leading-[14px]`
+   - caption span **`vs. previous period ($10.7M)`** — `text-white/80 text-[12px] sm:text-[14px] font-[450] leading-[14px] opacity-70`
+
+4. Chart block `&lt;div className=&quot;relative&quot;&gt;` with three children:
+
+   **(a) Bars** — `&lt;div className=&quot;flex items-end gap-[1.5px] h-[80px] sm:h-[100px]&quot;&gt;`, mapping `BAR_HEIGHTS`. Compute `const maxHeight = Math.max(...BAR_HEIGHTS);` once at the top of the component (= `95`). For each bar at index `i`:
+   - `const isProjected = i &gt;= 28;`  ← the **last 4 bars** are the dimmed &quot;projected&quot; ones
+   - `const heightPercent = (h / maxHeight) * 100;`
+   - className: `flex-1 rounded-[0.5px] animate-bar-grow origin-bottom`
+   - inline style:
+     ```ts
+     {
+       height: `${heightPercent}%`,
+       backgroundColor: isProjected ? &#39;rgba(255,255,255,0.1)&#39; : &#39;white&#39;,
+       animationDelay: `${1100 + i * 30}ms`,
+     }
+     ```
+   - So bars stagger from **1100ms** to **2030ms** (`1100 + 31*30`), each growing from `scaleY(0)` about its bottom origin over 600ms.
+
+   **(b) Vertical gridlines** — `&lt;div className=&quot;absolute inset-0 pointer-events-none&quot;&gt;` containing `[0,1,2,3,4].map(i =&gt; …)`:
+   - className `absolute top-0 bottom-0 w-px bg-white/10`
+   - style `{ left: `${((i + 1) / 5) * 100}%` }` → 20%, 40%, 60%, 80%, 100%
+
+   **(c) Time axis** — `&lt;div className=&quot;flex justify-between mt-3&quot;&gt;` over `[&#39;10:00&#39;, &#39;12:00&#39;, &#39;14:00&#39;, &#39;16:00&#39;, &#39;16:00&#39;]` (yes, `16:00` is repeated as the final label — reproduce it):
+   - className `text-[9px] sm:text-[10px] font-[450] leading-[10px] text-white/80`
+   - style `{ opacity: i &gt;= 3 ? 0.4 : 1 }` → the last two labels are dimmed
+
+### 4.5 `Nav` — header + mobile menu
+
+Holds `const [isOpen, setIsOpen] = useState(false);` and a `useEffect` that **locks body scroll** while the menu is open:
+
+```tsx
+useEffect(() =&gt; {
+  if (isOpen) {
+    document.body.style.overflow = &#39;hidden&#39;;
+  } else {
+    document.body.style.overflow = &#39;&#39;;
+  }
+  return () =&gt; { document.body.style.overflow = &#39;&#39;; };
+}, [isOpen]);
+```
+
+Returns a fragment `&lt;&gt;…&lt;/&gt;` with the `&lt;nav&gt;` bar and the mobile overlay as siblings.
+
+**Nav bar:**
+```
+&lt;nav class=&quot;w-full max-w-[1800px] mx-auto px-5 sm:px-8 md:px-[82px] pt-[20px] sm:pt-[30px] flex items-center justify-between relative z-50&quot;&gt;
+```
+(Note: the nav uses the same `max-w-[1800px]` + `px-5 sm:px-8 md:px-[82px]` rhythm as the hero body so the logo aligns with the headline.)
+
+**(i) Logo** — `&lt;Animate delay={0} direction=&quot;down&quot;&gt;` → `&lt;div className=&quot;flex items-center gap-2.5&quot;&gt;`:
+
+Inline SVG, `width=&quot;28&quot; height=&quot;28&quot; viewBox=&quot;0 0 256 256&quot; fill=&quot;none&quot; className=&quot;sm:w-[32px] sm:h-[32px]&quot;`, single white path — use this exact `d`:
+
+```
+M 256 256 L 178 256 C 150.386 256 128 233.614 128 206 L 128 256 L 0 256 L 0 192 C 0 156.654 28.654 128 64 128 C 99.346 128 128 156.654 128 192 L 128 128 L 256 128 Z M 78 0 C 105.614 0 128 22.386 128 50 L 128 0 L 256 0 L 256 64 C 256 99.346 227.346 128 192 128 C 156.654 128 128 99.346 128 64 L 128 128 L 0 128 L 0 0 Z
+```
+
+Wordmark span: **`Apogee`** — `text-white text-[22px] sm:text-[26px] font-[450] leading-none tracking-[-0.02em]`
+
+**(ii) Center nav pill** — `&lt;Animate delay={100} direction=&quot;down&quot; className=&quot;hidden lg:block&quot;&gt;` → glass pill:
+```
+h-[52px] px-6 flex items-center gap-[30px] bg-[rgba(10,7,7,0.35)] rounded-[11px] backdrop-blur-[17px]
+```
+Items (all `text-white/80 text-[14px] font-[450] leading-[14px] hover:text-white transition-colors`):
+- **`Platform`** — a `&lt;button className=&quot;flex items-center gap-[5px] …&quot;&gt;` with a trailing `&lt;ChevronDown className=&quot;w-[10px] h-[10px] opacity-80&quot; /&gt;`
+- **`Pricing`**, **`Resources`**, **`Blog`** — plain `&lt;span&gt;`s with `cursor-pointer`
+
+**(iii) Right auth pill** — `&lt;Animate delay={200} direction=&quot;down&quot; className=&quot;hidden lg:block&quot;&gt;`:
+```
+h-[52px] p-[3px] bg-[rgba(0,0,0,0.35)] rounded-[13px] backdrop-blur-[17px] flex items-center gap-[5px]
+```
+- **`Login`** — `h-[46px] px-6 rounded-[11px] text-white text-[14px] font-[450] leading-[14px] hover:bg-white/5 transition-colors`
+- **`Book a demo`** — `h-[46px] px-6 bg-[#E9E9E9] rounded-[11px] text-[#0A0707] text-[14px] font-[450] leading-[14px] hover:bg-white transition-colors`
+
+**(iv) Mobile hamburger** — `&lt;Animate delay={100} direction=&quot;down&quot; className=&quot;lg:hidden&quot;&gt;`:
+
+Button: `w-[44px] h-[44px] flex items-center justify-center rounded-[11px] bg-[rgba(10,7,7,0.35)] backdrop-blur-[17px] transition-colors hover:bg-white/10`, `onClick={() =&gt; setIsOpen(!isOpen)}`, `aria-label=&quot;Toggle menu&quot;`.
+
+Inside, a `&lt;div className=&quot;relative w-5 h-5&quot;&gt;` with **both icons stacked absolutely** and cross-faded (never conditionally unmounted):
+- `&lt;Menu className={\`w-5 h-5 text-white absolute inset-0 transition-all duration-300 ease-out ${isOpen ? &#39;opacity-0 rotate-90 scale-75&#39; : &#39;opacity-100 rotate-0 scale-100&#39;}\`} /&gt;`
+- `&lt;X className={\`w-5 h-5 text-white absolute inset-0 transition-all duration-300 ease-out ${isOpen ? &#39;opacity-100 rotate-0 scale-100&#39; : &#39;opacity-0 -rotate-90 scale-75&#39;}\`} /&gt;`
+
+**(v) Mobile menu overlay** (sibling of `&lt;nav&gt;`):
+
+Container — visibility-toggled, never unmounted, so transitions play both ways:
+```
+lg:hidden fixed inset-0 z-40 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] + (isOpen ? &#39;visible&#39; : &#39;invisible&#39;)
+```
+
+Backdrop (click closes the menu):
+```
+absolute inset-0 bg-[#080A19]/90 backdrop-blur-[24px] transition-opacity duration-500 + (isOpen ? &#39;opacity-100&#39; : &#39;opacity-0&#39;)
+```
+
+Panel:
+```
+absolute top-[76px] sm:top-[86px] left-4 right-4 sm:left-6 sm:right-6
+bg-[rgba(17,16,15,0.6)] backdrop-blur-[30px] rounded-[20px] border border-white/[0.06]
+p-6 sm:p-8 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] origin-top
++ (isOpen ? &#39;opacity-100 translate-y-0 scale-100&#39; : &#39;opacity-0 -translate-y-4 scale-[0.97]&#39;)
+```
+
+Panel links — `&lt;div className=&quot;flex flex-col gap-1&quot;&gt;` over `[&#39;Platform&#39;, &#39;Pricing&#39;, &#39;Resources&#39;, &#39;Blog&#39;]`, each an `&lt;a href=&quot;#&quot;&gt;`:
+```
+flex items-center justify-between px-4 py-4 rounded-[12px] text-white/90 text-[18px] font-[450]
+hover:bg-white/[0.06] transition-all duration-300
++ (isOpen ? &#39;opacity-100 translate-x-0&#39; : &#39;opacity-0 -translate-x-3&#39;)
+```
+with staggered `style={{ transitionDelay: isOpen ? `${100 + i * 50}ms` : &#39;0ms&#39; }}` (→ 100/150/200/250ms), and only the `Platform` item gets a trailing `&lt;ChevronDown className=&quot;w-4 h-4 opacity-50&quot; /&gt;`.
+
+Divider: `&lt;div className=&quot;h-px bg-white/10 my-5&quot; /&gt;`
+
+Panel CTAs — `&lt;div className=&quot;flex flex-col gap-3 transition-all duration-300&quot; style={{ transitionDelay: isOpen ? &#39;350ms&#39; : &#39;0ms&#39; }}&gt;` with `isOpen ? &#39;opacity-100 translate-y-0&#39; : &#39;opacity-0 translate-y-2&#39;`:
+- **`Book a demo`** — `w-full h-[50px] bg-[#E9E9E9] rounded-[12px] text-[#0A0707] text-[15px] font-[450] transition-colors hover:bg-white`
+- **`Login`** — `w-full h-[50px] rounded-[12px] border border-white/30 text-white text-[15px] font-[450] transition-colors hover:bg-white/5`
+
+---
+
+## 5. EXACT SPACING / BOX-MODEL TABLE — CRITICAL, DO NOT ESTIMATE
+
+**Read this before building.** Every number below is a literal pixel value taken from the source code. Do not eyeball proportions from the screenshot, do not round to &quot;looks about right,&quot; and do not let auto-layout/AI defaults substitute their own padding. If a cell says `24px` padding, the rendered element must have 24px of empty space between its border and its text/icon on that side — verify by measuring, not by glancing. The most common failure mode when this gets rebuilt is buttons and pills getting little or no internal padding (text touching the edges) — every button/pill row below exists specifically to prevent that.
+
+Format: **Property — base (&lt;640px) → sm (≥640px) → md (≥768px) → lg (≥1024px)**. A dash (`—`) means &quot;unchanged from the last stated breakpoint.&quot;
+
+### 5.1 Page-level containers
+
+| Element | Property | base | sm | md | lg |
+|---|---|---|---|---|---|
+| `&lt;nav&gt;` and hero content row | horizontal padding | `20px` | `32px` | `82px` | — |
+| `&lt;nav&gt;` | top padding | `20px` | `30px` | — | — |
+| `&lt;nav&gt;` | bottom padding | `0` (none — spacing to hero content comes from the `flex-1 items-center` centering below it, not nav padding) | | | |
+| Hero content row (`flex-1`) | vertical padding | `32px` top and bottom (`py-8`) | — | — | — |
+| Nav / content row | max width | `1800px`, centered (`mx-auto`) | — | — | — |
+| Copy column ↔ Revenue card | gap between them | `40px` (stacked vertically, so this is vertical gap) | — | — | `48px` (horizontal gap, side by side) |
+| Copy column | max width | `593px` | — | — | — |
+| Revenue card wrapper | max width | `405px`, horizontally centered (`mx-auto`) | — | — | left-aligned (`mx-0`, no longer centered) |
+
+### 5.2 Logo (top-left)
+
+| Property | base | sm |
+|---|---|---|
+| Icon size | `28×28px` | `32×32px` |
+| Gap between icon and &quot;Apogee&quot; text | `10px` | — |
+
+### 5.3 Center nav pill (&quot;Platform · Pricing · Resources · Blog&quot;) — desktop only, `≥1024px`
+
+| Property | Value |
+|---|---|
+| Height | `52px` (fixed) |
+| Horizontal padding (left + right) | `24px` each side |
+| Vertical padding | none set — height is fixed at 52px and content is vertically centered via `flex items-center` |
+| Gap between each nav item | `30px` |
+| Gap between &quot;Platform&quot; text and its chevron | `5px` |
+| Chevron icon size | `10×10px` |
+| Border radius | `11px` |
+
+**This pill must be wide enough that &quot;Platform / Pricing / Resources / Blog&quot; plus three 30px gaps plus 24px of padding on each side all fit on one line without wrapping or touching the rounded corners.**
+
+### 5.4 Right auth pill (&quot;Login / Book a demo&quot;) — desktop only, `≥1024px`
+
+| Property | Value |
+|---|---|
+| Outer pill height | `52px` |
+| Outer pill padding (all 4 sides) | `3px` — this is the thin gap between the outer pill edge and the two inner buttons |
+| Gap between &quot;Login&quot; button and &quot;Book a demo&quot; button | `5px` |
+| Outer pill border radius | `13px` |
+| **Login button** height | `46px` (fills the 52px pill minus the 3px+3px padding) |
+| **Login button** horizontal padding | `24px` each side |
+| **Login button** border radius | `11px` |
+| **Book a demo button** height | `46px` |
+| **Book a demo button** horizontal padding | `24px` each side |
+| **Book a demo button** border radius | `11px` |
+
+### 5.5 Mobile hamburger button — `&lt;1024px` only
+
+| Property | Value |
+|---|---|
+| Button size | `44×44px` square |
+| Icon size (Menu/X) | `20×20px`, centered in the button |
+| Border radius | `11px` |
+
+### 5.6 Headline, subhead, CTA row (left column)
+
+| Element | Property | base | sm |
+|---|---|---|---|
+| `&lt;h1&gt;` | margin-bottom (space to subhead) | `20px` | `32px` |
+| Subhead `&lt;p&gt;` | margin-bottom (space to CTA row) | `28px` | `40px` |
+| Subhead `&lt;p&gt;` | max width (forces the line wrap seen in the mock) | `370px` | — |
+| CTA button row | gap between the two buttons | `12px` | `16px` |
+
+### 5.7 CTA buttons (&quot;Book a demo&quot; / &quot;Talk with the team&quot;) — the two large hero buttons, NOT the nav ones
+
+| Property | base | sm |
+|---|---|---|
+| Height | `46px` | `51px` |
+| Horizontal padding (left + right) | `20px` each side | `27px` each side |
+| Vertical padding | none set — height is fixed and text is vertically centered | — |
+| Border radius | `12px` | — |
+| &quot;Talk with the team&quot; border width | `1px` solid white | — |
+
+**These are the two buttons that came out with almost no padding in your screenshot. At 20–27px of horizontal padding, there should be a visibly comfortable margin of empty space between the button&#39;s rounded edge and the first/last letter of the label — not text kissing the border.**
+
+### 5.8 Revenue card shell
+
+| Property | base | sm |
+|---|---|---|
+| Border radius | `24px` | `33px` |
+| Padding — top | `20px` | `32px` |
+| Padding — right | `20px` | `32px` |
+| Padding — left | `20px` | `32px` |
+| Padding — bottom (overridden, shallower than the other 3 sides) | `20px` | `24px` |
+
+### 5.9 Revenue card internal spacing (top to bottom, in flow order)
+
+| Property | base | sm |
+|---|---|---|
+| &quot;Revenue Growth&quot; label → margin-bottom | `12px` | `16px` |
+| Amount line → margin-bottom | `8px` | `12px` |
+| Delta row (badge + caption) → margin-bottom | `24px` | `32px` |
+| Gap between badge and caption text, inside the delta row | `10px` | — |
+| Badge (&quot;+32.4%&quot;) internal padding — horizontal | `6px` each side | — |
+| Badge (&quot;+32.4%&quot;) internal padding — vertical | `7px` top and bottom | — |
+| Badge border radius | `6px` | — |
+| Chart height (bars) | `80px` | `100px` |
+| Gap between individual bars | `1.5px` | — |
+| Bar border radius | `0.5px` (barely rounded — near-square tops) | — |
+| Time-axis row → margin-top (space above it, below the bars) | `12px` | — |
+
+### 5.10 Mobile menu overlay panel — `&lt;1024px` only, when hamburger is open
+
+| Property | base | sm |
+|---|---|---|
+| Panel offset from top of screen | `76px` | `86px` |
+| Panel offset from left/right screen edges | `16px` | `24px` |
+| Panel internal padding (all 4 sides) | `24px` | `32px` |
+| Panel border radius | `20px` | — |
+| Panel border width | `1px`, color `white` at 6% opacity | — |
+| Each nav link row — internal padding | `16px` all 4 sides | — |
+| Each nav link row — border radius | `12px` | — |
+| Gap between stacked nav link rows | `4px` (`gap-1`) | — |
+| Divider line → vertical margin (above and below) | `20px` | — |
+| Gap between the two bottom CTA buttons (stacked) | `12px` | — |
+| Bottom CTA buttons — height | `50px` | — |
+
+---
+
+## 6. COMPLETE COLOR REFERENCE
+
+| Token | Value | Used for |
+|---|---|---|
+| Section background | `#080A19` | Hero `&lt;section&gt;`, mobile backdrop at 90% |
+| Light button fill | `#E9E9E9` | &quot;Book a demo&quot; (all instances) |
+| Light button text | `#0A0707` | Text on `#E9E9E9` buttons |
+| Nav pill glass | `rgba(10,7,7,0.35)` | Center nav pill, hamburger button |
+| Auth pill glass | `rgba(0,0,0,0.35)` | Right auth pill |
+| Card / panel glass | `rgba(17,16,15,0.35)` card · `rgba(17,16,15,0.6)` mobile panel | Revenue card, mobile menu panel |
+| Projected bar | `rgba(255,255,255,0.1)` | Bars at index ≥ 28 |
+| Active bar | `white` | Bars at index &lt; 28 |
+| Gridlines | `white/10` | 5 vertical chart lines |
+| Panel border | `white/[0.06]` | Mobile menu panel |
+| Cents dim | `white/20` | The `.00` span |
+| Body/secondary text | `white/80` | Subhead, nav links, axis labels |
+
+**Backdrop-blur scale:** `17px` (nav pills) · `20px` (revenue card) · `24px` (mobile backdrop) · `30px` (mobile panel).
+
+---
+
+## 7. COMPLETE ANIMATION TIMELINE (page load, ms)
+
+| Delay | Element | Animation |
+|---|---|---|
+| 0 | Logo + wordmark | `fade-down` 700ms |
+| 100 | Center nav pill (desktop) / hamburger (mobile) | `fade-down` 700ms |
+| 200 | Right auth pill (desktop) | `fade-down` 700ms |
+| 300 | `&lt;h1&gt;` headline | `fade-up` 800ms |
+| 500 | Subheadline `&lt;p&gt;` | `fade-up` 800ms |
+| 700 | CTA button row | `fade-up` 800ms |
+| 900 | Revenue card | `fade-scale` 900ms |
+| 1100 + i×30 | Chart bar `i` (0–31) | `bar-grow` 600ms, `origin-bottom` |
+
+All use `cubic-bezier(0.16, 1, 0.3, 1)` with `forwards`. Total sequence resolves at ~2630ms.
+
+---
+
+## 8. RESPONSIVE BEHAVIOR (Tailwind defaults: `sm`=640px, `md`=768px, `lg`=1024px)
+
+**Layout**
+- `&lt; lg`: single column — copy block stacked above the revenue card, `gap-10`; card is `mx-auto` (centered), capped at `405px`
+- `≥ lg`: `flex-row`, `items-center`, `justify-between`, `gap-12`; card becomes `mx-0`
+- Horizontal padding ramps `px-5` → `sm:px-8` → `md:px-[82px]`; content capped at `max-w-[1800px] mx-auto`
+- Section is always `h-screen` with `overflow-hidden`; the inner row is `flex-1 flex items-center py-8` (vertically centered)
+
+**Navigation**
+- `≥ lg`: center nav pill + right auth pill visible, hamburger hidden
+- `&lt; lg`: both pills hidden (`hidden lg:block`), 44×44 hamburger shown, full overlay menu available; body scroll locks while open
+
+**Typography scale**
+| Element | base | sm | md | lg |
+|---|---|---|---|---|
+| h1 | 36px | 52px | 64px | 72px |
+| Subhead | 16px | 18px | 20px | — |
+| CTA buttons | 14px | 15.5px | — | — |
+| Wordmark | 22px | 26px | — | — |
+| Card label | 16px | 20px | — | — |
+| Card amount | 28px | 46px | — | — |
+| Delta row | 12px | 14px | — | — |
+| Axis labels | 9px | 10px | — | — |
+
+**Sizing shifts**
+| Element | base | sm |
+|---|---|---|
+| Logo SVG | 28×28 | 32×32 |
+| CTA height | 46px | 51px |
+| CTA h-padding | 20px (`px-5`) | 27px |
+| Card radius | 24px | 33px |
+| Card padding | 20px (`p-5`, `pb-5`) | 32px (`p-8`), 24px bottom (`pb-6`) |
+| Chart height | 80px | 100px |
+| Nav top padding | 20px | 30px |
+| Mobile panel top | 76px | 86px |
+| Mobile panel insets | `left-4 right-4` | `left-6 right-6` |
+| Mobile panel padding | 24px | 32px |
+
+---
+
+## 9. NON-NEGOTIABLES CHECKLIST
+
+- [ ] Video `src` is the CloudFront URL above, character for character, with `autoPlay loop muted playsInline` (muted+playsInline are required for iOS autoplay)
+- [ ] `BAR_HEIGHTS` has all 32 values in the given order; `maxHeight` derived with `Math.max(...)`, not hardcoded
+- [ ] Bars 28–31 are `rgba(255,255,255,0.1)`; bars 0–27 are solid `white`
+- [ ] The final time-axis label is `16:00` (duplicated), and labels at index ≥ 3 render at `opacity: 0.4`
+- [ ] The `.00` in the amount is a separate `white/20` span
+- [ ] `font-[450]` is used throughout (not `font-normal`/`font-medium`) except the `&lt;h1&gt;`, which is `font-normal`
+- [ ] Mobile menu is visibility-toggled, not conditionally rendered, so close transitions animate
+- [ ] Menu/X icons cross-fade with rotate+scale; they are never swapped by unmounting
+- [ ] Body scroll lock on menu open, with cleanup on unmount
+- [ ] Every animated element carries `opacity-0` in markup and is revealed only by the CSS animation&#39;s `forwards` fill
+- [ ] No scroll-triggered animation, no IntersectionObserver, no animation library — pure CSS keyframes + `animationDelay`
+- [ ] **Both hero CTA buttons have 20–27px of horizontal breathing room between their border and their label text — never text touching the edge** (see §5.7 — this was the exact defect in the last rebuild)
+- [ ] The center desktop nav pill is sized to its content plus 24px of padding on each side, with the full 52px height — not a cramped box that clips or crowds the four nav links (see §5.3)
+- [ ] The right auth pill has a visible 3px gap of outer padding between its rounded edge and the Login/Book-a-demo buttons inside it, not the buttons flush against the pill&#39;s border (see §5.4)
+- [ ] Revenue card padding is 20px (mobile) / 32px (desktop) on top/right/left, with the bottom intentionally shallower at 20px / 24px — verify this asymmetry, don&#39;t make all four sides equal (see §5.8)
+- [ ] Re-check every value in §5 against the rendered output before calling this done — if any padding number doesn&#39;t match, fix that value, don&#39;t approximate</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><p class="muted">暂无同分类条目。</p><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

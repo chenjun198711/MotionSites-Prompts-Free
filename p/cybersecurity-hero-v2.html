@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cybersecurity Hero v2 — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色背景的SaaS产品Hero区域，展示数据加密服务&quot;Xero&quot;，包含导航栏、居中卡片和品牌标志行，采用高端暗色主题与精致排版。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/cybersecurity-hero-v2.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cybersecurity Hero v2 — Hero Section 提示词">
+<meta property="og:description" content="深色背景的SaaS产品Hero区域，展示数据加密服务&quot;Xero&quot;，包含导航栏、居中卡片和品牌标志行，采用高端暗色主题与精致排版。">
+<meta property="og:url" content="https://prompt-site.shop/p/cybersecurity-hero-v2.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/cybersecurity-hero-v2.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Cybersecurity Hero v2","description":"深色背景的SaaS产品Hero区域，展示数据加密服务\"Xero\"，包含导航栏、居中卡片和品牌标志行，采用高端暗色主题与精致排版。","url":"https://prompt-site.shop/p/cybersecurity-hero-v2.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-05-16T07:16:44.715777+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Cybersecurity Hero v2</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-05-16</span><span>正文：7,120 字符</span></div><div class="hero-media"><img src="../assets/previews/cybersecurity-hero-v2.webp" alt="Cybersecurity Hero v2 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色背景的SaaS产品Hero区域，展示数据加密服务&quot;Xero&quot;，包含导航栏、居中卡片和品牌标志行，采用高端暗色主题与精致排版。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">**PROMPT:**
+
+Build a dark, premium SaaS landing page hero section for a product called &quot;Xero&quot; — a data encryption service. Use React + TypeScript + Vite + Tailwind CSS + the `shaders` package (`shaders/react`) + `lucide-react`. Font: Inter (weights 300, 400, 500, 600, 700, 800) from Google Fonts.
+
+---
+
+**PAGE STRUCTURE:**
+
+The page has a dark background (`#0a0a0f`) with 14px body padding. Everything is centered in a flex column. The structure is: Navbar &gt; Hero Card &gt; Brand Logos row.
+
+---
+
+**NAVBAR:**
+
+- Full-width, max-width 1600px, using CSS Grid with 3 columns: `1fr auto 1fr`
+- Left: Logo text &quot;Xero&quot; — font-size 1.05rem, weight 700, letter-spacing -0.01em, white
+- Center: 3 navigation links (&quot;Method&quot;, &quot;Pricing&quot;, &quot;Docs&quot;) — font-size 0.85rem, weight 400, color `#8888a8`, hover to white, 32px gap between links
+- Right: Two buttons — &quot;Login&quot; (ghost pill: `rgba(255,255,255,0.06)` background, 1px border `rgba(255,255,255,0.08)`, white text, font-size 0.82rem, weight 500, border-radius 999px, padding 7px 18px) and &quot;Sign Up&quot; (solid white pill: white background, dark text `#0a0a0f`, font-size 0.82rem, weight 600, border-radius 999px, padding 7px 18px)
+- Mobile (768px): Hamburger menu toggle (2 spans that animate into an X via translateY/rotate). Full-screen overlay menu slides in from right with `transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1)`. Links become 1.2rem centered vertically. Buttons become full-width stacked.
+
+---
+
+**HERO CARD:**
+
+- Container: max-width 1600px, border-radius 20px, 1px border `rgba(255,255,255,0.07)`, `overflow: hidden`, position relative, background `#0d0b12`, padding `80px 40px 70px`, flex column centered, min-height 640px, text-align center.
+
+**Layer 1 — Shader Background (z-index 0):**
+Position absolute, inset 0, overflow hidden, border-radius 20px, pointer-events none, 100% width/height. Inner div and canvas forced to 100% width/height, position absolute inset 0.
+
+Shader composition (from `shaders/react`):
+```jsx
+&lt;Shader&gt;
+&lt;SolidColor color=&quot;#08071a&quot; /&gt;
+&lt;SineWave amplitude={0.36} blendMode=&quot;normal-oklch&quot; color=&quot;#0582e8&quot; frequency={0.2} position={{ x: 0.65, y: 0.67 }} softness={0.55} speed={0.3} thickness={0.72} /&gt;
+&lt;SineWave amplitude={0.17} blendMode=&quot;normal-oklch&quot; color=&quot;#f00e94&quot; frequency={0.2} position={{ x: 0.6, y: 0.51 }} softness={0.54} speed={0.5} thickness={0.35} /&gt;
+&lt;WaveDistortion angle={299} frequency={0.3} speed={0.2} strength={1} /&gt;
+&lt;FilmGrain strength={0.07} /&gt;
+&lt;/Shader&gt;
+```
+
+**Layer 2 — Radial Gradient Arc (::before pseudo-element, z-index 0):**
+A radial-gradient positioned at `circle at 50% -70%`:
+- Transparent from 0-60%
+- Gradually builds pink/magenta (`rgba(176, 48, 136, ...)`) from 63% to 79% with increasing opacity (0.03 to 0.82)
+- Transitions to lighter pink at 85-87% (`rgba(210,70,175,0.92)`, `rgba(240,110,210,0.88)`)
+- Near-white at 91-93% (`rgba(255,205,250,0.92)`, `rgba(255,240,255,0.98)`)
+- Pure white at 95%
+- Second radial gradient: `circle at 50% 35%`, `rgba(120, 40, 180, 0.08)` center, transparent at 50%
+
+**Layer 3 — Grid Overlay (z-index 0):**
+Position absolute inset 0. Background: two linear-gradients creating a 40px grid with `rgba(255,255,255,0.07)` 1px lines. Masked with `radial-gradient(circle at 50% -70%, transparent 60%, black 78%)` so the grid only shows where the arc glows.
+
+---
+
+**ICON PIPELINE (z-index 1, margin-bottom 52px):**
+
+A horizontal row of 3 icon nodes connected by lines, with an animated beam traveling between them.
+
+- **Left node** (46px circle, background `#1a1a24`): SVG layers/stack icon (polygon + 2 polylines). Neumorphic box-shadow. Dotted border ring (7px outset). Class `node-light-right` — has a `::before` pseudo with a radial-gradient highlight on the right side that fades in/out (opacity transition 0.3s) when `.active` class is toggled.
+
+- **Center node** (64px circle, background `#1e1e2c`): Custom Xero &quot;X&quot; SVG logo (a circular pinwheel shape, white fill). Larger neumorphic shadows. Wrapped in a container with a `.splash` element — a 100px radial gradient circle (`rgba(255, 77, 200, 0.6)`) that animates scale 0.4 to 1.4 while fading out over 0.8s.
+
+- **Right node** (46px circle): Shield icon with checkmark. Class `node-light-left` — same as left but highlight on the left side with a purple tint (`rgba(200, 100, 255, 0.5)`).
+
+- **Connecting lines**: 160px wide, 1px height, gradient from `rgba(255,255,255,0.15)` to `rgba(255,255,255,0.07)` (reversed for right line).
+
+- **Beam Animation** (requestAnimationFrame loop):
+- SVG overlay with a linearGradient (`#beam-gradient`): 5-stop gradient from transparent pink to white center to transparent purple.
+- Two `&lt;path&gt;` elements use refs — one for glow (strokeWidth 2, filter blur, opacity 0.6) and one crisp (strokeWidth 0.8).
+- Path coordinates computed dynamically from node positions via `getBoundingClientRect()`.
+- Animation states: `p1` (800ms, beam travels 0-50%, left node pulses active at 0-40%), `splash` (800ms pause, beam hidden, center splash animates), `p2` (800ms, beam travels 50-100%, right node activates at 60-100%), `idle` (1000ms pause). Loop repeats.
+- Beam position is controlled by shifting linearGradient x1/x2 attributes.
+
+---
+
+**HERO CONTENT (z-index 1, max-width 620px):**
+
+- **Heading**: `&lt;h1&gt;` with text &quot;The simple way&quot; (weight 300, white) and `&lt;strong&gt;` block &quot;encryption your data&quot; (weight 400, gradient text: `linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.6))` with background-clip text). Font-size: `clamp(2.4rem, 5.5vw, 4rem)`, line-height 1.1, letter-spacing -0.02em, margin-bottom 24px.
+
+- **Subtitle**: &quot;Fully managed data encrypting service and annotation platform for teams of all industries.&quot; — font-size 0.9rem, weight 400, line-height 1.6, color `rgba(255,255,255,0.4)`, max-width 440px, centered, margin-bottom 36px. Has a `&lt;br&gt;` after &quot;annotation&quot;.
+
+- **CTA Button**: &quot;Get Started&quot; — white background, dark text, font-size 0.88rem, weight 600, padding 12px 32px, border-radius 999px. Hover: opacity 0.9, translateY(-1px).
+
+---
+
+**BRAND LOGOS ROW (below hero card):**
+
+- Flex row, centered, gap 64px, padding 32px 24px 10px, flex-wrap.
+- 5 brand items: Expedia, asana, zenefits, HubSpot (with a superscript dot replacing the &quot;o&quot;), loom.
+- Each: flex row, gap 10px, color `rgba(255,255,255,0.35)`, font-size 1.1rem, weight 500.
+- Each has a simple 22px SVG icon in matching muted color (geometric/abstract representations, not actual brand logos).
+
+---
+
+**CSS VARIABLES:**
+```
+--bg: #0a0a0f
+--surface: #111118
+--text: #f0f0f5
+--text-muted: #8888a8
+--accent: #c8a0e0
+--accent-pink: #b04090
+--border: rgba(255, 255, 255, 0.08)
+```
+
+---
+
+**RESPONSIVE BREAKPOINTS:**
+- 860px: Pipeline lines shrink to 80px
+- 768px: Body padding 10px, hamburger menu activates, hero card padding 60px 20px, pipeline margin-bottom 32px, nodes shrink (38px/52px), `&lt;br&gt;` tags hidden, brands gap 32px
+- 480px: Hero card border-radius 16px, brands gap 24px
+
+---
+
+**DEPENDENCIES:**
+```json
+&quot;shaders&quot;: &quot;^2.5.124&quot;,
+&quot;lucide-react&quot;: &quot;^0.344.0&quot;,
+&quot;react&quot;: &quot;^18.3.1&quot;,
+&quot;react-dom&quot;: &quot;^18.3.1&quot;,
+&quot;@supabase/supabase-js&quot;: &quot;^2.57.4&quot;
+```
+
+Tailwind CSS 3.4, Vite 5.4, TypeScript 5.5.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

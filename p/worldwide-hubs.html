@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Worldwide Hubs — Business 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Build a single-page, full-viewport (non-scrolling on desktop) dark &quot;Offices&quot; landing page for a fictional studio called  Meridian . Three files only: ">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/worldwide-hubs.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Worldwide Hubs — Business 提示词">
+<meta property="og:description" content="Build a single-page, full-viewport (non-scrolling on desktop) dark &quot;Offices&quot; landing page for a fictional studio called  Meridian . Three files only: ">
+<meta property="og:url" content="https://prompt-site.shop/p/worldwide-hubs.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/worldwide-hubs.jpg">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Worldwide Hubs","description":"Build a single-page, full-viewport (non-scrolling on desktop) dark \"Offices\" landing page for a fictional studio called  Meridian . Three files only: ","url":"https://prompt-site.shop/p/worldwide-hubs.html","inLanguage":"zh-CN","genre":"Business","dateCreated":"2026-08-14T10:07:52.698Z","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-business">Business</a></div><h1>Worldwide Hubs</h1><div class="chip-row"><span class="chip">Business</span><span class="chip">business</span><span class="chip">yilai-ai 公开页面</span></div><div class="facts"><span>收录时间：2026-08-14</span><span>正文：11,106 字符</span></div><div class="hero-media"><img src="../assets/previews/worldwide-hubs.jpg" alt="Worldwide Hubs 动效预览" loading="lazy"><div class="media-note">本地预览图 · jpeg</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a single-page, full-viewport (non-scrolling on desktop) dark &quot;Offices&quot; landing
+page for a fictional studio called **Meridian**. Three files only: `index.html`,
+`styles.css`, `script.js` — no frameworks, no build step, no dependencies beyond
+Google Fonts. Vanilla JS in an IIFE.
+
+## Document
+- `&lt;html lang=&quot;en&quot;&gt;`, `&lt;meta charset=&quot;UTF-8&quot;&gt;`, viewport `width=device-width, initial-scale=1.0`.
+- `&lt;title&gt;Meridian — Offices&lt;/title&gt;`
+- Fonts via Google Fonts, with `preconnect` to `https://fonts.googleapis.com` and
+  `https://fonts.gstatic.com` (crossorigin), then:
+  `https://fonts.googleapis.com/css2?family=Anton&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap`
+- **Anton** = display face (headline + country names). **IBM Plex Mono** = everything else.
+  Fallbacks: `&quot;Anton&quot;, Impact, &quot;Arial Narrow&quot;, sans-serif` and
+  `&quot;IBM Plex Mono&quot;, &quot;Courier New&quot;, monospace`.
+
+## Structure (exact)
+`&lt;main class=&quot;offices&quot;&gt;` containing three blocks in a vertical flex column:
+
+1. `&lt;header class=&quot;offices__top&quot;&gt;` — flex, `justify-content: space-between`,
+   `align-items: baseline`:
+   - `&lt;p class=&quot;offices__label&quot; data-type&gt;/ OFFICES&lt;/p&gt;`
+   - `&lt;a class=&quot;offices__meta&quot; href=&quot;#&quot; data-type&gt;EST. 2014 — WORLDWIDE →&lt;/a&gt;` (em dash, → arrow)
+
+2. `&lt;section class=&quot;offices__intro&quot;&gt;` — 2-col grid `minmax(0,1.15fr) minmax(0,0.85fr)`,
+   `align-items: start`, gap `clamp(1rem, 3vw, 3.5rem)`:
+   - `&lt;h1 class=&quot;offices__headline appear-text&quot;&gt;` with hard `&lt;br /&gt;` line breaks:
+     `THREE TIME ZONES.` / `ONE STANDARD` / `OF WORK.`
+   - `&lt;div class=&quot;offices__copy&quot;&gt;` (`justify-self: end`, `max-width: 28rem`) with two
+     `data-type` paragraphs:
+     - &quot;Meridian operates from three hubs across Europe and North America. Wherever you are, there&#39;s a team nearby.&quot; (curly apostrophe ’)
+     - `&lt;p class=&quot;offices__hint&quot; data-type&gt;Hover a location for the office details.&lt;/p&gt;`
+
+3. `&lt;section class=&quot;offices__grid&quot; aria-label=&quot;Office locations&quot;&gt;` — 3 equal columns,
+   fills remaining height (`flex: 1 1 auto; min-height: 0`), gap `clamp(0.65rem, 1.4vw, 1.2rem)`.
+   Three `&lt;article class=&quot;location appear&quot; data-location=&quot;…&quot;&gt;` cards, each with a
+   staggered `style=&quot;--appear-delay: …&quot;`:
+   - `france` — 0ms — name **FRANCE**
+   - `uk` — 110ms — name **UNITED KINGDOM**
+   - `usa` — 220ms — name **UNITED STATES**
+
+   Each card contains, in order:
+   - `&lt;div class=&quot;location__media&quot; aria-hidden=&quot;true&quot; style=&quot;background-image: url(&#39;…&#39;)&quot;&gt;`
+     (absolutely positioned `inset: 0`, `background-size: cover`, `center`, `no-repeat`,
+     `background-color: #8a8a8a` as the pre-load fill)
+   - `&lt;h2 class=&quot;location__name&quot;&gt;` — absolutely positioned, top `clamp(0.7rem, 1.4vh + 0.4vw, 1.25rem)`,
+     horizontally centered via `left: 50%; transform: translateX(-50%)`, `z-index: 2`,
+     `width: max-content`, `max-width: calc(100% - 1.25rem)`, Anton, `clamp(1.7rem, 1.8vw + 0.8vh, 2.65rem)`,
+     `line-height: 1`, `letter-spacing: 0.02em`, uppercase, color `#111`, `pointer-events: none`.
+   - `&lt;button class=&quot;location__arrow&quot; type=&quot;button&quot; aria-label=&quot;Open &lt;Country&gt; office details&quot;&gt;`
+     containing an inline SVG `viewBox=&quot;0 0 16 16&quot; width=&quot;14&quot; height=&quot;14&quot; aria-hidden=&quot;true&quot;`
+     with a single north-east arrow path:
+     `&lt;path d=&quot;M4 12 L12 4 M6 4 H12 V10&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot; stroke-linecap=&quot;square&quot; stroke-linejoin=&quot;miter&quot; /&gt;`
+
+### Exact image URLs (use verbatim, HTML-escape the `&amp;` as `&amp;amp;` inline)
+- FRANCE:
+  `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260810_144125_d6c4439a-d2b8-45eb-818e-04ebeda059f4.png&amp;w=1280&amp;q=85`
+- UNITED KINGDOM:
+  `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260810_144322_1c205cf9-d924-4e77-92c5-a1ef9a819f0b.png&amp;w=1280&amp;q=85`
+- UNITED STATES:
+  `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260810_144331_e146bba1-a2ff-4b71-a4d7-55c05d177b19.png&amp;w=1280&amp;q=85`
+
+Load `script.js` with a plain `&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;` at the end of `&lt;body&gt;`.
+
+## CSS tokens (`:root`)
+```
+--bg: #13120D;          --text: #f5f5f5;      --muted: #b8b8b8;
+--card-frame: #eceae4;  --card-fill: #8a8a8a;
+--arrow-bg: #0a0a0a;    --arrow-fg: #ffffff;
+--font-display / --font-mono as above
+--pad-y: clamp(0.9rem, 2.2vh, 1.75rem);
+--pad-x: clamp(1rem, 4.5vw, 4rem);
+--gap-main: clamp(0.75rem, 2.4vh, 1.75rem);
+```
+
+## CSS rules
+- `html, body { height: 100%; overflow: hidden; }`. Body: `--bg` background, `--text` color,
+  mono font, `-webkit-font-smoothing: antialiased`, `text-rendering: optimizeLegibility`.
+- `a { color: inherit; text-decoration: none; }`;
+  `button { font: inherit; border: 0; background: none; cursor: pointer; color: inherit; }`
+- `.offices`: `height: 100vh` then `height: 100dvh`, padding `var(--pad-y) var(--pad-x)`,
+  `display:flex; flex-direction:column; gap: var(--gap-main); overflow:hidden`.
+- `.offices__label, .offices__meta`: mono, `clamp(0.65rem, 0.95vw + 0.2vh, 0.8125rem)`,
+  weight 400, `letter-spacing: 0.08em`, uppercase, `--text`.
+  `.offices__meta` transitions `opacity .2s ease`; hover → `opacity: .7`.
+- `.offices__headline`: Anton, weight 400, `clamp(1.85rem, 4.6vw + 1vh, 5rem)`,
+  `line-height: 0.92`, `letter-spacing: 0.01em`, uppercase.
+- `.offices__copy p`: mono, `clamp(0.7rem, 0.9vw + 0.25vh, 0.9rem)`, `line-height: 1.5`,
+  `letter-spacing: 0.01em`, color `--muted`. `.offices__hint { opacity: .9 }`.
+  Copy column also gets `padding-top: clamp(0.15rem, 0.6vh, 0.5rem)` and internal
+  `gap: clamp(0.75rem, 2vh, 1.5rem)`.
+- `.location`: `position: relative; height: 100%; min-height: 0;`
+  `background: var(--card-frame); overflow: hidden; isolation: isolate;`
+  `transition: transform .35s ease`. Hover → `translateY(-3px)`.
+- `.location__arrow`: absolute, right &amp; bottom `clamp(0.55rem, 1vh + 0.3vw, 0.9rem)`,
+  `z-index: 2`, square `clamp(1.65rem, 2vh + 0.6vw, 2.15rem)`, `display: grid; place-items: center`,
+  bg `--arrow-bg`, fg `--arrow-fg`, `transition: background .2s ease, color .2s ease, transform .2s ease`.
+  Inner svg `display: block; width: 55%; height: 55%`.
+  Inverts on **card** hover *or* button hover → `background: #fff; color: #111`;
+  button hover additionally `transform: translate(1px, -1px)`.
+
+## Animations
+**A. Headline fade-up** — `.appear-text` starts `opacity: 0; transform: translateY(10px)`
+with `transition: opacity .7s ease, transform .7s ease`; `.is-visible` → `opacity: 1; translateY(0)`.
+
+**B. Card stagger** — `.location.appear` starts `opacity: 0; translateY(18px)`,
+`transition: opacity .65s ease, transform .65s ease`, `transition-delay: var(--appear-delay, 0ms)`.
+`.is-visible` → visible. Also add `.location.appear.is-visible:hover { transform: translateY(-3px) }`
+so hover lift still works after reveal.
+
+**C. Typewriter for mono text only** (never the Anton headline — it looks wrong).
+Ghost/live two-layer technique so layout never shifts:
+- `[data-type] { position: relative }`
+- `[data-type] .type-ghost { display: block; white-space: pre-wrap }` — reserves the space
+- `[data-type] .type-live { position: absolute; inset: 0; white-space: pre-wrap }` — the animated text
+- `[data-type].is-ready .type-ghost { visibility: hidden }`
+- Blinking caret: `[data-type].is-typing .type-live::after` — `content: &quot;&quot;`, `display: inline-block`,
+  `width: 0.45ch`, `height: 1.05em`, `margin-left: 1px`, `vertical-align: -0.15em`,
+  `background: currentColor`, `opacity: .85`, `animation: caret-blink .9s steps(1) infinite`.
+  `[data-type].is-done .type-live::after { display: none }`.
+- `@keyframes caret-blink { 0%,48% { opacity: .85 } 49%,100% { opacity: 0 } }`
+
+**Reduced motion** — `@media (prefers-reduced-motion: reduce)`: `.appear-text` and
+`.location.appear` become `opacity: 1; transform: none; transition: none`; the caret
+pseudo-element is `display: none; animation: none`.
+
+## script.js behavior
+Self-invoking IIFE. Read `reduceMotion` once from
+`matchMedia(&quot;(prefers-reduced-motion: reduce)&quot;).matches`. Helper `sleep(ms)` promise.
+
+`prepareTypeElement(el)`:
+- Collapse whitespace: `el.textContent.replace(/\s+/g, &quot; &quot;).trim()` → `text`
+- Empty the element, add class `is-ready`
+- Append `&lt;span class=&quot;type-ghost&quot; aria-hidden=&quot;true&quot;&gt;` holding the full `text`
+- Append empty `&lt;span class=&quot;type-live&quot; aria-hidden=&quot;true&quot;&gt;`
+- Set `el.setAttribute(&quot;aria-label&quot;, text)` so screen readers get the full string
+- Return `{ el, text, live }`
+
+`typeElement(item, speed = 18)` — async:
+- If reduced motion: dump full text into `live`, add `is-done`, return.
+- Else add `is-typing`, clear `live`, then loop char by char setting
+  `live.textContent = text.slice(0, i + 1)`, awaiting `speed` ms — but only
+  `speed * 0.35` ms after a space character (spaces fly by). Finally remove
+  `is-typing`, add `is-done`.
+
+`reveal(selector)` — add `is-visible` to every match.
+
+`run()` sequence:
+1. Prepare `.offices__label`, `.offices__meta`, and all `.offices__copy [data-type]`.
+2. Reduced motion path: type everything at once via `Promise.all`, reveal
+   `.appear-text` and `.location.appear`, return.
+3. Normal path:
+   - `Promise.all([typeElement(label, 22), typeElement(meta, 16)])` — both top labels
+     type simultaneously at different speeds.
+   - `await sleep(80)` → `reveal(&quot;.appear-text&quot;)` (headline fades up).
+   - `await sleep(180)`, then type each copy paragraph **sequentially** at speed `14`,
+     `await sleep(90)` between them.
+   - Finally `reveal(&quot;.location.appear&quot;)` — the three cards fade up with their 0/110/220ms stagger.
+
+Bind with: if `document.readyState === &quot;loading&quot;`, run on `DOMContentLoaded` `{ once: true }`,
+otherwise call `run()` immediately.
+
+## Responsive
+- `@media (max-width: 900px)`: re-enable scrolling (`html, body { overflow: auto }`),
+  `.offices` → `height: auto; min-height: 100vh/100dvh; overflow: visible`;
+  `.offices__intro` → single column, `gap: 1rem`; `.offices__copy` → `justify-self: start; max-width: 36rem`;
+  `.offices__grid` → single column, `flex: none`, `max-width: 28rem`, `gap: .85rem`;
+  `.location` → `height: auto; aspect-ratio: 4 / 5; min-height: 280px`.
+- `@media (max-width: 560px)`: `.offices__top` stacks (`flex-direction: column; align-items: flex-start; gap: .35rem`);
+  headline → `clamp(2.1rem, 11vw, 3.2rem)`.
+- `@media (max-height: 700px) and (min-width: 901px)`: headline → `clamp(1.85rem, 6.5vh, 3.75rem)`;
+  `.offices__copy` gap `.7rem`; copy `font-size: .72rem; line-height: 1.4`.
+
+## Look &amp; feel target
+Editorial brutalist. Near-black `#13120D` field, off-white cream cards that bleed
+edge-to-edge in a 3-up grid filling the lower two thirds, massive condensed Anton
+headline top-left, small monospaced meta type that types itself in on load with a
+blinking block caret, and a tiny black square NE-arrow button in each card&#39;s bottom-right
+that flips to white on card hover.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><p class="muted">暂无同分类条目。</p><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

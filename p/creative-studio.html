@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Creative Studio — Agency 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深紫色调全屏视频背景的创意工作室首页，包含品牌标志、导航菜单、核心标语和统计数据，采用Inter字体并适配移动端。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/creative-studio.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Creative Studio — Agency 提示词">
+<meta property="og:description" content="深紫色调全屏视频背景的创意工作室首页，包含品牌标志、导航菜单、核心标语和统计数据，采用Inter字体并适配移动端。">
+<meta property="og:url" content="https://prompt-site.shop/p/creative-studio.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/creative-studio.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Creative Studio","description":"深紫色调全屏视频背景的创意工作室首页，包含品牌标志、导航菜单、核心标语和统计数据，采用Inter字体并适配移动端。","url":"https://prompt-site.shop/p/creative-studio.html","inLanguage":"zh-CN","genre":"Agency","dateCreated":"2026-05-11T05:59:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-agency">Agency</a></div><h1>Creative Studio</h1><div class="chip-row"><span class="chip">Agency</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-05-11</span><span>正文：5,445 字符</span></div><div class="hero-media"><img src="../assets/previews/creative-studio.webp" alt="Creative Studio 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深紫色调全屏视频背景的创意工作室首页，包含品牌标志、导航菜单、核心标语和统计数据，采用Inter字体并适配移动端。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a full-screen hero section using React, Tailwind CSS, Framer Motion, and Lucide React icons. Use the Inter font. The page is fully mobile-responsive. Here are the exact specifications:
+
+---
+
+**BACKGROUND:**
+- A full-screen autoplaying, looping, muted video covering the entire viewport as a background.
+- Video URL: `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260517_222138_3e3205be-3364-417b-a64a-bfe087acbec4.mp4`
+- The video is positioned absolute, inset-0, with `object-cover` to fill the viewport.
+
+---
+
+**COLOR:**
+- Accent color: `#5E0ED7` (deep purple). Used for the logo dot, the &quot;+&quot; symbols in stats, and the CTA link text.
+- All body text is black (#000).
+
+---
+
+**FONT:**
+- Font family: `&#39;Inter&#39;, sans-serif` applied to the root container.
+- All text is uppercase with wide letter-spacing (`tracking-widest` or `tracking-wide`).
+- Font weights: 600 (semibold) throughout.
+
+---
+
+**LAYOUT (flex column, min-h-screen):**
+The page is a flex column with three vertical sections:
+1. **Nav** (top, fixed height)
+2. **Stats row** (flex-1, vertically centered, right-aligned)
+3. **Bottom content** (pinned to bottom with padding)
+
+---
+
+**NAVIGATION BAR:**
+- Horizontal flex, items centered, justified between. Padding: `px-5 sm:px-8 md:px-12 pt-5 md:pt-6`.
+- **Left:** A circular logo — 32px round div with 2px border in accent color, containing a 10px solid circle in accent color.
+- **Center (hidden on mobile, visible md+):** Four nav links: &quot;Story&quot;, &quot;Expertise&quot;, &quot;Studios&quot;, &quot;Feedback&quot;. Text: 14px, font-semibold, tracking-widest, uppercase, black.
+- **Right:** A 36px round black button with three horizontal white lines (hamburger icon — three `span` elements, each `w-4 h-0.5 bg-white` with `gap-1`). This opens the mobile menu on click.
+
+---
+
+**MOBILE MENU OVERLAY:**
+- Triggered by hamburger click. Fixed, full-screen, z-50, white background.
+- Top row: same logo (left) and a 36px round black close button with an X icon (right).
+- Below: vertical list of the 4 nav links at `text-3xl`, font-semibold, tracking-widest, uppercase, with `gap-8` and `mt-16`.
+- Bottom (mt-auto): &quot;Work With Us&quot; CTA in accent color with ArrowUpRight icon, `text-xl`.
+
+---
+
+**STATS ROW (middle section):**
+- Container: `flex-1 flex items-center justify-end`, with same horizontal padding. `py-8 md:py-0`.
+- Three stat items in a horizontal row with `gap-5 sm:gap-8 md:gap-10`, each right-aligned:
+- **+300** / CRAFTED BRANDS
+- **+200** / DIGITAL PRODUCTS
+- **+100** / VENTURES FUNDED
+- Number styling: `fontSize: clamp(1.5rem, 5vw, 3.5rem)`, weight 600. The &quot;+&quot; is rendered separately in accent color at 0.5em size. The number is black.
+- Label: `text-[10px] sm:text-xs md:text-sm`, font-semibold, tracking-widest, uppercase, black, `whitespace-pre-line leading-tight` (each label has a line break between the two words).
+
+---
+
+**BOTTOM SECTION:**
+- Padding: `px-5 sm:px-8 md:px-12 pb-8 md:pb-12`. Flex column with `gap-6 md:gap-12`.
+
+**Row A (tagline + CTA):**
+- Flex row, items-center, justify-between, gap-4.
+- **Left:** Small uppercase tagline paragraph: &quot;Shaping Bold / Visions Into Power / For Your Tribe&quot; (with `&lt;br /&gt;` line breaks). Text: `text-[10px] sm:text-xs md:text-sm`, font-semibold, tracking-widest, max-width `130px sm:160px md:max-w-xs`.
+- **Right:** CTA link &quot;Work With Us&quot; with ArrowUpRight icon. Text: `text-base sm:text-xl md:text-2xl`, accent color, weight 600, `whitespace-nowrap`. Icon: 18px on mobile, 22px on sm+.
+
+**Row B (description + main heading):**
+- Flex row, `items-end`, justify-between, `gap-3 sm:gap-4`.
+- **Left:** A fixed-width container (`w-[120px] sm:w-[180px] md:w-[280px]`, shrink-0) containing a paragraph: &quot;Creative Studios Built Around Elevating Your Vision Into Striking Reality&quot;. Text: `text-[9px] sm:text-xs md:text-sm`, font-semibold, tracking-widest, uppercase, `text-left md:text-right`.
+- **Right:** The main heading — three words stacked vertically: &quot;Fearless&quot;, &quot;Vision&quot;, &quot;Delivered&quot;. Each word in its own `overflow-hidden` wrapper. Text: `fontSize: clamp(2rem, 9vw, 9rem)`, `lineHeight: 0.88`, weight 600, uppercase, black, text-right.
+
+---
+
+**ANIMATIONS (Framer Motion):**
+
+All animations fire on page load (initial -&gt; animate).
+
+1. **fadeDown variant** (nav elements):
+- From: `{ opacity: 0, y: -20 }`
+- To: `{ opacity: 1, y: 0 }`
+- Each element has a custom stagger index. Delay: `index * 0.1s`. Duration: 0.5s. Ease: `[0.22, 1, 0.36, 1]`.
+- Applied to: logo (custom=0), each nav link (custom=1-4), hamburger (custom=5).
+
+2. **fadeUp variant** (stats + bottom content):
+- From: `{ opacity: 0, y: 32 }`
+- To: `{ opacity: 1, y: 0 }`
+- Delay: `index * 0.12s`. Duration: 0.6s. Ease: `[0.22, 1, 0.36, 1]`.
+- Applied to: each stat card (custom=2,3,4), tagline paragraph (custom=5), CTA link (custom=6), description block (custom=7).
+
+3. **Heading slide-up** (main heading words):
+- Each word slides up from `y: &quot;110%&quot;` to `y: 0` within its overflow-hidden parent (clip reveal effect).
+- Delay: `0.4 + wordIndex * 0.14` (so 0.4s, 0.54s, 0.68s). Duration: 0.7s. Ease: `[0.22, 1, 0.36, 1]`.
+
+---
+
+**RESPONSIVE BREAKPOINTS:**
+- Mobile-first. Three tiers: default (mobile), `sm:` (640px), `md:` (768px).
+- Nav links hidden on mobile, shown md+.
+- Spacing, font sizes, and widths scale up at each breakpoint.
+- Mobile menu provides full navigation on small screens.
+
+---
+
+**DEPENDENCIES:**
+- React 18
+- Tailwind CSS 3
+- framer-motion
+- lucide-react (ArrowUpRight, X icons)</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="northstar.html">Northstar<small>Agency · agency</small></a><a href="global-hubs.html">Global Hubs<small>Agency · agency</small></a><a href="talent-collective.html">Talent Collective<small>Agency · agency</small></a><a href="build-unit.html">Build Unit<small>Agency · agency</small></a><a href="intelligent-operations.html">Intelligent Operations<small>Agency · hero</small></a><a href="immersive-studio.html">Immersive Studio<small>Agency · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

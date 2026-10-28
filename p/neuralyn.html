@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Neuralyn — SaaS 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Create a dark landing page for &quot;Neuralyn&quot; — an analytics dashboard SaaS. Use React + Vite + Tailwind CSS + TypeScript + Framer Motion + shadcn/ui. Fon">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/neuralyn.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Neuralyn — SaaS 提示词">
+<meta property="og:description" content="Create a dark landing page for &quot;Neuralyn&quot; — an analytics dashboard SaaS. Use React + Vite + Tailwind CSS + TypeScript + Framer Motion + shadcn/ui. Fon">
+<meta property="og:url" content="https://prompt-site.shop/p/neuralyn.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Neuralyn","description":"Create a dark landing page for \"Neuralyn\" — an analytics dashboard SaaS. Use React + Vite + Tailwind CSS + TypeScript + Framer Motion + shadcn/ui. Fon","url":"https://prompt-site.shop/p/neuralyn.html","inLanguage":"zh-CN","genre":"SaaS","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-saas">SaaS</a></div><h1>Neuralyn</h1><div class="chip-row"><span class="chip">SaaS</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>正文：5,209 字符</span></div><div class="hero-media"><video src="../assets/previews/neuralyn.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Create a dark landing page for &quot;Neuralyn&quot; — an analytics dashboard SaaS. Use React + Vite + Tailwind CSS + TypeScript + Framer Motion + shadcn/ui.
+
+Fonts
+Inter (400, 500, 600, 700) for body/UI via @fontsource/inter
+Instrument Serif (400, 400-italic) for the italic accent word via @fontsource/instrument-serif
+
+Color Theme (all HSL, dark mode by default in :root)
+Background: 0 0% 0% (pure black)
+Foreground: 0 0% 100% (pure white)
+Muted foreground: 0 0% 65%
+Card: 0 0% 5%
+Border: 0 0% 20%
+Hero subtitle: 210 17% 95%
+
+Page Structure
+Section 1: Hero (full viewport height, overflow-hidden)
+
+Navbar — horizontal, padded px-8 md:px-28 py-4:
+
+Left: Logo image + &quot;Neuralyn&quot; text (text-xl font-bold tracking-tight) + nav links (Home, Services with ChevronDown icon, Reviews, Contact us) — links hidden on mobile, gap-1 between links, gap-12 md:gap-20 between logo and links
+Right: &quot;Sign In&quot; button — solid white background (bg-foreground), black text (text-background), rounded-lg text-sm font-semibold, hover opacity transition
+
+Hero Content — centered column, mt-16 md:mt-20 px-4:
+
+Tag pill: A &quot;liquid glass&quot; styled pill (liquid-glass class) with inner &quot;New&quot; badge (white bg, black text, rounded-md text-sm font-medium px-2 py-0.5) + &quot;Say Hello to Corewave v3.2&quot; in text-sm font-medium text-muted-foreground. Pill has px-3 py-2 rounded-lg mb-6.
+Title: text-5xl md:text-7xl, tracking-[-2px], font-medium, leading-tight md:leading-[1.15] mb-3. Text: &quot;Your Insights.&quot; / &quot;One Clear Overview.&quot; — the word &quot;Overview&quot; is in Instrument Serif italic (font-serif italic font-normal)
+Subtitle: text-lg font-normal leading-6 opacity-90 mb-8, color uses CSS variable --hero-subtitle. Text: &quot;Neuralyn helps teams track metrics, goals, and progress with precision.&quot; with a &lt;br/&gt; after &quot;goals,&quot;
+CTA Button: &quot;Get Started for Free&quot; — solid white (bg-foreground text-background), rounded-full px-8 py-3.5 text-base font-medium, whileHover: scale 1.03, whileTap: scale 0.98
+
+Dashboard + Video Area — full viewport width using w-screen with marginLeft: calc(-50vw + 50%) trick, aspect-ratio: 16/9, positioned relative:
+
+Background video: &lt;video&gt;, absolutely positioned inset-0 w-full h-full object-cover. URL: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260307_083826_e938b29f-a43a-41ec-a153-3d4730578ab8.mp4
+Dashboard image: Absolutely positioned, centered, max-w-5xl w-[90%] rounded-2xl, mixBlendMode: &quot;luminosity&quot;. Has parallax scroll (y: 0→-250).
+Bottom gradient fade: Absolutely positioned at bottom of section, h-40, gradient from background to transparent, z-30, pointer-events-none.
+
+Parallax Scroll Effects (Framer Motion useScroll({ target: sectionRef, offset: [&quot;start start&quot;, &quot;end start&quot;] }) + useTransform):
+
+Hero text content group: y: [0, -200] and opacity: [1, 0] (fades over first 50% of scroll)
+Dashboard image: y: [0, -250]
+
+Entrance Animations: Staggered initial={{ opacity: 0, y }} / animate={{ opacity: 1, y: 0 }}:
+
+Tag pill: y: 10, duration 0.5s, delay 0
+Title: y: 20, duration 0.6s, delay 0.1
+Subtitle: y: 20, duration 0.6s, delay 0.2
+CTA: y: 20, duration 0.6s, delay 0.3
+Dashboard area: y: 40, duration 0.8s, delay 0.4
+
+Liquid Glass CSS
+
+.liquid-glass {
+background: rgba(255, 255, 255, 0.01);
+background-blend-mode: luminosity;
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border: none;
+box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+position: relative;
+overflow: hidden;
+}
+.liquid-glass::before {
+content: &#39;&#39;;
+position: absolute;
+inset: 0;
+border-radius: inherit;
+padding: 1.4px;
+background: linear-gradient(180deg,
+rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+pointer-events: none;
+}
+
+Section 2: Testimonial (min-h-screen, centered, py-24 md:py-32 px-8 md:px-28)
+
+Quote symbol image (w-14 h-10 object-contain)
+Testimonial text (text-4xl md:text-5xl font-medium leading-[1.2], wrapped in flex flex-wrap): &quot;Neuralyn revolutionized how we handle financial insights using smart analytics. We are now driving better outcomes quicker than we ever imagined! Neuralyn revolutionized how we handle financial insights using smart analytics.&quot;
+Scroll-driven word reveal: Each word is a &lt;motion.span&gt; with mr-[0.3em]. Uses useScroll({ target: containerRef, offset: [&quot;start end&quot;, &quot;end center&quot;] }). Each word maps to a sequential range [i/total, (i+1)/total] → opacity: [0.2, 1] and color: [&quot;hsl(0 0% 35%)&quot;, &quot;hsl(0 0% 100%)&quot;].
+Closing &quot; quotation mark in text-muted-foreground ml-2
+Author row (flex items-center gap-4): Avatar image (w-14 h-14 rounded-full border-[3px] border-foreground object-cover) + name &quot;Brooklyn Simmons&quot; (text-base font-semibold leading-7 text-foreground) + role &quot;Product Manager&quot; (text-sm font-normal leading-5 text-muted-foreground)
+Layout: max-w-3xl mx-auto, content left-aligned (items-start), gap-10 between elements
+
+Assets needed:
+logo.png — small logo icon
+hero-dashboard.png — dashboard screenshot
+quote-symbol.png — decorative quote mark
+testimonial-avatar.png — circular headshot</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：giglianepefrei/motionsites.ai-prompt-library<br>原始文件：<code>giglianepefrei_fetch\prompts/Neuralyn.md</code><br>许可证：NOASSERTION<br><a href="https://github.com/giglianepefrei/motionsites.ai-prompt-library/blob/main/giglianepefrei_fetch%5Cprompts/Neuralyn.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="intelligent-performance.html">Intelligent Performance<small>SaaS · saas</small></a><a href="junglemind.html">JungleMind<small>SaaS · saas</small></a><a href="global-talent.html">Global Talent<small>SaaS · saas</small></a><a href="skytrace.html">Skytrace<small>SaaS · saas</small></a><a href="peakline-redshift.html">Peakline Redshift<small>SaaS · saas</small></a><a href="quantum-lucid.html">Quantum Lucid<small>SaaS · saas</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

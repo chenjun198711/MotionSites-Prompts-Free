@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bloom AI — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Create a full-screen hero landing page for &quot;Bloom&quot; — an AI-powered plant/floral design platform. The design uses a liquid glass morphism aesthetic ove">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/bloom-ai.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bloom AI — Hero Section 提示词">
+<meta property="og:description" content="Create a full-screen hero landing page for &quot;Bloom&quot; — an AI-powered plant/floral design platform. The design uses a liquid glass morphism aesthetic ove">
+<meta property="og:url" content="https://prompt-site.shop/p/bloom-ai.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Bloom AI","description":"Create a full-screen hero landing page for \"Bloom\" — an AI-powered plant/floral design platform. The design uses a liquid glass morphism aesthetic ove","url":"https://prompt-site.shop/p/bloom-ai.html","inLanguage":"zh-CN","genre":"Hero Section","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Bloom AI</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>正文：3,900 字符</span></div><div class="hero-media"><video src="../assets/previews/bloom-ai.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Create a full-screen hero landing page for &quot;Bloom&quot; — an AI-powered plant/floral design platform. The design uses a liquid glass morphism aesthetic over a looping video background.
+
+Background
+Full-screen autoplaying, looping, muted video background: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260315_073750_51473149-4350-4920-ae24-c8214286f323.mp4
+Video covers entire viewport with object-cover, sits at z-0. All content floats above at z-10.
+
+Fonts
+Display/Body: Poppins (Google Fonts) — used for headings and body text
+Serif accent: Source Serif 4 (Google Fonts) — used only for italic/emphasis text inside headings (e.g., &lt;em&gt;, &lt;i&gt;, .italic inside h1-h3)
+Headings use font-weight: 500
+
+Color Palette
+Strict grayscale only — all CSS variables are 0 0% X% HSL values
+Text is text-white, text-white/80, text-white/60, text-white/50 for hierarchy
+No colored accents whatsoever
+
+Liquid Glass CSS (two tiers)
+Define under @layer components:
+
+.liquid-glass (light)
+background: rgba(255,255,255,0.01);
+background-blend-mode: luminosity;
+backdrop-filter: blur(4px);
+border: none;
+box-shadow: inset 0 1px 1px rgba(255,255,255,0.1);
+position: relative; overflow: hidden;
+::before pseudo-element: gradient border using linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%, transparent 40%, transparent 60%, rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%) with padding: 1.4px, masked via -webkit-mask-composite: xor; mask-composite: exclude;
+
+.liquid-glass-strong (heavy, for CTA/panels)
+Same structure but backdrop-filter: blur(50px), box-shadow: 4px 4px 4px rgba(0,0,0,0.05), inset 0 1px 1px rgba(255,255,255,0.15), and ::before uses 0.5/0.2 alpha instead of 0.45/0.15.
+
+Layout — Two-Panel Split
+Flex row, min-h-screen. Left panel w-[52%], right panel w-[48%] (hidden on mobile lg:flex).
+
+Left Panel
+Has a liquid-glass-strong overlay (absolute inset-4 lg:inset-6 rounded-3xl)
+Nav: Logo image (/logo.png, 32×32) + &quot;bloom&quot; text (semibold, 2xl, tracking-tighter, white) on left. &quot;Menu&quot; button with Menu icon on right, liquid-glass pill.
+Hero center (flex-1, centered):
+Logo image again (80×80)
+h1: &quot;Innovating the / spirit of bloom AI&quot; — text-6xl lg:text-7xl, tracking-[-0.05em], white. The italic part uses font-serif text-white/80
+CTA button: &quot;Explore Now&quot; with Download icon in a w-7 h-7 rounded-full bg-white/15 circle. Button is liquid-glass-strong, rounded-full, hover:scale-105 active:scale-95
+Three pills: &quot;Artistic Gallery&quot;, &quot;AI Generation&quot;, &quot;3D Structures&quot; — liquid-glass, rounded-full, text-xs text-white/80
+Bottom quote:
+&quot;VISIONARY DESIGN&quot; label (text-xs tracking-widest uppercase text-white/50)
+Quote: &quot;We imagined a realm with no ending.&quot; — mixed font-display/font-serif italic spans
+Author: &quot;MARCUS AURELIO&quot; with horizontal lines on each side
+
+Right Panel (desktop only)
+Top bar: Social icons (Twitter, LinkedIn, Instagram) in a liquid-glass pill with ArrowRight. Account button with Sparkles icon button, both liquid-glass.
+Community card: Small liquid-glass card (w-56), &quot;Enter our ecosystem&quot; title + description
+Bottom feature section (mt-auto): Outer liquid-glass container with rounded-[2.5rem]
+Two side-by-side cards: &quot;Processing&quot; (Wand2 icon) and &quot;Growth Archive&quot; (BookOpen icon), each liquid-glass rounded-3xl
+Bottom card: flower image thumbnail (from @/assets/hero-flowers.png, 96×64), &quot;Advanced Plant Sculpting&quot; title + description, and a &quot;+&quot; button. All liquid-glass.
+
+Icons
+All from lucide-react: Sparkles, Download, Wand2, BookOpen, ArrowRight, Twitter, Linkedin, Instagram, Menu
+
+Key Details
+All interactive elements: hover:scale-105 transition-transform
+Social icon links: text-white hover:text-white/80 transition-colors
+Icon containers: w-8 h-8 rounded-full bg-white/10 flex items-center justify-center
+No border classes anywhere — glass effect handles all borders via ::before
+border-radius token: --radius: 1rem</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：giglianepefrei/motionsites.ai-prompt-library<br>原始文件：<code>giglianepefrei_fetch\prompts/Bloom_AI.md</code><br>许可证：NOASSERTION<br><a href="https://github.com/giglianepefrei/motionsites.ai-prompt-library/blob/main/giglianepefrei_fetch%5Cprompts/Bloom_AI.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Deep Red Style — Design Systems &amp; Styles 提示词 | MotionSites Prompts</title>
+<meta name="description" content="A deep red/orange atmospheric gradients, elegant serif typography, and complex scroll-triggered animations, with floating parallax cards and a dot-grid bac">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/community-superdesign-deep-red-style-5b01cb.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Deep Red Style — Design Systems &amp; Styles 提示词">
+<meta property="og:description" content="A deep red/orange atmospheric gradients, elegant serif typography, and complex scroll-triggered animations, with floating parallax cards and a dot-grid bac">
+<meta property="og:url" content="https://prompt-site.shop/p/community-superdesign-deep-red-style-5b01cb.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/community-superdesign-deep-red-style-5b01cb.png">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Deep Red Style","description":"A deep red/orange atmospheric gradients, elegant serif typography, and complex scroll-triggered animations, with floating parallax cards and a dot-grid background.","url":"https://prompt-site.shop/p/community-superdesign-deep-red-style-5b01cb.html","inLanguage":"zh-CN","genre":"Design Systems & Styles","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-design_systems___styles">Design Systems &amp; Styles</a></div><h1>Deep Red Style</h1><div class="chip-row"><span class="chip">Design Systems &amp; Styles</span><span class="chip">design-systems-styles</span><span class="chip">社区公开收藏</span></div><div class="facts"><span>正文：12,905 字符</span></div><div class="hero-media"><img src="../assets/previews/community-superdesign-deep-red-style-5b01cb.png" alt="Deep Red Style 动效预览" loading="lazy"><div class="media-note">本地预览图 · png</div></div><h2>简介</h2><p>A deep red/orange atmospheric gradients, elegant serif typography, and complex scroll-triggered animations, with floating parallax cards and a dot-grid background.</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">You are given a task to integrate the below html page into the current page.
+
+~~~html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; class=&quot;scroll-smooth&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Acme | The Design Agent&lt;/title&gt;
+&lt;script src=&quot;https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;style&gt;
+:root {
+--bg: #050505;
+--accent: #FF4500;
+--card: #111111;
+}
+
+body {
+font-family: &#39;Inter&#39;, sans-serif;
+background-color: var(--bg);
+color: white;
+margin: 0;
+overflow-x: hidden;
+}
+
+.font-serif {
+font-family: &#39;Playfair Display&#39;, serif;
+}
+
+/* Reveal Animation Styles */
+.reveal {
+opacity: 0;
+transform: translateY(30px);
+transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.active {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* Custom Floating Animations */
+@keyframes float-hand-left {
+0%, 100% { transform: translateY(0) rotate(0); }
+50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+@keyframes float-hand-right {
+0%, 100% { transform: translateY(0) rotate(0); }
+50% { transform: translateY(20px) rotate(-2deg); }
+}
+
+.animate-float-left {
+animation: float-hand-left 12s ease-in-out infinite;
+}
+
+.animate-float-right {
+animation: float-hand-right 14s ease-in-out infinite;
+}
+
+/* Noise Texture Overlay */
+.noise-overlay {
+position: fixed;
+inset: 0;
+z-index: 50;
+pointer-events: none;
+opacity: 0.05;
+mix-blend-mode: overlay;
+background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39;%3E%3Cfilter id=&#39;n&#39;%3E%3CfeTurbulence type=&#39;fractalNoise&#39; baseFrequency=&#39;0.85&#39;/%3E%3C/filter%3E%3Crect width=&#39;100%25&#39; height=&#39;100%25&#39; filter=&#39;url(%23n)&#39; opacity=&#39;0.35&#39;/%3E%3C/svg%3E&quot;);
+}
+
+/* Parallax Container Effect */
+.parallax-card-up {
+transform: translateY(var(--scroll-offset-up, 0px));
+}
+
+.parallax-card-down {
+transform: translateY(var(--scroll-offset-down, 0px));
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;min-h-screen bg-[#050505] selection:bg-[#FF4500] selection:text-white&quot;&gt;
+&lt;!-- Global Noise Overlay --&gt;
+&lt;div class=&quot;noise-overlay&quot;&gt;&lt;/div&gt;
+
+&lt;!-- Navigation --&gt;
+&lt;nav id=&quot;main-nav&quot; class=&quot;fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-8&quot;&gt;
+&lt;div class=&quot;container mx-auto px-6 flex items-center justify-between&quot;&gt;
+&lt;a href=&quot;#&quot; id=&quot;nav-logo-link&quot; class=&quot;text-2xl font-bold tracking-tighter font-serif&quot;&gt;
+Acme.
+&lt;/a&gt;
+
+&lt;div class=&quot;hidden md:flex items-center space-x-8&quot;&gt;
+&lt;a href=&quot;#expertise&quot; id=&quot;nav-expertise-link&quot; class=&quot;text-sm text-gray-400 hover:text-white transition-colors duration-300&quot;&gt;Expertise&lt;/a&gt;
+&lt;a href=&quot;#works&quot; id=&quot;nav-works-link&quot; class=&quot;text-sm text-gray-400 hover:text-white transition-colors duration-300&quot;&gt;Selected Works&lt;/a&gt;
+&lt;a href=&quot;#perspectives&quot; id=&quot;nav-perspectives-link&quot; class=&quot;text-sm text-gray-400 hover:text-white transition-colors duration-300&quot;&gt;Perspectives&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;a href=&quot;#contact&quot; id=&quot;nav-cta-link&quot; class=&quot;inline-flex items-center justify-center px-6 py-3 rounded-full text-sm font-medium bg-white text-black hover:scale-105 hover:bg-gray-100 transition-all duration-300&quot;&gt;
+Start Project
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;!-- Hero Section --&gt;
+&lt;section class=&quot;relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20 bg-[#050505]&quot;&gt;
+&lt;!-- Background Atmosphere --&gt;
+&lt;div class=&quot;absolute inset-0 z-0 pointer-events-none select-none&quot;&gt;
+&lt;div class=&quot;absolute top-0 left-0 w-full h-full opacity-60 mix-blend-screen&quot;&gt;
+&lt;img src=&quot;https://placehold.co/1536x1024&quot; alt=&quot;Atmosphere&quot; class=&quot;w-full h-full object-cover object-center opacity-80&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#050505] z-10&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Floating Surrealist Elements --&gt;
+&lt;div class=&quot;absolute -left-[10%] top-[-10%] md:left-[-5%] md:top-[-15%] w-[50vw] md:w-[40vw] max-w-[800px] z-10 pointer-events-none mix-blend-hard-light opacity-80 animate-float-left&quot;&gt;
+&lt;img src=&quot;https://placehold.co/1540x1320&quot; alt=&quot;Hand Reaching&quot; class=&quot;w-full h-auto object-contain&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;absolute -right-[10%] bottom-[-10%] md:right-[-5%] md:bottom-[-5%] w-[45vw] md:w-[35vw] max-w-[700px] z-10 pointer-events-none mix-blend-hard-light opacity-80 animate-float-right&quot;&gt;
+&lt;img src=&quot;https://placehold.co/1542x1002&quot; alt=&quot;Hand Receiving&quot; class=&quot;w-full h-auto object-contain&quot;&gt;
+&lt;/div&gt;
+
+&lt;!-- Hero Content --&gt;
+&lt;div class=&quot;container mx-auto px-6 relative z-20 text-center flex flex-col items-center justify-center h-full&quot;&gt;
+&lt;div id=&quot;hero-content-wrapper&quot; class=&quot;max-w-4xl mx-auto&quot;&gt;
+&lt;div class=&quot;reveal&quot;&gt;
+&lt;h1 class=&quot;text-5xl md:text-7xl font-medium leading-[1.1] tracking-tight mb-6 text-[#ffe0e0] mix-blend-overlay font-serif&quot;
+style=&quot;text-shadow: 0 0 12px rgba(255,255,255,0.71);&quot;&gt;
+Acme. &lt;br /&gt;
+&lt;span class=&quot;italic font-light text-[#ffe0e0]&quot;&gt;The design agent.&lt;/span&gt;
+&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;reveal&quot; style=&quot;transition-delay: 200ms;&quot;&gt;
+&lt;p class=&quot;text-base md:text-lg text-[#ffe0e0]/90 max-w-lg mx-auto mb-16 font-light tracking-wide leading-relaxed mix-blend-overlay&quot;
+style=&quot;text-shadow: 0 0 12px rgba(255,255,255,0.71);&quot;&gt;
+We turn the unseen into the unforgettable. A design agency for those who dare to disappear to be found.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;reveal flex flex-col items-center gap-6&quot; style=&quot;transition-delay: 400ms;&quot;&gt;
+&lt;div class=&quot;relative group cursor-pointer&quot;&gt;
+&lt;div class=&quot;absolute inset-0 bg-[#FF4500]/20 blur-xl rounded-full opacity-0 group-hover:opacity-50 transition-opacity duration-500&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;relative border border-white/20 bg-white/5 backdrop-blur-sm px-6 py-2 rounded-full flex items-center gap-3 text-xs md:text-sm text-white/80 uppercase tracking-widest hover:bg-white/10 transition-colors duration-300&quot;&gt;
+&lt;span&gt;Enter the Void&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex items-center gap-4 text-[10px] md:text-xs text-white/40 uppercase tracking-widest mt-8 font-mono&quot;&gt;
+&lt;span id=&quot;current-time&quot;&gt;11:11 PM&lt;/span&gt;
+&lt;span class=&quot;w-px h-3 bg-white/20&quot;&gt;&lt;/span&gt;
+&lt;span&gt;NYC, USA&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- Mission Section --&gt;
+&lt;section id=&quot;expertise&quot; class=&quot;py-32 relative&quot;&gt;
+&lt;div class=&quot;container mx-auto px-6&quot;&gt;
+&lt;div class=&quot;max-w-4xl mx-auto text-center reveal&quot;&gt;
+&lt;h2 class=&quot;text-3xl md:text-5xl lg:text-6xl leading-tight text-white/90 mb-12 font-serif&quot;&gt;
+We design the negative space where your brand truly lives.
+&lt;/h2&gt;
+&lt;p class=&quot;text-xl md:text-2xl text-gray-500 leading-relaxed font-light&quot;&gt;
+Elegance is refusal. We remove the noise so your message resonates with absolute clarity.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Logo Grid --&gt;
+&lt;div class=&quot;mt-32 grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-500&quot;&gt;
+&lt;div class=&quot;reveal font-bold text-xl tracking-widest&quot;&gt;VOGUE&lt;/div&gt;
+&lt;div class=&quot;reveal font-bold text-xl tracking-widest&quot; style=&quot;transition-delay: 100ms;&quot;&gt;TESLA&lt;/div&gt;
+&lt;div class=&quot;reveal font-bold text-xl tracking-widest&quot; style=&quot;transition-delay: 200ms;&quot;&gt;MOOMA&lt;/div&gt;
+&lt;div class=&quot;reveal font-bold text-xl tracking-widest&quot; style=&quot;transition-delay: 300ms;&quot;&gt;AESOP&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- Cards Section --&gt;
+&lt;section id=&quot;works&quot; class=&quot;py-40 relative overflow-hidden&quot;&gt;
+&lt;div class=&quot;container mx-auto px-6 relative z-10&quot;&gt;
+&lt;div class=&quot;reveal mb-32&quot;&gt;
+&lt;h2 class=&quot;text-5xl md:text-7xl text-center font-serif&quot;&gt;
+Define your &lt;br /&gt;
+&lt;span class=&quot;italic&quot;&gt;digital presence&lt;/span&gt;
+&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto&quot;&gt;
+&lt;!-- Card 1 - Red --&gt;
+&lt;div class=&quot;parallax-card-down&quot;&gt;
+&lt;div class=&quot;reveal bg-[#FF4500] rounded-3xl p-8 md:p-12 aspect-[4/5] flex flex-col justify-between shadow-2xl hover:shadow-[0_20px_50px_rgba(255,69,0,0.3)] transition-all duration-500 group cursor-pointer&quot;&gt;
+&lt;div class=&quot;flex justify-between items-start&quot;&gt;
+&lt;div class=&quot;w-12 h-12 rounded-full bg-black/10 flex items-center justify-center group-hover:rotate-45 transition-transform duration-500&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:star&quot; class=&quot;text-black text-2xl&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/div&gt;
+&lt;span class=&quot;text-black font-medium text-sm border border-black/20 px-3 py-1 rounded-full&quot;&gt;01&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;h3 class=&quot;text-4xl md:text-5xl text-black mb-4 leading-none tracking-tight font-serif&quot;&gt;
+Emerging &lt;br /&gt;Talent
+&lt;/h3&gt;
+&lt;p class=&quot;text-black/70 text-lg leading-snug&quot;&gt;
+You have the spark. We provide the atmosphere for it to ignite into a blazing reality.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;w-full h-px bg-black/10 mt-8&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Card 2 - Black --&gt;
+&lt;div class=&quot;parallax-card-up md:mt-24&quot;&gt;
+&lt;div class=&quot;reveal bg-[#111] border border-white/10 rounded-3xl p-8 md:p-12 aspect-[4/5] flex flex-col justify-between shadow-2xl group cursor-pointer hover:border-[#FF4500]/50 transition-all duration-500&quot; style=&quot;transition-delay: 150ms;&quot;&gt;
+&lt;div class=&quot;flex justify-between items-start&quot;&gt;
+&lt;div class=&quot;w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-500&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:arrow-right&quot; class=&quot;text-white text-2xl -rotate-45&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/div&gt;
+&lt;span class=&quot;text-white/50 font-medium text-sm border border-white/10 px-3 py-1 rounded-full&quot;&gt;02&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;h3 class=&quot;text-4xl md:text-5xl text-white mb-4 leading-none tracking-tight font-serif&quot;&gt;
+Evolving &lt;br /&gt;Legacy
+&lt;/h3&gt;
+&lt;p class=&quot;text-gray-400 text-lg leading-snug&quot;&gt;
+You&#39;ve arrived. Now let&#39;s make sure you never leave their minds. Permanence is our craft.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;w-full h-px bg-white/10 mt-8&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Background Pattern --&gt;
+&lt;div class=&quot;absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] opacity-10 pointer-events-none&quot;
+style=&quot;background-image: radial-gradient(circle, #333 1px, transparent 1px); background-size: 40px 40px;&quot;&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- Footer --&gt;
+&lt;footer class=&quot;py-20 border-t border-white/5 bg-[#050505] relative overflow-hidden&quot;&gt;
+&lt;div class=&quot;container mx-auto px-6 relative z-10&quot;&gt;
+&lt;div class=&quot;flex flex-col md:flex-row justify-between items-start md:items-end gap-12&quot;&gt;
+&lt;div class=&quot;w-full md:w-auto&quot;&gt;
+&lt;h2 class=&quot;text-[10vw] leading-[0.8] tracking-tighter text-white/10 font-bold select-none pointer-events-none&quot;&gt;
+ACME.
+&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex flex-col gap-8 text-right&quot;&gt;
+&lt;div class=&quot;flex flex-col gap-4 text-gray-400&quot;&gt;
+&lt;a href=&quot;#&quot; id=&quot;footer-ig-link&quot; class=&quot;hover:text-white transition-colors&quot;&gt;Instagram&lt;/a&gt;
+&lt;a href=&quot;#&quot; id=&quot;footer-tw-link&quot; class=&quot;hover:text-white transition-colors&quot;&gt;Twitter&lt;/a&gt;
+&lt;a href=&quot;#&quot; id=&quot;footer-li-link&quot; class=&quot;hover:text-white transition-colors&quot;&gt;LinkedIn&lt;/a&gt;
+&lt;/div&gt;
+&lt;p class=&quot;text-sm text-gray-600&quot;&gt;© 2024 Acme. All rights reserved.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/footer&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+// 1. Reveal Elements on Scroll using Intersection Observer
+const revealObserver = new IntersectionObserver((entries) =&gt; {
+entries.forEach(entry =&gt; {
+if (entry.isIntersecting) {
+entry.target.classList.add(&#39;active&#39;);
+}
+});
+}, {
+threshold: 0.1,
+rootMargin: &#39;0px 0px -50px 0px&#39;
+});
+
+document.querySelectorAll(&#39;.reveal&#39;).forEach(el =&gt; revealObserver.observe(el));
+
+// 2. Navbar Scroll Effect
+const nav = document.getElementById(&#39;main-nav&#39;);
+window.addEventListener(&#39;scroll&#39;, () =&gt; {
+if (window.scrollY &gt; 50) {
+nav.classList.add(&#39;py-4&#39;, &#39;bg-[#050505]/80&#39;, &#39;backdrop-blur-md&#39;, &#39;border-b&#39;, &#39;border-white/5&#39;);
+nav.classList.remove(&#39;py-8&#39;, &#39;bg-transparent&#39;);
+} else {
+nav.classList.remove(&#39;py-4&#39;, &#39;bg-[#050505]/80&#39;, &#39;backdrop-blur-md&#39;, &#39;border-b&#39;, &#39;border-white/5&#39;);
+nav.classList.add(&#39;py-8&#39;, &#39;bg-transparent&#39;);
+}
+});
+
+// 3. Simple Parallax Logic
+window.addEventListener(&#39;scroll&#39;, () =&gt; {
+const scrolled = window.scrollY;
+// Move cards in opposite directions slightly for depth
+document.querySelectorAll(&#39;.parallax-card-up&#39;).forEach(el =&gt; {
+el.style.setProperty(&#39;--scroll-offset-up&#39;, `${scrolled * -0.05}px`);
+});
+document.querySelectorAll(&#39;.parallax-card-down&#39;).forEach(el =&gt; {
+el.style.setProperty(&#39;--scroll-offset-down&#39;, `${scrolled * 0.05}px`);
+});
+});
+
+// 4. Update Time Clock
+function updateTime() {
+const clockEl = document.getElementById(&#39;current-time&#39;);
+const now = new Date();
+let hours = now.getHours();
+const minutes = now.getMinutes().toString().padStart(2, &#39;0&#39;);
+const ampm = hours &gt;= 12 ? &#39;PM&#39; : &#39;AM&#39;;
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour &#39;0&#39; should be &#39;12&#39;
+clockEl.textContent = `${hours}:${minutes} ${ampm}`;
+}
+setInterval(updateTime, 60000);
+updateTime();
+
+// 5. Hero Content Parallax
+const heroWrapper = document.getElementById(&#39;hero-content-wrapper&#39;);
+window.addEventListener(&#39;scroll&#39;, () =&gt; {
+const scrolled = window.scrollY;
+if (scrolled &lt; 1000) {
+heroWrapper.style.transform = `translateY(${scrolled * 0.4}px)`;
+heroWrapper.style.opacity = Math.max(0, 1 - scrolled / 600);
+}
+});
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+~~~</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：superdesigndev/superdesign-prompts<br>原始文件：<code>prompts/deep-red-style-5b01cb/README.md</code><br>许可证：CC0-1.0<br>作者：Jason Zhou<br><a href="https://github.com/superdesigndev/superdesign-prompts/blob/main/prompts/deep-red-style-5b01cb/README.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="community-superdesign-red-noir-style.html">Red Noir Style<small>Design Systems &amp; Styles · landing-page</small></a><a href="community-superdesign-glassmorphism-style.html">Glassmorphism Style<small>Design Systems &amp; Styles · landing-page</small></a><a href="community-superdesign-mosaic-grid-architecture-style.html">Mosaic Grid Architecture Style<small>Design Systems &amp; Styles · landing-page</small></a><a href="community-superdesign-neural-noir-interface-style.html">Neural Noir Interface Style<small>Design Systems &amp; Styles · landing-page</small></a><a href="community-superdesign-cinematic-style.html">Cinematic Style<small>Design Systems &amp; Styles · landing-page</small></a><a href="community-superdesign-kinetic-orange-style.html">Kinetic Orange Style<small>Design Systems &amp; Styles · landing-page</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

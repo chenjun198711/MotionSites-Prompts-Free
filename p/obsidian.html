@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Obsidian — Interactive 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Build a single-page website called  OBSIDIAN  — a dark, editorial, high-fashion tattoo-studio landing page with a scroll-scrubbed fullscreen video her">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/obsidian.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Obsidian — Interactive 提示词">
+<meta property="og:description" content="Build a single-page website called  OBSIDIAN  — a dark, editorial, high-fashion tattoo-studio landing page with a scroll-scrubbed fullscreen video her">
+<meta property="og:url" content="https://prompt-site.shop/p/obsidian.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/obsidian.jpg">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Obsidian","description":"Build a single-page website called  OBSIDIAN  — a dark, editorial, high-fashion tattoo-studio landing page with a scroll-scrubbed fullscreen video her","url":"https://prompt-site.shop/p/obsidian.html","inLanguage":"zh-CN","genre":"Interactive","dateCreated":"2026-08-28T17:36:55.047Z","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-interactive">Interactive</a></div><h1>Obsidian</h1><div class="chip-row"><span class="chip">Interactive</span><span class="chip">interactive</span><span class="chip">yilai-ai 公开页面</span></div><div class="facts"><span>收录时间：2026-08-28</span><span>正文：17,243 字符</span></div><div class="hero-media"><img src="../assets/previews/obsidian.jpg" alt="Obsidian 动效预览" loading="lazy"><div class="media-note">本地预览图 · jpeg</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a single-page website called **OBSIDIAN** — a dark, editorial, high-fashion tattoo-studio landing page with a scroll-scrubbed fullscreen video hero. Recreate it EXACTLY as specified below: every URL, color, Tailwind class, animation constant, easing curve, and line of copy is intentional. Do not substitute, paraphrase, or &quot;improve&quot; anything.
+
+## 1. Stack &amp; project setup
+- Vite + React 18 + TypeScript + Tailwind CSS 3.4 (default config, no theme extensions, no plugins).
+- Vite alias: `&#39;@&#39;` → `./src`.
+- Files: `src/main.tsx` (StrictMode + createRoot), `src/App.tsx`, `src/index.css`, `src/components/Navbar.tsx`, `src/components/ScrollVideoHero.tsx`, `src/components/ClosingSection.tsx`.
+- `App.tsx` renders, inside `&lt;div className=&quot;bg-[#DADADA]&quot;&gt;`: `&lt;Navbar /&gt;`, `&lt;ScrollVideoHero /&gt;`, `&lt;ClosingSection /&gt;` — in that order. Nothing else.
+
+## 2. index.html (head)
+- `&lt;title&gt;OBSIDIAN&lt;/title&gt;`
+- Font stylesheet link (this is the exact font source — keep it):
+  `&lt;link href=&quot;https://db.onlinewebfonts.com/c/95cecf452d3208890088a5b4c19c7ecf?family=Helvetica+Neue+ME&quot; rel=&quot;stylesheet&quot;&gt;`
+- Inline style to prevent white flash: `html,body,#root{background:#DADADA;margin:0}`
+
+## 3. Global CSS (src/index.css)
+After the three `@tailwind` directives:
+- `* { margin: 0; padding: 0; box-sizing: border-box; }`
+- `html { scroll-behavior: auto; background: #DADADA; }`
+- `body { font-family: &#39;Helvetica Neue ME&#39;, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; background: #DADADA; color: #ffffff; overflow-x: hidden; }`
+- Hide the scrollbar entirely: `::-webkit-scrollbar { width: 0px; background: transparent; }`
+
+Every headline/body element that sets a font inline uses `style={{ fontFamily: &quot;&#39;Helvetica Neue ME&#39;, &#39;Helvetica Neue&#39;, sans-serif&quot; }}`.
+
+## 4. Navbar component
+
+### 4a. Fixed top bar
+`&lt;nav&gt;` — `fixed top-0 left-0 right-0 z-[60] flex items-start justify-between px-5 md:px-10 pt-4 md:pt-5 pb-4 mix-blend-difference pointer-events-none`. The `mix-blend-difference` makes the white text invert over light/dark content. Four children, all `text-[10px] md:text-xs tracking-[0.15em] uppercase text-white leading-tight`:
+1. Left (pointer-events-auto): `OBSIDIAN` in `font-medium`, then a space, then `©` in a span with `opacity-50`.
+2. Center block 1 (`text-center hidden sm:block`): line 1 `VOLUME 01`, line 2 `MMXXV` with `opacity-50`.
+3. Center block 2 (`text-center hidden md:block`): line 1 `INK, FORM`, line 2 `&amp; MODERN PRACTICE` with `opacity-50`.
+4. Hamburger button (`pointer-events-auto relative w-7 h-5 flex flex-col justify-between items-end focus:outline-none`, aria-label toggles &quot;Open menu&quot;/&quot;Close menu&quot;). Three `&lt;span&gt;`s, each `block h-[1.5px] bg-white transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)]`:
+   - Top span (`origin-center`): width 100%; open → `translateY(7.5px) rotate(45deg)`.
+   - Middle span: width 60% closed / 100% open; open → `opacity: 0` and `scaleX(0)`.
+   - Bottom span (`origin-center`): width 80% closed / 100% open; open → `translateY(-7.5px) rotate(-45deg)`.
+
+### 4b. Fullscreen menu overlay
+Fixed `inset-0 z-[55]`, revealed with a **clip-path curtain**: `transition-all duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]`, `clipPath: &#39;inset(0% 0% 100% 0%)&#39;` closed → `&#39;inset(0% 0% 0% 0%)&#39;` open; `pointerEvents: &#39;none&#39;` when closed. Inside: an absolute `inset-0 bg-black/[0.97] backdrop-blur-md` layer, then content wrapper `relative z-10 h-full flex flex-col justify-between px-6 md:px-12 lg:px-16 pt-24 pb-10`. While open, set `document.body.style.overflow = &#39;hidden&#39;` (restore on close/unmount).
+
+Nav links (`flex flex-col gap-1`), five anchors — **Atelier, Artists, Gallery, Book, Inquire** — with staggered transition delays **80ms, 160ms, 240ms, 320ms, 400ms**. Each `&lt;a href=&quot;#&quot;&gt;` closes the menu on click and is `group block overflow-hidden py-2` containing a span:
+`block text-[11vw] sm:text-[8vw] md:text-[6vw] font-black uppercase text-white/90 leading-[1.1] tracking-[-0.03em] transition-all duration-700 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:text-white group-hover:translate-x-3`, Helvetica Neue ME inline font, transform `translateY(110%)` closed → `translateY(0)` open (delay applies only when opening; `0ms` when closing). The `overflow-hidden` parent creates the masked slide-up reveal.
+
+Bottom info row: `flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6 transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)]`, opacity 0 + `translateY(20px)` closed → opacity 1 + `translateY(0)` open with **450ms** delay (0ms when closing). Three blocks:
+- Label `Location` (`text-[10px] tracking-[0.25em] uppercase text-white/30 mb-1.5`), value `Brooklyn, New York` (`text-xs text-white/50 font-light leading-relaxed`, HN ME font).
+- Label `Inquiries` (same label style), value `hello@obsidian.studio` (`text-xs text-white/50 font-light`, HN ME font).
+- `hidden sm:block`: `© OBSIDIAN MMXXV` (`text-[10px] tracking-[0.2em] uppercase text-white/20`).
+
+## 5. ScrollVideoHero component — the core of the page
+
+### 5a. Structure
+`&lt;section&gt;` — `relative`, inline `height: &#39;500vh&#39;`. Inside, a single pinned viewport: `sticky top-0 w-full h-screen overflow-hidden bg-[#DADADA] will-change-transform`. Layers, bottom to top:
+1. **`&lt;video&gt;`** — `src` EXACTLY:
+   `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260821_132241_f0feb221-ccb9-4dce-87b4-7dfa66adabb6.mp4`
+   Attributes: `muted playsInline preload=&quot;auto&quot;`, classes `absolute inset-0 w-full h-full object-cover`, inline `opacity: 0; background: #DADADA; willChange: auto`. Paused; scrubbed only via `currentTime`. Set opacity to `&#39;1&#39;` on `loadeddata` and `seeked` events (and immediately if `readyState &gt;= 2`).
+2. **`&lt;canvas width={1280} height={720}&gt;`** — `absolute inset-0 w-full h-full object-cover transition-opacity duration-200`, inline `opacity: 0`. Painted from a decoded frame bank; fades in over the video once the first bank frame is drawn.
+3. **Hero overlay image** — div `absolute inset-0 z-30 pointer-events-none` containing `&lt;img&gt;` (empty alt, `w-full h-full object-cover`) with `src` EXACTLY:
+   `https://thus-sweat-74219310.figma.site/_assets/v11/00ad4deaa54b762c872a70c72f90c221ddf982e9.png`
+   (a full-screen transparent PNG sitting above everything in the hero).
+4. **Hero content (section 1)** — div `absolute inset-0 z-10 flex flex-col`:
+   - Centered title wrapper `flex justify-center mt-12 md:mt-14` with `&lt;h1&gt;OBSIDIAN&lt;/h1&gt;` — `text-[20vw] md:text-[22vw] font-black tracking-[-0.04em] leading-[0.75] text-black uppercase select-none`, HN ME inline font. The giant black title sits BELOW the overlay PNG (z-10 vs z-30), so the PNG&#39;s subject visually overlaps the type.
+   - Bottom-left caption `absolute bottom-6 left-6 md:left-10 md:bottom-8`, `&lt;p&gt;` `text-[9px] md:text-[10px] tracking-[0.15em] uppercase leading-[1.8] text-black/80` with `&lt;br/&gt;`s:
+     `RITUALS REFINED:` / `TRACING LINE, SHADOW &amp; SKIN` / `ACROSS A LIVING FORM.`
+5. **Sections 2–5** — four absolute `inset-0 z-20 will-change-transform` overlay divs, each starting inline `opacity: 0; pointerEvents: &#39;none&#39;; transform: translateY(100%)` (all motion applied via JS, no CSS transitions on these).
+
+### 5b. Scroll → progress math (all in refs + rAF; zero React re-renders)
+- `measure()`: `start = window.scrollY + section.getBoundingClientRect().top`; `end = start + section.offsetHeight - window.innerHeight`. Re-measure on resize.
+- On scroll (passive listener): `progress = clamp((scrollY − start) / (end − start), 0, 1)`; `targetTime = progress × video.duration`; call `applyPositions(progress, scrollPx)` where `scrollPx = max(0, scrollY − start)`.
+- **rAF render loop** (started on `loadedmetadata`): exponential smoothing of playback time —
+  `dt = min(0.1, (now − last)/1000)`; `smoothing = 1 − e^(−dt × 10)` (LERP_TAU = 10); `current += (target − current) × smoothing`; snap `current = target` when `|target − current| &lt; 0.002` (SNAP). If `prefers-reduced-motion: reduce`, pin `current = 0`.
+- Drawing: if the frame bank is ready, paint from it; otherwise fall back to seeking the video element: when `!video.seeking &amp;&amp; |video.currentTime − current| &gt; 0.01`, set `video.currentTime = current` (try/catch).
+
+### 5c. applyPositions(progress, scrollPx)
+- Hero title/caption: `heroScroll = max(0, 1 − progress × 8)` (fully gone by progress 0.125); apply to hero content `opacity = heroScroll` and `transform = translateY(((1 − heroScroll) × −30)%)` — it drifts up 30% while fading.
+- Overlay PNG: `opacity = max(0, 1 − max(0, scrollPx − 150) / 30)` — solid for the first 150px of scroll, then fades out over the next 30px.
+- Sections 2–5 occupy fifths 1–4 of progress (hero is fifth 0). For section index i:
+  `local = (progress − i/5) / (1/5)`; `t = 1` if local &lt; 0, `−1` if local &gt; 1, else `1 − 2·local`.
+  Apply `transform: translateY(t×100%)`; `opacity = |t| &lt; 1 ? 1 : 0`; `pointerEvents = |t| &lt; 1 ? &#39;auto&#39; : &#39;none&#39;`. Each section slides up through the viewport (enters from bottom at t=1, centered at t=0, exits top at t=−1) as you scroll its fifth.
+
+### 5d. Section content (exact copy)
+- **Section 2** (`flex flex-col justify-start p-6 md:p-12 lg:p-16`; inner `max-w-md mt-12 md:mt-20`): label `ORIGIN` (`text-[11px] tracking-[0.25em] uppercase text-black/50 mb-5`), body (`text-base md:text-lg leading-[1.7] text-black/85 font-light`, HN ME): &quot;Obsidian Studio, established by globally acclaimed visionaries of Fine Line Tattoo, Micro Realism Tattoo, and Minimalist Tattoo, Elias Varen and Mira Solenne, unites the world&#39;s and Brooklyn&#39;s finest tattoo artists in Brooklyn, NYC.&quot;
+- **Section 3** (`flex items-start justify-end p-6 md:p-12 lg:p-16 pt-20 md:pt-28`): dark card `bg-black/85 backdrop-blur-sm px-6 py-5 max-w-[340px] border border-white/5`; label `Premise` (`text-[11px] tracking-[0.25em] uppercase text-white/40 mb-3`), body (`text-sm md:text-[15px] leading-[1.7] text-white/75 font-light`, HN ME): &quot;Here in our studio is a refuge for intention, where patience meets technique and craft dissolves all limits. With global reverence and an unwavering devotion to the singular.&quot;
+- **Section 4** (plain `absolute inset-0 z-20`): (a) top-right text `absolute top-12 md:top-16 right-6 md:right-12 lg:right-16 max-w-[320px] text-right` (`text-sm md:text-[15px] leading-[1.7] text-black/75 font-light`, HN ME): &quot;singular visions into striking one of a kind tattoos in partnership with the most refined artists from NYC and from across the globe.&quot;; (b) bottom-left dark card `absolute bottom-12 md:bottom-16 left-6 md:left-12 lg:left-16 bg-black/85 backdrop-blur-sm px-6 py-5 max-w-[340px] border border-white/5`, label `Process` (same style as Premise), body (same style): &quot;We treat each tattoo as a silent dialogue, a mark that emerges from your story. Your form is a page, and we aspire to inscribe narratives that capture your singularity and essence.&quot;
+- **Section 5** (`flex items-center`, inner `pl-6 md:pl-12 lg:pl-16`): `&lt;h2&gt;` `FIND&lt;br/&gt;YOUR&lt;br/&gt;ARTIST` — `text-[20vw] md:text-[15vw] font-black leading-[0.82] tracking-[-0.03em] text-neutral-900 uppercase select-none`, HN ME.
+
+### 5e. Frame-bank scrub engine (WebCodecs + MP4Box) — build this exactly
+Goal: butter-smooth scrubbing by pre-decoding the whole MP4 into WebP frame blobs, then blitting ImageBitmaps to the canvas — falling back gracefully to `video.currentTime` seeking.
+- Constants: `LERP_TAU = 10`, `SNAP = 0.002`, `LRU_MAX = 28`, `LEAD = 20`, `WATCHDOG_MS = 45000`.
+- Lazy-load MP4Box from `https://cdn.jsdelivr.net/npm/mp4box@0.5.2/dist/mp4box.all.min.js` by injecting a `&lt;script&gt;` (resolve `window.MP4Box`; reuse if already present).
+- Start building after `window` `load` (or immediately if `document.readyState === &#39;complete&#39;`), and only once video metadata/duration is known. Skip entirely if `prefers-reduced-motion` or `typeof VideoDecoder === &#39;undefined&#39;`.
+- Bank state: `frames: {ts, blob}[]`, `lru: Map&lt;index, ImageBitmap|null&gt;`, `drawnIndex`, `ready`, `reverted`, `painted`.
+- Pipeline: `fetch(VIDEO_URL)` → `arrayBuffer` → set `buf.fileStart = 0` → `mp4boxfile.appendBuffer(buf)` + `flush()`. In `onReady`: take `info.videoTracks[0]`, extract the codec description from the sample-description box (`avcC || hvcC || vpcC || av1C`) by writing the box to a BIG_ENDIAN DataStream and taking `new Uint8Array(stream.buffer, 8)`; configure `VideoDecoder` with `{ codec: track.codec, codedWidth: track.video.width, codedHeight: track.video.height, description }`; `setExtractionOptions(track.id, null, { nbSamples: Infinity })`; `start()`; collect all samples via `onSamples`.
+- Decode with backpressure: feed `EncodedVideoChunk`s (`type: is_sync ? &#39;key&#39; : &#39;delta&#39;`, `timestamp: cts × 1e6 / timescale`, `duration: duration × 1e6 / timescale`); never let more than `LEAD` (20) chunks be in flight ahead of completed outputs (await a counter-based `until(i − LEAD)` promise).
+- Decoder output (serialized through a promise chain): draw each `VideoFrame` onto a lazily-sized offscreen canvas (`alpha: false`, sized to `codedWidth/Height`, fallback 1280×720), `close()` the frame, then `canvas.toBlob(..., &#39;image/webp&#39;, 0.82)` and push `{ts: frame.timestamp, blob}`.
+- Finalize: `decoder.flush()` → await chain → sort frames by `ts` → `createImageBitmap` the frame nearest current time, seed the LRU, set `ready = true`, draw immediately.
+- Drawing from bank: binary-search `nearestIndex` over `ts` (microseconds; compare against `t × 1e6`); if the LRU has that bitmap and index ≠ `drawnIndex`, `ctx.drawImage(bm, 0, 0, canvas.width, canvas.height)` on a 2D context created with `{ alpha: false }`; on the very first paint set canvas opacity to `&#39;1&#39;` (CSS transition fades it in over 200ms). After each draw, warm the LRU for indices `i−1 … i+2` (async `createImageBitmap` per blob, placeholder `null` while pending); evict oldest entries beyond 28, calling `.close()` on evicted bitmaps.
+- Failure ladder: any decoder error on the first (hardware) pass → reset the bank and retry once with `hardwareAcceleration: &#39;prefer-software&#39;`; failure on the soft pass, MP4Box error, fetch failure, no samples, or a 45s watchdog timeout → **revert**: mark `reverted`, `ready = false`, canvas opacity `&#39;0&#39;` (the raw `&lt;video&gt;` seek fallback keeps working). On unmount: abort build, remove all listeners, cancel rAF, close + clear all LRU bitmaps.
+
+## 6. ClosingSection component
+`&lt;section&gt;` — `relative min-h-screen bg-black flex flex-col justify-between overflow-hidden`:
+1. Top rule: wrapper `w-full px-6 md:px-12 lg:px-16 pt-16 md:pt-20` containing `&lt;div class=&quot;h-px bg-white/10 w-full&quot; /&gt;`.
+2. Main (`flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-16 py-16`):
+   - Label `Convictions` — `text-[10px] tracking-[0.3em] uppercase text-white/30 mb-8`.
+   - Statement `&lt;h2&gt;` — `text-[8vw] sm:text-[7vw] md:text-[5vw] lg:text-[4vw] font-light leading-[1.15] tracking-[-0.02em] text-white/90 max-w-5xl`, HN ME: `We don&#39;t merely mark skin.` `&lt;br class=&quot;hidden sm:block&quot;/&gt;` `&lt;span class=&quot;text-white/40&quot;&gt; We distill stories into permanence—&lt;/span&gt;` `&lt;br class=&quot;hidden sm:block&quot;/&gt;` `&lt;span&gt; one stroke at a time.&lt;/span&gt;` (use `&amp;mdash;`).
+   - Subtext `&lt;p&gt;` — `mt-10 text-xs md:text-sm leading-[1.8] text-white/40 font-light max-w-md`, HN ME: &quot;Every work begins as a dialogue and arrives as a partnership. Your history becomes our medium. No shortcuts, no repetition—only purpose translated into ink.&quot;
+3. Footer (`px-6 md:px-12 lg:px-16 pb-10`): divider `h-px bg-white/10 w-full mb-8`, then `flex flex-col md:flex-row items-start md:items-end justify-between gap-6`:
+   - Label `Atelier` (`text-[10px] tracking-[0.3em] uppercase text-white/30 mb-2`), value (`text-sm text-white/60 font-light leading-relaxed`, HN ME): `Brooklyn, New York` `&lt;br/&gt;` `By private session only`.
+   - CTA column (`flex flex-col items-start md:items-end gap-3`): label `Start your journey` (`text-[10px] tracking-[0.3em] uppercase text-white/30`); `&lt;a href=&quot;#&quot;&gt;` `group inline-flex items-center gap-3 text-white/80 hover:text-white transition-colors duration-300` containing `Schedule a consultation` (`text-sm font-light tracking-wide`, HN ME) and a line `&lt;span class=&quot;w-8 h-px bg-white/40 group-hover:w-12 group-hover:bg-white transition-all duration-300&quot; /&gt;` that stretches on hover.
+   - Copyright (`text-right mt-4 md:mt-0`): `© OBSIDIAN MMXXV` — `text-[10px] tracking-[0.2em] uppercase text-white/20`.
+
+## 7. Acceptance checklist
+- Page background is `#DADADA` everywhere above the black closing section; no white flash on load; no visible scrollbar; no horizontal overflow.
+- The hero pins for exactly 500vh of scroll; the video scrubs forward/backward with scroll with smooth exponential easing (no jitter once the frame bank is ready).
+- Giant &quot;OBSIDIAN&quot; fades/drifts away within the first ~12.5% of hero progress; the overlay PNG vanishes right after ~150px of scroll.
+- Sections 2–5 each slide vertically through the pinned viewport during their fifth of the scroll range.
+- Menu opens as a top-down clip-path curtain with staggered link reveals; hamburger morphs into an X; top bar text inverts over content via mix-blend-difference.
+- With `prefers-reduced-motion: reduce`, the video stays on frame 0 and no frame bank is built; if WebCodecs/MP4Box fail, scrubbing still works via native video seeking.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="scroll-landing.html">Scroll Landing Page<small>Interactive · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

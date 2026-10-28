@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EMBER.dsgn — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色全屏分栏英雄区，左侧展示品牌名称和设计工作室简介，右侧播放HLS视频背景，搭配极简导航和动画交互。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/ember-dsgn-hero.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EMBER.dsgn — Hero Section 提示词">
+<meta property="og:description" content="深色全屏分栏英雄区，左侧展示品牌名称和设计工作室简介，右侧播放HLS视频背景，搭配极简导航和动画交互。">
+<meta property="og:url" content="https://prompt-site.shop/p/ember-dsgn-hero.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/ember-dsgn-hero.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"EMBER.dsgn","description":"深色全屏分栏英雄区，左侧展示品牌名称和设计工作室简介，右侧播放HLS视频背景，搭配极简导航和动画交互。","url":"https://prompt-site.shop/p/ember-dsgn-hero.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-05-06T09:30:32.094993+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>EMBER.dsgn</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-05-06</span><span>正文：6,290 字符</span></div><div class="hero-media"><img src="../assets/previews/ember-dsgn-hero.webp" alt="EMBER.dsgn 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色全屏分栏英雄区，左侧展示品牌名称和设计工作室简介，右侧播放HLS视频背景，搭配极简导航和动画交互。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Recreation Prompt
+Build a fullscreen split-panel hero section for &quot;EMBER.dsgn&quot; — a digital design studio. Single-page React app, no routing.
+
+Stack &amp; dependencies
+React 19 + TypeScript + Vite 6
+Tailwind CSS 4 via @tailwindcss/vite
+motion (framer-motion v12 successor — import from motion/react)
+lucide-react for icons (ArrowUpRight, Menu, X)
+hls.js for HLS video playback
+Vite dev script: vite --port=3000 --host=0.0.0.0
+Global styles (src/index.css)
+@import url(&#39;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap&#39;);
+@import &quot;tailwindcss&quot;;
+
+@theme {
+--font-sans: &quot;Inter&quot;, ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+@apply antialiased overflow-hidden;
+}
+Root container
+
+
+with: relative h-screen w-full font-sans text-white selection:bg-white/20 overflow-hidden bg-black. Three stacked layers inside (z-index order: video bg → split panels → nav → mobile menu overlay).
+
+1. Background video (z-0)
+Absolute, inset-0, full-cover
+HLS stream URL: https://stream.mux.com/Q3hYHAcLU82ceOUgwDeO4HiwOc3WZn9JD02PugwzxHOI.m3u8
+attrs: muted loop playsInline autoPlay, classes absolute inset-0 w-full h-full object-cover scale-x-[-1] (horizontally mirrored)
+In useEffect: if Hls.isSupported(), create new Hls(), loadSource, attachMedia, on MANIFEST_PARSED set playbackRate = 0.7 and call .play(). Cleanup with hls.destroy(). Safari fallback: set video.src directly and use loadedmetadata listener with same playback rate.
+2. Split panels (z-10)
+Outer wrapper: absolute inset-0 flex flex-col lg:flex-row z-10 pointer-events-none overflow-y-auto lg:overflow-hidden scrollbar-hide
+
+Left panel — &quot;EMBER&quot; cutout effect
+relative w-full lg:w-1/2 min-h-screen lg:h-full flex flex-col pointer-events-auto overflow-hidden border-b lg:border-b-0 lg:border-r border-white/5
+Blur layer: absolute inset-0, backgroundColor: rgba(131, 131, 131, 0.3), backdropFilter: blur(20px) (+ webkit prefix), with maskImage: url(#emberMask) so the EMBER letters cut a clear hole through the blur revealing the video.
+SVG mask def: with . White rect 100%×100%, then black-fill EMBER text in two responsive variants:
+Mobile:
+Desktop:
+Text element: x=0 y=115 textLength=&quot;100%&quot; lengthAdjust=&quot;spacingAndGlyphs&quot;, classes font-[900] tracking-tighter, inline fontSize: 130px, fill=&quot;black&quot;
+Content stack (z-20, pt-[12vh] lg:pt-[8vh] px-6 md:px-12):
+Spacer matching the EMBER SVG: h-[20vh] lg:h-[25vh]
+Vertical line: flex-grow flex flex-col pt-4 min-h-[100px] containing w-[1px] h-full bg-white/20
+Footer block (pb-12 flex flex-col gap-6 pt-4):
+&quot;ABOUT&quot; eyebrow: text-[10px] font-bold tracking-[0.3em] uppercase text-white/40
+Heading: text-xl md:text-2xl font-normal leading-[1.3] text-white/90 — copy: &quot;We shape striking digital identities through bold contrasts and meaningful motion.&quot;
+&quot;Our design process transforms the primal into the powerful.&quot;
+Bottom row: flex flex-col sm:flex-row justify-between items-start sm:items-end border-t border-white/10 pt-8 w-full gap-8 — three cells:
+&quot;Double Click and&quot; caption + Explore Our Work link with
+Social links (Instagram, Telegram) — each with a w-1 h-1 bg-white rounded-full opacity-50 bullet
+Address (hidden on mobile): 23 Industrial Lane, Unit 5 / London, UK, E2 8AA
+All small-text uses text-[10px] font-bold uppercase tracking-widest; eyebrows use text-[9px]
+Right panel — &quot;STUDIO&quot; word
+relative w-full lg:w-1/2 min-h-[50vh] lg:h-full flex flex-col justify-end pb-8 lg:pb-2 pointer-events-auto overflow-hidden
+Two concentric circles (decorative, centered, z-0): wrapper absolute inset-0 z-0 pointer-events-none flex justify-center → inner relative h-full aspect-square flex flex-col items-center containing two divs:
+Circle 1: absolute top-[-10vh] lg:top-[-25vh] w-[40vh] lg:w-[60vh] h-[40vh] lg:h-[60vh] border border-white/20 lg:border-white/35 rounded-full
+Circle 2: same size, top-[30vh] lg:top-[18vh]
+STUDIO wordmark (z-10, relative w-full mb-1 px-6 md:px-[5%]): with STUDIO
+3. Navigation (z-50, fixed)
+fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-12 py-6 lg:py-8 pointer-events-none — two pointer-events-auto groups.
+
+Left group:
+
+Logo: 2×2 grid of w-2 md:w-2.5 h-2 md:h-2.5 bg-[#FF5C35] squares (gap-0.5) + EMBER.dsgn text (text-lg md:text-xl font-black tracking-tighter)
+Desktop nav links (hidden lg:flex items-center gap-6 text-[10.5px] uppercase font-medium tracking-[0.2em] text-white/70): WORKS, SERVICES, ABOUT, TEAM — each with a w-1 h-1 bg-white rounded-full opacity-50 bullet, hover:text-white transition-colors
+Right group:
+
+Language pill (hidden sm:flex border border-white/20 rounded-full px-4 py-1.5 text-[10.5px] font-medium tracking-widest uppercase items-center gap-3 bg-white/5 backdrop-blur-sm): EN | RU with separator at text-white/20
+Mobile burger button (lg:hidden p-2) with , opens menu
+Contacts pill (hidden sm:block border border-white/20 rounded-full px-6 py-2 text-[10.5px] font-medium tracking-widest uppercase hover:bg-white hover:text-black transition-all bg-white/5 backdrop-blur-sm) with bullet + CONTACTS
+4. Mobile menu overlay
+State: isMenuOpen (useState boolean). Wrap in ; render with:
+
+initial={{ opacity: 0, x: &quot;100%&quot; }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: &quot;100%&quot; }}
+transition={{ type: &quot;spring&quot;, damping: 25, stiffness: 200 }}
+Classes: fixed inset-0 z-[100] bg-black pointer-events-auto lg:hidden flex flex-col
+Layout:
+
+Header row: same logo + close button ()
+Center links (flex-grow flex flex-col justify-center px-12 gap-8): map [&#39;WORKS&#39;, &#39;SERVICES&#39;, &#39;ABOUT&#39;, &#39;TEAM&#39;, &#39;CONTACTS&#39;] to with initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 + i * 0.05 }}, classes text-4xl font-bold tracking-tighter hover:text-[#FF5C35] transition-colors
+Footer (p-12 border-t border-white/10 flex justify-between items-center): EN | RU toggle + UKRAINE / LONDON label
+Color tokens
+Brand orange: #FF5C35
+All whites use opacity variants: white/5 white/10 white/20 white/35 white/40 white/70 white/90
+Page background: pure black
+Behavior summary
+Video plays muted, looped, mirrored, at 0.7× speed
+EMBER letters appear as a clear-glass cutout in a 20px backdrop-blur layer
+STUDIO is solid white wordmark
+Both wordmarks scale to fill their column via SVG textLength=&quot;100%&quot; lengthAdjust=&quot;spacingAndGlyphs&quot; with Inter weight 900
+Mobile (</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

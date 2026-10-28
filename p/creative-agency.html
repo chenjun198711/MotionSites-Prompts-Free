@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Creative Agency — Landing Page 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色全屏视频背景上，巨大粗体标题叠加，搭配社交媒体图标与发送按钮，营造创意机构首页的沉浸式视觉冲击。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/creative-agency.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Creative Agency — Landing Page 提示词">
+<meta property="og:description" content="深色全屏视频背景上，巨大粗体标题叠加，搭配社交媒体图标与发送按钮，营造创意机构首页的沉浸式视觉冲击。">
+<meta property="og:url" content="https://prompt-site.shop/p/creative-agency.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/creative-agency.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Creative Agency","description":"深色全屏视频背景上，巨大粗体标题叠加，搭配社交媒体图标与发送按钮，营造创意机构首页的沉浸式视觉冲击。","url":"https://prompt-site.shop/p/creative-agency.html","inLanguage":"zh-CN","genre":"Landing Page","dateCreated":"2026-05-05T17:24:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-landing_page">Landing Page</a></div><h1>Creative Agency</h1><div class="chip-row"><span class="chip">Landing Page</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-05-05</span><span>正文：6,283 字符</span></div><div class="hero-media"><img src="../assets/previews/creative-agency.webp" alt="Creative Agency 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色全屏视频背景上，巨大粗体标题叠加，搭配社交媒体图标与发送按钮，营造创意机构首页的沉浸式视觉冲击。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">**Prompt:**
+
+Build a full-viewport hero section in React + TypeScript with Tailwind CSS. Use `lucide-react` for the `Instagram` and `Send` icons. The section must match these specs exactly.
+
+**Fonts (load in index.css):**
+```css
+@import url(&#39;https://db.onlinewebfonts.com/c/38c9851a552c219fba7878035cef1a1c?family=Britanica-Black&#39;);
+@import url(&#39;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap&#39;);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: &#39;Inter&#39;, sans-serif; overflow-x: hidden; }
+```
+Also use `Geist, sans-serif` for the giant headline (fallback to sans-serif if Geist isn&#39;t loaded).
+
+**Background video asset (verbatim URL):**
+```
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260511_213626_db1bde2b-521c-4b22-91f3-35c072eb8771.mp4
+```
+
+**Two inline SVG logo components (verbatim path data):**
+
+`LogoWhite` — width 30, height 22, viewBox `0 0 30 22`, fill none:
+- `&lt;path d=&quot;M2 4C2 4 8 1 15 6C22 11 28 8 28 8&quot; stroke=&quot;white&quot; strokeWidth=&quot;3.5&quot; strokeLinecap=&quot;round&quot;/&gt;`
+- `&lt;path d=&quot;M2 16C2 16 8 13 15 18C22 23 28 20 28 20&quot; stroke=&quot;white&quot; strokeWidth=&quot;3.5&quot; strokeLinecap=&quot;round&quot;/&gt;`
+
+`LogoRed` — width 26, height 20, viewBox `0 0 30 22`, fill none, same two paths but `stroke=&quot;#e02b10&quot;`.
+
+**Structure — one root `&lt;div&gt;`** with classes `relative w-full min-h-screen overflow-hidden` and inline style `backgroundColor: &#39;#e02b10&#39;`. It contains, in order:
+
+1. **Background `&lt;video&gt;`** — classes `absolute inset-0 w-full h-full object-cover`, attributes `autoPlay muted loop playsInline`, `src` equal to the URL above.
+
+2. **Navbar** `&lt;nav&gt;` — classes `absolute top-0 left-0 right-0 z-30 flex items-center justify-between px-4 sm:px-6 md:px-10 py-4 md:py-5 gap-2`.
+- Left cluster: `flex items-center gap-3 sm:gap-6` containing `&lt;LogoWhite /&gt;` and a hidden-on-mobile group `hidden sm:flex items-center gap-2` with:
+- `HOME` button: `bg-white text-black text-xs px-5 py-2 rounded-full`, inline style `fontFamily: &#39;Inter, sans-serif&#39;, fontWeight: 700`.
+- `RITUALS` and `RATES` buttons mapped from array: `text-white text-xs px-5 py-2 rounded-full border border-white/60 hover:border-white transition-all`, inline style `fontFamily: &#39;Inter, sans-serif&#39;, fontWeight: 400`.
+- Right cluster: `flex items-center gap-3 sm:gap-4`:
+- Instagram icon button: `text-white hover:opacity-70 transition-opacity`, icon `&lt;Instagram size={18} strokeWidth={1.5} /&gt;`.
+- Send icon button: same classes plus `hidden sm:block`, icon `&lt;Send size={16} strokeWidth={1.5} /&gt;`.
+- `Reservations` button: `border border-white text-white text-xs px-3 sm:px-5 py-2 rounded-full hover:bg-white hover:text-red-600 transition-all whitespace-nowrap`, inline style `fontFamily: &#39;Inter, sans-serif&#39;`.
+
+3. **Content wrapper** `&lt;div&gt;` with `relative z-20 min-h-screen flex flex-col px-4 sm:px-6 md:px-10`, containing three rows:
+
+**Row 1 (navbar spacer):** `&lt;div className=&quot;h-[72px] shrink-0&quot; /&gt;`
+
+**Row 2 (middle):** `&lt;div&gt;` with `flex-1 flex flex-col md:flex-row md:items-center md:justify-between mx-auto gap-10 md:gap-32 py-8 md:py-0`, inline style `maxWidth: &#39;1100px&#39;, width: &#39;100%&#39;`.
+- **Left block** `max-w-[260px]`:
+- `&lt;p&gt;` classes `text-white text-[13px] tracking-[0.22em] uppercase leading-snug mb-2`, style `fontFamily: &#39;Inter, sans-serif&#39;, fontWeight: 700`, text `MARKETING&lt;br /&gt;COLLECTIVE`.
+- `&lt;p&gt;` classes `text-white text-[13px] leading-relaxed`, style `fontFamily: &#39;Inter, sans-serif&#39;, opacity: 0.8`, text `Creative growth blueprints&lt;br /&gt;for bold brands in Web3 era`.
+- **Right block** `max-w-[260px] text-left`:
+- Row `flex justify-start mb-2` containing `&lt;LogoRed /&gt;`.
+- `&lt;p&gt;` classes `text-white text-[14px] leading-relaxed mb-3`, style `fontFamily: &#39;Inter, sans-serif&#39;`, text: `MetricX is the essential growth dashboard for bold agencies. Monitor reach, refine spend, steer campaigns, surface insights, delight your clients every day.`
+- `&lt;p&gt;` classes `text-white text-[13px] leading-loose`, style `fontFamily: &#39;Inter, sans-serif&#39;, opacity: 0.7`, text `Audiences Dashboards Spend&lt;br /&gt;Performance Channels Growth`.
+
+**Row 3 (bottom):** `&lt;div&gt;` with `pb-8 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-6 shrink-0`.
+- **Column 1** `flex-1 min-w-0`:
+- `&lt;h1&gt;` classes `text-white select-none mb-6 md:mb-10`, inline style `fontFamily: &#39;Geist, sans-serif&#39;, fontWeight: 600, fontSize: &#39;clamp(56px, 13vw, 155px)&#39;, letterSpacing: &#39;-0.04em&#39;, lineHeight: 0.78, width: &#39;fit-content&#39;`, text `creative&lt;br /&gt;studio`.
+- Sub-row `flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6`:
+- `&lt;p&gt;` classes `text-white text-[14px] leading-relaxed`, style `fontFamily: &#39;Inter, sans-serif&#39;, minWidth: &#39;160px&#39;`, text `Sharp ideas only. We craft&lt;br /&gt;brands that own Web3.`
+- `&lt;button&gt;` classes `bg-white text-black rounded-full hover:bg-gray-100 active:scale-95 transition-all shadow-lg w-full sm:w-auto`, inline style `fontFamily: &#39;Inter, sans-serif&#39;, fontWeight: 600, fontSize: &#39;15px&#39;, whiteSpace: &#39;nowrap&#39;, padding: &#39;24px 60px&#39;`, text `begin now`.
+- **Column 2 (stat cards)** `flex gap-4 sm:gap-6`, mapping `[[&#39;80%&#39;, &#39;Reach uplift&#39;], [&#39;92%&#39;, &#39;Client loyalty&#39;]]`:
+- Card `&lt;div&gt;` classes `rounded-2xl px-5 sm:px-6 py-5 flex flex-col items-start justify-between text-left flex-1 lg:flex-initial`, inline style `minWidth: &#39;150px&#39;, minHeight: &#39;150px&#39;, background: &#39;rgba(255,255,255,0.92)&#39;, backdropFilter: &#39;blur(10px)&#39;`.
+- Big number `&lt;p&gt;` classes `leading-none`, style `fontFamily: &#39;Britanica-Black, sans-serif&#39;, fontSize: &#39;clamp(2rem, 6vw, 2.6rem)&#39;, color: &#39;#111&#39;`.
+- Label `&lt;p&gt;` classes `text-[12px] mt-auto`, style `fontFamily: &#39;Inter, sans-serif&#39;, color: &#39;#888&#39;`.
+
+**Animations / interactions:**
+- Background video auto-loops muted.
+- Nav link borders animate via `transition-all` on hover from `border-white/60` to `border-white`.
+- Icon buttons fade to `opacity-70` on hover via `transition-opacity`.
+- Reservations button swaps to white bg / red-600 text on hover via `transition-all`.
+- `begin now` button has `hover:bg-gray-100` and `active:scale-95` via `transition-all`.
+- Stat cards use `backdrop-filter: blur(10px)` over the red/video backdrop.
+
+No other animations, keyframes, or JS state. No Supabase needed for this visual-only section.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="motionz-premium-landing-page.html">MotionZ Premium Landing Page<small>Landing Page · landing-page</small></a><a href="future-state.html">Future-State<small>Landing Page · hero</small></a><a href="3d-story.html">3D Story<small>Landing Page · hero</small></a><a href="financial-suite.html">Financial Suite<small>Landing Page · hero</small></a><a href="prompt-hero.html">PROMPT<small>Landing Page · hero</small></a><a href="health-portal.html">Health Portal<small>Landing Page · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

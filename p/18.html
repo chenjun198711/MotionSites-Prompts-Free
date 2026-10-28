@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Loader Animation — Components 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色全屏加载界面，左上角显示&quot;Portfolio&quot;标签，使用Framer Motion实现淡入淡出动画，适合作品集网站启动过渡。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/18.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Loader Animation — Components 提示词">
+<meta property="og:description" content="深色全屏加载界面，左上角显示&quot;Portfolio&quot;标签，使用Framer Motion实现淡入淡出动画，适合作品集网站启动过渡。">
+<meta property="og:url" content="https://prompt-site.shop/p/18.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/18.gif">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Loader Animation","description":"深色全屏加载界面，左上角显示\"Portfolio\"标签，使用Framer Motion实现淡入淡出动画，适合作品集网站启动过渡。","url":"https://prompt-site.shop/p/18.html","inLanguage":"zh-CN","genre":"Components","dateCreated":"2026-03-18T08:14:26.493079+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-components">Components</a></div><h1>Loader Animation</h1><div class="chip-row"><span class="chip">Components</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-03-18</span><span>正文：3,313 字符</span></div><div class="hero-media"><img src="../assets/previews/18.gif" alt="Loader Animation 动效预览" loading="lazy"><div class="media-note">本地预览图 · gif</div></div><h2>简介</h2><p>深色全屏加载界面，左上角显示&quot;Portfolio&quot;标签，使用Framer Motion实现淡入淡出动画，适合作品集网站启动过渡。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a fullscreen loading screen component in React (Next.js 14, TypeScript). Uses Framer Motion for animations. Here is the exact specification:
+
+Theme
+
+css
+
+--bg: #0a0a0a;
+--text: #f5f5f5;
+--muted: #888888;
+--stroke: #1f1f1f;
+
+Fonts: font-display → Instrument Serif (Google Fonts, italic, weight 400).
+
+Component: LoadingScreen
+
+Receives one prop: onComplete: () =&gt; void.
+
+Container: &lt;motion.div&gt; — fixed inset-0 z-[9999] bg-bg. Exit animation: exit={{ opacity: 0 }}, duration 0.6s, ease [0.4, 0, 0.2, 1]. Wrap in &lt;AnimatePresence mode=&quot;wait&quot;&gt; from the parent.
+
+Element 1: &quot;Portfolio&quot; Label (Top-Left)
+
+&lt;motion.div&gt; — absolute top-8 left-8 md:top-12 md:left-12.
+Text: &quot;Portfolio&quot;
+Class: text-xs md:text-sm text-muted uppercase tracking-[0.3em]
+Entrance animation: initial={{ opacity: 0, y: -20 }}, animate={{ opacity: 1, y: 0 }}, duration 0.6s, delay 0.1s
+
+Element 2: Rotating Words (Center)
+
+absolute inset-0 flex items-center justify-center.
+Three words cycle in sequence: &quot;Design&quot; → &quot;Create&quot; → &quot;Inspire&quot;. A new word appears every 900ms. The word index increments via setInterval and stops at the last word (doesn&#39;t loop).
+
+Each word is a &lt;motion.span&gt; inside &lt;AnimatePresence mode=&quot;wait&quot;&gt;, keyed by wordIndex:
+Class: text-4xl md:text-6xl lg:text-7xl font-display italic text-text/80
+initial={{ opacity: 0, y: 20 }}
+animate={{ opacity: 1, y: 0 }}
+exit={{ opacity: 0, y: -20 }}
+transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+
+Element 3: Counter (Bottom-Right)
+
+&lt;motion.div&gt; — absolute bottom-8 right-8 md:bottom-12 md:right-12.
+A number that counts from 000 → 100 over exactly 2.7 seconds using requestAnimationFrame. Each frame calculates elapsed / 2700 * 100. The number is displayed zero-padded to 3 digits (e.g. 007, 042, 100):
+
+{Math.round(progress).toString().padStart(3, &#39;0&#39;)}
+
+Class: text-6xl md:text-8xl lg:text-9xl font-display text-text tabular-nums
+Entrance animation: initial={{ opacity: 0, y: 20 }}, animate={{ opacity: 1, y: 0 }}, duration 0.6s, delay 0.1s
+
+When progress reaches 100: Wait 400ms, then call onComplete(). Use a ref for onComplete to avoid stale closures.
+
+Element 4: Progress Bar (Bottom Edge)
+
+absolute bottom-0 left-0 right-0. A 3px tall track:
+Track: h-[3px] bg-stroke/50 (full width)
+Fill: &lt;motion.div&gt; inside the track:
+h-full origin-left
+Background: linear-gradient(90deg, #89AACC 0%, #4E85BF 100%)
+Glow: boxShadow: &quot;0 0 8px rgba(137, 170, 204, 0.35)&quot;
+initial={{ scaleX: 0 }}
+animate={{ scaleX: progress / 100 }}
+transition={{ duration: 0.1, ease: &quot;linear&quot; }}
+
+Parent Wrapper Behavior
+
+The parent component (AppWrapper) controls visibility:
+State: isLoading starts true
+Renders &lt;LoadingScreen onComplete={() =&gt; setIsLoading(false)} /&gt; inside &lt;AnimatePresence mode=&quot;wait&quot;&gt; only when isLoading is true
+Main page content sits below with: style={{ opacity: isLoading ? 0 : 1, transition: &quot;opacity 0.5s ease-out&quot; }}
+When the loader calls onComplete, it triggers: loader fades out (0.6s) → page fades in (0.5s)
+
+Timing Summary
+
+0.0s — Loader appears, &quot;Portfolio&quot; slides in, counter starts at 000
+0.0s — &quot;Design&quot; appears
+0.9s — &quot;Create&quot; replaces &quot;Design&quot;
+1.8s — &quot;Inspire&quot; replaces &quot;Create&quot;
+2.7s — Counter hits 100, progress bar full
+3.1s — onComplete fires (400ms delay)
+3.1s — Loader fades out (0.6s exit animation)
+3.7s — Page content fades in (0.5s opacity transition)</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：giglianepefrei/motionsites.ai-prompt-library<br>原始文件：<code>giglianepefrei_fetch\prompts/Loader_Animation.md</code><br>许可证：NOASSERTION<br><a href="https://github.com/giglianepefrei/motionsites.ai-prompt-library/blob/main/giglianepefrei_fetch%5Cprompts/Loader_Animation.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="animated-cards.html">Animated Cards<small>Components · carousel</small></a><a href="scroll-marquee.html">Scroll Marquee<small>Components · carousel</small></a><a href="flowmate-carousal.html">FlowMate Carousal<small>Components · carousel</small></a><a href="apex-program-accordion.html">Apex Program Accordion<small>Components · faq</small></a><a href="bento-grid-stats.html">Bento Grid Stats<small>Components · features</small></a><a href="glassmorphic-feature-tabs.html">Glassmorphic Feature Tabs<small>Components · features</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

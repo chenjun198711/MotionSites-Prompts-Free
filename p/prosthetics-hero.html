@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prosthetics Hero — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色背景上全屏自动播放视频，叠加半透明前景内容，左侧展示品牌标志与简洁导航，适合医疗或科技品牌首页。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/prosthetics-hero.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Prosthetics Hero — Hero Section 提示词">
+<meta property="og:description" content="深色背景上全屏自动播放视频，叠加半透明前景内容，左侧展示品牌标志与简洁导航，适合医疗或科技品牌首页。">
+<meta property="og:url" content="https://prompt-site.shop/p/prosthetics-hero.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/prosthetics-hero.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Prosthetics Hero","description":"深色背景上全屏自动播放视频，叠加半透明前景内容，左侧展示品牌标志与简洁导航，适合医疗或科技品牌首页。","url":"https://prompt-site.shop/p/prosthetics-hero.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-05-09T08:24:02.074264+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Prosthetics Hero</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-05-09</span><span>正文：3,421 字符</span></div><div class="hero-media"><img src="../assets/previews/prosthetics-hero.webp" alt="Prosthetics Hero 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色背景上全屏自动播放视频，叠加半透明前景内容，左侧展示品牌标志与简洁导航，适合医疗或科技品牌首页。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a React + TypeScript + Tailwind CSS single-page hero section using Vite. The entire page lives in `src/App.tsx`. No extra libraries beyond `react`, `react-dom`, `lucide-react`, and Tailwind.
+
+**Background:**
+- A fullscreen autoplaying, muted, looping, `playsInline` background `&lt;video&gt;` element absolutely positioned `inset-0 w-full h-full object-cover`.
+- Video URL (exact): `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260508_215831_c6a8989c-d716-4d8d-8745-e972a2eec711.mp4`
+- Root wrapper: `relative min-h-screen overflow-hidden bg-[#f0f0ee]`.
+- Foreground content wrapper: `relative z-10 flex flex-col min-h-screen`.
+
+**Logo (inline SVG component):**
+- `width=&quot;18&quot; height=&quot;18&quot;`, `viewBox=&quot;0 0 256 256&quot;`, `fill=&quot;none&quot;`.
+- Single path with `fill=&quot;rgb(84, 84, 84)&quot;` and `d=&quot;M 160 88 L 194 34 L 216 0 L 256 0 L 256 40 L 221.5 93.5 L 200 128 L 256 128 L 256 256 L 96 256 L 96 168 L 64.246 220 L 40 256 L 0 256 L 0 216 L 34 162 L 56 128 L 0 128 L 0 0 L 160 0 Z&quot;`.
+
+**Navbar (centered, pill-style, two separate pills):**
+- `&lt;nav&gt;` classes: `flex items-center justify-center pt-4 sm:pt-6 px-4 sm:px-8 gap-2 sm:gap-3`.
+- Left circular logo container: `flex items-center justify-center rounded-full w-10 h-10 sm:w-11 sm:h-11 shrink-0`, inline style `backgroundColor: &#39;#EDEDED&#39;`, contains the Logo.
+- Right pill container: `flex items-center gap-4 sm:gap-10 rounded-xl px-4 sm:px-8 py-2.5 sm:py-3`, inline style `backgroundColor: &#39;#EDEDED&#39;`.
+- Nav links array: `[&#39;Story&#39;, &#39;Products&#39;, &#39;Help&#39;, &#39;Support&#39;]`. Each anchor: `text-[12px] sm:text-[14px] font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200`.
+
+**Hero content (bottom-left aligned):**
+- Outer: `flex-1 flex items-end pb-10 sm:pb-16 lg:pb-20 px-6 sm:px-12 md:px-20 lg:px-28`.
+- Inner: `max-w-xs`. Four stacked elements, each with `mb-3`:
+
+1. Badge link: `inline-flex items-center gap-1.5 text-[11.5px] font-medium text-blue-500 hover:text-blue-600 transition-colors mb-3 group`. Text: `Seen on Shark Tank in India` followed by an arrow `→` in a span with `inline-block transition-transform duration-200 group-hover:translate-x-0.5`.
+
+2. Headline `&lt;h1&gt;`: `text-[1.5rem] sm:text-[1.75rem] leading-[1.15] font-medium text-gray-900 tracking-tight mb-3`. Text: `Simple, smart prosthetics made for people who keep fighting.`
+
+3. Subtext `&lt;p&gt;`: `text-[13px] text-gray-400 font-normal mb-3`. Text: `Reclaim your movement now.`
+
+4. CTA anchor: `inline-flex items-center gap-2 text-[13px] font-medium text-blue-500 border border-blue-400 rounded-full px-5 py-2.5 hover:bg-blue-500 hover:text-white hover:border-blue-500 transition-all duration-200 group`. Text: `Try a free fitting` plus arrow `→` in span with `transition-transform duration-200 group-hover:translate-x-0.5`.
+
+**Animations / micro-interactions:**
+- Arrow spans translate right by `0.5` on group hover (`group-hover:translate-x-0.5`).
+- CTA fills blue on hover (bg + text + border transitions, 200ms).
+- Nav links shift from gray-700 to gray-900 on hover.
+
+**Fonts:** Default Tailwind sans-serif system font stack (no custom font). All sizes are exact pixel/rem values above (`11.5px`, `12px`, `13px`, `14px`, `1.5rem`, `1.75rem`).
+
+**Colors:** Page background `#f0f0ee`; pill backgrounds `#EDEDED`; accent `blue-500/600/400`; text `gray-900/700/400`.
+
+Do not add any other sections, no Supabase wiring, no routing. Only the single hero page as described.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

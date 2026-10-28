@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact Cybernetic — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色背景的现代英雄区，包含打字机动画标题和动态光标，适用于科技或创意品牌首页展示。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/contact-cybernetic.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Contact Cybernetic — Hero Section 提示词">
+<meta property="og:description" content="深色背景的现代英雄区，包含打字机动画标题和动态光标，适用于科技或创意品牌首页展示。">
+<meta property="og:url" content="https://prompt-site.shop/p/contact-cybernetic.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/contact-cybernetic.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Contact Cybernetic","description":"深色背景的现代英雄区，包含打字机动画标题和动态光标，适用于科技或创意品牌首页展示。","url":"https://prompt-site.shop/p/contact-cybernetic.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-05-22T12:16:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Contact Cybernetic</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-05-22</span><span>正文：6,419 字符</span></div><div class="hero-media"><img src="../assets/previews/contact-cybernetic.webp" alt="Contact Cybernetic 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色背景的现代英雄区，包含打字机动画标题和动态光标，适用于科技或创意品牌首页展示。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a modern, interactive hero section using React, Tailwind CSS, and Framer Motion (motion/react). Ensure you follow these precise architecture and styling instructions:
+1. Fonts &amp; Global Animations
+Import the Inter font from Google Fonts.
+In your CSS setup, configure Tailwind to use it by default (--font-sans: &#39;Inter&#39;, ...).
+Create a keyframe animation in CSS named blink for the typewriter cursor:
+code
+CSS
+@keyframes blink {
+0%, 100% { opacity: 1; }
+50% { opacity: 0; }
+}
+.animate-blink { animation: blink 1s step-end infinite; }
+2. General Page Structure
+Wrap the entire application in a container div with the following classes: relative bg-white text-neutral-900 font-sans selection:bg-[#EAECE9] selection:text-[#1C2E1E] antialiased overflow-x-hidden flex flex-col lg:block lg:min-h-screen.
+3. Background Video Component (with Native Scrubbing)
+Container element: Add a div containing the background video with classes: order-last lg:order-none relative lg:absolute lg:inset-0 lg:z-0 overflow-hidden pointer-events-none w-full aspect-square md:aspect-video lg:aspect-auto lg:h-full bg-neutral-50 lg:bg-transparent.
+Video element: Use &lt;video&gt; with muted, playsInline, preload=&quot;auto&quot;.
+Video Source URL: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260601_110537_3a579fa0-7bbc-4d94-9d25-0e816c7840f5.mp4
+Classes: w-full h-full object-cover object-right lg:object-right-bottom.
+Scrubbing/Playback Logic via useEffect hooks:
+Desktop Mouse Scrubbing Hook: Listen to the window mousemove event. If window.innerWidth &lt; 1024, ignore (disable scrubbing). Store the mouse &#39;previous X&#39; coordinate to calculate the delta against &#39;current X&#39;. Update the target scrub time based on (delta / window.innerWidth) * 0.8 * video.duration. Clamp the time between 0 and duration. Set video.currentTime = targetTime. Bind a seeked event listener to ensure smooth tracking frame to frame.
+Mobile Autoplay Hook: Because scrubbing is disabled on mobile frames, trigger normal playback for screens &lt; 1024 width: video.autoplay = true and video.play().
+4. Interactive Navbar
+Header wrapper: Wrap the Navbar in &lt;header className=&quot;fixed top-0 inset-x-0 z-10 px-5 sm:px-8 py-4 sm:py-5 flex flex-row justify-between items-center bg-transparent&quot;&gt;
+Logo (Left side): Flex row with gap-3.
+Text: Mainframe&amp;reg; (using the ® symbol). Classes: text-[21px] sm:text-[26px] tracking-tight text-black font-medium select-none.
+Icon block right beside it: An asterisk &amp;#10033;. Classes: text-[25px] sm:text-[30px] text-black select-none tracking-[-0.02em] font-medium leading-none mb-1.
+Desktop Nav Links (Center): Flex row, hidden md:flex, text-[23px] text-black. Links are &quot;Labs&quot;, &quot;Studio&quot;, &quot;Openings&quot;, &quot;Shop&quot; separated by &lt;span className=&quot;opacity-40&quot;&gt;,&amp;nbsp;&lt;/span&gt; dividers. Hover states should use hover:opacity-60 transition-opacity.
+Desktop CTA (Right): Hidden on mobile. A link reading &quot;Get in touch&quot; mapped with text-[23px] text-black underline underline-offset-2 hover:opacity-60 transition-opacity.
+Mobile Menu Logic:
+Hamburger &lt;button&gt; visible below md. Has three w-6 h-[2px] bg-black spans.
+Hook it to a local state isMobileMenuOpen. When open, animate the burger into an &#39;X&#39; (top bar rotate-45 translate-y-[7px], middle bar opacity-0, bottom bar -rotate-45 -translate-y-[7px]). All spans need transition-all duration-300.
+Create a full screen Mobile Navigation Overlay div hidden on Desktop. Fixed inset-0 z-[9] with bg-white/95 backdrop-blur-sm. Apply opacity-100 pointer-events-auto when isMobileMenuOpen is true; otherwise, opacity-0 pointer-events-none.
+5. Content Layout Container
+Below the background video and relative to it, add a content grouping layer: &lt;div className=&quot;relative z-10 flex flex-col order-first lg:order-none w-full bg-white lg:bg-transparent pb-8 lg:pb-0 lg:min-h-screen&quot;&gt;
+Inside that, the overarching layout engine: &lt;main id=&quot;spade-hero&quot; className=&quot;w-full max-w-7xl mx-auto px-6 py-12 flex-1 flex flex-col justify-center&quot;&gt;
+6. Typewriter Hook and Headline
+Implement a custom useTypewriter(text, speed = 38, startDelay = 600) React hook. It uses setTimeout and setInterval to iteratively build a string slice by slice. It must return an object: { displayed: string, done: boolean }.
+Run the hook with the string &quot;we&#39;d love to\nhear from you!&quot;.
+Wrap the headline securely in a motion.div configured to drop-in (initial: opacity: 0, y: 20, animate: opacity: 1, y: 0, transition duration 0.6).
+Render your hook text inside &lt;h1 className=&quot;text-5xl md:text-6xl lg:text-[76px] font-normal tracking-tight text-black leading-[1.08] mb-8 select-none w-full whitespace-pre-wrap&quot;&gt;.
+While typing (!done), output a &lt;span className=&quot;inline-block w-[2px] h-[1.1em] bg-black align-middle ml-[2px] animate-blink&quot; /&gt; cursor at the end of the displayed text string.
+7. Secondary Description Text
+Another motion.div (delay 0.1s from the headline).
+Content: &lt;p&gt; tag that reads: Whether you have questions, feedback, &lt;br /&gt; drop us a message and we&#39;ll get back to you as soon as possible.
+Classes: text-lg md:text-xl text-[#5A635A] leading-relaxed font-normal mb-14 max-w-2xl.
+8. Interactive Multi-Select Service Pills
+Using setServices track an array [&quot;Brand&quot;, &quot;Digital&quot;, &quot;Campaign&quot;, &quot;Other&quot;].
+The prompt Title: &quot;What sort of service?&quot; (text-2xl font-medium tracking-tight mb-2). Subtitle: &quot;Select all that apply&quot; (opacity-85 text-[#738273] mb-8).
+Iterate over the options natively outputting motion.button wrapper tags allowing multiple selections inside a flex wrap container.
+Pill active traits classes: bg-[#1C2E1E] text-white shadow-md shadow-emerald-950/5 transform. Show a check icon (lucide-react) dropping in using type: &quot;spring&quot;, stiffness: 300, damping: 20.
+Pill inactive traits classes: bg-white text-[#1C2E1E] border border-[#F1F3F1] hover:bg-[#F1F3F1]/55.
+Contingent Feedback Status Banner: Underneath your service pills, write an &lt;AnimatePresence mode=&quot;wait&quot;&gt; that tracks user state array length:
+Empty: Show a generic placeholder indicating &quot;Please click to select services above.&quot; at fifty percent opacity (opacity: 0.5, italic, text-xs).
+Active Selection: Swap cleanly into a container &lt;motion.div&gt; that springs height gracefully (height: &quot;auto&quot;). Inside, display an acknowledgment banner reading &quot;Ready to inquire about: [array.join(&quot;, &quot;)]&quot; combined with an arrow call-to-action button &quot;Let&#39;s Go&quot; (text-[#4D6D47] uppercase text-xs). Style the banner with bg-[#FAFBF9] border rounded-2xl.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

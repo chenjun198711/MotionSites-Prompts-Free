@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Integration SaaS — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色渐变覆盖全屏背景视频，中央展示DataVio数据平台品牌名称与标语，营造沉浸式科技感首页。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/integration-saas.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Integration SaaS — Hero Section 提示词">
+<meta property="og:description" content="深色渐变覆盖全屏背景视频，中央展示DataVio数据平台品牌名称与标语，营造沉浸式科技感首页。">
+<meta property="og:url" content="https://prompt-site.shop/p/integration-saas.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Integration SaaS","description":"深色渐变覆盖全屏背景视频，中央展示DataVio数据平台品牌名称与标语，营造沉浸式科技感首页。","url":"https://prompt-site.shop/p/integration-saas.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-06-27T04:39:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Integration SaaS</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-27</span><span>正文：4,720 字符</span></div><div class="hero-media"><video src="../assets/previews/integration-saas.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>深色渐变覆盖全屏背景视频，中央展示DataVio数据平台品牌名称与标语，营造沉浸式科技感首页。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a full-screen hero section landing page for a data platform called &quot;DataVio&quot; using React, Tailwind CSS, and Vite. Use the Geist font (from Google Fonts: `https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap`). Add the font-family to the Tailwind config under `fontFamily.geist`.
+
+**Background:**
+- Full-screen (`h-screen`) background video, auto-playing, muted, looped, with `playsInline`. Use this video URL: `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260702_151414_1020688d-fcb3-4b2a-9bc2-cd1dae8853dd.mp4`
+- The video uses `object-cover` and on mobile the object-position is `70% center`, on `md:` and up it&#39;s `center`.
+
+**Gradient Overlay (color: #B69198):**
+- On mobile (`md:hidden`): a gradient from bottom to top -- solid `#B69198` from 0% to 30%, then fading to transparent at 55%.
+- On desktop (`hidden md:block`): a gradient from left to right -- solid `#B69198` from 0% to 30%, then fading to transparent at 55%.
+- Both overlays sit at `z-[1]` between the video and content.
+
+**Navigation:**
+- Flexbox row, justify-between. Padding: `px-5 sm:px-6 md:px-12 lg:px-16 py-4 md:py-5`.
+- Left side: Brand name &quot;DataVio&quot; in white, `text-lg sm:text-xl md:text-2xl`, `font-semibold`, `tracking-tight`.
+- Next to the brand (hidden on mobile, visible `md:flex`): links &quot;Platform&quot;, &quot;Pricing&quot;, &quot;Solutions&quot;, &quot;Connectors&quot; in `text-white/80 hover:text-white text-sm font-medium` with `transition-colors duration-200`, spaced with `gap-6 lg:gap-8`.
+- Right side (hidden on mobile): &quot;Sign In&quot; link, same text style as nav links.
+- Mobile: A hamburger menu icon (Lucide `Menu`, size 24) that opens a slide-in panel from the right.
+
+**Mobile Menu:**
+- Overlay: fixed `inset-0`, `bg-black/60 backdrop-blur-sm z-40`, fades in/out with `transition-opacity duration-300`.
+- Panel: fixed `top-0 right-0 h-full w-[280px] sm:w-[320px]`, white background, `z-50`, slides in from right using `translate-x-0` / `translate-x-full` with `duration-400 ease-[cubic-bezier(0.16,1,0.3,1)]`, `shadow-2xl`.
+- Inside: close button (Lucide `X`, size 24) top-right, then nav links as stacked list items (`text-gray-800 text-lg font-medium py-3 border-b border-gray-100`), each staggered with `transitionDelay: (i+1)*60ms` on open. A &quot;Sign In&quot; CTA button at the bottom (`bg-gray-900 text-white rounded-lg px-6 py-3`) with `transitionDelay: 320ms`.
+- Lock body scroll when menu is open (`document.body.style.overflow = &#39;hidden&#39;`).
+
+**Hero Content (z-10, flex-col, full height):**
+- Layout: `flex-1 flex flex-col justify-between`, padding `px-5 sm:px-6 md:px-12 lg:px-16 py-4 sm:py-6 md:py-10`.
+- **Heading** (top): `max-w-3xl`, padding-top `pt-2 sm:pt-4 md:pt-8`. Text: &quot;One Central Hub&quot; / &quot;for Every Source&quot; (line break between). Style: `text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-normal text-white leading-[1.1] tracking-tight`.
+- **Bottom content** (`max-w-3xl pb-2 sm:pb-4 md:pb-6`):
+- Paragraph: `text-white/75 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl`. Starts with bold white span: &quot;End fragmented pipelines.&quot; then regular text. Another bold white span: &quot;transparency, governance, and scalable systems&quot;.
+- CTA Buttons (`mt-5 sm:mt-6 md:mt-8 flex flex-wrap gap-3 sm:gap-4`):
+- Primary: &quot;Start Integration&quot; -- `bg-white text-gray-900 text-sm font-medium rounded-lg px-5 sm:px-6 py-2.5 sm:py-3 hover:bg-white/90`.
+- Secondary: &quot;Schedule Call&quot; -- `text-white/80 text-sm font-medium hover:text-white`.
+- Social proof pill (`mt-6 sm:mt-8 md:mt-10`): `inline-flex items-center gap-3 sm:gap-4 bg-white/10 backdrop-blur-md border border-white/15 rounded-xl px-4 sm:px-5 py-3 sm:py-3.5`.
+- 3 overlapping avatar images (Pexels URLs: `774909`, `1222271`, `91227` with `?auto=compress&amp;cs=tinysrgb&amp;w=100`), each `w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-white/30 object-cover`, stacked with `-space-x-2.5`.
+- Text: `text-white/80 text-xs sm:text-sm leading-snug max-w-[220px] sm:max-w-xs`. Bold white span: &quot;Adopted by 2,000+ companies and dev teams&quot; followed by &quot;who ship quicker, iterate safely, and keep full ownership of their pipelines.&quot;
+
+**CSS (index.css):**
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html, body {
+font-family: &#39;Geist&#39;, system-ui, sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+```
+
+**Tailwind Config:**
+Extend `fontFamily` with `geist: [&#39;Geist&#39;, &#39;system-ui&#39;, &#39;sans-serif&#39;]`.
+
+**Key details:**
+- No other sections -- just this single full-screen hero.
+- Fully responsive from mobile to desktop.
+- Uses only `lucide-react` for icons (Menu, X).
+- All content is at `z-10`, overlays at `z-[1]`, video at default layer.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

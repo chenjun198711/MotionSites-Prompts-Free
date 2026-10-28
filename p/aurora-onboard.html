@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aurora Onboard — Waitlist &amp; Coming Soon 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Aurora 注册界面，双栏布局，深色背景搭配品牌灰色，使用 Inter 字体，带有平滑过渡动画和图标元素。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/aurora-onboard.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Aurora Onboard — Waitlist &amp; Coming Soon 提示词">
+<meta property="og:description" content="Aurora 注册界面，双栏布局，深色背景搭配品牌灰色，使用 Inter 字体，带有平滑过渡动画和图标元素。">
+<meta property="og:url" content="https://prompt-site.shop/p/aurora-onboard.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/aurora-onboard.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Aurora Onboard","description":"Aurora 注册界面，双栏布局，深色背景搭配品牌灰色，使用 Inter 字体，带有平滑过渡动画和图标元素。","url":"https://prompt-site.shop/p/aurora-onboard.html","inLanguage":"zh-CN","genre":"Waitlist & Coming Soon","dateCreated":"2026-05-07T08:49:11.61493+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-waitlist___coming_soon">Waitlist &amp; Coming Soon</a></div><h1>Aurora Onboard</h1><div class="chip-row"><span class="chip">Waitlist &amp; Coming Soon</span><span class="chip">mobile</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-05-07</span><span>正文：4,744 字符</span></div><div class="hero-media"><img src="../assets/previews/aurora-onboard.webp" alt="Aurora Onboard 动效预览" loading="lazy"><div class="media-note">本地预览图 · png</div></div><h2>简介</h2><p>Aurora 注册界面，双栏布局，深色背景搭配品牌灰色，使用 Inter 字体，带有平滑过渡动画和图标元素。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Please build a modern, two-column registration interface called &quot;Aurora Sign Up&quot;. Use React, Tailwind CSS (v4), `motion/react` (for animations), and `lucide-react` (for icons). The app should be contained entirely in `App.tsx` and `index.css`.
+
+### 1. Global Setup &amp; CSS (`index.css`)
+- Import the &quot;Inter&quot; font from Google Fonts (weights 300, 400, 500, 600, 700).
+- Extend the Tailwind theme with `--font-sans: &quot;Inter&quot;, ui-sans-serif, system-ui, sans-serif;` and a custom color: `--color-brand-gray: #1A1A1A`.
+- Apply base styles to the `body`: `@apply font-sans bg-black text-white antialiased;`.
+
+### 2. Main Layout (`App.tsx` container)
+- The `&lt;main&gt;` element should have: `flex min-h-screen w-full bg-black selection:bg-white/30 p-2 transition-all duration-500`.
+- On `lg` breakpoints: `lg:h-screen lg:overflow-hidden lg:p-4`.
+- Split this container into a Left Column (Hero) and a Right Column (Form).
+
+### 3. Left Column (Hero &amp; Background Video)
+- Width on large screens should be exactly `w-[52%]`. It should be hidden on mobile/tablet and only visible `lg:flex`.
+- Styles: `relative flex-col items-center justify-end pb-32 px-12 rounded-3xl overflow-hidden shadow-2xl h-full`.
+- **Background Video**: Add an absolutely positioned `&lt;video&gt;` tag (`inset-0`, `w-full`, `h-full`, `object-cover`). It must have `autoPlay`, `muted`, `loop`, and `playsInline`.
+- **CRITICAL**: The `&lt;source&gt;` MUST be exactly `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260506_081238_406ed0e3-5d83-436e-a512-0bbff7ec5b95.mp4` (`type=&quot;video/mp4&quot;`).
+- **CRITICAL**: Do NOT add any dark overlay, gradient, or tint mask over the video. Let it play purely without overlays.
+- **Hero Content Container**: Place content over the video (`z-10 w-full max-w-xs space-y-8`).
+- **Animations**: Use `motion.div` for a staggered reveal. The container should transition `opacity: 0` to `1` with `staggerChildren: 0.15` and `delayChildren: 0.2`. Every child element inside should fade in and slide up (`y: 10` to `y: 0`, duration `0.5`).
+- **Brand/Logo**: A flex row with the `Circle` icon from Lucide (fill-white text-white) and the text &quot;Aurora&quot; (`text-xl font-semibold tracking-tight`).
+- **Heading Block**: &quot;Join Aurora&quot; (`text-4xl font-medium tracking-tight whitespace-nowrap`). Below it, a description: &quot;Follow these 3 quick phases to activate your space.&quot; (`text-white/60 text-sm leading-relaxed px-4`).
+- **Steps**: Render a custom `&lt;StepItem&gt;` component three times.
+1: &quot;Register your identity&quot; (active state)
+2: &quot;Configure your studio&quot;
+3: &quot;Finalize your profile&quot;
+
+### 4. Right Column (Sign Up Form)
+- A container with `flex-1 flex flex-col items-center justify-center py-12 lg:py-6 px-4 sm:px-12 lg:px-16 xl:px-24 overflow-y-auto lg:overflow-hidden`.
+- **Animation**: Wrap the interior content in a `motion.div` that fades in (`opacity: 0` to `1`, `duration: 0.8`, `ease: &quot;easeOut&quot;`). Inner width `w-full max-w-xl`, spacing `space-y-8 lg:space-y-6 sm:space-y-10`.
+- **Header**: &quot;Create New Profile&quot; (`text-3xl font-medium tracking-tight`). Subtitle: &quot;Input your basic details to begin the journey.&quot; (`text-white/40 text-sm`).
+- **Social Buttons**: A 2-column grid (`grid grid-cols-2 gap-4`). Render Google (`Chrome` icon) and Github (`Github` icon) using a `&lt;SocialButton&gt;` component.
+- **Divider**: A horizontal line (`border-white/10`) with the text &quot;Or&quot; in the center (`bg-black px-4 text-xs font-medium text-white/40 uppercase tracking-widest`).
+- **Form Layout**:
+- First Name and Last Name in a 2-column grid.
+- Email (full width).
+- Password (full width) with a custom `lucide-react` `Eye` toggle icon in the absolute right of the input, and a tiny helper text &quot;Requires at least 8 symbols.&quot;
+- **Submit Button**: &quot;Create Account&quot; (`w-full h-14 bg-white text-black font-semibold rounded-xl hover:bg-white/90 active:scale-[0.98] mt-4`).
+- **Footer Link**: &quot;Member of the team? Log in&quot;.
+
+### 5. Reusable Components to Create
+Create these exact functional components at the bottom of the file:
+1. **`&lt;StepItem&gt;`**: Takes `number`, `text`, and an optional `active` boolean.
+- If active: Apply `bg-white text-black border border-white`. The number circle is `bg-black text-white`.
+- If inactive: Apply `bg-brand-gray text-white border-none`. The number circle is `bg-white/10 text-white/40`.
+2. **`&lt;SocialButton&gt;`**: Takes `icon` and `label`. Button has `bg-black border border-white/10 rounded-xl hover:bg-white/5`.
+3. **`&lt;InputGroup&gt;`**: Takes `label`, `placeholder`, and `type`. The label is `text-sm font-medium text-white`. The input is `bg-brand-gray border-none rounded-xl h-11 px-4 text-white placeholder:text-white/20 focus:ring-2 focus:ring-white/20`.
+
+Ensure the final code uses `export default function App()` at the top.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="solace-sign-in.html">Solace sign-in<small>Waitlist &amp; Coming Soon · form</small></a><a href="no-code-waitlist.html">No-Code Waitlist<small>Waitlist &amp; Coming Soon · hero</small></a><a href="novadesk-signup.html">NovaDesk Signup<small>Waitlist &amp; Coming Soon · hero</small></a><a href="community-superdesign-softly-digital-wellness-app.html">Softly - Digital Wellness App<small>Waitlist &amp; Coming Soon · landing-page</small></a><a href="community-superdesign-bold-editorial-style.html">Bold Editorial Style<small>Waitlist &amp; Coming Soon · landing-page</small></a><a href="community-superdesign-minimalist-beta-capture.html">Minimalist Beta Capture<small>Waitlist &amp; Coming Soon · landing-page</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

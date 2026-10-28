@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Organic Odyssey — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="全屏电影级英雄区，深色背景上循环播放自然主题视频，搭配优雅衬线字体标题与简洁导航元素">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/organic-odyssey.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Organic Odyssey — Hero Section 提示词">
+<meta property="og:description" content="全屏电影级英雄区，深色背景上循环播放自然主题视频，搭配优雅衬线字体标题与简洁导航元素">
+<meta property="og:url" content="https://prompt-site.shop/p/organic-odyssey.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/organic-odyssey.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Organic Odyssey","description":"全屏电影级英雄区，深色背景上循环播放自然主题视频，搭配优雅衬线字体标题与简洁导航元素","url":"https://prompt-site.shop/p/organic-odyssey.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-06-20T05:32:58.45222+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Organic Odyssey</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-06-20</span><span>正文：4,734 字符</span></div><div class="hero-media"><img src="../assets/previews/organic-odyssey.webp" alt="Organic Odyssey 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>全屏电影级英雄区，深色背景上循环播放自然主题视频，搭配优雅衬线字体标题与简洁导航元素</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Create a full-screen cinematic hero section using React, Tailwind CSS, and Framer Motion. Use Vite with TypeScript. The dependencies required are: `react`, `react-dom`, `framer-motion`, `lucide-react`, and `tailwindcss`.
+
+**VIDEO BACKGROUND:**
+- Full-screen looping background video, absolutely positioned to fill the viewport
+- Video URL: `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260619_191346_9d19d66e-86a4-47f7-8dc6-712c1788c3b2.mp4`
+- Properties: autoPlay, muted, loop, playsInline, object-cover, object-center
+- Page background: `#010101`, full viewport height, overflow hidden
+
+**FONTS (load via index.html link tags):**
+- Garamond from: `https://db.onlinewebfonts.com/c/2bf40ab72ea4897a3fd9b6e48b233a19?family=Garamond`
+- Geist from Google Fonts: weights 300, 400, 500
+- Body font: `&#39;Geist&#39;, -apple-system, BlinkMacSystemFont, sans-serif`
+- Heading font class `.font-garamond`: `&#39;Garamond&#39;, &#39;Times New Roman&#39;, serif`
+
+**NAVIGATION:**
+- Relative positioned, z-20, flexbox centered on desktop, space-between on mobile
+- Brand name &quot;Organic Visions&quot; -- white, uppercase, letter-spacing 0.25em (mobile) / 0.3em (desktop), font-light
+- Desktop nav links: &quot;Wander&quot;, &quot;Archive&quot;, &quot;Story&quot;, &quot;Connect&quot; -- white/80, uppercase, 0.2em tracking, hover to white, 300ms transition
+- Mobile: hamburger toggle using lucide-react `Menu` and `X` icons (size 22)
+
+**MOBILE MENU (hamburger dropdown):**
+- Fixed position, top-16, left-4, right-4, z-50, hidden on md+
+- Uses `AnimatePresence` from framer-motion for mount/unmount animation
+- Animation: fade in from y:-10 to y:0, duration 0.3s, ease &#39;easeOut&#39;; reverse on exit
+- Each link staggers in with opacity 0 to 1, y:-8 to 0, delay 0.05 + index*0.06
+- Links: white/90, 0.25em tracking, uppercase, font-light, hover to white
+- Custom glass class `.mobile-menu-glass`:
+```css
+background: rgba(10, 10, 10, 0.7);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+border: 1px solid rgba(255, 255, 255, 0.08);
+box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+```
+- Rounded-2xl, py-8, gap-5, flex-col centered
+
+**HERO CONTENT:**
+- Relative z-10, flex-col centered, text-center
+- Padding: px-5 (sm:px-8), pt-12 (sm:pt-16, md:pt-24)
+- Heading: Two lines -- &quot;WITNESS THE&quot; and &quot;HIDDEN REALM&quot;
+- Font: Garamond, sizes 4xl/6xl/8xl/9xl responsive, font-normal, white, line-height 1.08, tracking-tight, mb-6 (sm:mb-8)
+- Each line uses a `StaggeredFade` component that splits text into individual characters and animates each with 0.07s stagger delay (opacity 0 to 1), triggered once when in view
+
+**STAGGERED FADE COMPONENT:**
+- Accepts `text` string prop
+- Splits into individual `&lt;motion.span&gt;` characters
+- Uses `useInView` hook (once: true) to trigger animation
+- Variants: hidden = opacity 0; show = opacity 1, y:0, with delay `i * 0.07` per character
+
+**SUBTITLE:**
+- Framer Motion animated paragraph, initial opacity:0 y:20, animate opacity:1 y:0, duration 0.8s, delay 1.6s
+- Text: &quot;An odyssey through delicate living forms,&quot; (line break hidden on mobile, visible sm+) &quot;revealed by lens and curiosity.&quot;
+- White/70, font-light, leading-relaxed, max-w-xs (sm:max-w-md), mb-8 (sm:mb-10)
+- Responsive sizes: text-sm / text-base / text-lg
+
+**CTA BUTTON:**
+- Framer Motion animated, initial opacity:0 y:20, animate opacity:1 y:0, duration 0.8s, delay 2.0s
+- Text: &quot;Begin the Experience&quot;
+- Uses `.liquid-glass` class, rounded-full, responsive padding px-7/px-10 py-3.5/py-4
+- White/90, uppercase, tracking 0.18em/0.2em responsive
+
+**LIQUID GLASS CSS (.liquid-glass):**
+```css
+.liquid-glass {
+background: rgba(255, 255, 255, 0.01);
+background-blend-mode: luminosity;
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border: none;
+box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+position: relative;
+overflow: hidden;
+}
+
+.liquid-glass::before {
+content: &#39;&#39;;
+position: absolute;
+inset: 0;
+border-radius: inherit;
+padding: 1.4px;
+background: linear-gradient(180deg,
+rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+pointer-events: none;
+}
+
+.liquid-glass:hover {
+background: rgba(255, 255, 255, 0.04);
+box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.15);
+}
+
+.liquid-glass:active {
+transform: scale(0.98);
+}
+```
+
+**GLOBAL CSS:**
+- Reset: margin 0, padding 0, box-sizing border-box on all elements
+- Body: antialiased font smoothing, white text, #010101 background
+- Uses Tailwind directives: @tailwind base/components/utilities
+
+**PAGE TITLE:** &quot;Synthetic Nature&quot;</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

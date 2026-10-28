@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Neo Museum — Website 提示词 | MotionSites Prompts</title>
+<meta name="description" content="现代博物馆品牌官网，深色极简风格，搭配Inter无衬线字体与流畅的Motion动画，展示展览与藏品信息。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/neo-museum.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Neo Museum — Website 提示词">
+<meta property="og:description" content="现代博物馆品牌官网，深色极简风格，搭配Inter无衬线字体与流畅的Motion动画，展示展览与藏品信息。">
+<meta property="og:url" content="https://prompt-site.shop/p/neo-museum.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/neo-museum.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Neo Museum","description":"现代博物馆品牌官网，深色极简风格，搭配Inter无衬线字体与流畅的Motion动画，展示展览与藏品信息。","url":"https://prompt-site.shop/p/neo-museum.html","inLanguage":"zh-CN","genre":"Website","dateCreated":"2026-05-14T09:06:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-website">Website</a></div><h1>Neo Museum</h1><div class="chip-row"><span class="chip">Website</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-05-14</span><span>正文：14,948 字符</span></div><div class="hero-media"><img src="../assets/previews/neo-museum.webp" alt="Neo Museum 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>现代博物馆品牌官网，深色极简风格，搭配Inter无衬线字体与流畅的Motion动画，展示展览与藏品信息。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Project Setup
+
+Stack: React 19 + Vite 6 + Tailwind CSS 4 + Motion (Framer Motion) + Lucide React icons + TypeScript
+
+package.json dependencies:
+- `react`, `react-dom` ^19.0.1
+- `vite` ^6.2.3
+- `@tailwindcss/vite` ^4.1.14, `tailwindcss` ^4.1.14
+- `motion` ^12.23.24
+- `lucide-react` ^0.546.0
+- `@vitejs/plugin-react` ^5.0.4
+- `typescript` ~5.8.2
+
+Fonts (loaded via Google Fonts in `index.css`):
+- Sans: Inter (weights: 300, 400, 500, 600)
+- Mono: JetBrains Mono (weights: 400, 500)
+
+```css
+/* index.css */
+@import url(&#39;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap&#39;);
+@import &quot;tailwindcss&quot;;
+
+@theme {
+--font-sans: &quot;Inter&quot;, ui-sans-serif, system-ui, sans-serif;
+--font-mono: &quot;JetBrains Mono&quot;, ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer utilities {
+.text-mega {
+font-size: 21vw;
+line-height: 0.75;
+letter-spacing: -0.04em;
+}
+}
+```
+
+Global styling: Background `#fcfcfc`, text `#111`, selection color `bg-black text-white`, `overflow-x-hidden`, `font-sans` (Inter).
+
+---
+
+DATA
+
+```tsx
+const chaptersData = [
+{ name: &quot;Age of Dinosaurs&quot;, image: &quot;https://res.cloudinary.com/dsdxaxkiz/image/upload/v1779624247/01_udnber.png&quot; },
+{ name: &quot;Fossils of Ancient Life&quot;, image: &quot;https://res.cloudinary.com/dsdxaxkiz/image/upload/v1779624374/02_pmvxxl.png&quot; },
+{ name: &quot;Reptiles of the Mesozoic&quot;, image: &quot;https://res.cloudinary.com/dsdxaxkiz/image/upload/v1779624236/03_hcp3jc.png&quot; },
+{ name: &quot;Marine Fossil Gallery&quot;, image: &quot;https://res.cloudinary.com/dsdxaxkiz/image/upload/v1779624256/04_get63z.png&quot; },
+{ name: &quot;Prehistoric Giants&quot;, image: &quot;https://res.cloudinary.com/dsdxaxkiz/image/upload/v1779624251/05_kz1tyu.png&quot; }
+];
+```
+
+---
+
+STATE
+
+```tsx
+const [showVideo, setShowVideo] = useState(false);
+const [activeChapter, setActiveChapter] = useState(2); // starts at &quot;Reptiles of the Mesozoic&quot;
+const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+```
+
+- `showVideo` flips to `true` after a 2800ms delay (setTimeout)
+- `activeChapter` auto-cycles every 3500ms via setInterval, wrapping `(prev + 1) % 5`
+
+---
+
+ANIMATION VARIANTS
+
+```tsx
+const fadeUp = {
+initial: { opacity: 0, y: 20 },
+animate: { opacity: 1, y: 0 },
+};
+
+const letterBlock = {
+initial: { y: 120, opacity: 0 },
+animate: {
+y: 0,
+opacity: 1,
+transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] }
+}
+};
+```
+
+---
+
+SECTION 1: HERO (full viewport height)
+
+Container: `relative w-full min-h-screen flex flex-col overflow-hidden`
+
+1A. HEADER (NHM Logo)
+
+- `motion.header` with `staggerChildren: 0.1, delayChildren: 0.1`
+- Padding: `pt-6 px-6 md:px-16`, `z-20`
+- The &quot;NHM&quot; logo is a custom inline SVG with `viewBox=&quot;0 0 840 100&quot;`, `fill-[#111]`, full width
+- The SVG is wrapped in `motion.h1` with `variants` that animate from `scale: 1.03` to `scale: 1` with `staggerChildren: 0.06, delayChildren: 0.1`
+- Each polygon of each letter uses the `letterBlock` variant (slides up from `y: 120`)
+- Letter N (translate 0,0): Three polygons -- left vertical `0,0 14,0 14,100 0,100`, right vertical `200,0 214,0 214,100 200,100`, diagonal `0,0 33,0 214,100 181,100`
+- Letter H (translate 280,0): Three polygons -- left vertical `0,0 14,0 14,100 0,100`, right vertical `200,0 214,0 214,100 200,100`, crossbar `14,43 200,43 200,57 14,57`
+- Letter M (translate 560,0): Four polygons -- left vertical `0,0 14,0 14,100 0,100`, right vertical `266,0 280,0 280,100 266,100`, left diagonal `0,0 26,0 153,100 127,100`, right diagonal `254,0 280,0 153,100 127,100`
+
+1B. SUB-NAV BAR
+
+- Below the SVG logo, `flex justify-between items-start mt-8`
+- Font: `text-[10px] md:text-[11px] font-mono tracking-[0.2em] uppercase`
+- Uses `fadeUp` variant with `duration: 0.8, ease: &quot;easeOut&quot;`
+
+Left column (15% width): Three lines -- &quot;Natura&quot; / &quot;History&quot; / &quot;Museum&quot;
+
+Arrow separator (5% width, hidden on mobile): `ArrowRight` from lucide, size 14, strokeWidth 1, `text-gray-400`
+
+Center column (flex-1 on mobile, 30% on desktop): &quot;Exploring the story of life on earth through science, discovery and wonder.&quot; -- Split differently on desktop (3 lines) vs mobile (4 lines). `text-gray-800 leading-relaxed font-mono`
+
+Arrow separator (5% width, hidden on mobile): Same as above
+
+Right column (15% width, hidden on mobile): Nav links list -- Visit, Exhibitions, Discover, Learn, About. `text-gray-800`, `hover:text-black hover:underline`
+
+Hamburger button (far right, z-60): Two horizontal lines (`w-8 h-[1.5px] bg-black`), `gap-[6px]`. Hover: first line shrinks to `w-6`, second expands to `w-10`. When open: first rotates 45deg + translateY, second rotates -45deg + translateY (forming an X). Transition: `duration-300`.
+
+1C. MOBILE MENU OVERLAY
+
+- `AnimatePresence` wrapping a `motion.div`
+- Appears below the header, slides in from `y: -20`, `opacity: 0` to `y: 0, opacity: 1`
+- `bg-[#fcfcfc] border-b border-gray-200 shadow-xl`, only visible on `md:hidden`
+- Contains the same nav links as the desktop version, `text-sm font-mono tracking-[0.2em] uppercase`, `space-y-6`
+
+1D. BACKGROUND VIDEO
+
+- Appears after 2800ms delay (controlled by `showVideo` state)
+- `absolute top-0 left-0 w-full h-full pointer-events-none z-0`
+- Video: `autoPlay loop muted playsInline`, `w-full h-full object-cover`
+- Video URL: `https://res.cloudinary.com/dsdxaxkiz/video/upload/v1779624998/magnific_use-img-2-as-the-exact-ba_Piu3X0W42C_wnrc8f.mp4`
+
+1E. LEFT SIDEBAR CONTENT
+
+- `motion.div` with `staggerChildren: 0.15, delayChildren: 0.6`
+- Position: `px-10 md:px-16`, `mt-20 sm:mt-28 md:mt-32`, `w-[320px]`, `z-10`
+
+Section indicator: `01` + horizontal line (`w-16 h-[1.5px] bg-black/20`), `text-xs font-mono`
+
+Headline: &quot;TIMELESS WONDERS&quot; -- `text-[3.5rem] md:text-[5rem] font-normal tracking-tight leading-[1]`. Line break between &quot;TIMELESS&quot; and &quot;WONDERS&quot;.
+
+Description: &quot;Step into the natural world and / discover the stories written / millions of years ago.&quot; -- `text-[13px] md:text-[14px] text-gray-700 w-[240px] leading-[1.6]`
+
+CTA Button (&quot;Explore Now&quot;):
+- Container: `bg-[#1a1a1a] px-6 py-3.5 border border-[#1a1a1a] rounded-md shadow-sm`
+- Hover: slides up 0.5px, adds `shadow-[3px_3px_0px_rgba(17,17,17,0.5)]`
+- Active: resets translate and shadow
+- Has a sliding background panel: `bg-[#fcfcfc]` that slides from `-translate-x-[101%]` to `translate-x-0` on hover, `duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]`
+- Icon: Custom SVG leaf/plant shape (4 paths forming a stylized leaf), white by default, turns `#111` on hover with `scale-110 -rotate-12 -translate-y-1` transform
+- Text: &quot;Explore Now&quot;, `text-[15px] font-medium`, white turning to `#111` on hover
+
+1F. RIGHT SIDEBAR (hidden on mobile)
+
+- `motion.div` with `staggerChildren: 0.15, delayChildren: 0.9`
+- Position: `w-[200px] mt-12 md:mt-20`, `hidden md:flex`
+
+Specimen info: &quot;Tyrannosaurus Rex&quot; heading (`text-[10px] font-bold font-mono tracking-widest uppercase`), subtext &quot;Late Cretaceous period / 68-66 million years ago&quot; (`text-[12px] text-gray-600 leading-[1.6]`)
+
+Stats: &quot;Length&quot; label + &quot;12.3 m&quot; value, &quot;Height&quot; label + &quot;4.0 m&quot; value. Labels: `text-[10px] font-mono tracking-widest uppercase text-gray-500`. Values: `text-[13px] font-medium`.
+
+View Details button: Circle (`w-10 h-10 rounded-full border border-gray-400`) with `Plus` icon (size 16, strokeWidth 1.5), text &quot;View Details&quot; (`text-[10px] font-mono uppercase tracking-widest font-bold`). Hover: circle gets `border-black bg-[#111]`, icon turns white.
+
+1G. BOTTOM-LEFT &quot;SCROLL TO EXPLORE&quot;
+
+- `absolute bottom-10 left-[2.5rem] md:left-[4rem]`, `hidden md:flex`
+- Fade up animation: `delay: 1.2`
+- Circle (`w-12 h-12 rounded-full border border-gray-300`) containing two thin vertical lines (`w-[1px] h-[12px] bg-gray-600`, `gap-[4px]`) representing a pause icon
+- Text: &quot;Scroll to explore&quot; -- `text-[10px] font-mono tracking-widest uppercase text-gray-500 font-semibold`
+
+---
+
+SECTION 2: &quot;EXPLORE OUR WORLD&quot;
+
+Container: `relative w-full min-h-[75vh] md:min-h-screen bg-[#fcfcfc]`, flex column centered, `pt-24 md:pt-32 pb-0 z-20`
+
+2A. SECTION LABEL
+
+`[ 02 ] Explore Our World` -- `text-[10px] md:text-[11px] font-mono tracking-[0.2em]`, `mb-12`. &quot;02&quot; in `text-gray-500`, &quot;Explore Our World&quot; in `text-gray-900 font-bold uppercase`.
+
+2B. MAIN HEADING
+
+&quot;Unearth the stories of our planet&#39;s past through fossils, minerals, and ancient wonders.&quot; -- `text-[2.2rem] md:text-[3.5rem] lg:text-[4.2rem] leading-[1.1] font-medium tracking-tight text-[#111]`, max-width 1000px, text-center. Line break on desktop after &quot;past&quot;. Animates with `whileInView` from `y: 40, opacity: 0` to `y: 0, opacity: 1`, `once: true`, margin `-100px`.
+
+2C. ACTION PILLS
+
+Five pill buttons in a flex-wrap row, `gap-3 md:gap-4`, `mb-10 md:mb-24`. Staggered reveal animation (`staggerChildren: 0.1, delayChildren: 0.3`). Each pill: `rounded-full border border-gray-300 text-[11px] font-medium uppercase tracking-wider bg-white/50 backdrop-blur-sm text-gray-800`. Hover: `border-black bg-black text-white`. Icons from lucide (size 14, strokeWidth 2):
+
+1. `Bone` + &quot;Dinosaurs&quot;
+2. `Dna` + &quot;Ancient Life&quot;
+3. `Gem` + &quot;Minerals&quot;
+4. `Leaf` + &quot;Fossils&quot;
+5. `BookOpen` + &quot;Learn More&quot;
+
+2D. SPACER
+
+`min-h-[220px] md:min-h-[450px]` -- provides room for the pterodactyl image from Section 3 to overlap upward.
+
+2E. BOTTOM TEXT
+
+Absolute positioned at bottom, `px-8 md:px-16 pb-8 md:pb-12`, `pointer-events-none`. Two text elements at `justify-between`:
+- Left: &quot;WE DON&#39;T JUST TELL STORIES.&quot;
+- Right: &quot;PALEONTOLOGY (C) 2026&quot;
+- Both: `text-[10px] font-mono tracking-widest uppercase text-gray-500 font-medium`, hidden on mobile.
+
+---
+
+SECTION 3: &quot;ANCIENT COLLECTION&quot; (Dark Section)
+
+Container: `relative w-full bg-[#0a0a0a] text-white flex flex-col z-30`
+
+3A. PTERODACTYL IMAGE (Overlapping)
+
+- Absolute positioned at top, centered horizontally (`left-1/2 -translate-x-1/2`)
+- Width: `w-[160vw] md:w-[1100px]`
+- Image URL: `https://res.cloudinary.com/dsdxaxkiz/image/upload/v1779625001/ChatGPT_Image_May_23_2026_12_24_44_PM_1_lv1dne.png`
+- Animates with `whileInView` from `y: &quot;-65%&quot;, opacity: 0` to `y: &quot;-78%&quot;, opacity: 1`, `duration: 1.4, ease: &quot;easeOut&quot;`, viewport margin `100px`
+- `pointer-events-none z-0`, `mix-blend` not applied here
+
+3B. HEADING AREA
+
+- Padding: `px-8 md:px-16 pt-32 md:pt-48 mb-16`, `z-10`
+- Two-column layout on xl (`flex-col xl:flex-row justify-between`)
+
+Left -- Main heading: &quot;Curated from millions of years of wonder [3 circle icons] &amp; discovery.&quot; -- `text-[1.8rem] md:text-[3rem] lg:text-[3.8rem] xl:text-[4rem] leading-[1.15] font-medium tracking-tight text-white`. The three circle icons are inline (`inline-flex gap-2 md:gap-3 align-middle mx-2 md:mx-4 translate-y-[-4px]`), each `w-10 h-10 md:w-14 md:h-14 rounded-full border border-gray-600 bg-black text-gray-400`. Hover: `bg-white text-black border-white`. Icons: `Bone`, `Dna`, `Leaf` (size 22).
+
+Right -- Tagline + pills:
+- Tagline: &quot;WE DON&#39;T JUST DISPLAY FOSSILS / WE SHARE EARTH&#39;S STORY&quot; -- `text-[9px] md:text-[10px] font-mono tracking-widest text-gray-400 uppercase mb-6 leading-relaxed`
+- Three pills: &quot;Educational&quot;, &quot;Authentic&quot;, &quot;Inspiring&quot; -- `px-5 py-2 rounded-full border border-gray-600 text-[9px] font-mono tracking-widest uppercase text-gray-300`. Hover: `bg-white text-black border-white`.
+
+3C. TWO-COLUMN PANEL
+
+Separated by `h-[1px] bg-gray-800` line. Flex row on desktop, column on mobile.
+
+Left panel (35% width):
+- `border-r border-gray-800` on desktop, `border-b` on mobile
+- `min-h-[400px] md:min-h-[500px]`
+- Top: `***` text (`text-gray-500 text-xl tracking-[0.3em]`)
+- Center: Chapter image using `SandTransitionImage` component (SVG filter-based sand/dissolve transition). Image: `absolute inset-0 w-[80%] h-[80%] m-auto object-contain mix-blend-lighten`. Uses `AnimatePresence mode=&quot;wait&quot;`.
+- Bottom: Chapter counter `01 / 05` style, with animated number (`motion.div` slides vertically). `text-[10px] font-mono tracking-widest text-[#888] uppercase`. Counter numeral color `#888`, divider `text-[#333]`.
+
+Right panel (65% width):
+- Top bar: &quot;Explore the past. Understand the present.&quot; + animated &quot;Chapter 0X&quot; label. `border-b border-gray-800 p-8 text-[10px] font-mono text-gray-400 tracking-widest`.
+- Chapter list: 5 items, each `border-b border-gray-800/80 py-8`. Active: `text-white`, inactive: `text-[#444] hover:text-[#999]`. Chapter name: `text-2xl md:text-[2rem] font-medium tracking-tight`. Active item shows `ArrowUpRight` icon (size 22, strokeWidth 1, `text-gray-400`) that animates in/out.
+- Clicking a chapter sets `activeChapter`.
+
+3D. BOTTOM FOOTER
+
+- `h-[1px] bg-gray-800` divider
+- Text: &quot;DIGGING INTO OUR PLANET&#39;S PAST&quot; -- `px-8 py-8 text-[10px] font-mono tracking-widest text-gray-500 uppercase bg-[#0a0a0a]`
+
+---
+
+SandTransitionImage COMPONENT
+
+A custom component that creates a sand/particle dissolve effect using SVG filters:
+
+```tsx
+function SandTransitionImage({ src, alt, className }) {
+// Uses usePresence() from motion/react for AnimatePresence awareness
+// Unique filterId per instance via useRef
+// requestAnimationFrame loop over 900ms
+// Easing: entering = quartic ease-out (1 - Math.pow(1-t, 4)), exiting = cubic (Math.pow(t, 3))
+// SVG filter chain:
+// 1. feTurbulence: fractalNoise, baseFrequency 1.8, numOctaves 4
+// 2. feDisplacementMap: scale up to 150 based on progress
+// 3. feOffset: dy up to -80 (enter) or 120 (exit), dx up to -30/+30
+// 4. feGaussianBlur: up to 6px
+// 5. feColorMatrix: opacity fades (1 - progress * 1.2)
+// Image has crossOrigin=&quot;anonymous&quot; and referrerPolicy=&quot;no-referrer&quot;
+}
+```
+
+---
+
+ALL EXTERNAL ASSET URLs
+
+Video:
+- `https://res.cloudinary.com/dsdxaxkiz/video/upload/v1779624998/magnific_use-img-2-as-the-exact-ba_Piu3X0W42C_wnrc8f.mp4`
+
+Images:
+- Chapter 1: `https://res.cloudinary.com/dsdxaxkiz/image/upload/v1779624247/01_udnber.png`
+- Chapter 2: `https://res.cloudinary.com/dsdxaxkiz/image/upload/v1779624374/02_pmvxxl.png`
+- Chapter 3: `https://res.cloudinary.com/dsdxaxkiz/image/upload/v1779624236/03_hcp3jc.png`
+- Chapter 4: `https://res.cloudinary.com/dsdxaxkiz/image/upload/v1779624256/04_get63z.png`
+- Chapter 5: `https://res.cloudinary.com/dsdxaxkiz/image/upload/v1779624251/05_kz1tyu.png`
+- Pterodactyl: `https://res.cloudinary.com/dsdxaxkiz/image/upload/v1779625001/ChatGPT_Image_May_23_2026_12_24_44_PM_1_lv1dne.png`
+
+(Note: these are Cloudinary URLs, not CloudFront. The project uses Cloudinary for all hosted media assets.)
+
+---
+
+KEY DESIGN DETAILS
+
+- Color palette: `#fcfcfc` (off-white bg), `#111` / `#1a1a1a` (near-black), `#0a0a0a` (dark section bg). Gray scale via Tailwind: `gray-300` through `gray-800`.
+- No purple/indigo anywhere. Strictly monochrome black/white/gray.
+- Typography hierarchy: Large display headings (3.5-5rem), mono labels (10-11px), body text (13-14px).
+- Spacing: 8px base system throughout.
+- Transitions: Most hover transitions 300-700ms. Button slide effect uses `cubic-bezier(0.16, 1, 0.3, 1)`. Letter animations use same cubic bezier.
+- The page is entirely a single `App.tsx` component plus the `SandTransitionImage` helper function in the same file.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><p class="muted">暂无同分类条目。</p><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

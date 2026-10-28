@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Red Noir Style — Design Systems &amp; Styles 提示词 | MotionSites Prompts</title>
+<meta name="description" content="A bold, dark-themed landing page featuring high-contrast red accents, glassmorphism, and smooth scroll animations. Designed for AI and tech products with a">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/community-superdesign-red-noir-style.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Red Noir Style — Design Systems &amp; Styles 提示词">
+<meta property="og:description" content="A bold, dark-themed landing page featuring high-contrast red accents, glassmorphism, and smooth scroll animations. Designed for AI and tech products with a">
+<meta property="og:url" content="https://prompt-site.shop/p/community-superdesign-red-noir-style.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/community-superdesign-red-noir-style.png">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Red Noir Style","description":"A bold, dark-themed landing page featuring high-contrast red accents, glassmorphism, and smooth scroll animations. Designed for AI and tech products with a futuristic aesthetic.","url":"https://prompt-site.shop/p/community-superdesign-red-noir-style.html","inLanguage":"zh-CN","genre":"Design Systems & Styles","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-design_systems___styles">Design Systems &amp; Styles</a></div><h1>Red Noir Style</h1><div class="chip-row"><span class="chip">Design Systems &amp; Styles</span><span class="chip">landing-page</span><span class="chip">社区公开收藏</span></div><div class="facts"><span>正文：22,051 字符</span></div><div class="hero-media"><img src="../assets/previews/community-superdesign-red-noir-style.png" alt="Red Noir Style 动效预览" loading="lazy"><div class="media-note">本地预览图 · png</div></div><h2>简介</h2><p>A bold, dark-themed landing page featuring high-contrast red accents, glassmorphism, and smooth scroll animations. Designed for AI and tech products with a futuristic aesthetic.</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">This is a reference implementation of red noir style
+
+~~~html
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Acme AI | Design Intelligence&lt;/title&gt;
+&lt;script src=&quot;https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@200;400;600;700;800&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;style&gt;
+:root {
+--accent-red: #ef233c;
+--accent-red-glow: rgba(239, 35, 60, 0.5);
+}
+
+/* Custom Animations */
+@keyframes fade-in-up {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes border-spin {
+from { --gradient-angle: 0deg; }
+to { --gradient-angle: 360deg; }
+}
+
+@keyframes shimmer {
+from { transform: translate(-50%, -50%) rotate(0deg); }
+to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes animStar {
+from { transform: translateY(0px); }
+to { transform: translateY(-2000px); }
+}
+
+@property --gradient-angle {
+syntax: &quot;&lt;angle&gt;&quot;;
+initial-value: 0deg;
+inherits: false;
+}
+
+.animate-fade-up {
+animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.font-manrope { font-family: &#39;Manrope&#39;, sans-serif; }
+.font-inter { font-family: &#39;Inter&#39;, sans-serif; }
+
+/* Shiny CTA Button */
+.shiny-cta {
+--gradient-angle: 0deg;
+position: relative;
+overflow: hidden;
+border-radius: 9999px;
+padding: 1rem 2.5rem;
+background: linear-gradient(#000000, #000000) padding-box,
+conic-gradient(from var(--gradient-angle), transparent 0%, #ef233c 5%, #ef233c 15%, #ef233c 30%, transparent 40%, transparent 100%) border-box;
+border: 2px solid transparent;
+cursor: pointer;
+isolation: isolate;
+animation: border-spin 2.5s linear infinite;
+}
+
+.shiny-cta::before {
+content: &#39;&#39;;
+position: absolute;
+inset: 0;
+background: radial-gradient(circle at 50% 50%, white 0.5px, transparent 0);
+background-size: 4px 4px;
+opacity: 0.1;
+z-index: 0;
+}
+
+/* Parallax Stars */
+.stars-1 { box-shadow: 234px 124px #fff, 654px 345px #fff, 876px 12px #fff, 1200px 800px #fff, 400px 1500px #fff, 1800px 200px #fff, 100px 1000px #fff, 900px 1900px #fff, 500px 600px #fff, 1400px 100px #fff, 300px 400px #fff, 1600px 1200px #fff; }
+.stars-2 { box-shadow: 123px 456px #fff, 789px 234px #fff, 456px 890px #fff, 1100px 300px #fff, 200px 1200px #fff, 1500px 500px #fff, 600px 1700px #fff, 1300px 900px #fff; }
+
+.gradient-blur {
+position: fixed;
+z-index: 40;
+inset: 0 0 auto 0;
+height: 120px;
+pointer-events: none;
+background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+backdrop-filter: blur(8px);
+mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+.selection-red::selection {
+background: #ef233c;
+color: white;
+}
+
+.text-stroke {
+-webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+color: transparent;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;selection-red&quot;&gt;
+&lt;div class=&quot;min-h-screen bg-black text-white font-inter relative overflow-x-hidden&quot;&gt;
+
+&lt;!-- Global Background --&gt;
+&lt;div class=&quot;fixed inset-0 z-0 pointer-events-none&quot;&gt;
+&lt;div class=&quot;absolute inset-0 bg-gradient-to-b from-[#1a0505] to-black&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;absolute top-0 left-0 w-[1px] h-[1px] bg-transparent stars-1 animate-[animStar_50s_linear_infinite]&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;absolute top-0 left-0 w-[2px] h-[2px] bg-transparent stars-2 animate-[animStar_80s_linear_infinite]&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600/5 rounded-full blur-[120px]&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(circle_at_center,black_40%,transparent_80%)]&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Top Blur Header --&gt;
+&lt;div class=&quot;gradient-blur&quot;&gt;&lt;/div&gt;
+
+&lt;!-- Navbar --&gt;
+&lt;header class=&quot;fixed top-0 left-0 w-full z-50 pt-6 px-4&quot;&gt;
+&lt;nav class=&quot;max-w-5xl mx-auto flex items-center justify-between bg-black/60 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 shadow-2xl&quot;&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+&lt;div class=&quot;w-5 h-5 bg-[#ef233c] rounded-sm rotate-45&quot;&gt;&lt;/div&gt;
+&lt;span class=&quot;text-lg font-bold font-manrope tracking-tight&quot;&gt;Acme&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;hidden md:flex items-center gap-8&quot;&gt;
+&lt;a href=&quot;#&quot; id=&quot;nav-product-link&quot; class=&quot;text-sm font-medium text-zinc-400 hover:text-white transition-colors&quot;&gt;Product&lt;/a&gt;
+&lt;a href=&quot;#&quot; id=&quot;nav-solutions-link&quot; class=&quot;text-sm font-medium text-zinc-400 hover:text-white transition-colors&quot;&gt;Solutions&lt;/a&gt;
+&lt;a href=&quot;#&quot; id=&quot;nav-resources-link&quot; class=&quot;text-sm font-medium text-zinc-400 hover:text-white transition-colors&quot;&gt;Resources&lt;/a&gt;
+&lt;a href=&quot;#&quot; id=&quot;nav-pricing-link&quot; class=&quot;text-sm font-medium text-zinc-400 hover:text-white transition-colors&quot;&gt;Pricing&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex items-center gap-4&quot;&gt;
+&lt;a href=&quot;#&quot; id=&quot;nav-login-link&quot; class=&quot;hidden md:block text-sm font-medium text-zinc-300 hover:text-white&quot;&gt;Log In&lt;/a&gt;
+&lt;button id=&quot;nav-get-access-btn&quot; class=&quot;group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-white/5 px-6 py-2 transition-transform active:scale-95&quot;&gt;
+&lt;span class=&quot;absolute inset-0 border border-white/10 rounded-full&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;absolute inset-[-100%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_75%,#ef233c_100%)] opacity-0 group-hover:opacity-100 transition-opacity&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;absolute inset-[1px] rounded-full bg-black&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;relative z-10 flex items-center gap-2 text-xs font-bold uppercase tracking-wider&quot;&gt;
+Get Access &lt;iconify-icon icon=&quot;lucide:arrow-right&quot; class=&quot;w-3 h-3 group-hover:translate-x-0.5 transition-transform&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/span&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main class=&quot;relative z-10&quot;&gt;
+&lt;!-- Hero Section --&gt;
+&lt;section class=&quot;min-h-screen flex flex-col items-center justify-center pt-32 pb-20 px-6&quot;&gt;
+&lt;div class=&quot;text-center max-w-5xl mx-auto&quot;&gt;
+&lt;div class=&quot;inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8 animate-fade-up&quot; style=&quot;animation-delay: 0.1s;&quot;&gt;
+&lt;span class=&quot;relative flex h-2 w-2&quot;&gt;
+&lt;span class=&quot;animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;relative inline-flex rounded-full h-2 w-2 bg-[#ef233c]&quot;&gt;&lt;/span&gt;
+&lt;/span&gt;
+&lt;span class=&quot;text-xs font-medium text-red-100/90 tracking-wide font-manrope&quot;&gt;
+Acme AI 2.0 is now live
+&lt;/span&gt;
+&lt;iconify-icon icon=&quot;lucide:arrow-right&quot; class=&quot;w-3 h-3 text-red-400&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/div&gt;
+
+&lt;h1 class=&quot;text-6xl md:text-8xl font-semibold tracking-tighter font-manrope leading-[1.1] mb-8 animate-fade-up&quot; style=&quot;animation-delay: 0.2s;&quot;&gt;
+&lt;span class=&quot;block text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-white/40&quot;&gt;Design Intelligence&lt;/span&gt;
+&lt;span class=&quot;block text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-white/40&quot;&gt;
+for the &lt;span class=&quot;text-[#ef233c] inline-block relative&quot;&gt;
+Future
+&lt;svg class=&quot;absolute w-full h-3 -bottom-2 left-0 text-[#ef233c] opacity-60&quot; viewBox=&quot;0 0 100 10&quot; preserveAspectRatio=&quot;none&quot;&gt;
+&lt;path d=&quot;M0 5 Q 50 10 100 5&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; /&gt;
+&lt;/svg&gt;
+&lt;/span&gt;
+&lt;/span&gt;
+&lt;/h1&gt;
+
+&lt;p class=&quot;text-xl md:text-2xl text-zinc-400 max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-up&quot; style=&quot;animation-delay: 0.3s;&quot;&gt;
+Acme blends advanced generative algorithms with human creativity to ship world-class products 10x faster.
+&lt;/p&gt;
+
+&lt;div class=&quot;flex flex-col md:flex-row items-center justify-center gap-6 animate-fade-up&quot; style=&quot;animation-delay: 0.4s;&quot;&gt;
+&lt;button id=&quot;hero-cta-btn&quot; class=&quot;shiny-cta group&quot;&gt;
+&lt;span class=&quot;relative z-10 flex items-center gap-2 text-white font-medium&quot;&gt;
+Start Creating &lt;iconify-icon icon=&quot;lucide:arrow-right&quot; class=&quot;transition-transform group-hover:translate-x-1&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;button id=&quot;hero-github-btn&quot; class=&quot;group px-8 py-4 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 font-medium hover:text-white hover:bg-zinc-800 transition-all flex items-center gap-2&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:github&quot; class=&quot;w-5 h-5&quot;&gt;&lt;/iconify-icon&gt;
+View on GitHub
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Logo Strip --&gt;
+&lt;div class=&quot;w-full mt-32 border-y border-white/5 bg-white/[0.02] backdrop-blur-sm py-10 opacity-60 hover:opacity-100 transition-opacity&quot;&gt;
+&lt;div class=&quot;max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8 md:gap-16&quot;&gt;
+&lt;p class=&quot;text-sm font-bold tracking-widest text-zinc-500 uppercase shrink-0&quot;&gt;Integrated with:&lt;/p&gt;
+&lt;div class=&quot;flex flex-wrap justify-center gap-8 md:gap-16 items-center w-full&quot;&gt;
+&lt;div class=&quot;flex items-center gap-2 font-manrope font-semibold&quot;&gt;&lt;div class=&quot;w-6 h-6 bg-white/20 rounded-full&quot;&gt;&lt;/div&gt;OpenAI&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2 font-manrope font-semibold&quot;&gt;&lt;div class=&quot;w-6 h-6 bg-white/20 rounded-full&quot;&gt;&lt;/div&gt;Figma&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2 font-manrope font-semibold&quot;&gt;&lt;div class=&quot;w-6 h-6 bg-white/20 rounded-full&quot;&gt;&lt;/div&gt;React&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2 font-manrope font-semibold&quot;&gt;&lt;div class=&quot;w-6 h-6 bg-white/20 rounded-full&quot;&gt;&lt;/div&gt;Vercel&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2 font-manrope font-semibold&quot;&gt;&lt;div class=&quot;w-6 h-6 bg-white/20 rounded-full&quot;&gt;&lt;/div&gt;Stripe&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- Features Bento Grid --&gt;
+&lt;section class=&quot;py-32 px-6&quot;&gt;
+&lt;div class=&quot;max-w-7xl mx-auto&quot;&gt;
+&lt;div class=&quot;mb-20 text-center max-w-3xl mx-auto animate-fade-up&quot;&gt;
+&lt;h2 class=&quot;text-4xl md:text-5xl font-semibold text-white tracking-tight font-manrope mb-6&quot;&gt;
+The Operating System for &lt;br /&gt;
+&lt;span class=&quot;text-[#ef233c]&quot;&gt;Modern Design Teams&lt;/span&gt;
+&lt;/h2&gt;
+&lt;p class=&quot;text-lg text-zinc-400 font-light&quot;&gt;
+Replace your fragmented toolset with one cohesive platform driven by AI.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 h-auto lg:h-[700px]&quot;&gt;
+&lt;!-- Main Feature Card --&gt;
+&lt;div class=&quot;lg:col-span-2 lg:row-span-2 group relative overflow-hidden p-8 border border-white/10 bg-gradient-to-b from-zinc-900/50 to-black hover:border-white/20 transition-all rounded-xl&quot;&gt;
+&lt;div class=&quot;relative z-10 h-full flex flex-col&quot;&gt;
+&lt;div class=&quot;mb-6 inline-flex p-3 rounded-lg bg-white/5 border border-white/10 text-[#ef233c]&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:bot&quot; class=&quot;w-6 h-6&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/div&gt;
+&lt;h3 class=&quot;text-3xl font-semibold text-white font-manrope mb-4 tracking-tight&quot;&gt;Generative UI Systems&lt;/h3&gt;
+&lt;p class=&quot;text-zinc-400 text-lg leading-relaxed&quot;&gt;Instantly generate comprehensive design systems from a single prompt. Colors, typography, and components are automatically created and documented with industry standards in mind.&lt;/p&gt;
+&lt;div class=&quot;mt-auto flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0&quot;&gt;
+&lt;span class=&quot;text-xs font-mono text-[#ef233c]&quot;&gt;EXPLORE FEATURE&lt;/span&gt;
+&lt;iconify-icon icon=&quot;lucide:arrow-right&quot; class=&quot;w-4 h-4 text-[#ef233c]&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity pointer-events-none&quot; style=&quot;background: radial-gradient(circle at top right, #ef233c, transparent 70%);&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Feature 2 --&gt;
+&lt;div class=&quot;lg:col-span-2 group relative overflow-hidden p-8 border border-white/10 bg-black hover:border-white/20 transition-all rounded-xl&quot;&gt;
+&lt;div class=&quot;relative z-10 flex flex-col h-full&quot;&gt;
+&lt;div class=&quot;mb-4 inline-flex p-3 rounded-lg bg-white/5 border border-white/10 text-blue-400&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:code&quot; class=&quot;w-6 h-6&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/div&gt;
+&lt;h3 class=&quot;text-2xl font-semibold text-white font-manrope mb-2&quot;&gt;Code Export&lt;/h3&gt;
+&lt;p class=&quot;text-zinc-400&quot;&gt;Production-ready React &amp; Tailwind code, shipped directly to your repo with zero friction.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity pointer-events-none&quot; style=&quot;background: radial-gradient(circle at top right, #3b82f6, transparent 70%);&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Feature 3 --&gt;
+&lt;div class=&quot;group relative overflow-hidden p-8 border border-white/10 bg-black hover:border-white/20 transition-all rounded-xl&quot;&gt;
+&lt;div class=&quot;relative z-10&quot;&gt;
+&lt;div class=&quot;mb-4 inline-flex p-3 rounded-lg bg-white/5 border border-white/10 text-yellow-400&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:zap&quot; class=&quot;w-6 h-6&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/div&gt;
+&lt;h3 class=&quot;text-xl font-semibold text-white font-manrope mb-2&quot;&gt;Smart Iteration&lt;/h3&gt;
+&lt;p class=&quot;text-sm text-zinc-400&quot;&gt;A/B test variations generated by AI based on real user data.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Feature 4 --&gt;
+&lt;div class=&quot;group relative overflow-hidden p-8 border border-white/10 bg-black hover:border-white/20 transition-all rounded-xl&quot;&gt;
+&lt;div class=&quot;relative z-10&quot;&gt;
+&lt;div class=&quot;mb-4 inline-flex p-3 rounded-lg bg-white/5 border border-white/10 text-purple-400&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:layers&quot; class=&quot;w-6 h-6&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/div&gt;
+&lt;h3 class=&quot;text-xl font-semibold text-white font-manrope mb-2&quot;&gt;Team Sync&lt;/h3&gt;
+&lt;p class=&quot;text-sm text-zinc-400&quot;&gt;Real-time collaboration with automated version control.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- Testimonial Banner --&gt;
+&lt;div class=&quot;w-full bg-[#ef233c] py-20 px-6&quot;&gt;
+&lt;div class=&quot;max-w-4xl mx-auto text-center&quot;&gt;
+&lt;div class=&quot;flex justify-center gap-1 text-black mb-6&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:star&quot; class=&quot;w-6 h-6&quot; fill=&quot;currentColor&quot;&gt;&lt;/iconify-icon&gt;
+&lt;iconify-icon icon=&quot;lucide:star&quot; class=&quot;w-6 h-6&quot; fill=&quot;currentColor&quot;&gt;&lt;/iconify-icon&gt;
+&lt;iconify-icon icon=&quot;lucide:star&quot; class=&quot;w-6 h-6&quot; fill=&quot;currentColor&quot;&gt;&lt;/iconify-icon&gt;
+&lt;iconify-icon icon=&quot;lucide:star&quot; class=&quot;w-6 h-6&quot; fill=&quot;currentColor&quot;&gt;&lt;/iconify-icon&gt;
+&lt;iconify-icon icon=&quot;lucide:star&quot; class=&quot;w-6 h-6&quot; fill=&quot;currentColor&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/div&gt;
+&lt;h3 class=&quot;text-3xl md:text-5xl font-bold text-black font-manrope leading-tight mb-8&quot;&gt;
+&quot;Acme has completely transformed how we ship products. What used to take weeks now takes hours.&quot;
+&lt;/h3&gt;
+&lt;div class=&quot;flex items-center justify-center gap-4&quot;&gt;
+&lt;div class=&quot;w-12 h-12 bg-black rounded-full overflow-hidden flex items-center justify-center&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:user&quot; class=&quot;text-white w-6 h-6&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/div&gt;
+&lt;div class=&quot;text-left&quot;&gt;
+&lt;div class=&quot;text-black font-bold text-lg&quot;&gt;Alex Morgan&lt;/div&gt;
+&lt;div class=&quot;text-black/70 font-medium&quot;&gt;CPO at TechFlow&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Pricing --&gt;
+&lt;section class=&quot;py-32 px-6 bg-black relative border-t border-white/5&quot;&gt;
+&lt;div class=&quot;max-w-7xl mx-auto&quot;&gt;
+&lt;div class=&quot;text-center mb-20&quot;&gt;
+&lt;h2 class=&quot;text-4xl md:text-5xl font-semibold text-white font-manrope mb-4&quot;&gt;Simple, Transparent Pricing&lt;/h2&gt;
+&lt;p class=&quot;text-zinc-400&quot;&gt;Start for free, scale as you grow.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;&gt;
+&lt;!-- Starter --&gt;
+&lt;div class=&quot;p-8 border border-zinc-800 bg-black hover:border-zinc-700 transition-all rounded-xl flex flex-col&quot;&gt;
+&lt;h3 class=&quot;text-xl font-bold font-manrope mb-2&quot;&gt;Starter&lt;/h3&gt;
+&lt;p class=&quot;text-zinc-500 text-sm mb-8 h-10&quot;&gt;For individuals exploring AI design possibilities.&lt;/p&gt;
+&lt;div class=&quot;mb-8 flex items-baseline gap-1&quot;&gt;
+&lt;span class=&quot;text-zinc-500&quot;&gt;$&lt;/span&gt;
+&lt;span class=&quot;text-5xl font-bold text-white&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;text-zinc-500 text-sm&quot;&gt;/mo&lt;/span&gt;
+&lt;/div&gt;
+&lt;ul class=&quot;space-y-4 mb-8 flex-1&quot;&gt;
+&lt;li class=&quot;flex items-center gap-3 text-sm text-zinc-300&quot;&gt;&lt;iconify-icon icon=&quot;lucide:check&quot; class=&quot;text-[#ef233c]&quot;&gt;&lt;/iconify-icon&gt; 1 Project&lt;/li&gt;
+&lt;li class=&quot;flex items-center gap-3 text-sm text-zinc-300&quot;&gt;&lt;iconify-icon icon=&quot;lucide:check&quot; class=&quot;text-[#ef233c]&quot;&gt;&lt;/iconify-icon&gt; Basic AI Generation&lt;/li&gt;
+&lt;li class=&quot;flex items-center gap-3 text-sm text-zinc-300&quot;&gt;&lt;iconify-icon icon=&quot;lucide:check&quot; class=&quot;text-[#ef233c]&quot;&gt;&lt;/iconify-icon&gt; Community Support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;button id=&quot;plan-starter-btn&quot; class=&quot;w-full py-3 px-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-lg text-sm font-bold uppercase tracking-wider transition-all&quot;&gt;Get Started&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Pro --&gt;
+&lt;div class=&quot;relative p-8 border border-[#ef233c] bg-zinc-900/40 shadow-[0_0_30px_rgba(239,35,60,0.1)] rounded-xl flex flex-col scale-105 z-10&quot;&gt;
+&lt;div class=&quot;absolute -top-3 left-1/2 -translate-x-1/2 bg-[#ef233c] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full&quot;&gt;Recommended&lt;/div&gt;
+&lt;h3 class=&quot;text-xl font-bold font-manrope mb-2&quot;&gt;Pro&lt;/h3&gt;
+&lt;p class=&quot;text-zinc-400 text-sm mb-8 h-10&quot;&gt;For professional designers and high-growth freelancers.&lt;/p&gt;
+&lt;div class=&quot;mb-8 flex items-baseline gap-1&quot;&gt;
+&lt;span class=&quot;text-zinc-500&quot;&gt;$&lt;/span&gt;
+&lt;span class=&quot;text-5xl font-bold text-white&quot;&gt;49&lt;/span&gt;
+&lt;span class=&quot;text-zinc-500 text-sm&quot;&gt;/mo&lt;/span&gt;
+&lt;/div&gt;
+&lt;ul class=&quot;space-y-4 mb-8 flex-1&quot;&gt;
+&lt;li class=&quot;flex items-center gap-3 text-sm text-zinc-300&quot;&gt;&lt;iconify-icon icon=&quot;lucide:check&quot; class=&quot;text-[#ef233c]&quot;&gt;&lt;/iconify-icon&gt; Unlimited Projects&lt;/li&gt;
+&lt;li class=&quot;flex items-center gap-3 text-sm text-zinc-300&quot;&gt;&lt;iconify-icon icon=&quot;lucide:check&quot; class=&quot;text-[#ef233c]&quot;&gt;&lt;/iconify-icon&gt; Advanced AI Models&lt;/li&gt;
+&lt;li class=&quot;flex items-center gap-3 text-sm text-zinc-300&quot;&gt;&lt;iconify-icon icon=&quot;lucide:check&quot; class=&quot;text-[#ef233c]&quot;&gt;&lt;/iconify-icon&gt; Direct Code Export&lt;/li&gt;
+&lt;li class=&quot;flex items-center gap-3 text-sm text-zinc-300&quot;&gt;&lt;iconify-icon icon=&quot;lucide:check&quot; class=&quot;text-[#ef233c]&quot;&gt;&lt;/iconify-icon&gt; Priority Support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;button id=&quot;plan-pro-btn&quot; class=&quot;w-full py-3 px-4 bg-[#ef233c] hover:bg-red-700 text-white rounded-lg text-sm font-bold uppercase tracking-wider transition-all&quot;&gt;Go Pro&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Team --&gt;
+&lt;div class=&quot;p-8 border border-zinc-800 bg-black hover:border-zinc-700 transition-all rounded-xl flex flex-col&quot;&gt;
+&lt;h3 class=&quot;text-xl font-bold font-manrope mb-2&quot;&gt;Team&lt;/h3&gt;
+&lt;p class=&quot;text-zinc-500 text-sm mb-8 h-10&quot;&gt;For scale-up design teams and creative agencies.&lt;/p&gt;
+&lt;div class=&quot;mb-8 flex items-baseline gap-1&quot;&gt;
+&lt;span class=&quot;text-zinc-500&quot;&gt;$&lt;/span&gt;
+&lt;span class=&quot;text-5xl font-bold text-white&quot;&gt;199&lt;/span&gt;
+&lt;span class=&quot;text-zinc-500 text-sm&quot;&gt;/mo&lt;/span&gt;
+&lt;/div&gt;
+&lt;ul class=&quot;space-y-4 mb-8 flex-1&quot;&gt;
+&lt;li class=&quot;flex items-center gap-3 text-sm text-zinc-300&quot;&gt;&lt;iconify-icon icon=&quot;lucide:check&quot; class=&quot;text-[#ef233c]&quot;&gt;&lt;/iconify-icon&gt; Team Collaboration&lt;/li&gt;
+&lt;li class=&quot;flex items-center gap-3 text-sm text-zinc-300&quot;&gt;&lt;iconify-icon icon=&quot;lucide:check&quot; class=&quot;text-[#ef233c]&quot;&gt;&lt;/iconify-icon&gt; Custom Design Systems&lt;/li&gt;
+&lt;li class=&quot;flex items-center gap-3 text-sm text-zinc-300&quot;&gt;&lt;iconify-icon icon=&quot;lucide:check&quot; class=&quot;text-[#ef233c]&quot;&gt;&lt;/iconify-icon&gt; API Access &amp; SSO&lt;/li&gt;
+&lt;/ul&gt;
+&lt;button id=&quot;plan-team-btn&quot; class=&quot;w-full py-3 px-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-lg text-sm font-bold uppercase tracking-wider transition-all&quot;&gt;Contact Sales&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- CTA Waitlist --&gt;
+&lt;section class=&quot;py-32 px-6 text-center bg-zinc-950/40&quot;&gt;
+&lt;div class=&quot;max-w-3xl mx-auto&quot;&gt;
+&lt;h2 class=&quot;text-5xl md:text-7xl font-bold font-manrope mb-8 tracking-tighter&quot;&gt;Ready to &lt;span class=&quot;text-[#ef233c]&quot;&gt;Build?&lt;/span&gt;&lt;/h2&gt;
+&lt;p class=&quot;text-xl text-zinc-400 mb-12&quot;&gt;Join the waitlist today and get early access to the next generation of design tools.&lt;/p&gt;
+
+&lt;form class=&quot;max-w-md mx-auto flex flex-col sm:flex-row gap-4&quot;&gt;
+&lt;input type=&quot;email&quot; placeholder=&quot;Enter your email&quot; class=&quot;flex-1 bg-white/5 border border-white/10 rounded-full px-6 py-4 text-white focus:outline-none focus:border-[#ef233c] transition-all&quot;&gt;
+&lt;button id=&quot;waitlist-submit-btn&quot; class=&quot;bg-[#ef233c] hover:bg-red-700 text-white font-bold rounded-full px-8 py-4 transition-all&quot;&gt;Join Now&lt;/button&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;/main&gt;
+
+&lt;!-- Footer --&gt;
+&lt;footer class=&quot;bg-black border-t border-zinc-900 pt-20 pb-10 relative overflow-hidden&quot;&gt;
+&lt;div class=&quot;max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-24 relative z-10&quot;&gt;
+&lt;div class=&quot;md:col-span-2&quot;&gt;
+&lt;div class=&quot;flex items-center gap-2 mb-6&quot;&gt;
+&lt;div class=&quot;w-5 h-5 bg-[#ef233c] rounded-sm rotate-45&quot;&gt;&lt;/div&gt;
+&lt;span class=&quot;text-2xl font-bold font-manrope tracking-tight&quot;&gt;Acme&lt;/span&gt;
+&lt;/div&gt;
+&lt;p class=&quot;text-zinc-500 max-w-xs leading-relaxed&quot;&gt;Pioneering the future of digital product design with artificial intelligence and human-centered design principles.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;h4 class=&quot;text-xs font-bold text-[#ef233c] uppercase tracking-widest mb-6&quot;&gt;Platform&lt;/h4&gt;
+&lt;ul class=&quot;space-y-4 text-zinc-400 text-sm&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;footer-feat-link&quot; class=&quot;hover:text-white transition-colors&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;footer-int-link&quot; class=&quot;hover:text-white transition-colors&quot;&gt;Integrations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;footer-price-link&quot; class=&quot;hover:text-white transition-colors&quot;&gt;Pricing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;footer-docs-link&quot; class=&quot;hover:text-white transition-colors&quot;&gt;Docs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;h4 class=&quot;text-xs font-bold text-[#ef233c] uppercase tracking-widest mb-6&quot;&gt;Company&lt;/h4&gt;
+&lt;ul class=&quot;space-y-4 text-zinc-400 text-sm&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;footer-about-link&quot; class=&quot;hover:text-white transition-colors&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;footer-careers-link&quot; class=&quot;hover:text-white transition-colors&quot;&gt;Careers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;footer-blog-link&quot; class=&quot;hover:text-white transition-colors&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot; id=&quot;footer-legal-link&quot; class=&quot;hover:text-white transition-colors&quot;&gt;Legal&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Huge Footer Text --&gt;
+&lt;div class=&quot;flex justify-center items-center py-10 opacity-20 pointer-events-none&quot;&gt;
+&lt;h1 class=&quot;text-[15vw] leading-none font-bold font-manrope tracking-tighter text-stroke select-none&quot;&gt;ACME&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;max-w-7xl mx-auto px-6 border-t border-zinc-900 pt-8 flex flex-col md:flex-row items-center justify-between text-zinc-600 text-[10px] uppercase tracking-widest&quot;&gt;
+&lt;p&gt;&amp;copy; 2024 Acme AI Inc. All rights reserved.&lt;/p&gt;
+&lt;div class=&quot;flex gap-6 mt-4 md:mt-0&quot;&gt;
+&lt;a href=&quot;#&quot; id=&quot;social-twitter-link&quot; class=&quot;hover:text-zinc-400&quot;&gt;Twitter&lt;/a&gt;
+&lt;a href=&quot;#&quot; id=&quot;social-linkedin-link&quot; class=&quot;hover:text-zinc-400&quot;&gt;LinkedIn&lt;/a&gt;
+&lt;a href=&quot;#&quot; id=&quot;social-github-link&quot; class=&quot;hover:text-zinc-400&quot;&gt;GitHub&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/footer&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+~~~
+
+Please use the above as reference and apply to our context</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：superdesigndev/superdesign-prompts<br>原始文件：<code>prompts/red-noir-style/README.md</code><br>许可证：CC0-1.0<br>作者：Jason Zhou<br><a href="https://github.com/superdesigndev/superdesign-prompts/blob/main/prompts/red-noir-style/README.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="community-superdesign-deep-red-style-5b01cb.html">Deep Red Style<small>Design Systems &amp; Styles · design-systems-styles</small></a><a href="community-superdesign-glassmorphism-style.html">Glassmorphism Style<small>Design Systems &amp; Styles · landing-page</small></a><a href="community-superdesign-mosaic-grid-architecture-style.html">Mosaic Grid Architecture Style<small>Design Systems &amp; Styles · landing-page</small></a><a href="community-superdesign-neural-noir-interface-style.html">Neural Noir Interface Style<small>Design Systems &amp; Styles · landing-page</small></a><a href="community-superdesign-cinematic-style.html">Cinematic Style<small>Design Systems &amp; Styles · landing-page</small></a><a href="community-superdesign-kinetic-orange-style.html">Kinetic Orange Style<small>Design Systems &amp; Styles · landing-page</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

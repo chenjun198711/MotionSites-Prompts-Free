@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Benefits Features — Features Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深灰背景上，左侧标题区搭配右侧三列卡片网格，展示产品核心优势，卡片带图标和悬停动画。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/benefits-features.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Benefits Features — Features Section 提示词">
+<meta property="og:description" content="深灰背景上，左侧标题区搭配右侧三列卡片网格，展示产品核心优势，卡片带图标和悬停动画。">
+<meta property="og:url" content="https://prompt-site.shop/p/benefits-features.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Benefits Features","description":"深灰背景上，左侧标题区搭配右侧三列卡片网格，展示产品核心优势，卡片带图标和悬停动画。","url":"https://prompt-site.shop/p/benefits-features.html","inLanguage":"zh-CN","genre":"Features Section","dateCreated":"2026-05-03T12:37:17.881858+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-features_section">Features Section</a></div><h1>Benefits Features</h1><div class="chip-row"><span class="chip">Features Section</span><span class="chip">features</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-05-03</span><span>正文：5,855 字符</span></div><div class="hero-media"><video src="../assets/previews/benefits-features.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>深灰背景上，左侧标题区搭配右侧三列卡片网格，展示产品核心优势，卡片带图标和悬停动画。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Please build a React component that perfectly replicates a specific &quot;Benefits&quot; section. Use Tailwind CSS for styling, `motion/react` for animations, and `lucide-react` for icons.
+
+### 1. Typography and Global Styles
+- Use the `Inter` font everywhere (import via Google Fonts).
+- The section background should be `#F4F6FA` and the base text color `#111`.
+- Heavily utilize `tracking-tight` for headings and `tracking-wide` for small eyebrow tags.
+
+### 2. Main Wrapper Layout
+- Create a `&lt;section&gt;` with `py-20 lg:py-32 bg-[#F4F6FA] overflow-hidden`.
+- Inside, create a container with `w-[90%] md:w-[85%] max-w-[1600px] mx-auto`.
+- Use a 12-column grid layout on large screens: `grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-start`.
+
+### 3. Left Column (Takes up `lg:col-span-5`)
+This column should contain staggered elements wrapped in `motion.div`. Use `initial={{ opacity: 0, y: 20 }}`, `whileInView={{ opacity: 1, y: 0 }}`, `viewport={{ once: true, amount: 0.3 }}` with a `duration: 0.6` and incrementing delays.
+
+1. **Eyebrow Tag:** A flex container with a solid blue dot (`w-2 h-2 rounded-full bg-[#3b82f6]`) and the text &quot;The benefit&quot; (`text-[15px] font-medium tracking-wide`).
+2. **Main Heading:**
+- Text size: `text-[clamp(1.7rem,5.5vw,4.5rem)] leading-[1.05] tracking-tight font-medium mb-8`.
+- The first line is &quot;Explore [INLINE_IMAGE] our&quot;
+- The inline image must use exactly this URL: `https://res.cloudinary.com/dsdhxhhqh/image/upload/v1777202844/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82_26-04-2026_134245-removebg-preview_jju5ww.png`. Style it as an inline block: `w-[1.2em] scale-[1.15] h-[0.8em] object-contain rounded-full align-middle mx-[-0.1em] -translate-y-[0.1em]`.
+- The second line is &quot;flexible of activity.&quot;
+3. **Pills Row (Flex wrap, gap 3, mb-12):** Two white `rounded-full` pills with slight shadows (`shadow-[0_2px_8px_rgba(0,0,0,0.04)]`), padding `px-5 py-2.5`, flex items centered.
+- First Pill: Contains a `&lt;Soup className=&quot;w-[18px] h-[18px] text-gray-700&quot;/&gt;` and text &quot;Eating After the Game&quot;.
+- Second Pill: Contains a `&lt;Shirt className=&quot;w-[18px] h-[18px] text-gray-700&quot;/&gt;` and text &quot;Game Jersey&quot;.
+4. **Accordion/Tabs List:**
+- Manage state for `activeTab` (defaulting to &#39;connections&#39;).
+- Create two tabs: &quot;Connections&quot; and &quot;Sport Pacakge&quot; (keep exact spelling).
+- Wrapper styling for each tab: `rounded-[24px] overflow-hidden transition-all duration-300`.
+- State styling: If active, apply `bg-white shadow-[0_4px_24px_rgba(0,0,0,0.03)]`. If inactive, apply `hover:bg-black/5 cursor-pointer`.
+- In the tab header (padding `p-7 md:p-8`), map the title (`text-[22px] font-medium`). On the right, include an animated icon toggle. Use framer-motion to cross-fade and rotate between a `&lt;Plus /&gt;` and `&lt;Minus /&gt;` icon depending on whether the tab is active.
+- Add a smooth expand/collapse `AnimatePresence` revealing content below the header.
+- Connections content: &quot;Built to connect — with people, purpose, and the momentum that moves you forward.&quot;
+- Sport Package content: &quot;A comprehensive collection of sporting goods, tailored for maximum performance and everyday agility.&quot;
+
+### 4. Right Column (Takes up `lg:col-span-7 h-full`)
+Fade this entire side in from the right (`x: 20` to `0`).
+- Container: `bg-white rounded-[2.5rem] p-6 md:p-8 xl:p-12 shadow-[0_8px_30px_rgba(0,0,0,0.04)]`. Use `flex flex-col xl:flex-row gap-8 h-full min-h-[560px]`.
+
+**Left Side of Card (Text &amp; Button):**
+- Flex column, flex-1, `justify-between`.
+- Top section: A flex label `&lt;Target className=&quot;w-5 h-5 text-[#ea580c]&quot;/&gt;` with text `EST — 1997` (`font-bold text-[15px] tracking-wide`). Below it, paragraph text: &quot;Smart features designed to move with you — fast, flexible, and built for everyday action.&quot; (`max-w-[280px] text-gray-500 text-[18px] leading-[1.6]`).
+- Bottom section: A stacked heading: &quot;Visionary&quot; over &quot;Precision Play&quot; (`text-[clamp(1.7rem,5vw,46px)] leading-[1.1] font-medium tracking-tight mb-8`).
+- Button: 100% width on mobile, `rounded-full bg-black text-white px-7 py-4 flex items-center justify-between text-[15px] font-medium hover:bg-gray-800`. Text &quot;Join Now!&quot; with an `&lt;ArrowRight /&gt;` icon.
+
+**Right Side of Card (Media and Floating Badges):**
+- Container: `w-full xl:w-[320px] 2xl:w-[410px] h-[360px] md:h-[450px] xl:h-auto rounded-[2.5rem] relative overflow-hidden flex-shrink-0`.
+- **The Video Layer:** Use a `&lt;video&gt;` tag filling exactly the absolute shape (`absolute inset-0 w-full h-full object-cover z-0`). Props: `autoPlay loop muted playsInline`.
+- SRC MUST BE EXACTLY: `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260426_105815_d66e9c4c-a1f8-4011-9ee5-f0cace24e642.mp4`
+- **Top-Right Pill (Absolute Z-10):** Positioned `top-6 right-6 lg:top-8 lg:right-8`. `bg-white text-[#111] px-5 py-2.5 rounded-full flex shadow-md gap-2.5 text-[15px] font-medium`. Contains a `&lt;Gift className=&quot;w-5 h-5 text-gray-700&quot; /&gt;` and the text &quot;February Sale&quot;. Pop this in with framer motion `scale`.
+- **Bottom-Left Card (Absolute Z-10):** Positioned `bottom-6 left-6 lg:bottom-8 lg:left-8`. `bg-white text-[#111] rounded-[28px] overflow-hidden w-[190px] shadow-lg`. Pop this in with `x: -20` to `0`.
+- **Counter interaction &amp; logic:** Attach `onViewportEnter={handleStartCount}` to this motion div. State `countValue` should animate from 0 to 86 seamlessly over 2000 duration using `performance.now()` in `requestAnimationFrame` and an ease-out calculation.
+- Top half (white): Padding `pt-6 px-6 pb-4`. Contains text &quot;Tenis Outdor&quot; in `text-gray-600 text-[15px] font-medium mb-1.5`. Below it, map the counter: `{countValue}%` styled `text-[42px] font-medium tracking-tight leading-none`.
+- Bottom half (blue): `bg-[#3585A5] text-white px-6 py-4 flex items-center gap-2.5`. Contains `&lt;Zap className=&quot;w-5 h-5 fill-white text-white&quot;/&gt;` and text &quot;Boost&quot; (`font-medium text-[16px]`).</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="interior-features.html">Interior Features<small>Features Section · features</small></a><a href="liquid-glass-features.html">Liquid Glass Features<small>Features Section · features</small></a><a href="nexacore-results.html">NexaCore Results<small>Features Section · features</small></a><a href="nexacore-control.html">NexaCore Control<small>Features Section · features</small></a><a href="nike-hover.html">Nike Hover<small>Features Section · features</small></a><a href="cognitra-feature.html">Cognitra Feature<small>Features Section · features</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

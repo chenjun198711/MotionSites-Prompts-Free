@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fun 404 Page — Education 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Build a full-screen animated 404 error page for a children&#39;s brand called &quot;TinyTrails&quot; using React, Tailwind CSS, and Lucide React icons. The page mus">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/fun-404-page.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fun 404 Page — Education 提示词">
+<meta property="og:description" content="Build a full-screen animated 404 error page for a children&#39;s brand called &quot;TinyTrails&quot; using React, Tailwind CSS, and Lucide React icons. The page mus">
+<meta property="og:url" content="https://prompt-site.shop/p/fun-404-page.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/fun-404-page.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Fun 404 Page","description":"Build a full-screen animated 404 error page for a children's brand called \"TinyTrails\" using React, Tailwind CSS, and Lucide React icons. The page mus","url":"https://prompt-site.shop/p/fun-404-page.html","inLanguage":"zh-CN","genre":"Education","dateCreated":"2026-07-14T02:01:33.957887+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-education">Education</a></div><h1>Fun 404 Page</h1><div class="chip-row"><span class="chip">Education</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-07-14</span><span>正文：6,085 字符</span></div><div class="hero-media"><img src="../assets/previews/fun-404-page.webp" alt="Fun 404 Page 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a full-screen animated 404 error page for a children&#39;s brand called &quot;TinyTrails&quot; using React, Tailwind CSS, and Lucide React icons. The page must be a single `App.tsx` component. Use the Inter font (weights 400–900) loaded from Google Fonts. The page is a single viewport-height screen with no scrolling.
+
+---
+
+**LAYOUT &amp; BACKGROUND:**
+
+- The full page is `w-full h-screen overflow-hidden flex flex-col` with a CSS linear gradient background from `#FF8233` (top) to `#FDAC55` (bottom).
+
+---
+
+**BACKGROUND &quot;404&quot; TEXT EFFECT:**
+
+- Behind everything, centered in the viewport, render the text &quot;404&quot; in white (`#FFFFFF`), `font-black`, `leading-none`, `tracking-tighter`, `whitespace-nowrap`.
+- Font size: `clamp(200px, 48vw, 800px)`.
+- The text is scaled horizontally by `1.15` and vertically dynamically: on mount (and resize), measure the text element&#39;s `offsetHeight`, divide `window.innerHeight` by that height, and multiply by `1.4` to get the Y scale. Apply via `transform: scale(1.15, ${scaleY * 1.4})`.
+- Over the &quot;404&quot; text (same centered container), render a white (`#FFFFFF`) oval: a `div` with `rounded-full`, height `h-[22vh] sm:h-[26vh] md:h-[50vh]`, width `clamp(120px, 20vw, 400px)`, scaled vertically by the same dynamic `scaleY` value with `transformOrigin: center`.
+- The entire background layer (text + oval) is wrapped in a container with `opacity: 0.8` and a CSS mask that fades to transparent at the bottom: `mask-image: linear-gradient(to bottom, black 40%, transparent 95%)` (with `-webkit-mask-image` for Safari).
+- This layer is `absolute inset-0 pointer-events-none`.
+
+---
+
+**NAVIGATION BAR:**
+
+- `relative z-20`, flex row, items centered, `justify-between`, padding `px-4 sm:px-6 md:px-12 py-4 sm:py-5`.
+- **Logo (left):** A 2x2 grid of white circles (`grid-cols-2 gap-0.5`), each circle `w-2.5 h-2.5 sm:w-3 sm:h-3 bg-white rounded-full`. Next to it, the text &quot;TinyTrails&quot; in `text-white font-bold text-lg sm:text-xl ml-1`.
+- **Desktop nav links (center/right):** Hidden on mobile (`hidden md:flex`), a row of pill buttons with `gap-1`. Items: &quot;About Us&quot;, &quot;Programs&quot;, &quot;Reviews&quot;, &quot;FAQ&quot;, &quot;Contacts&quot;. Each is an `&lt;a&gt;` with `px-4 py-1.5 text-sm font-medium rounded-full bg-white` and text color `#F16524`, with `hover:opacity-90 transition-colors`.
+- **Menu button (right):** A pill button with `px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-white` and background color `#F16524`. Contains a Lucide `Menu` icon (`w-4 h-4`) and the text &quot;Menu&quot; (`text-sm font-medium hidden sm:inline`). Has `hover:opacity-90 transition-colors`.
+
+---
+
+**MOBILE MENU OVERLAY:**
+
+- Fixed fullscreen (`fixed inset-0 z-50`), with visibility toggled. Transition: `duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]`.
+- **Backdrop:** `absolute inset-0 bg-black/40 backdrop-blur-sm`, fades in/out with `opacity` transition over 500ms. Clicking it closes the menu.
+- **Panel:** Slides in from right. `absolute top-0 right-0 h-full w-full sm:w-[380px]`, translates between `translate-x-full` (closed) and `translate-x-0` (open). Background: `linear-gradient(135deg, #FF6B1A 0%, #FF9642 100%)`.
+  - **Panel header:** Same logo as nav (2x2 white dots + &quot;TinyTrails&quot; bold white text). Close button: `w-10 h-10 rounded-full bg-white/20 text-white hover:bg-white/30` with Lucide `X` icon (`w-5 h-5`).
+  - **Menu items:** Staggered animation. Each item is `px-6 py-4 text-lg font-semibold text-white rounded-2xl bg-white/10 hover:bg-white/20 transition-all duration-300`. When open: `opacity-100 translate-y-0`; when closed: `opacity-0 translate-y-4`. Transition delay per item: `150 + i * 60`ms when opening, `0ms` when closing.
+  - **Bottom CTA:** Absolutely positioned at bottom (`absolute bottom-0 left-0 right-0 p-6`). A pill link: `w-full py-4 rounded-full bg-white font-semibold text-base` with text color `#F16524`, `hover:scale-[1.02]`. Contains Lucide `ArrowLeft` icon + &quot;Back to Home&quot;. Fades in with 450ms delay when opening.
+- Body scroll is locked (`overflow: hidden`) when menu is open.
+
+---
+
+**CENTER VIDEO:**
+
+- An absolutely positioned container (`absolute inset-0 flex items-center justify-center pointer-events-none`) with `margin-top: calc(-6vh - 40px)` to shift it upward.
+- Inside, a responsive container: `w-[120vw] h-[85vh] sm:w-[70vw] sm:h-[70vh] md:w-[62vw] md:h-[78vh]`.
+- Contains a `&lt;video&gt;` element with `autoPlay loop muted playsInline`, class `w-full h-full object-contain pointer-events-none mix-blend-darken`.
+- **Video source URL:** `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260713_234424_b1332b69-2e69-4302-8dbc-40f86846afbd.mp4`
+
+---
+
+**BOTTOM CONTENT:**
+
+- `relative z-30 mt-auto pb-8 sm:pb-16 flex flex-col items-center text-center px-4`.
+- Heading: &quot;Oops, something went wrong!&quot; in `text-white text-lg sm:text-xl md:text-2xl font-medium mb-3 sm:mb-4`.
+- Button/link: An `&lt;a href=&quot;/&quot;&gt;` pill with `inline-flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-white font-semibold text-sm sm:text-base` and background `#F16524`. Has `hover:scale-105 hover:shadow-lg transition-all`. Contains Lucide `ArrowLeft` icon (`w-4 h-4 sm:w-5 sm:h-5`) + &quot;Back to Home&quot;.
+
+---
+
+**GLOBAL CSS (`index.css`):**
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: &#39;Inter&#39;, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+```
+
+---
+
+**HTML HEAD:**
+
+- Load Inter font from Google Fonts: `https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap` with preconnect to `fonts.googleapis.com` and `fonts.gstatic.com`.
+- Title: &quot;404 - Page Not Found&quot;.
+
+---
+
+**KEY COLOR PALETTE:**
+- Page gradient: `#FF8233` to `#FDAC55`
+- Accent/buttons: `#F16524`
+- Text &amp; shapes: `#FFFFFF`
+- Menu gradient: `#FF6B1A` to `#FF9642`
+- Menu overlay backdrop: `black/40` with `backdrop-blur-sm`
+- Menu item backgrounds: `white/10`, `white/20` on hover
+
+---
+
+**DEPENDENCIES:** React, Tailwind CSS, Lucide React (`ArrowLeft`, `Menu`, `X` icons). Vite build system. No other libraries.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="adaptive-learning.html">Adaptive Learning<small>Education · hero</small></a><a href="bite-sized-courses.html">Bite-Sized Courses<small>Education · mobile</small></a><a href="skills-lea.html">LearnHub<small>Education · mobile</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inner Quest — Wellness 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Exact Recreation Prompt: Voral.co Landing Page   Tech Stack   Global CSS (src/index.css)      css @tailwind base; @tailwind components; @tailwind util">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/inner-quest.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Inner Quest — Wellness 提示词">
+<meta property="og:description" content="Exact Recreation Prompt: Voral.co Landing Page   Tech Stack   Global CSS (src/index.css)      css @tailwind base; @tailwind components; @tailwind util">
+<meta property="og:url" content="https://prompt-site.shop/p/inner-quest.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Inner Quest","description":"Exact Recreation Prompt: Voral.co Landing Page   Tech Stack   Global CSS (src/index.css)      css @tailwind base; @tailwind components; @tailwind util","url":"https://prompt-site.shop/p/inner-quest.html","inLanguage":"zh-CN","genre":"Wellness","dateCreated":"2026-07-17T04:52:57.839791+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-wellness">Wellness</a></div><h1>Inner Quest</h1><div class="chip-row"><span class="chip">Wellness</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-07-17</span><span>正文：6,164 字符</span></div><div class="hero-media"><video src="../assets/previews/inner-quest.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">```
+# Exact Recreation Prompt: Voral.co Landing Page
+
+## Tech Stack
+
+## Global CSS (src/index.css)
+` ` `css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: &#39;Helvetica Neue ME&#39;, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+` ` `
+
+## index.html `&lt;head&gt;`
+- Title: `Axial.ai`
+- Font stylesheet link: `&lt;link href=&quot;https://db.onlinewebfonts.com/c/95cecf452d3208880088a5b4c19c7ecf?family=Helvetica+Neue+ME&quot; rel=&quot;stylesheet&quot;&gt;`
+
+## Page Structure (single full-screen `&lt;section&gt;`)
+
+### 1. Background Video (z-0, absolute inset-0)
+- Attributes: `autoPlay`, `muted`, `playsInline`
+- Class: `h-full w-full object-cover object-center`
+- Uses `useRef&lt;HTMLVideoElement&gt;` for the ref
+
+### 2. Navigation Bar (z-10, relative, max-w-5xl, mx-auto, flex justify-between, px-6 py-5 / md:px-8 md:py-6)
+
+**Left — Logo + Brand Name**
+- Custom SVG logo (28x28, viewBox 0 0 256 256, black fill) — four quarter-circle shapes forming a pinwheel/clover pattern:
+` ` `svg
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;28&quot; height=&quot;28&quot; fill=&quot;none&quot; viewBox=&quot;0 0 256 256&quot;&gt;
+  &lt;path d=&quot;M 4.688 136 C 68.373 136 120 187.627 120 251.312 C 120 252.883 119.967 254.445 119.905 256 L 0 256 L 0 136.096 C 1.555 136.034 3.117 136 4.688 136 Z M 251.312 136 C 252.883 136 254.445 136.034 256 136.096 L 256 256 L 136.095 256 C 136.032 254.438 136.001 252.875 136 251.312 C 136 187.627 187.627 136 251.312 136 Z M 119.905 0 C 119.967 1.555 120 3.117 120 4.688 C 120 68.373 68.373 120 4.687 120 C 3.117 120 1.555 119.967 0 119.905 L 0 0 Z M 256 119.905 C 254.445 119.967 252.883 120 251.312 120 C 187.627 120 136 68.373 136 4.687 C 136 3.117 136.033 1.555 136.095 0 L 256 0 Z&quot; fill=&quot;black&quot; /&gt;
+&lt;/svg&gt;
+` ` `
+- Brand text: **&quot;Voral.co&quot;** — `text-lg font-medium tracking-tight text-black`
+- Logo + brand in a `flex items-center gap-2` container
+
+**Center — Desktop Nav Links** (hidden on mobile, `hidden md:flex gap-10`)
+- Links: Home, Process, Explore, Modules, Help
+- Each: `text-sm text-black transition-opacity hover:opacity-70`
+
+**Right — Desktop CTA Button** (hidden on mobile, `hidden md:inline-flex`)
+- Text: &quot;Begin Your Quest&quot;
+- Style: `rounded-xl px-6 py-2.5 text-sm font-medium text-white transition-transform hover:scale-105`
+- Inline styles: `backgroundColor: &#39;#2F302F&#39;`, `boxShadow: &#39;0px 4px 12px rgba(47, 48, 47, 0.4)&#39;`
+
+**Mobile Hamburger** (visible on mobile only, `md:hidden`)
+- Button: `relative z-50 flex h-10 w-10 items-center justify-center rounded-lg`
+- Inner container: `relative h-5 w-5`
+- Menu icon: `absolute inset-0 h-5 w-5 text-black transition-all duration-300` — when open: `rotate-90 scale-0 opacity-0`, when closed: `rotate-0 scale-100 opacity-100`
+- X icon: `absolute inset-0 h-5 w-5 text-black transition-all duration-300` — when open: `rotate-0 scale-100 opacity-100`, when closed: `-rotate-90 scale-0 opacity-0`
+- Toggles `menuOpen` state
+
+### 3. Mobile Menu Overlay (z-40, fixed inset-0, `md:hidden`)
+- `bg-black/20 backdrop-blur-sm transition-opacity duration-300`
+- When open: `opacity-100`, when closed: `pointer-events-none opacity-0`
+- Click closes menu
+
+### 4. Mobile Menu Panel (z-40, fixed right-0 top-0, `md:hidden`)
+- `flex h-full w-72 flex-col bg-white/95 backdrop-blur-xl` — **this is the liquid glass effect**
+- Transition: `transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]`
+- When open: `translate-x-0`, when closed: `translate-x-full`
+
+**Panel Header**: Logo + &quot;Voral.co&quot; on left, X close button (h-10 w-10) on right, `px-6 py-5`
+
+**Panel Nav Links**: `flex flex-1 flex-col gap-1 px-6 pt-4`
+- Same 5 links: Home, Process, Explore, Modules, Help
+- Each: `rounded-lg px-4 py-3 text-base font-medium text-black transition-colors hover:bg-black/5`
+- When open: `opacity: 1, transform: translateX(0)`, when closed: `opacity: 0, transform: translateX(20px)`
+- Transition: `opacity 400ms ease, transform 400ms ease, background-color 200ms ease`
+
+**Panel CTA Button** (bottom, `px-6 pb-8`)
+- Text: &quot;Begin Your Quest&quot;
+- `w-full rounded-xl px-6 py-3 text-sm font-medium text-white transition-transform hover:scale-[1.02]`
+- Inline: `backgroundColor: &#39;#2F302F&#39;`, `boxShadow: &#39;0px 4px 12px rgba(47, 48, 47, 0.4)&#39;`
+- When open: `opacity: 1, transform: translateY(0)`, when closed: `opacity: 0, transform: translateY(10px)`
+- Transition: `opacity 400ms ease 300ms, transform 400ms ease 300ms`
+
+### 5. Hero Content (z-10, relative, flex flex-col items-center, text-center)
+- Container: `px-6 pt-12 sm:pt-16 md:px-4 md:pt-24`
+
+**Headline** (`&lt;h1&gt;`, max-w-3xl, `letterSpacing: &#39;-0.03em&#39;`)
+- Line 1: &quot;Explore Vast Realms&quot; — `block text-3xl font-light sm:text-4xl md:text-5xl lg:text-[56px]`, color `#848382`
+- Line 2: &quot;and Shape Tomorrow&quot; — `mt-1 block text-3xl font-medium text-black sm:text-4xl md:text-5xl lg:text-[56px]`
+
+**Subheadline** (`&lt;p&gt;`)
+- `mt-5 max-w-sm px-4 text-sm leading-relaxed sm:max-w-md sm:px-0 md:mt-6 md:text-base`, color `#848382`
+- Text: &quot;From thought to reality, we bring you the craft, focus, and ingenuity to turn every spark into momentum.&quot;
+
+**CTA Button**
+- Text: &quot;Enter the space&quot;
+- `mt-6 rounded-xl px-8 py-3 text-sm font-medium text-white transition-transform hover:scale-105 md:mt-8`
+- Inline: `backgroundColor: &#39;#2F302F&#39;`, `boxShadow: &#39;0px 4px 12px rgba(47, 48, 47, 0.4)&#39;`
+
+### 6. Bottom Bar — Desktop (z-10, absolute bottom-6, hidden on mobile, `md:flex`)
+- `items-end justify-between px-8 md:px-16 lg:px-24`
+
+**Left**: &quot;All motion starts from within.&quot; — `text-sm text-black`
+**Center**: &quot;A mindful place for inner expansion, clarity, and purposeful presence. No clutter. Just depth.&quot; — `max-w-xs text-center text-sm`, color `#848382`
+**Right**: &quot;[Scroll to Discover]&quot; — `text-sm text-black`
+
+### 7. Bottom Bar — Mobile (z-10, absolute bottom-6, `md:hidden`)
+- `flex flex-col items-center gap-2 px-6`
+- Line 1: &quot;A mindful place for inner expansion, clarity, and purposeful presence.&quot; — `text-center text-xs`, color `#848382`
+- Line 2: &quot;[Scroll to Discover]&quot; — `text-xs text-black`
+
+## Color Palette
+
+## Key Design Details
+
+## Dependencies
+` ` `
+react@^18.3.1, react-dom@^18.3.1, lucide-react@^0.344.0
+` ` `
+```</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="mindora.html">Mindora<small>Wellness · wellness</small></a><a href="nature-ritual.html">Nature Ritual<small>Wellness · wellness</small></a><a href="mindful-companion.html">Mindful Companion<small>Wellness · hero</small></a><a href="routine-coach.html">Routine Coach<small>Wellness · hero</small></a><a href="breathstone.html">Breathstone<small>Wellness · hero</small></a><a href="fitness-dashboard.html">Fitness Dashboard<small>Wellness · mobile</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

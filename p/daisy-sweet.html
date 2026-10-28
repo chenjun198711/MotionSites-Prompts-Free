@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Daisy Sweet — Products 提示词 | MotionSites Prompts</title>
+<meta name="description" content="浅蓝背景的产品展示区与循环视频左右分屏，适用于香水等高端商品展示，移动端自动堆叠为上下布局。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/daisy-sweet.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Daisy Sweet — Products 提示词">
+<meta property="og:description" content="浅蓝背景的产品展示区与循环视频左右分屏，适用于香水等高端商品展示，移动端自动堆叠为上下布局。">
+<meta property="og:url" content="https://prompt-site.shop/p/daisy-sweet.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/daisy-sweet.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Daisy Sweet","description":"浅蓝背景的产品展示区与循环视频左右分屏，适用于香水等高端商品展示，移动端自动堆叠为上下布局。","url":"https://prompt-site.shop/p/daisy-sweet.html","inLanguage":"zh-CN","genre":"Products","dateCreated":"2026-06-06T07:01:44.616993+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-products">Products</a></div><h1>Daisy Sweet</h1><div class="chip-row"><span class="chip">Products</span><span class="chip">features</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-06</span><span>正文：9,367 字符</span></div><div class="hero-media"><img src="../assets/previews/daisy-sweet.webp" alt="Daisy Sweet 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>浅蓝背景的产品展示区与循环视频左右分屏，适用于香水等高端商品展示，移动端自动堆叠为上下布局。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a standalone React + TypeScript + Tailwind CSS section component. This is a fragrance product showcase split into two halves: a sky-blue product panel on the left and a looping video on the right. On mobile it stacks vertically (product panel on top, video strip below). Every value below is exact — do not approximate.
+
+## Tech Stack
+- React 18 + TypeScript
+- Tailwind CSS 3 (default config, default breakpoints: `sm:640px`, `md:768px`)
+- Vite
+- No extra packages. No icon libraries needed for this section.
+
+## Constants
+
+```ts
+const TEXT_COLOR = &#39;#000000&#39;;
+const BG_BLUE = &#39;#4BB3ED&#39;;
+const EASE = &#39;cubic-bezier(0.22, 1, 0.36, 1)&#39;;
+```
+
+## Animation Helper
+
+Create a reusable function that returns an object with a `style` property for CSS fade+slide entrance animations:
+
+```ts
+function anim(visible: boolean, delay: number, opts: { y?: number; x?: number; duration?: number } = {}) {
+const { y = 20, x = 0, duration = 1600 } = opts;
+const translateFrom = y !== 0 ? `translateY(${y}px)` : x !== 0 ? `translateX(${x}px)` : &#39;none&#39;;
+return {
+style: {
+opacity: visible ? 1 : 0,
+transform: visible ? &#39;translate(0,0)&#39; : translateFrom,
+transition: `opacity ${duration}ms ${EASE} ${delay}ms, transform ${duration}ms ${EASE} ${delay}ms`,
+} as React.CSSProperties,
+};
+}
+```
+
+This returns `{ style: {...} }` so it can be spread as `{...anim(...)}` directly onto elements (which sets the `style` prop), OR accessed as `anim(...).style` when merging with other inline styles.
+
+## Product Data
+
+```ts
+const SCENT_PRODUCT = {
+name: &#39;Eau So Sweet&#39;,
+size: &#39;100 ml / 3.3 oz&#39;,
+image: &#39;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260511_151640_5b4a7bf8-4eb2-4a49-aa63-17a9bb642b88.png&amp;w=1280&amp;q=85&#39;,
+notes: [
+{ label: &#39;Fruity top&#39;, ingredient: &#39;WHITE RASPBERRIES&#39; },
+{ label: &#39;Floral heart&#39;, ingredient: &#39;DAISY TREE PETALS&#39; },
+{ label: &#39;Feminine base&#39;, ingredient: &#39;SUGAR MUSKS&#39; },
+],
+};
+```
+
+## Video URL (exact, verbatim)
+
+```
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260511_151802_1bbf9a81-a7cb-4be1-b858-f1cd92b62b96.mp4
+```
+
+---
+
+## Component: `ProductPanel`
+
+Accepts props:
+
+```ts
+{
+bg: string; // background color
+product: { name: string; size: string; image: string };
+notes: { label: string; ingredient: string }[];
+visible: boolean; // controls animation trigger
+noteStyle?: &#39;normal&#39; | &#39;bold&#39;; // defaults to &#39;normal&#39;
+}
+```
+
+### Outer wrapper
+```
+&lt;div
+className=&quot;relative flex flex-col px-6 md:px-8 pt-6 md:pt-8 pb-8 md:pb-10&quot;
+style={{ backgroundColor: bg, minHeight: &#39;100%&#39; }}
+&gt;
+```
+
+### 1. Top labels row
+```
+&lt;div
+className=&quot;flex items-start justify-between mb-auto&quot;
+{...anim(visible, 0, { y: 12, duration: 1400 })}
+&gt;
+```
+- Left label: `&lt;span className=&quot;text-xs font-normal&quot; style={{ color: TEXT_COLOR }}&gt;` — text is `&#39;Daisy love&#39;` when `noteStyle !== &#39;bold&#39;`, `&#39;Daisy wild&#39;` when `noteStyle === &#39;bold&#39;`.
+- Right label: same classes/style — text is `&#39;Sweet&#39;` when normal, `&#39;Playful&#39;` when bold.
+
+### 2. Product image block
+```
+&lt;div
+className=&quot;flex flex-col items-center py-8&quot;
+style={{ flex: 1, justifyContent: &#39;center&#39;, ...anim(visible, 300, { y: 40, duration: 1800 }).style }}
+&gt;
+```
+
+#### Image container
+```
+&lt;div
+className=&quot;overflow-hidden&quot;
+style={{
+width: &#39;clamp(140px, 40%, 220px)&#39;,
+aspectRatio: &#39;220/340&#39;,
+backgroundColor: &#39;#D9D9D9&#39;,
+borderRadius: &#39;2px&#39;,
+flexShrink: 0,
+}}
+&gt;
+&lt;img
+src={product.image}
+alt={product.name}
+style={{ width: &#39;100%&#39;, height: &#39;100%&#39;, objectFit: &#39;cover&#39;, display: &#39;block&#39; }}
+/&gt;
+&lt;/div&gt;
+```
+
+#### Caption (below image)
+```
+&lt;div className=&quot;text-center mt-4&quot; {...anim(visible, 600, { y: 10, duration: 1400 })}&gt;
+&lt;p className=&quot;text-sm font-normal&quot; style={{ color: TEXT_COLOR }}&gt;{product.name}&lt;/p&gt;
+&lt;p className=&quot;text-xs font-normal mt-1&quot; style={{ color: TEXT_COLOR }}&gt;{product.size}&lt;/p&gt;
+&lt;/div&gt;
+```
+
+### 3. Bottom row — notes + button
+
+```
+&lt;div className=&quot;flex items-end justify-between gap-4 flex-wrap&quot;&gt;
+```
+
+#### Notes column (left side)
+```
+&lt;div className=&quot;flex flex-col gap-0.5&quot; {...anim(visible, 900, { y: 16, duration: 1400 })}&gt;
+```
+For each note object, render a `&lt;div key={note.ingredient}&gt;` containing two `&lt;p&gt;` tags:
+- Label: `&lt;p className=&quot;text-xs leading-snug&quot; style={{ color: TEXT_COLOR, fontWeight: noteStyle === &#39;bold&#39; ? 700 : 400 }}&gt;{note.label}&lt;/p&gt;`
+- Ingredient: `&lt;p className=&quot;text-xs font-bold tracking-widest uppercase leading-snug&quot; style={{ color: TEXT_COLOR }}&gt;{note.ingredient}&lt;/p&gt;`
+
+#### SHOP NOW button (right side)
+```
+&lt;button
+className=&quot;text-xs font-bold tracking-widest uppercase border px-6 py-3 relative group shrink-0&quot;
+style={{
+color: TEXT_COLOR,
+borderColor: TEXT_COLOR,
+backgroundColor: &#39;transparent&#39;,
+...anim(visible, 1150, { y: 16, duration: 1400 }).style,
+}}
+&gt;
+&lt;span className=&quot;relative z-10 group-hover:text-black transition-colors duration-500&quot;&gt;SHOP NOW&lt;/span&gt;
+&lt;span
+className=&quot;absolute inset-0 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out&quot;
+style={{ backgroundColor: &#39;#ffffff&#39; }}
+/&gt;
+&lt;/button&gt;
+```
+
+The button has a `1px` solid border (via Tailwind `border` class) colored `#000000`. On hover, a white fill (`#ffffff`) scales in from the left edge (`origin-left`, `scale-x-0` -&gt; `scale-x-100`) over 500ms with `ease-out`. Text stays `z-10` above the fill. The `group-hover:text-black` class ensures text remains black over the white fill.
+
+---
+
+## Component: `ScentFinderSection`
+
+### Visibility trigger
+```ts
+const ref = useRef&lt;HTMLDivElement&gt;(null);
+const [visible, setVisible] = useState(false);
+
+useEffect(() =&gt; {
+const observer = new IntersectionObserver(
+([entry]) =&gt; { if (entry.isIntersecting) setVisible(true); },
+{ threshold: 0.15 }
+);
+if (ref.current) observer.observe(ref.current);
+return () =&gt; observer.disconnect();
+}, []);
+```
+
+Once 15% of the section is visible, `visible` flips to `true` permanently (one-shot, never resets to false). This triggers the staggered animations inside `ProductPanel`.
+
+### Layout structure
+
+```
+&lt;section ref={ref} className=&quot;relative w-full&quot;&gt;
+&lt;div className=&quot;flex flex-col md:grid md:min-h-screen&quot; style={{ gridTemplateColumns: &#39;1fr 1fr&#39; }}&gt;
+```
+
+Three children inside:
+
+#### Child 1: ProductPanel (always visible)
+```
+&lt;ProductPanel
+bg={BG_BLUE}
+product={SCENT_PRODUCT}
+notes={SCENT_PRODUCT.notes}
+visible={visible}
+/&gt;
+```
+Called with `noteStyle` defaulting to `&#39;normal&#39;` (not passed explicitly), so top labels read `Daisy love` / `Sweet`, and note labels use `fontWeight: 400`.
+
+#### Child 2: Desktop video panel (hidden below `md`)
+```
+&lt;div className=&quot;hidden md:block relative overflow-hidden&quot; style={{ backgroundColor: &#39;#111&#39;, minHeight: &#39;100%&#39; }}&gt;
+&lt;video autoPlay muted loop playsInline className=&quot;absolute inset-0 w-full h-full object-cover&quot;&gt;
+&lt;source src=&quot;https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260511_151802_1bbf9a81-a7cb-4be1-b858-f1cd92b62b96.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+```
+- Background `#111` shows while video loads.
+- `minHeight: &#39;100%&#39;` ensures the video panel fills the grid row height.
+- Video is `position:absolute inset-0`, fills and covers the container.
+
+#### Child 3: Mobile video strip (hidden at `md` and above)
+```
+&lt;div className=&quot;md:hidden relative overflow-hidden&quot; style={{ height: &#39;75vw&#39;, backgroundColor: &#39;#111&#39; }}&gt;
+&lt;video autoPlay muted loop playsInline className=&quot;absolute inset-0 w-full h-full object-cover&quot;&gt;
+&lt;source src=&quot;https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260511_151802_1bbf9a81-a7cb-4be1-b858-f1cd92b62b96.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+```
+- Fixed aspect via `height: 75vw` (so on a 390px phone it is ~293px tall).
+- Same video URL, same absolute-cover pattern, same `#111` background.
+
+### Responsive behavior summary
+
+| Viewport | Layout | Product panel | Video |
+|---|---|---|---|
+| &lt; 768px (below `md`) | `flex flex-col` | Full width, natural height | Full width, `height: 75vw`, below the panel |
+| &gt;= 768px (`md` and up) | `grid 1fr 1fr`, `min-h-screen` | Left half, fills grid height | Right half, fills grid height |
+
+On mobile, the desktop video div is `hidden` and the mobile strip is shown. On desktop, the mobile strip is `hidden` and the desktop div is shown. Both use the identical video source.
+
+---
+
+## Animation Stagger Timeline (all triggered when section becomes 15% visible)
+
+| Element | Delay | Duration | Direction | Distance |
+|---|---|---|---|---|
+| Top labels row | 0ms | 1400ms | translateY | 12px |
+| Product image block | 300ms | 1800ms | translateY | 40px |
+| Caption (name + size) | 600ms | 1400ms | translateY | 10px |
+| Notes column | 900ms | 1400ms | translateY | 16px |
+| SHOP NOW button | 1150ms | 1400ms | translateY | 16px |
+
+All use easing `cubic-bezier(0.22, 1, 0.36, 1)`. Each element starts `opacity: 0` + translated down by the specified distance, then transitions to `opacity: 1` + `translate(0,0)`.
+
+## Fonts
+No custom fonts or Google Fonts. Uses Tailwind&#39;s default sans-serif system font stack for all text in this section. No serif fonts appear here.
+
+## SVGs / Icons
+None. This section contains zero SVG elements or icon components.
+
+## Colors used
+- `#4BB3ED` — product panel background (sky blue)
+- `#000000` — all text color, button border color
+- `#D9D9D9` — image placeholder background (visible while image loads)
+- `#111` — video panel background (visible while video loads)
+- `#ffffff` — button hover fill</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="daisy-wild.html">Daisy Wild<small>Products · features</small></a><a href="beauty-products.html">Beauty Products<small>Products · carousel</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

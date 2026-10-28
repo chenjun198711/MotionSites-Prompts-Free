@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Halo Use Case — Use Cases 提示词 | MotionSites Prompts</title>
+<meta name="description" content="稳定币落地页的“使用案例”区块，采用React+TypeScript+Tailwind CSS构建，以卡片网格展示应用场景，并配有ArrowRight图标引导点击。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/halo-use-case.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Halo Use Case — Use Cases 提示词">
+<meta property="og:description" content="稳定币落地页的“使用案例”区块，采用React+TypeScript+Tailwind CSS构建，以卡片网格展示应用场景，并配有ArrowRight图标引导点击。">
+<meta property="og:url" content="https://prompt-site.shop/p/halo-use-case.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/halo-use-case.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Halo Use Case","description":"稳定币落地页的“使用案例”区块，采用React+TypeScript+Tailwind CSS构建，以卡片网格展示应用场景，并配有ArrowRight图标引导点击。","url":"https://prompt-site.shop/p/halo-use-case.html","inLanguage":"zh-CN","genre":"Use Cases","dateCreated":"2026-06-06T08:42:19.499742+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-use_cases">Use Cases</a></div><h1>Halo Use Case</h1><div class="chip-row"><span class="chip">Use Cases</span><span class="chip">features</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-06-06</span><span>正文：6,526 字符</span></div><div class="hero-media"><img src="../assets/previews/halo-use-case.webp" alt="Halo Use Case 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>稳定币落地页的“使用案例”区块，采用React+TypeScript+Tailwind CSS构建，以卡片网格展示应用场景，并配有ArrowRight图标引导点击。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">**Prompt:**
+
+Build a &quot;Use Cases&quot; section for a fintech stablecoin landing page using **React + TypeScript + Tailwind CSS** with **lucide-react** for icons (use `ArrowRight`). Make it fully mobile responsive.
+
+---
+
+### Font Setup
+
+The page uses **&quot;TT Norms Pro&quot;** loaded via a stylesheet link in `index.html`:
+
+```html
+&lt;link href=&quot;https://db.onlinewebfonts.com/c/49bf5d043a27b890a040cf393277e2b2?family=TT+Norms+Pro+Regular&quot; rel=&quot;stylesheet&quot;&gt;
+```
+
+Add this `&lt;link&gt;` inside the `&lt;head&gt;` of your `index.html`.
+
+Then in `index.css`, apply it globally:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+html {
+font-family: &#39;TT Norms Pro Regular&#39;, ui-sans-serif, system-ui, sans-serif;
+}
+body {
+font-family: &#39;TT Norms Pro Regular&#39;, ui-sans-serif, system-ui, sans-serif;
+}
+* {
+font-family: inherit;
+}
+}
+```
+
+No local font files are needed. The font is served from the external stylesheet URL above.
+
+---
+
+### Section Component: `UseCasesSection`
+
+**Outer wrapper:** `&lt;section&gt;` with classes `bg-[#F5F5F5] px-6 py-24`.
+
+**Inner container:** `&lt;div&gt;` with classes `max-w-[88rem] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start`.
+
+---
+
+#### LEFT COLUMN (text-only intro)
+
+Wrapper `&lt;div&gt;` with classes `md:pr-12 md:pt-2`.
+
+Contains three elements stacked vertically:
+
+1. **Eyebrow label:**
+- Element: `&lt;p&gt;`
+- Text: **&quot;USD Halo in Practice&quot;**
+- Classes: `text-black/60 text-sm font-normal mb-2`
+
+2. **Section heading:**
+- Element: `&lt;h2&gt;`
+- Text: **&quot;Use modes&quot;**
+- Classes: `text-black text-5xl md:text-6xl font-medium leading-none mb-6`
+- Inline style: `{ letterSpacing: &#39;-0.04em&#39; }`
+
+3. **Description paragraph:**
+- Element: `&lt;p&gt;`
+- Text: **&quot;USD Halo powers a wide range of modes for builders, companies and treasuries wanting safe and rewarding stablecoin integrations plus more&quot;**
+- Classes: `text-black/60 text-base leading-relaxed max-w-sm`
+
+---
+
+#### RIGHT COLUMN (large video background card)
+
+Wrapper `&lt;div&gt;` with classes `relative rounded-3xl overflow-hidden min-h-[720px]`.
+
+**Background video** (fills entire card as ambient background):
+- Element: `&lt;video&gt;`
+- Classes: `absolute inset-0 w-full h-full object-cover`
+- Attributes: `autoPlay`, `muted`, `loop`, `playsInline`
+- `src` URL: `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260423_183428_ab5e672a-f608-4dcb-b319-f3e040f02e2d.mp4`
+
+**Content overlay** (sits above video):
+- Wrapper `&lt;div&gt;` with classes `relative z-10 p-10 md:p-12`
+
+Contains three elements:
+
+1. **Card heading:**
+- Element: `&lt;h3&gt;`
+- Text: **&quot;Commerce&quot;**
+- Classes: `text-black text-4xl md:text-5xl font-medium leading-tight mb-5`
+- Inline style: `{ letterSpacing: &#39;-0.03em&#39; }`
+
+2. **Card description:**
+- Element: `&lt;p&gt;`
+- Text: **&quot;Lift customer retention by offering USD Halo, a trusted dollar-backed stablecoin with strong yields, letting your patrons earn with zero effort on your platform.&quot;**
+- Classes: `text-black/70 text-base leading-relaxed max-w-md mb-8`
+
+3. **&quot;Know more&quot; button:**
+- Element: `&lt;button&gt;`
+- Classes: `inline-flex items-center gap-3 text-black text-base font-medium group`
+- Contains (in this exact order):
+- **Icon circle first:** `&lt;span&gt;` with classes `w-9 h-9 rounded-full bg-white/80 backdrop-blur flex items-center justify-center group-hover:bg-white transition-colors`, containing `&lt;ArrowRight className=&quot;w-4 h-4 text-black&quot; /&gt;` from lucide-react.
+- **Text label second:** the plain text **&quot;Know more&quot;** (placed after the span, so icon is on the left).
+
+---
+
+### Key Design Specifications
+
+- **Page background:** `#F5F5F5` (light warm gray).
+- **Video card:** Video fills the entire rounded card via `object-cover` and loops silently. There is **no gradient overlay, no dark scrim, no blur layer** -- text sits directly on the video.
+- **Card corner radius:** `rounded-3xl` (24px).
+- **Card minimum height:** `min-h-[720px]`.
+- **Typography system:**
+- All text uses inherited &quot;TT Norms Pro Regular&quot; from the web font link.
+- Headings: `font-medium` with tight negative letter-spacing (`-0.04em` for section title, `-0.03em` for card title).
+- Body text: default weight (400), `text-base` size.
+- Color hierarchy: `text-black` for headings, `text-black/70` for card body text, `text-black/60` for muted/secondary text.
+- **&quot;Know more&quot; button:** Frosted-glass circle icon (`bg-white/80 backdrop-blur`) transitions to solid white on hover via Tailwind `group`/`group-hover`. Icon circle comes before text label.
+- **Layout:** Two-column grid on `md:` breakpoint. Stacks to single column on mobile. Left column has `md:pr-12` and `md:pt-2` for breathing room.
+- **Spacing:** `gap-8` between columns. Section padding `py-24` vertical, `px-6` horizontal.
+
+---
+
+### Complete JSX Reference
+
+```tsx
+import { ArrowRight } from &#39;lucide-react&#39;;
+
+function UseCasesSection() {
+return (
+&lt;section className=&quot;bg-[#F5F5F5] px-6 py-24&quot;&gt;
+&lt;div className=&quot;max-w-[88rem] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start&quot;&gt;
+{/* Left column */}
+&lt;div className=&quot;md:pr-12 md:pt-2&quot;&gt;
+&lt;p className=&quot;text-black/60 text-sm font-normal mb-2&quot;&gt;USD Halo in Practice&lt;/p&gt;
+&lt;h2 className=&quot;text-black text-5xl md:text-6xl font-medium leading-none mb-6&quot; style={{ letterSpacing: &#39;-0.04em&#39; }}&gt;
+Use modes
+&lt;/h2&gt;
+&lt;p className=&quot;text-black/60 text-base leading-relaxed max-w-sm&quot;&gt;
+USD Halo powers a wide range of modes for builders, companies and treasuries wanting safe and rewarding stablecoin integrations plus more
+&lt;/p&gt;
+&lt;/div&gt;
+
+{/* Right column -- big card with bg video */}
+&lt;div className=&quot;relative rounded-3xl overflow-hidden min-h-[720px]&quot;&gt;
+&lt;video
+className=&quot;absolute inset-0 w-full h-full object-cover&quot;
+src=&quot;https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260423_183428_ab5e672a-f608-4dcb-b319-f3e040f02e2d.mp4&quot;
+autoPlay
+muted
+loop
+playsInline
+/&gt;
+&lt;div className=&quot;relative z-10 p-10 md:p-12&quot;&gt;
+&lt;h3 className=&quot;text-black text-4xl md:text-5xl font-medium leading-tight mb-5&quot; style={{ letterSpacing: &#39;-0.03em&#39; }}&gt;
+Commerce
+&lt;/h3&gt;
+&lt;p className=&quot;text-black/70 text-base leading-relaxed max-w-md mb-8&quot;&gt;
+Lift customer retention by offering USD Halo, a trusted dollar-backed stablecoin with strong yields, letting your patrons earn with zero effort on your platform.
+&lt;/p&gt;
+&lt;button className=&quot;inline-flex items-center gap-3 text-black text-base font-medium group&quot;&gt;
+&lt;span className=&quot;w-9 h-9 rounded-full bg-white/80 backdrop-blur flex items-center justify-center group-hover:bg-white transition-colors&quot;&gt;
+&lt;ArrowRight className=&quot;w-4 h-4 text-black&quot; /&gt;
+&lt;/span&gt;
+Know more
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+);
+}
+```
+
+---</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><p class="muted">暂无同分类条目。</p><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

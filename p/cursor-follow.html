@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cursor Follow — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="全屏视频背景英雄区，鼠标左右移动控制视频进度，顶部显示“Orbis.Nft”标题，营造沉浸式交互体验。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/cursor-follow.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cursor Follow — Hero Section 提示词">
+<meta property="og:description" content="全屏视频背景英雄区，鼠标左右移动控制视频进度，顶部显示“Orbis.Nft”标题，营造沉浸式交互体验。">
+<meta property="og:url" content="https://prompt-site.shop/p/cursor-follow.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/cursor-follow.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Cursor Follow","description":"全屏视频背景英雄区，鼠标左右移动控制视频进度，顶部显示“Orbis.Nft”标题，营造沉浸式交互体验。","url":"https://prompt-site.shop/p/cursor-follow.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-05-25T10:13:33.027936+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Cursor Follow</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-05-25</span><span>正文：6,343 字符</span></div><div class="hero-media"><img src="../assets/previews/cursor-follow.webp" alt="Cursor Follow 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>全屏视频背景英雄区，鼠标左右移动控制视频进度，顶部显示“Orbis.Nft”标题，营造沉浸式交互体验。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a fullscreen hero section for a site called &quot;Orbis.Nft&quot; using React, TypeScript, Tailwind CSS, and Vite. Recreate every detail below precisely.
+
+---
+
+### Video Background with Mouse-Scrub Effect
+
+Use this video as the fullscreen background:
+```
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260525_095441_eb28d7e5-72cf-4336-a4cd-543f46f4ff20.mp4
+```
+
+The video does NOT autoplay. Instead, implement a **mouse-scrub interaction**: as the user moves their mouse left/right across the viewport, the video scrubs forward/backward through its timeline. Implementation details:
+
+- The video is paused on load at `currentTime = 0`.
+- Track the mouse&#39;s horizontal position as a normalized value (0 to 1) across `window.innerWidth`.
+- On each `mousemove`, compute the delta from the previous X position. Multiply that delta by a `SENSITIVITY` constant of `0.8` and by the video&#39;s `duration` to get a time offset.
+- Maintain a `targetTime` that accumulates these offsets, clamped between 0 and `duration`.
+- Use the video&#39;s `seeked` event to chain seeks: when a seek completes, if `targetTime` has diverged from `currentTime` by more than 0.01s, seek again. This prevents dropped seeks since the browser can only process one seek at a time.
+- Use a `useRef` to store mutable state (`targetTime`, `isSeeking` flag, `prevX`) to avoid re-renders.
+- The `&lt;video&gt;` element has attributes: `muted`, `playsInline`, `preload=&quot;auto&quot;`, and is styled `absolute inset-0 h-full w-full object-cover`.
+
+---
+
+### Google Fonts
+
+Load two Google Fonts in `index.html` via `&lt;link&gt;`:
+```
+https://fonts.googleapis.com/css2?family=Anton&amp;family=Condiment&amp;display=swap
+```
+- **Anton** -- used for the hero heading (mapped to Tailwind as `font-grotesk`).
+- **Condiment** -- a cursive script used for the accent text (mapped as `font-condiment`).
+
+Include `&lt;link rel=&quot;preconnect&quot;&gt;` tags for `fonts.googleapis.com` and `fonts.gstatic.com` (with `crossorigin`).
+
+---
+
+### Tailwind Config
+
+Extend the default Tailwind theme with:
+- **Colors:**
+- `background`: `#010828` (deep navy)
+- `cream`: `#EFF4FF` (off-white for heading text)
+- `neon`: `#6FFF00` (bright green for the cursive accent)
+- **Font families:**
+- `grotesk`: `[&#39;Anton&#39;, &#39;sans-serif&#39;]`
+- `condiment`: `[&#39;Condiment&#39;, &#39;cursive&#39;]`
+
+---
+
+### Global CSS (`index.css`)
+
+```css
+body {
+background-color: #010828;
+color: #EFF4FF;
+margin: 0;
+overflow-x: hidden;
+}
+```
+
+Also include a `.liquid-glass` utility class (not used in the hero itself, but part of the design system):
+- `background: rgba(255, 255, 255, 0.01)` with `background-blend-mode: luminosity`
+- `backdrop-filter: blur(4px)` (with `-webkit-` prefix)
+- `border: none`
+- `box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1)`
+- A `::before` pseudo-element creating a gradient border effect using a `mask-composite: exclude` technique. The gradient goes from `rgba(255,255,255,0.45)` at top/bottom to transparent in the middle, with `padding: 1.4px`.
+
+---
+
+### Navbar
+
+A `&lt;nav&gt;` fixed to the top (`fixed top-0 left-0 right-0 z-50`), using `flex items-center justify-between`, with padding `px-5 sm:px-8 py-4 sm:py-5`.
+
+**Left: Logo (inline SVG)**
+A custom geometric SVG logo, 28x28, viewBox `0 0 256 256`, filled `#111111`:
+```
+M 256 64 L 256 128 L 192.5 128 L 160 95 L 128 64 L 96 95 L 63.5 128 L 64 128 L 128 192 L 128 256 L 64.5 256 L 32 223 L 0 192 L 0 64 L 64 0 L 192 0 Z M 256 192 L 256 256 L 192.5 256 L 160 223 L 128 192 L 128 128 L 192 128 Z
+```
+
+**Center: Desktop pill navigation (hidden on mobile, `hidden md:flex`)**
+Absolutely centered with `absolute left-1/2 -translate-x-1/2`. Dark pill container: `bg-gray-900 rounded-full px-2 py-1.5`. Contains 5 nav items: `[&#39;Device&#39;, &#39;Real Stories&#39;, &#39;Science&#39;, &#39;Plans&#39;, &#39;Reach Us&#39;]`. The first item is the active state: `bg-white text-gray-900 text-sm font-medium px-4 py-1.5 rounded-full`. All others: `text-gray-300 text-sm font-medium px-4 py-1.5 rounded-full hover:text-white transition-colors`.
+
+**Right: Desktop CTA button (hidden on mobile, `hidden md:flex`)**
+`bg-gray-900 text-white text-sm font-medium px-5 py-2 rounded-full` with `hover:bg-gray-700 transition-colors`. Contains a small green dot (`w-2 h-2 rounded-full bg-green-400`) followed by text &quot;Reserve Yours&quot;.
+
+**Mobile: Hamburger toggle (`md:hidden`)**
+Uses `Menu` and `X` icons from `lucide-react` at `size={22}`, colored `text-gray-900`. Toggles a dropdown.
+
+**Mobile dropdown menu**
+When open: `fixed top-0 left-0 right-0 z-40 bg-white pt-16 pb-6 px-5 shadow-lg flex flex-col gap-1 md:hidden`. Each nav item is a full-width button: `text-gray-800 text-base font-medium py-3 border-b border-gray-100 text-left hover:text-gray-500 transition-colors`. Includes the same &quot;Reserve Yours&quot; CTA at the bottom with `mt-4`, centered, `rounded-full`.
+
+---
+
+### Hero Text (Bottom-Left)
+
+Positioned inside a `relative z-10 flex flex-col h-full` container. The text block is anchored to the bottom: `flex-1 flex items-end pb-16 sm:pb-20 lg:pb-24 px-6 lg:px-12`. Inner wrapper: `relative lg:ml-12 max-w-[780px]`.
+
+**Main heading `&lt;h1&gt;`:**
+- Font: `font-grotesk` (Anton)
+- Size: `text-[40px] sm:text-[60px] md:text-[75px] lg:text-[90px]`
+- `uppercase`, color `text-cream` (#EFF4FF)
+- Line height: `leading-[1.05] sm:leading-[1] md:leading-[1] lg:leading-[1]`
+- Text content (with line breaks):
+```
+Beyond earth
+and ( its ) familiar
+boundaries
+```
+The parentheses around &quot;its&quot; have spaces inside them: `{&#39;( &#39;}its{&#39; )&#39;}`.
+
+**Cursive accent `&lt;span&gt;`:**
+- Absolutely positioned relative to the heading wrapper: `absolute -right-4 sm:right-0 md:right-4 top-0 sm:top-2 md:top-4`
+- Font: `font-condiment` (Condiment cursive)
+- Size: `text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px]`
+- Color: `text-neon` (#6FFF00)
+- Slight rotation: `-rotate-1`
+- `opacity-90`
+- Inline style: `mixBlendMode: &#39;exclusion&#39;`
+- Text: &quot;Nft collection&quot;
+
+---
+
+### Overall Layout
+
+The root `&lt;section&gt;` is `relative h-screen w-full overflow-hidden bg-background`. The video sits at `absolute inset-0` behind everything. The content layer sits at `relative z-10`. The nav is `fixed z-50`.
+
+The page title in `index.html` is &quot;Orbis.Nft&quot;.
+
+---
+
+### Dependencies
+
+- `react`, `react-dom` (v18)
+- `lucide-react` (for Menu and X icons)
+- Tailwind CSS 3, PostCSS, Autoprefixer
+- Vite with `@vitejs/plugin-react`
+- TypeScript
+
+No other UI libraries needed.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

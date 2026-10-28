@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Parallax Stars Background — Animations &amp; Backgrounds 提示词 | MotionSites Prompts</title>
+<meta name="description" content="A mesmerizing space-themed background with animated parallax pixel stars and a radial gradient atmosphere. Features three layers of stars moving at differe">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/community-superdesign-parallax-stars-background.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Parallax Stars Background — Animations &amp; Backgrounds 提示词">
+<meta property="og:description" content="A mesmerizing space-themed background with animated parallax pixel stars and a radial gradient atmosphere. Features three layers of stars moving at differe">
+<meta property="og:url" content="https://prompt-site.shop/p/community-superdesign-parallax-stars-background.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Parallax Stars Background","description":"A mesmerizing space-themed background with animated parallax pixel stars and a radial gradient atmosphere. Features three layers of stars moving at different speeds to create depth.","url":"https://prompt-site.shop/p/community-superdesign-parallax-stars-background.html","inLanguage":"zh-CN","genre":"Animations & Backgrounds","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-animations___backgrounds">Animations &amp; Backgrounds</a></div><h1>Parallax Stars Background</h1><div class="chip-row"><span class="chip">Animations &amp; Backgrounds</span><span class="chip">background</span><span class="chip">社区公开收藏</span></div><div class="facts"><span>正文：5,777 字符</span></div><div class="hero-media"><video src="../assets/community/superdesign/parallax-stars-background/preview.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>A mesmerizing space-themed background with animated parallax pixel stars and a radial gradient atmosphere. Features three layers of stars moving at different speeds to create depth.</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">This is a reference implementation of a parallax stars background
+
+~~~/README.md
+# Parallax Stars Background
+
+A mesmerizing space-themed background component with animated parallax pixel stars and a radial gradient atmosphere.
+
+## Features
+- **Pure CSS/JS Animation**: Uses efficient `box-shadow` rendering for thousands of particles.
+- **Parallax Effect**: Three layers of stars moving at different speeds to create depth.
+- **Radial Gradient Atmosphere**: Creates a deep space feel.
+- **Customizable**: Adjustable speed and title text.
+- **Responsive**: Adapts to screen size.
+
+## Usage
+
+```tsx
+import { ParallaxStarsBackground } from &#39;@/sd-components/a17695b3-944f-4e4b-9d72-b0cfd61b9bb8&#39;;
+
+function App() {
+return (
+&lt;ParallaxStarsBackground
+title=&quot;MY AWESOME\nSPACE APP&quot;
+speed={1.5}
+&gt;
+&lt;button className=&quot;px-6 py-2 border border-white text-white hover:bg-white hover:text-black transition-colors rounded-full uppercase tracking-widest text-sm&quot;&gt;
+Enter the Void
+&lt;/button&gt;
+&lt;/ParallaxStarsBackground&gt;
+);
+}
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `title` | `string` | &quot;PURE CSS\nPARALLAX PIXEL STARS&quot; | Main title text. Use `\n` for line breaks. |
+| `children` | `ReactNode` | undefined | Optional content to render below the title. |
+| `className` | `string` | &quot;&quot; | Additional classes for the container. |
+| `speed` | `number` | 1 | Animation speed multiplier. Higher is faster. |
+~~~
+
+~~~/src/App.tsx
+import React from &#39;react&#39;;
+import { ParallaxStarsBackground } from &#39;./Component&#39;;
+
+export default function App() {
+return (
+&lt;div className=&quot;w-full min-h-screen&quot;&gt;
+&lt;ParallaxStarsBackground
+speed={1}
+/&gt;
+&lt;/div&gt;
+);
+}
+~~~
+
+~~~/package.json
+
+{
+&quot;name&quot;: &quot;parallax-stars-background&quot;,
+&quot;version&quot;: &quot;1.0.0&quot;,
+&quot;description&quot;: &quot;A mesmerizing space-themed background with animated parallax pixel stars and a radial gradient atmosphere.&quot;,
+&quot;main&quot;: &quot;src/Component.tsx&quot;,
+&quot;dependencies&quot;: {
+&quot;react&quot;: &quot;^18.2.0&quot;,
+&quot;react-dom&quot;: &quot;^18.2.0&quot;,
+&quot;lucide-react&quot;: &quot;^0.344.0&quot;,
+&quot;framer-motion&quot;: &quot;^11.0.8&quot;,
+&quot;clsx&quot;: &quot;^2.1.0&quot;,
+&quot;tailwind-merge&quot;: &quot;^2.2.1&quot;
+}
+}
+~~~
+
+~~~/src/Component.tsx
+import React, { useMemo } from &#39;react&#39;;
+
+// Types for the component props
+export interface ParallaxStarsBackgroundProps {
+/**
+* Title text to display in the center
+* @default &quot;PURE CSS PARALLAX PIXEL STARS&quot;
+*/
+title?: string;
+/**
+* Subtitle or additional content
+*/
+children?: React.ReactNode;
+/**
+* Class name for the container
+*/
+className?: string;
+/**
+* Speed multiplier for the animation
+* @default 1
+*/
+speed?: number;
+}
+
+// Helper to generate random box shadows
+const generateBoxShadows = (n: number) =&gt; {
+let value = `${Math.floor(Math.random() * 2000)}px ${Math.floor(Math.random() * 2000)}px #FFF`;
+for (let i = 2; i &lt;= n; i++) {
+value += `, ${Math.floor(Math.random() * 2000)}px ${Math.floor(Math.random() * 2000)}px #FFF`;
+}
+return value;
+};
+
+export function ParallaxStarsBackground({
+title = &quot;PURE CSS\nPARALLAX PIXEL STARS&quot;,
+children,
+className = &quot;&quot;,
+speed = 1
+}: ParallaxStarsBackgroundProps) {
+// Memoize shadows so they don&#39;t regenerate on re-renders
+const shadowsSmall = useMemo(() =&gt; generateBoxShadows(700), []);
+const shadowsMedium = useMemo(() =&gt; generateBoxShadows(200), []);
+const shadowsBig = useMemo(() =&gt; generateBoxShadows(100), []);
+
+return (
+&lt;div className={`relative w-full h-screen overflow-hidden bg-[#090A0F] font-[&#39;Lato&#39;] ${className}`}&gt;
+{/* Inline styles for the gradient and animations */}
+&lt;style&gt;{`
+.bg-radial-space {
+background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+}
+@keyframes animStar {
+from { transform: translateY(0px); }
+to { transform: translateY(-2000px); }
+}
+.text-gradient-clip {
+background: linear-gradient(to bottom, white 0%, #38495a 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+`}&lt;/style&gt;
+
+{/* Background Gradient */}
+&lt;div className=&quot;absolute inset-0 bg-radial-space z-0&quot; /&gt;
+
+{/* Stars Layer 1 (Small) */}
+&lt;div
+className=&quot;absolute left-0 top-0 w-[1px] h-[1px] bg-transparent z-10 animate-[animStar_50s_linear_infinite]&quot;
+style={{
+boxShadow: shadowsSmall,
+animationDuration: `${50 / speed}s`
+}}
+&gt;
+&lt;div
+className=&quot;absolute top-[2000px] w-[1px] h-[1px] bg-transparent&quot;
+style={{ boxShadow: shadowsSmall }}
+/&gt;
+&lt;/div&gt;
+
+{/* Stars Layer 2 (Medium) */}
+&lt;div
+className=&quot;absolute left-0 top-0 w-[2px] h-[2px] bg-transparent z-10 animate-[animStar_100s_linear_infinite]&quot;
+style={{
+boxShadow: shadowsMedium,
+animationDuration: `${100 / speed}s`
+}}
+&gt;
+&lt;div
+className=&quot;absolute top-[2000px] w-[2px] h-[2px] bg-transparent&quot;
+style={{ boxShadow: shadowsMedium }}
+/&gt;
+&lt;/div&gt;
+
+{/* Stars Layer 3 (Big) */}
+&lt;div
+className=&quot;absolute left-0 top-0 w-[3px] h-[3px] bg-transparent z-10 animate-[animStar_150s_linear_infinite]&quot;
+style={{
+boxShadow: shadowsBig,
+animationDuration: `${150 / speed}s`
+}}
+&gt;
+&lt;div
+className=&quot;absolute top-[2000px] w-[3px] h-[3px] bg-transparent&quot;
+style={{ boxShadow: shadowsBig }}
+/&gt;
+&lt;/div&gt;
+
+{/* Title Content */}
+&lt;div className=&quot;absolute top-1/2 left-0 right-0 -mt-[60px] text-center z-20 px-4&quot;&gt;
+&lt;h1 className=&quot;font-light text-[30px] md:text-[50px] tracking-[10px] text-white leading-tight&quot;&gt;
+{title.split(&#39;\n&#39;).map((line, i) =&gt; (
+&lt;React.Fragment key={i}&gt;
+&lt;span className={i === 0 ? &quot;text-gradient-clip&quot; : &quot;text-gradient-clip&quot;}&gt;
+{line}
+&lt;/span&gt;
+{i &lt; title.split(&#39;\n&#39;).length - 1 &amp;&amp; &lt;br /&gt;}
+&lt;/React.Fragment&gt;
+))}
+&lt;/h1&gt;
+{children &amp;&amp; &lt;div className=&quot;mt-8&quot;&gt;{children}&lt;/div&gt;}
+&lt;/div&gt;
+&lt;/div&gt;
+);
+}
+
+export default ParallaxStarsBackground;
+~~~
+
+Implementation Guidelines
+
+1. Analyze the component structure, styling, animation implementations
+2. Review the component&#39;s arguments and state
+3. Think through what is the best place to adopt this component/style into the design we are doing
+4. Then adopt the component/design to our current system
+
+Help me integrate this into my design</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：superdesigndev/superdesign-prompts<br>原始文件：<code>prompts/parallax-stars-background/README.md</code><br>许可证：CC0-1.0<br>作者：Jason Zhou<br><a href="https://github.com/superdesigndev/superdesign-prompts/blob/main/prompts/parallax-stars-background/README.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="community-superdesign-the-stacking-cards-effect.html">The &quot;Stacking Cards&quot; Effect<small>Animations &amp; Backgrounds · landing-page</small></a><a href="community-superdesign-hover-reveal-effect.html">Hover reveal effect<small>Animations &amp; Backgrounds · landing-page</small></a><a href="community-superdesign-scroll-journey-line.html">Scroll Journey Line<small>Animations &amp; Backgrounds · background</small></a><a href="community-superdesign-gooey-gradient-background.html">Gooey Gradient Background<small>Animations &amp; Backgrounds · background</small></a><a href="community-superdesign-horizontal-gallery.html">Horizontal Gallery<small>Animations &amp; Backgrounds · background</small></a><a href="community-superdesign-exploded-view-assembly.html">&quot;Exploded View&quot; Assembly<small>Animations &amp; Backgrounds · landing-page</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

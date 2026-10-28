@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Interface — Landing Page 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色科幻风格AI产品着陆页，带有动态粒子背景和发光渐变文字，展示智能增强概念。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/ai-interface.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI Interface — Landing Page 提示词">
+<meta property="og:description" content="深色科幻风格AI产品着陆页，带有动态粒子背景和发光渐变文字，展示智能增强概念。">
+<meta property="og:url" content="https://prompt-site.shop/p/ai-interface.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"AI Interface","description":"深色科幻风格AI产品着陆页，带有动态粒子背景和发光渐变文字，展示智能增强概念。","url":"https://prompt-site.shop/p/ai-interface.html","inLanguage":"zh-CN","genre":"Landing Page","dateCreated":"2026-06-17T10:42:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-landing_page">Landing Page</a></div><h1>AI Interface</h1><div class="chip-row"><span class="chip">Landing Page</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-17</span><span>正文：20,683 字符</span></div><div class="hero-media"><video src="../assets/previews/ai-interface.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>深色科幻风格AI产品着陆页，带有动态粒子背景和发光渐变文字，展示智能增强概念。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot; /&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+&lt;title&gt;Cortex — Mind Amplified.&lt;/title&gt;
+&lt;style&gt;
+@import url(&#39;https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;900&amp;display=swap&#39;);
+&lt;/style&gt;
+&lt;script src=&quot;https://unpkg.com/react@19/umd/react.production.min.js&quot; crossorigin&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/react-dom@19/umd/react-dom.production.min.js&quot; crossorigin&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/framer-motion@12.42.2/dist/framer-motion.js&quot; crossorigin&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@babel/standalone/babel.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+tailwind.config = {
+theme: {
+extend: {
+fontFamily: { sans: [&#39;Inter Tight&#39;, &#39;sans-serif&#39;] },
+colors: { &#39;brand-bg&#39;: &#39;#122e58&#39; }
+}
+}
+}
+&lt;/script&gt;
+&lt;style&gt;
+body {
+background: linear-gradient(180deg, #020715 0%, #051329 35%, #0b264b 65%, #007bb8 88%, #00b8e6 100%) no-repeat;
+background-attachment: fixed;
+color: #ffffff;
+font-family: &#39;Inter Tight&#39;, sans-serif;
+font-weight: 400;
+min-height: 100vh;
+line-height: 1.4;
+overflow-x: hidden;
+-webkit-font-smoothing: antialiased;
+margin: 0;
+}
+::selection { background: white; color: #122e58; }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #020715; }
+::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.25); }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/babel&quot; data-type=&quot;module&quot;&gt;
+const { useRef, useEffect, memo } = React;
+const { motion, AnimatePresence, useScroll, useTransform, useInView } = window[&quot;framer-motion&quot;] || FramerMotion;
+
+// ─── TextEffect Component ───
+const defaultStaggerTimes = { char: 0.03, word: 0.05, line: 0.1 };
+
+const defaultContainerVariants = {
+hidden: { opacity: 0 },
+visible: { opacity: 1, transition: { staggerChildren: 0.05 } },
+exit: { transition: { staggerChildren: 0.05, staggerDirection: -1 } },
+};
+
+const defaultItemVariants = {
+hidden: { opacity: 0 },
+visible: { opacity: 1 },
+exit: { opacity: 0 },
+};
+
+const AnimationComponent = memo(({ segment, variants, per }) =&gt; {
+if (per === &#39;line&#39;) {
+return React.createElement(motion.span, { variants, className: &#39;block&#39; }, segment);
+} else if (per === &#39;word&#39;) {
+return React.createElement(motion.span, { &#39;aria-hidden&#39;: &#39;true&#39;, variants, className: &#39;inline-block whitespace-pre&#39; }, segment);
+} else {
+return React.createElement(motion.span, { className: &#39;inline-block whitespace-pre&#39; },
+segment.split(&#39;&#39;).map((char, i) =&gt;
+React.createElement(motion.span, { key: `char-${i}`, &#39;aria-hidden&#39;: &#39;true&#39;, variants, className: &#39;inline-block whitespace-pre&#39; }, char)
+)
+);
+}
+});
+
+function TextEffect({ children, per = &#39;word&#39;, as = &#39;p&#39;, variants: customVariants, className, delay = 0, trigger = true }) {
+let segments;
+if (per === &#39;line&#39;) segments = children.split(&#39;\n&#39;);
+else if (per === &#39;word&#39;) segments = children.split(/(\s+)/);
+else segments = children.split(&#39;&#39;);
+
+const containerVariants = customVariants?.container || defaultContainerVariants;
+const itemVariants = customVariants?.item || defaultItemVariants;
+const stagger = defaultStaggerTimes[per];
+
+const delayedContainerVariants = {
+hidden: containerVariants.hidden,
+visible: {
+...containerVariants.visible,
+transition: {
+...(containerVariants.visible?.transition || {}),
+staggerChildren: containerVariants.visible?.transition?.staggerChildren || stagger,
+delayChildren: delay,
+},
+},
+exit: containerVariants.exit,
+};
+
+const MotionTag = motion[as] || motion.p;
+
+return React.createElement(AnimatePresence, null,
+trigger &amp;&amp; React.createElement(MotionTag, {
+initial: &#39;hidden&#39;,
+animate: &#39;visible&#39;,
+exit: &#39;exit&#39;,
+variants: delayedContainerVariants,
+className: `whitespace-pre-wrap ${className || &#39;&#39;}`,
+},
+segments.map((segment, index) =&gt;
+React.createElement(AnimationComponent, { key: `${per}-${index}-${segment}`, segment, variants: itemVariants, per })
+)
+)
+);
+}
+
+// ─── SVG Arrow Icon ───
+function ArrowUpRight({ className }) {
+return React.createElement(&#39;svg&#39;, {
+xmlns: &#39;http://www.w3.org/2000/svg&#39;,
+width: 24, height: 24,
+viewBox: &#39;0 0 24 24&#39;,
+fill: &#39;none&#39;,
+stroke: &#39;currentColor&#39;,
+strokeLinecap: &#39;round&#39;,
+strokeLinejoin: &#39;round&#39;,
+className
+},
+React.createElement(&#39;path&#39;, { d: &#39;M7 7h10v10&#39; }),
+React.createElement(&#39;path&#39;, { d: &#39;M7 17 17 7&#39; })
+);
+}
+
+// ─── Animation Variants ───
+const blurSlideVariants = {
+container: {
+hidden: { opacity: 0 },
+visible: { opacity: 1, transition: { staggerChildren: 0.015 } },
+exit: { opacity: 0, transition: { staggerChildren: 0.01, staggerDirection: -1 } },
+},
+item: {
+hidden: { opacity: 0, filter: &#39;blur(10px) brightness(0%)&#39;, y: 20 },
+visible: { opacity: 1, y: 0, filter: &#39;blur(0px) brightness(100%)&#39;, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] } },
+exit: { opacity: 0, y: -20, filter: &#39;blur(10px) brightness(0%)&#39;, transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] } },
+},
+};
+
+const otherElementVariants = {
+hidden: { opacity: 0, y: 35 },
+visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] } },
+exit: { opacity: 0, y: -25, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } },
+};
+
+// ─── Main App ───
+function App() {
+const scrollContainerRef = useRef(null);
+const videoRef = useRef(null);
+const heroRef = useRef(null);
+const aboutRef = useRef(null);
+const solutionsRef = useRef(null);
+
+const inViewHero = useInView(heroRef, { amount: 0.15, once: false });
+const inViewAbout = useInView(aboutRef, { amount: 0.15, once: false });
+const inViewSolutions = useInView(solutionsRef, { amount: 0.1, once: false });
+
+const { scrollYProgress: videoScrollProgress } = useScroll({
+target: scrollContainerRef,
+offset: [&quot;start start&quot;, &quot;end start&quot;]
+});
+const videoOpacity = useTransform(videoScrollProgress, [0.9, 1.0], [1, 0]);
+
+useEffect(() =&gt; {
+const video = videoRef.current;
+const container = scrollContainerRef.current;
+if (!video || !container) return;
+
+let targetProgress = 0;
+let currentProgress = 0;
+let animationFrameId;
+
+const handleScroll = () =&gt; {
+const rect = container.getBoundingClientRect();
+const scrollHeight = container.scrollHeight;
+if (scrollHeight &lt;= 0) return;
+const scrolled = -rect.top;
+targetProgress = Math.max(0, Math.min(1, scrolled / scrollHeight));
+};
+
+const updateVideoProgress = () =&gt; {
+currentProgress += (targetProgress - currentProgress) * 0.08;
+if (Math.abs(targetProgress - currentProgress) &lt; 0.0001) currentProgress = targetProgress;
+const duration = video.duration;
+if (duration &amp;&amp; !isNaN(duration)) {
+const targetTime = currentProgress * duration;
+if (!video.seeking &amp;&amp; Math.abs(video.currentTime - targetTime) &gt; 0.02) {
+video.currentTime = targetTime;
+}
+}
+animationFrameId = requestAnimationFrame(updateVideoProgress);
+};
+
+handleScroll();
+currentProgress = targetProgress;
+window.addEventListener(&#39;scroll&#39;, handleScroll, { passive: true });
+animationFrameId = requestAnimationFrame(updateVideoProgress);
+
+const handleLoadedMetadata = () =&gt; { handleScroll(); currentProgress = targetProgress; };
+video.addEventListener(&#39;loadedmetadata&#39;, handleLoadedMetadata);
+
+return () =&gt; {
+cancelAnimationFrame(animationFrameId);
+window.removeEventListener(&#39;scroll&#39;, handleScroll);
+video.removeEventListener(&#39;loadedmetadata&#39;, handleLoadedMetadata);
+};
+}, []);
+
+const { scrollYProgress } = useScroll({ target: solutionsRef, offset: [&quot;start start&quot;, &quot;end end&quot;] });
+const { scrollYProgress: heroScroll } = useScroll({ target: heroRef, offset: [&quot;start start&quot;, &quot;end start&quot;] });
+
+const heroTitleOpacity = useTransform(heroScroll, [0, 0.45], [1, 0]);
+const heroTitleBlur = useTransform(heroScroll, [0, 0.45], [&quot;blur(0px)&quot;, &quot;blur(20px)&quot;]);
+const heroTitleY = useTransform(heroScroll, [0, 0.45], [0, -60]);
+const heroOtherOpacity = useTransform(heroScroll, [0, 0.45], [1, 0]);
+const heroOtherY = useTransform(heroScroll, [0, 0.45], [0, -40]);
+
+const { scrollYProgress: aboutScroll } = useScroll({ target: aboutRef, offset: [&quot;start end&quot;, &quot;end start&quot;] });
+const aboutTitleOpacity = useTransform(aboutScroll, [0.1, 0.35, 0.65, 0.9], [0, 1, 1, 0]);
+const aboutTitleBlur = useTransform(aboutScroll, [0.1, 0.35, 0.65, 0.9], [&quot;blur(20px)&quot;, &quot;blur(0px)&quot;, &quot;blur(0px)&quot;, &quot;blur(20px)&quot;]);
+const aboutTitleY = useTransform(aboutScroll, [0.1, 0.35, 0.65, 0.9], [60, 0, 0, -60]);
+const aboutOtherOpacity = useTransform(aboutScroll, [0.15, 0.35, 0.65, 0.85], [0, 1, 1, 0]);
+const aboutOtherY = useTransform(aboutScroll, [0.15, 0.35, 0.65, 0.85], [50, 0, 0, -50]);
+
+const opacitySet1 = useTransform(scrollYProgress, [0, 0.05, 0.22, 0.29], [0, 1, 1, 0]);
+const blurSet1 = useTransform(scrollYProgress, [0, 0.05, 0.22, 0.29], [&quot;blur(15px)&quot;, &quot;blur(0px)&quot;, &quot;blur(0px)&quot;, &quot;blur(15px)&quot;]);
+const yTopSet1 = useTransform(scrollYProgress, [0, 0.29], [&quot;0px&quot;, &quot;-120px&quot;]);
+const yBottomSet1 = useTransform(scrollYProgress, [0, 0.29], [&quot;0px&quot;, &quot;120px&quot;]);
+
+const opacitySet2 = useTransform(scrollYProgress, [0.33, 0.40, 0.58, 0.65], [0, 1, 1, 0]);
+const blurSet2 = useTransform(scrollYProgress, [0.33, 0.40, 0.58, 0.65], [&quot;blur(15px)&quot;, &quot;blur(0px)&quot;, &quot;blur(0px)&quot;, &quot;blur(15px)&quot;]);
+const yTopSet2 = useTransform(scrollYProgress, [0.33, 0.65], [&quot;0px&quot;, &quot;-120px&quot;]);
+const yBottomSet2 = useTransform(scrollYProgress, [0.33, 0.65], [&quot;0px&quot;, &quot;120px&quot;]);
+
+const opacitySet3 = useTransform(scrollYProgress, [0.69, 0.76, 0.92, 0.99], [0, 1, 1, 0]);
+const blurSet3 = useTransform(scrollYProgress, [0.69, 0.76, 0.92, 0.99], [&quot;blur(15px)&quot;, &quot;blur(0px)&quot;, &quot;blur(0px)&quot;, &quot;blur(15px)&quot;]);
+const yTopSet3 = useTransform(scrollYProgress, [0.69, 0.99], [&quot;0px&quot;, &quot;-120px&quot;]);
+const yBottomSet3 = useTransform(scrollYProgress, [0.69, 0.99], [&quot;0px&quot;, &quot;120px&quot;]);
+
+const bgScale = useTransform(scrollYProgress, [0, 1], [1.1, 1.0]);
+
+return React.createElement(&#39;div&#39;, { className: &#39;relative w-full min-h-screen&#39; },
+
+// ─── Header ───
+React.createElement(&#39;header&#39;, { className: &#39;fixed top-4 lg:top-5 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-32px)] md:w-auto bg-slate-950/55 backdrop-blur-xl rounded-xl p-1 pl-1 pr-5 flex items-center justify-between md:gap-8 transition-all&#39; },
+React.createElement(&#39;div&#39;, { className: &#39;flex items-center justify-center w-10 h-10 bg-white/10 hover:bg-white/15 rounded-lg text-white text-xl select-none leading-none cursor-pointer transition-all duration-300 hover:rotate-45 active:scale-95 shrink-0&#39; }, &#39;\u2733&#39;),
+React.createElement(&#39;nav&#39;, { className: &#39;flex items-center gap-4 lg:gap-5&#39; },
+React.createElement(&#39;a&#39;, { href: &#39;#cortex&#39;, className: &#39;text-white/75 hover:text-white text-xs lg:text-[13.5px] font-medium tracking-tight whitespace-nowrap transition-colors&#39; }, &#39;Cortex&#39;),
+React.createElement(&#39;a&#39;, { href: &#39;#solutions&#39;, className: &#39;text-white/75 hover:text-white text-xs lg:text-[13.5px] font-medium tracking-tight whitespace-nowrap transition-colors&#39; }, &#39;Interface&#39;),
+React.createElement(&#39;a&#39;, { href: &#39;#developer&#39;, className: &#39;text-white/75 hover:text-white text-xs lg:text-[13.5px] font-medium tracking-tight whitespace-nowrap transition-colors&#39; }, &#39;Developer&#39;),
+React.createElement(&#39;a&#39;, { href: &#39;#support&#39;, className: &#39;text-white/75 hover:text-white text-xs lg:text-[13.5px] font-medium tracking-tight whitespace-nowrap transition-colors&#39; }, &#39;Support&#39;),
+)
+),
+
+// ─── Background Video ───
+React.createElement(motion.div, { style: { opacity: videoOpacity }, className: &#39;fixed inset-0 w-full h-full z-0 select-none pointer-events-none overflow-hidden&#39; },
+React.createElement(&#39;video&#39;, {
+ref: videoRef,
+src: &#39;https://d8j0ntlcm91z4.cloudfront.net/user_39ca84eAE1ODL9hbR5VhoEj8tBf/hf_20260704_111356_a61893e1-7df9-45d6-a986-a651b6cb7392.mp4&#39;,
+className: &#39;w-full h-full object-cover&#39;,
+muted: true,
+playsInline: true,
+preload: &#39;auto&#39;
+})
+),
+
+// ─── Scroll Container (Hero + About) ───
+React.createElement(&#39;div&#39;, { ref: scrollContainerRef, className: &#39;relative z-10 w-full bg-transparent&#39; },
+
+// ─── Hero Section ───
+React.createElement(&#39;section&#39;, { ref: heroRef, className: &#39;relative w-full h-screen flex items-center overflow-hidden bg-transparent&#39; },
+React.createElement(&#39;main&#39;, { className: &#39;relative z-10 w-full max-w-none mx-auto h-screen px-4 lg:px-[56px] pt-28 lg:pt-0 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center&#39; },
+// Left Column
+React.createElement(&#39;div&#39;, { className: &#39;lg:col-span-7 flex flex-col justify-center h-full lg:-translate-y-[112px] transform&#39; },
+React.createElement(motion.div, { style: { opacity: heroTitleOpacity, filter: heroTitleBlur, y: heroTitleY } },
+React.createElement(&#39;h1&#39;, { className: &#39;text-[clamp(40px,6.5vw,105px)] font-normal leading-[0.95] tracking-tight mb-10 text-white flex flex-col&#39; },
+React.createElement(&#39;span&#39;, { className: &#39;block&#39; },
+React.createElement(TextEffect, { per: &#39;char&#39;, variants: blurSlideVariants, trigger: inViewHero }, &#39;Mind&#39;)
+),
+React.createElement(&#39;span&#39;, { className: &#39;block&#39; },
+React.createElement(TextEffect, { per: &#39;char&#39;, variants: blurSlideVariants, trigger: inViewHero, delay: 0.15 }, &#39;Amplified.&#39;)
+)
+)
+),
+React.createElement(motion.div, { style: { opacity: heroOtherOpacity, y: heroOtherY } },
+React.createElement(motion.div, { variants: otherElementVariants, initial: &#39;hidden&#39;, animate: inViewHero ? &#39;visible&#39; : &#39;exit&#39; },
+React.createElement(&#39;a&#39;, { href: &#39;#discover&#39;, className: &#39;group inline-flex items-center justify-center bg-white hover:bg-white/90 text-brand-bg rounded-full px-7 py-3.5 text-sm font-normal w-fit gap-3 shadow-none transition-all&#39; },
+React.createElement(&#39;span&#39;, { className: &#39;flex items-center justify-center w-5 h-5 rounded-full bg-brand-bg text-white transition-transform group-hover:scale-105&#39; },
+React.createElement(ArrowUpRight, { className: &#39;w-3.5 h-3.5 stroke-[2.5]&#39; })
+),
+React.createElement(&#39;span&#39;, { className: &#39;tracking-tight&#39; }, &#39;Discover Cortex&#39;)
+)
+)
+)
+),
+// Right Column
+React.createElement(motion.div, { style: { opacity: heroOtherOpacity, y: heroOtherY }, className: &#39;lg:col-span-4 lg:col-start-9 flex flex-col justify-center lg:self-end lg:mb-[56px] lg:justify-self-end w-full max-w-[328px]&#39; },
+React.createElement(motion.div, { variants: otherElementVariants, initial: &#39;hidden&#39;, animate: inViewHero ? &#39;visible&#39; : &#39;exit&#39; },
+React.createElement(&#39;div&#39;, { className: &#39;text-[11.5px] font-normal uppercase text-white/50 tracking-[0.15em] mb-3&#39; }, &#39;001 \u2014 Concept&#39;),
+React.createElement(&#39;p&#39;, { className: &#39;text-[14.5px] font-normal leading-relaxed text-white tracking-tight&#39; }, &#39;A screen is a bottleneck. Cortex is a premium neural interface that streams your intention directly to AI, amplifying your natural mind.&#39;)
+)
+)
+)
+),
+
+// ─── About Section ───
+React.createElement(&#39;section&#39;, { ref: aboutRef, className: &#39;w-full max-w-none mx-auto px-4 lg:px-[56px] h-screen min-h-[600px] py-[56px] flex flex-col justify-between items-start bg-transparent&#39; },
+// Top
+React.createElement(&#39;div&#39;, { className: &#39;w-full flex flex-col gap-6&#39; },
+React.createElement(motion.div, { style: { opacity: aboutOtherOpacity, y: aboutOtherY } },
+React.createElement(motion.div, { variants: otherElementVariants, initial: &#39;hidden&#39;, animate: inViewAbout ? &#39;visible&#39; : &#39;exit&#39; },
+React.createElement(&#39;span&#39;, { className: &#39;text-[11.5px] font-medium uppercase text-white/50 tracking-[0.15em]&#39; }, &#39;002 \u2014 Neural Extension&#39;)
+)
+),
+React.createElement(&#39;div&#39;, { className: &#39;w-full&#39; },
+React.createElement(motion.div, { style: { opacity: aboutTitleOpacity, filter: aboutTitleBlur, y: aboutTitleY } },
+React.createElement(TextEffect, { per: &#39;word&#39;, as: &#39;p&#39;, variants: blurSlideVariants, trigger: inViewAbout, className: &#39;text-[clamp(24px,3.2vw,40px)] font-medium leading-[1.25] tracking-tight text-white max-w-[1200px]&#39; },
+&#39;\u2460 Cortex is a premium, circular neural interface that rests seamlessly on your temple, establishing a real-time thought connection that augments your cognition with advanced AI models.&#39;
+)
+)
+)
+),
+// Bottom
+React.createElement(&#39;div&#39;, { className: &#39;grid grid-cols-1 lg:grid-cols-12 w-full gap-8&#39; },
+React.createElement(motion.div, { style: { opacity: aboutOtherOpacity, y: aboutOtherY }, className: &#39;lg:col-start-9 lg:col-span-4 lg:justify-self-end flex flex-col w-full max-w-[328px]&#39; },
+React.createElement(motion.div, { variants: otherElementVariants, initial: &#39;hidden&#39;, animate: inViewAbout ? &#39;visible&#39; : &#39;exit&#39;, className: &#39;w-full&#39; },
+React.createElement(&#39;div&#39;, { className: &#39;text-[11.5px] font-medium uppercase text-white/50 tracking-[0.15em] mb-5&#39; }, &#39;Capabilities:&#39;),
+React.createElement(&#39;div&#39;, { className: &#39;flex flex-col w-full border-b border-white/15&#39; },
+[&#39;Instant Knowledge Retrieval&#39;, &#39;Seamless Thought Translation&#39;, &#39;Generative Reasoning Flow&#39;].map((item) =&gt;
+React.createElement(&#39;a&#39;, { key: item, href: &#39;#&#39;, className: &#39;group flex justify-between items-center py-4 border-t border-white/15 text-white transition-opacity&#39; },
+React.createElement(&#39;span&#39;, { className: &#39;text-[14.5px] font-medium tracking-tight&#39; }, item),
+React.createElement(&#39;span&#39;, { className: &#39;flex items-center justify-center w-5 h-5 rounded-full bg-white text-brand-bg transition-transform group-hover:scale-110 ml-3 shrink-0&#39; },
+React.createElement(ArrowUpRight, { className: &#39;w-3.5 h-3.5 stroke-[2.5]&#39; })
+)
+)
+)
+)
+)
+)
+)
+)
+),
+
+// ─── Solutions Section ───
+React.createElement(&#39;section&#39;, { id: &#39;solutions&#39;, ref: solutionsRef, className: &#39;w-full min-h-[350vh] bg-transparent relative&#39; },
+React.createElement(&#39;div&#39;, { className: &#39;w-full h-screen sticky top-0 overflow-hidden flex flex-col justify-between&#39; },
+// BG Image
+React.createElement(&#39;div&#39;, { className: &#39;absolute inset-0 w-full h-full select-none pointer-events-none z-0&#39; },
+React.createElement(motion.img, { src: &#39;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260706_102306_b64c5436-04bc-4cb4-83c1-8c83a83a285c.png&amp;w=1920&amp;q=85&#39;, alt: &#39;Cortex Tech Background&#39;, className: &#39;w-full h-full object-cover&#39;, style: { scale: bgScale } })
+),
+// Content
+React.createElement(&#39;div&#39;, { className: &#39;relative z-10 w-full max-w-none mx-auto h-full px-4 lg:px-[56px] flex flex-col justify-center items-start&#39; },
+React.createElement(&#39;div&#39;, { className: &#39;w-full max-w-[1000px] h-[320px] lg:h-[400px] relative flex items-center justify-start&#39; },
+
+// Set 1
+React.createElement(motion.div, { style: { opacity: opacitySet1, filter: blurSet1 }, className: &#39;absolute inset-0 flex flex-col gap-[40px] justify-center pointer-events-none&#39; },
+React.createElement(motion.div, { style: { y: yTopSet1 }, className: &#39;w-full flex flex-col gap-6&#39; },
+React.createElement(&#39;span&#39;, { className: &#39;text-[11.5px] font-medium uppercase text-white/50 tracking-[0.15em]&#39; }, &#39;003 \u2014 Interface&#39;),
+React.createElement(&#39;h1&#39;, { className: &#39;text-[clamp(40px,6.5vw,105px)] font-normal leading-[0.95] tracking-tight text-white w-full&#39; }, &#39;Silent thought.&#39;)
+),
+React.createElement(motion.div, { style: { y: yBottomSet1 }, className: &#39;w-full&#39; },
+React.createElement(&#39;h1&#39;, { className: &#39;text-[clamp(40px,6.5vw,105px)] font-normal leading-[0.95] tracking-tight text-white w-full&#39; }, &#39;Cortex.&#39;)
+)
+),
+
+// Set 2
+React.createElement(motion.div, { style: { opacity: opacitySet2, filter: blurSet2 }, className: &#39;absolute inset-0 flex flex-col gap-[40px] justify-center pointer-events-none&#39; },
+React.createElement(motion.div, { style: { y: yTopSet2 }, className: &#39;w-full flex flex-col gap-6&#39; },
+React.createElement(&#39;span&#39;, { className: &#39;text-[11.5px] font-medium uppercase text-white/50 tracking-[0.15em]&#39; }, &#39;004 \u2014 Performance&#39;),
+React.createElement(&#39;h1&#39;, { className: &#39;text-[clamp(40px,6.5vw,105px)] font-normal leading-[0.95] tracking-tight text-white w-full&#39; }, &#39;Cognitive flow.&#39;)
+),
+React.createElement(motion.div, { style: { y: yBottomSet2 }, className: &#39;w-full&#39; },
+React.createElement(&#39;h1&#39;, { className: &#39;text-[clamp(40px,6.5vw,105px)] font-normal leading-[0.95] tracking-tight text-white w-full&#39; }, &#39;Intuition.&#39;)
+)
+),
+
+// Set 3
+React.createElement(motion.div, { style: { opacity: opacitySet3, filter: blurSet3 }, className: &#39;absolute inset-0 flex flex-col gap-[40px] justify-center pointer-events-none&#39; },
+React.createElement(motion.div, { style: { y: yTopSet3 }, className: &#39;w-full flex flex-col gap-6&#39; },
+React.createElement(&#39;span&#39;, { className: &#39;text-[11.5px] font-medium uppercase text-white/50 tracking-[0.15em]&#39; }, &#39;005 \u2014 Symbiosis&#39;),
+React.createElement(&#39;h1&#39;, { className: &#39;text-[clamp(40px,6.5vw,105px)] font-normal leading-[0.95] tracking-tight text-white w-full&#39; }, &#39;Instant recall.&#39;)
+),
+React.createElement(motion.div, { style: { y: yBottomSet3 }, className: &#39;w-full&#39; },
+React.createElement(&#39;h1&#39;, { className: &#39;text-[clamp(40px,6.5vw,105px)] font-normal leading-[0.95] tracking-tight text-white w-full&#39; }, &#39;Insight.&#39;)
+)
+)
+)
+)
+)
+)
+);
+}
+
+const root = ReactDOM.createRoot(document.getElementById(&#39;root&#39;));
+root.render(React.createElement(App));
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="motionz-premium-landing-page.html">MotionZ Premium Landing Page<small>Landing Page · landing-page</small></a><a href="future-state.html">Future-State<small>Landing Page · hero</small></a><a href="3d-story.html">3D Story<small>Landing Page · hero</small></a><a href="financial-suite.html">Financial Suite<small>Landing Page · hero</small></a><a href="prompt-hero.html">PROMPT<small>Landing Page · hero</small></a><a href="health-portal.html">Health Portal<small>Landing Page · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Subscription Agency — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="极简黑白风格创意机构首页，固定导航栏搭配大标题与副文本，负字距营造现代感，适合品牌展示。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/subscription-agency.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Subscription Agency — Hero Section 提示词">
+<meta property="og:description" content="极简黑白风格创意机构首页，固定导航栏搭配大标题与副文本，负字距营造现代感，适合品牌展示。">
+<meta property="og:url" content="https://prompt-site.shop/p/subscription-agency.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Subscription Agency","description":"极简黑白风格创意机构首页，固定导航栏搭配大标题与副文本，负字距营造现代感，适合品牌展示。","url":"https://prompt-site.shop/p/subscription-agency.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-06-24T11:30:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Subscription Agency</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-06-24</span><span>正文：6,096 字符</span></div><div class="hero-media"><video src="../assets/previews/subscription-agency.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>极简黑白风格创意机构首页，固定导航栏搭配大标题与副文本，负字距营造现代感，适合品牌展示。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">**Create a single-page landing hero section for a creative agency called &quot;Alwayzz&quot; with a React + Vite + Tailwind CSS setup. Use custom CSS (not Tailwind utilities) for all styling. The design should be minimal, clean, black-and-white, with tight negative letter-spacing throughout.**
+
+---
+
+### Fonts (loaded via Google Fonts in index.html)
+
+```
+Inter: weights 400, 500, 600, 700
+Source Serif 4: weights 400, 600 (both normal and italic)
+```
+
+Preconnect to `fonts.googleapis.com` and `fonts.gstatic.com`.
+
+---
+
+### CSS Variables
+
+```css
+--bg: #ffffff;
+--text: #0a0a0a;
+--muted: #6b6b6b;
+--button-bg: #0a0a0a;
+--button-text: #ffffff;
+--border-soft: rgba(0, 0, 0, 0.08);
+--green: #17c964;
+```
+
+---
+
+### Components
+
+**1. Navbar (fixed top, z-index 100)**
+- Padding: `19px 36px`, max-width `1200px` centered.
+- Left: Logo text &quot;Alwayzz&quot; in `Source Serif 4`, 30px, weight 600, **italic**, letter-spacing `-0.08em`, with a registered trademark symbol in Inter 14px weight 600.
+- Right: &quot;Menu&quot; pill button (black bg, white text, rounded-full, 14px weight 500, Inter) with a `ChevronUp` icon (16px) from lucide-react.
+- Full-screen drawer overlay on click: white bg, fade transition 0.4s. Nav links centered vertically at 48px weight 500, letter-spacing `-0.04em`. Links: Projects, Plans, Team, FAQs, Get in Touch. Footer with copyright.
+
+**2. Hero Section**
+- Min-height: `850px`, padding: `160px 36px`, centered flex column.
+- **Background image** (via `::before` pseudo-element, covers full section):
+```
+https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260626_041422_4a459e05-abce-4150-9fb7-4ededc423cd1.png&amp;w=1280&amp;q=85
+```
+Background-size: cover, background-position: center.
+
+- **Curved line animations** (decorative):
+- 20 lines on left side, 20 on right side, absolutely positioned.
+- Each line is a tall rectangle with one-sided border-radius (80%) and `2.5px solid #FCFAF8` border.
+- Left lines: no left border, radius on right. Right lines: no right border, radius on left.
+- Staggered `animationDelay: i * 0.25s`, widths from 60px increasing by 10px per line.
+- Animation: `line-pulse` 5s ease-in-out infinite (fade in to 0.9 opacity, then back to 0 with slight scale).
+- On mobile (&lt;810px): hide side lines, show top horizontal lines instead (same animation, horizontal orientation with bottom border-radius).
+
+- **Ticker row** (max-width 500px, height 36px):
+- Horizontal marquee scrolling left over 30s, linear, infinite.
+- Items: &quot;Brand Identity&quot;, &quot;App Development&quot;, &quot;Visual Design&quot;, &quot;Creative Video&quot;, &quot;Iconography&quot;
+- Each item: 13px, weight 500, color `var(--muted)`, padding `6px 14px`, rounded-full, background `rgb(251, 251, 251)`.
+- Marquee has edge fade mask: `linear-gradient(90deg, transparent 0%, black 12%, black 88%, transparent 100%)`.
+- 4x duplicated rows for seamless loop.
+
+- **Title**:
+```
+Premium creative &lt;span class=&quot;serif italic&quot;&gt;alwayzz&lt;/span&gt;&lt;sup style registered mark&gt; on demand.
+```
+- Max-width: 550px, font-size: 82px, line-height: 1.03, letter-spacing: `-0.07em`, weight 600, centered.
+- The word &quot;alwayzz&quot; uses `Source Serif 4`, italic, weight 600, letter-spacing `-0.08em`.
+- The registered mark: Inter, 24px, weight 600, vertical-align super.
+
+- **Subtitle**:
+```
+A flexible design partnership for founders, brands, and agencies who want top craft delivered on their timeline.
+```
+- Max-width: 476px, 17px, line-height 1.45, weight 400, color `var(--muted)`, centered.
+
+- **CTA row** (flex, gap 16px, centered):
+- **Primary button** &quot;View Plans&quot;: height 56px, padding `18px 30px`, rounded-full, black bg, white text, 15px weight 600 Inter. Hover: translateY(-1px) + box-shadow `0 4px 20px rgba(0,0,0,0.12)`.
+- **Book button** &quot;Chat for 15 minutes&quot;: white bg, `4px solid rgb(248,248,248)` border, rounded-full, padding `8px 24px 8px 8px`. Contains:
+- Avatar image (40px circle): `https://framerusercontent.com/images/hfneFL6CHBi5BnNvCeOaqU9HqE4.png`
+- Text stack: primary &quot;Chat for 15 minutes&quot; (14px, weight 600, black) and secondary &quot;Pick a slot&quot; (12px, weight 500, `rgb(152,152,152)`) with a green dot (`rgb(29, 204, 93)`, 8px circle).
+
+- **Progressive blur** at bottom: absolute, full width, height 178px, gradient from transparent to `rgba(255,255,255,0.4)` at 40% to solid white.
+
+**3. TrustedBy Section**
+- Padding: 36px, max-width 1200px centered.
+- Left: label &quot;Partnered with top-tier companies globally&quot; (max-width 163px, 14px, weight 500, muted color).
+- Right: horizontal marquee (30s) of company names styled as text logos (16px, weight 600, black, each with distinct font-family):
+- Airbnb (Cedarville Cursive, 700), Shopify (system-ui, 800), Notion (Georgia, 500), Linear (Inter, 600), Webflow (Inter, 700), Figma (system-ui, 600), Slack (Georgia, 700), Stripe (system-ui, 800), Vercel (Inter, 600), Framer (Source Serif 4, 600).
+- Same edge-fade marquee mask as ticker.
+
+---
+
+### Responsive Breakpoints
+
+- **&lt; 1200px**: Hero padding `140px 32px`, title clamp(60px, 8vw, 72px), navbar padding 32px, drawer links 40px.
+- **&lt; 810px**: Hero min-height 760px, padding `120px 24px 96px`. Background image rotated 90deg to fill portrait viewport. Side curved lines hidden, top horizontal lines shown. Title clamp(44px, 13vw, 52px). CTA buttons stack vertically full-width (max 320px). Trusted section stacks vertically. Drawer links 32px. Navbar padding 20px.
+
+---
+
+### Key Animation Keyframes
+
+```css
+@keyframes marquee-left {
+from { transform: translateX(0); }
+to { transform: translateX(-50%); }
+}
+
+@keyframes line-pulse {
+0% { opacity: 0; transform: scale(1); }
+15% { opacity: 0.9; }
+70% { opacity: 0.4; }
+100% { opacity: 0; transform: scale(0.85); }
+}
+```
+
+---
+
+### CloudFront Video/Image URL
+
+The hero background image URL (exact):
+```
+https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260626_041422_4a459e05-abce-4150-9fb7-4ededc423cd1.png&amp;w=1280&amp;q=85
+```
+
+The book button avatar URL (exact):
+```
+https://framerusercontent.com/images/hfneFL6CHBi5BnNvCeOaqU9HqE4.png
+```
+]</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

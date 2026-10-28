@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FAQ CTA — CTA Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色渐变背景的CTA卡片，搭配可展开的FAQ手风琴和简洁页脚，适合营销落地页。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/faq-cta.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FAQ CTA — CTA Section 提示词">
+<meta property="og:description" content="深色渐变背景的CTA卡片，搭配可展开的FAQ手风琴和简洁页脚，适合营销落地页。">
+<meta property="og:url" content="https://prompt-site.shop/p/faq-cta.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/faq-cta.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"FAQ CTA","description":"深色渐变背景的CTA卡片，搭配可展开的FAQ手风琴和简洁页脚，适合营销落地页。","url":"https://prompt-site.shop/p/faq-cta.html","inLanguage":"zh-CN","genre":"CTA Section","dateCreated":"2026-05-08T08:51:53.316755+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-cta_section">CTA Section</a></div><h1>FAQ CTA</h1><div class="chip-row"><span class="chip">CTA Section</span><span class="chip">cta</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-05-08</span><span>正文：9,295 字符</span></div><div class="hero-media"><img src="../assets/previews/faq-cta.webp" alt="FAQ CTA 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色渐变背景的CTA卡片，搭配可展开的FAQ手风琴和简洁页脚，适合营销落地页。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">**PROMPT:**
+
+Build a React + TypeScript + Vite + Tailwind CSS page with a &quot;CTA + FAQ + Footer&quot; section using the **Inter** font. Use `lucide-react` for icons (`ChevronDown`, `ChevronUp`). No other UI libraries.
+
+### Layout
+
+A centered container `max-w-[1100px] w-full mx-auto px-5`, white body (`bg-white text-neutral-900`), applied font: `style={{ fontFamily: &quot;&#39;Inter&#39;, sans-serif&quot; }}`. Main section has `py-20 max-[900px]:py-[60px]`.
+
+Inside `&lt;main&gt;`, a two-column grid:
+- `grid grid-cols-[1.6fr_1fr] gap-[30px] items-stretch max-[900px]:grid-cols-1 max-[900px]:gap-[60px]`
+
+### Left column — Animated Gradient CTA card
+
+A div with class `c5-animated-gradient rounded-[24px] py-20 px-10 text-white flex flex-col justify-center items-center text-center` and inline `boxShadow: &#39;0 10px 30px rgba(0, 0, 0, 0.05)&#39;`.
+
+Contents:
+- `&lt;h2&gt;` — &quot;Ready to Transfer&lt;br/&gt;Without Borders?&quot; with classes `font-normal leading-[1.1] mb-[15px]` and inline `fontSize: &#39;3.5rem&#39;, letterSpacing: &#39;-0.03em&#39;`.
+- `&lt;p&gt;` — &quot;Send Money Worldwide at the Best Rates&quot; with `text-[0.9rem] mb-[30px] font-normal opacity-85`.
+- `&lt;button&gt;` — &quot;Get Started Today&quot;, classes `bg-neutral-900 text-white font-semibold cursor-pointer border-none text-[0.95rem] transition-all duration-200 hover:-translate-y-0.5`, inline `padding: &#39;14px 32px&#39;, borderRadius: &#39;12px&#39;, boxShadow: &#39;0 10px 20px rgba(0,0,0,0.3)&#39;`. On hover, bump shadow to `0 14px 30px rgba(0,0,0,0.4)` via `onMouseEnter`/`onMouseLeave`.
+
+### Animated Gradient CSS (put in `src/index.css` after the Tailwind directives)
+
+Use CSS `@property` declarations so custom properties interpolate smoothly, five radial-gradient blobs that each drift across wide paths AND pulse in size. Fast, looping, respects `prefers-reduced-motion`:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@property --c5-x1 { syntax: &#39;&lt;percentage&gt;&#39;; inherits: false; initial-value: 10%; }
+@property --c5-y1 { syntax: &#39;&lt;percentage&gt;&#39;; inherits: false; initial-value: 10%; }
+@property --c5-x2 { syntax: &#39;&lt;percentage&gt;&#39;; inherits: false; initial-value: 90%; }
+@property --c5-y2 { syntax: &#39;&lt;percentage&gt;&#39;; inherits: false; initial-value: 10%; }
+@property --c5-x3 { syntax: &#39;&lt;percentage&gt;&#39;; inherits: false; initial-value: 10%; }
+@property --c5-y3 { syntax: &#39;&lt;percentage&gt;&#39;; inherits: false; initial-value: 90%; }
+@property --c5-x4 { syntax: &#39;&lt;percentage&gt;&#39;; inherits: false; initial-value: 90%; }
+@property --c5-y4 { syntax: &#39;&lt;percentage&gt;&#39;; inherits: false; initial-value: 90%; }
+@property --c5-x5 { syntax: &#39;&lt;percentage&gt;&#39;; inherits: false; initial-value: 50%; }
+@property --c5-y5 { syntax: &#39;&lt;percentage&gt;&#39;; inherits: false; initial-value: 50%; }
+@property --c5-s1 { syntax: &#39;&lt;percentage&gt;&#39;; inherits: false; initial-value: 55%; }
+@property --c5-s2 { syntax: &#39;&lt;percentage&gt;&#39;; inherits: false; initial-value: 55%; }
+@property --c5-s3 { syntax: &#39;&lt;percentage&gt;&#39;; inherits: false; initial-value: 55%; }
+@property --c5-s4 { syntax: &#39;&lt;percentage&gt;&#39;; inherits: false; initial-value: 55%; }
+@property --c5-s5 { syntax: &#39;&lt;percentage&gt;&#39;; inherits: false; initial-value: 65%; }
+
+.c5-animated-gradient {
+background-color: #ff8e53;
+background-image:
+radial-gradient(circle at var(--c5-x1) var(--c5-y1), #fff1aa 0px, transparent var(--c5-s1)),
+radial-gradient(circle at var(--c5-x2) var(--c5-y2), #ff4b2b 0px, transparent var(--c5-s2)),
+radial-gradient(circle at var(--c5-x3) var(--c5-y3), #8aff8a 0px, transparent var(--c5-s3)),
+radial-gradient(circle at var(--c5-x4) var(--c5-y4), #ffd000 0px, transparent var(--c5-s4)),
+radial-gradient(circle at var(--c5-x5) var(--c5-y5), #ff1493 0px, transparent var(--c5-s5));
+animation:
+c5-blob1 5s ease-in-out infinite,
+c5-blob2 6s ease-in-out infinite,
+c5-blob3 5.5s ease-in-out infinite,
+c5-blob4 6.5s ease-in-out infinite,
+c5-blob5 4s ease-in-out infinite,
+c5-size1 3.5s ease-in-out infinite,
+c5-size2 4.2s ease-in-out infinite,
+c5-size3 3.8s ease-in-out infinite,
+c5-size4 4.6s ease-in-out infinite,
+c5-size5 3s ease-in-out infinite;
+}
+
+@keyframes c5-blob1 {
+0%,100% { --c5-x1: 5%; --c5-y1: 5%; }
+25% { --c5-x1: 45%; --c5-y1: 20%; }
+50% { --c5-x1: 30%; --c5-y1: 55%; }
+75% { --c5-x1: 0%; --c5-y1: 30%; }
+}
+@keyframes c5-blob2 {
+0%,100% { --c5-x2: 95%; --c5-y2: 5%; }
+33% { --c5-x2: 55%; --c5-y2: 35%; }
+66% { --c5-x2: 80%; --c5-y2: 65%; }
+}
+@keyframes c5-blob3 {
+0%,100% { --c5-x3: 5%; --c5-y3: 95%; }
+40% { --c5-x3: 45%; --c5-y3: 65%; }
+70% { --c5-x3: 25%; --c5-y3: 100%; }
+}
+@keyframes c5-blob4 {
+0%,100% { --c5-x4: 95%; --c5-y4: 95%; }
+30% { --c5-x4: 60%; --c5-y4: 70%; }
+60% { --c5-x4: 100%; --c5-y4: 50%; }
+}
+@keyframes c5-blob5 {
+0%,100% { --c5-x5: 50%; --c5-y5: 50%; }
+25% { --c5-x5: 70%; --c5-y5: 30%; }
+50% { --c5-x5: 40%; --c5-y5: 70%; }
+75% { --c5-x5: 30%; --c5-y5: 40%; }
+}
+
+@keyframes c5-size1 { 0%,100% { --c5-s1: 45%; } 50% { --c5-s1: 80%; } }
+@keyframes c5-size2 { 0%,100% { --c5-s2: 45%; } 50% { --c5-s2: 85%; } }
+@keyframes c5-size3 { 0%,100% { --c5-s3: 45%; } 50% { --c5-s3: 78%; } }
+@keyframes c5-size4 { 0%,100% { --c5-s4: 45%; } 50% { --c5-s4: 82%; } }
+@keyframes c5-size5 { 0%,100% { --c5-s5: 50%; } 50% { --c5-s5: 85%; } }
+
+@media (prefers-reduced-motion: reduce) {
+.c5-animated-gradient { animation: none; }
+}
+```
+
+### Right column — FAQ accordion
+
+State: `const [activeIndex, setActiveIndex] = useState&lt;number | null&gt;(0);` with toggle function.
+
+FAQ data array (in order):
+1. Q: &quot;What is the maximum amount I can send?&quot; — A: &quot;Transfer limits depend on your verification level and country. You can check your limits inside your account settings.&quot;
+2. Q: &quot;Does my recipient need an account?&quot; — A: &quot;No, your recipient doesn&#39;t need an account. Funds can be sent directly to their bank account or mobile wallet.&quot;
+3. Q: &quot;Is there a mobile app available?&quot; — A: &quot;Yes, our mobile app is available on both iOS and Android for easy transfers on the go.&quot;
+4. Q: &quot;Can I cancel a transfer?&quot; — A: &quot;Transfers can be cancelled if they have not yet been processed by the receiving bank. Check your transfer status for options.&quot;
+5. Q: &quot;What currencies are supported?&quot; — A: &quot;We support over 50 currencies worldwide. You can view the full list of supported currencies in our app or website.&quot;
+
+Container: `flex flex-col justify-center gap-3`.
+
+Each item: clickable div, `bg-white border rounded-[10px] py-[18px] px-5 cursor-pointer transition-all duration-200`, border color `#eaeaea` when active else `#f0f0f0` (+ `hover:border-[#eaeaea]`). Box shadow `0 4px 12px rgba(0,0,0,0.04)` when active, else `0 2px 8px rgba(0,0,0,0.02)`.
+
+Row: `flex justify-between items-center font-normal text-[0.9rem] text-neutral-900`, question on left, `ChevronUp` (size 20) if active else `ChevronDown`.
+
+When active, answer block below: `mt-3 text-[0.9rem] text-[#666] leading-[1.6]`.
+
+### Footer
+
+`&lt;footer className=&quot;bg-[#fafafa] pt-20 pb-5 max-[900px]:pt-[60px]&quot;&gt;`, container `max-w-[1100px] w-full mx-auto px-5`.
+
+Grid: `grid grid-cols-[2fr_1fr_1fr_2fr] gap-10 mb-[50px] max-[900px]:grid-cols-2 max-[480px]:grid-cols-1`.
+
+1. **Logo column**: `&lt;img src=&quot;https://pub-f170a2592d2c4a1485466404c36807be.r2.dev/Tests/logoipsum-415.svg&quot; className=&quot;h-6 mb-[15px]&quot; style={{ filter: &#39;brightness(0)&#39; }}/&gt;` then `&lt;p className=&quot;text-[0.85rem] text-[#888] leading-[1.6] max-w-[220px]&quot;&gt;Reliable transfers that always reach their destination on time.&lt;/p&gt;`.
+2. **Navigation**: `&lt;h4 className=&quot;font-semibold mb-5 text-[0.95rem] text-neutral-900&quot;&gt;Navigation&lt;/h4&gt;` + `&lt;ul&gt;` of `Features, Benefits, Testimonials, Pricing` — each `&lt;li className=&quot;mb-3&quot;&gt;` with `&lt;a href=&quot;#&quot; className=&quot;text-[#888] no-underline text-[0.85rem] transition-colors duration-200 hover:text-neutral-900&quot;&gt;`.
+3. **Pages**: same styling, items `Home, Contact, 404`.
+4. **Newsletter**: heading &quot;Newsletter&quot;, p: &quot;Join our newsletter and get notified.&quot; (`text-[0.85rem] text-[#888] mb-[15px]`), then `flex gap-[10px]`:
+- Input: `type=&quot;email&quot;`, placeholder &quot;Enter your email...&quot;, classes `flex-grow border border-[#f0f0f0] bg-white outline-none transition-colors duration-200 focus:border-[#ccc] text-[0.9rem]`, inline `padding: &#39;12px 16px&#39;, borderRadius: &#39;10px&#39;, boxShadow: &#39;inset 0 1px 3px rgba(0,0,0,0.02)&#39;`.
+- Button &quot;Subscribe&quot;: `bg-neutral-900 text-white border-none font-semibold cursor-pointer transition-all duration-200 hover:-translate-y-0.5 text-[0.9rem]`, inline `padding: &#39;12px 28px&#39;, borderRadius: &#39;10px&#39;, boxShadow: &#39;0 12px 24px rgba(0,0,0,0.4)&#39;`.
+
+Bottom bar: `border-t border-[#f0f0f0] pt-[25px] pb-[10px] flex justify-between text-[0.85rem] text-[#888] max-[480px]:flex-col max-[480px]:gap-[15px] max-[480px]:items-center` containing &quot;All rights reserved. © 2025&quot; and &quot;Designed by Peter Design&quot;.
+
+### Font loading
+
+Add to `index.html` `&lt;head&gt;`: Google Fonts Inter preconnect + stylesheet link:
+```html
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+```
+
+### Notes
+
+- Gradient uses five colors: base `#ff8e53`, blobs `#fff1aa`, `#ff4b2b`, `#8aff8a`, `#ffd000`, `#ff1493`.
+- Animation uses CSS `@property` for GPU-friendly custom-property interpolation — this is the modern standard for animated CSS gradients (no JS, no canvas).
+- Blobs travel wide paths and pulse in radius; durations 3–6.5s, each offset for organic motion.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="liquid-glass-cta.html">Liquid Glass CTA<small>CTA Section · cta</small></a><a href="nimbus-ops.html">Nimbus Ops<small>CTA Section · cta</small></a><a href="orbis-cta.html">Orbis CTA<small>CTA Section · cta</small></a><a href="rocket-cta.html">Rocket CTA<small>CTA Section · cta</small></a><a href="global-cta-footer.html">Global CTA Footer<small>CTA Section · cta</small></a><a href="editorial-collection-cta.html">Editorial Collection CTA<small>CTA Section · cta</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

@@ -49,6 +49,11 @@ const I18N = {
     prompts: '个提示词',
     tagline: '动效 UI 提示词资料库（更新至2026年10月）',
     footer: '按 / 搜索 · 按 Esc 关闭 · 按 G 切换紧凑',
+    allPrompts: '全部提示词',
+    about: '关于本站',
+    privacy: '隐私政策',
+    contact: '联系我们',
+    terms: '使用条款',
     noPreview: '概念图',
     conceptBadge: '概念',
     fullBadge: '完整',
@@ -121,6 +126,11 @@ const I18N = {
     prompts: 'prompts',
     tagline: 'A curated library of motion-driven UI prompts',
     footer: 'Press / to search · Esc to close · G for compact',
+    allPrompts: 'All prompts',
+    about: 'About',
+    privacy: 'Privacy policy',
+    contact: 'Contact',
+    terms: 'Terms of use',
     noPreview: 'Concept art',
     conceptBadge: 'Concept',
     fullBadge: 'Full',
@@ -163,6 +173,7 @@ const t = (k) => I18N[LANG][k] || I18N['en'][k] || k;
 const $ = (id) => document.getElementById(id);
 const esc = (v) => String(v == null ? '' : v).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const hash = (id) => { let h = 0; for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0; return h; };
+const slugId = (id) => String(id == null ? '' : id).replace(/[^a-zA-Z0-9._-]/g, '_');
 const fnv = (id) => { let h = 2166136261 >>> 0; for (let i = 0; i < id.length; i++) { h ^= id.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; };
 
 let current = null, compact = false;
@@ -532,7 +543,7 @@ function cardHTML(x) {
     + '</div>'
     + '<div class="card-media-wrap">' + lazyMediaOf(x) + '</div>'
     + '<div class="body">'
-    + '<h2>' + esc(x.title) + '</h2>'
+    + '<h2><a href="p/' + slugId(x.id) + '.html">' + esc(x.title) + '</a></h2>'
     + '<div class="desc">' + esc(x.description || '—') + '</div>'
     + '<div class="tag-row">'
     + '<span class="tag accent">' + esc(x.category || '—') + '</span>'
@@ -885,11 +896,18 @@ function applyLang() {
   // Footer (uses HTML for kbd styling)
   const footer = $('footer-app');
   if (footer) {
-    const kbd = '<kbd style="font-family:JetBrains Mono,monospace;padding:2px 6px;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:5px">';
-    footer.innerHTML = t('footer')
+    const kbd = '<kbd style="font-family:JetBrains Mono,monospace;padding:2px 6px;background:var(--tint6);border:1px solid var(--line);border-radius:5px">';
+    const hint = t('footer')
       .replace(/<kbd>\s*([^<]+?)\s*<\/kbd>/g, function(m, key){
         return kbd + esc(key) + '</kbd>';
       });
+    footer.innerHTML = '<nav class="foot-links">'
+      + '<a href="all.html">' + esc(t('allPrompts')) + '</a>'
+      + '<a href="about.html">' + esc(t('about')) + '</a>'
+      + '<a href="privacy.html">' + esc(t('privacy')) + '</a>'
+      + '<a href="contact.html">' + esc(t('contact')) + '</a>'
+      + '<a href="terms.html">' + esc(t('terms')) + '</a>'
+      + '</nav><div>' + hint + '</div>';
   }
 
   // Lang toggle button title (mouseover hint)

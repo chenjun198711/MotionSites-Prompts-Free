@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arceage Testimonial — Testimonials 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色背景上的客户评价轮播组件，采用Barlow字体，包含用户头像、评价文字和星级评分，支持移动端响应式滑动切换。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/arceage-testimonial.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arceage Testimonial — Testimonials 提示词">
+<meta property="og:description" content="深色背景上的客户评价轮播组件，采用Barlow字体，包含用户头像、评价文字和星级评分，支持移动端响应式滑动切换。">
+<meta property="og:url" content="https://prompt-site.shop/p/arceage-testimonial.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/arceage-testimonial.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Arceage Testimonial","description":"深色背景上的客户评价轮播组件，采用Barlow字体，包含用户头像、评价文字和星级评分，支持移动端响应式滑动切换。","url":"https://prompt-site.shop/p/arceage-testimonial.html","inLanguage":"zh-CN","genre":"Testimonials","dateCreated":"2026-06-06T12:03:21.963922+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-testimonials">Testimonials</a></div><h1>Arceage Testimonial</h1><div class="chip-row"><span class="chip">Testimonials</span><span class="chip">testimonials</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-06</span><span>正文：8,021 字符</span></div><div class="hero-media"><img src="../assets/previews/arceage-testimonial.webp" alt="Arceage Testimonial 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色背景上的客户评价轮播组件，采用Barlow字体，包含用户头像、评价文字和星级评分，支持移动端响应式滑动切换。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Create a React + Tailwind CSS v4 + Motion (&quot;motion/react&quot;) customer feedback / testimonial carousel section. Use Vite as the bundler. Fully mobile responsive.
+
+### Fonts
+
+Import from Google Fonts in your global CSS:
+```
+@import url(&#39;https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Instrument+Serif:ital@0;1&amp;display=swap&#39;);
+```
+
+Define two Tailwind v4 theme fonts:
+- `--font-sans: &quot;Barlow&quot;, ui-sans-serif, system-ui, sans-serif;` (primary UI font via `font-sans`)
+- `--font-dm-serif: &quot;Instrument Serif&quot;, serif;` (accent font -- not used in this section but defined globally)
+
+The page wrapper uses `bg-black font-sans text-white`. This section overrides to `bg-white text-black`.
+
+### Dependencies
+
+- `react` v19 (uses `useState`)
+- `motion` (npm package &quot;motion&quot;, import `motion`, `AnimatePresence` from `motion/react`)
+- `lucide-react` (import `ArrowLeft`, `ArrowRight`)
+- `tailwindcss` v4 with `@tailwindcss/vite` plugin
+- Vite v6+
+
+### Also requires a Typewriter component
+
+A reusable character-by-character reveal animation triggered on scroll:
+- Props: `text: string`, `delay?: number` (default 0), `speed?: number` (default 0.015), `className?: string` (default &quot;&quot;)
+- Uses `useRef`, `useInView(ref, { once: true, margin: &quot;-10px&quot; })` from `motion/react`
+- Renders a `motion.span` with `initial=&quot;hidden&quot;` and `animate={inView ? &quot;visible&quot; : &quot;hidden&quot;}`
+- Parent variants: hidden = `{ opacity: 1 }`, visible = `{ opacity: 1, transition: { staggerChildren: speed, delayChildren: delay } }`
+- Splits text into individual characters, each wrapped in `motion.span` with variants: hidden = `{ opacity: 0 }`, visible = `{ opacity: 1 }`
+
+---
+
+### Data: Feedback Array
+
+A static array of 3 feedback objects, each with `quote`, `author`, `title`, `avatar`:
+
+```js
+const feedbacks = [
+{
+quote: &quot;\u00abWorking with the Acreage Ag team gave us a competitive edge in bringing our crops to market. Their technical expertise, machinery, and customer service are outstanding. We consider them a key partner for all our harvesting needs\u00bb&quot;,
+author: &quot;Maranda Walsh&quot;,
+title: &quot;Operations Manager, GreenAcres Farms&quot;,
+avatar: &quot;https://picsum.photos/seed/maranda/100/100&quot;
+},
+{
+quote: &quot;\u00abThe team&#39;s dedication and innovative approach transformed our farm operations. They delivered a high-quality harvest on time and within budget. We highly recommend their services.\u00bb&quot;,
+author: &quot;John Doe&quot;,
+title: &quot;Owner, Valley Wheat Producers&quot;,
+avatar: &quot;https://picsum.photos/seed/john/100/100&quot;
+},
+{
+quote: &quot;\u00abExceptional service and outstanding yields. The operators were highly skilled and integrated seamlessly with our in-house farm hands. A truly remarkable partnership.\u00bb&quot;,
+author: &quot;Sarah Smith&quot;,
+title: &quot;Chief Agronomist, HarvestYield Co.&quot;,
+avatar: &quot;https://picsum.photos/seed/sarah/100/100&quot;
+}
+];
+```
+
+Note: Quotes use guillemet characters (the `&lt;&lt;` and `&gt;&gt;` style quotation marks).
+
+---
+
+### State Management
+
+Two pieces of React state:
+- `currentIndex` (number, default 0) -- tracks which feedback is visible
+- `direction` (number, default 1) -- tracks slide direction for animation (+1 = forward, -1 = backward)
+
+Two handler functions:
+- `nextSlide`: sets direction to `1`, increments `currentIndex` wrapping with modulo
+- `prevSlide`: sets direction to `-1`, decrements `currentIndex` wrapping with modulo
+
+---
+
+### Slide Animation Variants
+
+Custom directional variants for the `AnimatePresence` carousel:
+
+```js
+const variants = {
+enter: (direction) =&gt; ({
+x: direction &gt; 0 ? 100 : -100,
+opacity: 0
+}),
+center: {
+zIndex: 1,
+x: 0,
+opacity: 1
+},
+exit: (direction) =&gt; ({
+zIndex: 0,
+x: direction &lt; 0 ? 100 : -100,
+opacity: 0
+})
+};
+```
+
+Transition for the slide: `{ x: { type: &quot;spring&quot;, stiffness: 300, damping: 30 }, opacity: { duration: 0.2 } }`
+
+---
+
+### Section Container
+
+`&lt;section&gt;` with:
+- `id=&quot;feedback&quot;`
+- Classes: `w-full bg-white text-black py-8 md:py-24 px-6 md:px-12 lg:px-[120px] flex flex-col justify-center overflow-hidden`
+
+### Staggered Reveal Wrapper
+
+The entire section content is wrapped in a `motion.div`:
+- `initial=&quot;hidden&quot;`, `whileInView=&quot;visible&quot;`, `viewport={{ once: true, margin: &quot;-100px&quot; }}`
+- Variants: hidden = `{ opacity: 0 }`, visible = `{ opacity: 1, transition: { staggerChildren: 0.05 } }`
+- Classes: `w-full`
+
+---
+
+### Element 1: Section Title (h2)
+
+- Wrapped in `motion.h2` with variants: hidden = `{ opacity: 0, y: 20 }`, visible = `{ opacity: 1, y: 0, transition: { duration: 0.6, ease: &quot;easeOut&quot; } }`
+- Classes: `text-sm md:text-base mb-6 font-medium tracking-wide`
+- Content: `&lt;Typewriter text=&quot;Customer Feedback&quot; delay={0} speed={0.012} /&gt;`
+
+### Element 2: Top Divider Line
+
+- `motion.div` with variants: hidden = `{ scaleX: 0 }`, visible = `{ scaleX: 1, transition: { duration: 0.8, ease: &quot;easeOut&quot; } }`
+- Classes: `w-full h-[1px] bg-[#D9D9D9] mb-12 md:mb-20 origin-left`
+- Animates by scaling from left to right.
+
+### Element 3: Quote Carousel Area
+
+- Wrapper `motion.div`:
+- Variants: hidden = `{ opacity: 0, y: 20 }`, visible = `{ opacity: 1, y: 0, transition: { duration: 0.6, ease: &quot;easeOut&quot; } }`
+- Classes: `relative overflow-hidden min-h-[300px] md:min-h-[250px] flex items-center`
+- Inside: `&lt;AnimatePresence initial={false} custom={direction} mode=&quot;wait&quot;&gt;`
+- `motion.div` keyed by `currentIndex`, using the directional slide variants described above
+- Classes: `w-full`
+- Contains the quote `&lt;p&gt;`:
+- Classes: `text-2xl md:text-4xl lg:text-[44px] font-light leading-snug md:leading-tight text-right tracking-tight`
+- Content: `&lt;Typewriter text={feedbacks[currentIndex].quote} delay={0.2} speed={0.012} /&gt;`
+
+### Element 4: Bottom Divider Line
+
+- Same animation as top divider: `motion.div` with scaleX variants
+- Classes: `w-full h-[1px] bg-[#D9D9D9] mt-12 md:mt-20 mb-8 origin-left`
+
+### Element 5: Author Info + Navigation Arrows
+
+- Wrapper `motion.div`:
+- Variants: hidden = `{ opacity: 0, y: 20 }`, visible = `{ opacity: 1, y: 0, transition: { duration: 0.6, ease: &quot;easeOut&quot; } }`
+- Classes: `flex flex-col sm:flex-row justify-between items-center gap-6`
+
+**Left side: Author info (animated on slide change)**
+- `&lt;AnimatePresence mode=&quot;wait&quot;&gt;` wrapping a `motion.div` keyed by `currentIndex`:
+- `initial={{ opacity: 0, y: 10 }}`, `animate={{ opacity: 1, y: 0 }}`, `exit={{ opacity: 0, y: -10 }}`
+- `transition={{ duration: 0.2 }}`
+- Classes: `flex items-center gap-4 w-full sm:w-auto`
+- Avatar `&lt;img&gt;`:
+- `src={feedbacks[currentIndex].avatar}`
+- Classes: `w-14 h-14 rounded-full object-cover`
+- `referrerPolicy=&quot;no-referrer&quot;`
+- Author name `&lt;h3&gt;`: classes `font-medium text-lg`, content `&lt;Typewriter text={author} delay={0.4} speed={0.012} /&gt;`
+- Author title `&lt;p&gt;`: classes `text-gray-500 text-sm`, content `&lt;Typewriter text={title} delay={0.5} speed={0.012} /&gt;`
+
+**Right side: Navigation arrows**
+- Wrapper: `flex gap-2 w-full sm:w-auto justify-end`
+- Two circular buttons, each:
+- Classes: `w-14 h-14 bg-[#D9D9D9] hover:bg-[#c9c9c9] transition-colors flex items-center justify-center rounded-full`
+- Left button: `onClick={prevSlide}`, contains `&lt;ArrowLeft className=&quot;w-6 h-6 text-black&quot; strokeWidth={1.5} /&gt;`, `aria-label=&quot;Previous feedback&quot;`
+- Right button: `onClick={nextSlide}`, contains `&lt;ArrowRight className=&quot;w-6 h-6 text-black&quot; strokeWidth={1.5} /&gt;`, `aria-label=&quot;Next feedback&quot;`
+
+---
+
+### Mobile Responsiveness Summary
+
+- Section padding: `py-8 px-6` on mobile, `md:py-24 md:px-12`, `lg:px-[120px]`
+- Title: `text-sm` on mobile, `md:text-base`
+- Divider margins: `mb-12` / `mt-12` on mobile, `md:mb-20` / `md:mt-20` on desktop
+- Quote text: `text-2xl` on mobile, `md:text-4xl`, `lg:text-[44px]`
+- Quote container min-height: `min-h-[300px]` on mobile, `md:min-h-[250px]` on desktop
+- Author + arrows row: stacks vertically on mobile (`flex-col`), horizontal at `sm:` (`sm:flex-row`)
+- Arrow buttons and author section go full width on mobile (`w-full`), auto-width at `sm:` (`sm:w-auto`)
+- Arrows align right on mobile via `justify-end`
+
+---</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="kova-testimonial.html">Kova Testimonial<small>Testimonials · testimonials</small></a><a href="radial-diagram.html">Radial Diagram<small>Testimonials · testimonials</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

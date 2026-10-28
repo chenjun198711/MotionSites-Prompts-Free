@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clarity Core — Landing Page 提示词 | MotionSites Prompts</title>
+<meta name="description" content="高端护肤品牌全屏着陆页，黑底极简设计，加载进度条动画，无滚动条沉浸式体验。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/bio-active.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Clarity Core — Landing Page 提示词">
+<meta property="og:description" content="高端护肤品牌全屏着陆页，黑底极简设计，加载进度条动画，无滚动条沉浸式体验。">
+<meta property="og:url" content="https://prompt-site.shop/p/bio-active.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/bio-active.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Clarity Core","description":"高端护肤品牌全屏着陆页，黑底极简设计，加载进度条动画，无滚动条沉浸式体验。","url":"https://prompt-site.shop/p/bio-active.html","inLanguage":"zh-CN","genre":"Landing Page","dateCreated":"2026-06-20T05:54:26.497321+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-landing_page">Landing Page</a></div><h1>Clarity Core</h1><div class="chip-row"><span class="chip">Landing Page</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-20</span><span>正文：7,084 字符</span></div><div class="hero-media"><img src="../assets/previews/bio-active.webp" alt="Clarity Core 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>高端护肤品牌全屏着陆页，黑底极简设计，加载进度条动画，无滚动条沉浸式体验。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a premium single-page landing site for &quot;LumiDerm&quot; — a luxury skincare/biotech brand. Use React + TypeScript + Vite + Tailwind CSS. Use lucide-react for icons. Use the font &quot;Helvetica Now Text&quot; loaded from this CDN:
+https://db.onlinewebfonts.com/c/08e020de1811ec4489f82d1247a42c09?family=Helvetica+Now+Text
+
+Set the page title to &quot;LumiDerm | Advanced Skin Science&quot;.
+
+The site has 3 components: SplashScreen, Navbar, and HeroSection. The entire page is fixed/fullscreen with overflow hidden, no scrollbar. Black background base.
+
+---
+
+### SECTION 1: Splash Screen (SplashScreen.tsx)
+
+A loading intro that plays on first load:
+- Full-screen overlay at z-[9999], bg-[#010101].
+- Shows a progress bar at the bottom (px-12, bottom-12). Left label says &quot;Loading&quot; in white/40, uppercase, tracking-[0.2em], xs text. Right shows the percentage in white, sm, tabular-nums font-medium.
+- The progress bar is 1px tall, bg-white/10 track, with a white fill that animates from 0% to 100% over 2400ms (20ms interval steps).
+- Once 100% is reached, wait 300ms, then trigger a &quot;curtain reveal&quot; animation:
+- Two panels (left half and right half) slide apart: left translates -100% X, right translates +100% X.
+- Duration: 1200ms, easing: cubic-bezier(0.76, 0, 0.24, 1).
+- The loader content fades to opacity-0 with duration-300 during reveal.
+- After 1200ms of the curtain animation, call onComplete to signal the main content can appear.
+
+---
+
+### SECTION 2: Navbar (Navbar.tsx)
+
+A floating pill-shaped navbar, fixed at the top center:
+- Position: fixed top-4 (sm:top-6), centered, z-50, px-4 on the wrapper.
+- Nav pill: bg-white/10, backdrop-blur-md, border border-white/15, rounded-full, px-2 py-2.
+- On mobile: full-width with justify-between. On sm+: auto width.
+- Appears with a transition: opacity and translateY(-4 to 0) over 700ms with 300ms delay, triggered by `isActive` prop.
+
+Contents:
+- Logo: text-base font-medium tracking-tight. &quot;Lumi&quot; in font-bold, &quot;Derm&quot; in font-light. Both white.
+- Desktop nav links (hidden md:flex): &quot;Science&quot;, &quot;Treatments&quot;, &quot;Results&quot;, &quot;Testimonials&quot;, &quot;Connect&quot;. Each: text-white/80, text-sm, hover:text-white, hover:bg-white/10, px-4 py-1.5, rounded-full.
+- CTA button (hidden sm:flex): &quot;Book Now&quot; with ArrowRight icon. bg-[#5794E2], text-white text-sm, px-5 py-2, rounded-full, hover:bg-[#4a84d0].
+- Mobile hamburger (md:hidden): w-9 h-9 rounded-full bg-white/10, toggles between Menu and X icons.
+- Mobile overlay: fixed inset-0 z-40, bg-black/90 backdrop-blur-lg. Shows the same 5 links as text-2xl font-light centered vertically with gap-6, plus the &quot;Book Now&quot; button. Transitions opacity over 300ms.
+
+---
+
+### SECTION 3: Hero Section (HeroSection.tsx)
+
+A fullscreen video background hero with scroll-driven crossfade between two states.
+
+**Video backgrounds:** (not looping, plays once then pause)
+- Video 1 URL: `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260619_222559_363e35af-d0bc-4650-b3cb-58bf833daa51.mp4`
+- Video 2 URL: `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260619_232048_98292efb-9b9c-4089-a587-72f33437c8f8.mp4`
+- Both: absolute inset-0, w-full h-full, object-cover, muted, playsInline, preload=&quot;auto&quot;.
+- Video 1 opacity = 1 - progress. Video 2 opacity = progress.
+
+
+**Scroll-driven progress (0 to 1):**
+- Listen to wheel events (passive: false, preventDefault).
+- Delta = e.deltaY / 800. Clamp progress between 0 and 1.
+- When progress crosses 0.5 threshold, pause one video and play the other from the start.
+- Video 1 plays when progress &lt; 0.5. Video 2 plays when progress &gt;= 0.5.
+
+**Hero State 1 (progress near 0) — Bottom Left content:**
+- Opacity: max(0, 1 - progress * 2.5). TranslateY: progress * 30px.
+- Position: absolute bottom-12 left-6 right-6, sm:bottom-8 sm:left-8 sm:right-auto, md:bottom-16 md:left-12. max-w-2xl.
+- H1: &quot;The Future of\nSkin Regeneration&quot;. text-3xl sm:text-4xl md:text-6xl lg:text-7xl, font-light, leading-[1.05], tracking-tight, mb-4 md:mb-6.
+- P: &quot;Heal with science, not guesswork. LumiDerm merges cellular research and bioactive formulations to unlock your skin&#39;s true radiant potential.&quot; text-xs sm:text-sm md:text-base, text-white/70, max-w-md, mb-6 md:mb-8.
+- Button: &quot;Explore Now&quot;. bg-[#5794E2], rounded-full, text-xs sm:text-sm, px-6 sm:px-8, py-3 sm:py-3.5.
+
+**Hero State 1 — White Card (bottom right, hidden on mobile):**
+- hidden sm:flex. Position: absolute bottom-8 right-8 md:bottom-16 md:right-12.
+- bg-white rounded-2xl p-4 md:p-5, items-center gap-4 md:gap-5, shadow-2xl, max-w-[380px] md:max-w-[460px].
+- Same opacity/transform as Hero 1 content.
+- Left: thumbnail image (w-20 h-20 md:w-24 md:h-24, rounded-xl, object-cover). URL: `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260619_220258_2f77857f-c799-4cce-9818-442542b98f2a.png&amp;w=1280&amp;q=85`
+- Right: &quot;LumiDerm&quot; and &quot;BioActive&quot; (text-sm font-medium, text-[#010101]), with a blue circle button (w-9 h-9, bg-[#3b82f6]) containing ArrowRight icon. Below: &quot;CellBoost(TM) 3.0&quot; in text-[#666] text-xs.
+
+**Hero State 2 (progress near 1) — Bottom Center content:**
+- Opacity: max(0, (progress - 0.4) * 2.5). TranslateY: max(0, (1 - progress) * 30)px.
+- Position: absolute bottom-12 sm:bottom-12 md:bottom-20, left-0 right-0, centered, px-6.
+- H2: &quot;Clinically Advanced\nSkin Science&quot;. text-2xl sm:text-3xl md:text-5xl lg:text-6xl, font-light, leading-[1.1], tracking-tight, mb-4 md:mb-5.
+- P: &quot;Our patented peptide complex penetrates at the cellular level, stimulating natural collagen and restoring youthful elasticity.&quot; text-xs sm:text-sm md:text-base, text-white/70, max-w-lg.
+
+**Hero State 2 — Stats (mobile: horizontal below text, desktop: right side vertical):**
+
+Mobile (flex sm:hidden, mt-6, gap-6, horizontal):
+- &quot;8M+&quot; / &quot;Skin Transformed&quot;
+- &quot;96.4%&quot; / &quot;Visible Renewal&quot;
+- &quot;37&quot; / &quot;Patents Granted&quot;
+- Numbers: text-xl font-light. Labels: text-[10px] text-white/50. Dividers: w-[1px] h-8 bg-[#5794E2]/40.
+
+Desktop (hidden sm:flex, absolute right-8 md:right-12, top-1/2, vertical, gap-8):
+- Same 3 stats. Numbers: text-3xl md:text-4xl font-light. Labels: text-xs md:text-sm, text-white/50.
+- Blue separator lines: w-12 h-[1px] bg-[#5794E2]/60, mt-4 after first two.
+- Transform: translateY(calc(-50% + hero2TranslateY px)).
+
+---
+
+### App.tsx
+
+- State: splashComplete (boolean, starts false).
+- Renders SplashScreen (only when not complete), Navbar, and HeroSection.
+- Both Navbar and HeroSection receive `isActive={splashComplete}`.
+
+### Global CSS (index.css)
+
+- Tailwind directives (@tailwind base/components/utilities).
+- Global reset: * { margin:0; padding:0; box-sizing:border-box }
+- html, body, #root: width/height 100%, overflow hidden, font-family: &#39;Helvetica Now Text&#39;, Helvetica, Arial, sans-serif.
+
+### Tailwind Config
+
+- Extend fontFamily with: helvetica: [&#39;&quot;Helvetica Now Text&quot;&#39;, &#39;Helvetica&#39;, &#39;Arial&#39;, &#39;sans-serif&#39;]
+
+Make everything fully mobile responsive. The site should feel like an Apple-level luxury product page with smooth animations and premium typography.
+```</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="motionz-premium-landing-page.html">MotionZ Premium Landing Page<small>Landing Page · landing-page</small></a><a href="future-state.html">Future-State<small>Landing Page · hero</small></a><a href="3d-story.html">3D Story<small>Landing Page · hero</small></a><a href="financial-suite.html">Financial Suite<small>Landing Page · hero</small></a><a href="prompt-hero.html">PROMPT<small>Landing Page · hero</small></a><a href="health-portal.html">Health Portal<small>Landing Page · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

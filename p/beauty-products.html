@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Beauty Products — Products 提示词 | MotionSites Prompts</title>
+<meta name="description" content="美妆产品畅销榜单轮播区，米色背景配黑色文字，双标签切换按钮带圆形指示器，垂直居中布局展示商品卡片。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/beauty-products.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Beauty Products — Products 提示词">
+<meta property="og:description" content="美妆产品畅销榜单轮播区，米色背景配黑色文字，双标签切换按钮带圆形指示器，垂直居中布局展示商品卡片。">
+<meta property="og:url" content="https://prompt-site.shop/p/beauty-products.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/beauty-products.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Beauty Products","description":"美妆产品畅销榜单轮播区，米色背景配黑色文字，双标签切换按钮带圆形指示器，垂直居中布局展示商品卡片。","url":"https://prompt-site.shop/p/beauty-products.html","inLanguage":"zh-CN","genre":"Products","dateCreated":"2026-06-05T13:09:33.610586+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-products">Products</a></div><h1>Beauty Products</h1><div class="chip-row"><span class="chip">Products</span><span class="chip">carousel</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-05</span><span>正文：6,027 字符</span></div><div class="hero-media"><img src="../assets/previews/beauty-products.webp" alt="Beauty Products 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>美妆产品畅销榜单轮播区，米色背景配黑色文字，双标签切换按钮带圆形指示器，垂直居中布局展示商品卡片。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">---
+
+**Prompt to recreate the &quot;Best Sellers&quot; section:**
+
+&gt; Build a &quot;Best Sellers&quot; product carousel section in React + Tailwind CSS with the following exact specifications:
+&gt;
+&gt; **Layout &amp; Background:**
+&gt; - Full-width section with background color `#F9F4F0`, text color black.
+&gt; - `min-h-screen`, using flexbox column layout with `justify-center` to vertically center all content.
+&gt; - Horizontal padding: `px-4` on mobile, `sm:px-6`, `lg:px-10`. Vertical padding: `py-12`, `sm:py-16`.
+&gt;
+&gt; **Tab Header:**
+&gt; - Two tab buttons side by side in a flex row with `gap-4` (mobile) / `gap-6` (sm+).
+&gt; - Bottom margin: `mb-8` (mobile), `sm:mb-12`.
+&gt; - Each tab button contains a flex row with `gap-3` (mobile) / `gap-4` (sm+).
+&gt; - The active tab shows a filled circle indicator: `w-5 h-5` (mobile) / `sm:w-6 sm:h-6`, `rounded-full`, `bg-[#1a1a1a]`. This circle animates in with a custom `scale-in` keyframe animation: `from { transform: scale(0); opacity: 0 } to { transform: scale(1); opacity: 1 }` using `cubic-bezier(0.34, 1.56, 0.64, 1)` over `0.3s`. The circle only renders when that tab is active (conditional rendering, not visibility toggle).
+&gt; - Tab text is `text-2xl` (mobile), `sm:text-4xl`, `md:text-5xl`, `font-medium`. Active tab text: `text-[#1a1a1a]`. Inactive tab text: `text-gray-400` with `group-hover:text-gray-600`. Color transition: `duration-300`.
+&gt; - Tab labels (lowercase): &quot;best sellers&quot; and &quot;sets&quot;. Default active tab: &quot;best sellers&quot;.
+&gt; - The entire tab header block uses an IntersectionObserver-based reveal animation (threshold `0.1`): transitions from `opacity-0 translate-y-6` to `opacity-100 translate-y-0` over `duration-800 ease-out`.
+&gt;
+&gt; **Product Carousel:**
+&gt; - Horizontal scrollable flex container with `overflow-x-auto`. Hidden scrollbar using both `.scrollbar-hide::-webkit-scrollbar { display: none }` CSS class and inline styles `scrollbarWidth: &#39;none&#39;, msOverflowStyle: &#39;none&#39;`.
+&gt; - Cursor: `cursor-grab`, `active:cursor-grabbing`.
+&gt; - Vertical mouse wheel events are intercepted and converted to horizontal scroll (`e.preventDefault()` + `el.scrollLeft += e.deltaY`), added with `{ passive: false }`.
+&gt; - Each product card is `flex-shrink-0` with widths: `w-[260px]` mobile, `sm:w-[280px]`, `md:w-[300px]`, `lg:w-[calc(25%-1px)]`.
+&gt; - Cards have `border border-gray-200` with `-ml-[1px]` to collapse borders (first card: `first:ml-0`).
+&gt; - Card padding: `pt-4 pb-6`.
+&gt; - Each card has a staggered reveal animation tied to the same IntersectionObserver: `opacity-0 translate-y-8` to `opacity-100 translate-y-0`, `duration-500 ease-out`, with `transitionDelay` of `200 + (index * 80)ms`.
+&gt;
+&gt; **Card Internal Layout:**
+&gt; - **Category label area** (top): `px-4`, fixed `h-12`. Category text: `text-xs font-medium tracking-wider uppercase`. Optional subcategory below: `text-xs text-gray-500 uppercase mt-0.5`.
+&gt; - **Product image**: `mx-4`, `aspect-[3/4]`, `rounded-lg overflow-hidden`, background `bg-[#F9F4F0]`. Image fills with `object-cover`. Hover: `scale-105` over `duration-500`.
+&gt; - **Product info** (below image): `mt-4 text-center`. Name: `text-sm`, hover color transition to `text-[#1a1a1a]` over `duration-300`. Price row: flex centered with `gap-2 mt-1`. Current price: `text-sm`. Old price (if exists): `text-sm text-gray-400 line-through`.
+&gt;
+&gt; **7 Products with exact data:**
+&gt; 1. Category: &quot;ILLUMINATE&quot; | Name: &quot;Illuminating cleansing gel&quot; | Price: &quot;36,00&quot; | Image: `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260518_193822_8c95f5ed-b142-454f-ab87-59ad1f09e758.png&amp;w=1280&amp;q=85`
+&gt; 2. Category: &quot;UNIFY&quot; | Subcategory: &quot;TIGHTEN PORES&quot; | Name: &quot;Unifying serum spray&quot; | Price: &quot;34,00&quot; | Image: `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260518_194048_278bf3cc-7d1f-43c1-9dc7-73d8fcd9949c.png&amp;w=1280&amp;q=85`
+&gt; 3. Category: &quot;NATURAL GLOW&quot; | Name: &quot;Super glow set&quot; | Price: &quot;92,00&quot; | Old price: &quot;99,00&quot; | Image: `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260518_194058_d89610de-05f8-45e4-8196-0680296c565a.png&amp;w=1280&amp;q=85`
+&gt; 4. Category: &quot;PROTECT&quot; | Subcategory: &quot;ILLUMINATE&quot; | Name: &quot;Radiance day oil&quot; | Price: &quot;59,00&quot; | Image: `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260518_194112_1763cbb2-3171-4ad3-9f38-1b738b8f1bb6.png&amp;w=1280&amp;q=85`
+&gt; 5. Category: &quot;HYDRATE&quot; | Subcategory: &quot;NOURISH&quot; | Name: &quot;Deep moisture cream&quot; | Price: &quot;48,00&quot; | Image: same as product 1
+&gt; 6. Category: &quot;RENEW&quot; | Name: &quot;Night repair elixir&quot; | Price: &quot;72,00&quot; | Old price: &quot;79,00&quot; | Image: same as product 2
+&gt; 7. Category: &quot;SMOOTH&quot; | Subcategory: &quot;REFINE&quot; | Name: &quot;Gentle exfoliating toner&quot; | Price: &quot;42,00&quot; | Image: same as product 3
+&gt;
+&gt; **Scroll Progress Bar:**
+&gt; - Centered below carousel: `mt-8` (mobile), `sm:mt-10`, `mx-auto`, `max-w-[280px]`.
+&gt; - Track: `h-[2px]`, `bg-gray-300`, `rounded-full`, `relative overflow-hidden`.
+&gt; - Thumb: absolutely positioned, `h-full`, `bg-[#1a1a1a]`, `rounded-full`, fixed `width: 30%`. Position is driven by a `translateX` transform calculated as `scrollProgress * (100 / 0.3)%`, where `scrollProgress` = `scrollLeft / (scrollWidth - clientWidth)`. Transition: `duration-150 ease-out`.
+&gt;
+&gt; **Required CSS (in global stylesheet):**
+&gt; ```css
+&gt; .scrollbar-hide::-webkit-scrollbar { display: none; }
+&gt; @keyframes scale-in {
+&gt; from { transform: scale(0); opacity: 0; }
+&gt; to { transform: scale(1); opacity: 1; }
+&gt; }
+&gt; .animate-scale-in {
+&gt; animation: scale-in 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+&gt; }
+&gt; ```
+&gt;
+&gt; **IntersectionObserver hook (`useInView`):**
+&gt; - Accepts a `threshold` parameter (default `0.15`), uses a ref.
+&gt; - Observes the element; once `isIntersecting` is true, sets `isVisible = true` and unobserves.
+&gt; - Returns `{ ref, isVisible }`.
+&gt; - This section calls it with threshold `0.1`.
+
+---</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="daisy-wild.html">Daisy Wild<small>Products · features</small></a><a href="daisy-sweet.html">Daisy Sweet<small>Products · features</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

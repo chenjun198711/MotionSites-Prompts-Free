@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kova Testimonial — Testimonials 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Kova金融应用的用户评价区块，采用浅色背景搭配深色文字，卡片式布局展示客户反馈，配合淡入动画效果。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/kova-testimonial.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kova Testimonial — Testimonials 提示词">
+<meta property="og:description" content="Kova金融应用的用户评价区块，采用浅色背景搭配深色文字，卡片式布局展示客户反馈，配合淡入动画效果。">
+<meta property="og:url" content="https://prompt-site.shop/p/kova-testimonial.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/kova-testimonial.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Kova Testimonial","description":"Kova金融应用的用户评价区块，采用浅色背景搭配深色文字，卡片式布局展示客户反馈，配合淡入动画效果。","url":"https://prompt-site.shop/p/kova-testimonial.html","inLanguage":"zh-CN","genre":"Testimonials","dateCreated":"2026-06-04T14:57:21.193204+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-testimonials">Testimonials</a></div><h1>Kova Testimonial</h1><div class="chip-row"><span class="chip">Testimonials</span><span class="chip">testimonials</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-04</span><span>正文：6,055 字符</span></div><div class="hero-media"><img src="../assets/previews/kova-testimonial.webp" alt="Kova Testimonial 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>Kova金融应用的用户评价区块，采用浅色背景搭配深色文字，卡片式布局展示客户反馈，配合淡入动画效果。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">---
+
+Build a Testimonial section for a fintech app called &quot;Kova&quot; using React + Tailwind CSS 3 + Framer Motion. Use TypeScript. Do NOT use purple/indigo colors anywhere.
+
+---
+
+## FONTS (prerequisite)
+
+These two web fonts must be loaded in `index.html`:
+
+```html
+&lt;link href=&quot;https://db.onlinewebfonts.com/c/53077f9a3eee9c479d37d6af20394ded?family=Cooper+BT+W01+Light&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href=&quot;https://db.onlinewebfonts.com/c/5ade3423145f3b9f7031574333ca0b73?family=Cooper+BT+W01+Medium&quot; rel=&quot;stylesheet&quot;&gt;
+```
+
+CSS utility classes:
+
+```css
+.font-cooper {
+font-family: &#39;Cooper BT W01 Light&#39;, &#39;Georgia&#39;, serif;
+}
+.font-cooper-medium {
+font-family: &#39;Cooper BT W01 Medium&#39;, &#39;Cooper BT W01 Light&#39;, &#39;Georgia&#39;, serif;
+font-weight: 500;
+}
+```
+
+---
+
+## FADEUP ANIMATION COMPONENT (prerequisite)
+
+This section uses a `&lt;FadeUp&gt;` component with scroll-triggered animation (NOT immediate). Each element animates independently with staggered delays.
+
+**Props:** `children`, `delay` (number, default 0), `className` (string, optional), `immediate` (boolean, default false)
+
+**Variants:**
+- `hidden`: `{ opacity: 0, y: 24, filter: &#39;blur(8px)&#39; }`
+- `visible`: `{ opacity: 1, y: 0, filter: &#39;blur(0px)&#39;, transition: { duration: 0.7, delay, ease: [0.25, 0.1, 0.25, 1] } }`
+
+**Behavior for this section:** `initial=&quot;hidden&quot; whileInView=&quot;visible&quot; viewport={{ once: true, margin: &#39;-60px&#39; }}` (scroll-triggered, fires once when element enters viewport minus 60px margin).
+
+---
+
+## COLOR PALETTE
+
+- Primary dark green: `#08150C`
+- Hover dark green: `#1a2e1f`
+- Warm cream background: `#FDF5EB`
+- Text: Tailwind `stone-500`, `stone-700`, `stone-800`
+
+---
+
+## SECTION STRUCTURE
+
+`&lt;section&gt;` element with class: `bg-[#FDF5EB] py-14 sm:py-20 px-5 sm:px-10 lg:px-20`
+
+Inner container: `max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10 md:gap-16 items-center`
+
+This creates a two-column layout on desktop (left column 60%, right column 40%) that stacks to single column on mobile.
+
+---
+
+## LEFT COLUMN — Text Content
+
+Five elements, each wrapped in its own `&lt;FadeUp&gt;` with staggered delays:
+
+### 1. Section Heading (FadeUp delay=0)
+
+`&lt;h2&gt;` with class: `font-cooper-medium text-2xl sm:text-3xl text-[#08150C] leading-snug mb-6 sm:mb-8`
+
+Text: **&quot;Trusted by ambitious, fast-moving teams&quot;**
+
+---
+
+### 2. Company Badge (FadeUp delay=0.1)
+
+Container: `flex items-center gap-2 mb-5 sm:mb-6`
+
+- Square icon: `&lt;div&gt;` with class `w-7 h-7 rounded-md bg-[#08150C] flex items-center justify-center text-white text-xs font-bold` — contains the letter **&quot;A&quot;**
+- Company name: `&lt;span&gt;` with class `text-sm font-semibold text-stone-800` — text **&quot;Arcvex&quot;**
+
+---
+
+### 3. Testimonial Quote (FadeUp delay=0.2)
+
+`&lt;blockquote&gt;` with class: `font-cooper text-stone-700 text-lg sm:text-xl md:text-2xl leading-relaxed mb-5 sm:mb-6`
+
+Text (including opening and closing quotation marks): **&quot;With Kova, I have full visibility into our team&#39;s spending in real time. It feels like having a sharp financial advisor available at every hour, helping us stay on budget and make wiser calls.&quot;**
+
+---
+
+### 4. Attribution (FadeUp delay=0.3)
+
+Container: `&lt;div&gt;` with class `mb-6 sm:mb-8`
+
+- Name: `&lt;p&gt;` with class `text-sm font-semibold text-[#08150C]` — text **&quot;Maya Reeves&quot;**
+- Title: `&lt;p&gt;` with class `text-xs text-stone-500` — text **&quot;Director, Arcvex&quot;**
+
+---
+
+### 5. CTA Button (FadeUp delay=0.4)
+
+`&lt;button&gt;` with class: `flex items-center gap-2 bg-[#08150C] text-white text-sm font-medium px-5 py-2.5 rounded-xl hover:bg-[#1a2e1f] transition-colors`
+
+Contents:
+- Text: **&quot;All Stories&quot;**
+- Custom arrow SVG icon (inline, NOT a Lucide icon):
+
+```html
+&lt;svg width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;0 0 14 14&quot; fill=&quot;none&quot;&gt;
+&lt;path d=&quot;M2 7h10M8 3l4 4-4 4&quot; stroke=&quot;currentColor&quot; strokeWidth=&quot;1.5&quot; strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot;/&gt;
+&lt;/svg&gt;
+```
+
+---
+
+## RIGHT COLUMN — Video
+
+Wrapped in `&lt;FadeUp delay={0.15} className=&quot;flex justify-center md:justify-end&quot;&gt;`.
+
+Inner container: `&lt;div&gt;` with class `w-full max-w-xs sm:max-w-sm`
+
+Contains a `&lt;video&gt;` element:
+- **src:** `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260517_074029_c7a854bd-2d6e-4b62-96b3-ae8c16311e44.mp4`
+- Attributes: `autoPlay`, `loop`, `muted`, `playsInline`
+- Class: `w-full rounded-2xl object-cover aspect-square`
+
+The video plays automatically, loops infinitely, has no audio, and is cropped to a square aspect ratio with rounded corners (16px radius).
+
+---
+
+## RESPONSIVE BEHAVIOR
+
+- **Mobile (default):** Single column stack. Left text content appears first, video appears below. Heading is `text-2xl`. Quote is `text-lg`. Spacing uses smaller values (`py-14`, `mb-5`, `gap-10`).
+- **sm (640px+):** Heading scales to `text-3xl`. Quote scales to `text-xl`. Spacing increases (`py-20`, `mb-6`, `mb-8`). Video container expands to `max-w-sm`.
+- **md (768px+):** Switches to two-column grid `grid-cols-[3fr_2fr]` with `gap-16`. Quote scales to `text-2xl`. Video aligns to the right (`md:justify-end`).
+- **lg (1024px+):** Horizontal padding increases to `px-20`.
+
+---
+
+## KEY IMPLEMENTATION NOTES
+
+- The section background is the same warm cream `#FDF5EB` as the Features section below it, creating a seamless visual flow.
+- The grid uses fractional columns `[3fr_2fr]` (not equal halves) to give the text content more horizontal space than the video.
+- The video is `aspect-square` — it crops the video to a perfect square regardless of the source video&#39;s native aspect ratio.
+- The FadeUp animations are scroll-triggered (NOT immediate like the Hero section), so they fire as the user scrolls this section into view.
+- The left column elements animate in sequence with 0.1s delay increments (0, 0.1, 0.2, 0.3, 0.4).
+- The right column video animates at delay=0.15, which means it starts between the heading (0) and quote (0.2) animations on the left — creating a natural cross-column stagger.
+- The button uses `rounded-xl` (12px radius), NOT `rounded-full`.
+- The arrow icon is a hand-drawn SVG, not a Lucide icon. It has a horizontal line from x=2 to x=12, and a chevron from (8,3) to (12,7) to (8,11).</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="arceage-testimonial.html">Arceage Testimonial<small>Testimonials · testimonials</small></a><a href="radial-diagram.html">Radial Diagram<small>Testimonials · testimonials</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

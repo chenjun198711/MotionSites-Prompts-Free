@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Golden Portal — Landing Page 提示词 | MotionSites Prompts</title>
+<meta name="description" content="暗黑电影风格的高端画廊展示页，采用Arsenica衬线字体与Inter无衬线字体搭配，营造奢华艺术氛围。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/golden-portal.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Golden Portal — Landing Page 提示词">
+<meta property="og:description" content="暗黑电影风格的高端画廊展示页，采用Arsenica衬线字体与Inter无衬线字体搭配，营造奢华艺术氛围。">
+<meta property="og:url" content="https://prompt-site.shop/p/golden-portal.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/golden-portal.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Golden Portal","description":"暗黑电影风格的高端画廊展示页，采用Arsenica衬线字体与Inter无衬线字体搭配，营造奢华艺术氛围。","url":"https://prompt-site.shop/p/golden-portal.html","inLanguage":"zh-CN","genre":"Landing Page","dateCreated":"2026-06-25T09:48:20.665526+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-landing_page">Landing Page</a></div><h1>Golden Portal</h1><div class="chip-row"><span class="chip">Landing Page</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-25</span><span>正文：13,438 字符</span></div><div class="hero-media"><img src="../assets/previews/golden-portal.webp" alt="Golden Portal 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>暗黑电影风格的高端画廊展示页，采用Arsenica衬线字体与Inter无衬线字体搭配，营造奢华艺术氛围。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">**Build a React + Vite + TypeScript + Tailwind CSS landing page called &quot;Digital Archive&quot; -- a high-end art gallery/studio showcase website. It should be dark, cinematic, and editorial in style. Use ONLY `lucide-react` for icons. No other UI libraries.**
+
+---
+
+### FONTS
+
+Load two fonts in `index.html`:
+1. **Arsenica Trial Light** (serif) from: `https://db.onlinewebfonts.com/c/cbb3cb559d2e4387e139cfb1656e31f5?family=Arsenica+Trial+Light`
+2. **Inter** (sans-serif, weights 300, 400, 500, 600) from Google Fonts: `https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap`
+
+In CSS, define:
+```css
+:root {
+--font-serif: &#39;Arsenica Trial Light&#39;, serif;
+--font-sans: &#39;Inter&#39;, sans-serif;
+}
+body { font-family: var(--font-sans); }
+.font-arsenica { font-family: var(--font-serif); }
+.font-inter { font-family: var(--font-sans); }
+```
+
+---
+
+### GLOBAL CSS (index.css)
+
+Include these exact custom styles:
+
+**Liquid Glass Effect:**
+```css
+.liquid-glass {
+background: rgba(255, 255, 255, 0.01);
+background-blend-mode: luminosity;
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border: none;
+box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+position: relative;
+overflow: hidden;
+}
+.liquid-glass::before {
+content: &#39;&#39;;
+position: absolute;
+inset: 0;
+border-radius: inherit;
+padding: 1.4px;
+background: linear-gradient(180deg,
+rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+pointer-events: none;
+}
+```
+
+**Hero Fade-Up Animation:**
+```css
+@keyframes hero-fade-up {
+from { opacity: 0; transform: translateY(24px); }
+to { opacity: 1; transform: translateY(0); }
+}
+.hero-fade-up {
+opacity: 0;
+animation: hero-fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+```
+
+**Scroll Reveal Animations:**
+```css
+@keyframes reveal-up {
+from { opacity: 0; transform: translateY(32px); }
+to { opacity: 1; transform: translateY(0); }
+}
+@keyframes reveal-scale {
+from { opacity: 0; transform: scale(0.96); }
+to { opacity: 1; transform: scale(1); }
+}
+.reveal { opacity: 0; }
+.reveal.revealed {
+animation: reveal-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.reveal-scale { opacity: 0; }
+.reveal-scale.revealed {
+animation: reveal-scale 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+```
+
+---
+
+### CUSTOM HOOK: `useScrollReveal`
+
+A reusable IntersectionObserver hook that finds all `.reveal` and `.reveal-scale` elements within a ref, and adds `.revealed` class when they enter view (threshold default 0.15, rootMargin `0px 0px -40px 0px`). Once revealed, unobserve.
+
+---
+
+### SECTION 1: NAVBAR (fixed, centered, floating)
+
+- Fixed position, centered horizontally (`left-1/2 -translate-x-1/2`), top-4 on mobile, top-6 on sm+
+- Uses the `.liquid-glass` class with `rounded-full`
+- Padding: `px-4 py-2.5` mobile, `px-10 py-3` on sm+
+- 5 items in a row with gap-4 mobile, gap-12 on sm+:
+- Text link: &quot;Gallery&quot;
+- Text link: &quot;Talents&quot;
+- Center: Custom SVG logo (a geometric angular shape, white fill, `h-5 w-5` mobile / `h-7 w-7` sm+, with hover:scale-110 transition)
+- Text link: &quot;Journal&quot;
+- Text link: &quot;Story&quot;
+- Link styles: `text-[10px]` mobile / `text-xs` sm+, uppercase, `font-medium`, `tracking-[0.15em]` mobile / `tracking-[0.2em]` sm+, `text-white/85`, hover `text-white`
+
+**Logo SVG path:**
+```
+M 64 128 L 64.5 128 L 32 95 L 0 64 L 0 0 L 64 0 L 128 64 L 128 64.5 L 161 32 L 192 0 L 256 0 L 256 64 L 192 128 L 128 128 L 128 192 L 96 223 L 63.5 256 L 0 256 L 0 192 Z M 256 192 L 224 223 L 191.5 256 L 128 256 L 128 192 L 192 128 L 256 128 Z
+```
+viewBox `0 0 256 256`, fill white.
+
+---
+
+### SECTION 2: HERO (full viewport video background)
+
+- Full `h-screen w-full` section with `overflow-hidden`
+- Background: autoplay muted looping video covering the full section (`object-cover`), URL:
+`https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260611_130946_e6793cc7-6b6f-4035-9852-44290b781ae6.mp4`
+- Content centered vertically and horizontally, z-10, white text:
+- **Subtitle line 1** (delay 0.1s): &quot;Studioworks&quot; -- `text-xs` mobile / `text-sm` sm+, `font-medium`, uppercase, `tracking-[0.35em]`, `text-white/90`
+- **Subtitle line 2** (delay 0.1s): &quot;Exhibits&quot; -- `text-[10px]` mobile / `text-xs` sm+, `font-light`, uppercase, `tracking-[0.4em]`, `text-white/70`
+- **Heading** (delay 0.25s): Two lines:
+- &quot;DIGITAL&quot; in Arsenica, `text-5xl` up to `text-[7rem]`, `tracking-wide`
+- &quot;ARCHIVE&quot; in Inter, `font-semibold`, `text-5xl` up to `text-[7rem]`, `tracking-tight`
+- `leading-[1.05]`, `drop-shadow-[0_2px_24px_rgba(0,0,0,0.25)]`
+- **Description** (delay 0.4s): &quot;A showcase honoring the makers, visionaries and creators who turned a hard season into something rare.&quot; -- Arsenica font, `text-sm` up to `text-xl`, `max-w-xl`, `text-white/90`
+- **CTA Button** (delay 0.55s): &quot;Enter Gallery&quot; -- uses `.liquid-glass` class, `rounded-[50%]` (pill), `px-10 py-5` mobile / `px-12 py-6` sm+, `text-[10px]` mobile / `text-xs` sm+, uppercase, `tracking-[0.25em]`, Inter font, hover effects: `scale-[1.03]`, `shadow-[0_0_30px_rgba(255,255,255,0.15)]`, active `scale-[0.98]`
+
+---
+
+### TRANSITION LAYER (between Hero and Showcase)
+
+In the App layout, after the Hero, add a decorative cloud/fog image that overlaps:
+```
+&lt;div className=&quot;relative z-20 -mt-64 sm:-mt-72 md:-mt-80 lg:-mt-96&quot;&gt;
+&lt;img src=&quot;https://res.cloudinary.com/dy5er7kv5/image/upload/q_auto/f_auto/v1781584857/top-bg_j88wyu.png&quot; className=&quot;pointer-events-none w-full&quot; /&gt;
+&lt;/div&gt;
+```
+
+---
+
+### SECTION 3: SHOWCASE (full-screen image background with text)
+
+- Wrapped in a container with `relative -mt-40 sm:-mt-48 md:-mt-56 lg:-mt-64` (negative margin to overlap the transition image)
+- Full `min-h-screen` section with `overflow-hidden`
+- Background image (absolute, object-cover):
+`https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260616_040223_98d314e9-b8b4-4218-bcbd-18ffc38032ac.png&amp;w=1280&amp;q=85`
+- Content (centered, z-10, py-32, using `useScrollReveal`):
+- **Heading**: &quot;Still Frame&quot; -- Arsenica, `text-4xl` up to `text-7xl`, `tracking-wide`, `drop-shadow-[0_2px_20px_rgba(0,0,0,0.3)]`, class `.reveal`
+- **Subtext** (delay 0.15s): Three lines --
+```
+gave the world beauty
+born from the silence
+of empty studios.
+```
+Arsenica, `text-xl` up to `text-4xl`, `tracking-wide`, `text-white/90`, `drop-shadow-[0_2px_16px_rgba(0,0,0,0.25)]`, class `.reveal`
+- **Button** (delay 0.3s): &quot;View Their Archive&quot; -- rounded-[50%] pill, `border border-white/50`, transparent bg, `px-10 py-4` mobile / `px-12 py-5` sm+, Inter, `text-[10px]`/`text-xs`, uppercase, `tracking-[0.25em]`, hover: `border-white bg-white/10 scale-[1.03] shadow-[0_0_30px_rgba(255,255,255,0.1)]`, class `.reveal`
+- **Bottom gradient**: absolute bottom div, `h-48 w-full`, gradient from transparent to `#410C01`
+- **Dove image**: positioned absolute on the parent wrapper:
+`https://res.cloudinary.com/dy5er7kv5/image/upload/q_auto/f_auto/v1781584853/dove_xpaeub.png`
+Right-aligned, offset below bottom (`-bottom-12` mobile up to standard positioning), responsive widths (`w-24` up to `w-64`), z-20
+
+---
+
+### SECTION 4: Q&amp;A (dark maroon background with parallax cloud overlay)
+
+- Background: solid `bg-[#410C01]`
+- Padding: `px-4 pt-20` mobile, up to `px-28 pt-32` on lg. `paddingBottom: &#39;50vh&#39;` (inline style)
+- **Title**: &quot;Q &amp; A&quot; -- Each letter separately, Arsenica font, `text-4xl` up to `text-7xl`, centered with `flex items-baseline justify-center gap-1`. The ampersand is italic, smaller (`text-xl` to `text-4xl`), `text-white/80`. Uses `.reveal` class.
+- **Two-column layout** (grid, `md:grid-cols-2`, gap-10 up to gap-20):
+- **Left column** -- 3 Q&amp;A items
+- **Right column** -- 3 Q&amp;A items, offset `md:mt-24`
+- Each item has staggered animation delay (starting at 0.12s, incrementing by 0.12s per item globally across both columns)
+- **Question**: Arsenica, `text-xs` up to `text-base`, uppercase, `tracking-wide`, white
+- **Answer**: Inter, `text-[11px]` up to `text-sm`, `leading-relaxed`, `text-white/60`
+
+**Q&amp;A Content:**
+- Left column:
+1. Q: &quot;Welcome Maren. So how did Still Frame begin its journey?&quot; / A: &quot;Less than a year into launching the gallery, everything shut down. I had to close our doors, cancel every exhibit, and rethink it all. But I never stopped curating because I was so determined not to let the artists&#39; momentum die. We hit the ground running to build a digital space, and we&#39;ve been evolving since.&quot;
+2. Q: &quot;How did you know where to begin?&quot; / A: &quot;I didn&#39;t wait until we had the perfect platform. I saw artists struggling, isolated, uninspired, overwhelmed, and set to the task of creating ways to share their work with the world as quickly as possible.&quot;
+3. Q: &quot;So what was the first exhibit?&quot; / A: &quot;We were one of the first galleries to launch a virtual exhibition after the shutdown. I think our artists were really grateful for that, they saw how hard we worked to honor their craft, and they trusted us while we continued to refine the digital experience.&quot;
+
+- Right column:
+1. Q: &quot;What was the initial reaction?&quot; / A: &quot;We had so many people writing and reaching out that the online exhibits and archived works saved them in isolation. The atmosphere was so intimate, and it was really powerful to have people connecting through art, even though we were all in our own rooms, in different cities.&quot;
+2. Q: &quot;Where did you evolve from there?&quot; / A: &quot;The in-person pop-ups have been really special too, recently, now that enough people feel comfortable to gather. We had our first open-air exhibit in the courtyard last month, and I was basically in tears it was so beautiful.&quot;
+3. Q: &quot;Do you find there&#39;s a new appreciation for art?&quot; / A: &quot;There&#39;s a feeling of urgency like -- this is our one life, our one chance, we don&#39;t have time to be indifferent anymore. We&#39;re gonna create like there&#39;s no tomorrow, we&#39;re gonna create for a better world, we&#39;re gonna create to reclaim our voice in this life, and we&#39;re gonna create because we deserve to feel beauty and wonder.&quot;
+
+- **Parallax cloud overlay**: The same cloud image from earlier (`top-bg_j88wyu.png`) positioned absolute at `bottom-0 left-0 w-full z-10`. It has a parallax scroll effect: as section scrolls, the image transforms with `translateY(60 - offset%)` where offset is `progress * 30` and progress = `1 - rect.bottom / (vh + rect.height)`.
+
+---
+
+### SECTION 5: QUOTE BANNER (full-screen background with parallax bottom overlay)
+
+- Full viewport height, centered content
+- Background image (via inline style `backgroundImage`, with `bg-cover bg-center`):
+`https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260616_042421_41f4fa0b-770c-4545-a416-73a809366e49.png&amp;w=1280&amp;q=85`
+- On lg+, content aligns `items-start pt-[25vh]` instead of center
+- **Quote** (uses `.reveal-scale` animation): `&quot;Art, resilience and vision are more important than ever.&quot;` where &quot;are more important than ever.&quot; is in `font-light italic`. Arsenica, `text-xl` up to `text-5xl`, `leading-snug`/`lg:leading-tight`, white, max-w `xs` up to `2xl`
+- **Parallax bottom overlay**: Image positioned absolute `-bottom-16 left-0 w-full z-10`:
+`https://res.cloudinary.com/dy5er7kv5/image/upload/q_auto/f_auto/v1781584854/bottom_bg_liw6lc.png`
+Parallax: transforms with `translateY(-offset px)` where offset is `progress * 80`.
+
+---
+
+### SECTION 6: FOOTER (fixed bottom bar)
+
+- Fixed at bottom (`fixed bottom-0 left-0 right-0 z-40`)
+- `bg-gradient-to-t from-black/40 to-transparent`
+- Flex row with `justify-between`, padding `px-3 py-2.5` mobile / `px-10 py-4` sm+
+- **Left side**:
+- Facebook icon (lucide `Facebook`, `h-3.5 w-3.5` / `h-4 w-4` sm+)
+- Twitter icon (lucide `Twitter`)
+- LinkedIn icon (lucide `Linkedin`)
+- &quot;Privacy Notice&quot; text link (hidden on mobile, shown sm+)
+- **Right side**:
+- &quot;Terms &amp; Policies&quot; text link (hidden on mobile, shown sm+)
+- BarChart3 icon (lucide `BarChart3`)
+- Aperture icon (lucide `Aperture`)
+- Icon links: `text-white/80`, hover `text-white`
+- Text links: `text-[9px]` mobile / `text-[10px]` sm+, uppercase, `font-medium`, `tracking-[0.15em]`/`tracking-[0.25em]`, `text-white/80`, hover `text-white`
+
+---
+
+### APP LAYOUT ORDER
+
+```
+&lt;Navbar /&gt;
+&lt;Hero /&gt;
+&lt;TransitionCloudImage (overlaps hero with negative margin) /&gt;
+&lt;div (negative margin wrapper)&gt;
+&lt;Showcase /&gt;
+&lt;DoveImage (absolute positioned) /&gt;
+&lt;/div&gt;
+&lt;QAndA /&gt;
+&lt;QuoteBanner /&gt;
+&lt;Footer /&gt;
+```
+
+---
+
+### TAILWIND CONFIG
+
+Default Tailwind v3 config -- no custom theme extensions. Content: `[&#39;./index.html&#39;, &#39;./src/**/*.{js,ts,jsx,tsx}&#39;]`.
+
+---
+
+### KEY DESIGN DETAILS
+
+- No background color on body -- sections provide their own
+- Negative margins create seamless overlapping transitions between sections
+- The &quot;liquid glass&quot; effect creates a frosted-glass look with a subtle gradient border pseudo-element
+- All animations use `cubic-bezier(0.22, 1, 0.36, 1)` easing (smooth deceleration)
+- Staggered animations via inline `animationDelay` styles
+- Responsive scaling uses Tailwind breakpoints: default (mobile) -&gt; sm -&gt; md -&gt; lg -&gt; xl
+- Color palette: white text on dark backgrounds, `#410C01` (deep burnt maroon) as the Q&amp;A section background
+- Typography hierarchy: Arsenica for display/headings, Inter for body/UI text</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="motionz-premium-landing-page.html">MotionZ Premium Landing Page<small>Landing Page · landing-page</small></a><a href="future-state.html">Future-State<small>Landing Page · hero</small></a><a href="3d-story.html">3D Story<small>Landing Page · hero</small></a><a href="financial-suite.html">Financial Suite<small>Landing Page · hero</small></a><a href="prompt-hero.html">PROMPT<small>Landing Page · hero</small></a><a href="health-portal.html">Health Portal<small>Landing Page · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

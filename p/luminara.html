@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Luminara — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色全屏英雄区，大字标题中嵌入斜体装饰词，搭配简洁导航和行动按钮，适合品牌首页展示。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/luminara.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Luminara — Hero Section 提示词">
+<meta property="og:description" content="深色全屏英雄区，大字标题中嵌入斜体装饰词，搭配简洁导航和行动按钮，适合品牌首页展示。">
+<meta property="og:url" content="https://prompt-site.shop/p/luminara.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/luminara.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Luminara","description":"深色全屏英雄区，大字标题中嵌入斜体装饰词，搭配简洁导航和行动按钮，适合品牌首页展示。","url":"https://prompt-site.shop/p/luminara.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-06-12T09:48:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Luminara</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-12</span><span>正文：3,566 字符</span></div><div class="hero-media"><img src="../assets/previews/luminara.webp" alt="Luminara 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色全屏英雄区，大字标题中嵌入斜体装饰词，搭配简洁导航和行动按钮，适合品牌首页展示。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a full-screen hero section using React + Tailwind CSS + Vite. It must be fully mobile-responsive.
+
+**Fonts:**
+Load these Google Fonts in `index.html`:
+```
+Inter (weights: 400, 500, 600) — used as the body/primary font
+Instrument Serif (italic) — used for the italic accent word in the heading
+```
+Google Fonts link: `https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap`
+
+**CSS (index.css):**
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: &#39;Inter&#39;, sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif-italic {
+font-family: &#39;Instrument Serif&#39;, serif;
+font-style: italic;
+}
+```
+
+**Layout structure (single full-viewport section):**
+
+1. **Background video** — absolute positioned, covers the entire viewport using `object-cover`. Autoplays, muted, loops, playsInline.
+- Video URL: `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260624_052448_43259007-b7c4-4269-90bd-e3ab14e80075.mp4`
+
+2. **Navbar** — absolute top, z-10, flex row with `justify-between`, padded `px-4 sm:px-6 lg:px-8 py-4`. Contains two pill-shaped groups:
+
+- **Left pill** (logo + nav links): `bg-black/40 backdrop-blur-xl rounded-full px-5 py-2.5 border border-white/10`. Contains:
+- A custom SVG logo (20x20, white fill) with this path: `M 256 192 C 256 227.346 227.346 256 192 256 L 0 256 L 0 64 C 0 28.654 28.654 0 64 0 L 256 0 Z M 128 192 L 192 192 L 192 128 L 128 128 L 128 64 L 64 64 L 64 128 L 128 128 Z`
+- Nav links (hidden on mobile, `hidden sm:flex`): &quot;Work&quot;, &quot;Gallery&quot;, &quot;Plans&quot;, &quot;Story&quot; — white text-sm font-medium with hover:text-white/80 transition
+
+- **Right pill** (buttons): `bg-black/40 backdrop-blur-xl rounded-full px-2 py-1.5 border border-white/10`. Contains:
+- Ghost button: &quot;Get Free&quot; — white text, rounded-full, hover:bg-white/10
+- Solid button: &quot;Get a quote&quot; — bg-white text-black, rounded-full, hover:bg-white/90
+
+3. **Bottom gradient overlay** — absolutely positioned at bottom, `h-[60%]`, z-[5], pointer-events-none. Gradient: `bg-gradient-to-t from-black/80 via-black/40 to-transparent`. This provides text contrast.
+
+4. **Bottom content area** — absolute bottom, z-10, padded `px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12 lg:pb-16`. Flex layout: column on mobile, row on lg+ with items-end and justify-between.
+
+- **Left column** (max-w-3xl):
+- Badge pill: `bg-black/40 backdrop-blur-xl rounded-full px-3 py-1 mb-4 border border-white/10` containing: &quot;Luminara * Creative Showcase&quot; (the asterisk is a separate span in text-white/60)
+- Heading (h1): `text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-[1.05] tracking-tight text-white`
+- Text: &quot;Make ordinary ideas into captivating &quot;
+- Last word &quot;narratives.&quot; is wrapped in a span with class `font-serif-italic font-normal` (renders in Instrument Serif italic)
+
+- **Right column** (lg:max-w-sm lg:text-right):
+- Paragraph: &quot;Design your ideal online presence, grow your client base while crafting pieces with love and soul.&quot; — `text-white/80 text-sm sm:text-base leading-relaxed`
+
+**Key design details:**
+- All pill elements use `bg-black/40 backdrop-blur-xl border border-white/10 rounded-full`
+- The gradient overlay covers the bottom 60% of the viewport and fades from solid black/80 upward to transparent
+- The section is `relative w-full h-screen overflow-hidden`
+- No other pages or routing needed — single section only
+- Tailwind config is default with no extensions</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

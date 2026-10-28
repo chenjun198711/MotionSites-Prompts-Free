@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>404 Planet — 404 Pages 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色全屏背景视频上，居中显示&quot;404&quot;大标题和&quot;PAGE NOT FOUND&quot;副标题，顶部导航栏和底部多列页脚清晰可见，营造科技公司错误页面的沉浸感。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/404-planet.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="404 Planet — 404 Pages 提示词">
+<meta property="og:description" content="深色全屏背景视频上，居中显示&quot;404&quot;大标题和&quot;PAGE NOT FOUND&quot;副标题，顶部导航栏和底部多列页脚清晰可见，营造科技公司错误页面的沉浸感。">
+<meta property="og:url" content="https://prompt-site.shop/p/404-planet.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/404-planet.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"404 Planet","description":"深色全屏背景视频上，居中显示\"404\"大标题和\"PAGE NOT FOUND\"副标题，顶部导航栏和底部多列页脚清晰可见，营造科技公司错误页面的沉浸感。","url":"https://prompt-site.shop/p/404-planet.html","inLanguage":"zh-CN","genre":"404 Pages","dateCreated":"2026-06-15T08:28:39.885903+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-404_pages">404 Pages</a></div><h1>404 Planet</h1><div class="chip-row"><span class="chip">404 Pages</span><span class="chip">404</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-06-15</span><span>正文：7,350 字符</span></div><div class="hero-media"><img src="../assets/previews/404-planet.webp" alt="404 Planet 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色全屏背景视频上，居中显示&quot;404&quot;大标题和&quot;PAGE NOT FOUND&quot;副标题，顶部导航栏和底部多列页脚清晰可见，营造科技公司错误页面的沉浸感。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a full-page 404 error page for a hosting company called &quot;NEXOVA&quot;. The entire page is a single viewport-height layout with a looping background video, a navigation bar, a centered hero/404 section, and a multi-column footer. Use React + Tailwind CSS + Lucide React icons. No other UI libraries.
+
+---
+
+**FONT**
+
+Load &quot;Helvetica Now Var&quot; via this stylesheet in `index.html`:
+```
+&lt;link href=&quot;https://db.onlinewebfonts.com/c/e66905e07608167a84e6ad52f638c3c6?family=Helvetica+Now+Var&quot; rel=&quot;stylesheet&quot;&gt;
+```
+Apply it globally on the root container via inline style:
+```
+fontFamily: &#39;&quot;Helvetica Now Var&quot;, Helvetica, Arial, sans-serif&#39;
+```
+
+---
+
+**BACKGROUND VIDEO**
+
+A `&lt;video&gt;` element with `autoPlay muted loop playsInline`, positioned `absolute inset-0 w-full h-full object-cover` behind all content. The video source URL is:
+```
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260613_180732_a54afbf6-b30d-470e-861f-669871f09f67.mp4
+```
+This is a cinematic dark-blue Earth-from-space shot.
+
+---
+
+**LAYOUT STRUCTURE**
+
+The root is `relative min-h-screen flex flex-col`. Inside it:
+1. The background `&lt;video&gt;` (absolute, behind everything)
+2. A content wrapper `relative z-10 flex flex-col min-h-screen` containing nav, hero, and footer
+
+---
+
+**NAVIGATION BAR**
+
+- Flex row, `items-center justify-between`, padding `px-6 md:px-12 lg:px-16 py-5`
+- **Logo (left):** A custom SVG icon (4 quarter-circle leaf shapes forming a circle, white fill, `w-8 h-8`) next to the text &quot;NEXOVA&quot; in `text-white text-xl font-bold tracking-wider`. The exact SVG path is:
+```
+M480 240a240 240 0 0 0-240 240 240 240 0 0 0 240-240Z
+M240 0A240 240 0 0 0 0 240 240 240 0 0 0 240 0Z
+M480 240A240 240 0 0 0 240 0a240 240 0 0 0 240 240Z
+M240 480A240 240 0 0 0 0 240a240 240 0 0 0 240 240Z
+```
+viewBox `0 0 480 480`
+- **Desktop nav links (center):** Hidden below `lg`. Links: Domain, Servers, Cloud, Managed, Email, Privacy. Styled `text-white/80 hover:text-white text-sm tracking-wide` with 200ms color transition, `gap-8`.
+- **Login button (right):** Hidden below `lg`. Gradient button `bg-gradient-to-r from-emerald-400 to-cyan-500`, white text, `text-sm font-semibold px-6 py-2.5 rounded-full`. Text &quot;LOG IN&quot; with a Lucide `ArrowRight` icon (w-4 h-4) beside it.
+- **Mobile hamburger:** Visible below `lg` breakpoint. A button with `z-[60]` showing Lucide `Menu` / `X` icons that cross-fade with rotation: the active icon is `opacity-100 rotate-0 scale-100`, the inactive is `opacity-0 rotate-90 scale-75` (or `-rotate-90`), all with `transition-all duration-300`.
+
+---
+
+**MOBILE MENU**
+
+Uses two state variables: `mobileMenuOpen` (controls mount) and `menuVisible` (controls animation). When opening, `mobileMenuOpen` is set true, then `menuVisible` becomes true via `useEffect`. When closing, `menuVisible` is set false first, then after a 500ms timeout `mobileMenuOpen` is set false.
+
+- **Backdrop:** Fixed overlay `inset-0 z-40 bg-black/40 backdrop-blur-md`, fades in/out with 400ms opacity transition. Clicking it closes the menu.
+- **Menu panel:** Absolutely positioned `left-0 right-0 top-[68px] z-50`. Contains a backdrop-only blur layer (`backdrop-blur-xl`, no background color, `rounded-b-2xl`) and content on top (`relative z-10`).
+- **Menu items:** Each nav link is centered, `text-lg sm:text-xl font-light tracking-[0.08em]`, `text-white/80 hover:text-white`. They stagger-animate in: each link has a `transitionDelay` of `350 + (index * 50)ms` when appearing (0ms when disappearing), transitioning opacity 0-&gt;1 and translateY 12px-&gt;0 over 400ms with `ease-out`.
+- **Login button:** Same gradient style as desktop, appears last in the stagger sequence with delay `350 + (linkCount * 50)ms`.
+
+---
+
+**HERO / 404 SECTION**
+
+Centered vertically and horizontally in the remaining space: `flex-1 flex flex-col items-center justify-center text-center px-4 sm:px-6 py-12 sm:py-16 md:py-0`.
+
+1. **Subtitle lines (two h1 tags):**
+- &quot;This page seems to have&quot; and &quot;slipped beyond our reach :/&quot;
+- Both: `text-white/80 text-lg xs:text-2xl sm:text-3xl md:text-5xl font-light leading-snug tracking-tight`
+- First line: `mb-1 sm:mb-2`, second line: `mb-8 sm:mb-12`
+
+2. **Giant &quot;404&quot; text:**
+- Wrapped in a `relative mb-8 sm:mb-12 w-full flex justify-center overflow-visible` div
+- The `&lt;span&gt;`: `text-[80px] xs:text-[100px] sm:text-[140px] md:text-[200px] lg:text-[260px] font-black text-white leading-none tracking-tighter select-none`
+- Has class `four-oh-four` which applies this CSS glow:
+```css
+.four-oh-four {
+text-shadow: 0 0 80px rgba(255,255,255,0.3), 0 0 160px rgba(255,255,255,0.1);
+}
+```
+
+3. **&quot;Return to Main Page&quot; button:**
+- An `&lt;a&gt;` tag with class `liquid-glass` (glassmorphism effect) + `text-white text-[10px] xs:text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.2em] font-medium px-6 sm:px-8 py-3 sm:py-3.5 rounded-full uppercase`
+- The `liquid-glass` CSS class:
+```css
+.liquid-glass {
+background: rgba(255, 255, 255, 0.01);
+background-blend-mode: luminosity;
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border: none;
+box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+position: relative;
+overflow: hidden;
+}
+.liquid-glass::before {
+content: &#39;&#39;;
+position: absolute;
+inset: 0;
+border-radius: inherit;
+padding: 1.4px;
+background: linear-gradient(180deg,
+rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+pointer-events: none;
+}
+```
+
+---
+
+**FOOTER**
+
+Positioned at the bottom: `relative z-10 px-4 sm:px-6 md:px-12 lg:px-16 pb-8 sm:pb-10 pt-10 sm:pt-16`.
+
+Grid: `grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-8 lg:gap-6`.
+
+**4 link columns** (iterated from data):
+- SERVERS: Web Servers, VPS Servers, Cloud Servers, Managed Instances, Bare Metal
+- DOMAINS: Find Domain, Move Domains, DNS Manager, Domain Costs
+- HELP US: Open a Ticket, FAQs, Docs, Tutorials, Forum
+- ABOUT: Our Story, Leadership Team, Press Room, We Hire, Alliance, Blog
+
+Each column title: `text-white text-[10px] sm:text-xs font-bold tracking-[0.15em] mb-3 sm:mb-4`. Links: `text-white/50 hover:text-white/80 text-[10px] sm:text-xs` with 200ms transition, in a `space-y-2 sm:space-y-2.5` list.
+
+**Newsletter + Social column** (`col-span-2 lg:col-span-2`):
+- Heading &quot;JOIN FOR EXCLUSIVE DEALS&quot; (same title style)
+- Email input + &quot;SEND IT&quot; button side by side in a flex row, `max-w-sm`. Input: white bg, `rounded-l-md`, placeholder &quot;Type your email to sign up&quot;. Button: same emerald-to-cyan gradient, `rounded-r-md`, `font-bold tracking-wider`.
+- Heading &quot;CONNECT&quot; with `mt-5 sm:mt-6 mb-3`
+- 6 social icons (Lucide: Facebook, Twitter, Dribbble, Youtube, Linkedin, Instagram), each `w-4 h-4`, `text-white/50 hover:text-white`, `gap-3`.
+
+---
+
+**RESPONSIVE BREAKPOINTS**
+- `xs` is not a default Tailwind breakpoint -- if used, it needs to be added, or replaced with `sm`. The design uses mobile-first sizing that scales up at `sm` (640px), `md` (768px), and `lg` (1024px).
+- Mobile: 2-col footer grid, hamburger menu, smaller text sizes
+- Tablet (md): 4-col footer grid so newsletter sits beside the last link column
+- Desktop (lg): 6-col footer grid, full horizontal nav, login button visible</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="404.html">Nexto 404<small>404 Pages · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

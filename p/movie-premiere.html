@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Movie Premiere — Entertainment 提示词 | MotionSites Prompts</title>
+<meta name="description" content="电影首映主题的移动端UI设计，包含iPhone设备模拟框和可交互的卡片滑动效果。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/movie-premiere.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Movie Premiere — Entertainment 提示词">
+<meta property="og:description" content="电影首映主题的移动端UI设计，包含iPhone设备模拟框和可交互的卡片滑动效果。">
+<meta property="og:url" content="https://prompt-site.shop/p/movie-premiere.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Movie Premiere","description":"电影首映主题的移动端UI设计，包含iPhone设备模拟框和可交互的卡片滑动效果。","url":"https://prompt-site.shop/p/movie-premiere.html","inLanguage":"zh-CN","genre":"Entertainment","dateCreated":"2026-07-06T07:16:16.335716+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-entertainment">Entertainment</a></div><h1>Movie Premiere</h1><div class="chip-row"><span class="chip">Entertainment</span><span class="chip">mobile</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-07-06</span><span>正文：6,825 字符</span></div><div class="hero-media"><video src="../assets/previews/movie-premiere.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>电影首映主题的移动端UI设计，包含iPhone设备模拟框和可交互的卡片滑动效果。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a mobile movie app UI showcase called &quot;Cineva Mobile UI&quot; using React + TypeScript + Vite + Tailwind CSS + Lucide React icons. The page displays a single centered iPhone mockup (375x780px) on a white background. No routing, no database -- purely a visual UI with interactive card swiping.
+
+---
+
+## TECH STACK
+
+- React 18, TypeScript, Vite, Tailwind CSS 3.4, Lucide React for icons
+- Font: Google Fonts &quot;Inter&quot; weights 300-900 applied globally via `* { font-family: &#39;Inter&#39;, sans-serif; }`
+- No additional UI libraries
+
+---
+
+## LAYOUT STRUCTURE
+
+**Outer wrapper:** Full viewport (`h-screen w-screen`), `bg-white`, flex centered.
+
+**Phone frame:** Fixed 375x780px, border-radius 52px, overflow hidden. Uses a custom `.phone-frame` class with layered box-shadows to simulate a real device bezel:
+```css
+.phone-frame {
+border-radius: 52px;
+box-shadow:
+inset 0 0 0 2px rgba(255, 255, 255, 0.08),
+0 0 0 1px rgba(0, 0, 0, 0.6),
+0 0 0 10px #1a1a1e,
+0 0 0 11px rgba(255, 255, 255, 0.06),
+0 0 60px rgba(0, 0, 0, 0.5);
+}
+```
+
+**Dynamic Island:** Absolute positioned pill at top center, 126x34px, bg-black, rounded-full, z-100.
+
+---
+
+## BACKGROUND
+
+Behind all content inside the phone: the current front card image rendered at full size with `scale-110 blur-[40px] brightness-50`, overlaid with `bg-black/30`.
+
+---
+
+## FOLDER-TAB NAVIGATION (top)
+
+A two-level tab system with staggered fade-up animation (class `animate-stagger-1`, 0.1s delay):
+
+- **Left tab** (outside the black area): &quot;Premieres&quot; - text-[11px], font-medium, px-5 py-2.5, white/40 when inactive, white when active.
+- **Main black tab area** with `rounded-tl-[28px] rounded-tr-[28px]`, bg-black, py-4 px-1, containing:
+- A CSS radial-gradient connector div positioned at `-left-7 bottom-0` (28x28px): `radial-gradient(circle at 0% 0%, transparent 28px, #000 28px)` -- creates the smooth curve joining the tab to the content below.
+- &quot;In Theaters&quot; button (left, text-[12px], font-medium)
+- &quot;Upcoming&quot; button (right, ml-auto, with ChevronRight icon size 12)
+
+---
+
+## CONTENT AREA
+
+Below the tabs: `bg-black rounded-tl-[28px]` (pure black, only top-left corner rounded). Contains:
+
+### Date display (animate-stagger-2, 0.2s delay):
+- Centered, `text-[58px] font-extrabold leading-none tracking-tight` in white
+- Format: &quot;05&quot; in full white, &quot;JUL&quot; in `text-white/80 font-bold`
+
+### Card Stack (animate-stagger-3, 0.35s delay with scale animation):
+- Container uses `perspective: 1200px`
+- Shows 4 cards stacked, each absolute positioned filling the container with `border-radius: 20px`
+- Stack offsets: each card behind gets `translateY(-24px * position)`, `scale(1 - 0.05 * position)`
+- Opacity: front=1, second=0.85, third=0.6, fourth=0.4
+- Front card has draggable pointer events (swipe down to dismiss)
+- SWIPE_THRESHOLD = 80px. Dragging adds `translateY(dragY) rotate(dragY * 0.015deg)` and fades opacity
+- On release past threshold: plays `cardDropOut` animation (0.48s) then rotates card order
+
+**Card drop animation:**
+```css
+@keyframes cardDropOut {
+0% { transform: translateY(var(--drop-start-y)) scale(1) rotate(var(--drop-start-rot)); opacity: var(--drop-start-opacity); }
+60% { opacity: 0.3; }
+100% { transform: translateY(130%) scale(0.8) rotate(8deg); opacity: 0; }
+}
+```
+
+**Front card overlays:**
+- Gradient overlay: `bg-gradient-to-t from-black/40 via-transparent to-transparent`
+- Top-left badges (flex column gap-2):
+- Clock icon (12px) + &quot;2h 15m&quot; -- bg-black rounded-full px-3 py-1.5, text-white/90 text-xs
+- Popcorn icon (12px) + &quot;Sci-Fi&quot; -- same styling
+
+---
+
+## BOTTOM NAVIGATION (animate-stagger-4, 0.5s delay with navSlideUp):
+
+Absolute bottom-6, centered. Uses `.liquid-glass` class:
+```css
+.liquid-glass {
+background: rgba(255, 255, 255, 0.01);
+background-blend-mode: luminosity;
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border: none;
+box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+position: relative;
+overflow: hidden;
+}
+```
+With a `::before` pseudo-element creating a gradient border effect using mask-composite.
+
+4 nav items: Explore (LayoutGrid), Flicks (Film), Queue (Bookmark), Account (User) -- all size 20. Active item (default: index 1 &quot;Flicks&quot;) shows white + label text. Inactive shows white/40. Rounded-full buttons with transition-all duration-300.
+
+---
+
+## STAGGERED ENTRANCE ANIMATIONS
+
+All use `cubic-bezier(0.16, 1, 0.3, 1)` easing with `both` fill-mode:
+
+| Class | Keyframes | Duration | Delay |
+|---|---|---|---|
+| `.animate-stagger-1` | staggerFadeUp (translateY 20px to 0) | 0.6s | 0.1s |
+| `.animate-stagger-2` | staggerFadeUp | 0.6s | 0.2s |
+| `.animate-stagger-3` | staggerFadeIn (scale 0.95 to 1) | 0.7s | 0.35s |
+| `.animate-stagger-4` | navSlideUp (translate -50%, 20px to -50%, 0) | 0.5s | 0.5s |
+
+---
+
+## IMAGE URLS (6 movie poster cards)
+
+```
+https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260705_105630_4428f039-9cd3-44a3-bb7f-15c28b0703f2.png&amp;w=1280&amp;q=85
+
+https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260705_105503_6f51b402-7feb-4a64-a154-bce55a4bff52.png&amp;w=1280&amp;q=85
+
+https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260705_105544_9e41e1d6-2da4-458f-99a5-8568241ab76b.png&amp;w=1280&amp;q=85
+
+https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260705_105558_d8ebccec-11f9-4445-8bae-f44e1117ca00.png&amp;w=1280&amp;q=85
+
+https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260705_105613_e3910ee6-0196-48a4-b1e3-2a2c16c721d0.png&amp;w=1280&amp;q=85
+
+https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260705_105621_a97dd98e-cf52-4084-9977-2556ac4fc1fa.png&amp;w=1280&amp;q=85
+```
+
+---
+
+## KEY IMPLEMENTATION DETAILS
+
+- Card order managed via `useState&lt;number[]&gt;` initialized as `[0,1,2,3,4,5]`
+- On swipe dismiss: shift first element to end of array after animation completes (480ms timeout)
+- Pointer capture used on front card for reliable drag tracking
+- Only downward drag allowed (`Math.max(0, diff)`)
+- CSS custom properties (`--drop-start-y`, `--drop-start-rot`, `--drop-start-opacity`) pass dynamic values into the keyframe animation
+- `.stack-card` base transition: `transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1)` -- disabled during active drag on front card
+- All cards have `touch-action: none; user-select: none; will-change: transform, opacity`
+- Background image changes instantly when card order changes (shows current front card blurred)</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><p class="muted">暂无同分类条目。</p><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

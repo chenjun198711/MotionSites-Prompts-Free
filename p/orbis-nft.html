@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Orbis NFT — Landing Page 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Create an NFT landing page called &quot;Orbis.Nft&quot; with 4 sections, using a dark space theme. The page uses video backgrounds served from CloudFront, a liq">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/orbis-nft.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Orbis NFT — Landing Page 提示词">
+<meta property="og:description" content="Create an NFT landing page called &quot;Orbis.Nft&quot; with 4 sections, using a dark space theme. The page uses video backgrounds served from CloudFront, a liq">
+<meta property="og:url" content="https://prompt-site.shop/p/orbis-nft.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Orbis NFT","description":"Create an NFT landing page called \"Orbis.Nft\" with 4 sections, using a dark space theme. The page uses video backgrounds served from CloudFront, a liq","url":"https://prompt-site.shop/p/orbis-nft.html","inLanguage":"zh-CN","genre":"Landing Page","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-landing_page">Landing Page</a></div><h1>Orbis NFT</h1><div class="chip-row"><span class="chip">Landing Page</span><span class="chip">landing-page</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>正文：8,226 字符</span></div><div class="hero-media"><video src="../assets/previews/orbis-nft.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Create an NFT landing page called &quot;Orbis.Nft&quot; with 4 sections, using a dark space theme. The page uses video backgrounds served from CloudFront, a liquid glass UI effect, and a specific color/font system. Recreate it exactly as described below.
+
+FONTS (Google Fonts)
+
+Anton - Used for all headings and navigation text (aliased as font-grotesk in Tailwind)
+
+Condiment - A cursive script used for accent/overlay text (aliased as font-condiment in Tailwind)
+
+System monospace font (font-mono) - Used for body/description paragraphs
+
+Load via Google Fonts in index.html:
+
+https://fonts.googleapis.com/css2?family=Anton&amp;family=Condiment&amp;display=swap
+
+
+COLOR SYSTEM (Tailwind config)
+
+Background: #010828 (deep dark navy blue)
+
+cream: #EFF4FF (off-white, used for all text)
+
+neon: #6FFF00 (bright green, used for accent cursive text and underline bars)
+
+LIQUID GLASS CSS EFFECT
+
+Applied via a .liquid-glass class. This is used on the navbar, social icon buttons, NFT cards, and card overlays:
+
+.liquid-glass {
+background: rgba(255, 255, 255, 0.01);
+background-blend-mode: luminosity;
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border: none;
+box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+position: relative;
+overflow: hidden;
+}
+.liquid-glass::before {
+content: &#39;&#39;;
+position: absolute;
+inset: 0;
+border-radius: inherit;
+padding: 1.4px;
+background: linear-gradient(180deg,
+rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+pointer-events: none;
+}
+
+
+TEXTURE OVERLAY
+
+A full-screen fixed texture overlay sits on top of everything (z-50, pointer-events-none). It uses a /texture.png image with mix-blend-mode: lighten at opacity: 0.6, covering the entire viewport with background-size: cover.
+
+SECTION 1: HERO (Full viewport)
+
+Background: Full-bleed looping muted autoplaying video covering the entire section with object-cover
+
+Video URL: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_045634_e1c98c76-1265-4f5c-882a-4276f2080894.mp4
+
+Container: max-w-[1831px] centered with responsive horizontal padding
+
+Section has rounded-b-[32px] bottom corners, clipping the video
+
+Header:
+
+Left: &quot;Orbis.Nft&quot; logo text in Anton, 16px, uppercase
+
+Center: Navigation bar with liquid-glass effect, rounded-[28px], px-[52px] py-[24px]. Contains 5 links: Homepage, Gallery, Buy NFT, FAQ, Contact. Each link is Anton 13px uppercase. Links have hover:text-neon transition. Nav is hidden on mobile (hidden lg:block).
+
+Hero Content:
+
+Large heading in Anton font, responsive sizing: 40px mobile / 60px sm / 75px md / 90px lg. Uppercase. leading-[1.05] mobile, leading-[1] tablet+. Max width 780px on desktop, offset with lg:ml-32.
+
+Text reads:
+
+Beyond earth
+and ( its ) familiar boundaries
+
+
+Overlaid cursive accent text &quot;Nft collection&quot; in Condiment font (24px-48px responsive), positioned absolute to the right side of the heading, slightly rotated (-rotate-1), in neon green (text-neon), with mix-blend-exclusion and opacity-90.
+
+Social Icons (Desktop):
+
+3 square buttons (56x56px) stacked vertically in top-right corner, each with liquid-glass and rounded-[1rem]. Icons: Mail, Twitter, Github from lucide-react (20x20px). hover:bg-white/10 transition.
+
+Social Icons (Mobile):
+
+Same 3 buttons but centered horizontally below the heading, shown only below lg breakpoint.
+
+SECTION 2: ABOUT / INTRO (Full viewport)
+
+Background: Full-bleed looping muted autoplaying video with object-cover
+
+Video URL: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_151551_992053d1-3d3e-4b8c-abac-45f22158f411.mp4
+
+Container: Same max-w-[1831px] centered, with generous vertical padding (64px-96px responsive)
+
+Top Row (flex row on desktop, column on mobile):
+
+Left: Heading in Anton, responsive 32px-60px, uppercase:
+
+Hello!
+I&#39;m orbis
+
+
+With an overlaid &quot;Orbis&quot; in Condiment cursive, neon green, mix-blend-exclusion, 36px-68px responsive, positioned absolute at bottom-right of heading, slightly rotated.
+
+Right: Short paragraph in monospace 14px-16px, uppercase, cream color, max-width 266px: &quot;A digital object fixed beyond time and place. An exploration of distance, form, and silence in space&quot;
+
+Bottom Row (flex row, space-between):
+
+Two columns (left and right), each containing 2 identical paragraphs. Same monospace text as above but at opacity-10 (nearly invisible, decorative). Right column hidden below lg. On mobile, text uses text-[#010828] (dark) so it&#39;s effectively invisible against the video.
+
+SECTION 3: NFT COLLECTION GRID
+
+Background: Solid #010828 (no video)
+
+Container: Same max-w-[1831px] centered
+
+Header Row:
+
+Left: Heading in Anton, 32px-60px responsive, uppercase:
+
+Collection of
+[indented] Space objects
+
+
+Where &quot;Space&quot; is in Condiment cursive neon green, and &quot;objects&quot; is in Anton. The second line is indented with ml-12 / ml-24 / ml-32 responsive.
+
+Right: A &quot;SEE ALL CREATORS&quot; button. &quot;SEE&quot; is large (32px-60px), &quot;ALL&quot; and &quot;CREATORS&quot; are stacked smaller (20px-36px) next to it. Below the text is a neon green bar (bg-neon, height 6px-10px responsive, full width of button).
+
+NFT Card Grid:
+
+3-column grid on desktop (lg:grid-cols-3), 2 on tablet, 1 on mobile. Gap 24px.
+
+Each card: liquid-glass container with rounded-[32px], padding 18px, hover:bg-white/10 transition.
+
+Inside each card: a square video container (pb-[100%] aspect ratio trick) with rounded-[24px] overflow hidden.
+
+Video URLs:
+
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_053923_22c0a6a5-313c-474c-85ff-3b50d25e944a.mp4 (Score: 8.7/10)
+
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_054411_511c1b7a-fb2f-42ef-bf6c-32c0b1a06e79.mp4 (Score: 9/10)
+
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_055427_ac7035b5-9f3b-4289-86fc-941b2432317d.mp4 (Score: 8.2/10)
+
+Each card has an overlay bar at the bottom: a liquid-glass bar with rounded-[20px], px-5 py-4, showing &quot;RARITY SCORE:&quot; label (11px, cream/70% opacity) and score value (16px). On the right side of the bar is a circular purple gradient button (48x48px, bg-gradient-to-br from-[#b724ff] to-[#7c3aed]) with a right-arrow chevron SVG inside, with shadow-lg shadow-purple-500/50 and hover:scale-110 transition.
+
+SECTION 4: CTA / FINAL SECTION
+
+Background: Full-width video (NOT object-cover, instead w-full h-auto block so it displays at native aspect ratio)
+
+Video URL: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_055729_72d66327-b59e-4ae9-bb70-de6ccb5ecdb0.mp4
+
+Text Content (positioned absolute over the video):
+
+Right-aligned block, offset with lg:pr-[20%] lg:pl-[15%]
+
+Small &quot;Go beyond&quot; text in Condiment cursive, neon green, mix-blend-exclusion, positioned absolute at top-left of the heading block. Sizes: 17px-68px responsive.
+
+Heading in Anton, responsive 16px-60px, uppercase:
+
+JOIN US.
+REVEAL WHAT&#39;S HIDDEN.
+DEFINE WHAT&#39;S NEXT.
+FOLLOW THE SIGNAL.
+
+
+&quot;JOIN US.&quot; has extra bottom margin (mb-4 to mb-12 responsive) before the remaining lines.
+
+Social Icons (Bottom-left, absolute positioned):
+
+Positioned at left-[8%], bottom-[12%] to bottom-[20%] with responsive breakpoints.
+
+A vertical liquid-glass container with rounded-[0.5rem] to rounded-[1.25rem] responsive, containing 3 stacked icon buttons (Mail, Twitter, Github).
+
+Buttons have responsive widths using viewport units and rem values (e.g., w-[14vw] sm:w-[14.375rem] md:w-[10.78125rem] lg:w-[16.77rem]) and similar responsive heights.
+
+Buttons are separated by border-b border-white/10 dividers (except the last one).
+
+KEY TECHNICAL DETAILS
+
+Framework: React + TypeScript + Vite + Tailwind CSS
+
+Icons: lucide-react (Mail, Twitter, Github)
+
+No additional packages needed beyond what Vite + React + Tailwind provides
+
+All videos: autoPlay loop muted playsInline attributes
+
+Responsive: Mobile-first with sm:, md:, lg: breakpoints throughout
+
+Max content width: 1831px across all sections
+
+All text is uppercase except the Condiment cursive accents which are normal-case</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：giglianepefrei/motionsites.ai-prompt-library<br>原始文件：<code>giglianepefrei_fetch\prompts/Orbis_NFT.md</code><br>许可证：NOASSERTION<br><a href="https://github.com/giglianepefrei/motionsites.ai-prompt-library/blob/main/giglianepefrei_fetch%5Cprompts/Orbis_NFT.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="motionz-premium-landing-page.html">MotionZ Premium Landing Page<small>Landing Page · landing-page</small></a><a href="future-state.html">Future-State<small>Landing Page · hero</small></a><a href="3d-story.html">3D Story<small>Landing Page · hero</small></a><a href="financial-suite.html">Financial Suite<small>Landing Page · hero</small></a><a href="prompt-hero.html">PROMPT<small>Landing Page · hero</small></a><a href="health-portal.html">Health Portal<small>Landing Page · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

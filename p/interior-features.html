@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Interior Features — Features Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色模式下，产品卡片从静态照片慢速交叉淡入为循环视频，营造沉浸式交互体验。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/interior-features.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Interior Features — Features Section 提示词">
+<meta property="og:description" content="深色模式下，产品卡片从静态照片慢速交叉淡入为循环视频，营造沉浸式交互体验。">
+<meta property="og:url" content="https://prompt-site.shop/p/interior-features.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/interior-features.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Interior Features","description":"深色模式下，产品卡片从静态照片慢速交叉淡入为循环视频，营造沉浸式交互体验。","url":"https://prompt-site.shop/p/interior-features.html","inLanguage":"zh-CN","genre":"Features Section","dateCreated":"2026-06-09T10:06:03.556932+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-features_section">Features Section</a></div><h1>Interior Features</h1><div class="chip-row"><span class="chip">Features Section</span><span class="chip">features</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-09</span><span>正文：4,709 字符</span></div><div class="hero-media"><img src="../assets/previews/interior-features.webp" alt="Interior Features 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色模式下，产品卡片从静态照片慢速交叉淡入为循环视频，营造沉浸式交互体验。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a single interactive product card that swaps between a still photo (light mode) and a looping video (dark mode), with a slow crossfade between them.
+
+**Font**
+
+- Use `Neue Montreal` (custom `@font-face`, weights 400/500/700, `.woff2`), falling back to `sans-serif`. Load Material Icons from `https://fonts.googleapis.com/icon?family=Material+Icons`.
+
+**Container / card chrome**
+
+- The card lives in a grid `.cards` (`display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(12px,1.2vw,20px); align-items:stretch;`).
+- Each card is wrapped in `.card-frame`:
+- `aspect-ratio:319 / 404;`
+- `border-radius:clamp(18px,1.7vw,28px);`
+- `overflow:hidden; background:#0e0d0c;`
+- `box-shadow:0 36px 70px -34px rgba(28,18,8,.42), 0 4px 14px -8px rgba(0,0,0,.18);`
+
+**Card internals**
+
+- `.direct-card`: `position:relative; width:100%; height:100%; overflow:hidden; background:#1a1714; isolation:isolate;`
+- A fixed-size artboard `.direct-card__artboard` (`#directCardTwoArtboard`) that is scaled to fit:
+- `position:absolute; top:50%; left:50%; width:660px; height:836px; border-radius:30px; overflow:hidden; background:#1a1714; isolation:isolate; container-type:inline-size; transform:translate(-50%,-50%) scale(var(--direct-scale,1)); transform-origin:center center;`
+- Compute `--direct-scale` in JS as `Math.min(card.clientWidth/660, card.clientHeight/836)` and recompute on load and `resize`.
+
+**Media layers (inside the artboard, in this order)**
+
+1. Image `.direct-card__photo`:
+- `src=&quot;https://res.cloudinary.com/dgupuutfn/image/upload/v1780913983/room2_pihyox.png&quot;`
+- `data-night-src=&quot;https://res.cloudinary.com/dgupuutfn/image/upload/v1780913982/room2_night_qc4qeq.png&quot;`
+- `alt=&quot;Living room interior&quot;`
+- CSS: `position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 42%; z-index:0;`
+2. Video `.direct2-video`:
+- `src=&quot;https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260609_072414_1e4448ec-537f-4f94-b56b-19e00c1550e8.mp4&quot;`
+- attributes: `muted loop playsinline preload=&quot;auto&quot;`
+- CSS: same box as photo (`position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 42%; z-index:0;`) plus `opacity:0; pointer-events:none; transition:opacity 4.5s cubic-bezier(0.22, 1, 0.36, 1);`
+3. Gradient scrim `.direct2-grade`:
+- `position:absolute; inset:0; z-index:1; pointer-events:none;`
+- `background:linear-gradient(to top, rgba(8,6,4,.92) 0%, rgba(8,6,4,.6) 13%, rgba(8,6,4,.1) 28%, rgba(8,6,4,0) 42%), linear-gradient(to bottom, rgba(20,14,8,.34) 0%, rgba(20,14,8,0) 20%);`
+
+**Footer block `.direct-footer`** (`position:absolute; z-index:4; left:6.2%; right:6.2%; bottom:5.4%; color:#fff;`):
+- `.direct-footer__head` (`display:flex; align-items:center; gap:3%; margin-bottom:3.2%;`) containing:
+- `.direct-footer__icon` round badge: `flex:none; width:9.6%; aspect-ratio:1; border-radius:50%; display:flex; align-items:center; justify-content:center;` with inline style `background:#3fae6b; color:#fff; box-shadow:0 10px 24px -10px rgba(63,174,107,.6);`, holding `&lt;span class=&quot;material-icons&quot;&gt;construction&lt;/span&gt;` (icon sized `font-size:clamp(15px,5.6cqw,34px); line-height:1;`).
+- `.direct-footer__title` text &quot;Build the room in real time&quot;: `font-weight:700; line-height:1.05; letter-spacing:-.6px; white-space:nowrap; font-size:clamp(18px,5.6cqw,36px);`
+- `.direct-footer__desc` text &quot;Move pieces, explore finishes, and align with your studio on one shared canvas.&quot;: `color:#d7d2c9; font-weight:500; line-height:1.28; max-width:100%; font-size:clamp(13px,4.2cqw,27px);`
+
+(All footer text uses container query units `cqw`, so the artboard must set `container-type:inline-size`.)
+
+**Dark-mode behavior**
+
+- A `body.is-night` class toggles dark mode (driven by a theme switch elsewhere on the page).
+- When `body.is-night` is set: `.direct2-video { opacity:1; }` (fades in over 4.5s; the photo stays beneath). In light mode the video is `opacity:0`.
+- In the toggle handler, also `video.play()` (catch/ignore promise rejection) when entering night and `video.pause()` when leaving.
+- The still photo additionally swaps its `src` to `data-night-src` on entering night and back on day, with a matching `opacity 4.5s cubic-bezier(0.22, 1, 0.36, 1)` crossfade (fade to 0, swap on `load`, fade back to 1).
+
+**Responsiveness**
+
+- `@media (max-width:920px)`: page scrolls normally (`html,body{height:auto;overflow-y:auto;}`), `.cards` becomes `grid-template-columns:repeat(2,1fr); gap:clamp(16px,3vw,24px);`.
+- `@media (max-width:540px)`: `.cards` becomes a single column, `max-width:380px; margin:0 auto;`.
+- The artboard scale (`--direct-scale`) keeps the 660×836 internal layout perfectly proportioned at any card size.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="liquid-glass-features.html">Liquid Glass Features<small>Features Section · features</small></a><a href="nexacore-results.html">NexaCore Results<small>Features Section · features</small></a><a href="nexacore-control.html">NexaCore Control<small>Features Section · features</small></a><a href="nike-hover.html">Nike Hover<small>Features Section · features</small></a><a href="cognitra-feature.html">Cognitra Feature<small>Features Section · features</small></a><a href="launchex-submissions.html">LaunchEx Submissions<small>Features Section · features</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

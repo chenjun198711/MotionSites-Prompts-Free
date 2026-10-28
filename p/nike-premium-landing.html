@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nike Premium Landing — Landing Page 提示词 | MotionSites Prompts</title>
+<meta name="description" content="高端Nike品牌着陆页，含双滚动区域、气泡菜单和交互式遮罩动画，使用GSAP驱动视觉特效。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/nike-premium-landing.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nike Premium Landing — Landing Page 提示词">
+<meta property="og:description" content="高端Nike品牌着陆页，含双滚动区域、气泡菜单和交互式遮罩动画，使用GSAP驱动视觉特效。">
+<meta property="og:url" content="https://prompt-site.shop/p/nike-premium-landing.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/nike-premium-landing.gif">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Nike Premium Landing","description":"高端Nike品牌着陆页，含双滚动区域、气泡菜单和交互式遮罩动画，使用GSAP驱动视觉特效。","url":"https://prompt-site.shop/p/nike-premium-landing.html","inLanguage":"zh-CN","genre":"Landing Page","dateCreated":"2026-04-21T06:27:29.894707+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-landing_page">Landing Page</a></div><h1>Nike Premium Landing</h1><div class="chip-row"><span class="chip">Landing Page</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-04-21</span><span>正文：17,029 字符</span></div><div class="hero-media"><img src="../assets/previews/nike-premium-landing.gif" alt="Nike Premium Landing 动效预览" loading="lazy"><div class="media-note">本地预览图 · gif</div></div><h2>简介</h2><p>高端Nike品牌着陆页，含双滚动区域、气泡菜单和交互式遮罩动画，使用GSAP驱动视觉特效。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Create a high-end, interactive Nike hero landing page with two scrolling sections. The app requires `react-player` and `gsap` for animations and interactive masks.
+
+Follow these strict requirements to perfectly match the design, assets, fonts, and logic:
+
+### 1. Dependencies to Install
+Install `react-player` and `gsap`.
+
+### 2. Globals &amp; Configuration (`src/index.css`)
+Replace `index.css` with this exact Tailwind v4 and Google Fonts configuration:
+```css
+@import url(&#39;https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@400;500;600;700&amp;display=swap&#39;);
+@import &quot;tailwindcss&quot;;
+
+@theme {
+--font-sans: &quot;Manrope&quot;, sans-serif;
+--font-serif: &quot;Instrument Serif&quot;, serif;
+}
+3. Bubble Menu Component (src/components/BubbleMenu.css)
+code
+CSS
+.bubble-menu { display: flex; align-items: center; gap: 12px; z-index: 50; }
+.bubble-menu.absolute { position: absolute; }
+.bubble-menu.fixed { position: fixed; }
+.bubble { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px); transition: transform 0.2s ease, background 0.3s ease; }
+.bubble:hover { transform: scale(1.05); }
+.menu-btn { flex-direction: column; gap: 6px; }
+.menu-line { width: 20px; height: 2px; border-radius: 2px; transition: all 0.3s ease; }
+.menu-line.short { width: 14px; }
+.menu-btn:hover .menu-line.short { width: 20px; }
+.menu-btn.open .menu-line:not(.short) { transform: translateY(4px) rotate(45deg); }
+.menu-btn.open .menu-line.short { transform: translateY(-4px) rotate(-45deg); width: 20px; }
+.bubble-menu-items { inset: 0; position: fixed; display: none; align-items: center; justify-content: center; z-index: 40; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.pill-list { list-style: none; padding: 0; margin: 0; display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; max-width: 800px; }
+.pill-link { display: block; padding: 16px 36px; border-radius: 9999px; background-color: var(--pill-bg); color: var(--pill-color); text-decoration: none; font-weight: 500; font-size: 24px; transform: rotate(var(--item-rot)); transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.1); }
+.pill-link:hover { background-color: var(--hover-bg) !important; color: var(--hover-color) !important; transform: scale(1.05) rotate(0deg); }
+.pill-label { display: block; }
+4. Bubble Menu Logic (src/components/BubbleMenu.tsx)
+Create a GSAP-animated pill-menu component.
+code
+Tsx
+import { useState, useRef, useEffect, ReactNode } from &#39;react&#39;;
+import { gsap } from &#39;gsap&#39;;
+import &#39;./BubbleMenu.css&#39;;
+
+interface MenuItem { label: string; href: string; ariaLabel?: string; rotation?: number; hoverStyles?: { bgColor: string; textColor: string }; }
+interface BubbleMenuProps { logo?: string | ReactNode; onMenuClick?: (isOpen: boolean) =&gt; void; className?: string; style?: React.CSSProperties; menuAriaLabel?: string; menuBg?: string; menuContentColor?: string; useFixedPosition?: boolean; items?: MenuItem[]; animationEase?: string; animationDuration?: number; staggerDelay?: number; }
+
+export default function BubbleMenu({ logo, onMenuClick, className, style, menuAriaLabel = &#39;Toggle menu&#39;, menuBg = &#39;#fff&#39;, menuContentColor = &#39;#111&#39;, useFixedPosition = false, items, animationEase = &#39;back.out(1.5)&#39;, animationDuration = 0.5, staggerDelay = 0.12 }: BubbleMenuProps) {
+const [isMenuOpen, setIsMenuOpen] = useState(false);
+const [showOverlay, setShowOverlay] = useState(false);
+const overlayRef = useRef&lt;HTMLDivElement&gt;(null);
+const bubblesRef = useRef&lt;(HTMLAnchorElement | null)[]&gt;([]);
+const labelRefs = useRef&lt;(HTMLSpanElement | null)[]&gt;([]);
+
+const containerClassName = [&#39;bubble-menu&#39;, useFixedPosition ? &#39;fixed&#39; : &#39;absolute&#39;, className].filter(Boolean).join(&#39; &#39;);
+
+const handleToggle = () =&gt; {
+const nextState = !isMenuOpen;
+if (nextState) setShowOverlay(true);
+setIsMenuOpen(nextState);
+onMenuClick?.(nextState);
+};
+
+useEffect(() =&gt; {
+const overlay = overlayRef.current;
+const bubbles = bubblesRef.current.filter(Boolean);
+const labels = labelRefs.current.filter(Boolean);
+if (!overlay || !bubbles.length) return;
+
+if (isMenuOpen) {
+gsap.set(overlay, { display: &#39;flex&#39; });
+gsap.killTweensOf([...bubbles, ...labels]);
+gsap.set(bubbles, { scale: 0, transformOrigin: &#39;50% 50%&#39; });
+gsap.set(labels, { y: 24, autoAlpha: 0 });
+
+bubbles.forEach((bubble, i) =&gt; {
+const delay = i * staggerDelay + gsap.utils.random(-0.05, 0.05);
+const tl = gsap.timeline({ delay });
+tl.to(bubble, { scale: 1, duration: animationDuration, ease: animationEase });
+if (labels[i]) tl.to(labels[i], { y: 0, autoAlpha: 1, duration: animationDuration, ease: &#39;power3.out&#39; }, `-=${animationDuration * 0.9}`);
+});
+} else if (showOverlay) {
+gsap.killTweensOf([...bubbles, ...labels]);
+gsap.to(labels, { y: 24, autoAlpha: 0, duration: 0.2, ease: &#39;power3.in&#39; });
+gsap.to(bubbles, { scale: 0, duration: 0.2, ease: &#39;power3.in&#39;, onComplete: () =&gt; { gsap.set(overlay, { display: &#39;none&#39; }); setShowOverlay(false); } });
+}
+}, [isMenuOpen, showOverlay, animationEase, animationDuration, staggerDelay]);
+
+return (
+&lt;&gt;
+&lt;nav className={containerClassName} style={style} aria-label=&quot;Main navigation&quot;&gt;
+&lt;button type=&quot;button&quot; className={`bubble toggle-bubble menu-btn ${isMenuOpen ? &#39;open&#39; : &#39;&#39;}`} onClick={handleToggle} style={{ background: menuBg }}&gt;
+&lt;span className=&quot;menu-line&quot; style={{ background: menuContentColor }} /&gt;
+&lt;span className=&quot;menu-line short&quot; style={{ background: menuContentColor }} /&gt;
+&lt;/button&gt;
+&lt;/nav&gt;
+{showOverlay &amp;&amp; (
+&lt;div ref={overlayRef} className=&quot;bubble-menu-items fixed&quot;&gt;
+&lt;ul className=&quot;pill-list&quot;&gt;
+{items?.map((item, idx) =&gt; (
+&lt;li key={idx}&gt;
+&lt;a href={item.href} className=&quot;pill-link&quot; style={{ &#39;--item-rot&#39;: `${item.rotation ?? 0}deg`, &#39;--pill-bg&#39;: menuBg, &#39;--pill-color&#39;: menuContentColor, &#39;--hover-bg&#39;: item.hoverStyles?.bgColor, &#39;--hover-color&#39;: item.hoverStyles?.textColor } as any} ref={el =&gt; { bubblesRef.current[idx] = el; }} onClick={handleToggle}&gt;
+&lt;span className=&quot;pill-label&quot; ref={el =&gt; { labelRefs.current[idx] = el; }}&gt;{item.label}&lt;/span&gt;
+&lt;/a&gt;
+&lt;/li&gt;
+))}
+&lt;/ul&gt;
+&lt;/div&gt;
+)}
+&lt;/&gt;
+);
+}
+5. Spotlight Reveal Interactive Video Mask (src/components/SpotlightReveal.tsx)
+code
+Tsx
+import { useEffect, useRef } from &#39;react&#39;;
+import ReactPlayer from &#39;react-player&#39;;
+
+interface SpotlightRevealProps { imageSrc: string; videoSrc: string; isPlaying?: boolean; baseRadius?: number; }
+
+export default function SpotlightReveal({ imageSrc, videoSrc, isPlaying = true, baseRadius = 420 }: SpotlightRevealProps) {
+const NUM_TRAILS = 6;
+const videoRef = useRef&lt;HTMLVideoElement&gt;(null);
+const pointsRef = useRef(Array.from({ length: NUM_TRAILS }, () =&gt; ({ x: -1000, y: -1000 })));
+
+useEffect(() =&gt; {
+if (videoRef.current) { isPlaying ? videoRef.current.play() : videoRef.current.pause(); }
+}, [isPlaying]);
+
+useEffect(() =&gt; {
+let targetX = window.innerWidth / 2, targetY = window.innerHeight / 2;
+const handleMouseMove = (e: MouseEvent) =&gt; { targetX = e.clientX; targetY = e.clientY; };
+window.addEventListener(&#39;mousemove&#39;, handleMouseMove);
+
+let animationFrameId: number;
+const animate = () =&gt; {
+const points = pointsRef.current;
+points[0].x += (targetX - points[0].x) * 0.2;
+points[0].y += (targetY - points[0].y) * 0.2;
+for (let i = 1; i &lt; points.length; i++) {
+points[i].x += (points[i - 1].x - points[i].x) * 0.35;
+points[i].y += (points[i - 1].y - points[i].y) * 0.35;
+}
+for (let i = 0; i &lt; points.length; i++) {
+const circle = document.getElementById(`trail-${i}`);
+if (circle) { circle.setAttribute(&#39;cx&#39;, points[i].x.toString()); circle.setAttribute(&#39;cy&#39;, points[i].y.toString()); }
+}
+animationFrameId = requestAnimationFrame(animate);
+};
+animate();
+return () =&gt; { window.removeEventListener(&#39;mousemove&#39;, handleMouseMove); cancelAnimationFrame(animationFrameId); };
+}, []);
+
+return (
+&lt;div className=&quot;absolute inset-0 w-full h-full z-0 bg-black pointer-events-none overflow-hidden flex items-center justify-center&quot;&gt;
+&lt;div className=&quot;absolute inset-0 w-full h-full flex items-center justify-center overflow-hidden pointer-events-none&quot;&gt;
+&lt;video ref={videoRef} src={videoSrc} className=&quot;absolute inset-0 w-full h-full object-cover&quot; muted loop playsInline /&gt;
+&lt;/div&gt;
+&lt;svg className=&quot;absolute inset-0 w-full h-full&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;defs&gt;
+&lt;radialGradient id=&quot;holeGradient&quot;&gt;
+&lt;stop offset=&quot;0%&quot; stopColor=&quot;black&quot; stopOpacity=&quot;1&quot; /&gt;
+&lt;stop offset=&quot;60%&quot; stopColor=&quot;black&quot; stopOpacity=&quot;0.8&quot; /&gt;
+&lt;stop offset=&quot;100%&quot; stopColor=&quot;black&quot; stopOpacity=&quot;0&quot; /&gt;
+&lt;/radialGradient&gt;
+&lt;mask id=&quot;spotlight-mask&quot; maskContentUnits=&quot;userSpaceOnUse&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+&lt;rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;white&quot; /&gt;
+{Array.from({ length: NUM_TRAILS }).reverse().map((_, reversedIndex) =&gt; {
+const i = NUM_TRAILS - 1 - reversedIndex;
+return &lt;circle key={`trail-${i}`} id={`trail-${i}`} cx=&quot;-1000&quot; cy=&quot;-1000&quot; r={baseRadius - i * 35} fill=&quot;url(#holeGradient)&quot; opacity={1 - i * 0.15} /&gt;;
+})}
+&lt;/mask&gt;
+&lt;/defs&gt;
+&lt;image href={imageSrc} width=&quot;100%&quot; height=&quot;100%&quot; preserveAspectRatio=&quot;xMidYMid slice&quot; mask=&quot;url(#spotlight-mask)&quot; /&gt;
+&lt;/svg&gt;
+&lt;/div&gt;
+);
+}
+6. App Layout &amp; Data (src/App.tsx)
+code
+Tsx
+import { useState } from &#39;react&#39;;
+import BubbleMenu from &#39;./components/BubbleMenu&#39;;
+import SpotlightReveal from &#39;./components/SpotlightReveal&#39;;
+
+const items = [
+{ label: &#39;Drops&#39;, href: &#39;#&#39;, rotation: -8, hoverStyles: { bgColor: &#39;#ef4444&#39;, textColor: &#39;#ffffff&#39; } },
+{ label: &#39;Innovation&#39;, href: &#39;#&#39;, rotation: 8, hoverStyles: { bgColor: &#39;#3b82f6&#39;, textColor: &#39;#ffffff&#39; } },
+{ label: &#39;Collections&#39;, href: &#39;#&#39;, rotation: 8, hoverStyles: { bgColor: &#39;#10b981&#39;, textColor: &#39;#ffffff&#39; } },
+{ label: &#39;Community&#39;, href: &#39;#&#39;, rotation: 8, hoverStyles: { bgColor: &#39;#f59e0b&#39;, textColor: &#39;#ffffff&#39; } },
+{ label: &#39;Stores&#39;, href: &#39;#&#39;, rotation: -8, hoverStyles: { bgColor: &#39;#8b5cf6&#39;, textColor: &#39;#ffffff&#39; } }
+];
+
+export default function App() {
+const [isFirstVideoPlaying, setIsFirstVideoPlaying] = useState(false);
+const [isSecondVideoPlaying, setIsSecondVideoPlaying] = useState(false);
+
+return (
+&lt;div className=&quot;relative w-full flex flex-col bg-[#050505]&quot;&gt;
+{/* First Screen */}
+&lt;section className=&quot;sticky top-0 z-0 w-full h-[100dvh] overflow-hidden flex flex-col justify-between pointer-events-auto&quot;&gt;
+&lt;SpotlightReveal
+imageSrc=&quot;https://github.com/dsMagnatov/Acreage-landing-assets/blob/main/0098888.jpg?raw=true&quot;
+videoSrc=&quot;https://pikaso.cdnpk.net/private/production/4021778466/80a7f7ef-643d-40bc-b533-1e86f159d653-0.mp4?token=exp=1777075200~hmac=91d86c3600a89e923130fce0912dcfb0de81f05f2cde5fc77c30f3e7ae094342&quot;
+isPlaying={isFirstVideoPlaying}
+/&gt;
+
+&lt;div className=&quot;absolute bottom-0 left-0 w-full h-[75%] z-20&quot; onMouseEnter={() =&gt; setIsFirstVideoPlaying(true)} onMouseLeave={() =&gt; setIsFirstVideoPlaying(false)} /&gt;
+
+&lt;header className=&quot;relative z-50 w-full flex justify-center items-start pt-[150px]&quot;&gt;
+&lt;svg width=&quot;120&quot; viewBox=&quot;135.5 361.38 420.32 149.8&quot; fill=&quot;white&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;m181.86 511.11c-12.524-0.49755-22.77-3.9244-30.782-10.289-1.529-1.2159-5.1725-4.8616-6.3949-6.3992-3.2489-4.0853-5.4578-8.0611-6.931-12.472-4.5334-13.579-2.2002-31.397 6.6737-50.953 7.5979-16.742 19.322-33.347 39.776-56.344 3.013-3.384 11.986-13.281 12.043-13.281 0.0216 0-0.46749 0.84706-1.083 1.8786-5.3183 8.9082-9.8689 19.401-12.348 28.485-3.9823 14.576-3.502 27.085 1.4068 36.784 3.3862 6.6822 9.1913 12.47 15.719 15.67 11.428 5.5993 28.159 6.0625 48.592 1.3554 1.4068-0.32599 71.116-18.831 154.91-41.123 83.794-22.294 152.36-40.52 152.37-40.505 0.0237 0.0193-194.68 83.333-295.75 126.56-16.007 6.8431-20.287 8.5715-27.812 11.214-19.236 6.7551-36.467 9.9783-50.396 9.4251z&quot;/&gt;
+&lt;/svg&gt;
+&lt;BubbleMenu items={items} className=&quot;absolute top-8 right-8 z-50&quot; /&gt;
+&lt;/header&gt;
+
+&lt;main className=&quot;relative z-10 w-full flex-1 flex flex-col items-center justify-end pb-24 px-4 text-center text-white&quot;&gt;
+&lt;h1 className=&quot;font-sans font-medium leading-[1.05] tracking-tight w-full mx-auto translate-y-[50px]&quot; style={{ fontSize: &#39;clamp(14px, 3vw, 51px)&#39; }}&gt;
+&lt;span className=&quot;block&quot;&gt;Pure Comfort For&lt;/span&gt;
+&lt;span className=&quot;block&quot;&gt;Next-Generation Athletes. &lt;span className=&quot;font-serif italic font-normal pr-1&quot;&gt;We Craft&lt;/span&gt;&lt;/span&gt;
+&lt;span className=&quot;block font-serif italic font-normal pr-1&quot;&gt;The Ultimate Footwear For Elite Performance,&lt;/span&gt;
+&lt;span className=&quot;block font-serif italic font-normal pr-1&quot;&gt;Urban Exploration, Everyday Style.&lt;/span&gt;
+&lt;/h1&gt;
+&lt;/main&gt;
+&lt;/section&gt;
+
+{/* Second Screen */}
+&lt;section className=&quot;relative z-10 w-full h-[100dvh] overflow-hidden bg-black text-white&quot; style={{ boxShadow: &#39;0 -20px 50px rgba(0,0,0,0.5)&#39; }}&gt;
+&lt;SpotlightReveal
+imageSrc=&quot;https://github.com/dsMagnatov/Acreage-landing-assets/blob/main/02604201313.png?raw=true&quot;
+videoSrc=&quot;https://pikaso.cdnpk.net/private/production/4024859125/d070ae9c-55df-47aa-acbe-4ee66337855c-0.mp4?token=exp=1777075200~hmac=4202c1d0ec90137eb6dffa8e0db93ed7569a68b2016165d8b1b567f888869ff5&quot;
+isPlaying={isSecondVideoPlaying}
+baseRadius={520}
+/&gt;
+
+&lt;div className=&quot;absolute right-[calc(8%+100px)] bottom-[12%] w-[calc(50%-50px)] h-[calc(50%+230px)] z-30&quot; onMouseEnter={() =&gt; setIsSecondVideoPlaying(true)} onMouseLeave={() =&gt; setIsSecondVideoPlaying(false)} /&gt;
+&lt;div className=&quot;absolute left-[calc(8%+200px)] top-[calc(20%+190px)] w-[calc(15%+250px)] h-[calc(22.5%+130px)] -translate-y-full z-30&quot; onMouseEnter={() =&gt; setIsSecondVideoPlaying(true)} onMouseLeave={() =&gt; setIsSecondVideoPlaying(false)} /&gt;
+
+&lt;div className=&quot;absolute left-[calc(8%+200px)] top-[20%] z-20 w-[320px] px-8 py-6 rounded-sm border border-white/10&quot; style={{ background: &#39;rgba(0, 0, 0, 0.16)&#39;, backdropFilter: &#39;blur(80px)&#39;, WebkitBackdropFilter: &#39;blur(80px)&#39; }}&gt;
+&lt;div className=&quot;flex items-end gap-2 mb-4&quot;&gt;
+&lt;span className=&quot;font-serif italic text-[#DA3A16] text-[72px] leading-[80px] tracking-tight&quot;&gt;78%&lt;/span&gt;
+&lt;div className=&quot;w-[11px]&quot;&gt;
+&lt;svg style={{ width: &#39;160px&#39;, height: &#39;80px&#39; }} viewBox=&quot;0 0 289 138&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;g filter=&quot;url(#filter0_d_878_28499)&quot;&gt;&lt;path d=&quot;M22.5 48.7306C39.7833 48.7306 49.34 54.94 63.1667 69.2965C76.9933 83.653 86.55 110.5 103.833 110.5C121.117 110.5 130.673 84.2876 144.5 59.2856C158.327 34.2837 167.883 19.5573 185.167 19.5573C202.45 19.5573 208.55 57.6673 225.833 57.6673C243.117 57.6673 249.217 19.5 266.5 19.5&quot; stroke=&quot;#DA3A16&quot; strokeWidth=&quot;2&quot;/&gt;&lt;/g&gt;
+&lt;defs&gt;&lt;filter id=&quot;filter0_d_878_28499&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;289&quot; height=&quot;138&quot; filterUnits=&quot;userSpaceOnUse&quot; colorInterpolationFilters=&quot;sRGB&quot;&gt;&lt;feFlood floodOpacity=&quot;0&quot; result=&quot;BackgroundImageFix&quot;/&gt;&lt;feColorMatrix in=&quot;SourceAlpha&quot; type=&quot;matrix&quot; values=&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0&quot; result=&quot;hardAlpha&quot;/&gt;&lt;feOffset dy=&quot;4&quot;/&gt;&lt;feGaussianBlur stdDeviation=&quot;11.25&quot;/&gt;&lt;feComposite in2=&quot;hardAlpha&quot; operator=&quot;out&quot;/&gt;&lt;feColorMatrix type=&quot;matrix&quot; values=&quot;0 0 0 0 0.854902 0 0 0 0 0.227451 0 0 0 0 0.0862745 0 0 0 1 0&quot;/&gt;&lt;feBlend mode=&quot;normal&quot; in2=&quot;BackgroundImageFix&quot; result=&quot;effect1_dropShadow_878_28499&quot;/&gt;&lt;feBlend mode=&quot;normal&quot; in=&quot;SourceGraphic&quot; in2=&quot;effect1_dropShadow_878_28499&quot; result=&quot;shape&quot;/&gt;&lt;/filter&gt;&lt;/defs&gt;
+&lt;/svg&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 className=&quot;font-serif text-white text-[15px] tracking-[0.02em] uppercase mb-2 leading-tight&quot;&gt;NEXT-GEN CUSHIONING ARCHITECTURE&lt;/h3&gt;
+&lt;p className=&quot;font-serif text-white/64 text-[13px]&quot;&gt;Impact Absorption &amp; Energy Return Dynamics&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div className=&quot;absolute left-[8%] bottom-[12%] z-20 text-white max-w-[500px]&quot;&gt;
+&lt;h2 className=&quot;text-[44px] leading-[1.05] tracking-tight flex flex-col&quot;&gt;
+&lt;span className=&quot;font-sans font-medium&quot;&gt;Bringing Aerospace-&lt;/span&gt;
+&lt;span className=&quot;font-sans font-medium&quot;&gt;Grade Infrastructure&lt;/span&gt;
+&lt;span className=&quot;font-serif font-normal pt-1&quot;&gt;&lt;span className=&quot;not-italic&quot;&gt;Directly To Your &lt;/span&gt;&lt;span className=&quot;italic&quot;&gt;Everyday&lt;/span&gt;&lt;/span&gt;
+&lt;span className=&quot;font-serif italic font-normal&quot;&gt;Urban Exploration&lt;/span&gt;
+&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;div className=&quot;absolute right-[calc(8%+100px)] bottom-[12%] z-20 flex flex-col items-center&quot;&gt;
+&lt;div className=&quot;bg-white w-[180px] py-[6px] flex justify-center items-center&quot;&gt;
+&lt;span className=&quot;text-black font-serif text-[10px] uppercase font-bold tracking-[0.08em] text-center leading-[16px]&quot;&gt;THE SCIENCE OF IMPACT CONTROL&lt;/span&gt;
+&lt;/div&gt;
+&lt;div className=&quot;bg-[#DA3A16] w-[180px] h-[100px] flex justify-center items-center&quot;&gt;
+&lt;svg width=&quot;86&quot; viewBox=&quot;135.5 361.38 420.32 149.8&quot; fill=&quot;white&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;path d=&quot;m181.86 511.11c-12.524-0.49755-22.77-3.9244-30.782-10.289-1.529-1.2159-5.1725-4.8616-6.3949-6.3992-3.2489-4.0853-5.4578-8.0611-6.931-12.472-4.5334-13.579-2.2002-31.397 6.6737-50.953 7.5979-16.742 19.322-33.347 39.776-56.344 3.013-3.384 11.986-13.281 12.043-13.281 0.0216 0-0.46749 0.84706-1.083 1.8786-5.3183 8.9082-9.8689 19.401-12.348 28.485-3.9823 14.576-3.502 27.085 1.4068 36.784 3.3862 6.6822 9.1913 12.47 15.719 15.67 11.428 5.5993 28.159 6.0625 48.592 1.3554 1.4068-0.32599 71.116-18.831 154.91-41.123 83.794-22.294 152.36-40.52 152.37-40.505 0.0237 0.0193-194.68 83.333-295.75 126.56-16.007 6.8431-20.287 8.5715-27.812 11.214-19.236 6.7551-36.467 9.9783-50.396 9.4251z&quot;/&gt;
+&lt;/svg&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;/div&gt;
+);
+}</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="motionz-premium-landing-page.html">MotionZ Premium Landing Page<small>Landing Page · landing-page</small></a><a href="future-state.html">Future-State<small>Landing Page · hero</small></a><a href="3d-story.html">3D Story<small>Landing Page · hero</small></a><a href="financial-suite.html">Financial Suite<small>Landing Page · hero</small></a><a href="prompt-hero.html">PROMPT<small>Landing Page · hero</small></a><a href="health-portal.html">Health Portal<small>Landing Page · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

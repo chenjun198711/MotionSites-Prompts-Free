@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ink Dynasty — Culture 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Budarina 中国水墨风 Hero，物理模拟悬垂汉字与弦拨音效，文化主题页面。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/ink-dynasty.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ink Dynasty — Culture 提示词">
+<meta property="og:description" content="Budarina 中国水墨风 Hero，物理模拟悬垂汉字与弦拨音效，文化主题页面。">
+<meta property="og:url" content="https://prompt-site.shop/p/ink-dynasty.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/ink-dynasty.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Ink Dynasty","description":"Budarina 中国水墨风 Hero，物理模拟悬垂汉字与弦拨音效，文化主题页面。","url":"https://prompt-site.shop/p/ink-dynasty.html","inLanguage":"zh-CN","genre":"Culture","dateCreated":"2026-08-14T08:39:05.666Z","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-culture">Culture</a></div><h1>Ink Dynasty</h1><div class="chip-row"><span class="chip">Culture</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-08-14</span><span>正文：10,026 字符</span></div><div class="hero-media"><img src="../assets/previews/ink-dynasty.webp" alt="Ink Dynasty 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>Budarina 中国水墨风 Hero，物理模拟悬垂汉字与弦拨音效，文化主题页面。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a single-page &quot;Chinese ink&quot; hero landing page using Vite + React 18 + TypeScript + Tailwind CSS. The page title is &quot;Budarina&quot;. It is one full-viewport hero section with an interactive physics simulation of hanging &quot;strings&quot; of Chinese characters beneath a temple roof, with pluck sounds. Recreate it exactly as specified.
+
+=== TECH STACK &amp; SETUP ===
+- Vite + React 18 + TypeScript, Tailwind CSS (default config), PostCSS + autoprefixer.
+- Two files of app code: App.tsx (layout) and components/ClothSimulation.tsx (roof + physics canvas), plus index.css.
+- Import Google Fonts at the top of index.css:
+  - https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&amp;display=swap
+  - https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&amp;display=swap
+- body: overflow-x hidden; font-family: &#39;Noto Serif SC&#39;, &#39;Rubik&#39;, serif; antialiased.
+
+=== EXACT ASSET URLS ===
+1. Full-page background image (ink-wash mountains on cream paper), applied as background-image, cover, center:
+https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260730_103554_db418202-7c49-4723-bd53-35a30b7e29da.png&amp;w=1280&amp;q=85
+2. Temple roof PNG (transparent, dark tiled Chinese roof with upturned eaves):
+https://soft-zoom-63098134.figma.site/_assets/v11/f0f8b81e78d616a59ca6b1e5a57d2a0ed01d0bb7.png
+3. Play button background texture (terracotta red), used as center/cover background of the Play button:
+https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260731_141002_84f92c33-a221-4bfc-a798-d20db56f38a6.png&amp;w=1280&amp;q=85
+
+=== COLOR PALETTE ===
+- Accent / all text: terracotta red #B3483C
+- Cream (button text, mobile menu bg): #f5f0e8
+- Simulated character ink color: #5C4640
+- Menu link borders/dividers: rgba(122, 51, 42, 0.1) and 0.15
+
+=== LAYOUT (App.tsx) ===
+Root: &lt;section class=&quot;hero-section&quot;&gt; — position relative, 100% width, 100vh height, overflow hidden, flex centered, touch-action: none.
+Layers (z-index): background div z-0 (absolute inset-0 with the BG image) → mobile overlay z-40 → mobile menu z-50 → nav z-[55] → cloth container z-20 (absolute inset-0, pointer-events-none; canvas inside re-enables pointer events) → corner text blocks z-30 (pointer-events-none).
+
+NAV (absolute top, full width, flex justify-between, px-6 sm:px-8 md:px-12, py-5 md:py-6):
+- Left: brand &quot;Shanlian&quot; — Rubik 1.125rem, weight 500, color #B3483C, letter-spacing 0.02em.
+- Center (hidden below md; absolutely centered with left-1/2 -translate-x-1/2, gap-6): links &quot;Main&quot;, &quot;Explorations&quot;, &quot;Collaborations&quot; — Rubik 0.875rem, #B3483C, letter-spacing 0.03em, opacity 0.8, hover opacity 1 (transition color 0.3s).
+- Right: &quot;Play&quot; button (hidden below sm) — Rubik 0.875rem weight 500, color #f5f0e8, padding 1.125rem 2.75rem, no border, no border-radius, background = asset #3 center/cover, letter-spacing 0.04em, hover opacity 0.85 (0.3s transition). Next to it (only below md) a hamburger button.
+
+TOP-LEFT TEXT BLOCK (md: top-28 left-12; mobile: bottom-6 left-6; pointer-events-none):
+- Subtitle line: &quot;归途（Guītú）注定回归的旅程&quot; — Noto Serif SC 0.8rem, #B3483C, letter-spacing 0.08em, margin-bottom 1rem (0.65rem font on ≤640px).
+- Below it, vertical calligraphy: a flex row with flex-direction: row-reverse, gap 0.25rem, three columns; each column is a flex column of single characters, Noto Serif SC, 2.5rem, weight 700, line-height 1.15, #B3483C (1.5rem at ≤768px, 1.25rem at ≤640px).
+  Column 1 (rendered rightmost due to row-reverse): 風 殿 述 言
+  Column 2: 翠 樓 道 承 雲 瓦
+  Column 3: 玉 徑 辭 別 天 廊
+
+TOP-RIGHT TEXT BLOCK (md: top-28 right-12; mobile: bottom-6 right-6; text-right; pointer-events-none):
+- Four lines, Noto Serif SC 0.85rem, #B3483C, line-height 1.8, margin-bottom 1rem:
+  被隐没的庭院，/ 石刻崖壁，/ 还有那些文字难以 / 诉说的千年往事。
+- Below: an &quot;about&quot; row flex justify-end gap 0.375rem, Noto Serif SC 0.9rem weight 600 #B3483C: a 1rem × 1rem empty square outlined with 1.5px solid #B3483C (a &quot;□&quot; glyph with font-size 0 inside a bordered inline-flex box), then the text &quot;详情&quot;.
+
+=== MOBILE MENU (below md) ===
+- Hamburger: 2.5rem square button, 3 bars (1.5rem × 2px, #B3483C, border-radius 2px) with justify-content space-between in a 1rem-tall column. Transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1). When open: bar 1 → translateY(7px) rotate(45deg); bar 2 → opacity 0, scaleX(0); bar 3 → translateY(-7px) rotate(-45deg).
+- Overlay: fixed inset-0, rgba(0,0,0,0.3) + backdrop-filter blur(2px), fades in 0.4s same cubic-bezier; clicking it closes the menu.
+- Panel: fixed right, width 75% (max 320px), height 100dvh, background #f5f0e8, box-shadow -8px 0 32px rgba(0,0,0,0.1); slides in from translateX(100%) → 0 over 0.5s cubic-bezier(0.23, 1, 0.32, 1).
+- Panel content: padding 6rem 2rem 2rem; links Main / Explorations / Collaborations — Rubik 1.25rem, #B3483C, padding 1.25rem 0, bottom border rgba(122,51,42,0.1). When the panel opens, each link animates from opacity 0 + translateX(20px) to opacity 0.85 + translateX(0) over 0.5s (same bezier) with staggered delays 0.1s / 0.15s / 0.2s. Then a 1px divider (rgba(122,51,42,0.15), margin 1.5rem 0) and the same Play button.
+- While open, set document.body.style.overflow = &#39;hidden&#39; (restore on close/unmount). Clicking any link or Play closes the menu.
+
+=== CLOTH SIMULATION COMPONENT (the centerpiece) ===
+A container div absolute inset-0 containing:
+1. The roof image, horizontally centered at the top: padding-top 12vh desktop / 10vh tablet / 8vh mobile; max-width 45% desktop / 55% tablet / 75% mobile; max-height 35vh; object-fit contain; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.2)); draggable=false; z-30.
+2. A full-size &lt;canvas&gt; (absolute inset-0, z-20, pointer-events-auto) rendering hanging strings of Chinese characters via Verlet integration physics. Initialize only after the roof image loads (use onLoad), because the grid hangs from the roof&#39;s measured bottom edge.
+
+PHYSICS CONFIG (exact values):
+gravity 0.2, damping 0.99, iterationsPerFrame 5, vertical constraint compressFactor 0.02 and stretchFactor 1.1, mouseSize 5000 (squared-distance threshold), mouseStrength 4.
+
+BREAKPOINTS: mobile &lt;640px, tablet &lt;1024px, desktop otherwise. Re-init the sim when the breakpoint changes (resize listener that updates a state value).
+
+GRID: stringAreaWidth = roofWidth × 0.55 (0.65 on mobile). stringAreaHeight = 380 desktop / 320 tablet / 180 mobile. Columns (gridW) = 18 / 14 / 7; rows (gridH) = 30 / 24 / 14. cellWidth = width/(gridW−1), cellHeight = height/(gridH−1). Grid origin: x = containerCenterX − stringAreaWidth/2, y = roofImage bottom (relative to container) − 10px. Top row (j=0) particles are pinned.
+
+CHARACTERS: assign each particle a character from this exact string, indexed by (i + j*gridW) % length:
+缘分命中注定的相遇被遗忘园林壁刻山岩以及那些地图无法承载古老故事金路拒绝地屋碧簶传汽檐瑩宮闡說風雲龍鳳寺廟塔樓閣亭橋殿庭院竹松梅蘭菊荷花鶴鸞鳳凰
+Pre-render each unique character once to an offscreen canvas: font `bold {fontSize}px &quot;Noto Serif SC&quot;, serif`, fill #5C4640, centered; fontSize = max(10, cellHeight × 1.1); offscreen box = ceil(fontSize × 1.4), scaled by devicePixelRatio (capped at 2).
+
+VERLET PARTICLE UPDATE per frame (delta = time since last frame): if pinned, zero acceleration and skip. velocity = (pos − oldPos) × damping; oldPos = pos; apply gravity as (0, gravity / delta²); pos += velocity + acceleration × delta²; reset acceleration.
+
+CONSTRAINTS: vertical neighbor constraints (length = cellHeight, compress 0.02, stretch 1.1) — store each particle&#39;s downward constraint for rotation. Horizontal neighbor &quot;spacer&quot; constraints (length = cellWidth, compressFactor 0.6, stretchFactor 4). Constraint solve: only correct when distance &lt; minLength or &gt; maxLength, moving both unpinned endpoints half the correction each. Solve all constraints 5 times per frame.
+
+RENDER: clear canvas each frame; for each particle, compute the angle of its downward constraint (atan2(dy,dx) − π/2) and draw its pre-rendered character canvas centered at the particle position with that rotation, using ctx.setTransform with dpr scaling.
+
+MOUSE / TOUCH INTERACTION (pointer events on document; coordinates converted into grid space):
+- pointermove: every particle whose squared distance to the pointer &lt; 5000 receives a push force directed away from the pointer: angle = (pointer−particle angle) − π, strength = smoothstep(5000, −2000, distSq) × mouseStrength / 300 (smoothstep = clamped hermite t*t*(3−2t)).
+- pointerdown: if within 20px of a particle, grab it (temporarily pin it); pointermove drags it (set pos and oldPos to pointer); pointerup restores its original pinned state.
+
+PLUCK SOUND (Web Audio, koto/guzheng-like pluck): when the pointer disturbs particles, determine the column index (round(particle.x / cellWidth)) of the first disturbed particle and play a note — but throttle: skip if &lt;100ms since the last pluck or same column as last time (the &quot;same column&quot; latch clears after 200ms). Notes by column index modulo 8: [261.6, 293.7, 329.6, 349.2, 392.0, 440.0, 493.9, 523.3] Hz (C major scale C4–C5). Synthesis: triangle oscillator at f + sine oscillator at 2f, merged → lowpass filter starting at 4000 Hz with exponential ramp down to 200 Hz over 0.8s, Q=2 → gain starting at 0.12 with exponential ramp to 0.001 over 1.0s → destination; oscillators stop after 1.0s. Lazily create the AudioContext on first pluck and resume it if suspended.
+
+CLEANUP: cancel the animation frame and remove all listeners on unmount/re-init.
+
+=== OVERALL FEEL ===
+The result: a cream ink-wash mountain landscape fills the viewport; a dark temple roof floats top-center; beneath its eaves hang 18 swaying vertical strings of brown Chinese characters that ripple, bend, and scatter as the cursor moves through them, sounding gentle plucked-string notes; terracotta-red vertical calligraphy sits at the upper left, a short vertical-feel paragraph and &quot;详情&quot; link at the upper right, and a minimal red nav with a textured red Play button on top.
+` ` ``</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><p class="muted">暂无同分类条目。</p><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

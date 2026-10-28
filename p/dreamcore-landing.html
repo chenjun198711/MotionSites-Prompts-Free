@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dreamcore Landing — Landing Page 提示词 | MotionSites Prompts</title>
+<meta name="description" content="沉浸式视差滚动单页，深色背景 #0a0608，Viaoda Libre 衬线标题与 Imprima 无衬线正文，两个粘性视口场景随滚动切换。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/dreamcore-landing.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dreamcore Landing — Landing Page 提示词">
+<meta property="og:description" content="沉浸式视差滚动单页，深色背景 #0a0608，Viaoda Libre 衬线标题与 Imprima 无衬线正文，两个粘性视口场景随滚动切换。">
+<meta property="og:url" content="https://prompt-site.shop/p/dreamcore-landing.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/dreamcore-landing.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Dreamcore Landing","description":"沉浸式视差滚动单页，深色背景 #0a0608，Viaoda Libre 衬线标题与 Imprima 无衬线正文，两个粘性视口场景随滚动切换。","url":"https://prompt-site.shop/p/dreamcore-landing.html","inLanguage":"zh-CN","genre":"Landing Page","dateCreated":"2026-05-26T09:36:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-landing_page">Landing Page</a></div><h1>Dreamcore Landing</h1><div class="chip-row"><span class="chip">Landing Page</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-05-26</span><span>正文：13,442 字符</span></div><div class="hero-media"><img src="../assets/previews/dreamcore-landing.webp" alt="Dreamcore Landing 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>沉浸式视差滚动单页，深色背景 #0a0608，Viaoda Libre 衬线标题与 Imprima 无衬线正文，两个粘性视口场景随滚动切换。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a single-page immersive parallax landing page in React + TypeScript + Tailwind CSS using Vite. The page has two scroll-driven scenes inside a sticky viewport. Everything lives in a single `src/App.tsx` file. Use Google Fonts: **Viaoda Libre** (serif headings) and **Imprima** (sans-serif body). No external UI libraries. Use `lucide-react` only as a dependency (it is not used in this page). Use Tailwind for responsive layout breakpoints only; all other styling is inline React `CSSProperties`.
+
+---
+
+### GLOBAL SETUP
+
+**`tailwind.config.js`** -- Override the `xl` breakpoint to `1100px`:
+```js
+screens: { xl: &#39;1100px&#39; }
+```
+
+**`index.css`** -- Include Tailwind directives, global reset, dark background `#0a0608`, `font-family: &#39;Imprima&#39;, sans-serif`, `scrollbar-gutter: stable`, and a `@keyframes bobUp` animation that translates Y by `-6px` at 50%.
+
+**`index.html`** -- Load Google Fonts via `&lt;link&gt;`:
+```
+https://fonts.googleapis.com/css2?family=Viaoda+Libre&amp;family=Imprima&amp;display=swap
+```
+Title: &quot;Step Into Wonder&quot;
+
+---
+
+### IMAGE ASSETS (use these exact URLs)
+
+```
+PORTAL_BG = &quot;https://res.cloudinary.com/dy5er7kv5/image/upload/q_auto/f_auto/v1779707217/image_1_vdzwae.png&quot;
+CURTAIN_LEFT = &quot;https://res.cloudinary.com/dy5er7kv5/image/upload/q_auto/f_auto/v1779706559/curtain_left_znkmva.png&quot;
+CURTAIN_RIGHT= &quot;https://res.cloudinary.com/dy5er7kv5/image/upload/q_auto/f_auto/v1779706564/curtain_right_paeyym.png&quot;
+WORLD_BG = &quot;https://res.cloudinary.com/dy5er7kv5/image/upload/q_auto/f_auto/v1779706392/image_2_gkcdlx.png&quot;
+BOTTOM_CLOUDS= &quot;https://res.cloudinary.com/dy5er7kv5/image/upload/q_auto/f_auto/v1779706555/bottom_clouds_xskut6.png&quot;
+
+CARD_IMAGES[0] = &quot;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260525_160507_2ccbb4eb-1469-484f-af25-59168ad9a233.png&amp;w=1280&amp;q=85&quot;
+CARD_IMAGES[1] = &quot;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260525_160644_072a7f68-a101-4ded-a332-7d37707dbdd1.png&amp;w=1280&amp;q=85&quot;
+CARD_IMAGES[2] = &quot;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260525_160706_1c153d04-0dfb-4ac9-a4ef-e74f301c329c.png&amp;w=1280&amp;q=85&quot;
+```
+
+---
+
+### SCENE 2 CARD DATA (9 cards for the arc slider)
+
+```
+{ title: &#39;Hidden Realms&#39;, desc: &#39;Luminous sanctuaries unseen by wandering eyes&#39;, color: &#39;#f3cdd6&#39; }
+{ title: &#39;Wild Solitudes&#39;, desc: &#39;Dissolve into untamed horizons and deep calm&#39;, color: &#39;#dcedc2&#39; }
+{ title: &#39;Silent Havens&#39;, desc: &#39;Remote escapes far beyond ordinary reach&#39;, color: &#39;#c3e3f4&#39; }
+{ title: &#39;Bespoke Quests&#39;, desc: &#39;Journeys shaped around your vision and soul&#39;, color: &#39;#f0e4c0&#39; }
+{ title: &#39;Vivid Drifts&#39;, desc: &#39;Surreal passages through breathtaking terrain&#39;, color: &#39;#dcd2f2&#39; }
+{ title: &#39;Mystic Crests&#39;, desc: &#39;Timeless ridgelines wrapped in cloud and myth&#39;, color: &#39;#f3cdd6&#39; }
+{ title: &#39;Deep Currents&#39;, desc: &#39;Glowing depths alive with uncharted wonder&#39;, color: &#39;#c3e3f4&#39; }
+{ title: &#39;Gilded Dusk&#39;, desc: &#39;Amber horizons that stretch past all reason&#39;, color: &#39;#f0e4c0&#39; }
+{ title: &#39;Glassy Tides&#39;, desc: &#39;Calm waters holding skies of pure stillness&#39;, color: &#39;#dcedc2&#39; }
+```
+
+---
+
+### ARCHITECTURE
+
+The outer container is `height: 480vh; position: relative`. Inside it is a `position: sticky; top: 0; height: 100vh; overflow: hidden; background: #0a0608` viewport. All layers stack via absolute positioning and z-index.
+
+**Scroll progress** = `window.scrollY / (container.scrollHeight - window.innerHeight)`, clamped 0-1.
+
+**Helper functions:**
+- `easeInOut(t)`: quadratic ease `t &lt; 0.5 ? 2*t*t : -1 + (4 - 2*t)*t`
+- `lerp(a, b, t)`: linear interpolation
+- `clamp(val, min, max)`
+
+**`useIsMobile()`** hook: `matchMedia(&#39;(max-width: 767px)&#39;)` -- returns boolean.
+
+---
+
+### LAYER STACK (bottom to top by z-index)
+
+#### Layer 1: World Background (z-index: auto/0)
+- `ref={worldRef}`, absolute inset 0, `transformOrigin: &#39;50% 50%&#39;`
+- `WORLD_BG` image, `object-fit: cover`
+- Parallax: `scale(lerp(1, 1.18, ep))`, mouse offset `MAG.world = 6`
+
+#### Layer 2: Bottom Clouds (z-index: 10)
+- `ref={cloudsRef}`, absolute bottom:0, left:0, right:0, `transformOrigin: &#39;50% 100%&#39;`
+- `BOTTOM_CLOUDS` image, `width: 100%, height: auto`
+- Parallax: `scale(lerp(1, 1.4, ep))`, mouse offset `MAG.clouds = 9` (Y dampened to `0.4x`)
+- Opacity: fades from 0.7 to 1 in the first 5% of scroll
+
+#### Layer 2.5: Arc Card Slider (z-index: 9)
+- Absolute, `bottom: 60px (mobile) / 80px (desktop)`, centered horizontally
+- Opacity = `scene2Opacity`
+- Contains `&lt;ArcCardSlider&gt;` component (details below)
+
+#### Layer 3: Portal Frame (z-index: 15)
+- `ref={portalRef}`, absolute inset 0, `transformOrigin: &#39;52% 38%&#39;`
+- `PORTAL_BG` image, `object-fit: cover`
+- Parallax: `scale(lerp(1, 7.5, ep))`, mouse offset `MAG.portal = 7`
+- Opacity: 1 until scroll 0.65, then fades to 0 by scroll 0.85
+
+#### Layer 3.5: Bottom Fade (z-index: 16)
+- Absolute bottom, `height: 40%`, `linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 100%)`, `pointer-events: none`
+
+#### Layer 4L: Curtain Left (z-index: 16)
+- `ref={curtainLRef}`, absolute inset 0, `transformOrigin: &#39;left center&#39;`
+- `CURTAIN_LEFT` image, `object-fit: cover`, `object-position: right center`
+- On mount (after 100ms), shifts left by `translateX(-62%)` with `transition: transform 1.8s cubic-bezier(0.16, 1, 0.3, 1)`
+- On scroll: additional `translateX` via `lerp(0, 150, ep)%`, scale `lerp(1, 1.3, ep)`
+- Mouse offset: `MAG.curtainL = 14` (Y dampened to `0.3x`)
+- After entrance animation (2200ms), transition switches to `none` for responsive parallax
+
+#### Layer 4R: Curtain Right (z-index: 16)
+- Mirror of Layer 4L but `transformOrigin: &#39;right center&#39;`, `object-position: left center`
+- Shifts right instead of left, `MAG.curtainR = 14`
+
+#### Top Fade Gradient (z-index: 45)
+- Absolute top, `height: 42vh`, `linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, transparent 100%)`, `pointer-events: none`
+
+---
+
+### NAVIGATION (z-index: 50)
+
+Absolute top, full width, `display: flex, justify-content: space-between, align-items: center`.
+
+**Nav link style:** `font-family: &#39;Imprima&#39;, sans-serif`, `font-size: 12px`, `letter-spacing: 0.12em`, `text-transform: uppercase`, `color: #fff`, `opacity: 0.9`, no text decoration.
+
+**Mobile** (`padding: 18px 20px`): Three items -- &quot;Explore&quot; (11px) | StarLogo SVG | &quot;Connect&quot; (11px)
+
+**Desktop** (`padding: 22px 48px`): Left group [&quot;Worlds&quot;, &quot;Atelier&quot;, &quot;Immersions&quot;] with `gap: 36px` | StarLogo SVG center | Right group [&quot;Craft&quot;, &quot;Codex&quot;, &quot;Connect&quot;] with `gap: 36px`
+
+**StarLogo** -- inline SVG, 28x28, white star path + 3 small circles:
+```
+&lt;path d=&quot;M14 2l2.09 6.42H23l-5.45 3.96 2.09 6.42L14 14.84l-5.64 4.06 2.09-6.42L4.96 8.42h6.95L14 2z&quot; fill=&quot;white&quot; opacity=&quot;0.9&quot; /&gt;
+&lt;circle cx=&quot;14&quot; cy=&quot;24&quot; r=&quot;1.5&quot; fill=&quot;white&quot; opacity=&quot;0.6&quot; /&gt;
+&lt;circle cx=&quot;6&quot; cy=&quot;6&quot; r=&quot;1&quot; fill=&quot;white&quot; opacity=&quot;0.4&quot; /&gt;
+&lt;circle cx=&quot;22&quot; cy=&quot;6&quot; r=&quot;1&quot; fill=&quot;white&quot; opacity=&quot;0.4&quot; /&gt;
+```
+
+---
+
+### SCENE 1 UI (z-index: 20)
+
+Opacity = `clamp(1 - scrollProgress / 0.22, 0, 1)`. Fades out in first ~22% of scroll.
+
+Uses **three separate Tailwind-responsive layout blocks** (not JS branching for layout):
+
+#### Mobile layout (`md:hidden`)
+- Centered column, `padding: 80px 24px 100px`
+- Fade-in: `opacity 0.9s ease, transform 0.9s ease`, delay `0.3s`, triggers on `uiVisible`
+- **Heading** (Viaoda Libre): &quot;FALL &gt; INTO&quot; line (`clamp(26px, 7vw, 42px)`, `tracking-widest`, color `#3b1a0a`) then &quot;REVERIE&quot; (`clamp(52px, 16vw, 80px)`, `tracking-tight`, `leading-none`, color `#3b1a0a`). The &quot;&gt;&quot; is a `›` character in color `#6b2e0e` at `0.8em`. &quot;INTO&quot; is italic.
+- **Subtext** (Imprima): &quot;Crafting boundless digital worlds where the edge between AI, vision, and living myth dissolves.&quot; -- `15px`, `leading-relaxed`, color `#5c2d0e`, `max-width: 280px`
+- **Single card**: 140x140px, `border-radius: 22px`, `CARD_IMAGES[0]` as background-cover, `box-shadow: 0 8px 32px rgba(0,0,0,0.5)`. Bottom gradient overlay (60% height). Bottom-left overlay: white circle (26px) with play triangle SVG + &quot;View Reel&quot; text (13px, white).
+
+#### Tablet layout (`hidden md:flex xl:hidden`)
+- Centered column, `gap: 28px`, `padding: 80px 32px 96px`
+- Same fade-in animation as mobile
+- **Heading**: same structure as mobile but dark brown text (`#3b1a0a`), sizes `clamp(28px, 5vw, 44px)` / `clamp(60px, 12vw, 86px)`
+- **Subtext**: same text, `16px`, color `#5c2d0e`, `max-width: 400px`
+- **Three cards in a row** (`flex gap-3.5`): each 140x140px, `border-radius: 22px`. Each has:
+- Background gradient overlay (60% height, multi-stop)
+- Backdrop blur layer (44% height, masked gradient)
+- Card 1: play button + &quot;View Reel&quot;
+- Card 2: number &quot;32&quot; (Viaoda Libre, 28px, white) + &quot;World Patrons&quot;
+- Card 3: play button + &quot;View Reel&quot;
+
+#### Desktop layout (`hidden xl:block` / `hidden xl:flex`)
+- **Heading block**: absolute, `top: 46%`, `left: 60px`, `maxWidth: 440px`, `translateY(-50%)` centered
+- White text with heavy `text-shadow: 0 2px 24px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.9)`
+- &quot;FALL &gt; INTO&quot;: `clamp(32px, 4.5vw, 54px)`, `line-height: 1.1`, `letter-spacing: 0.04em`. The `&gt;` is `rgba(255,220,180,0.7)`.
+- &quot;REVERIE&quot;: `clamp(50px, 7.5vw, 88px)`, `line-height: 0.9`, `letter-spacing: -0.02em`
+- Subtext: `18px`, `line-height: 1.7`, color `rgba(255,245,235,0.88)`, `max-width: 300px`, `text-shadow: 0 1px 12px rgba(0,0,0,0.8)`
+- Fade-in: opacity+transform, delay `0.3s`
+
+- **Cards block**: absolute, `right: 40px`, `top: 50%`, `translateY(-50%)`, `flex gap: 12px`
+- Three cards, each 158x158px, `border-radius: 28px`, `box-shadow: 0 8px 32px rgba(0,0,0,0.45)`
+- Each has: gradient overlay, backdrop blur layer (same as tablet), bottom content area at 12px inset
+- Play cards: 30px white circle + 18px &quot;View Reel&quot;
+- Number card: &quot;32&quot; at 36px Viaoda Libre + 18px &quot;World Patrons&quot;
+- Fade-in delay: `0.55s`
+
+#### Slider Dots (bottom of Scene 1)
+- Absolute, bottom `28px (mobile, centered)` / `40px (desktop, left: 60px)`
+- 4 dots: first is `28px wide`, rest `14px`, all `4px tall`, `border-radius: 2px`
+- Active dot: `rgba(255,255,255,0.9)`, inactive: `rgba(255,255,255,0.35)`
+- Fade-in delay: `0.8s`
+
+#### Scroll Cue (desktop only)
+- Absolute `bottom: 36px`, centered
+- &quot;DESCEND&quot; text: `10px`, `letter-spacing: 0.22em`, uppercase, `rgba(255,255,255,0.6)`
+- Below: `ScrollChevron` -- 34px circle with 1.5px border `rgba(255,255,255,0.5)`, chevron SVG inside, `animation: bobUp 1.8s ease-in-out infinite`
+- Fade-in delay: `0.9s`
+
+---
+
+### SCENE 2 UI (z-index: 46)
+
+Opacity = `clamp((scrollProgress - 0.68) / 0.16, 0, 1)`. Fades in between scroll 68%-84%.
+
+- Centered column
+- **Heading** (Viaoda Libre): &quot;FORGE BEYOND THE REAL&quot; -- `clamp(28px, 8vw, 44px) mobile / clamp(38px, 6.5vw, 78px) desktop`, white, `letter-spacing: 0.03em`, `line-height: 1.05`, `text-shadow: 0 2px 20px rgba(0,0,0,0.4)`
+- **Subtext** (Imprima): &quot;Singular voyages to astonishing destinations, shaped for those who seek beauty beyond the ordinary and the known.&quot; -- `14px mobile / 20px desktop`, `line-height: 1.6`, `letter-spacing: -0.01em`, `max-width: 260px mobile / 480px desktop`, color `rgba(255,255,255,0.82)`
+- Margin-top: `8vh mobile / 12vh desktop`
+
+---
+
+### ARC CARD SLIDER COMPONENT
+
+Props: `cards[]`, `rotationOffset: number`, `isMobile: boolean`
+
+**Layout math:**
+- `cardSpacingDeg`: 12 (mobile) / 9 (desktop) degrees between cards
+- `centerIndex`: `Math.floor(totalCards / 2)`
+- `arcRadius`: 700 (mobile) / 1100 (desktop) px
+- `cardW`: 160 (mobile) / 220 (desktop) px
+- `cardH`: 175 (mobile) / 230 (desktop) px
+- `sliderH`: 260 (mobile) / 360 (desktop) px
+
+**`rotationOffset`** is driven by scroll: `lerp(0, arcSweepDeg, clamp((scrollProgress - 0.70) / 0.30, 0, 1))` where `arcSweepDeg = (totalCards - 1) * 10`.
+
+**Per card positioning:**
+```
+baseDeg = (i - centerIndex) * cardSpacingDeg
+deg = baseDeg - rotationOffset + (centerIndex * cardSpacingDeg)
+rad = deg * PI / 180
+x = sin(rad) * arcRadius
+y = arcRadius - cos(rad) * arcRadius
+```
+Each card is absolutely positioned at `bottom: -y + (140 mobile / 200 desktop)px`, `left: calc(50% + x - halfW)`, `transform: rotate(deg)`, `transformOrigin: halfW arcRadius`.
+
+**Card appearance:**
+- Rounded rect (`18px mobile / 26px desktop`), background = `card.color` (pastel)
+- `box-shadow: 0 8px 40px rgba(80,40,60,0.18)`
+- Top-right: numbered circle (24px, `1.5px border rgba(80,50,60,0.3)`, text `rgba(80,50,60,0.6)`, 10px Imprima) showing zero-padded index
+- Bottom: card title in Viaoda Libre (`22px mobile / 30px`, color `#3a2530`) + description in Imprima (`12px mobile / 15px`, color `rgba(58,37,48,0.65)`)
+
+---
+
+### ENTRANCE ANIMATION SEQUENCE
+
+1. **t=100ms**: Curtains open -- `curtainsOpenRef` flips to true, causing 62% horizontal shift on each curtain with `1.8s cubic-bezier(0.16, 1, 0.3, 1)` transition
+2. **t=600ms**: `uiVisible` = true -- all Scene 1 UI elements fade/slide in with staggered delays (0.3s heading, 0.55s cards, 0.8s dots, 0.9s scroll cue)
+3. **t=2200ms**: `entranceDone` = true -- curtain CSS transition switches to `none` so parallax is instant
+
+---
+
+### MOUSE PARALLAX (desktop)
+
+`requestAnimationFrame` loop smooths raw mouse position at `speed = 0.07` (lerp). Each layer is offset by its `MAG` value in the reverse direction of the mouse. The transforms combine mouse offset with scroll-driven scale/translate.
+
+**MAG values:** world=6, clouds=9, portal=7, curtainL=14, curtainR=14</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="motionz-premium-landing-page.html">MotionZ Premium Landing Page<small>Landing Page · landing-page</small></a><a href="future-state.html">Future-State<small>Landing Page · hero</small></a><a href="3d-story.html">3D Story<small>Landing Page · hero</small></a><a href="financial-suite.html">Financial Suite<small>Landing Page · hero</small></a><a href="prompt-hero.html">PROMPT<small>Landing Page · hero</small></a><a href="health-portal.html">Health Portal<small>Landing Page · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

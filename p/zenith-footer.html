@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zenith Footer — Footer Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色全屏背景视频上叠加极简页脚，采用Geist字体与Framer Motion动画，营造沉浸式品牌展示体验。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/zenith-footer.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Zenith Footer — Footer Section 提示词">
+<meta property="og:description" content="深色全屏背景视频上叠加极简页脚，采用Geist字体与Framer Motion动画，营造沉浸式品牌展示体验。">
+<meta property="og:url" content="https://prompt-site.shop/p/zenith-footer.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/zenith-footer.gif">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Zenith Footer","description":"深色全屏背景视频上叠加极简页脚，采用Geist字体与Framer Motion动画，营造沉浸式品牌展示体验。","url":"https://prompt-site.shop/p/zenith-footer.html","inLanguage":"zh-CN","genre":"Footer Section","dateCreated":"2026-05-03T10:10:44.102029+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-footer_section">Footer Section</a></div><h1>Zenith Footer</h1><div class="chip-row"><span class="chip">Footer Section</span><span class="chip">footer</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-05-03</span><span>正文：4,246 字符</span></div><div class="hero-media"><img src="../assets/previews/zenith-footer.gif" alt="Zenith Footer 动效预览" loading="lazy"><div class="media-note">本地预览图 · gif</div></div><h2>简介</h2><p>深色全屏背景视频上叠加极简页脚，采用Geist字体与Framer Motion动画，营造沉浸式品牌展示体验。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Please create a React/Vite application utilizing Tailwind CSS, Lucide React, and Framer Motion. I want to build a landing page layout with a specific full-screen background video and a highly styled footer component.
+
+### 1. Global Setup &amp; Fonts
+- In your global CSS file, import the &quot;Geist&quot; font from Google Fonts (weights 100..900).
+- Set up a Tailwind custom theme variable for `--font-geist` using `&quot;Geist&quot;, sans-serif`.
+- Apply `@apply font-geist antialiased;` to the `body`.
+
+### 2. Main App Layout &amp; Background Video
+Create a main layout that takes up the full screen (`min-h-[100dvh] h-full lg:h-[100dvh]`) styled with a black background (`bg-black`), flexbox column, relative positioning, and hidden overflow.
+
+Inside this main layout, add a background `&lt;video&gt;`:
+- **URL**: `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260429_111347_9cf2a2b0-2c10-475b-a132-147a046b4927.mp4`
+- **Attributes**: `autoPlay`, `muted`, `loop`, `playsInline`
+- **Classes**: `absolute inset-0 w-full h-full object-cover pointer-events-none`
+
+Overlay a scrollable foreground container (`z-10`, `flex-1`, `px-4`, `overflow-y-auto`). Inside this, add a max-width container (`max-w-5xl mx-auto w-full flex-1 flex flex-col min-h-full`). The page content should go at the top, and the Footer component should be pushed to the bottom using `mt-auto pb-8`.
+
+### 3. The Reusable `FitnessButton` Component
+Create a `FitnessButton` component that uses `motion.button` from `motion/react`.
+- **Props**: `children`, `icon`, `variant` (&#39;primary&#39; or &#39;secondary&#39;), `className`, `onClick`.
+- **Animations**: `whileHover={{ scale: 1.02, translateY: -1 }}` and `whileTap={{ scale: 0.98 }}`.
+- **Base Classes**: `px-[18px] py-[12px] rounded-lg flex items-center justify-center gap-[10px] text-base font-geist font-normal cursor-pointer transition-all duration-200`.
+- **Primary Variant**: `bg-[#060606] text-white shadow-[inset_0px_4px_8px_rgba(255,255,255,0.25),0px_4px_12px_rgba(255,255,255,0.25)] hover:shadow-[inset_0px_4px_8px_rgba(255,255,255,0.35),0px_8px_24px_rgba(255,255,255,0.35)]`. If it&#39;s the primary variant, it should render a `Rocket` icon from `lucide-react` (`w-5 h-5 text-white`) next to the text.
+- **Secondary Variant**: `bg-[#F5F5F5] text-[#060606] border border-transparent hover:bg-white hover:border-black/10 shadow-sm`.
+- Allow the `className` prop to override these defaults.
+
+### 4. The `Footer` Component
+Create the `Footer` component containing a `motion.div` container with the following properties:
+- **Animations**: Reval inside view over 0.5s from `{ opacity: 0, y: 20 }` to `{ opacity: 1, y: 0 }` once.
+- **Container Styling**: `bg-[#FFFFF0]/95 backdrop-blur-md rounded-[32px] p-6 sm:py-8 md:px-12 md:py-8 shadow-xl border border-white/20 flex flex-col`.
+
+Inside the container, create a responsive CSS grid (`grid-cols-2 lg:grid-cols-[auto_1fr_auto_auto] gap-x-8 lg:gap-x-16 gap-y-6 sm:gap-y-6`).
+
+Populate the grid with the following elements:
+- **Top Left (Icon)**: A `Dumbbell` icon from `lucide-react` (`text-black w-8 h-8`, `strokeWidth={2.5}`).
+- **Top Center (Heading)**: An `h2` with the text &quot;Move, Heal, Bloom&quot; (`text-2xl md:text-3xl font-medium tracking-tight text-black`).
+- **Middle Left (Buttons)**: A flex wrap container (`gap-3`) holding two of our `FitnessButton`s: &quot;Join Today&quot; (primary) and &quot;View Clubs&quot; (secondary). Both need their padding, gap, and text size overridden with `!py-2 !px-5 !gap-2 !text-xs`.
+- **Right Menus**: Two columns of text links aligned to the bottom (`sm:self-end flex flex-col gap-3`).
+- **Column 1 (&quot;Insights&quot;)**: Links for &#39;Vitality Lab&#39;, &#39;Active Armor&#39;, &#39;Social Circles&#39;, and &#39;Get In Touch&#39;.
+- **Column 2 (&quot;Connect&quot;)**: Links for &#39;Meta Space&#39;, &#39;Pro Network&#39;, &#39;Vlog Stream&#39;, and &#39;Visual Feed&#39;.
+- **Menu Heading styling**: `font-medium text-black uppercase tracking-[0.05em] text-[11px]`.
+- **Menu Link styling**: `text-black/70 hover:text-black transition-colors text-sm font-medium whitespace-nowrap`.
+- **Bottom (Copyright)**: Below the grid, add a copyright footer section (`mt-6 sm:mt-8 flex flex-wrap gap-x-4 gap-y-1 text-[#060606]/40 text-[10px] font-medium tracking-tight uppercase`). Inside, render two span elements that both say &quot;© Zenith Media Group 2025&quot;.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="stark-minimal-footer.html">Stark Minimal Footer<small>Footer Section · footer</small></a><a href="kresna-footer.html">Kresna Footer<small>Footer Section · footer</small></a><a href="vize-footer.html">Vize Footer<small>Footer Section · footer</small></a><a href="haul-footer.html">HAUL!<small>Footer Section · footer</small></a><a href="lumina-footer.html">Lumina<small>Footer Section · footer</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

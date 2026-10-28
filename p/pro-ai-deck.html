@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pro AI Deck — Presentations 提示词 | MotionSites Prompts</title>
+<meta name="description" content="全屏AI演示文稿应用，7张幻灯片支持横向滑动/键盘导航，配有流畅动画过渡和HLS视频播放功能。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/pro-ai-deck.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pro AI Deck — Presentations 提示词">
+<meta property="og:description" content="全屏AI演示文稿应用，7张幻灯片支持横向滑动/键盘导航，配有流畅动画过渡和HLS视频播放功能。">
+<meta property="og:url" content="https://prompt-site.shop/p/pro-ai-deck.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Pro AI Deck","description":"全屏AI演示文稿应用，7张幻灯片支持横向滑动/键盘导航，配有流畅动画过渡和HLS视频播放功能。","url":"https://prompt-site.shop/p/pro-ai-deck.html","inLanguage":"zh-CN","genre":"Presentations","dateCreated":"2026-04-18T11:54:56.365634+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-presentations">Presentations</a></div><h1>Pro AI Deck</h1><div class="chip-row"><span class="chip">Presentations</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-04-18</span><span>正文：20,084 字符</span></div><div class="hero-media"><video src="../assets/previews/pro-ai-deck.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>全屏AI演示文稿应用，7张幻灯片支持横向滑动/键盘导航，配有流畅动画过渡和HLS视频播放功能。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">PROMPT TO RECREATE STUDIO PITCH DECK SLIDES
+
+Create a full-screen slide deck presentation app using React, TypeScript, Vite, Tailwind CSS, Motion (framer-motion), hls.js, and Lucide React icons. The presentation has 7 slides with horizontal swipe/scroll/keyboard navigation and animated transitions.
+
+GLOBAL SETUP
+
+Dependencies (package.json):
+
+react ^18.3.1, react-dom ^18.3.1
+motion ^12.38.0 (import from &quot;motion/react&quot;)
+hls.js ^1.6.15
+lucide-react ^0.344.0
+tailwindcss ^3.4.1, autoprefixer, postcss
+vite ^5.4.2, @vitejs/plugin-react ^4.3.1
+typescript ^5.5.3
+Fonts (loaded via Google Fonts in index.html):
+Instrument Serif (italic) -- used as font-heading for all headings
+Barlow (weights 300, 400, 500, 600) -- used as font-body for all body text
+Material Symbols Rounded (opsz 24, wght 400, FILL 1, GRAD 0) -- used for icons on slide 2
+Load via these exact &lt;link&gt; tags in &lt;head&gt;:
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot; /&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin /&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Barlow:wght@300;400;500;600&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0&quot; rel=&quot;stylesheet&quot; /&gt;
+Tailwind Config:
+fontFamily.heading: [&quot;&#39;Instrument Serif&#39;&quot;, &#39;serif&#39;]
+fontFamily.body: [&quot;&#39;Barlow&#39;&quot;, &#39;sans-serif&#39;]
+Custom CSS color variables for background, foreground, card, primary, secondary, muted, accent, destructive, border, input, ring
+
+borderRadius.full: var(--radius) where --radius: 9999px
+CSS Variables (index.css :root):
+--background: 213 45% 67%;
+--foreground: 0 0% 100%;
+--card: 213 45% 62%;
+--card-foreground: 0 0% 100%;
+--primary: 0 0% 100%;
+--primary-foreground: 213 45% 67%;
+--secondary: 213 45% 72%;
+--secondary-foreground: 0 0% 100%;
+--muted: 213 35% 60%;
+--muted-foreground: 0 0% 100% / 0.7;
+--accent: 213 45% 72%;
+--accent-foreground: 0 0% 100%;
+--destructive: 0 84.2% 60.2%;
+--border: 0 0% 100% / 0.2;
+--input: 0 0% 100% / 0.2;
+--ring: 0 0% 100% / 0.3;
+--radius: 9999px;
+--glass-bg: rgba(255, 255, 255, 0.12);
+--glass-border: rgba(255, 255, 255, 0.25);
+--glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+--glass-blur: 16px;
+Glassmorphism CSS classes (defined in
+@layer
+components in index.css):
+
+.liquid-glass:
+background: rgba(255, 255, 255, 0.01)
+background-blend-mode: luminosity
+backdrop-filter: blur(4px)
+No border
+
+box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1)
+position: relative, overflow: hidden
+::before pseudo-element creates a gradient border effect using mask-composite: exclude. The gradient goes 180deg from rgba(255,255,255,0.45) at 0% -&gt; 0.15 at 20% -&gt; 0 at 40% -&gt; 0 at 60% -&gt; 0.15 at 80% -&gt; 0.45 at 100%, with 1.4px padding
+.liquid-glass-strong:
+Same as above but backdrop-filter: blur(50px)
+
+box-shadow: 4px 4px 4px rgba(0,0,0,0.05), inset 0 1px 1px rgba(255,255,255,0.15)
+::before gradient slightly stronger: 0.5 at 0%/100%, 0.2 at 20%/80%
+Body styles: font-family: &#39;Barlow&#39;, sans-serif; background: #000; color: #fff; overflow-x: hidden;
+SHARED COMPONENTS
+HlsVideo component (src/components/HlsVideo.tsx):
+Props: src: string, className?: string, style?: React.CSSProperties
+Uses a &lt;video&gt; element with autoPlay, loop, muted, playsInline
+On mount: if src ends with .m3u8 and Hls.isSupported(), creates an Hls instance, calls loadSource and attachMedia; returns cleanup that calls hls.destroy(). Otherwise sets video.src directly.
+BlurText component (src/components/BlurText.tsx):
+Props: text: string, className?: string, delay?: number (default 100)
+Splits text into words. Uses IntersectionObserver (threshold 0.2) to trigger animation on visibility.
+Each word is a motion.span with initial={{ filter: &#39;blur(10px)&#39;, opacity: 0, y: 50 }}, animates through keyframes: [{ filter: &#39;blur(5px)&#39;, opacity: 0.5, y: -5 }, { filter: &#39;blur(0px)&#39;, opacity: 1, y: 0 }]
+Duration 0.7s per word, staggered by (i * delay) / 1000, easeOut
+Each word has class inline-block mr-[0.25em]
+SlideControls component (src/components/SlideControls.tsx):
+Fixed to bottom of screen: fixed bottom-0 left-0 right-0 z-50 px-8 lg:px-12 pb-6
+Left side: slide counter 01 / 07 format (text-white/30, text-xs, tracking-[0.2em], uppercase) | divider (w-px h-4 bg-white/15) | animated slide label (text-white/50, text-xs)
+Right side: dot indicators (h-1 rounded-full, active dot is w-24 bg-white, inactive is w-8 bg-white/20 hover:bg-white/40, transition-all duration-500) | divider | prev/next buttons using ChevronLeft/ChevronRight from lucide-react (w-8 h-8 rounded-full, text-white/50 hover:text-white hover:bg-white/10, disabled:opacity-20)
+APP COMPONENT (src/App.tsx):
+7 slides in order: TitleSlide (&quot;Introduction&quot;), ProblemSlide (&quot;The Process&quot;), CapabilitiesSlide (&quot;Capabilities&quot;), WhyUsSlide (&quot;Differentiators&quot;), StatsSlide (&quot;Traction&quot;), TestimonialsSlide (&quot;Social Proof&quot;), CtaSlide (&quot;Next Steps&quot;)
+AnimatePresence mode=&quot;wait&quot; with custom direction
+Slide transition variants:enter: { x: dir &gt; 0 ? &#39;100%&#39; : &#39;-100%&#39;, opacity: 0, scale: 0.95 }
+center: { x: 0, opacity: 1, scale: 1 }
+exit: { x: dir &gt; 0 ? &#39;-30%&#39; : &#39;30%&#39;, opacity: 0, scale: 0.95 }
+transition: duration 0.65, ease [0.4, 0, 0.2, 1]
+
+Navigation: mouse wheel (threshold 30px delta), keyboard (ArrowRight/ArrowDown/Space = next, ArrowLeft/ArrowUp = prev), touch swipe (threshold 60px)
+
+Animation lock: 800ms cooldown between navigations using useRef
+SLIDE 1 -- TitleSlide (src/slides/TitleSlide.tsx):
+Background: Full-screen &lt;video&gt; (autoPlay, loop, muted, playsInline, object-cover) with NO overlay. Video URL: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260411_104229_49794008-3d16-4cb6-9a8c-73d7751b0e79.mp4
+Layout: relative z-10, full height, flex column, justify-between, px-10 lg:px-20 py-12 pb-20
+Top bar (motion.div, fade from y:-10, delay 0.1):Logo: w-8 h-8 rounded-full bg-white with &quot;S&quot; in black font-heading italic text-sm
+&quot;Studio&quot; in font-heading italic text-white/80 text-lg
+Divider: w-px h-5 bg-white/20 mx-2
+&quot;Pitch Deck 2026&quot; in text-white/30 font-body text-[10px] tracking-[0.2em] uppercase
+
+Center content (flex-1, flex column, justify-center, max-w-3xl):Pill badge (motion.div, scale from 0.95, delay 0.2): liquid-glass rounded-full, contains &quot;New&quot; badge (bg-white text-black rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-wider) and &quot;AI-powered web design&quot; (text-white/70 text-xs font-light)
+H1: text-5xl md:text-7xl lg:text-8xl xl:text-[6.5rem] font-heading italic text-white leading-[0.85] tracking-[-3px] mb-8 using BlurText component with text &quot;The Website Your Brand Deserves&quot; delay={80}
+Subtitle (motion.p, slide from x:-20, delay 0.9): &quot;Stunning design. Blazing performance. Built by AI, refined by experts.&quot; -- text-base md:text-lg text-white/50 font-body font-light leading-relaxed max-w-xl mb-10
+CTA button (motion.div, slide from x:-20, delay 1.1): liquid-glass-strong rounded-full px-6 py-3, &quot;Get Started&quot; with ArrowUpRight icon (w-4 h-4)
+
+Bottom trusted-by bar (motion.div, fade delay 1.4): &quot;Trusted by&quot; label + [&#39;Stripe&#39;, &#39;Vercel&#39;, &#39;Linear&#39;, &#39;Notion&#39;, &#39;Figma&#39;] in text-lg md:text-xl font-heading italic text-white/20
+SLIDE 2 -- ProblemSlide (src/slides/ProblemSlide.tsx):
+
+Background: HlsVideo component with src https://stream.mux.com/9JXDljEVWYwWu01PUkAemafDugK89o01BR6zqJ3aS9u00A.m3u8 (absolute inset-0, object-cover)
+Overlay: &lt;div className=&quot;absolute inset-0 bg-black/60 z-[1]&quot; /&gt; -- 60% black overlay
+Layout: relative z-10, full height, flex, px-10 lg:px-20 py-12 pb-20. Inner div: flex-col lg:flex-row, items-start, gap-12 lg:gap-20, w-full, my-auto
+Left column (flex-1):Section label (motion.span, slide from x:-15, delay 0.1): &quot;The Process&quot; -- text-white/30 font-body text-[10px] tracking-[0.3em] uppercase, mb-6
+Headline (motion.h2, slide from x:-20, delay 0.2): &quot;Our AI simplifies data analysis, eliminates decision bottlenecks, and seamlessly integrates&quot; -- text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading italic text-white tracking-tight leading-[0.9] mb-8
+Body (motion.p, slide from x:-15, delay 0.4): &quot;Our AI algorithms strategically address industry challenges, enhancing efficiency and facilitating optimal decision-making, providing a definitive solution for businesses in the AI era.&quot; -- text-white/40 font-body font-light text-sm md:text-base leading-relaxed max-w-xl
+
+Right column (w-full lg:w-[420px], flex-col gap-4, shrink-0): 3 cards, each staggered (delay 0.3 + i*0.12, slide from x:30):Card container: liquid-glass rounded-2xl p-6 lg:p-7
+
+Icon + title row: flex items-center gap-3 mb-3Icon container: w-10 h-10 rounded-xl bg-gradient-to-br from-white/15 to-white/5
+Icon: &lt;span className=&quot;material-symbols-rounded text-white/80 text-xl&quot;&gt;{iconName}&lt;/span&gt;
+Title: text-base font-body font-semibold text-white
+Description: text-sm font-body font-light text-white/40 leading-relaxed pl-[52px]
+
+Card data:icon: &quot;query_stats&quot;, title: &quot;Streamlined Analytics&quot;, desc: &quot;Our AI simplifies intricate data analysis, providing businesses with quick and accurate insights.&quot;
+icon: &quot;psychology&quot;, title: &quot;Decision Optimization&quot;, desc: &quot;Eliminate decision-making bottlenecks for timely and informed choices, enhancing overall operational efficiency.&quot;
+icon: &quot;integration_instructions&quot;, title: &quot;Effortless Integration&quot;, desc: &quot;Our algorithms seamlessly integrate AI with plug-and-play ease, empowering businesses without disruption.&quot;
+
+SLIDE 3 -- CapabilitiesSlide (src/slides/CapabilitiesSlide.tsx):
+
+Background: HlsVideo component with src https://stream.mux.com/s8pMcOvMQXc4GD6AX4e1o01xFogFxipmuKltNfSYza0200.m3u8 (absolute inset-0, object-cover, style={{ opacity: 0.5 }})
+Base: bg-black behind the video
+Layout: relative z-10, full height, flex column, px-10 lg:px-20 py-12 pb-20
+Section label (motion.span, slide from x:-15, delay 0.1): &quot;Capabilities&quot; -- text-white/30 font-body text-[10px] tracking-[0.3em] uppercase, mb-4
+
+Headline (motion.h2, slide from x:-20, delay 0.2): &quot;Pro features.\nZero complexity.&quot; (line break with &lt;br /&gt;) -- text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-heading italic text-white tracking-tight leading-[0.85] mb-8 lg:mb-auto
+Cards grid: grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8. Two cards, staggered (delay 0.35 + i*0.15, slide from y:30):Card container: liquid-glass rounded-2xl overflow-hidden flex flex-col
+
+Video area: h-44 lg:h-56, overflow-hidden, relative. Contains either:MP4 video (&lt;video&gt; with autoPlay, loop, muted, playsInline, object-cover)
+HLS video (HlsVideo component, object-cover)
+
+Text area: p-6 lg:p-8Title: text-lg md:text-xl font-heading italic text-white mb-2 leading-tight
+Body: text-sm font-body font-light text-white/40 leading-relaxed
+
+Card data:title: &quot;Designed to convert. Built to perform.&quot;, body: &quot;Every pixel is intentional. Our AI studies what works across thousands of top sites -- then builds yours to outperform them all.&quot;, videoSrc: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260302_085844_21a8f4b3-dea5-4ede-be16-d53f6973bb14.mp4 (MP4)
+title: &quot;It gets smarter. Automatically.&quot;, body: &quot;Your site evolves on its own. AI monitors every click, scroll, and conversion -- then optimizes in real time.&quot;, videoSrc: https://stream.mux.com/T6oQJQ02cQ6N01TR6iHwZkKFkbepS34dkkIc9iukgy400g.m3u8 (HLS)
+
+SLIDE 4 -- WhyUsSlide (src/slides/WhyUsSlide.tsx):
+Background: Full-screen &lt;video&gt; (autoPlay, loop, muted, playsInline, object-cover) with NO opacity reduction. Video URL: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260411_104032_69319010-2458-492b-b04d-b40a5dfa4482.mp4
+Gradient overlay: &lt;div className=&quot;absolute bottom-0 left-0 right-0 h-[50%] z-[1] pointer-events-none&quot; style={{ background: &#39;linear-gradient(to top, black, transparent)&#39; }} /&gt; -- black-to-transparent gradient from bottom to middle
+Layout: relative z-10, full height, flex column, px-10 lg:px-20 py-12 pb-20
+
+Top section (flex-col lg:flex-row lg:items-end lg:justify-between, mb-auto):Left: section label &quot;Why Us&quot; (text-white/30, text-[10px], tracking-[0.3em], uppercase, mb-4) + headline &quot;The difference\nis everything.&quot; (text-3xl md:text-4xl lg:text-5xl font-heading italic text-white tracking-tight leading-[0.9])
+Right: subtitle (motion.p, slide from x:20, delay 0.3): &quot;We do not just build websites. We engineer competitive advantages that compound over time.&quot; -- text-white/35 font-body font-light text-sm max-w-sm
+
+Bottom cards (flex-1 flex items-end): grid-cols-2 lg:grid-cols-4, gap-4 lg:gap-6, w-full. 4 cards staggered (delay 0.3 + i*0.1, slide from y:30):Card: liquid-glass rounded-2xl p-6 lg:p-8 flex flex-col
+Icon: liquid-glass-strong rounded-full w-10 h-10 containing Lucide icon (w-4 h-4 text-white), mb-6
+Title: text-sm md:text-base font-body font-semibold text-white mb-2
+Desc: text-xs font-body font-light text-white/40 leading-relaxed
+
+Card data (icons from lucide-react):Zap, &quot;Days, Not Months&quot;, &quot;Concept to launch at a pace that redefines fast. Because waiting is not a strategy.&quot;
+Palette, &quot;Obsessively Crafted&quot;, &quot;Every detail considered. Every element refined. Design so precise, it feels inevitable.&quot;
+BarChart3, &quot;Built to Convert&quot;, &quot;Layouts informed by data. Decisions backed by performance. Results you can measure.&quot;
+Shield, &quot;Secure by Default&quot;, &quot;Enterprise-grade protection comes standard. SSL, DDoS mitigation, compliance. All included.&quot;
+
+SLIDE 5 -- StatsSlide (src/slides/StatsSlide.tsx):
+Background: HlsVideo component with src https://stream.mux.com/NcU3HlHeF7CUL86azTTzpy3Tlb00d6iF3BmCdFslMJYM.m3u8 (absolute inset-0, object-cover, style={{ filter: &#39;saturate(0)&#39; }} -- desaturated/grayscale). NO overlay.
+Layout: relative z-10, full height, flex column, px-10 lg:px-20 py-12 pb-20
+Top section (mb-auto):Section label &quot;Traction&quot; (text-white/30, text-[10px], tracking-[0.3em], uppercase, mb-6)
+Headline: &quot;Numbers that speak for themselves&quot; -- text-4xl md:text-5xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.9] max-w-4xl
+
+Stats grid: flex-col gap-6, containing two rows of grid-cols-1 lg:grid-cols-2 gap-4First row: stats[0] and stats[1], staggered delay 0.35 + i*0.1
+Second row: stats[2] and stats[3], staggered delay 0.55 + i*0.1
+
+Each stat: flex-col gap-8Top divider: &lt;div className=&quot;h-px bg-white/20&quot; /&gt;
+
+Content: flex items-start gap-10 lg:gap-14Number: text-7xl md:text-8xl lg:text-[9.5rem] font-heading italic text-white leading-none shrink-0 (WHITE color, not blue)
+Description: pt-3 lg:pt-4 pr-8 lg:pr-20 flex-1, text-white text-base md:text-lg lg:text-2xl font-body font-normal leading-relaxed
+
+Stat data:&quot;200+&quot; -- &quot;Sites launched and generating measurable results for brands across industries&quot;
+&quot;98%&quot; -- &quot;Client satisfaction rate across all projects delivered in the last two years&quot;
+&quot;3.2x&quot; -- &quot;Average conversion uplift compared to previous client sites and industry benchmarks&quot;
+&quot;5 days&quot; -- &quot;Average delivery from concept to production-ready launch across all project types&quot;
+
+SLIDE 6 -- TestimonialsSlide (src/slides/TestimonialsSlide.tsx):
+
+Background: Full-screen &lt;video&gt; (autoPlay, loop, muted, playsInline, object-cover) with NO overlay. Video URL: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260406_094145_4a271a6c-3869-4f1c-8aa7-aeb0cb227994.mp4
+Layout: relative z-10, full height, flex column, px-10 lg:px-20 py-12 pb-20
+Section label: &quot;Social Proof&quot; (text-white/30, text-[10px], tracking-[0.3em], uppercase, mb-4)
+Headline: &quot;Don&#39;t take our\nword for it.&quot; -- text-3xl md:text-4xl lg:text-5xl font-heading italic text-white tracking-tight leading-[0.9] mb-auto
+Testimonial cards grid: grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-6. 3 cards staggered (delay 0.3 + i*0.12, slide from y:25):Card: liquid-glass rounded-2xl p-8 lg:p-10 flex flex-col justify-between
+Quote section (mb-8): opening curly quote in text-3xl font-heading italic text-white/15 block mb-4, then quote text in text-white/70 font-body font-light text-sm lg:text-base italic leading-relaxed
+
+Attribution (flex items-center gap-3, pt-4 border-t border-white/10):Avatar: w-8 h-8 rounded-full bg-white/10, initials in text-white/60 font-body text-xs font-medium
+Name: text-white font-body font-medium text-sm
+Role: text-white/40 font-body font-light text-xs
+
+Testimonial data:&quot;A complete rebuild in five days. The result outperformed everything we had spent months building before.&quot; -- Sarah Chen, CEO, Luminary
+&quot;Conversions up 4x. That is not a typo. The design just works differently when it is built on real data.&quot; -- Marcus Webb, Head of Growth, Arcline
+&quot;They did not just design our site. They defined our brand. World-class does not begin to cover it.&quot; -- Elena Voss, Brand Director, Helix
+
+SLIDE 7 -- CtaSlide (src/slides/CtaSlide.tsx):
+Background: Full-screen &lt;video&gt; (autoPlay, loop, muted, playsInline, object-cover) with NO overlay. Video URL: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260324_024928_1efd0b0d-6c02-45a8-8847-1030900c4f63.mp4
+Layout: relative z-10, full height, flex column, px-10 lg:px-20 py-12 pb-20
+Section label: &quot;Next Steps&quot; (text-white/30, text-[10px], tracking-[0.3em], uppercase, mb-4)
+Main content (flex-1, flex-col lg:flex-row, items-start lg:items-center, gap-12 lg:gap-20):
+Left column (flex-1, max-w-2xl):Headline (motion.h2, slide from x:-25, delay 0.2): &quot;Your next website\nstarts here.&quot; -- text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading italic text-white leading-[0.85] tracking-tight mb-6
+Body (motion.p, slide from x:-20, delay 0.5): &quot;Book a free strategy call. See what AI-powered design can do. No commitment, no pressure. Just possibilities.&quot; -- text-white/40 font-body font-light text-sm md:text-base leading-relaxed max-w-md mb-10
+
+Buttons (motion.div, slide from x:-15, delay 0.7): flex items-center gap-4Primary: bg-white text-black rounded-full px-6 py-3 text-sm font-body font-semibold with &quot;Book a Call&quot; + ArrowUpRight icon
+Secondary: liquid-glass-strong rounded-full px-6 py-3 text-sm font-body font-medium text-white with &quot;View Pricing&quot;
+
+Right column (motion.div, slide from x:30, delay 0.6): liquid-glass rounded-2xl p-8 lg:p-10 w-full max-w-xsHeader: Mail icon in liquid-glass-strong rounded-full w-10 h-10 + &quot;Get in touch&quot; label
+Contact info: hello@studio.ai, +1 (555) 000-0000
+Locations (pt-4 border-t border-white/10): San Francisco, CA and London, UK in text-white/30 text-xs
+
+Footer (motion.div, fade delay 1.0): flex justify-between, border-t border-white/10 pt-4Left: &quot;(c) 2026 Studio. All rights reserved.&quot; in text-white/30 text-xs
+Right: Privacy, Terms, Contact links in text-white/30 text-xs hover:text-white/60
+
+VIDEO URL REFERENCE:
+Slide 1 BG: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260411_104229_49794008-3d16-4cb6-9a8c-73d7751b0e79.mp4
+Slide 2 BG: https://stream.mux.com/9JXDljEVWYwWu01PUkAemafDugK89o01BR6zqJ3aS9u00A.m3u8 (HLS)
+Slide 3 BG: https://stream.mux.com/s8pMcOvMQXc4GD6AX4e1o01xFogFxipmuKltNfSYza0200.m3u8 (HLS, 50% opacity)
+Slide 3 Card 1 video: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260302_085844_21a8f4b3-dea5-4ede-be16-d53f6973bb14.mp4
+Slide 3 Card 2 video: https://stream.mux.com/T6oQJQ02cQ6N01TR6iHwZkKFkbepS34dkkIc9iukgy400g.m3u8 (HLS)
+Slide 4 BG: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260411_104032_69319010-2458-492b-b04d-b40a5dfa4482.mp4
+Slide 5 BG: https://stream.mux.com/NcU3HlHeF7CUL86azTTzpy3Tlb00d6iF3BmCdFslMJYM.m3u8 (HLS, desaturated)
+Slide 6 BG: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260406_094145_4a271a6c-3869-4f1c-8aa7-aeb0cb227994.mp4
+Slide 7 BG: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260324_024928_1efd0b0d-6c02-45a8-8847-1030900c4f63.mp4
+FILE STRUCTURE:
+index.html
+package.json
+tailwind.config.js
+postcss.config.js
+vite.config.ts
+tsconfig.json / http://tsconfig.app.json / tsconfig.node.json
+src/
+main.tsx
+App.tsx
+index.css
+vite-env.d.ts
+components/
+BlurText.tsx
+HlsVideo.tsx
+SlideControls.tsx
+slides/
+TitleSlide.tsx
+ProblemSlide.tsx
+CapabilitiesSlide.tsx
+WhyUsSlide.tsx
+StatsSlide.tsx
+TestimonialsSlide.tsx
+CtaSlide.tsx</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="deck-investor.html">Investor Deck<small>Presentations · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

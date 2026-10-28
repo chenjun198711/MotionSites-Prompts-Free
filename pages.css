@@ -1,0 +1,124 @@
+/* Shared styling for static content pages (detail pages, policy pages, index of prompts) */
+:root{
+  color-scheme:dark;
+  --bg:#07080c;--p:#10141d;--p2:#161b26;--line:#232a37;--line2:#2f3849;
+  --text:#f1f3f7;--muted:#8d99af;--muted2:#5f6a82;
+  --accent:#9aacff;--accent2:#6c83ff;--green:#5cdcb1;
+  --tint2:rgba(255,255,255,.025);--tint3:rgba(255,255,255,.03);--tint4:rgba(255,255,255,.04);
+  --surface:#0a0c12;--surface2:#0f1320;
+  --code-bg:linear-gradient(180deg,#0f1320,#0b0e16);--code-fg:#dbe2f0;
+  --nav-link:#e6ecfb;--btn-bg:rgba(16,20,29,.92);--body-text:#cfd7e6;--hero-bar:rgba(7,8,12,.86);
+}
+html[data-theme="light"]{
+  color-scheme:light;
+  --bg:#f5f5f2;--p:#ffffff;--p2:#eef1f6;--line:#e3e7ef;--line2:#ccd4e2;
+  --text:#151922;--muted:#5b6577;--muted2:#8b95a7;
+  --accent:#4a5cd8;--accent2:#3c50cc;--green:#1f9c74;
+  --tint2:rgba(20,28,45,.022);--tint3:rgba(20,28,45,.032);--tint4:rgba(20,28,45,.045);
+  --surface:#ffffff;--surface2:#f3f5fa;
+  --code-bg:linear-gradient(180deg,#ffffff,#f7f8fb);--code-fg:#232a3a;
+  --nav-link:#1b2130;--btn-bg:rgba(255,255,255,.94);--body-text:#2a3142;--hero-bar:rgba(245,245,242,.88);
+}
+html[data-theme="light"] body::before{background:
+  radial-gradient(circle at 16% -8%,rgba(126,146,255,.10),transparent 50%),
+  radial-gradient(circle at 92% 6%,rgba(255,123,180,.05),transparent 45%)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font:15px/1.75 "Inter","Segoe UI","Microsoft YaHei",sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:
+  radial-gradient(circle at 16% -8%,rgba(126,146,255,.16),transparent 50%),
+  radial-gradient(circle at 92% 6%,rgba(255,123,180,.07),transparent 45%)}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:0 22px 72px}
+.site-head{
+  position:sticky;top:0;z-index:5;background:var(--hero-bar);
+  backdrop-filter:blur(16px);border-bottom:1px solid var(--line)
+}
+.site-head .inner{
+  max-width:980px;margin:0 auto;padding:14px 22px;
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap
+}
+.brand{display:flex;align-items:center;gap:10px;color:var(--text);font-weight:700;letter-spacing:-.02em}
+.brand:hover{text-decoration:none;color:var(--text)}
+.brand-dot{
+  width:26px;height:26px;border-radius:8px;
+  background:conic-gradient(from 210deg,#7b9cff,#b48cff,#5cdcb1,#ffba72,#ff8ab1,#7b9cff)
+}
+.site-nav{display:flex;gap:16px;flex-wrap:wrap;margin-left:auto;font-size:13.5px}
+.site-nav a{color:var(--muted)}
+.site-nav a:hover{color:var(--accent);text-decoration:none}
+.theme-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 13px;border:1px solid var(--line);border-radius:99px;
+  background:var(--tint3);color:var(--nav-link);
+  font:700 12.5px/1 "Inter",sans-serif;cursor:pointer;
+  transition:border-color .18s,color .18s
+}
+.theme-btn:hover{border-color:var(--accent);color:var(--accent)}
+.crumbs{font-size:12.5px;color:var(--muted2);margin:26px 0 10px}
+.crumbs a{color:var(--muted)}
+h1{font-size:30px;line-height:1.3;letter-spacing:-.02em;margin:6px 0 14px}
+h2{font-size:19px;letter-spacing:-.01em;margin:34px 0 12px}
+h3{font-size:15px;margin:22px 0 8px}
+p{color:var(--body-text)}
+.muted{color:var(--muted)}
+.chip-row{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px}
+.chip{
+  font-size:11.5px;padding:4px 10px;border:1px solid var(--line);
+  border-radius:99px;background:var(--tint3);color:var(--muted)
+}
+.facts{margin:0 0 22px;font-size:13px;color:var(--muted)}
+.facts span{margin-right:14px;white-space:nowrap}
+.hero-media{
+  border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  background:var(--surface);margin:18px 0 26px
+}
+.hero-media img,.hero-media video{display:block;width:100%;height:auto;max-height:70vh;object-fit:cover}
+.media-note{font-size:12px;color:var(--muted2);padding:10px 14px;border-top:1px solid var(--line)}
+.prompt-box{position:relative;margin:0 0 20px}
+.prompt-box pre{
+  margin:0;padding:18px 18px 20px;border:1px solid var(--line);border-radius:14px;
+  background:var(--code-bg);
+  white-space:pre-wrap;word-break:break-word;
+  font:13px/1.72 "JetBrains Mono",ui-monospace,Consolas,monospace;color:var(--code-fg);
+  max-height:none
+}
+.copy-btn{
+  position:absolute;top:10px;right:10px;padding:7px 12px;border-radius:9px;
+  border:1px solid var(--line2);background:var(--btn-bg);color:var(--text);
+  font:600 12px/1 "Inter",sans-serif;cursor:pointer
+}
+.copy-btn:hover{border-color:var(--accent)}
+.note-box{
+  border-left:3px solid var(--accent2);padding:12px 16px;margin:22px 0;
+  background:rgba(154,172,255,.06);border-radius:0 10px 10px 0;font-size:13.5px;color:var(--muted)
+}
+.related{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:12px 0 0}
+.related a{
+  display:block;padding:12px 14px;border:1px solid var(--line);border-radius:11px;
+  background:var(--tint2);color:var(--text);font-size:13.5px
+}
+.related a:hover{border-color:var(--accent);text-decoration:none}
+.related small{display:block;color:var(--muted2);font-size:11.5px;margin-top:3px}
+.cat-list h3{margin:26px 0 6px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.cat-list ul{list-style:none;padding:0;margin:0 0 8px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:2px 18px}
+.cat-list li{padding:4px 0;font-size:13.5px}
+.cat-list a{color:#c9d3e6}
+.cat-list a:hover{color:var(--accent)}
+.jump{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 8px}
+.jump a{font-size:12px;padding:4px 9px;border:1px solid var(--line);border-radius:99px;color:var(--muted)}
+.jump a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.site-foot{margin-top:48px;padding-top:22px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted2)}
+.site-foot nav{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.site-foot a{color:var(--muted)}
+.home-link{display:inline-block;margin:30px 0 0;font-size:13.5px}
+@media (max-width:600px){
+  h1{font-size:24px}
+  .site-nav{width:100%;margin-left:0;gap:12px}
+  .wrap{padding:0 16px 56px}
+}

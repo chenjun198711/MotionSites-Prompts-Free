@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Email Landing Page — Landing Page 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色玻璃质感邮件客户端&quot;Aura&quot;着陆页，配有全屏循环背景视频、渐变光泽标题和macOS风格菜单栏，展示逼真的收件箱界面与液态玻璃卡片设计。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/email-landing-page.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Email Landing Page — Landing Page 提示词">
+<meta property="og:description" content="深色玻璃质感邮件客户端&quot;Aura&quot;着陆页，配有全屏循环背景视频、渐变光泽标题和macOS风格菜单栏，展示逼真的收件箱界面与液态玻璃卡片设计。">
+<meta property="og:url" content="https://prompt-site.shop/p/email-landing-page.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/email-landing-page.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Email Landing Page","description":"深色玻璃质感邮件客户端\"Aura\"着陆页，配有全屏循环背景视频、渐变光泽标题和macOS风格菜单栏，展示逼真的收件箱界面与液态玻璃卡片设计。","url":"https://prompt-site.shop/p/email-landing-page.html","inLanguage":"zh-CN","genre":"Landing Page","dateCreated":"2026-05-08T10:18:45.966174+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-landing_page">Landing Page</a></div><h1>Email Landing Page</h1><div class="chip-row"><span class="chip">Landing Page</span><span class="chip">landing</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-05-08</span><span>正文：19,336 字符</span></div><div class="hero-media"><img src="../assets/previews/email-landing-page.webp" alt="Email Landing Page 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色玻璃质感邮件客户端&quot;Aura&quot;着陆页，配有全屏循环背景视频、渐变光泽标题和macOS风格菜单栏，展示逼真的收件箱界面与液态玻璃卡片设计。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a premium, AI-native email client landing page called &quot;Aura&quot; using **React 18 + TypeScript + Vite + Tailwind CSS + motion/react (framer motion) + lucide-react**. The aesthetic is dark (bg `#0c0c0c`), cinematic, glassy, with a looping fullscreen background video, a shiny gradient headline, a macOS-style menu bar, a realistic inbox mockup, and a custom &quot;liquid-glass&quot; card treatment.
+
+## Stack / setup
+
+- `package.json` dependencies: `react`, `react-dom`, `@supabase/supabase-js`, `motion` (v12+, import from `motion/react`), `lucide-react`.
+- Tailwind config extends colors with `brand: &#39;#3D81E3&#39;` and fontFamily sans with `[&#39;Inter&#39;,&#39;system-ui&#39;,&#39;sans-serif&#39;]`.
+- Font: Google Fonts Inter weights 400, 500, 600, 700, 800, 900. Import in `index.css` via `@import url(&#39;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap&#39;);`.
+- `html,body { font-family: &#39;Inter&#39;, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }`.
+- Background color base `#0c0c0c`, text white, selection `bg-brand/30`.
+
+## Global background video (fixed, behind everything)
+
+Inside the root wrapper (`relative min-h-screen overflow-x-hidden bg-[#0c0c0c] text-white`), render a fixed full-screen video:
+
+```
+&lt;div className=&quot;fixed inset-0 z-0 pointer-events-none&quot;&gt;
+&lt;video autoPlay loop muted playsInline
+className=&quot;w-full h-full object-cover pointer-events-none&quot;
+src=&quot;https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260508_064122_c4750c0e-7476-4b44-94a2-a85a65c63bf2.mp4&quot; /&gt;
+&lt;/div&gt;
+```
+
+Also render two hidden-on-mobile fixed vertical guide lines at the 36rem container edges:
+```
+&lt;div className=&quot;hidden md:block pointer-events-none fixed inset-y-0 left-1/2 -translate-x-[calc(50%+36rem)] w-px bg-white/10 z-[5]&quot; /&gt;
+&lt;div className=&quot;hidden md:block pointer-events-none fixed inset-y-0 left-1/2 translate-x-[calc(-50%+36rem)] w-px bg-white/10 z-[5]&quot; /&gt;
+```
+
+## Global SVG noise filters (two, both id `c3-noise`)
+
+- One at root level (subtle grain, multiply blend) for the shiny headline.
+- One inside the pricing section (fractal noise, overlay blend) for the watermark.
+
+Root filter:
+```
+&lt;filter id=&quot;c3-noise&quot;&gt;
+&lt;feTurbulence type=&quot;fractalNoise&quot; baseFrequency=&quot;0.9&quot; numOctaves=&quot;2&quot; stitchTiles=&quot;stitch&quot; /&gt;
+&lt;feColorMatrix type=&quot;matrix&quot; values=&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0&quot; /&gt;
+&lt;feComposite in2=&quot;SourceGraphic&quot; operator=&quot;in&quot; result=&quot;noise&quot; /&gt;
+&lt;feBlend in=&quot;SourceGraphic&quot; in2=&quot;noise&quot; mode=&quot;multiply&quot; /&gt;
+&lt;/filter&gt;
+```
+
+Pricing filter:
+```
+&lt;filter id=&quot;c3-noise&quot;&gt;
+&lt;feTurbulence type=&quot;fractalNoise&quot; baseFrequency=&quot;0.5&quot; numOctaves=&quot;2&quot; stitchTiles=&quot;stitch&quot; /&gt;
+&lt;feComponentTransfer&gt;&lt;feFuncA type=&quot;linear&quot; slope=&quot;0.075&quot; /&gt;&lt;/feComponentTransfer&gt;
+&lt;feComposite in2=&quot;SourceGraphic&quot; operator=&quot;in&quot; result=&quot;noise&quot; /&gt;
+&lt;feBlend in=&quot;SourceGraphic&quot; in2=&quot;noise&quot; mode=&quot;overlay&quot; /&gt;
+&lt;/filter&gt;
+```
+
+## Shared primitives
+
+**AppleLogo** — inline SVG Apple mark, `viewBox=&quot;0 0 384 512&quot;`, `fill=&quot;currentColor&quot;`, default `w-4 h-4`. Path:
+`M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z`.
+
+**LogoMark** — abstract 4-quadrant curve mark, `viewBox=&quot;0 0 256 256&quot;`, default `w-8 h-8`, white fill. Path:
+`M 0 128 C 70.692 128 128 185.308 128 256 L 64 256 C 64 220.654 35.346 192 0 192 Z M 256 192 C 220.654 192 192 220.654 192 256 L 128 256 C 128 185.308 185.308 128 256 128 Z M 128 0 C 128 70.692 70.692 128 0 128 L 0 64 C 35.346 64 64 35.346 64 0 Z M 192 0 C 192 35.346 220.654 64 256 64 L 256 128 C 185.308 128 128 70.692 128 0 Z`.
+
+**AppleButton** — rounded-full white pill, Apple logo + &quot;Download Aura&quot; label + ChevronRight. Chevron translates `+1px` on group hover. Classes: `group inline-flex items-center justify-center gap-2 rounded-full bg-white text-black font-medium text-sm px-5 py-3 transition-all hover:bg-white/90 active:scale-[0.98]`. Accepts `label` and `full` props.
+
+**SectionEyebrow** — `&lt;span className=&quot;w-1.5 h-1.5 rounded-full bg-white&quot; /&gt;` + label, optional tag pill with `px-2 py-0.5 rounded-full border border-white/10 text-white/50`.
+
+**gradientStyle** used on the headline word &quot;Revitalized&quot;:
+```
+backgroundImage: &#39;linear-gradient(to right, #091020 0%, #0B2551 12.5%, #A4F4FD 32.5%, #00d2ff 50%, #0B2551 67.5%, #091020 87.5%, #091020 100%)&#39;
+backgroundSize: &#39;200% auto&#39;
+WebkitBackgroundClip: &#39;text&#39; (+ backgroundClip text)
+color: &#39;transparent&#39;; WebkitTextFillColor: &#39;transparent&#39;
+filter: &#39;url(#c3-noise)&#39;
+```
+
+Shiny animation (`.animate-shiny`): 6s linear infinite, keyframes shiny `{0%: background-position: -200% center; 100%: 200% center;}`.
+
+## Liquid-glass utility (used across cards)
+
+```
+.liquid-glass {
+background: rgba(255,255,255,0.01);
+background-blend-mode: luminosity;
+backdrop-filter: blur(4px);
+border: none;
+box-shadow: inset 0 1px 1px rgba(255,255,255,0.1);
+position: relative; overflow: hidden;
+}
+.liquid-glass::before {
+content: &#39;&#39;; position: absolute; inset: 0; border-radius: inherit;
+padding: 1.4px;
+background: linear-gradient(180deg,
+rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor; mask-composite: exclude;
+pointer-events: none;
+}
+```
+
+## Section 1 — Navbar
+
+Max-width `max-w-6xl mx-auto px-6`. Motion nav fades/slides down (opacity 0 -&gt; 1, y -10 -&gt; 0, 0.6s easeOut). Left: just the `LogoMark` (NO &quot;Aura&quot; word). Center (`hidden md:flex gap-8`): links `[&#39;Solutions&#39;,&#39;Pricing&#39;,&#39;Blog&#39;,&#39;Documentation&#39;,&#39;Careers&#39;]` each `text-white/70 text-sm font-medium hover:text-white` with staggered y animation (delay 0.1 + i*0.05). Right desktop: `&lt;AppleButton /&gt;` default label &quot;Download Aura&quot;. Mobile right: `w-10 h-10 rounded-full border border-white/10 bg-white/5` Menu icon button.
+
+## Section 2 — Hero
+
+Centered section, `pt-16 md:pt-28 pb-20 text-center flex flex-col items-center`.
+Motion h1 (delay 0.3, 0.8s cubic-bezier(.22,1,.36,1)), classes `text-4xl md:text-7xl font-semibold tracking-tight leading-[0.9]`:
+- Line 1: &quot;Your email.&quot; (white)
+- Line 2: &quot;Revitalized&quot; — apply `animate-shiny` and the `gradientStyle` inline.
+
+Then motion paragraph (delay 0.5): `mt-8 text-white/60 max-w-md text-base leading-[1.5]`:
+&gt; &quot;Aura is the premier inbox platform for the current era. It leverages powerful AI to organize, prioritize, and refine your messages into total clarity.&quot;
+
+Then motion div (delay 0.7) with `&lt;AppleButton /&gt;` and `text-xs text-white/40` &quot;Download for Intel / Apple Silicon&quot;.
+
+## Section 3 — macOS menu bar strip
+
+Full-width bar `h-10 bg-black/40 backdrop-blur-md border-t border-b border-white/10`. Inside `max-w-6xl mx-auto px-6 h-full flex items-center justify-between text-xs`. Left: `AppleLogo w-3.5 h-3.5`, bold white &quot;Aura&quot;, then menu items `[&#39;File&#39;,&#39;Edit&#39;,&#39;View&#39;,&#39;Go&#39;,&#39;Window&#39;,&#39;Help&#39;]` (progressive hiding: index&gt;2 `hidden sm:inline`, index&gt;3 `hidden md:inline`). Right: `Search w-3.5 h-3.5` + &quot;Wed May 6 1:09 PM&quot;. Enters with delay 0.9.
+
+## Section 4 — Inbox mockup
+
+`max-w-6xl mx-auto px-6 py-16 md:py-24`. Outer container `relative rounded-2xl overflow-hidden border border-white/10 bg-[#0e1014]/90 backdrop-blur-2xl`. Motion enters from y:40 at delay 1.1.
+
+Title bar: three traffic lights `#ff5f57`, `#febc2e`, `#28c840` (each `w-3 h-3 rounded-full`); center label &quot;Aura — Inbox&quot; `text-xs text-white/50`.
+
+Body `grid grid-cols-12 h-[520px]`:
+
+**Sidebar (col-span-3, border-r, bg-black/30, p-4):**
+- White &quot;Compose with Aura&quot; button with `Sparkles` icon (`rounded-lg bg-white text-black text-xs font-semibold px-3 py-2`).
+- Nav items (icon + label + optional count): Inbox (12, active), Starred (3), Sent, Drafts (2), Archive, Trash. Active uses `bg-white/10 text-white`, others `text-white/60 hover:bg-white/5`.
+- Labels section: uppercase tracking &quot;Labels&quot; small title, then 4 color dots: Work `#00d2ff`, Personal `#A4F4FD`, Travel `#f59e0b`, Finance `#10b981`.
+
+**Message list (col-span-4, border-r):**
+- Search header: `Search` icon + placeholder &quot;Search mail&quot;.
+- 6 messages with name, subject, preview, time, unread/active flags:
+- Linear — &quot;Weekly product digest&quot; — &quot;Your team shipped 23 issues this week...&quot; — 9:41 AM — unread + active
+- Sophia Chen — &quot;Re: Q3 roadmap review&quot; — &quot;Thanks for sending the deck over. I had a few thoughts...&quot; — 8:12 AM — unread
+- Figma — &quot;Marcus commented on your file&quot; — &quot;Love the new direction on the landing hero.&quot; — Yesterday
+- Stripe — &quot;Payout of $12,480.00 sent&quot; — &quot;Your payout is on its way to your bank...&quot; — Yesterday
+- Vercel — &quot;Deployment ready for aura-web&quot; — &quot;Preview is live at aura-web-g3f.vercel.app&quot; — Mon
+- GitHub — &quot;[aura/core] PR #482 approved&quot; — &quot;david-lim approved your pull request.&quot; — Mon
+
+**Reader (col-span-5):**
+- Toolbar with Reply, Forward, Archive, Trash2 icon buttons (each `w-7 h-7 rounded-md hover:bg-white/5`) and a MoreHorizontal on the right.
+- Header: &quot;Weekly product digest&quot;; sender avatar gradient bubble `w-7 h-7 rounded-full bg-gradient-to-br from-[#00d2ff] to-[#0B2551]` with &quot;L&quot;; &quot;Linear&quot; + &quot;to me · 9:41 AM&quot;; &quot;Work&quot; pill.
+- Body:
+- Card with `Sparkles` icon (color `#A4F4FD`) labeled &quot;Summary by Aura&quot; and text &quot;Your team closed 23 issues, merged 14 PRs, and shipped 2 features. Top contributor: Marcus. No action needed.&quot;
+- Paragraphs: &quot;Hi team,&quot;, &quot;Here is your weekly digest of everything happening across your projects. This was a strong week with significant progress on the Q3 roadmap.&quot;, &quot;Twenty-three issues were closed, fourteen pull requests were merged, and two customer-facing features went out. The velocity trend continues to climb.&quot;, &quot;Let me know if you would like a deeper breakdown by project or contributor.&quot;, &quot;— The Linear team&quot; (`text-white/50`).
+- Attachment pill with `Paperclip` icon: &quot;digest-may-6.pdf&quot;.
+
+## Section 5 — FeatureTriage
+
+`max-w-6xl mx-auto px-6 py-20 md:py-28`, two-column grid `grid md:grid-cols-2 gap-10 md:gap-16 items-start`.
+
+Left column motion (y 20 -&gt; 0, 0.7s): `SectionEyebrow label=&quot;Triage&quot; tag=&quot;AI-native&quot;`, h2 `mt-5 text-3xl md:text-5xl font-semibold tracking-tight leading-[1.02]`: &quot;Clear your inbox&quot; &lt;br/&gt; &quot;in a single pass.&quot;. Paragraph `mt-6 text-white/60 text-base leading-[1.6] max-w-md`: &quot;Aura reads every message, understands intent, and routes the noise away from the signal. Focus on what moves your day forward — the rest handles itself.&quot; Chips row (`text-xs text-white/70 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.03]`): &quot;Auto-categorize&quot;, &quot;Snooze for later&quot;, &quot;Silent newsletters&quot;, &quot;One-tap unsubscribe&quot;.
+
+Right column: `liquid-glass rounded-2xl p-5` card. Eyebrow text: &quot;Today · 42 messages triaged&quot;. Four sub-cards (each `liquid-glass rounded-lg p-3`):
+- Priority (4) `#ffffff` — items: &quot;Sophia Chen — Q3 review&quot;, &quot;David Lim — contract signoff&quot;
+- Follow-up (7) `#e5e5e5` — items: &quot;Marcus — design review&quot;, &quot;Figma — comment thread&quot;
+- Updates (18) `#a3a3a3` — items: &quot;Vercel — deploy ready&quot;, &quot;GitHub — PR #482 merged&quot;
+- Archived (13) `#525252` — items: &quot;Stripe payout · Newsletter · Receipts&quot;
+
+## Section 6 — LogoCloud
+
+`max-w-6xl mx-auto px-6 py-16 md:py-20`. Centered kicker `text-xs uppercase tracking-widest text-white/40`: &quot;Trusted by the world&#39;s most thoughtful teams&quot;. Grid `mt-10 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-6`, each logo name as `text-sm font-semibold tracking-tight text-white/50 hover:text-white`. Names: Linear, Vercel, Figma, Stripe, Ramp, Notion, Loom, Arc. Each fades in with stagger 0.05.
+
+## Section 7 — Testimonials
+
+`max-w-6xl mx-auto px-6 py-20 md:py-28 border-t border-white/10`. 3-col grid of `liquid-glass rounded-2xl p-6` figures. Each: blockquote `text-sm text-white/80 leading-[1.6]` wrapped in quotes, `figcaption mt-6 pt-5 border-t border-white/10` with name `text-sm font-semibold`, role `text-xs text-white/50`, company uppercased `text-xs text-white font-semibold tracking-wide`.
+- &quot;Aura gave our leadership team four hours of their week back. It reads like email from the future.&quot; — Parker Wilf, Group Product Manager, MERCURY
+- &quot;The command palette alone has changed how I process messages. I can&#39;t imagine going back to a traditional client.&quot; — Andrew von Rosenbach, Senior Engineering Program Manager, COHERE
+- &quot;Triage that actually understands context. Our team stopped dreading Monday morning inboxes.&quot; — Mathies Christensen, Engineering Manager, LUNAR
+
+## Section 8 — Pricing
+
+Uses custom CSS classes (not Tailwind) for cinematic typography.
+
+Outer `&lt;section className=&quot;c3-pricing-section&quot;&gt;` with its own `&lt;svg&gt;` defining the `c3-noise` pricing filter described earlier.
+
+Watermark (giant hero headline as backdrop):
+```
+&lt;div className=&quot;c3-watermark-container&quot;&gt;
+&lt;div className=&quot;c3-watermark-main&quot;&gt;
+&lt;span className=&quot;c3-watermark-line-1&quot;&gt;Your email.&lt;/span&gt;
+&lt;span className=&quot;c3-watermark-line-2&quot;&gt;Revitalized&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+```
+
+State: `yearly` boolean toggle. Three plans:
+- **Free** — &quot;Free&quot; — &quot;For creators taking their first steps with Forma.&quot; — Up to 3 projects in the cloud / Image export up to 1080p / Basic editing tools / Free templates and icons / Access via web and mobile app.
+- **Standard** — monthly &quot;$9,99/m&quot; yearly &quot;$99,99/y&quot; — &quot;For freelancers and small teams who need more freedom and flexibility.&quot; — Up to 50 projects in the cloud / Export up to 4K / Advanced editing toolkit / Team collaboration (up to 5 members) / Access to premium template library.
+- **Pro** (`c3-card-pro`) — monthly &quot;$19,99/m&quot; yearly &quot;$199,99/y&quot; — &quot;For studios, agencies, and professional creators working with brands.&quot; — Unlimited projects / Export up to 8K + animations / AI-powered content generation tools / Unlimited team members / Brand customization.
+
+Each card renders: `c3-tier-small` (tier), `c3-tier-large` (price), `c3-desc`, `c3-list` of checkmark rows (white circle `c3-check` with white SVG check), `c3-btn` &quot;Choose Plan&quot;.
+
+Below: `c3-toggle-wrap` with &quot;Yearly&quot; label and a pill toggle (white knob black when off; when `.active`, background `rgba(255,255,255,0.2)`, knob white, translated 24px).
+
+Pricing CSS (key values, include exactly):
+- `.c3-pricing-section { position: relative; padding: 40px 20px 80px; display: flex; flex-direction: column; align-items: center; overflow-x: hidden; }`
+- `.c3-watermark-container { position: relative; width: 100%; max-width: 1100px; text-align: center; margin-top: 40px; z-index: 2; }`
+- `.c3-watermark-main { font-size: 9rem; font-weight: 800; line-height: 0.9; letter-spacing: -0.05em; filter: url(#c3-noise); display: flex; flex-direction: column; align-items: center; }`
+- `.c3-watermark-line-1 { color: #fff; }`
+- `.c3-watermark-line-2 { background: linear-gradient(to right, #091020 0%, #0B2551 25%, #A4F4FD 65%, #00d2ff 100%); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }`
+- `.c3-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; width: 100%; max-width: 1100px; margin-top: 60px; transform: translateX(20px); position: relative; z-index: 3; }`
+- `.c3-card { background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4)); backdrop-filter: blur(14px) brightness(0.91); border: 1px solid rgba(255,255,255,1); border-radius: 44px; padding: 50px 24px; min-height: 580px; display: flex; flex-direction: column; transition: all 0.6s cubic-bezier(.22,1,.36,1); overflow: hidden; position: relative; }`
+- `.c3-card::before { content:&#39;&#39;; position:absolute; inset:0; border-radius:inherit; background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 50%); pointer-events:none; }`
+- `.c3-card:hover { background: rgba(15,15,15,0.6); border-color: rgba(34,211,238,0.7); transform: translateY(-12px) scale(1.01); }`
+- `.c3-card-pro { background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(0,0,0,0.55)); }`
+- `.c3-tier-small { font-size: 1.1rem; font-weight: 400; color: rgba(255,255,255,0.6); }`
+- `.c3-tier-large { font-size: 2.8rem; font-weight: 500; letter-spacing: -0.02em; color: #fff; margin-top: 8px; }`
+- `.c3-desc { font-size: 0.88rem; color: rgba(255,255,255,0.45); min-height: 3.2em; margin-top: 16px; margin-bottom: 40px; line-height: 1.5; }`
+- `.c3-list li { display:flex; align-items:flex-start; gap: 14px; font-size: 0.92rem; color: rgba(255,255,255,0.8); margin-bottom: 18px; line-height: 1.4; }`
+- `.c3-check { width:28px; height:28px; border-radius:50%; background: rgba(255,255,255,0.15); display:inline-flex; align-items:center; justify-content:center; flex-shrink:0; }`
+- `.c3-btn { background:#fff; color:#000; padding: 10px 32px; border-radius: 100px; font-weight:600; font-size: 0.88rem; margin-top:auto; border:none; cursor:pointer; align-self:center; transition: all 0.3s cubic-bezier(.22,1,.36,1); }`
+- `.c3-btn:hover { background:#f5f5f5; transform:scale(1.02); box-shadow: 0 8px 24px rgba(255,255,255,0.15); }`
+- `.c3-toggle-wrap { display:flex; align-items:center; justify-content:flex-end; gap:12px; width:100%; max-width:1100px; margin-top:32px; padding-right:20px; }`
+- `.c3-toggle { width:52px; height:28px; background:#fff; border-radius:100px; position:relative; cursor:pointer; border:none; transition: background 0.3s cubic-bezier(.4,0,.2,1); padding:0; }`
+- `.c3-toggle-knob { width:20px; height:20px; background:#000; border-radius:50%; position:absolute; top:4px; left:4px; transition: all 0.3s cubic-bezier(.4,0,.2,1); }`
+- `.c3-toggle.active { background: rgba(255,255,255,0.2); }`
+- `.c3-toggle.active .c3-toggle-knob { transform: translateX(24px); background:#fff; }`
+- Media query `(max-width:1024px)`: `.c3-watermark-main { font-size: 3.5rem; filter:none; }`, `.c3-watermark-line-2 { background:none; -webkit-text-fill-color:#00d2ff; color:#00d2ff; }`, `.c3-grid` becomes horizontal scroll-snap flex (`display:flex; overflow-x:auto; scroll-snap-type:x mandatory; transform:none; width:100vw; padding:0 20px; gap:16px; scrollbar-width:none`), cards `flex: 0 0 320px; scroll-snap-align:center`, `.c3-grid::-webkit-scrollbar{display:none}`, `.c3-toggle-wrap { justify-content:center; padding-right:0; }`.
+
+## Section 9 — FinalCTA
+
+`max-w-6xl mx-auto px-6 py-20 md:py-32`. Motion `liquid-glass relative overflow-hidden rounded-3xl px-8 py-16 md:py-24 text-center`. Radial glow overlay: `radial-gradient(600px circle at 50% 0%, rgba(255,255,255,0.15), transparent 70%)` at opacity 0.3.
+- h2 `text-4xl md:text-6xl font-semibold tracking-tight leading-[1.02]`: &quot;Close the tabs.&quot; / &quot;Open your day.&quot;.
+- Paragraph `mt-6 text-white/60 max-w-md mx-auto text-sm leading-[1.6]`: &quot;Join thousands of builders, founders, and operators who treat email like a tool — not an obligation.&quot;
+- Buttons: `&lt;AppleButton label=&quot;Download Aura&quot; /&gt;` and `rounded-full border border-white/15 text-white text-sm font-medium px-5 py-3 hover:bg-white/5` &quot;Talk to sales&quot; + ChevronRight.
+
+
+Reproduce exactly — fonts, gradient stops, noise filters, copy strings, animation delays, and the CloudFront video URL `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260508_064122_c4750c0e-7476-4b44-94a2-a85a65c63bf2.mp4`.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="motionz-premium-landing-page.html">MotionZ Premium Landing Page<small>Landing Page · landing-page</small></a><a href="future-state.html">Future-State<small>Landing Page · hero</small></a><a href="3d-story.html">3D Story<small>Landing Page · hero</small></a><a href="financial-suite.html">Financial Suite<small>Landing Page · hero</small></a><a href="prompt-hero.html">PROMPT<small>Landing Page · hero</small></a><a href="health-portal.html">Health Portal<small>Landing Page · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

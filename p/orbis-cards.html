@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Orbis Cards — Cards 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深蓝太空背景上，一组液态玻璃质感的卡片，霓虹绿点缀，呈现未来科技感的信息展示界面。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/orbis-cards.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Orbis Cards — Cards 提示词">
+<meta property="og:description" content="深蓝太空背景上，一组液态玻璃质感的卡片，霓虹绿点缀，呈现未来科技感的信息展示界面。">
+<meta property="og:url" content="https://prompt-site.shop/p/orbis-cards.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/orbis-cards.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Orbis Cards","description":"深蓝太空背景上，一组液态玻璃质感的卡片，霓虹绿点缀，呈现未来科技感的信息展示界面。","url":"https://prompt-site.shop/p/orbis-cards.html","inLanguage":"zh-CN","genre":"Cards","dateCreated":"2026-06-05T12:10:28.860863+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-cards">Cards</a></div><h1>Orbis Cards</h1><div class="chip-row"><span class="chip">Cards</span><span class="chip">features</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-05</span><span>正文：5,423 字符</span></div><div class="hero-media"><img src="../assets/previews/orbis-cards.webp" alt="Orbis Cards 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深蓝太空背景上，一组液态玻璃质感的卡片，霓虹绿点缀，呈现未来科技感的信息展示界面。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">---
+### Prerequisites
+
+**Fonts** (loaded via Google Fonts in `index.html`):
+- `Anton` (mapped to `font-grotesk` in Tailwind)
+- `Condiment` (mapped to `font-condiment` in Tailwind)
+
+**Tailwind custom colors** (in `tailwind.config.js`):
+- `cream`: `#EFF4FF`
+- `neon`: `#6FFF00`
+
+**Global background color**: `#010828` (dark navy/space blue)
+
+**Custom CSS class `liquid-glass`** (defined in `index.css`):
+```css
+.liquid-glass {
+background: rgba(255, 255, 255, 0.01);
+background-blend-mode: luminosity;
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border: none;
+box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+position: relative;
+overflow: hidden;
+}
+.liquid-glass::before {
+content: &#39;&#39;;
+position: absolute;
+inset: 0;
+border-radius: inherit;
+padding: 1.4px;
+background: linear-gradient(180deg,
+rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+pointer-events: none;
+}
+```
+
+---
+
+### Section Structure (line-by-line)
+
+**Outer wrapper**: `&lt;section&gt;` with classes `relative py-16 sm:py-24 md:py-32` and inline style `backgroundColor: &#39;#010828&#39;`.
+
+**Inner container**: `&lt;div&gt;` with `max-w-[1831px] mx-auto px-4 sm:px-6 md:px-8`.
+
+---
+
+### Header Row
+
+A `flex flex-col lg:flex-row items-start lg:justify-between gap-6 lg:gap-0 mb-8 sm:mb-12` div containing:
+
+**1. Title (left side)**:
+- `&lt;h2&gt;` with `font-grotesk text-[32px] sm:text-[48px] md:text-[60px] font-normal uppercase leading-[1.05] sm:leading-[1] md:leading-[1]`
+- Line 1: `Collection of` followed by `&lt;br /&gt;`
+- Line 2: Wrapped in `&lt;span className=&quot;ml-12 sm:ml-24 md:ml-32 inline-block&quot;&gt;` containing:
+- `&lt;span className=&quot;font-condiment text-neon text-[36px] sm:text-[52px] md:text-[68px] font-normal normal-case&quot;&gt;Space&lt;/span&gt;` (the word &quot;Space&quot; in neon green cursive Condiment font)
+- followed by the text ` objects` (in Anton/grotesk uppercase)
+
+**2. &quot;SEE ALL CREATORS&quot; button (right side)**:
+- `&lt;button className=&quot;group relative flex flex-col items-start&quot;&gt;`
+- Inner div: `font-grotesk font-normal uppercase leading-[1.1] flex items-start gap-3`
+- `&lt;span className=&quot;text-[32px] sm:text-[48px] md:text-[60px] text-white&quot;&gt;SEE&lt;/span&gt;`
+- A `flex flex-col items-start leading-[0.9]` div with:
+- `&lt;span className=&quot;text-[20px] sm:text-[28px] md:text-[36px] text-white&quot;&gt;ALL&lt;/span&gt;`
+- `&lt;span className=&quot;text-[20px] sm:text-[28px] md:text-[36px] text-white&quot;&gt;CREATORS&lt;/span&gt;`
+- Below text: `&lt;div className=&quot;w-full h-[6px] sm:h-[8px] md:h-[10px] bg-neon mt-3 sm:mt-4&quot; /&gt;` (neon green underline bar)
+
+---
+
+### Card Grid
+
+`&lt;div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;&gt;`
+
+Mapped over an array of 3 items, each with a `video` URL and `score` string:
+
+**Card data**:
+```js
+[
+{
+video: &#39;https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_053923_22c0a6a5-313c-474c-85ff-3b50d25e944a.mp4&#39;,
+score: &#39;8.7/10&#39;
+},
+{
+video: &#39;https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_054411_511c1b7a-fb2f-42ef-bf6c-32c0b1a06e79.mp4&#39;,
+score: &#39;9/10&#39;
+},
+{
+video: &#39;https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_055427_ac7035b5-9f3b-4289-86fc-941b2432317d.mp4&#39;,
+score: &#39;8.2/10&#39;
+}
+]
+```
+
+**Each card** (`flex flex-col gap-4 group`):
+
+**Video container**:
+- Outer: `liquid-glass rounded-[32px] p-[18px] hover:bg-white/10 transition-all duration-300`
+- Inner: `relative rounded-[24px] overflow-hidden pb-[75%]` (4:3 aspect ratio via padding-bottom trick)
+- `&lt;video autoPlay loop muted playsInline className=&quot;absolute inset-0 w-full h-full object-cover&quot;&gt;`
+- `&lt;source src={item.video} type=&quot;video/mp4&quot; /&gt;`
+
+**Info bar below video**:
+- `liquid-glass rounded-[20px] px-5 py-4 flex items-center justify-between`
+- Left side (`flex flex-col`):
+- Label: `&lt;span className=&quot;font-grotesk text-[14px] uppercase text-cream/70 mb-1&quot;&gt;RARITY SCORE:&lt;/span&gt;`
+- Value: `&lt;span className=&quot;font-grotesk text-[20px] font-normal text-cream&quot;&gt;{item.score}&lt;/span&gt;`
+- Right side: circular arrow button
+- `&lt;button className=&quot;w-[48px] h-[48px] liquid-glass rounded-full flex items-center justify-center hover:scale-110 hover:bg-white/10 transition-all flex-shrink-0&quot;&gt;`
+- SVG chevron right: `&lt;svg className=&quot;w-[18px] h-[18px] text-white&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2.5} d=&quot;M9 5l7 7-7 7&quot; /&gt;&lt;/svg&gt;`
+
+---
+
+### Summary of Visual Design
+
+- Dark space-navy background (`#010828`)
+- Glassmorphism cards using the `liquid-glass` class (subtle white gradient border, blur backdrop, inner glow)
+- Typography: Anton font (bold geometric sans-serif) for all headings, uppercase
+- The word &quot;Space&quot; breaks style by using Condiment (cursive/script) in neon green (`#6FFF00`)
+- Cream white text (`#EFF4FF`) throughout
+- 3-column responsive grid (1 col mobile, 2 col tablet, 3 col desktop)
+- Each card has an autoplay looping muted video with 4:3 aspect ratio inside a glass container with 32px rounding and 18px padding, plus a glass info bar below showing rarity score and a circular chevron button
+- Responsive font scaling from 32px to 60px for headings across breakpoints
+- Max content width: 1831px, centered with horizontal padding of 16px/24px/32px at sm/md breakpoints</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="veloce-cards.html">Veloce Cards<small>Cards · features</small></a><a href="nimbus-security.html">Nimbus Security<small>Cards · features</small></a><a href="nimbus-sticky-cards.html">Nimbus Sticky Cards<small>Cards · features</small></a><a href="cognitra-offer.html">Cognitra Offer<small>Cards · features</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

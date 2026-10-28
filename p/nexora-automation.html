@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nexora Automation — SaaS 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Create a SaaS landing page hero section with the following exact specifications: Page Layout The entire page is h-screen flex flex-col bg-background o">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/nexora-automation.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nexora Automation — SaaS 提示词">
+<meta property="og:description" content="Create a SaaS landing page hero section with the following exact specifications: Page Layout The entire page is h-screen flex flex-col bg-background o">
+<meta property="og:url" content="https://prompt-site.shop/p/nexora-automation.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Nexora Automation","description":"Create a SaaS landing page hero section with the following exact specifications: Page Layout The entire page is h-screen flex flex-col bg-background o","url":"https://prompt-site.shop/p/nexora-automation.html","inLanguage":"zh-CN","genre":"SaaS","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-saas">SaaS</a></div><h1>Nexora Automation</h1><div class="chip-row"><span class="chip">SaaS</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>正文：5,344 字符</span></div><div class="hero-media"><video src="../assets/previews/nexora-automation.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Create a SaaS landing page hero section with the following exact specifications:
+
+Page Layout
+
+The entire page is h-screen flex flex-col bg-background overflow-hidden — the Navbar + Hero fill exactly 100vh with no scroll.
+The page uses two Google Fonts imported via CSS: Instrument Serif (display/headings, including italic) and Inter (body text).
+Fonts &amp; Design Tokens (index.css)
+
+Import fonts:
+
+@import url(&#39;https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500;600&amp;display=swap&#39;);
+CSS variables (:root):
+
+--background: 0 0% 100% (white)
+--foreground: 210 14% 17% (dark charcoal)
+--primary: 210 14% 17% / --primary-foreground: 0 0% 100%
+--secondary: 0 0% 96% / --secondary-foreground: 0 0% 9%
+--muted: 0 0% 96% / --muted-foreground: 184 5% 55%
+--accent: 239 84% 67% (indigo/blue) / --accent-foreground: 0 0% 100%
+--border: 0 0% 90%
+--ring: 239 84% 67%
+--radius: 0.5rem
+--font-display: &#39;Instrument Serif&#39;, serif
+--font-body: &#39;Inter&#39;, sans-serif
+--shadow-dashboard: 0 25px 80px -12px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.06)
+Tailwind config extends fontFamily with display and body mapped to the CSS vars. All colors use hsl(var(--token)) pattern.
+
+Navbar
+
+flex items-center justify-between px-6 md:px-12 lg:px-20 py-5 font-body
+Left: Logo text ✦ Nexora — text-xl font-semibold tracking-tight text-foreground
+Right (hidden on mobile): Nav links &quot;Home&quot;, &quot;Pricing&quot;, &quot;About&quot;, &quot;Contact&quot; — text-sm text-muted-foreground hover:text-foreground with gap-8
+CTA button: rounded-full px-5 text-sm font-medium using primary styling
+Hero Section
+
+
+
+
+Background Video: Fullscreen muted autoplay loop video, absolute inset-0 w-full h-full object-cover z-0
+Video URL: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260319_015952_e1deeb12-8fb7-4071-a42a-60779fc64ab6.mp4
+All content wrapped in relative z-10 flex flex-col items-center w-full
+1. Badge (top)
+
+Framer Motion: fade up from y:10, duration 0.5s
+inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground font-body
+Text: &quot;Now with GPT-5 support ✨&quot;
+mb-6
+2. Headline
+
+Framer Motion: fade up from y:16, duration 0.6s, delay 0.1s
+text-center font-display text-5xl md:text-6xl lg:text-[5rem] leading-[0.95] tracking-tight text-foreground max-w-xl
+Content: The Future of Smarter Automation — the word &quot;Smarter&quot; renders in Instrument Serif italic
+3. Subheadline
+
+Framer Motion: fade up from y:16, duration 0.6s, delay 0.2s
+mt-4 text-center text-base md:text-lg text-muted-foreground max-w-[650px] leading-relaxed font-body
+Text: &quot;Automate your busywork with intelligent agents that learn, adapt, and execute—so your team can focus on what matters most.&quot;
+4. CTA Buttons
+
+Framer Motion: fade up from y:16, duration 0.6s, delay 0.3s
+mt-5 flex items-center gap-3
+Primary button: rounded-full px-6 py-5 text-sm font-medium font-body — text &quot;Book a demo&quot;
+Play button: ghost variant, h-11 w-11 rounded-full border-0 bg-background shadow-[0_2px_12px_rgba(0,0,0,0.08)] hover:bg-background/80 with a Play icon (lucide) h-4 w-4 fill-foreground
+5. Dashboard Preview (custom coded, NOT an image)
+
+Framer Motion: fade up from y:30, duration 0.8s, delay 0.5s
+Container: mt-8 w-full max-w-5xl
+Frosted glass wrapper: rounded-2xl overflow-hidden p-3 md:p-4 with inline styles:
+background: rgba(255, 255, 255, 0.4)
+border: 1px solid rgba(255, 255, 255, 0.5)
+boxShadow: var(--shadow-dashboard)
+Dashboard internals (all coded in React, text-[11px], select-none pointer-events-none):
+
+Top bar: Logo &quot;N&quot; in rounded box + &quot;Nexora&quot; + chevron | Search bar with ⌘K shortcut | &quot;Move Money&quot; + bell + avatar &quot;JB&quot;
+Sidebar (w-40): Items — Home (active), Tasks (badge &quot;10&quot;), Transactions, Payments (chevron), Cards, Capital, Accounts (chevron). Section &quot;Workflows&quot;: Trake rutes, Payments, Notifications, Settings
+Main content (bg-secondary/30):
+Greeting: &quot;Welcome, Jane&quot; — text-sm font-semibold
+Action buttons row: Send (primary/accent), Request, Transfer, Deposit, Pay Bill, Create Invoice — rounded-full pill buttons text-[10px], + &quot;Customize&quot; text
+Two equal-width cards (flex-1 basis-0) side by side:
+Balance card: &quot;Mercury Balance&quot; with checkmark, amount $8,450,190.32 (cents in text-xs text-muted-foreground), stats (Last 30 Days, +$1.8M green, -$900K red), SVG area chart (h-20) with smooth cubic Bézier curve, linear gradient fill from accent at 15% opacity to transparent, stroke in accent color strokeWidth=&quot;1.5&quot;
+Accounts card: Header &quot;Accounts&quot; with + and ⋮ icons. Three rows (py-3, no dividers, text-xs, justify-between): Credit $98,125.50, Treasury $6,750,200.00, Operations $1,592,864.82
+Transactions table: &quot;Recent Transactions&quot; heading, table with columns Date/Description/Amount/Status. 4 rows: AWS -$5,200 Pending (amber), Client Payment +$125,000 Completed (green), Payroll -$85,450 Completed, Office Supplies -$1,200 Completed
+Dependencies
+
+framer-motion for all animations
+lucide-react for all icons
+shadcn/ui Button component
+Tailwind CSS with tailwindcss-animate plugin
+Key Design Decisions
+
+The dashboard overflows toward the bottom of the viewport and is clipped by overflow-hidden on the parent
+No dark mode — light only
+All colors use semantic Tailwind tokens, never raw color values in components
+The SVG chart uses a hand-crafted cubic Bézier path, not a charting library</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：giglianepefrei/motionsites.ai-prompt-library<br>原始文件：<code>giglianepefrei_fetch\prompts/Nexora_Automation.md</code><br>许可证：NOASSERTION<br><a href="https://github.com/giglianepefrei/motionsites.ai-prompt-library/blob/main/giglianepefrei_fetch%5Cprompts/Nexora_Automation.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="intelligent-performance.html">Intelligent Performance<small>SaaS · saas</small></a><a href="junglemind.html">JungleMind<small>SaaS · saas</small></a><a href="global-talent.html">Global Talent<small>SaaS · saas</small></a><a href="skytrace.html">Skytrace<small>SaaS · saas</small></a><a href="peakline-redshift.html">Peakline Redshift<small>SaaS · saas</small></a><a href="quantum-lucid.html">Quantum Lucid<small>SaaS · saas</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

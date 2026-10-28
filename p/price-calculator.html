@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Price Calculator — SaaS 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Recreate Project Estimation Calculator Section Create a full-width dark calculator section with id calculator-section. Background: bg-background, padd">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/price-calculator.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Price Calculator — SaaS 提示词">
+<meta property="og:description" content="Recreate Project Estimation Calculator Section Create a full-width dark calculator section with id calculator-section. Background: bg-background, padd">
+<meta property="og:url" content="https://prompt-site.shop/p/price-calculator.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/price-calculator.gif">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Price Calculator","description":"Recreate Project Estimation Calculator Section Create a full-width dark calculator section with id calculator-section. Background: bg-background, padd","url":"https://prompt-site.shop/p/price-calculator.html","inLanguage":"zh-CN","genre":"SaaS","dateCreated":"2026-03-18T07:40:44.262774+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-saas">SaaS</a></div><h1>Price Calculator</h1><div class="chip-row"><span class="chip">SaaS</span><span class="chip">pricing</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-03-18</span><span>正文：3,134 字符</span></div><div class="hero-media"><img src="../assets/previews/price-calculator.gif" alt="Price Calculator 动效预览" loading="lazy"><div class="media-note">本地预览图 · gif</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Recreate Project Estimation Calculator Section
+
+Create a full-width dark calculator section with id calculator-section. Background: bg-background, padding py-16 md:py-28 px-4 md:px-16, max-width max-w-7xl centered.
+
+Header: Centered. Small mono uppercase tracking-widest label &quot;Try project estimation calculator&quot; in text-muted-foreground. Below it, an h2: &quot;Get premium website within your budget&quot; — text-3xl md:text-4xl lg:text-5xl font-normal.
+
+Layout: 2-column grid (grid-cols-1 lg:grid-cols-2), rounded-2xl overflow-hidden, no gap.
+
+LEFT COLUMN (Calculator Form): Background #0D0D0D, padding p-8 lg:p-12, sections divided by divide-y divide-[#1E1E1E].
+
+4 sections separated by horizontal dividers:
+
+Service Type (radio buttons): h3 &quot;What kind of service do you need?&quot; — 3 options: &quot;Only Design&quot; (design), &quot;Only Development&quot; (development), &quot;Design + Development&quot; (both, default). Custom radio circles: w-5 h-5 rounded-full border-2, active = border-[#FF5656] with inner w-2 h-2 rounded-full bg-[#FF5656].
+
+Number of Pages (slider): h3 with current value in #FF5656. Shadcn &lt;Slider&gt; min=1, max=30, step=1, default=5. Labels &quot;1&quot; and &quot;30&quot; below.
+
+Add-ons (checkboxes): Two checkboxes with price labels on the right in #FF5656:
+
+&quot;I will need help with content&quot; → +$50/pages
+
+&quot;I want to optimize my website for SEO&quot; → +$50/pages Custom checkboxes: w-5 h-5 border-2 rounded, checked = border-[#FF5656] bg-[#FF5656] with white SVG checkmark.
+
+Timeline (radio buttons): h3 &quot;How fast do you need this?&quot; — 3 options with prices:
+
+&quot;Within 7 Days&quot; → +$100/pages
+
+&quot;Within 14 Days&quot; → +$25/pages
+
+&quot;Regular Speed (Based on discussion)&quot; → no extra cost (default)
+
+RIGHT COLUMN (Cost Estimation): Padding p-8 lg:p-12, border border-white/10 rounded-r-2xl, min-height 717.98px.
+
+h3 &quot;Estimated Cost&quot; + description paragraph.
+
+3 stacked cards (rounded-2xl p-6 space-y-3):
+
+Agency card: bg-muted/50. Title &quot;Typical Agency charges minimum&quot;. Large price text-4xl font-bold. Subtitle: &quot;+ Too much extra time &amp; additional cost&quot;.
+
+Freelancer card: bg-muted/50. Title &quot;Regular Freelancer charges minimum&quot;. Large price text-4xl font-bold. Subtitle: &quot;+ Too much headache &amp; back-and-forth&quot;.
+
+Your price card: bg-gradient-to-r from-pink-500 to-orange-500 text-white. Title &quot;With Webfluin Studio&quot;. Price text-5xl font-bold. Subtitle: &quot;Save your money, time &amp; headache&quot;.
+
+PRICING LOGIC:
+
+calculatePrice():
+Base prices by service:
+design: base=399, perPage=100
+development: base=199, perPage=100
+both: base=499, perPage=200
+
+total = max(base, base + (pages - 1) * perPage)
+if needContent: total += pages * 50
+if needSEO: total += pages * 50
+if rush: total += pages * 100
+if fast: total += pages * 25
+
+calculateAgencyCost():
+perPage = (both ? 1000 : 400)
+return 8000 + (pages - 1) * perPage
+
+calculateFreelancerCost():
+perPage = (both ? 500 : 200)
+return 3000 + (pages - 1) * perPage
+
+All prices displayed with .toLocaleString() and $ prefix.
+
+State: serviceType (design|development|both, default both), pages (number, default 5), needContent (bool), needSEO (bool), timeline (regular|fast|rush, default regular).
+
+Dependencies: Shadcn Slider component, useToast hook.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：giglianepefrei/motionsites.ai-prompt-library<br>原始文件：<code>giglianepefrei_fetch\prompts/Price_Calculator.md</code><br>许可证：NOASSERTION<br><a href="https://github.com/giglianepefrei/motionsites.ai-prompt-library/blob/main/giglianepefrei_fetch%5Cprompts/Price_Calculator.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="intelligent-performance.html">Intelligent Performance<small>SaaS · saas</small></a><a href="junglemind.html">JungleMind<small>SaaS · saas</small></a><a href="global-talent.html">Global Talent<small>SaaS · saas</small></a><a href="skytrace.html">Skytrace<small>SaaS · saas</small></a><a href="peakline-redshift.html">Peakline Redshift<small>SaaS · saas</small></a><a href="quantum-lucid.html">Quantum Lucid<small>SaaS · saas</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

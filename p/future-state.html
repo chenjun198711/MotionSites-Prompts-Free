@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Future-State — Landing Page 提示词 | MotionSites Prompts</title>
+<meta name="description" content="暗黑电影风格单页着陆站，展示AI产品NOVA_AI，采用Flexo Soft Medium字体，白色文字与极简交互设计。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/future-state.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Future-State — Landing Page 提示词">
+<meta property="og:description" content="暗黑电影风格单页着陆站，展示AI产品NOVA_AI，采用Flexo Soft Medium字体，白色文字与极简交互设计。">
+<meta property="og:url" content="https://prompt-site.shop/p/future-state.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/future-state.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Future-State","description":"暗黑电影风格单页着陆站，展示AI产品NOVA_AI，采用Flexo Soft Medium字体，白色文字与极简交互设计。","url":"https://prompt-site.shop/p/future-state.html","inLanguage":"zh-CN","genre":"Landing Page","dateCreated":"2026-07-03T07:11:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-landing_page">Landing Page</a></div><h1>Future-State</h1><div class="chip-row"><span class="chip">Landing Page</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-07-03</span><span>正文：8,119 字符</span></div><div class="hero-media"><img src="../assets/previews/future-state.webp" alt="Future-State 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>暗黑电影风格单页着陆站，展示AI产品NOVA_AI，采用Flexo Soft Medium字体，白色文字与极简交互设计。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a dark, cinematic single-page landing site for an AI product called NOVA_AI using Vite + React + TypeScript + Tailwind CSS, with icons from lucide-react only. No other UI packages.
+
+Global setup
+
+- `index.html` title: `NOVA_AI — Today AI Aligns With Bold Dreams`. Load this font in `&lt;head&gt;`:
+
+`&lt;link href=&quot;https://db.onlinewebfonts.com/c/4556933d6966c60eda45bebad34d9c90?family=Flexo+Soft+Medium&quot; rel=&quot;stylesheet&quot; /&gt;`
+
+- `index.css`: Tailwind base/components/utilities; `body { font-family: &#39;Flexo Soft Medium&#39;, system-ui, sans-serif; background-color: #0a0a0a; color: #fff; -webkit-font-smoothing: antialiased; }`; `::selection { background-color: rgba(255,255,255,0.2); }`
+
+- `tailwind.config.js`: extend `fontFamily` so BOTH `sans` and `mono` map to `[&#39;&quot;Flexo Soft Medium&quot;&#39;, &#39;system-ui&#39;, &#39;sans-serif&#39;]`.
+
+- `App.tsx` renders, inside `&lt;div className=&quot;relative&quot;&gt;`: `&lt;ScrollVideo /&gt;`, `&lt;Navbar /&gt;`, then `&lt;main&gt;` containing `&lt;SectionOne /&gt;`, a spacer `&lt;div aria-hidden className=&quot;h-[80vh]&quot; /&gt;`, and `&lt;SectionTwo /&gt;`.
+
+Component 1 — ScrollVideo (scroll-scrubbed video background)
+
+Fixed full-viewport background (`fixed inset-0 -z-10 bg-[#0a0a0a]`) that scrubs a video based on total page scroll progress. Video URL (exact):
+
+`https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260611_104107_121bfb5a-b1df-4e0d-8240-25b81f7cc85d.mp4`
+
+Implementation details:
+
+1. On mount, `fetch` the video as a blob, create an object URL, and pre-extract frames into `ImageBitmap[]`: create an off-DOM `&lt;video&gt;` (muted, playsInline, preload auto), wait for metadata, scale to max width 1280, frame count = `clamp(round(duration * 24), 30, 120)`, seek evenly across `duration - 0.05` and `createImageBitmap` each frame (with resize). Support cancellation; close bitmaps and revoke the object URL on unmount.
+
+2. Render a `&lt;canvas className=&quot;absolute inset-0 h-full w-full&quot;&gt;`. While frames aren&#39;t ready, render a fallback `&lt;video&gt;` element (same URL, muted, playsInline, `object-cover`, absolute inset-0 full size) and scrub it by setting `currentTime` (guard with a `seeking` flag + `seeked` listener; only seek when delta &gt; 0.001s).
+
+3. Animation loop (`requestAnimationFrame`): target progress = `window.scrollY / (scrollHeight - innerHeight)` clamped 0–1, smoothed each tick via `smoothed += (target - smoothed) * 0.1`. Map smoothed progress to a frame index and only redraw when the index changes. Draw with &quot;cover&quot; math (scale = max of canvas/frame ratios, center the overflow). Canvas resolution = clientWidth/Height × devicePixelRatio capped at 2; re-size on window resize. Passive scroll listener.
+
+4. Overlay `&lt;div className=&quot;absolute inset-0 bg-black/20&quot; /&gt;` for text contrast.
+
+Component 2 — Reveal (staggered scroll animation wrapper)
+
+Reusable component: props `children`, `delay?: number` (ms), `className?: string`, `as?: &#39;div&#39; | &#39;span&#39;` (default `&#39;div&#39;`). Uses an IntersectionObserver (threshold 0.15) and sets visible = `entry.isIntersecting` — i.e., animations REPLAY when elements leave and re-enter the viewport. Renders:
+
+`transition-all duration-700 ease-out will-change-transform`, visible → `translate-y-0 opacity-100`, hidden → `translate-y-8 opacity-0`, plus `style={{ transitionDelay: `${delay}ms` }}` and the passed className. Disconnect observer on unmount.
+
+Component 3 — Navbar (fixed corners)
+
+- Top-left (`fixed left-5 top-5 z-50 sm:left-8 sm:top-7 md:left-12`): wordmark link `(NOVA_AI)` in `font-mono text-lg font-medium tracking-tight text-white drop-shadow-md sm:text-xl md:text-2xl` wrapped in `&lt;Reveal&gt;`; below it (delay 150) `[ v.01b ]` in `mt-6 font-mono text-[10px] text-white/60 sm:mt-8 sm:text-xs`.
+
+- Top-right `&lt;nav&gt;` (`fixed right-5 top-5 z-50 sm:right-8 sm:top-7 md:right-12`): vertical right-aligned `&lt;ul&gt;` (`flex flex-col items-end gap-1.5 sm:gap-2`) with links `main`, `tiers`, `features`, `talk to us`. Each `&lt;li&gt;` wraps a `&lt;Reveal delay={100 + i * 120}&gt;` containing an anchor: `group flex items-center gap-1 font-mono text-xs text-white/80 drop-shadow-md transition-colors duration-300 hover:text-white sm:text-sm` plus an `ArrowUpRight` icon (size 14) that translates up-right on group hover (`group-hover:-translate-y-0.5 group-hover:translate-x-0.5`).
+
+Component 4 — SectionOne (hero, bottom-anchored)
+
+`&lt;section className=&quot;relative flex min-h-screen flex-col justify-end supports-[height:100svh]:min-h-[100svh]&quot;&gt;`. Content row: `relative flex flex-col gap-10 px-5 pb-16 sm:flex-row sm:items-end sm:justify-between sm:gap-8 sm:px-8 md:px-12 md:pb-20`.
+
+- Left: `&lt;h1 className=&quot;max-w-xl text-4xl font-medium uppercase leading-[1.05] tracking-tight text-white drop-shadow-lg sm:text-5xl md:text-6xl lg:text-7xl&quot;&gt;` with four staggered lines, each a `&lt;Reveal as=&quot;span&quot; className=&quot;block ...&quot;&gt;`:
+
+1. delay 100, `pl-6 sm:pl-12`: `Today AI`
+
+2. delay 220, no indent: `Aligns ` + `&lt;span className=&quot;normal-case italic font-light&quot;&gt;with&lt;/span&gt;`
+
+3. delay 340, `pl-10 sm:pl-20`: `// Bold`
+
+4. delay 460, `pl-16 sm:pl-32`: `Dreams`
+
+- Right column (`flex w-full max-w-xs flex-col items-start` — visible on ALL breakpoints, stacks under the headline on mobile):
+
+- Reveal delay 400: row `mb-6 flex w-full items-center justify-between font-mono text-white sm:mb-8` with `( A )` (text-lg) and `[ 001 /004 ]` (`text-xs text-white/70`).
+
+- Reveal delay 520: paragraph `mb-6 text-sm leading-relaxed text-white/85 drop-shadow-md sm:mb-8`: &quot;NovaAI is where your bravest work finds its true expression. We hand you the means not only to form the future.&quot;
+
+- Reveal delay 640: full-width pill CTA `Begin Today`: `block w-full rounded-full border border-white/60 px-8 py-3 text-center font-mono text-xs uppercase tracking-[0.15em] text-white transition-all duration-300 hover:bg-white hover:text-black`.
+
+- Absolute bottom-left (Reveal delay 760, `bottom-5 left-5 sm:bottom-6 sm:left-8 md:left-12`): `Share2` icon button (size 18, `text-white/80 hover:text-white`, aria-label &quot;Share&quot;).
+
+- Absolute bottom-center (Reveal delay 760, `bottom-5 left-1/2 -translate-x-1/2 sm:bottom-6`): `ArrowDown` size 18 with `animate-bounce text-white/80`.
+
+Component 5 — SectionTwo
+
+`&lt;section className=&quot;relative flex min-h-screen flex-col supports-[height:100svh]:min-h-[100svh]&quot;&gt;`.
+
+- Middle row: `relative flex flex-1 flex-col justify-center gap-10 px-5 pt-24 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:px-8 sm:pt-0 md:px-12`.
+
+- `&lt;h2 className=&quot;max-w-sm text-4xl font-medium uppercase leading-[1.05] tracking-tight text-white drop-shadow-lg sm:text-5xl md:text-6xl&quot;&gt;`, two Reveal lines: delay 100 `Learn ` + italic `&lt;span className=&quot;normal-case italic font-light&quot;&gt;to see&lt;/span&gt;`; delay 220 `Brilliantly`.
+
+- Reveal delay 340: `flex items-center justify-between font-mono text-white sm:justify-start sm:gap-16 md:gap-24` with `( B )` (text-lg) and `[ 002 /004 ]` (`text-xs text-white/70`).
+
+- Bottom block: `relative flex flex-col gap-10 px-5 pb-16 sm:px-8 md:px-12 md:pb-20`.
+
+- Reveal delay 460 paragraph (`max-w-xs text-sm leading-relaxed text-white/85 drop-shadow-md`): &quot;Our AI doesn&#39;t just respond — it interprets, sharpens, and delivers. From outline to final render, it supplies the insight you want.&quot;
+
+- Reveal delay 580 CTA `Run The Demo`, in-flow full-width on mobile, absolutely bottom-centered on sm+: wrapper `w-full max-w-xs sm:absolute sm:bottom-16 sm:left-1/2 sm:w-auto sm:max-w-none sm:-translate-x-1/2 md:bottom-20`; anchor `block rounded-full border border-white/60 px-10 py-3 text-center font-mono text-xs uppercase tracking-[0.15em] text-white transition-all duration-300 hover:bg-white hover:text-black`.
+
+- Reveal delay 700, absolute bottom-left (same classes as Section 1): `Share2` icon button.
+
+Responsiveness rules
+
+Mobile-first: hero and section content stack vertically (`flex-col`) and switch to side-by-side (`sm:flex-row`) at 640px; horizontal padding scales `px-5 → sm:px-8 → md:px-12`; headline sizes scale `text-4xl → sm:text-5xl → md:text-6xl (→ lg:text-7xl hero)`; headline indents shrink on mobile; Section 2 gets `pt-24` on mobile to clear the fixed nav. All text must remain readable over the video (drop shadows + black/20 overlay).</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="motionz-premium-landing-page.html">MotionZ Premium Landing Page<small>Landing Page · landing-page</small></a><a href="3d-story.html">3D Story<small>Landing Page · hero</small></a><a href="financial-suite.html">Financial Suite<small>Landing Page · hero</small></a><a href="prompt-hero.html">PROMPT<small>Landing Page · hero</small></a><a href="health-portal.html">Health Portal<small>Landing Page · hero</small></a><a href="cosmos-interface.html">Cosmos Interface<small>Landing Page · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

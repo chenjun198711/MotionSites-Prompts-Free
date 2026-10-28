@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Velorah Focus — Social Media 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色背景中，600x800像素的社交帖子卡片居中显示，带有微白边框和圆角，全屏循环视频作为背景，营造沉浸式视觉体验。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/velorah-focus-hero.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Velorah Focus — Social Media 提示词">
+<meta property="og:description" content="深色背景中，600x800像素的社交帖子卡片居中显示，带有微白边框和圆角，全屏循环视频作为背景，营造沉浸式视觉体验。">
+<meta property="og:url" content="https://prompt-site.shop/p/velorah-focus-hero.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Velorah Focus","description":"深色背景中，600x800像素的社交帖子卡片居中显示，带有微白边框和圆角，全屏循环视频作为背景，营造沉浸式视觉体验。","url":"https://prompt-site.shop/p/velorah-focus-hero.html","inLanguage":"zh-CN","genre":"Social Media","dateCreated":"2026-05-05T11:40:20.877056+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-social_media">Social Media</a></div><h1>Velorah Focus</h1><div class="chip-row"><span class="chip">Social Media</span><span class="chip">social-media</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-05-05</span><span>正文：12,010 字符</span></div><div class="hero-media"><video src="../assets/previews/velorah-focus-hero.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>深色背景中，600x800像素的社交帖子卡片居中显示，带有微白边框和圆角，全屏循环视频作为背景，营造沉浸式视觉体验。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Social meida post #1 (on the left)
+Create a React application that displays a stylized, 3:4 aspect ratio social media post/landing page. The app must exactly match the following specifications, layout, animations, and CSS effects:
+1. Layout &amp; Structure:
+Main Container: Full screen, black background (min-h-screen bg-black), centering its child content.
+Social Frame: A centered container measuring exactly 600px wide by 800px high (w-[600px] h-[800px]). It should have a subtle white border (border-white/10), rounded corners (rounded-2xl), hidden overflow, and a heavy drop shadow.
+Video Background: An absolute-positioned, full-cover HTML &lt;video&gt; element playing continuously in the background (autoplay, loop, muted, playsInline).
+Exact Video URL: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260505_110052_2e127257-5236-40b1-ba48-4690260f1185.mp4
+2. Visual Effects &amp; Overlays (Critical Custom CSS):
+Add the following visual layers exactly as described using custom CSS in index.css:
+VHS Noise: An absolute full-cover div using an inline SVG fractal noise filter as its background image, with mix-blend-mode: overlay, opacity: 0.15, and a 0.2s step-keyframe animation to simulate static.
+VHS Scanlines: A repeating linear gradient over the entire frame (50% transparent, 50% slight black transparent) with a background size of 100% 4px.
+VHS Glitch Bar: A 40px tall horizontal bar that moves from top to bottom continuously over 4 seconds (top: -10% to top: 110%). It should have a backdrop blur of 2px, a 5deg hue rotation, and subtle white top/bottom borders.
+RGB Text Glitch: A custom CSS animation (rgb-text-glitch) that applies a flickering text-shadow consisting of offset red (rgba(255, 0, 0, 0.5)) and cyan (rgba(0, 255, 255, 0.5)).
+3. Typography:
+Import two Google Fonts: Instrument Serif (for headings and logo) and Inter (for body text and buttons). Map these to Tailwind&#39;s font-serif and font-sans.
+4. Content Elements (Centered over the video, shifted slightly up by -mt-[180px]):
+Headline: &quot;Focus in a&lt;br/&gt;Distracted World&quot;. Uses Instrument Serif, text size 64px, tight leading, tight tracking (tracking-[-2.46px]), animated to fade and rise upwards, and applying the rgb-text-glitch effect.
+Subtext: &quot;We&#39;re designing tools for deep thinkers, bold creators, and quiet rebels. Amid the chaos, we build digital spaces for sharp focus and inspired work.&quot; Uses Inter, text size 17px, max-width 480px, delayed fade-rise animation, and applies the rgb-text-glitch effect.
+Button: Text reads &quot;Begin Journey&quot;. Uses Inter, 15px. Add a custom .liquid-glass CSS class. The liquid glass effect uses background: rgba(255, 255, 255, 0.01), a luminosity mix-blend-mode, 4px backdrop blur, and an advanced mask-composite border gradient trick to simulate a sleek glass edge. Add a slight hover scale effect.
+Footer Logo: Positioned absolutely at the bottom center. Reads &quot;Velorah&quot; in Instrument Serif, size 3xl, with a small superscript trademark symbol ®. Applies the rgb-text-glitch effect.
+5. Animations:
+Implement a @keyframes fade-rise going from opacity: 0, translateY(24px) to opacity: 1, translateY(0).
+Apply staggered animation classes to the headline (0s delay), paragraph (0.2s delay), and button (0.4s delay) so they slide in smoothly upon load.
+Please write the complete React component (src/App.tsx) and the accompanying CSS stylesheet (src/index.css) utilizing standard React and Tailwind classes alongside the specific custom CSS for the VHS, glitch, and glassmorphism effects.
+
+Social media post #2 (on the right)
+
+Please build a React application with Tailwind CSS that recreates a cinematic 600x800px social media post component with VHS and RGB glitch effects.
+
+Please use the exact code below for the two main files to recreate my layout perfectly.
+
+File 1: src/index.css
+```css
+@import url(&#39;https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500;600&amp;display=swap&#39;);
+@import &quot;tailwindcss&quot;;
+
+@theme {
+--font-serif: &quot;Instrument Serif&quot;, ui-serif, Georgia, Cambria, &quot;Times New Roman&quot;, Times, serif;
+--font-sans: &quot;Inter&quot;, ui-sans-serif, system-ui, sans-serif;
+}
+
+.liquid-glass {
+background: rgba(255, 255, 255, 0.01);
+background-blend-mode: luminosity;
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border: none;
+box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+position: relative;
+overflow: hidden;
+}
+
+.liquid-glass::before {
+content: &#39;&#39;;
+position: absolute;
+inset: 0;
+border-radius: inherit;
+padding: 1.4px;
+background: linear-gradient(180deg,
+rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+pointer-events: none;
+}
+
+@keyframes fade-rise {
+from { opacity: 0; transform: translateY(24px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-rise { animation: fade-rise 0.8s ease-out both; }
+.animate-fade-rise-delay { animation: fade-rise 0.8s ease-out 0.2s both; }
+.animate-fade-rise-delay-2 { animation: fade-rise 0.8s ease-out 0.4s both; }
+
+/* VHS Effects */
+.vhs-noise {
+position: absolute;
+inset: -100%;
+width: 300%;
+height: 300%;
+pointer-events: none;
+background-image: url(&quot;data:image/svg+xml,%3Csvg viewBox=&#39;0 0 200 200&#39; xmlns=&#39;http://www.w3.org/2000/svg&#39;%3E%3Cfilter id=&#39;noiseFilter&#39;%3E%3CfeTurbulence type=&#39;fractalNoise&#39; baseFrequency=&#39;0.8&#39; numOctaves=&#39;3&#39; stitchTiles=&#39;stitch&#39;/%3E%3C/filter%3E%3Crect width=&#39;100%25&#39; height=&#39;100%25&#39; filter=&#39;url(%23noiseFilter)&#39;/%3E%3C/svg%3E&quot;);
+opacity: 0.15;
+mix-blend-mode: overlay;
+animation: vhs-noise-anim 0.2s steps(2) infinite;
+z-index: 50;
+}
+
+@keyframes vhs-noise-anim {
+0% { transform: translate(0, 0); }
+20% { transform: translate(-5%, 5%); }
+40% { transform: translate(-10%, -5%); }
+60% { transform: translate(5%, 10%); }
+80% { transform: translate(10%, -10%); }
+100% { transform: translate(0, 5%); }
+}
+
+.vhs-scanlines {
+position: absolute;
+inset: 0;
+pointer-events: none;
+background: linear-gradient(
+to bottom,
+rgba(255,255,255,0),
+rgba(255,255,255,0) 50%,
+rgba(0,0,0,0.15) 50%,
+rgba(0,0,0,0.15)
+);
+background-size: 100% 4px;
+z-index: 51;
+}
+
+.vhs-glitch-bar {
+position: absolute;
+left: 0;
+width: 100%;
+height: 40px;
+background: rgba(255, 255, 255, 0.03);
+backdrop-filter: blur(2px) hue-rotate(5deg);
+-webkit-backdrop-filter: blur(2px) hue-rotate(5deg);
+z-index: 52;
+pointer-events: none;
+animation: glitch-bar-anim 4s linear infinite;
+box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+border-top: 1px solid rgba(255,255,255,0.05);
+border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+@keyframes glitch-bar-anim {
+0% { top: -10%; opacity: 0; }
+10% { opacity: 1; }
+90% { top: 110%; opacity: 1; }
+100% { top: 110%; opacity: 0; }
+}
+
+.rgb-text-glitch {
+text-shadow:
+1px 0 0 rgba(255, 0, 0, 0.5),
+-1px 0 0 rgba(0, 255, 255, 0.5);
+animation: rgb-flicker 3s infinite;
+}
+
+@keyframes rgb-flicker {
+0%, 95% { text-shadow: 1px 0 0 rgba(255, 0, 0, 0.5), -1px 0 0 rgba(0, 255, 255, 0.5); }
+96% { text-shadow: 3px 0 0 rgba(255, 0, 0, 0.8), -3px 0 0 rgba(0, 255, 255, 0.8); }
+97% { text-shadow: -2px 0 0 rgba(255, 0, 0, 0.8), 2px 0 0 rgba(0, 255, 255, 0.8); }
+100% { text-shadow: 1px 0 0 rgba(255, 0, 0, 0.5), -1px 0 0 rgba(0, 255, 255, 0.5); }
+}
+File 2: src/App.tsx
+code
+Tsx
+export default function App() {
+return (
+&lt;div className=&quot;min-h-screen bg-black flex items-center justify-center p-4&quot;&gt;
+{/* 3:4 Aspect Ratio Frame (600x800) */}
+&lt;div className=&quot;w-[600px] h-[800px] shrink-0 border border-white/10 rounded-2xl overflow-hidden relative shadow-2xl flex flex-col bg-black&quot;&gt;
+{/* Background Video */}
+&lt;video
+autoPlay
+loop
+muted
+playsInline
+className=&quot;absolute inset-0 w-full h-full object-cover z-0 opacity-100&quot;
+src=&quot;https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260505_105838_084968f2-4415-42a4-971a-3bec54539549.mp4&quot;
+/&gt;
+
+{/* VHS Overlay Elements (On top of everything) */}
+&lt;div className=&quot;vhs-scanlines&quot;&gt;&lt;/div&gt;
+&lt;div className=&quot;vhs-noise&quot;&gt;&lt;/div&gt;
+&lt;div className=&quot;vhs-glitch-bar&quot;&gt;&lt;/div&gt;
+
+{/* Content Area - Middle of the frame */}
+&lt;div className=&quot;relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 -mt-[358px]&quot;&gt;
+
+&lt;h1 className=&quot;font-serif text-[64px] leading-[0.95] tracking-[-2.46px] max-w-xl text-white animate-fade-rise rgb-text-glitch&quot;&gt;
+Focus in a&lt;br/&gt;Distracted World
+&lt;/h1&gt;
+
+&lt;p className=&quot;font-sans text-[17px] text-white/95 mt-8 leading-relaxed max-w-[480px] animate-fade-rise-delay rgb-text-glitch&quot;&gt;
+We&#39;re designing tools for deep thinkers, bold creators, and quiet rebels. Amid the chaos, we build digital spaces for sharp focus and inspired work.
+&lt;/p&gt;
+
+&lt;button className=&quot;liquid-glass rounded-full px-14 py-4 text-white text-[15px] font-sans mt-12 hover:scale-[1.03] transition-transform animate-fade-rise-delay-2 tracking-wide&quot;&gt;
+Begin Journey
+&lt;/button&gt;
+&lt;/div&gt;
+
+{/* Footer Navbar */}
+&lt;div className=&quot;absolute bottom-8 left-1/2 -translate-x-1/2 z-10&quot;&gt;
+&lt;div className=&quot;text-3xl tracking-tight text-white font-serif rgb-text-glitch&quot;&gt;
+Velorah&lt;sup className=&quot;text-[10px] ml-0.5 relative -top-3&quot;&gt;®&lt;/sup&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+);
+}
+code
+Code
+***
+
+### Option 2: The Highly Detailed Descriptive Prompt
+*Use this if you want an AI to construct it from scratch based entirely on instructions rather than writing the pre-built code block.*
+
+```text
+Please build a React + Tailwind CSS web application that recreates a specific 3:4 aspect ratio social media post perfectly. Follow these exact formatting rules:
+
+1. **Global Configuration (CSS)**:
+- Import &#39;Instrument Serif&#39; and &#39;Inter&#39; from Google Fonts. Map Instrument Serif to `--font-serif` and Inter to `--font-sans` in the CSS theme block.
+
+2. **Core Layout (`App.tsx`)**:
+- The outer container should strictly be `min-h-screen bg-black flex items-center justify-center p-4`.
+- The central post frame needs to be exactly `w-[600px] h-[800px]` with `border border-white/10 rounded-2xl overflow-hidden relative shadow-2xl bg-black`.
+
+3. **Background Media**:
+- Add an absolutely positioned, full-cover `&lt;video&gt;` tag behind all content (z-0 index, opacity-100).
+- Use `autoPlay loop muted playsInline`.
+- The source URL must be exactly: `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260505_105838_084968f2-4415-42a4-971a-3bec54539549.mp4`
+
+4. **VHS &amp; RGB Glitch Layers (CSS required)**:
+- Create a `.vhs-scanlines` class using a transparent-to-black linear gradient (background-size: 100% 4px).
+- Create a `.vhs-noise` class using a base64 SVG `&lt;feTurbulence&gt;` fractal noise filter layered with blend-mode overlay.
+- Create a `.vhs-glitch-bar` horizontally scanning top-to-bottom across the screen over 4 seconds continuously.
+- Create an `.rgb-text-glitch` class using animated text-shadows that split cyan (`rgba(0, 255, 255, 0.5)`) and red (`rgba(255, 0, 0, 0.5)`) rhythmically. Apply this text glitch class to ALL text elements.
+
+5. **Main Content Overlay**:
+- Shift the main central content heavily up the page using Tailwind&#39;s exact specific margin: `-mt-[358px]`.
+- Heading (H1): &quot;Focus in a&lt;br/&gt;Distracted World&quot;. Styling: 64px font-serif, leading-[0.95], tight tracking (-2.46px), white text fading up.
+- Subtitle (P): &quot;We&#39;re designing tools for deep thinkers, bold creators, and quiet rebels. Amid the chaos, we build digital spaces for sharp focus and inspired work.&quot; Styling: 17px font-sans, leading-relaxed, fading up with a 0.2s delay.
+- Button: &quot;Begin Journey&quot;. Include a custom `.liquid-glass` CSS class giving it a luminosity background blend, 4px backdrop blur, and a sub-pixel linear-gradient border using `-webkit-mask`. Add hover scaling (`hover:scale-[1.03]`).
+
+6. **Footer / Branding**:
+- Add a bottom footer absolutely positioned to `bottom-8 left-1/2 -translate-x-1/2`.
+- The text should say &quot;Velorah&quot; with a registered trademark symbol `®` raised slightly (`sup` tag with `-top-3 text-[10px]`). Apply the text glitch and serif styling.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="digital-reality-hero.html">Digital Reality<small>Social Media · social-media</small></a><a href="social-media-posts-hero.html">Social Media Posts<small>Social Media · social-media</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Multi-step Form Flow — Onboarding 提示词 | MotionSites Prompts</title>
+<meta name="description" content="A modular, step-based mobile flow designed for creating or editing content with clarity and momentum, where each screen presents a single logical input gro">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/community-superdesign-multi-step-form-flow.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Multi-step Form Flow — Onboarding 提示词">
+<meta property="og:description" content="A modular, step-based mobile flow designed for creating or editing content with clarity and momentum, where each screen presents a single logical input gro">
+<meta property="og:url" content="https://prompt-site.shop/p/community-superdesign-multi-step-form-flow.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/community-superdesign-multi-step-form-flow.png">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Multi-step Form Flow","description":"A modular, step-based mobile flow designed for creating or editing content with clarity and momentum, where each screen presents a single logical input group, guided by a top progress indicator and a bottom-anchored primary action. Users can move forward or backward without data loss, with progress ","url":"https://prompt-site.shop/p/community-superdesign-multi-step-form-flow.html","inLanguage":"zh-CN","genre":"Onboarding","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-onboarding">Onboarding</a></div><h1>Multi-step Form Flow</h1><div class="chip-row"><span class="chip">Onboarding</span><span class="chip">form</span><span class="chip">社区公开收藏</span></div><div class="facts"><span>正文：13,044 字符</span></div><div class="hero-media"><img src="../assets/previews/community-superdesign-multi-step-form-flow.png" alt="Multi-step Form Flow 动效预览" loading="lazy"><div class="media-note">本地预览图 · png</div></div><h2>简介</h2><p>A modular, step-based mobile flow designed for creating or editing content with clarity and momentum, where each screen presents a single logical input group, guided by a top progress indicator and a bottom-anchored primary action. Users can move forward or backward without data loss, with progress automatically saved between steps, while the reusable layout system supports optional and conditional steps across different flows. Presented in a minimal wireframe style, visual progression is communicated through spacing and hierarchy rather than visual decoration, making this approach best for onboarding, multi-step setup, preference configuration, and any mobile experience where reducing cognitive load and maximizing completion rate are critical.</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Here is a reference implementation:
+
+~~~html
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Mobile Multi-step Flow&lt;/title&gt;
+&lt;script src=&quot;https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js&quot;&gt;&lt;/script&gt;
+&lt;link href=&quot;https://api.fontshare.com/v2/css?f[]=general-sans@700,600,500,400&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;script&gt;
+tailwind.config = {
+theme: {
+extend: {
+fontFamily: {
+sans: [&#39;General Sans&#39;, &#39;sans-serif&#39;],
+},
+colors: {
+gray: {
+50: &#39;#f9fafb&#39;,
+100: &#39;#f3f4f6&#39;,
+200: &#39;#e5e7eb&#39;,
+300: &#39;#d1d5db&#39;,
+400: &#39;#9ca3af&#39;,
+500: &#39;#6b7280&#39;,
+600: &#39;#4b5563&#39;,
+700: &#39;#374151&#39;,
+800: &#39;#1f2937&#39;,
+900: &#39;#111827&#39;,
+}
+},
+animation: {
+&#39;fade-in&#39;: &#39;fadeIn 0.3s ease-out forwards&#39;,
+&#39;slide-up&#39;: &#39;slideUp 0.4s cubic-bezier(0, 0, 0.2, 1) forwards&#39;,
+},
+keyframes: {
+fadeIn: {
+&#39;0%&#39;: { opacity: &#39;0&#39; },
+&#39;100%&#39;: { opacity: &#39;1&#39; },
+},
+slideUp: {
+&#39;0%&#39;: { opacity: &#39;0&#39;, transform: &#39;translateY(10px)&#39; },
+&#39;100%&#39;: { opacity: &#39;1&#39;, transform: &#39;translateY(0)&#39; },
+}
+}
+}
+}
+}
+&lt;/script&gt;
+&lt;style&gt;
+::-webkit-scrollbar { width: 0px; background: transparent; }
+input:-webkit-autofill {
+-webkit-box-shadow: 0 0 0 30px #fff inset !important;
+-webkit-text-fill-color: #111827 !important;
+}
+.step-transition {
+transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;app-root&quot; class=&quot;w-full h-screen flex flex-col bg-white font-sans text-gray-900 overflow-hidden&quot;&gt;
+
+&lt;!-- Header Section --&gt;
+&lt;header class=&quot;shrink-0 pt-14 pb-2 px-6 bg-white/95 backdrop-blur-sm z-20 border-b border-gray-100/50&quot;&gt;
+&lt;div class=&quot;flex items-center justify-between mb-6&quot;&gt;
+&lt;button id=&quot;nav-back-btn&quot; class=&quot;p-2 -ml-2 text-gray-400 hover:text-gray-900 transition-colors rounded-full hover:bg-gray-50&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:chevron-left&quot; width=&quot;24&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/button&gt;
+&lt;div class=&quot;flex flex-col items-center&quot;&gt;
+&lt;span class=&quot;text-[10px] font-bold uppercase tracking-widest text-gray-400&quot;&gt;Onboarding&lt;/span&gt;
+&lt;/div&gt;
+&lt;button id=&quot;nav-save-btn&quot; class=&quot;p-2 -mr-2 text-sm font-semibold text-gray-500 hover:text-gray-900 transition-colors&quot;&gt;
+Save
+&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Progress Visualizer --&gt;
+&lt;div id=&quot;progress-bar-container&quot; class=&quot;flex items-center justify-between gap-2&quot;&gt;
+&lt;div class=&quot;h-1 flex-1 bg-gray-200 rounded-full overflow-hidden&quot;&gt;&lt;div class=&quot;h-full w-0 bg-gray-900 transition-all duration-500&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;h-1 flex-1 bg-gray-200 rounded-full overflow-hidden&quot;&gt;&lt;div class=&quot;h-full w-0 bg-gray-900 transition-all duration-500&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;h-1 flex-1 bg-gray-200 rounded-full overflow-hidden&quot;&gt;&lt;div class=&quot;h-full w-0 bg-gray-900 transition-all duration-500&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;h-1 flex-1 bg-gray-200 rounded-full overflow-hidden&quot;&gt;&lt;div class=&quot;h-full w-0 bg-gray-900 transition-all duration-500&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex justify-between mt-2&quot;&gt;
+&lt;span id=&quot;header-step-title&quot; class=&quot;text-xs font-medium text-gray-900&quot;&gt;Step 1: Security Setup&lt;/span&gt;
+&lt;span id=&quot;header-progress-text&quot; class=&quot;text-xs text-gray-400&quot;&gt;0% Completed&lt;/span&gt;
+&lt;/div&gt;
+&lt;/header&gt;
+
+&lt;!-- Main Content --&gt;
+&lt;main id=&quot;step-content-container&quot; class=&quot;flex-1 overflow-y-auto bg-white&quot;&gt;
+&lt;!-- Dynamic Content Injected Here --&gt;
+&lt;/main&gt;
+
+&lt;!-- Footer Section --&gt;
+&lt;footer class=&quot;shrink-0 bg-white border-t border-gray-100 px-6 pt-4 pb-[34px] shadow-[0_-4px_20px_rgba(0,0,0,0.02)] z-30&quot;&gt;
+&lt;div class=&quot;flex items-center gap-3&quot;&gt;
+&lt;button id=&quot;btn-prev&quot; class=&quot;flex-1 py-3.5 px-4 rounded-xl border border-gray-200 bg-white text-gray-700 text-sm font-semibold hover:bg-gray-50 active:bg-gray-100 transition-all focus:outline-none focus:ring-2 focus:ring-gray-200 disabled:opacity-30 disabled:cursor-not-allowed&quot;&gt;
+Back
+&lt;/button&gt;
+&lt;button id=&quot;btn-next&quot; class=&quot;flex-[2] py-3.5 px-4 rounded-xl bg-gray-900 text-white text-sm font-semibold shadow-lg shadow-gray-900/10 hover:bg-gray-800 active:scale-[0.98] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2&quot;&gt;
+&lt;span id=&quot;btn-next-text&quot;&gt;Continue&lt;/span&gt;
+&lt;iconify-icon id=&quot;btn-next-icon&quot; icon=&quot;lucide:arrow-right&quot; width=&quot;18&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;mt-4 flex justify-center&quot;&gt;
+&lt;p class=&quot;text-[10px] text-gray-400 flex items-center gap-1&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:lock&quot; width=&quot;10&quot;&gt;&lt;/iconify-icon&gt;
+Your data is encrypted and secure
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/footer&gt;
+
+&lt;/div&gt;
+
+&lt;script&gt;
+const steps = [
+{
+id: 1,
+title: &quot;Security Setup&quot;,
+headerTitle: &quot;Step 1: Security Setup&quot;,
+progress: &quot;25%&quot;,
+content: `
+&lt;div class=&quot;flex flex-col min-h-full px-6 py-6 animate-slide-up&quot;&gt;
+&lt;h1 class=&quot;text-2xl font-bold tracking-tight text-gray-900 mb-2&quot;&gt;Create your account&lt;/h1&gt;
+&lt;p class=&quot;text-gray-500 text-sm mb-8 leading-relaxed&quot;&gt;Set up your secure credentials to get started with our professional network.&lt;/p&gt;
+&lt;div class=&quot;space-y-6&quot;&gt;
+&lt;div class=&quot;space-y-1.5&quot;&gt;
+&lt;label class=&quot;block text-sm font-semibold text-gray-700&quot;&gt;Email Address&lt;/label&gt;
+&lt;input type=&quot;email&quot; placeholder=&quot;name@company.com&quot; class=&quot;block w-full rounded-lg border-gray-200 bg-white py-3 px-3 text-gray-900 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 sm:text-sm shadow-sm&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;space-y-1.5&quot;&gt;
+&lt;label class=&quot;block text-sm font-semibold text-gray-700&quot;&gt;Password&lt;/label&gt;
+&lt;div class=&quot;relative&quot;&gt;
+&lt;input type=&quot;password&quot; placeholder=&quot;Minimum 8 characters&quot; class=&quot;block w-full rounded-lg border-gray-200 bg-white py-3 px-3 text-gray-900 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 sm:text-sm shadow-sm&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:eye-off&quot; class=&quot;absolute right-3 top-3.5 text-gray-400 cursor-pointer&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+`
+},
+{
+id: 2,
+title: &quot;Identity Verification&quot;,
+headerTitle: &quot;Step 2: Identity Verification&quot;,
+progress: &quot;50%&quot;,
+content: `
+&lt;div class=&quot;flex flex-col min-h-full px-6 py-6 animate-slide-up&quot;&gt;
+&lt;h1 class=&quot;text-2xl font-bold tracking-tight text-gray-900 mb-2&quot;&gt;Verify your identity&lt;/h1&gt;
+&lt;p class=&quot;text-gray-500 text-sm mb-8 leading-relaxed&quot;&gt;Next, let&#39;s confirm who you are. We use these details to prevent unauthorized access.&lt;/p&gt;
+&lt;div class=&quot;relative pl-4 border-l-2 border-gray-900 ml-3 space-y-8 pb-8&quot;&gt;
+&lt;div class=&quot;absolute -left-[9px] top-0 w-4 h-4 rounded-full border-[3px] border-white bg-gray-900 shadow-sm&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;space-y-1.5&quot;&gt;
+&lt;label class=&quot;block text-sm font-semibold text-gray-700&quot;&gt;Full Legal Name&lt;span class=&quot;block text-[10px] font-normal text-gray-400 mt-0.5&quot;&gt;As shown on ID&lt;/span&gt;&lt;/label&gt;
+&lt;div class=&quot;relative group&quot;&gt;
+&lt;input type=&quot;text&quot; value=&quot;Jordan Mitchell&quot; class=&quot;block w-full rounded-lg border-gray-200 bg-white py-3 pl-3 pr-10 text-gray-900 sm:text-sm shadow-sm&quot;&gt;
+&lt;div class=&quot;absolute inset-y-0 right-0 flex items-center pr-3&quot;&gt;&lt;iconify-icon icon=&quot;lucide:check-circle-2&quot; class=&quot;text-green-600 text-lg&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;space-y-1.5&quot;&gt;
+&lt;label class=&quot;block text-sm font-semibold text-gray-700&quot;&gt;Phone Number&lt;/label&gt;
+&lt;div class=&quot;relative&quot;&gt;
+&lt;input type=&quot;tel&quot; value=&quot;+1 (555) 012-34&quot; class=&quot;block w-full rounded-lg border-gray-200 bg-gray-50/50 py-3 pl-3 pr-10 text-gray-900 sm:text-sm&quot;&gt;
+&lt;div class=&quot;absolute inset-y-0 right-0 flex items-center pr-3&quot;&gt;&lt;iconify-icon icon=&quot;lucide:loader-2&quot; class=&quot;text-gray-400 text-lg animate-spin&quot;&gt;&lt;/iconify-icon&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;space-y-1.5&quot;&gt;
+&lt;label class=&quot;block text-sm font-semibold text-gray-700&quot;&gt;Date of Birth&lt;/label&gt;
+&lt;input type=&quot;text&quot; placeholder=&quot;MM/DD/YYYY&quot; class=&quot;block w-full rounded-lg border-gray-200 bg-white py-3 px-3 text-gray-900 sm:text-sm shadow-sm&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+`
+},
+{
+id: 3,
+title: &quot;Professional Profile&quot;,
+headerTitle: &quot;Step 3: Professional Profile&quot;,
+progress: &quot;75%&quot;,
+content: `
+&lt;div class=&quot;flex flex-col min-h-full px-6 py-6 animate-slide-up&quot;&gt;
+&lt;h1 class=&quot;text-2xl font-bold tracking-tight text-gray-900 mb-2&quot;&gt;Professional Experience&lt;/h1&gt;
+&lt;p class=&quot;text-gray-500 text-sm mb-8 leading-relaxed&quot;&gt;Help us tailor your experience by providing your professional background.&lt;/p&gt;
+&lt;div class=&quot;space-y-6&quot;&gt;
+&lt;div class=&quot;space-y-1.5&quot;&gt;
+&lt;label class=&quot;block text-sm font-semibold text-gray-700&quot;&gt;Primary Role&lt;/label&gt;
+&lt;select class=&quot;block w-full rounded-lg border-gray-200 bg-white py-3 px-3 text-gray-900 sm:text-sm shadow-sm appearance-none&quot;&gt;
+&lt;option&gt;Select an option&lt;/option&gt;
+&lt;option&gt;Software Engineer&lt;/option&gt;
+&lt;option&gt;Product Designer&lt;/option&gt;
+&lt;option&gt;Marketing Manager&lt;/option&gt;
+&lt;/select&gt;
+&lt;/div&gt;
+&lt;div class=&quot;space-y-1.5&quot;&gt;
+&lt;label class=&quot;block text-sm font-semibold text-gray-700&quot;&gt;Years of Experience&lt;/label&gt;
+&lt;div class=&quot;grid grid-cols-3 gap-2&quot;&gt;
+&lt;button class=&quot;py-3 rounded-lg border border-gray-200 text-sm font-medium hover:bg-gray-50&quot;&gt;1-3&lt;/button&gt;
+&lt;button class=&quot;py-3 rounded-lg border border-gray-900 bg-gray-900 text-white text-sm font-medium&quot;&gt;4-7&lt;/button&gt;
+&lt;button class=&quot;py-3 rounded-lg border border-gray-200 text-sm font-medium hover:bg-gray-50&quot;&gt;8+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;space-y-1.5&quot;&gt;
+&lt;label class=&quot;block text-sm font-semibold text-gray-700&quot;&gt;Portfolio Link (Optional)&lt;/label&gt;
+&lt;input type=&quot;url&quot; placeholder=&quot;https://...&quot; class=&quot;block w-full rounded-lg border-gray-200 bg-white py-3 px-3 text-gray-900 sm:text-sm shadow-sm&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+`
+},
+{
+id: 4,
+title: &quot;Final Review&quot;,
+headerTitle: &quot;Step 4: Final Review&quot;,
+progress: &quot;100%&quot;,
+content: `
+&lt;div class=&quot;flex flex-col min-h-full px-6 py-6 animate-slide-up&quot;&gt;
+&lt;h1 class=&quot;text-2xl font-bold tracking-tight text-gray-900 mb-2&quot;&gt;Review &amp; Confirm&lt;/h1&gt;
+&lt;p class=&quot;text-gray-500 text-sm mb-8 leading-relaxed&quot;&gt;Please review your information before completing your registration.&lt;/p&gt;
+&lt;div class=&quot;space-y-4&quot;&gt;
+&lt;div class=&quot;p-4 rounded-xl bg-gray-50 border border-gray-100&quot;&gt;
+&lt;div class=&quot;flex items-center justify-between mb-2&quot;&gt;
+&lt;h4 class=&quot;text-xs font-bold uppercase tracking-wider text-gray-400&quot;&gt;Security&lt;/h4&gt;
+&lt;button class=&quot;text-xs font-semibold text-gray-900 underline&quot;&gt;Edit&lt;/button&gt;
+&lt;/div&gt;
+&lt;p class=&quot;text-sm text-gray-900 font-medium&quot;&gt;jordan.m@example.com&lt;/p&gt;
+&lt;p class=&quot;text-xs text-gray-500&quot;&gt;Password set • MFA Enabled&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;p-4 rounded-xl bg-gray-50 border border-gray-100&quot;&gt;
+&lt;div class=&quot;flex items-center justify-between mb-2&quot;&gt;
+&lt;h4 class=&quot;text-xs font-bold uppercase tracking-wider text-gray-400&quot;&gt;Identity&lt;/h4&gt;
+&lt;button class=&quot;text-xs font-semibold text-gray-900 underline&quot;&gt;Edit&lt;/button&gt;
+&lt;/div&gt;
+&lt;p class=&quot;text-sm text-gray-900 font-medium&quot;&gt;Jordan Mitchell&lt;/p&gt;
+&lt;p class=&quot;text-xs text-gray-500&quot;&gt;Verified phone • +1 (555) 012-34&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;p-4 rounded-xl bg-gray-50 border border-gray-100&quot;&gt;
+&lt;div class=&quot;flex items-center justify-between mb-2&quot;&gt;
+&lt;h4 class=&quot;text-xs font-bold uppercase tracking-wider text-gray-400&quot;&gt;Professional&lt;/h4&gt;
+&lt;button class=&quot;text-xs font-semibold text-gray-900 underline&quot;&gt;Edit&lt;/button&gt;
+&lt;/div&gt;
+&lt;p class=&quot;text-sm text-gray-900 font-medium&quot;&gt;Product Designer&lt;/p&gt;
+&lt;p class=&quot;text-xs text-gray-500&quot;&gt;4-7 Years experience&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+`
+}
+];
+
+let currentStepIndex = 0;
+
+const headerTitle = document.getElementById(&#39;header-step-title&#39;);
+const progressText = document.getElementById(&#39;header-progress-text&#39;);
+const contentContainer = document.getElementById(&#39;step-content-container&#39;);
+const btnPrev = document.getElementById(&#39;btn-prev&#39;);
+const btnNext = document.getElementById(&#39;btn-next&#39;);
+const btnNextText = document.getElementById(&#39;btn-next-text&#39;);
+const btnNextIcon = document.getElementById(&#39;btn-next-icon&#39;);
+const navBackBtn = document.getElementById(&#39;nav-back-btn&#39;);
+const progressSegments = document.querySelectorAll(&#39;#progress-bar-container &gt; div &gt; div&#39;);
+
+function updateUI() {
+const step = steps[currentStepIndex];
+
+// Update Header
+headerTitle.textContent = step.headerTitle;
+progressText.textContent = `${step.progress} Completed`;
+
+// Update Progress Bars
+progressSegments.forEach((bar, idx) =&gt; {
+if (idx &lt; currentStepIndex) {
+bar.style.width = &#39;100%&#39;;
+} else if (idx === currentStepIndex) {
+bar.style.width = &#39;50%&#39;; // Intermediate state showing progress
+setTimeout(() =&gt; bar.style.width = &#39;100%&#39;, 100); // Animate to full
+} else {
+bar.style.width = &#39;0%&#39;;
+}
+});
+
+// Update Content
+contentContainer.innerHTML = step.content;
+
+// Update Footer
+btnPrev.disabled = currentStepIndex === 0;
+if (currentStepIndex === steps.length - 1) {
+btnNextText.textContent = &quot;Complete Registration&quot;;
+btnNextIcon.setAttribute(&#39;icon&#39;, &#39;lucide:check&#39;);
+} else {
+btnNextText.textContent = currentStepIndex === 1 ? &quot;Verify and Continue&quot; : &quot;Continue&quot;;
+btnNextIcon.setAttribute(&#39;icon&#39;, &#39;lucide:arrow-right&#39;);
+}
+}
+
+btnNext.addEventListener(&#39;click&#39;, () =&gt; {
+if (currentStepIndex &lt; steps.length - 1) {
+currentStepIndex++;
+updateUI();
+contentContainer.scrollTo({ top: 0, behavior: &#39;smooth&#39; });
+} else {
+// Final step action
+btnNext.innerHTML = `&lt;iconify-icon icon=&quot;lucide:loader-2&quot; class=&quot;animate-spin&quot; width=&quot;20&quot;&gt;&lt;/iconify-icon&gt;`;
+setTimeout(() =&gt; {
+alert(&quot;Registration Complete!&quot;);
+location.reload();
+}, 1500);
+}
+});
+
+btnPrev.addEventListener(&#39;click&#39;, () =&gt; {
+if (currentStepIndex &gt; 0) {
+currentStepIndex--;
+updateUI();
+}
+});
+
+navBackBtn.addEventListener(&#39;click&#39;, () =&gt; {
+if (currentStepIndex &gt; 0) {
+currentStepIndex--;
+updateUI();
+}
+});
+
+// Initialize
+updateUI();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+~~~</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：superdesigndev/superdesign-prompts<br>原始文件：<code>prompts/multi-step-form-flow/README.md</code><br>许可证：CC0-1.0<br>作者：Shirley Lou<br><a href="https://github.com/superdesigndev/superdesign-prompts/blob/main/prompts/multi-step-form-flow/README.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="community-superdesign-editorial-saas-onboarding.html">Editorial SaaS Onboarding<small>Onboarding · onboarding</small></a><a href="community-superdesign-modal-design-success-celebration-pastel-legibility-fixed-9fbd65.html">Modal Design · success-celebration (pastel) — legibility fixed<small>Onboarding · onboarding</small></a><a href="community-superdesign-system-initialization-trust-and-transparency.html">System Initialization - Trust &amp; Transparency<small>Onboarding · onboarding</small></a><a href="community-superdesign-superdesign-setup-inline-preview.html">Superdesign Setup - Inline Preview<small>Onboarding · onboarding</small></a><a href="community-superdesign-technical-system-onboarding.html">Technical System Onboarding<small>Onboarding · onboarding</small></a><a href="community-superdesign-high-energy-onboarding.html">High energy onboarding<small>Onboarding · form</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

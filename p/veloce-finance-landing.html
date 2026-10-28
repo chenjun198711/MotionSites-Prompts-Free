@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Veloce Finance — Landing Page 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色渐变背景的金融科技着陆页，采用品牌专属蓝绿渐变色，包含4个动态动画区块，展示现代金融应用的核心功能。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/veloce-finance-landing.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Veloce Finance — Landing Page 提示词">
+<meta property="og:description" content="深色渐变背景的金融科技着陆页，采用品牌专属蓝绿渐变色，包含4个动态动画区块，展示现代金融应用的核心功能。">
+<meta property="og:url" content="https://prompt-site.shop/p/veloce-finance-landing.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Veloce Finance","description":"深色渐变背景的金融科技着陆页，采用品牌专属蓝绿渐变色，包含4个动态动画区块，展示现代金融应用的核心功能。","url":"https://prompt-site.shop/p/veloce-finance-landing.html","inLanguage":"zh-CN","genre":"Landing Page","dateCreated":"2026-04-09T07:11:36.035999+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-landing_page">Landing Page</a></div><h1>Veloce Finance</h1><div class="chip-row"><span class="chip">Landing Page</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-04-09</span><span>正文：8,453 字符</span></div><div class="hero-media"><video src="../assets/previews/veloce-finance-landing.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>深色渐变背景的金融科技着陆页，采用品牌专属蓝绿渐变色，包含4个动态动画区块，展示现代金融应用的核心功能。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a React + TypeScript + Vite landing page for a fintech app called &quot;veloce&quot; using Tailwind CSS and Framer Motion. The page has 4 sections. Do not use purple/indigo colors — the gradient used is a specific brand gradient defined below.
+
+Dependencies:
+
+framer-motion
+lucide-react
+@supabase/Bolt Database-js (not used in UI but installed)
+Fonts (Tailwind config + CSS):
+
+In tailwind.config.js, extend fontFamily with:
+
+
+&#39;manrope&#39;: [&#39;Manrope&#39;, &#39;sans-serif&#39;],
+&#39;helvetica&#39;: [&#39;Helvetica&#39;, &#39;Arial&#39;, &#39;sans-serif&#39;],
+&#39;helvetica-neue&#39;: [&#39;Helvetica Neue&#39;, &#39;Helvetica&#39;, &#39;Arial&#39;, &#39;sans-serif&#39;],
+&#39;inter&#39;: [&#39;Inter&#39;, &#39;sans-serif&#39;],
+&#39;product-sans&#39;: [&#39;Product Sans&#39;, &#39;sans-serif&#39;],
+&#39;sf-compact&#39;: [&#39;SF Compact Display&#39;, &#39;SF Compact Text&#39;, &#39;system-ui&#39;, &#39;sans-serif&#39;],
+In tailwind.config.js, extend colors with:
+
+
+&#39;sintra-dark&#39;: &#39;#00041F&#39;,
+&#39;sintra-accent&#39;: &#39;#B56939&#39;,
+&#39;sintra-light&#39;: &#39;#EFF4FF&#39;,
+&#39;sintra-gray&#39;: &#39;#49484F&#39;,
+In index.css, import from Google Fonts:
+
+
+@import url(&#39;https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap&#39;);
+@import url(&#39;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap&#39;);
+Also add globally:
+
+
+@layer base {
+* {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+}
+Brand gradient: from-[#B56939] via-[#5C3779] to-[#454BBB] (left to right)
+
+src/components/BlurIn.tsx
+
+A reusable wrapper component using Framer Motion&#39;s useInView. When the element enters the viewport (once), animate from filter: blur(20px), opacity: 0 to filter: blur(0px), opacity: 1 over 1.2s. Export as named export BlurIn.
+
+src/App.tsx
+
+The root layout is a min-h-screen div. The first child is a full-screen h-screen flex flex-col relative div that contains:
+
+A background &lt;video&gt; tag (absolute, covers full area, object-cover, on mobile positioned at object-[10%_center], on desktop object-center, z-index 0, autoPlay loop muted playsInline) with this exact src:
+
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_154629_a31a2372-bd54-4f7e-ac9b-21246141a664.mp4
+&lt;Header /&gt; component
+&lt;Hero /&gt; component
+Below the hero screen, render &lt;InsightsSection /&gt; then &lt;TextFillSection /&gt;.
+
+src/components/Header.tsx
+
+A sticky top header with justify-between items-center px-6 md:px-12 lg:px-15 py-6 z-20:
+
+Left side: Logo text &quot;veloce&quot; in font-manrope font-semibold text-2xl md:text-3xl text-[#00041F], followed on desktop (lg:) by a nav with links: &quot;Home&quot;, &quot;About us&quot;, &quot;Faq&quot; — font-helvetica text-base text-[#00041F] hover:opacity-70 transition-opacity.
+
+Right side (desktop only, lg:): &quot;Log in&quot; button (font-inter font-medium text-base text-[#00041F] hover:opacity-70), and a &quot;Sign up&quot; button (bg-[#00041F] text-[#EFF4FF] px-6 py-2.5 rounded-[40px] font-inter font-medium text-base hover:opacity-90).
+
+Mobile hamburger: Show a Menu / X icon from lucide-react. Toggle between them with AnimatePresence + motion.div, using rotate + opacity animation (duration: 0.2). When open, show a dropdown (absolute top-24 left-0 right-0 bg-white shadow-lg mx-4 rounded-lg px-6 py-8 z-50) with staggered motion.a nav links (slide in from x: -20, stagger 0.1s) and &quot;Log in&quot; / &quot;Sign up&quot; buttons below a border separator. The mobile menu animates in with opacity: 0, y: -20 → opacity: 1, y: 0 over 0.3s easeOut.
+
+src/components/Hero.tsx
+
+A flex-1 flex flex-col items-center justify-between px-6 md:px-12 pb-12 md:pb-16 relative div.
+
+At the bottom, apply a fade-out overlay: absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent z-20 pointer-events-none.
+
+Center: Wrap an &lt;h1&gt; in &lt;BlurIn&gt;. The h1 has text-center font-helvetica-neue font-medium leading-tight text-[#010828] max-w-2xl. It has two inline spans:
+
+&quot;Fast payments, your way at &quot; — text-4xl md:text-6xl lg:text-7xl tracking-[-0.03em]
+&quot;lightspeed.&quot; — same sizes, but colored with the brand gradient via bg-gradient-to-r from-[#B56939] via-[#5C3779] to-[#454BBB] bg-clip-text text-transparent tracking-[-0.03em]
+Bottom: A subtitle &quot;Handle finances with ease and power&quot; in text-[#49484F] text-base md:text-lg font-helvetica-neue, then two side-by-side store badge buttons:
+
+Google Play badge: Border button px-3 py-2 rounded-lg border border-[#00041F] hover:bg-gray-50. Contains an &lt;img&gt; (w-6 h-7 object-contain) with src:
+
+https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_154325_6e98dcdb-51ba-446a-8c52-2d2f2675a575.png&amp;w=1280&amp;q=85
+Next to it: &quot;GET IT ON&quot; in text-[10px] font-product-sans uppercase text-[#00041F] and &quot;Google Play&quot; in text-sm font-product-sans font-bold text-[#00041F].
+App Store badge: Same border style. Image src:
+
+https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_154356_13de5dda-6dfe-4f54-b3e2-251301254578.png&amp;w=1280&amp;q=85
+Text: &quot;Download on the&quot; in text-[10px] font-sf-compact text-[#00041F] and &quot;App Store&quot; in text-sm font-sf-compact font-medium text-[#00041F].
+src/components/InsightsSection.tsx
+
+A white section px-6 md:px-12 lg:px-[60px] py-20 bg-white flex flex-col gap-[90px].
+
+Top block (max-w-[517px] flex flex-col gap-10):
+
+Heading wrapped in &lt;BlurIn&gt;: &quot;Instant payment clarity counts&quot; — text-[#00041F] text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-[1] lg:leading-[60px] tracking-[-0.03em]
+Paragraph: &quot;Real-time data powers smarter spending choices every day&quot; — text-[#49484F] text-base md:text-lg lg:text-xl font-helvetica-neue max-w-[361px]
+Cards row (flex flex-col lg:flex-row items-stretch lg:items-end gap-5), animated with Framer Motion whileInView (once, amount: 0.2), stagger children 0.2s, each card animates from opacity: 0, y: 30 to visible over 0.6s easeOut:
+
+Three cards, each flex-1 p-10 rounded-[40px] relative overflow-hidden flex flex-col justify-end:
+
+Card 1 — min-h-[450px]. Video src:
+
+
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_143605_bc7bd6c0-9c68-49ff-a9d3-073a10759fa4.mp4
+Overlay: bg-[rgba(206,223,235,0.25)]. Stat: &quot;1.6M&quot;, description: &quot;Active members rely on us for effortless payment experiences&quot; (max-w-[377px])
+
+Card 2 — min-h-[350px]. Video src:
+
+
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_145119_f4ec4d9f-3ecd-4116-baa3-26e8cf2df976.mp4
+Overlay: bg-[rgba(247,236,233,0.6)]. Stat: &quot;850К&quot;, description: &quot;Transfers completed each day, quick and protected&quot; (max-w-[351px])
+
+Card 3 — min-h-[450px]. Video src:
+
+
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_140728_ae719193-f10b-4105-82fc-c989610b3aa6.mp4
+Overlay: bg-[rgba(218,218,218,0.2)]. Stat: &quot;120+&quot;, description: &quot;Nations enabled for instant checkouts and worldwide remittance&quot; (max-w-[351px])
+
+All three cards: stat number is text-5xl md:text-[60px] font-helvetica-neue font-medium leading-[1] md:leading-[60px] text-[#00041F]. Description is text-lg md:text-[22px] font-helvetica-neue opacity-80 text-[#49484F]. Content wrapper is relative z-10 max-w-[388px] flex flex-col gap-5. Video is absolute inset-0 w-full h-full object-cover. Overlay div is absolute inset-0.
+
+src/components/TextFillSection.tsx
+
+A scroll-driven text color fill animation. White background section: flex justify-center items-center px-6 md:px-16 py-24 md:py-32 bg-white mb-[30vh].
+
+Inner wrapper: max-w-2xl w-full text-center relative.
+
+An &lt;h2&gt; with text-4xl md:text-5xl lg:text-6xl font-helvetica-neue font-medium leading-tight relative tracking-[-0.03em] and two absolutely stacked spans with identical text: &quot;Handle payments fast &amp; sleek! Track expenses, reach targets, unlock insights to make sharper decisions, all in one app&quot;.
+
+Bottom span (base layer): block text-[#B8B7BA] (light gray, always visible)
+Top span (overlay): absolute inset-0 with the brand gradient (bg-gradient-to-r from-[#B56939] via-[#5C3779] to-[#454BBB] bg-clip-text text-transparent). Use inline style clipPath: inset(0 ${100 - fillPercentage}% 0 0) with transition: clip-path 0.1s linear to reveal from left to right.
+Scroll logic (via useEffect + useRef on the section div): On scroll, get the element&#39;s getBoundingClientRect().top. Define startFill = windowHeight * 0.8 and endFill = windowHeight * 0.2. When elementTop is between endFill and startFill, compute fillPercentage = ((startFill - elementTop) / (startFill - endFill)) * 100, clamped 0–100. Below startFill → 0%, above endFill → 100%.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="motionz-premium-landing-page.html">MotionZ Premium Landing Page<small>Landing Page · landing-page</small></a><a href="future-state.html">Future-State<small>Landing Page · hero</small></a><a href="3d-story.html">3D Story<small>Landing Page · hero</small></a><a href="financial-suite.html">Financial Suite<small>Landing Page · hero</small></a><a href="prompt-hero.html">PROMPT<small>Landing Page · hero</small></a><a href="health-portal.html">Health Portal<small>Landing Page · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NexaCore Results — Features Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="基于Tailwind CSS构建的精密数据展示区，桌面端采用阶梯式立柱布局，移动端切换为交替流动排版，使用Mazzard H字体呈现专业数据可视化效果。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/nexacore-results.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NexaCore Results — Features Section 提示词">
+<meta property="og:description" content="基于Tailwind CSS构建的精密数据展示区，桌面端采用阶梯式立柱布局，移动端切换为交替流动排版，使用Mazzard H字体呈现专业数据可视化效果。">
+<meta property="og:url" content="https://prompt-site.shop/p/nexacore-results.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/nexacore-results.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"NexaCore Results","description":"基于Tailwind CSS构建的精密数据展示区，桌面端采用阶梯式立柱布局，移动端切换为交替流动排版，使用Mazzard H字体呈现专业数据可视化效果。","url":"https://prompt-site.shop/p/nexacore-results.html","inLanguage":"zh-CN","genre":"Features Section","dateCreated":"2026-06-06T11:32:52.617503+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-features_section">Features Section</a></div><h1>NexaCore Results</h1><div class="chip-row"><span class="chip">Features Section</span><span class="chip">features</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-06-06</span><span>正文：9,154 字符</span></div><div class="hero-media"><img src="../assets/previews/nexacore-results.webp" alt="NexaCore Results 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>基于Tailwind CSS构建的精密数据展示区，桌面端采用阶梯式立柱布局，移动端切换为交替流动排版，使用Mazzard H字体呈现专业数据可视化效果。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a single React + TypeScript + Tailwind CSS v3 component called `PrecisionSection`. No external icon libraries — all icons are inline SVG or `&lt;img&gt;` tags. No `useState`, no animations, no hover states. Two separate layouts: a desktop staircase (absolutely-positioned pillars) and a mobile alternating-flow layout. The `sm:` breakpoint controls visibility between them.
+
+---
+
+## Global font
+
+Register **&quot;Mazzard H&quot;** in `index.css` and apply it globally:
+
+```css
+@font-face {
+font-family: &#39;Mazzard H&#39;;
+font-weight: 400;
+font-style: normal;
+src: url(&#39;https://db.onlinewebfonts.com/t/eb5b5ee332420add9a40ee988cb6ac37.woff2&#39;) format(&#39;woff2&#39;),
+url(&#39;https://db.onlinewebfonts.com/t/eb5b5ee332420add9a40ee988cb6ac37.woff&#39;) format(&#39;woff&#39;),
+url(&#39;https://db.onlinewebfonts.com/t/eb5b5ee332420add9a40ee988cb6ac37.ttf&#39;) format(&#39;truetype&#39;);
+}
+@font-face {
+font-family: &#39;Mazzard H&#39;;
+font-weight: 500;
+font-style: normal;
+src: url(&#39;https://db.onlinewebfonts.com/t/875fffdfa62169a0f131e90f37f1faf4.woff2&#39;) format(&#39;woff2&#39;),
+url(&#39;https://db.onlinewebfonts.com/t/875fffdfa62169a0f131e90f37f1faf4.woff&#39;) format(&#39;woff&#39;),
+url(&#39;https://db.onlinewebfonts.com/t/875fffdfa62169a0f131e90f37f1faf4.ttf&#39;) format(&#39;truetype&#39;);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+html, body, * { font-family: &#39;Mazzard H&#39;, sans-serif; }
+}
+```
+
+---
+
+## File: `src/components/PrecisionSection.tsx`
+
+### Constants (top of file, before the component)
+
+```ts
+const LOGO_ICON =
+&#39;https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/6870f623cf3df417ce45df05_icon%20logo%20eternacloud.png&#39;;
+
+const LINE_GRADIENT =
+&#39;linear-gradient(rgb(28, 78, 255), rgb(254, 136, 27) 0%, rgb(172, 36, 255) 25%, rgb(247, 159, 255) 50%, rgb(255, 214, 0) 66%, rgb(254, 136, 27) 84%, rgba(254, 136, 27, 0) 102%)&#39;;
+
+const PILLARS = [
+{ label: &#39;Scopes&#39;, items: [&#39;conditions&#39;, &#39;capacity&#39;, &#39;specs&#39;, &#39;timelines&#39;], leftVw: 2.8, bottomVw: 7 },
+{ label: &#39;Integrates&#39;, items: [&#39;civil&#39;, &#39;mechanical&#39;, &#39;electrical&#39;, &#39;controls&#39;], leftVw: 22.4, bottomVw: 9.08 },
+{ label: &#39;Certifies&#39;, items: [&#39;redundancy&#39;, &#39;testing&#39;, &#39;compliance&#39;, &#39;sign-offs&#39;], leftVw: 41.2, bottomVw: 11.16 },
+{ label: &#39;Activates&#39;, items: [&#39;cutover&#39;, &#39;runbooks&#39;, &#39;handoff&#39;, &#39;SLAs&#39;], leftVw: 61.1, bottomVw: 13.24 },
+];
+```
+
+---
+
+### Section element
+
+Inline styles only (no Tailwind on the `&lt;section&gt;` itself):
+
+```
+background-image: url(&quot;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260418_125638_553b96dc-a1fd-4b2b-81a9-ed7daa80006e.png&amp;w=1280&amp;q=85&quot;)
+background-size: cover
+background-position: center
+background-repeat: no-repeat
+width: 100%
+display: flex
+flex-direction: column
+align-items: center
+text-align: center
+padding: clamp(48px, 8vw, 120px) clamp(16px, 4vw, 60px) clamp(48px, 5.56vw, 80px)
+gap: clamp(32px, 4vw, 56px)
+```
+
+---
+
+### Block 1 — Header
+
+Wrapper `&lt;div&gt;` — inline: `display: flex`, `flex-direction: column`, `align-items: center`, `gap: 36px`
+
+#### Badge pill `&lt;div&gt;`
+
+Inline:
+```
+background-color: rgb(249, 249, 249)
+display: flex
+align-items: center
+gap: 8px
+font-size: clamp(14px, 1.1vw, 18px)
+font-weight: 500
+border-radius: 36px
+padding: clamp(8px, 0.9vw, 14px) clamp(12px, 1.25vw, 20px)
+color: rgb(26, 11, 84)
+white-space: nowrap
+```
+
+Contains this inline SVG (`width: 19`, `height: 18`, `flex-shrink: 0`, `viewBox=&quot;0 0 17 16&quot;`, `fill=&quot;none&quot;`):
+
+```xml
+&lt;g clipPath=&quot;url(#prec-clip)&quot;&gt;
+&lt;circle cx=&quot;8.5&quot; cy=&quot;8&quot; r=&quot;7&quot; stroke=&quot;#c86fff&quot; fill=&quot;none&quot; /&gt;
+&lt;path d=&quot;M9.5 11.5V10.5H7.5V11.5H9.5ZM7.5 14.5C7.5 15.0523 7.94772 15.5 8.5 15.5C9.05228 15.5 9.5 15.0523 9.5 14.5H7.5ZM8.5 11.5H7.5V14.5H8.5H9.5V11.5H8.5Z&quot; fill=&quot;rgb(200, 111, 255)&quot; /&gt;
+&lt;path d=&quot;M12 7H11V9H12V7ZM15 9C15.5523 9 16 8.55228 16 8C16 7.44772 15.5523 7 15 7V9ZM12 8V9H15V8V7L12 7V8Z&quot; fill=&quot;rgb(200, 111, 255)&quot; /&gt;
+&lt;path d=&quot;M5 9H6V7H5V9ZM2 7C1.44772 7 1 7.44772 1 8C1 8.55228 1.44772 9 2 9V7ZM5 8V7H2V8V9H5V8Z&quot; fill=&quot;rgb(200, 111, 255)&quot; /&gt;
+&lt;path d=&quot;M7.5 4.5V5.5H9.5V4.5H7.5ZM9.5 1.5C9.5 0.947715 9.05228 0.5 8.5 0.5C7.94772 0.5 7.5 0.947715 7.5 1.5H9.5ZM8.5 4.5H9.5V1.5H8.5H7.5V4.5H8.5Z&quot; fill=&quot;rgb(200, 111, 255)&quot; /&gt;
+&lt;/g&gt;
+&lt;defs&gt;
+&lt;clipPath id=&quot;prec-clip&quot;&gt;
+&lt;rect width=&quot;16&quot; height=&quot;16&quot; fill=&quot;white&quot; transform=&quot;translate(0.5)&quot; /&gt;
+&lt;/clipPath&gt;
+&lt;/defs&gt;
+```
+
+After the SVG: plain text **&quot;Structured Delivery&quot;**
+
+#### Heading + subtext `&lt;div&gt;`
+
+Inline: `display: flex`, `flex-direction: column`, `align-items: center`, `max-width: clamp(700px, 60vw, 900px)`, `gap: 22px`
+
+`&lt;h2&gt;` — inline: `font-size: clamp(28px, 4vw, 56px)`, `font-weight: 500`, `color: rgb(26, 11, 84)`, `line-height: 1.15`, `margin: 0`
+
+Inside the `&lt;h2&gt;`, two `&lt;span&gt;` elements:
+
+**Span 1** — Tailwind class `sm:whitespace-nowrap`, inline `display: block`:
+&gt; **One integrated, end-to-end system.**
+
+**Span 2** — inline only:
+```
+background-image: linear-gradient(90deg, rgb(43, 167, 255), rgb(202, 69, 255) 50%, rgb(254, 136, 27))
+-webkit-background-clip: text
+background-clip: text
+-webkit-text-fill-color: transparent
+color: transparent
+padding-bottom: 0.3vw
+display: block
+```
+&gt; **Compounding operational value.**
+
+`&lt;p&gt;` below heading — inline: `font-size: clamp(15px, 1.2vw, 20px)`, `color: rgb(169, 151, 206)`, `margin: 0`
+&gt; **&quot;NexaCore teams capture, align, validate and deliver exactly what keeps your programs on track.&quot;**
+
+---
+
+### Block 2 — Pillars container `&lt;div&gt;`
+
+Inline: `width: 100%`, `max-width: 82.292vw`, `margin: 0 auto`
+
+Contains two children:
+
+---
+
+#### Desktop pillars — `hidden sm:block` (Tailwind)
+
+Inline:
+```
+position: relative
+width: 82.292vw
+height: 31.94vw
+color: rgb(26, 11, 84)
+```
+
+Map over `PILLARS`. Each pillar wrapper `&lt;div&gt;`:
+```
+position: absolute
+bottom: `${pillar.bottomVw}vw`
+left: `${pillar.leftVw}vw`
+display: flex
+flex-direction: column
+align-items: center
+justify-content: flex-start
+```
+
+**Chip `&lt;div&gt;`:**
+```
+display: flex
+align-items: center
+justify-content: center
+background-image: linear-gradient(135deg, rgb(255, 255, 255), rgba(255, 255, 255, 0.6))
+font-size: 18px
+font-weight: 500
+border-radius: 20px
+padding-top: 0.972vw
+padding-bottom: 0.972vw
+padding-left: 1.736vw
+padding-right: 1.736vw
+white-space: nowrap
+gap: 8px
+```
+
+Chip contents:
+1. `&lt;img src={LOGO_ICON} alt=&quot;&quot; style={{ width: &#39;1.111vw&#39;, height: &#39;auto&#39;, display: &#39;inline-block&#39; }} /&gt;`
+2. `{pillar.label}`
+
+**Line + items wrapper `&lt;div&gt;`** (directly below chip):
+```
+position: relative
+display: flex
+flex-direction: column
+align-items: center
+justify-content: flex-end
+```
+
+**Items container** (absolutely positioned, overlays the line):
+```
+position: absolute
+top: 0.56vw
+left: 1.94vw
+display: flex
+flex-direction: column
+gap: 4px
+font-size: 16px
+align-items: flex-start
+justify-content: space-between
+```
+
+Each item `&lt;div&gt;`:
+```
+padding-top: 0.69vw
+padding-bottom: 0.69vw
+padding-left: 1.04vw
+padding-right: 1.04vw
+display: flex
+align-items: flex-start
+```
+Text: the item string.
+
+**Vertical gradient line `&lt;div&gt;`** (sibling of items container, rendered after it):
+```
+background-image: LINE_GRADIENT (see constant above)
+width: 1px
+height: 14.24vw
+```
+
+---
+
+#### Mobile pillars — Tailwind: `flex flex-col sm:hidden w-full`
+
+Inline: `color: rgb(26, 11, 84)`, `gap: 0`
+
+Map over `PILLARS` with index. `isRight = index % 2 !== 0` (index 1 and 3 are right-aligned).
+
+**Pillar wrapper `&lt;div&gt;`:**
+```
+display: flex
+flex-direction: column
+align-items: isRight ? &#39;flex-end&#39; : &#39;flex-start&#39;
+width: 100%
+padding-bottom: 8px
+```
+
+**Chip `&lt;div&gt;`:**
+```
+display: inline-flex
+align-items: center
+background-image: linear-gradient(135deg, rgb(255, 255, 255), rgba(255, 255, 255, 0.6))
+font-size: 15px
+font-weight: 500
+border-radius: 20px
+padding: 10px 18px
+white-space: nowrap
+gap: 7px
+```
+
+Chip contents:
+1. `&lt;img src={LOGO_ICON} alt=&quot;&quot; style={{ width: 16, height: &#39;auto&#39; }} /&gt;`
+2. `{pillar.label}`
+
+**Line + items row `&lt;div&gt;`:**
+```
+display: flex
+flex-direction: isRight ? &#39;row-reverse&#39; : &#39;row&#39;
+align-items: stretch
+width: 100%
+```
+
+**Vertical line `&lt;div&gt;`:**
+```
+width: 1px
+flex-shrink: 0
+background-image: LINE_GRADIENT
+margin-left: isRight ? 0 : 22px
+margin-right: isRight ? 22px : 0
+min-height: 120px
+```
+
+**Items `&lt;div&gt;`:**
+```
+display: flex
+flex-direction: column
+gap: 0
+padding-left: isRight ? 0 : 20px
+padding-right: isRight ? 20px : 0
+padding-top: 8px
+padding-bottom: 8px
+align-items: isRight ? &#39;flex-end&#39; : &#39;flex-start&#39;
+```
+
+Each item `&lt;div&gt;`:
+```
+font-size: 14px
+color: rgb(100, 80, 160)
+padding: 8px 0
+```
+Text: the item string.
+
+---
+
+## Pillar data reference
+
+| Label | Items | Desktop left | Desktop bottom |
+|---|---|---|---|
+| Scopes | conditions, capacity, specs, timelines | 2.8vw | 7vw |
+| Integrates | civil, mechanical, electrical, controls | 22.4vw | 9.08vw |
+| Certifies | redundancy, testing, compliance, sign-offs | 41.2vw | 11.16vw |
+| Activates | cutover, runbooks, handoff, SLAs | 61.1vw | 13.24vw |
+
+---
+
+**No animations. No hover states. No scroll effects. No JavaScript logic. Static render only. Desktop: 4 pillars arranged in a rising staircase via `position: absolute` with `bottom` and `left` in `vw` units. Mobile: single column, even-indexed pillars align left, odd-indexed align right, each with a vertical gradient line beside its items list.**</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="interior-features.html">Interior Features<small>Features Section · features</small></a><a href="liquid-glass-features.html">Liquid Glass Features<small>Features Section · features</small></a><a href="nexacore-control.html">NexaCore Control<small>Features Section · features</small></a><a href="nike-hover.html">Nike Hover<small>Features Section · features</small></a><a href="cognitra-feature.html">Cognitra Feature<small>Features Section · features</small></a><a href="launchex-submissions.html">LaunchEx Submissions<small>Features Section · features</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

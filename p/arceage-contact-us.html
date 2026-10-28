@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arceage Contact Us — Forms &amp; Contact 提示词 | MotionSites Prompts</title>
+<meta name="description" content="基于React和Tailwind CSS v4构建的深色背景联系表单页面，采用Barlow字体作为主字体，Instrument Serif斜体作为装饰字体，包含内联验证功能，完全适配移动端。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/arceage-contact-us.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arceage Contact Us — Forms &amp; Contact 提示词">
+<meta property="og:description" content="基于React和Tailwind CSS v4构建的深色背景联系表单页面，采用Barlow字体作为主字体，Instrument Serif斜体作为装饰字体，包含内联验证功能，完全适配移动端。">
+<meta property="og:url" content="https://prompt-site.shop/p/arceage-contact-us.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/arceage-contact-us.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Arceage Contact Us","description":"基于React和Tailwind CSS v4构建的深色背景联系表单页面，采用Barlow字体作为主字体，Instrument Serif斜体作为装饰字体，包含内联验证功能，完全适配移动端。","url":"https://prompt-site.shop/p/arceage-contact-us.html","inLanguage":"zh-CN","genre":"Forms & Contact","dateCreated":"2026-06-06T12:18:21.657211+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-forms___contact">Forms &amp; Contact</a></div><h1>Arceage Contact Us</h1><div class="chip-row"><span class="chip">Forms &amp; Contact</span><span class="chip">form</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-06</span><span>正文：7,311 字符</span></div><div class="hero-media"><img src="../assets/previews/arceage-contact-us.webp" alt="Arceage Contact Us 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>基于React和Tailwind CSS v4构建的深色背景联系表单页面，采用Barlow字体作为主字体，Instrument Serif斜体作为装饰字体，包含内联验证功能，完全适配移动端。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Create a React + Tailwind CSS v4 + Motion (&quot;motion/react&quot;) contact form section with inline validation. Use Vite as the bundler. Fully mobile responsive.
+
+### Fonts
+
+Import from Google Fonts in your global CSS:
+```
+@import url(&#39;https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Instrument+Serif:ital@0;1&amp;display=swap&#39;);
+```
+
+Define two Tailwind v4 theme fonts:
+- `--font-sans: &quot;Barlow&quot;, ui-sans-serif, system-ui, sans-serif;` (primary UI font via `font-sans`)
+- `--font-dm-serif: &quot;Instrument Serif&quot;, serif;` (accent italic font via `font-dm-serif`)
+
+The page wrapper uses `bg-black font-sans text-white`. This section overrides to `bg-white text-black`.
+
+### Dependencies
+
+- `react` v19 (uses `useState`)
+- `motion` (npm package &quot;motion&quot;, import `motion` from `motion/react`)
+- `tailwindcss` v4 with `@tailwindcss/vite` plugin
+- Vite v6+
+
+### Also requires a Typewriter component
+
+A reusable character-by-character reveal animation triggered on scroll:
+- Props: `text: string`, `delay?: number` (default 0), `speed?: number` (default 0.015), `className?: string` (default &quot;&quot;)
+- Uses `useRef`, `useInView(ref, { once: true, margin: &quot;-10px&quot; })` from `motion/react`
+- Renders a `motion.span` with `initial=&quot;hidden&quot;` and `animate={inView ? &quot;visible&quot; : &quot;hidden&quot;}`
+- Parent variants: hidden = `{ opacity: 1 }`, visible = `{ opacity: 1, transition: { staggerChildren: speed, delayChildren: delay } }`
+- Splits text into individual characters, each wrapped in `motion.span` with variants: hidden = `{ opacity: 0 }`, visible = `{ opacity: 1 }`
+
+---
+
+### State Management
+
+Two pieces of state:
+
+**formData** (object, all strings, default empty):
+```js
+{ name: &#39;&#39;, email: &#39;&#39;, phone: &#39;&#39;, farm: &#39;&#39;, message: &#39;&#39; }
+```
+
+**touched** (object, all booleans, default false):
+```js
+{ name: false, email: false, phone: false, farm: false, message: false }
+```
+
+**handleChange**: Updates `formData[e.target.name]` on input change.
+
+**handleBlur**: Sets `touched[e.target.name]` to `true` on blur.
+
+---
+
+### Validation Rules
+
+```js
+const validations = {
+name: formData.name.trim().length &gt; 0,
+email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email),
+phone: /^\+[\d\s\-\(\)]{7,20}$/.test(formData.phone),
+farm: formData.farm.trim().length &gt; 0,
+message: formData.message.trim().length &gt; 0,
+};
+```
+
+---
+
+### Validation Icons (renderIcon function)
+
+A helper function `renderIcon(fieldName, isRequired)` that:
+- Returns `null` if the field has not been touched yet
+- If valid (and either required OR has content): shows a **green check circle** icon
+- If invalid and required: shows a **red X circle** icon
+- Both icons use CSS mask-image technique (colored `div` with SVG mask), positioned `absolute right-0 top-1/2 -translate-y-1/2 w-5 h-5`
+
+**Green valid icon:**
+- `bg-[#27BD09]`
+- SVG mask URL: `https://raw.githubusercontent.com/dsMagnatov/Acreage-landing-assets/refs/heads/main/tick-circle.svg`
+- Applied via both `WebkitMaskImage` and `maskImage` inline styles, with `maskSize: &#39;contain&#39;`, `maskRepeat: &#39;no-repeat&#39;`, `maskPosition: &#39;center&#39;`
+
+**Red invalid icon:**
+- `bg-[#FF1F1F]`
+- SVG mask URL: `https://raw.githubusercontent.com/dsMagnatov/Acreage-landing-assets/refs/heads/main/close-circle.svg`
+- Same mask CSS properties as the green icon
+
+---
+
+### Form Field Animation Variants
+
+```js
+const formVariants = {
+hidden: { opacity: 0, y: 20 },
+visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: &quot;easeOut&quot; } }
+};
+```
+
+---
+
+### Section Container
+
+`&lt;section&gt;` with:
+- `id=&quot;contact&quot;`
+- Classes: `w-full bg-white text-black py-24 px-6 md:px-12 lg:px-[120px] flex flex-col items-center justify-center`
+
+### Staggered Reveal Wrapper
+
+Outer `motion.div`:
+- `initial=&quot;hidden&quot;`, `whileInView=&quot;visible&quot;`, `viewport={{ once: true, margin: &quot;-100px&quot; }}`
+- Variants: hidden = `{ opacity: 0 }`, visible = `{ opacity: 1, transition: { staggerChildren: 0.1 } }`
+- Classes: `w-full max-w-3xl mx-auto flex flex-col items-center`
+
+---
+
+### Element 1: Header Area
+
+A `div` with classes `text-center mb-16 w-full`.
+
+**Heading (h2):**
+- Classes: `text-[clamp(1.5rem,4vw,3.5rem)] font-medium tracking-tight mb-6 leading-[1.1]`
+- Content (3 Typewriter segments across 2 lines):
+- `&lt;span className=&quot;text-black font-dm-serif font-normal italic&quot;&gt;` wrapping `&lt;Typewriter text=&quot;Let&#39;s grow!&quot; delay={0} speed={0.012} /&gt;`
+- Then a space, then `&lt;Typewriter text=&quot;Fill in the form&quot; delay={0.2} speed={0.012} /&gt;`
+- Then `&lt;br /&gt;`
+- Then `&lt;Typewriter text=&quot;and we&#39;ll be in touch&quot; delay={0.4} speed={0.012} /&gt;`
+- &quot;Let&#39;s grow!&quot; is rendered in Instrument Serif italic; the rest is in Barlow medium.
+
+**Subtitle (p):**
+- Classes: `text-lg md:text-xl text-gray-800`
+- Content: `&lt;Typewriter text=&quot;Ask us about our precision harvesting services&quot; delay={0.6} speed={0.012} /&gt;`
+
+---
+
+### Element 2: Form
+
+`&lt;form&gt;` with:
+- Classes: `max-w-2xl w-full mx-auto flex flex-col gap-8`
+- `onSubmit={(e) =&gt; e.preventDefault()}`
+
+**5 form fields**, each wrapped in `motion.div` using `formVariants`. Each field follows this exact pattern:
+
+- Wrapper `motion.div`: classes `flex flex-col gap-2 border-b border-[#D9D9D9] pb-2 transition-colors duration-300 hover:border-black focus-within:border-black`
+- `&lt;label&gt;`: classes `text-sm font-medium`
+- Inner `div`: classes `relative w-full`
+- `&lt;input&gt;`: classes `w-full bg-transparent outline-none placeholder:text-[#D9D9D9] focus:placeholder:text-gray-500 transition-colors duration-300 text-base pr-8`
+- All inputs have `value`, `onChange={handleChange}`, `onBlur={handleBlur}`, and `name` attribute matching the field key
+- After the input: `{renderIcon(&#39;fieldName&#39;, isRequired)}`
+
+The 5 fields in order:
+
+| # | Label | Name | Type | Placeholder | Required |
+|---|-------|------|------|-------------|----------|
+| 1 | Your Name* | name | text | Who&#39;s reaching out? | true |
+| 2 | Email* | email | email | Where can we reach you? | true |
+| 3 | Phone Number* | phone | tel | Best number to call you on? | true |
+| 4 | Farm / Company | farm | text | Your farm or organization? | false |
+| 5 | Tell Us More | message | text | What crops or acreage would you like to discuss? | false |
+
+Fields 1-3 have the HTML `required` attribute and pass `true` to `renderIcon`. Fields 4-5 do not have `required` and pass `false` to `renderIcon`.
+
+---
+
+### Element 3: Submit Button
+
+Wrapped in `motion.div` with `formVariants`, classes `mt-8 flex justify-center`.
+
+**Button:**
+- `type=&quot;submit&quot;`
+- Classes: `bg-black text-white px-6 py-2.5 rounded-full hover:bg-[#27BD09] transition-colors duration-300 text-sm tracking-wide`
+- Text: &quot;Send Message&quot;
+- Hover changes background from black to green (`#27BD09`).
+
+---
+
+### Mobile Responsiveness Summary
+
+- Section padding: `py-24 px-6` on all sizes, `md:px-12`, `lg:px-[120px]`
+- Form constrained to `max-w-2xl` (672px), centered with `mx-auto`
+- Outer wrapper constrained to `max-w-3xl` (768px)
+- Heading uses fluid typography: `clamp(1.5rem, 4vw, 3.5rem)`
+- Subtitle: `text-lg` on mobile, `md:text-xl` on desktop
+- Form fields stack vertically with `gap-8` at all breakpoints
+- All interactive elements (inputs, button) are full-width and touch-friendly
+- Validation icons are absolutely positioned at `right-0` inside each field, always visible regardless of viewport
+
+---</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="build-with-us.html">Build With Us<small>Forms &amp; Contact · hero</small></a><a href="community-superdesign-teal-on-ink-newsletter-mega-footer.html">Teal-on-Ink Newsletter Mega Footer<small>Forms &amp; Contact · footer</small></a><a href="community-superdesign-the-atelier-brief-an-editorial-intake-form-set-like-a-letter.html">The Atelier Brief — an editorial intake form, set like a letter<small>Forms &amp; Contact · landing-page</small></a><a href="community-superdesign-send-us-the-brief-brutalist-contact-form.html">Send Us the Brief — Brutalist Contact Form<small>Forms &amp; Contact · form</small></a><a href="community-superdesign-acid-yellow-neo-brutalist-mega-footer.html">Acid-Yellow Neo-Brutalist Mega Footer<small>Forms &amp; Contact · footer</small></a><a href="community-superdesign-validar-forms-that-catch-mistakes-before-they-cost-you.html">Validar — Forms that catch mistakes before they cost you<small>Forms &amp; Contact · landing-page</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wellness Devicex — Healthcare 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Build a single-page hero section for a product called &quot;Measured&quot; — a health/wellness wearable device landing page. The page is fullscreen (100vh), dar">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/wellness-device.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Wellness Devicex — Healthcare 提示词">
+<meta property="og:description" content="Build a single-page hero section for a product called &quot;Measured&quot; — a health/wellness wearable device landing page. The page is fullscreen (100vh), dar">
+<meta property="og:url" content="https://prompt-site.shop/p/wellness-device.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Wellness Devicex","description":"Build a single-page hero section for a product called \"Measured\" — a health/wellness wearable device landing page. The page is fullscreen (100vh), dar","url":"https://prompt-site.shop/p/wellness-device.html","inLanguage":"zh-CN","genre":"Healthcare","dateCreated":"2026-07-14T01:02:04.952848+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-healthcare">Healthcare</a></div><h1>Wellness Devicex</h1><div class="chip-row"><span class="chip">Healthcare</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-07-14</span><span>正文：6,903 字符</span></div><div class="hero-media"><video src="../assets/previews/wellness-device.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a single-page hero section for a product called &quot;Measured&quot; — a health/wellness wearable device landing page. The page is fullscreen (100vh), dark/moody aesthetic with layered imagery, a cursor-following spotlight reveal effect, and a frosted-glass navigation. Use React + Vite + Tailwind CSS + TypeScript.
+
+---
+
+## Fonts
+
+1. **Google Fonts — Inter** (weights 300-700): Used as the global default font on all elements (`* { font-family: &#39;Inter&#39;, sans-serif; }`)
+2. **Google Fonts — Instrument Serif** (regular + italic): Used for the hero heading &quot;Measured&quot;. Load via `&lt;link&gt;` in index.html: `https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;display=swap`
+3. **Helvetica Neue Roman** (self-hosted woff2/woff in `/public/fonts/`): Applied via a `.font-helvetica-neue` class on the hero section wrapper. Declare with `@font-face`.
+
+---
+
+## Asset URLs (exact)
+
+- **Background Image (BG_IMAGE_1):** `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260713_140344_79e1296a-86d7-43fd-9b5f-63ffe560f291.png&amp;w=1280&amp;q=85`
+- **Front Video (FRONT_VIDEO):** `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260713_162101_0d7498c5-29bb-47bf-a99f-2773c0a880a9.mp4`
+- **Overlay Image (OVERLAY_IMAGE):** `https://soft-zoom-63098134.figma.site/_assets/v11/3f10f1876e118f72a396e05a6c2d099569478272.png`
+
+---
+
+## Page Structure &amp; Layers (z-index order)
+
+### Navigation (z-50, fixed)
+- **Logo (top-left):** Custom SVG geometric logo (white, 28x28), resembling angular interlocking shapes. The exact SVG path: `M 256 64 L 256 128 L 192.5 128 L 160 95 L 128 64 L 96 95 L 63.5 128 L 64 128 L 128 192 L 128 256 L 64.5 256 L 32 223 L 0 192 L 0 64 L 64 0 L 192 0 Z M 256 192 L 256 256 L 192.5 256 L 160 223 L 128 192 L 128 128 L 192 128 Z` (viewBox 0 0 256 256, fill white)
+- **Desktop center pill nav (hidden on mobile):** Fixed horizontally centered, contains buttons: &quot;Device&quot;, &quot;Real Stories&quot;, &quot;Science&quot;, &quot;Plans&quot;, &quot;Reach Us&quot;. Uses `.liquid-glass` styling (frosted glass). Buttons are `text-white/70`, `text-sm`, `font-medium`, rounded-full, hover to white.
+- **Desktop CTA (top-right, hidden on mobile):** `.liquid-glass` pill button with a small green dot (w-2 h-2 rounded-full bg-green-400) and text &quot;Reserve Yours&quot;, white text-sm font-medium.
+- **Mobile hamburger (top-right, hidden md+):** `.liquid-glass` rounded-full pill, contains two white lines (w-5 h-[1.5px] and w-3.5 h-[1.5px]).
+
+### Mobile Fullscreen Menu (z-55)
+- Background: `#0a0a0a` solid
+- Close button: top-right, `.liquid-glass` rounded-full with X made of two rotated white lines (+45deg, -45deg)
+- Nav items stacked vertically, centered, `text-3xl sm:text-4xl`, white/90, font-medium
+- &quot;Reserve Yours&quot; CTA at bottom with green dot, `.liquid-glass` pill
+- Staggered entry animations: each item slides up from 24px with opacity 0-&gt;1, delays incremented by 60ms starting at 100ms. Uses `cubic-bezier(0.77, 0, 0.18, 1)` easing. Close button rotates in from -90deg with scale 0.8.
+
+### Hero Section (100vh, overflow hidden)
+
+**Layer 1 — Grid Background (z-0, opacity 0.1):**
+- SVG with a repeating pattern of 48px cells. Pattern draws an L-shaped path (`M 48 0 L 0 0 0 48`), stroke `#64748b`, strokeWidth 0.6, no fill.
+- The grid subtly parallax-shifts based on cursor position (offset calculated as cursor position relative to section center * 16, eased at 0.06 factor).
+
+**Layer 2 — Background Image (z-10):**
+- `BG_IMAGE_1` displayed as `background-image`, `bg-center bg-cover bg-no-repeat`, absolutely positioned inset-0.
+
+**Layer 3 — Hero Text (z-20):**
+- The word &quot;Measured&quot; in huge uppercase text
+- Font: `&#39;Instrument Serif&#39;, serif`
+- Sizes: `text-[4.5rem]` default, `xs:text-[5.5rem]`, `sm:text-[10rem]`, `md:text-[13rem]`, `lg:text-[16rem]`
+- `leading-[0.9]`, white, centered, positioned `top-20 sm:top-28 md:top-32`
+
+**Layer 4 — Overlay Image (z-25):**
+- `OVERLAY_IMAGE` as an `&lt;img&gt;` tag, absolutely positioned inset-0, `w-full h-full object-cover`, pointer-events-none. This is a semi-transparent PNG that sits on top of the background to add depth/atmosphere.
+
+**Layer 5 — Spotlight Reveal (z-30):**
+- A cursor-following radial reveal mask that shows a video underneath only where the cursor hovers.
+- **Radius:** 260px
+- **Mask gradient stops:** center full white (0-40%), then feathers out: 60% at 0.75 alpha, 75% at 0.4, 88% at 0.12, 100% at 0 (fully transparent).
+- **Implementation:** A hidden `&lt;canvas&gt;` draws the radial gradient at the smoothed cursor position. The canvas is exported as a dataURL and applied as a CSS mask (`-webkit-mask-image` / `mask-image`) on a div that contains the video.
+- **Cursor smoothing:** Uses `requestAnimationFrame` loop with lerp factor 0.1 (`smooth += (target - smooth) * 0.1`).
+- **Video placement:** The video (`FRONT_VIDEO`) is clipped to the bottom 60% of the viewport using `clipPath: &#39;inset(40% 0 0 0)&#39;`. It autoplays, loops, is muted, and uses playsInline.
+
+---
+
+## Liquid Glass CSS Effect (`.liquid-glass`)
+
+```css
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.01);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: none;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+.liquid-glass::before {
+  content: &#39;&#39;;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg,
+    rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+    rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+    rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+```
+
+This creates a near-invisible frosted glass background with a subtle gradient border using the mask-composite trick (border-only gradient).
+
+---
+
+## Key Behaviors
+
+1. **Body overflow locks** when mobile menu is open
+2. **No scrolling** — single viewport hero only
+3. **Background is white** on the root container (`bg-white`), but the hero section fills the entire viewport with dark imagery
+4. **The reveal effect only shows video in the bottom 60%** of the screen (the top 40% is masked out via clipPath), so hovering over the top portion shows nothing extra — just the base layers
+
+---
+
+## Summary of the Visual Effect
+
+The user sees a dark, atmospheric product shot (wearable device on a wrist) with &quot;Measured&quot; in giant serif text overlaid. A semi-transparent overlay adds haze/depth. As the user moves their cursor, a soft spotlight circle reveals an underlying looping video (showing the product in motion) — but only in the lower portion of the screen. The grid background subtly shifts with parallax. Navigation uses an elegant frosted-glass pill aesthetic.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="dental-care-app.html">Dental Care App<small>Healthcare · mobile</small></a><a href="mind-body-healing.html">Mind-Body Healing<small>Healthcare · hero</small></a><a href="aesthetic-dental-clinic.html">Aesthetic Dental Clinic<small>Healthcare · hero</small></a><a href="dental-implant-clinic.html">Dental Implant Clinic<small>Healthcare · mobile</small></a><a href="ai-calorie-tracker.html">AI Calorie Tracker<small>Healthcare · mobile</small></a><a href="modern-dental-clinic.html">Modern Dental Clinic<small>Healthcare · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

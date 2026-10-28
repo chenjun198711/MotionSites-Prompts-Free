@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reveal Hero — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色渐变背景的现代英雄区，中央大标题搭配发光按钮和图标装饰，适用于科技产品落地页。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/reveal-hero.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Reveal Hero — Hero Section 提示词">
+<meta property="og:description" content="深色渐变背景的现代英雄区，中央大标题搭配发光按钮和图标装饰，适用于科技产品落地页。">
+<meta property="og:url" content="https://prompt-site.shop/p/reveal-hero.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/reveal-hero.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Reveal Hero","description":"深色渐变背景的现代英雄区，中央大标题搭配发光按钮和图标装饰，适用于科技产品落地页。","url":"https://prompt-site.shop/p/reveal-hero.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-05-08T10:03:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Reveal Hero</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-05-08</span><span>正文：6,839 字符</span></div><div class="hero-media"><img src="../assets/previews/reveal-hero.webp" alt="Reveal Hero 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色渐变背景的现代英雄区，中央大标题搭配发光按钮和图标装饰，适用于科技产品落地页。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a single-page React + TypeScript + Vite + Tailwind CSS project that recreates the following hero section exactly. Use `lucide-react` for icons. Do not install any other UI or animation libraries.
+
+### Project setup
+
+- React 18, TypeScript, Vite, Tailwind CSS.
+- Dependencies: `react`, `react-dom`, `lucide-react`, `@supabase/supabase-js`.
+- File `src/index.css` must be:
+
+```css
+@import url(&#39;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap&#39;);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+font-family: &#39;Inter&#39;, sans-serif;
+}
+```
+
+### Assets (use these URLs verbatim, do NOT download)
+
+- `BG_IMAGE_1` = `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260512_012043_9764f2d0-5c6e-4faa-94a6-a8253df08c5e.png&amp;w=1280&amp;q=85`
+- `BG_IMAGE_2` = `https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260512_012949_6b24738e-6e5f-4b6f-93d7-5772f4d32285.png&amp;w=1280&amp;q=85`
+
+### Constants
+
+- `SPOTLIGHT_R = 260`
+- `GRID_CELL = 48`
+
+### Behavior / animations
+
+1. **Grid background** — inline SVG, opacity 0.1, full-cover, absolutely positioned behind content. A `&lt;pattern id=&quot;grid&quot;&gt;` with `width=48`, `height=48`, `patternUnits=&quot;userSpaceOnUse&quot;`, whose `x` and `y` are bound to a ref-driven `gridOffset`. Pattern contains a single `&lt;path d=&quot;M 48 0 L 0 0 0 48&quot; fill=&quot;none&quot; stroke=&quot;#64748b&quot; strokeWidth=&quot;0.6&quot; /&gt;`. A `&lt;rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;url(#grid)&quot; /&gt;` fills it.
+2. **Mouse tracking** — on `mousemove` store raw `{x, y}` in a ref. A `requestAnimationFrame` loop eases a `smooth` ref toward `mouse` with factor `0.1`. Using `smooth`, compute normalized offset `cx = (smooth.x - rect.left) / rect.width - 0.5` (same for y), then ease `gridOffset` toward `cx * 16` / `cy * 16` with factor `0.06`. Update a `cursorPos` state with the smoothed coords each frame.
+3. **Reveal layer (spotlight)** — a hidden `&lt;canvas&gt;` sized to `window.innerWidth` × `window.innerHeight`. Each frame (in a `useEffect` that runs on every render of `RevealLayer`):
+- Clear canvas.
+- Create `createRadialGradient(cursorX, cursorY, 0, cursorX, cursorY, 260)` with stops:
+- `0` → `rgba(255,255,255,1)`
+- `0.4` → `rgba(255,255,255,1)`
+- `0.6` → `rgba(255,255,255,0.75)`
+- `0.75` → `rgba(255,255,255,0.4)`
+- `0.88` → `rgba(255,255,255,0.12)`
+- `1` → `rgba(255,255,255,0)`
+- Draw a full circle `arc(cursorX, cursorY, 260, 0, 2π)` filled with that gradient.
+- Convert canvas to `toDataURL()` and apply as `maskImage` / `webkitMaskImage` on a `&lt;div&gt;` sized `100% 100%` whose background is `BG_IMAGE_2` (`bg-center bg-cover bg-no-repeat`). Mask size `100% 100%`.
+4. Resize listener resets canvas width/height to `window.innerWidth` / `window.innerHeight`.
+
+### Layout / JSX structure
+
+Top-level `App`:
+
+- Root `&lt;div className=&quot;min-h-screen bg-white&quot; style={{ fontFamily: &#39;Inter, sans-serif&#39; }}&gt;`.
+- Fixed nav: `&lt;nav className=&quot;fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-5 sm:px-8 py-4 sm:py-5&quot;&gt;`.
+
+**Logo** (inline SVG, first child of nav, inside `&lt;div className=&quot;flex items-center&quot;&gt;`):
+
+```html
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;28&quot; height=&quot;28&quot; viewBox=&quot;0 0 256 256&quot; fill=&quot;none&quot;&gt;
+&lt;path d=&quot;M 256 64 L 256 128 L 192.5 128 L 160 95 L 128 64 L 96 95 L 63.5 128 L 64 128 L 128 192 L 128 256 L 64.5 256 L 32 223 L 0 192 L 0 64 L 64 0 L 192 0 Z M 256 192 L 256 256 L 192.5 256 L 160 223 L 128 192 L 128 128 L 192 128 Z&quot; fill=&quot;#111111&quot; /&gt;
+&lt;/svg&gt;
+```
+
+**Desktop pill nav** (hidden on mobile): `&lt;div className=&quot;hidden md:flex absolute left-1/2 -translate-x-1/2 bg-gray-900 rounded-full px-2 py-1.5 items-center gap-1&quot;&gt;` containing buttons in order:
+- `Device` — active: `bg-white text-gray-900 text-sm font-medium px-4 py-1.5 rounded-full`
+- `Real Stories`, `Science`, `Plans`, `Reach Us` — each: `text-gray-300 text-sm font-medium px-4 py-1.5 rounded-full hover:text-white transition-colors`
+
+**Desktop CTA** (right): `&lt;button className=&quot;hidden md:flex bg-gray-900 text-white text-sm font-medium px-5 py-2 rounded-full items-center gap-2 hover:bg-gray-700 transition-colors&quot;&gt;` with green dot `&lt;span className=&quot;w-2 h-2 rounded-full bg-green-400 inline-block&quot;&gt;&lt;/span&gt;` + text `Reserve Yours`.
+
+**Mobile hamburger** (shown `md:hidden`): toggles `menuOpen` state; icon is lucide `Menu` (size 22) or `X` (size 22) when open; button classes `md:hidden text-gray-900 p-1`.
+
+**Mobile dropdown** (when `menuOpen`): `fixed top-0 left-0 right-0 z-40 bg-white pt-16 pb-6 px-5 shadow-lg flex flex-col gap-1 md:hidden`, maps items `[&#39;Device&#39;,&#39;Real Stories&#39;,&#39;Science&#39;,&#39;Plans&#39;,&#39;Reach Us&#39;]` to `&lt;button className=&quot;text-gray-800 text-base font-medium py-3 border-b border-gray-100 text-left hover:text-gray-500 transition-colors&quot;&gt;`, then a `Reserve Yours` button: `mt-4 bg-gray-900 text-white text-sm font-medium px-5 py-3 rounded-full flex items-center gap-2 justify-center hover:bg-gray-700 transition-colors` with the green dot span.
+
+**Hero section** (`&lt;section&gt;`): `relative w-full overflow-hidden` with inline `style={{ height: &#39;100vh&#39; }}`. Children in order:
+
+1. The grid SVG described above (`opacity: 0.1`, `z-0`, pointer-events none, `absolute inset-0 w-full h-full`).
+2. Base image div: `absolute inset-0 bg-center bg-cover bg-no-repeat z-10` with `backgroundImage: url(&#39;&lt;BG_IMAGE_1&gt;&#39;)`.
+3. `&lt;RevealLayer&gt;` (hidden canvas + masked div with `BG_IMAGE_2`, `z-30`, pointer-events none).
+4. Hero text block: `&lt;div className=&quot;absolute bottom-12 sm:bottom-12 md:bottom-56 left-5 sm:left-8 md:left-12 max-w-[260px] sm:max-w-xs z-50&quot;&gt;` containing:
+- `&lt;p className=&quot;text-[10px] sm:text-[11px] font-semibold tracking-[0.18em] text-gray-600 uppercase mb-2 sm:mb-3&quot;&gt;PureFlow One&lt;/p&gt;`
+- `&lt;h1 className=&quot;text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-4 sm:mb-6&quot;&gt;Clean Air, Clear&lt;br /&gt;Mind. Anywhere.&lt;/h1&gt;`
+- A `&lt;div className=&quot;flex items-center gap-3 sm:gap-4&quot;&gt;` with:
+- `&lt;button className=&quot;bg-gray-900 text-white text-xs sm:text-sm font-medium px-4 sm:px-6 py-2 sm:py-2.5 rounded-full hover:bg-gray-700 transition-colors&quot;&gt;Discover&lt;/button&gt;`
+- `&lt;button className=&quot;flex items-center gap-2 text-gray-700 text-xs sm:text-sm font-medium hover:text-gray-900 transition-colors&quot;&gt;` containing lucide `&lt;Play size={12} className=&quot;fill-gray-700&quot; /&gt;` and text `View Specs`.
+
+### Notes
+
+- All icons from `lucide-react`: `Play`, `Menu`, `X`.
+- Font: Inter (Google Fonts) weights 300–700.
+- No purple/indigo colors; neutrals + `bg-green-400` status dot only.
+- Responsive: tablet (`sm`) keeps hero text at the same bottom as mobile (`bottom-12`); only desktop (`md`+) raises it (`bottom-56`).
+- Use `useRef` + `requestAnimationFrame` (no external animation libs). Canvas-based radial mask reveal must update each frame.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

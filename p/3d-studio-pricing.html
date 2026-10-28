@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3D Studio Pricing — Pricing Page 提示词 | MotionSites Prompts</title>
+<meta name="description" content="全屏视频背景搭配定价卡片叠加，移动端视频右对齐，桌面端居中，营造沉浸式3D工作室展示效果。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/3d-studio-pricing.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="3D Studio Pricing — Pricing Page 提示词">
+<meta property="og:description" content="全屏视频背景搭配定价卡片叠加，移动端视频右对齐，桌面端居中，营造沉浸式3D工作室展示效果。">
+<meta property="og:url" content="https://prompt-site.shop/p/3d-studio-pricing.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"3D Studio Pricing","description":"全屏视频背景搭配定价卡片叠加，移动端视频右对齐，桌面端居中，营造沉浸式3D工作室展示效果。","url":"https://prompt-site.shop/p/3d-studio-pricing.html","inLanguage":"zh-CN","genre":"Pricing Page","dateCreated":"2026-07-03T11:36:41.855065+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-pricing_page">Pricing Page</a></div><h1>3D Studio Pricing</h1><div class="chip-row"><span class="chip">Pricing Page</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-07-03</span><span>正文：3,949 字符</span></div><div class="hero-media"><video src="../assets/previews/3d-studio-pricing.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>全屏视频背景搭配定价卡片叠加，移动端视频右对齐，桌面端居中，营造沉浸式3D工作室展示效果。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Create a full-screen hero section with a looping video background and a pricing card overlay. Use React with Tailwind CSS and Lucide React icons. The font is &quot;Geist&quot; loaded from Google Fonts.
+
+**Video Background:**
+- Full-screen `&lt;video&gt;` element, autoplaying, looped, muted, playsInline
+- Covers the entire viewport with `object-cover`, positioned `object-right` on mobile, `object-center` on md+
+- Video URL: `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260702_102608_5fa1187d-9ac6-44fb-82ab-54376200abc0.mp4`
+
+**Layout:**
+- Section is `relative min-h-screen w-full overflow-hidden`, uses `font-geist` (custom Tailwind font family mapped to &#39;Geist&#39;)
+- Content sits at `z-10`, arranged as a flex column filling min-h-screen
+- Top area has generous padding (`pt-10 sm:pt-16 md:pt-24 px-5 sm:px-8 md:px-16 lg:px-24`)
+- A flex-1 spacer pushes the bottom card down
+- Bottom area has padding `px-4 sm:px-8 md:px-16 lg:px-24 pb-8 sm:pb-12 md:pb-20`
+
+**Heading (top-left):**
+- Text: &quot;Studio&quot; on line 1, &quot;rate&quot; on line 2
+- Size: `text-[clamp(2.5rem,12vw,10rem)]`
+- Weight: `font-light`, line-height: `leading-[0.9]`, tracking: `tracking-[-0.03em]`, color: white
+
+**Pricing Card (bottom):**
+- Outer container: full-width, `border border-white/10 rounded-2xl bg-black/70 backdrop-blur-md`, padding `p-3 sm:p-4 md:p-5`, fixed height `h-[280px] sm:h-[310px] md:h-[340px]`, flex column
+- Inside: a 3-column grid (`grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 items-stretch flex-1 min-h-0`)
+
+**Column 1 - Toggle card:**
+- `bg-[#11120F]/60 backdrop-blur-xl border border-white/10 rounded-xl p-5 sm:p-6`, flex column justify-between
+- Heading: &quot;Want cinematic fidelity?&quot; - white, `text-base sm:text-lg font-medium mb-2`, left-aligned
+- Description: &quot;Activate photorealistic global illumination with sub-surface scattering and volumetric atmosphere depth.&quot; - `text-white/60 text-sm leading-relaxed`, left-aligned
+- Bottom row: price &quot;+$520&quot; (`text-white text-lg font-light`) on left, custom toggle on right
+- Toggle: `w-14 h-7 rounded-full`, active color `bg-[#B2D770]`, inactive `bg-white/20`, with a `w-5 h-5` black circle thumb that translates left/right. Uses React state.
+
+**Column 2 - Price display:**
+- `flex flex-col justify-between py-3 sm:py-4 md:py-5`
+- Main price: &quot;$3,180&quot; at `text-4xl sm:text-5xl md:text-5xl lg:text-7xl font-light text-white tracking-tight`
+- Suffix: &quot;/deliver&quot; in `text-white/50 text-sm sm:text-base ml-1`
+- Bottom row: &quot;Rush-mode&quot; (`text-white/50 text-sm`) left, &quot;12-36 hours&quot; (`text-white/80 text-sm font-medium`) right
+
+**Column 3 - Features + CTA:**
+- `flex flex-col justify-between py-3 sm:py-4 md:py-5`
+- 4 feature items with `CheckCircle2` icon (from lucide-react) in `text-[#B2D770] w-4 h-4 sm:w-5 sm:h-5` and label in `text-white/70 text-sm`:
+1. &quot;Boundless iterations&quot;
+2. &quot;Cinema 8K mastergrade&quot;
+3. &quot;Bespoke 3D materials&quot;
+4. &quot;Dedicated render engineer 24/7&quot;
+- CTA button: split into two segments with `gap-[3px]`, both `bg-[#B2D770] text-black rounded-lg py-2.5`
+- Left: &quot;Start a brief&quot; with `text-sm font-medium px-4 sm:px-5`
+- Right: `ArrowUpRight` icon (lucide-react), `w-10` square-ish
+
+**Accent Color:** `#B2D770` (lime green) used for toggle active state, checkmark icons, and CTA button.
+
+**Global CSS (index.css):**
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+font-family: &#39;Geist&#39;, sans-serif;
+background: #000;
+color: #fff;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+```
+
+**Tailwind Config:**
+- Extends `fontFamily` with `geist: [&#39;Geist&#39;, &#39;sans-serif&#39;]`
+
+**Google Font (in index.html head):**
+```html
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot; /&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin /&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600;700;800;900&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+```</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="nimbus-pricing.html">NimBus Pricing<small>Pricing Page · pricing</small></a><a href="rocket-pricing.html">Rocket Pricing<small>Pricing Page · pricing</small></a><a href="nex-max-upgrade.html">Nex Max Upgrade<small>Pricing Page · pricing</small></a><a href="saas-pricing-flow.html">SaaS Pricing Flow<small>Pricing Page · hero</small></a><a href="package-fits-pricing.html">What Package Fits You<small>Pricing Page · hero</small></a><a href="community-superdesign-gridwright-design-the-web-type-the-prompt-swiss-grid-signal-red.html">Gridwright — Design the web, type the prompt (Swiss Grid / Signal Red)<small>Pricing Page · landing-page</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

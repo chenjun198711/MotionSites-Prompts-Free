@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arceage Services — Services 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色背景上展示服务卡片与图片，采用Barlow无衬线字体和Instrument Serif装饰斜体，全屏响应式布局。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/arceage-services.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arceage Services — Services 提示词">
+<meta property="og:description" content="深色背景上展示服务卡片与图片，采用Barlow无衬线字体和Instrument Serif装饰斜体，全屏响应式布局。">
+<meta property="og:url" content="https://prompt-site.shop/p/arceage-services.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/arceage-services.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Arceage Services","description":"深色背景上展示服务卡片与图片，采用Barlow无衬线字体和Instrument Serif装饰斜体，全屏响应式布局。","url":"https://prompt-site.shop/p/arceage-services.html","inLanguage":"zh-CN","genre":"Services","dateCreated":"2026-06-06T12:01:48.857738+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-services">Services</a></div><h1>Arceage Services</h1><div class="chip-row"><span class="chip">Services</span><span class="chip">features</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-06</span><span>正文：7,270 字符</span></div><div class="hero-media"><img src="../assets/previews/arceage-services.webp" alt="Arceage Services 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色背景上展示服务卡片与图片，采用Barlow无衬线字体和Instrument Serif装饰斜体，全屏响应式布局。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Create a React + Tailwind CSS v4 + Motion (&quot;motion/react&quot;) image/services section component. Use Vite as the bundler. Fully mobile responsive.
+
+### Fonts
+
+Import from Google Fonts in your global CSS:
+```
+@import url(&#39;https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Instrument+Serif:ital@0;1&amp;display=swap&#39;);
+```
+
+Define two Tailwind v4 theme fonts:
+- `--font-sans: &quot;Barlow&quot;, ui-sans-serif, system-ui, sans-serif;` (primary UI font via `font-sans`)
+- `--font-dm-serif: &quot;Instrument Serif&quot;, serif;` (accent/poetic italic font via `font-dm-serif`)
+
+The page wrapper uses `bg-black font-sans text-white`.
+
+### Dependencies
+
+- `react` v19
+- `motion` (npm package &quot;motion&quot;, import from `motion/react` -- provides `motion`)
+- `@lottiefiles/react-lottie-player` (provides `Player` component, import from `@lottiefiles/react-lottie-player`)
+- `tailwindcss` v4 with `@tailwindcss/vite` plugin
+- Vite v6+
+
+### Also requires a Typewriter component
+
+A reusable character-by-character reveal animation triggered on scroll:
+- Props: `text: string`, `delay?: number` (default 0), `speed?: number` (default 0.015), `className?: string` (default &quot;&quot;)
+- Uses `useRef`, `useInView(ref, { once: true, margin: &quot;-10px&quot; })` from `motion/react`
+- Renders a `motion.span` with `initial=&quot;hidden&quot;` and `animate={inView ? &quot;visible&quot; : &quot;hidden&quot;}`
+- Parent variants: hidden = `{ opacity: 1 }`, visible = `{ opacity: 1, transition: { staggerChildren: speed, delayChildren: delay } }`
+- Splits text into individual characters, each wrapped in `motion.span` with variants: hidden = `{ opacity: 0 }`, visible = `{ opacity: 1 }`
+
+---
+
+### Section Structure
+
+The section is a `&lt;section&gt;` with:
+- `id=&quot;services&quot;`
+- Classes: `w-full relative overflow-hidden flex flex-col justify-center`
+
+---
+
+### Layer 1: Full-bleed Background Image
+
+An absolutely-positioned div covering the entire section:
+- Wrapper: `absolute inset-0 z-0`
+- Image: `&lt;img&gt;` with:
+- `src=&quot;https://github.com/dsMagnatov/Acreage-landing-assets/blob/main/1.jpg?raw=true&quot;`
+- `alt=&quot;Agriculture Field&quot;`
+- Classes: `w-full h-full object-cover`
+- `referrerPolicy=&quot;no-referrer&quot;`
+
+---
+
+### Layer 2: Content Container
+
+A `div` positioned above the background:
+- Classes: `relative z-10 w-full mx-auto px-6 md:px-12 lg:px-[120px] py-8 md:py-24 flex flex-col h-full justify-between gap-4 md:gap-24`
+
+---
+
+### Top Content: Headline, Subheadline &amp; Button (3-column grid)
+
+Grid wrapper: `grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 w-full items-end`
+
+**Left 2 columns (headline area):**
+- Wrapped in `motion.div` with:
+- `initial={{ opacity: 0, y: 20 }}`
+- `whileInView={{ opacity: 1, y: 0 }}`
+- `viewport={{ once: true, margin: &quot;-100px&quot; }}`
+- `transition={{ duration: 0.6, ease: &quot;easeOut&quot; }}`
+- Classes: `md:col-span-2`
+
+- **Heading (h2):**
+- Classes: `text-[clamp(1.5rem,4vw,3.5rem)] font-medium tracking-tight text-white mb-6 leading-[1.1] max-w-[800px]`
+- Content:
+- `&lt;Typewriter text=&quot;A Highly Efficient, Precision-Driven Harvesting Process Built For &quot; delay={0} speed={0.012} /&gt;`
+- Then a `&lt;span className=&quot;font-dm-serif italic font-normal&quot;&gt;` wrapping `&lt;Typewriter text=&quot;Maximum Yield&quot; delay={0.8} speed={0.012} /&gt;`
+- &quot;Maximum Yield&quot; renders in Instrument Serif italic as the accent font.
+
+- **Subheadline (p):**
+- Classes: `text-lg md:text-[24px] text-white/80 font-light tracking-wide`
+- Content: `&lt;Typewriter text=&quot;Precision in every pass.&quot; delay={0.1} speed={0.012} /&gt;`
+
+**Right column (desktop-only button):**
+- Wrapped in `motion.div` with:
+- `initial={{ opacity: 0, y: 20 }}`
+- `whileInView={{ opacity: 1, y: 0 }}`
+- `viewport={{ once: true, margin: &quot;-100px&quot; }}`
+- `transition={{ duration: 0.6, delay: 0.1, ease: &quot;easeOut&quot; }}`
+- Classes: `hidden md:flex justify-end w-full max-w-[421px] pb-1`
+- **Button:**
+- `onClick` scrolls smoothly to `#contact` section
+- Classes: `px-6 py-2.5 rounded-full bg-white text-black hover:bg-black hover:text-white transition-colors duration-300 text-sm tracking-wide font-medium`
+- Text: &quot;Schedule Service&quot;
+
+---
+
+### Bottom Content: 3 Feature Columns (&quot;How it works&quot;)
+
+Grid wrapper: `grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 w-full md:mt-[200px]`
+
+Each of the 3 columns follows the same pattern, each wrapped in `motion.div`:
+- `initial={{ opacity: 0, y: 20 }}`
+- `whileInView={{ opacity: 1, y: 0 }}`
+- `viewport={{ once: true, margin: &quot;-100px&quot; }}`
+- `transition={{ duration: 0.6, delay: 0.1, ease: &quot;easeOut&quot; }}`
+
+Each column structure (`flex flex-col`):
+
+1. **Lottie Icon** -- `div` with classes `w-12 h-12 mb-6 flex items-center justify-center overflow-hidden`, containing a `&lt;Player&gt;` component:
+- `loop`, `autoplay`
+- `style={{ width: &#39;48px&#39;, height: &#39;48px&#39;, filter: &#39;brightness(0) invert(1)&#39; }}` (makes the icon white)
+
+2. **Divider line** -- `div` with classes `w-full h-px bg-white/20 mb-6`
+
+3. **Title (h3)** -- classes `text-2xl font-medium text-white mb-3`, content is a `&lt;Typewriter&gt;`
+
+4. **Description (p)** -- classes `text-sm text-white/70 leading-relaxed max-w-[340px]`, content is a `&lt;Typewriter&gt;`
+
+The 3 columns with their specific content:
+
+**Column 1** (`max-w-[420px]`):
+- Lottie src: `https://raw.githubusercontent.com/dsMagnatov/Acreage-landing-assets/refs/heads/main/curry.json`
+- Title: &quot;Sustainable Crop Care&quot;
+- Description: &quot;Nurturing your fields with eco-friendly practices to ensure healthy growth and robust yields.&quot;
+
+**Column 2** (`max-w-[420px]`):
+- Lottie src: `https://raw.githubusercontent.com/dsMagnatov/Acreage-landing-assets/refs/heads/main/tractor.json`
+- Title: &quot;Advanced Machinery&quot;
+- Description: &quot;Deploying state-of-the-art tractors and harvesters for maximum efficiency and speed.&quot;
+
+**Column 3** (`max-w-[421px]`):
+- Lottie src: `https://raw.githubusercontent.com/dsMagnatov/Acreage-landing-assets/refs/heads/main/beetle.json`
+- Title: &quot;Smart Pest Management&quot;
+- Description: &quot;Protecting your harvest by monitoring and managing field ecosystems with precision.&quot;
+
+---
+
+### Mobile-Only Button (below the 3 columns)
+
+- Wrapped in `motion.div` with:
+- `initial={{ opacity: 0, y: 20 }}`
+- `whileInView={{ opacity: 1, y: 0 }}`
+- `viewport={{ once: true, margin: &quot;-100px&quot; }}`
+- `transition={{ duration: 0.6, delay: 0.2, ease: &quot;easeOut&quot; }}`
+- Classes: `flex md:hidden justify-start w-full`
+- Same button as desktop version:
+- Classes: `px-6 py-2.5 rounded-full bg-white text-black hover:bg-black hover:text-white transition-colors duration-300 text-sm tracking-wide font-medium`
+- Text: &quot;Schedule Service&quot;
+- Scrolls to `#contact`
+
+---
+
+### Mobile Responsiveness Summary
+
+- Section padding: `px-6 py-8` on mobile, `md:px-12 md:py-24`, `lg:px-[120px]`
+- Grid stacks to single column on mobile (`grid-cols-1`), 3 columns at `md:` breakpoint
+- Heading uses fluid type: `clamp(1.5rem, 4vw, 3.5rem)`
+- Subheadline: `text-lg` mobile, `md:text-[24px]` desktop
+- Desktop button hidden on mobile (`hidden md:flex`), replaced by mobile button at bottom (`flex md:hidden`)
+- The `md:mt-[200px]` on the bottom grid creates vertical spacing between top content and feature columns on desktop only; on mobile, `gap-4` between sections keeps it compact
+- Feature column max-widths (`max-w-[420px]` / `max-w-[421px]`) constrain reading width on all sizes
+
+---</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="agency-services.html">Agency Services<small>Services · features</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

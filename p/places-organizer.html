@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Places Organizer — Travel 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Build a single-page HTML showcase displaying two iOS device frames (370x790px each) side by side on a neutral  F4F4F4  stage. The stage auto-scales to">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/places-organizer.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Places Organizer — Travel 提示词">
+<meta property="og:description" content="Build a single-page HTML showcase displaying two iOS device frames (370x790px each) side by side on a neutral  F4F4F4  stage. The stage auto-scales to">
+<meta property="og:url" content="https://prompt-site.shop/p/places-organizer.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Places Organizer","description":"Build a single-page HTML showcase displaying two iOS device frames (370x790px each) side by side on a neutral  F4F4F4  stage. The stage auto-scales to","url":"https://prompt-site.shop/p/places-organizer.html","inLanguage":"zh-CN","genre":"Travel","dateCreated":"2026-07-13T10:50:50.515459+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-travel">Travel</a></div><h1>Places Organizer</h1><div class="chip-row"><span class="chip">Travel</span><span class="chip">mobile</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-07-13</span><span>正文：8,124 字符</span></div><div class="hero-media"><video src="../assets/previews/places-organizer.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">```
+**Build a single-page HTML showcase displaying two iOS device frames (370x790px each) side by side on a neutral `#F4F4F4` stage. The stage auto-scales to fit the viewport using JS. Both phones have a Dynamic Island, status bar (time &quot;11:11&quot;, signal/wifi/battery icons in white SVG), and a home indicator bar. Animations are gated behind video `loadeddata` events + font loading, with a 5s safety timeout.**
+
+---
+
+### Fonts
+
+1. **ITC Garamond Std Narrow** (self-hosted from Cloudinary):
+   - Light (300): `https://res.cloudinary.com/dgupuutfn/raw/upload/v1783596334/ITCGaramondStd-LtNarrow_i2zcip.woff2` / `.woff` variant `ITCGaramondStd-LtNarrow_soc5vc.woff`
+   - Book (400): `https://res.cloudinary.com/dgupuutfn/raw/upload/v1783596334/ITCGaramondStd-BkNarrow_xjfoc0.woff2` / `.woff` variant `ITCGaramondStd-BkNarrow_wfoxm1.woff`
+   - Book Italic (400 italic): `https://res.cloudinary.com/dgupuutfn/raw/upload/v1783596334/ITCGaramondStd-BkNarrowIta_hiy9ld.woff2` / `.woff` variant `ITCGaramondStd-BkNarrowIta_rlarxo.woff`
+
+2. **Google Fonts**: `Playfair Display` (400, 500, 600 + italic) and `Inter` (400, 500, 600, 700)
+
+---
+
+### Screen 1 -- &quot;The place for all your places&quot; (Light device frame)
+
+**Background**: Dark (#02040c). Uses a native 470x1008 design scaled down to 370x790 via `transform: scale(0.787234)` with `transform-origin: top left`.
+
+**Video background (hero)**:
+` ` `
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260710_114906_ad7cee37-9e56-434f-99bc-92d5bdc4f9fe.mp4
+` ` `
+- `autoplay loop muted playsinline`, `object-fit: cover`, `object-position: center 48%`, covers entire frame, z-index 0.
+
+**Hero fade overlay**: Bottom 46% of the frame, gradient from `rgba(2,4,12,0)` to `rgba(2,4,12,.35)` at 46% to `rgba(2,4,12,.72)` at 100%. z-index 1.
+
+**Logo** (centered, top 74px):
+` ` `
+https://polo-pecan-73837341.figma.site/_assets/v11/b1ddc82509144261f1999a0c4d92be5ce6689c0f.png
+` ` `
+- Width 118px, `filter: drop-shadow(0 0 7px rgba(190,215,255,.28))`. z-index 4.
+
+**Title** (top 618px, centered, z-index 4):
+- Font: ITC Garamond Std Narrow, weight 300, 66px, line-height 68px, letter-spacing 0.2px
+- Text: `The place for all` then line break, then `your places` in italic (weight 400)
+- Text shadow: `0 0 34px rgba(255,255,255,.22), 0 1px 2px rgba(0,0,0,.35)`
+- The italic &quot;your places&quot; has an extra glow: `0 0 10px rgba(255,255,255,.6), 0 0 20px rgba(255,235,190,.5), 0 0 40px rgba(255,210,140,.32)`
+
+**Subtitle** (top 787px, centered, z-index 4):
+- Font: Inter, 16.5px, weight 400, line-height 26px, color `rgba(255,255,255,.52)`
+- Text: &quot;Save, Organize and Share\nyour favorite places&quot;
+
+**Button** (top 874px, left 32px, 406x55px, z-index 4):
+- White background, border-radius 28px, box-shadow `0 6px 26px rgba(0,0,0,.28)`
+- Apple logo SVG (18x21, fill #1a1a1a) + text &quot;Continue with Apple&quot;
+- Font: Helvetica Neue, 18px, weight 500, -webkit-text-stroke 0.6px #1a1a1a
+
+**Terms** (top 950px, centered, z-index 4):
+- Font: 12px, weight 400, color `rgba(255,255,255,.42)`
+- Text: &quot;By continuing, you agree to **Terms of Use**&quot; (bold text is `rgba(255,255,255,.82)`, weight 400)
+
+---
+
+### Screen 2 -- &quot;Unlock Pro&quot; (Dark device frame)
+
+**Background**: Dark (#14151d).
+
+**Video background**:
+` ` `
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260710_115050_a1ba47d0-aedf-413c-9dea-14509599d3dd.mp4
+` ` `
+- `autoplay loop muted playsinline`, positioned `left: 0; top: -30%`, 370x790px, `object-fit: cover`, z-index 0.
+
+**Background fade** (full overlay, z-index 1):
+` ` `css
+linear-gradient(to bottom,
+  rgba(20,21,29,0) 0%, rgba(20,21,29,0) 40%,
+  rgba(20,21,29,0.55) 55%, rgba(20,21,29,0.92) 66%,
+  #14151d 74%, #14151d 100%);
+` ` `
+
+**Heading** (left 28px, top 386px):
+- Font: ITC Garamond Std Narrow, weight 500, 26px, line-height 1, color white
+- Letter-spacing 0.2px, text-shadow `0 0 18px rgba(120,180,220,0.35)`
+- Text: &quot;Unlock Pro:&quot;
+
+**Divider** (left 28px, top 418px, 265x1px):
+- `linear-gradient(to right, rgba(255,255,255,0.30) 0%, rgba(255,255,255,0.30) 70%, rgba(255,255,255,0) 100%)`
+
+**Feature list** (left 28px, top 429px, width 314px):
+Each row is 24px tall with a 22px-wide icon area + text (13.5px, weight 400, white, 4px left margin).
+
+Icons are all SVG, 19x19 (or 20x20 for infinity), stroke #fff, stroke-width 1.7, no fill:
+
+1. **Layers icon** (paths: `M12 2 2 7l10 5 10-5-10-5Z` / `M2 12l10 5 10-5` / `M2 17l10 5 10-5`) -- &quot;Create private Guides&quot;
+2. **Phone icon** (rect 6,2.5 12x19 rx2.5 + line 10.5,18.5 to 13.5,18.5) -- &quot;Import from social media&quot;
+3. **Infinity icon** (path: `M18.178 8c5.096 0 5.096 8 0 8-5.095 0-7.988-8-13.083-8-5.096 0-5.096 8 0 8 5.095 0 7.988-8 13.083-8z`) -- &quot;Unlimited Guides&quot;
+4. **Sparkle icon** (path: `M12 3c.4 3.6 1.4 4.6 5 5-3.6.4-4.6 1.4-5 5-.4-3.6-1.4-4.6-5-5 3.6-.4 4.6-1.4 5-5Z`) -- &quot;AI search&quot;
+5. **People icon** (circle cx8.5 cy8 r3 + path for body + second person outline) -- &quot;Collaborate with friends&quot;
+
+**Pricing cards** (left 28px, top 561px, 314x123px):
+
+  - Background image: `https://polo-pecan-73837341.figma.site/_assets/v11/ef4533e6536f2495088e56e0f98036b5ff15446d.png` (cover, centered)
+  - Border: 1px solid `rgba(255,255,255,0.11)`
+  - Inner padding: 14px 14px 15px 15px
+  - &quot;Monthly&quot; label (13px, weight 400), &quot;$20&quot; price (19px, weight 500, margin-top 6px, letter-spacing 0.3px), &quot;Billed Monthly&quot; at bottom-left (12px)
+  - All text white with `text-shadow: 0 1px 6px rgba(0,0,0,0.35)`
+
+  - Background: #1e212a, border: 1px solid `rgba(255,255,255,0.11)`
+  - &quot;Yearly&quot; label + &quot;Billed Yearly&quot; in `rgba(255,255,255,0.50)`
+  - &quot;$200&quot; price in `rgba(255,255,255,0.62)`
+  - **Save badge** (left 15px, top 66px): inline-flex pill, padding 5px 8px, border-radius 11px, background #4d5057, text &quot;Save $40.00&quot; (10.5px, weight 600, color `rgba(255,255,255,0.65)`, letter-spacing 0.2px)
+
+**Subscribe button** (left 28px, top 709px, 314x50px):
+- White background, border-radius 26px
+- &quot;Subscribe&quot; text: Helvetica Neue, 16px, weight 500, color #0c0c0e, -webkit-text-stroke 0.4px
+- Right chevron SVG: 9x15, stroke #0c0c0e, stroke-width 2, path `M1.5 1.5 7 7.5 1.5 13.5`
+
+---
+
+### iOS Device Frame (reusable for both)
+
+- Width: 370px, Height: 790px, Border-radius: 48px
+- Light frame: background `#F2F2F7`; Dark frame: background `#000`
+- Box-shadow: `0 40px 80px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.12)`
+- Dynamic Island: 126x37px, border-radius 24px, black, centered at top 11px
+- Status bar time: SF Pro weight 590, 17px, white
+- Status bar icons: signal bars (4 rects), WiFi (3 arcs + dot), battery (rect + fill + nub) -- all white SVG
+- Home indicator: 139x5px bar, border-radius 100px, `rgba(0,0,0,0.25)` on light / `rgba(255,255,255,0.7)` on dark
+
+---
+
+### Stage Layout
+
+- Gap between phones: 70px
+- Viewport padding: 40px
+- Background: `#F4F4F4`
+- Auto-scale JS: measures stage vs viewport, applies `transform: scale(min(1, fitRatio) * 0.95)` centered
+
+---
+
+### Entrance Animations
+
+All paused until `.ze-ready` class is added to viewport (triggered when both videos fire `loadeddata` + fonts ready, or 5s timeout).
+
+**Keyframes used:**
+- `zeBgSettle`: scale 1.12 + opacity 0 to scale 1 + opacity 1 (1.7s, for backgrounds)
+- `zeReveal`: translateY(26px) + scale(0.985) + blur(7px) + opacity 0 to normal (0.9s)
+- `zeDrop`: translateY(-16px) + scale(0.90) + opacity 0 to normal (0.9s)
+- `zeLine`: scaleX(0) to scaleX(1), transform-origin left (0.9s)
+- `zePop`: translateY(8px) + scale(0.78) to bounce scale(1.07) to scale(1) (0.7s, spring easing)
+
+**Easing:** `cubic-bezier(0.16, 1, 0.3, 1)` (expo-out). Save badge uses `cubic-bezier(0.34, 1.56, 0.64, 1)` (spring).
+
+**Stagger (Screen 1):**
+- Hero bg: 0s delay
+- Logo (zeDrop): 0.45s
+- Title (zeReveal): 0.62s
+- Subtitle: 0.78s
+- Button: 0.94s
+- Terms: 1.06s
+
+**Stagger (Screen 2):**
+- Video bg (zeBgSettle): 0.12s delay
+- Heading (zeReveal): 0.58s
+- Divider (zeLine): 0.72s
+- Row 1-5 (zeReveal): 0.80s, 0.88s, 0.96s, 1.04s, 1.12s
+- Monthly card: 1.22s
+- Yearly card: 1.30s
+- Subscribe button: 1.42s
+- Save badge (zePop): 1.55s
+
+**Reduced motion:** All animations disabled via `@media (prefers-reduced-motion: reduce)`.
+```</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="way-farer.html">Way Farer<small>Travel · travel</small></a><a href="frostbound.html">Frostbound<small>Travel · travel</small></a><a href="mountain-retreat.html">Mountain Retreat<small>Travel · travel</small></a><a href="ai-trip-planner.html">AI Trip Planner<small>Travel · hero</small></a><a href="mostar-guide.html">Mostar Guide<small>Travel · hero</small></a><a href="place-saver.html">Place Saver<small>Travel · mobile</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

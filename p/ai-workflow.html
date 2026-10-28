@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Workflow Hero — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="AI工作流平台的品牌英雄区，深色渐变背景搭配发光粒子动效，中央展示产品名称与核心功能按钮。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/ai-workflow.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI Workflow Hero — Hero Section 提示词">
+<meta property="og:description" content="AI工作流平台的品牌英雄区，深色渐变背景搭配发光粒子动效，中央展示产品名称与核心功能按钮。">
+<meta property="og:url" content="https://prompt-site.shop/p/ai-workflow.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/ai-workflow.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"AI Workflow Hero","description":"AI工作流平台的品牌英雄区，深色渐变背景搭配发光粒子动效，中央展示产品名称与核心功能按钮。","url":"https://prompt-site.shop/p/ai-workflow.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-05-16T07:42:35.411495+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>AI Workflow Hero</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-05-16</span><span>正文：14,258 字符</span></div><div class="hero-media"><img src="../assets/previews/ai-workflow.webp" alt="AI Workflow Hero 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>AI工作流平台的品牌英雄区，深色渐变背景搭配发光粒子动效，中央展示产品名称与核心功能按钮。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">### Stack
+
+- **Vite** + **React 18** + **TypeScript**
+- **Tailwind CSS 3.4**
+- **lucide-react** for icons (`LogIn`, `UserPlus`, `Play`, `Sparkles`, `Menu`, `X`)
+- No Framer Motion -- all animations are CSS `transition-*` classes
+
+---
+
+### Fonts (loaded in `index.html`)
+
+```html
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot; /&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin /&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+&lt;link href=&quot;https://db.onlinewebfonts.com/c/6e47ef470dd19698c911332a9b4d1cf4?family=Neue+Haas+Grotesk+Text+Pro&quot; rel=&quot;stylesheet&quot; /&gt;
+&lt;link href=&quot;https://db.onlinewebfonts.com/c/dec0d9b4e22ca588dc20e1e2e09a59b5?family=Neue+Haas+Grotesk+Display+Pro+55+Roman&quot; rel=&quot;stylesheet&quot; /&gt;
+```
+
+Body/root font stack (in `index.css`):
+
+```css
+html, body, #root {
+height: 100%;
+margin: 0;
+font-family: &#39;Neue Haas Grotesk Display Pro 55 Roman&#39;, &#39;Neue Haas Grotesk Text Pro&#39;, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif;
+-webkit-font-smoothing: antialiased;
+}
+```
+
+---
+
+### Video URL (CloudFront)
+
+```
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260511_131941_d136af49-e243-493a-be14-6ff3f24e09e6.mp4
+```
+
+---
+
+### Color Palette
+
+| Token | Hex |
+|-------|-----|
+| Dark green (text, buttons) | `#1f2a1d` |
+| Medium dark green | `#2d3a2a` |
+| Button hover | `#2a3827` |
+| Body text green | `#4b5b47` |
+| Heading primary | `#336443` |
+| Heading accent | `#85AB8B` |
+| Bottom-left text | `#3d5638` |
+| Bottom-left button bg | `#3d5638`, hover `#2d4228` |
+
+---
+
+### Architecture
+
+Two files:
+
+1. **`BoomerangVideoBg.tsx`** -- captures video frames into canvas, then plays them forward/backward in a seamless boomerang loop at 30fps (960px max capture width).
+2. **`App.tsx`** -- the full hero section.
+
+---
+
+### `BoomerangVideoBg.tsx` (exact)
+
+```tsx
+import { useEffect, useRef, useState } from &#39;react&#39;;
+
+type Props = {
+src: string;
+className?: string;
+};
+
+export default function BoomerangVideoBg({ src, className }: Props) {
+const videoRef = useRef&lt;HTMLVideoElement&gt;(null);
+const displayCanvasRef = useRef&lt;HTMLCanvasElement&gt;(null);
+const [framesReady, setFramesReady] = useState(false);
+const framesRef = useRef&lt;HTMLCanvasElement[]&gt;([]);
+
+useEffect(() =&gt; {
+const video = videoRef.current;
+if (!video) return;
+
+const frames: HTMLCanvasElement[] = [];
+let capturing = true;
+let lastTime = -1;
+const MAX_WIDTH = 960;
+
+const captureFrame = () =&gt; {
+if (!capturing || video.readyState &lt; 2) return;
+if (video.currentTime === lastTime) return;
+lastTime = video.currentTime;
+
+const vw = video.videoWidth;
+const vh = video.videoHeight;
+if (!vw || !vh) return;
+
+const scale = Math.min(1, MAX_WIDTH / vw);
+const w = Math.round(vw * scale);
+const h = Math.round(vh * scale);
+
+const canvas = document.createElement(&#39;canvas&#39;);
+canvas.width = w;
+canvas.height = h;
+const ctx = canvas.getContext(&#39;2d&#39;);
+if (!ctx) return;
+ctx.drawImage(video, 0, 0, w, h);
+frames.push(canvas);
+};
+
+type VFCVideo = HTMLVideoElement &amp; {
+requestVideoFrameCallback?: (cb: () =&gt; void) =&gt; number;
+};
+const vfcVideo = video as VFCVideo;
+const hasVFC = typeof vfcVideo.requestVideoFrameCallback === &#39;function&#39;;
+
+let rafId = 0;
+const rafLoop = () =&gt; {
+captureFrame();
+if (capturing) rafId = requestAnimationFrame(rafLoop);
+};
+
+const vfcLoop = () =&gt; {
+captureFrame();
+if (capturing &amp;&amp; vfcVideo.requestVideoFrameCallback) {
+vfcVideo.requestVideoFrameCallback(vfcLoop);
+}
+};
+
+const onEnded = () =&gt; {
+capturing = false;
+if (frames.length &gt; 0) {
+framesRef.current = frames;
+setFramesReady(true);
+}
+};
+
+const onLoaded = () =&gt; {
+video.play().catch(() =&gt; {});
+if (hasVFC) {
+vfcVideo.requestVideoFrameCallback!(vfcLoop);
+} else {
+rafId = requestAnimationFrame(rafLoop);
+}
+};
+
+video.addEventListener(&#39;loadedmetadata&#39;, onLoaded);
+video.addEventListener(&#39;ended&#39;, onEnded);
+if (video.readyState &gt;= 1) onLoaded();
+
+return () =&gt; {
+capturing = false;
+cancelAnimationFrame(rafId);
+video.removeEventListener(&#39;loadedmetadata&#39;, onLoaded);
+video.removeEventListener(&#39;ended&#39;, onEnded);
+};
+}, [src]);
+
+useEffect(() =&gt; {
+if (!framesReady) return;
+const canvas = displayCanvasRef.current;
+if (!canvas) return;
+const ctx = canvas.getContext(&#39;2d&#39;);
+if (!ctx) return;
+const frames = framesRef.current;
+if (frames.length === 0) return;
+
+const first = frames[0];
+canvas.width = first.width;
+canvas.height = first.height;
+
+let index = 0;
+let direction = 1;
+let last = performance.now();
+const interval = 1000 / 30;
+let rafId = 0;
+
+const render = (now: number) =&gt; {
+if (now - last &gt;= interval) {
+last = now;
+ctx.drawImage(frames[index], 0, 0);
+index += direction;
+if (index &gt;= frames.length - 1) {
+index = frames.length - 1;
+direction = -1;
+} else if (index &lt;= 0) {
+index = 0;
+direction = 1;
+}
+}
+rafId = requestAnimationFrame(render);
+};
+rafId = requestAnimationFrame(render);
+return () =&gt; cancelAnimationFrame(rafId);
+}, [framesReady]);
+
+return (
+&lt;div className={className ?? &#39;absolute inset-0 w-full h-full&#39;}&gt;
+&lt;video
+ref={videoRef}
+src={src}
+className=&quot;w-full h-full object-cover&quot;
+style={{ display: framesReady ? &#39;none&#39; : &#39;block&#39; }}
+muted
+playsInline
+preload=&quot;auto&quot;
+crossOrigin=&quot;anonymous&quot;
+/&gt;
+&lt;canvas
+ref={displayCanvasRef}
+className=&quot;w-full h-full object-cover&quot;
+style={{ display: framesReady ? &#39;block&#39; : &#39;none&#39; }}
+/&gt;
+&lt;/div&gt;
+);
+}
+```
+
+---
+
+### `App.tsx` (exact)
+
+```tsx
+import { useState, useEffect } from &#39;react&#39;;
+import { LogIn, UserPlus, Play, Sparkles, Menu, X } from &#39;lucide-react&#39;;
+import BoomerangVideoBg from &#39;./BoomerangVideoBg&#39;;
+
+const BG_VIDEO =
+&#39;https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260511_131941_d136af49-e243-493a-be14-6ff3f24e09e6.mp4&#39;;
+
+function App() {
+const [menuOpen, setMenuOpen] = useState(false);
+
+useEffect(() =&gt; {
+if (menuOpen) {
+document.body.style.overflow = &#39;hidden&#39;;
+} else {
+document.body.style.overflow = &#39;&#39;;
+}
+return () =&gt; {
+document.body.style.overflow = &#39;&#39;;
+};
+}, [menuOpen]);
+
+const navLinks = [
+{ href: &#39;#mission&#39;, label: &#39;Purpose&#39; },
+{ href: &#39;#how&#39;, label: &#39;The Process&#39; },
+{ href: &#39;#pricing&#39;, label: &#39;Tariffs&#39; },
+];
+
+return (
+&lt;section className=&quot;relative w-full min-h-screen sm:h-screen overflow-hidden&quot;&gt;
+&lt;BoomerangVideoBg src={BG_VIDEO} className=&quot;absolute inset-0 w-full h-full&quot; /&gt;
+&lt;nav className=&quot;absolute top-0 left-0 right-0 z-30 flex items-center justify-between px-4 sm:px-6 md:px-10 py-4 sm:py-6&quot;&gt;
+&lt;div className=&quot;flex items-center gap-2 text-[#2d3a2a]&quot;&gt;
+&lt;span className=&quot;text-lg sm:text-xl md:text-2xl font-semibold tracking-tight&quot;&gt;
+LinkFlow&lt;sup className=&quot;text-[10px] sm:text-xs font-medium&quot;&gt;TM&lt;/sup&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div className=&quot;hidden lg:flex items-center gap-1 bg-white/70 backdrop-blur-md rounded-full pl-6 pr-1 py-1 shadow-sm border border-white/60&quot;&gt;
+{navLinks.map((link, i) =&gt; (
+&lt;a
+key={link.href}
+href={link.href}
+className={`text-sm px-3 py-2 transition-colors ${
+i === 0 ? &#39;font-semibold text-[#1f2a1d]&#39; : &#39;font-medium text-[#4b5b47] hover:text-[#1f2a1d]&#39;
+}`}
+&gt;
+{link.label}
+&lt;/a&gt;
+))}
+&lt;button className=&quot;ml-2 bg-[#1f2a1d] hover:bg-[#2a3827] text-white text-sm font-medium px-5 py-2.5 rounded-full transition-colors&quot;&gt;
+Try it Live
+&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div className=&quot;flex items-center gap-3 sm:gap-6 text-[#2d3a2a]&quot;&gt;
+&lt;a href=&quot;#signup&quot; className=&quot;hidden sm:flex items-center gap-2 text-sm font-medium hover:opacity-80 transition-opacity&quot;&gt;
+&lt;UserPlus className=&quot;w-4 h-4&quot; /&gt;
+Sign Me Up!
+&lt;/a&gt;
+&lt;a href=&quot;#login&quot; className=&quot;hidden sm:flex items-center gap-2 text-sm font-medium hover:opacity-80 transition-opacity&quot;&gt;
+&lt;LogIn className=&quot;w-4 h-4&quot; /&gt;
+Enter
+&lt;/a&gt;
+&lt;button
+onClick={() =&gt; setMenuOpen((v) =&gt; !v)}
+className=&quot;lg:hidden relative flex items-center justify-center w-10 h-10 rounded-full bg-white/70 backdrop-blur-md border border-white/60 text-[#1f2a1d] transition-all duration-300 hover:bg-white/90&quot;
+aria-label={menuOpen ? &#39;Close menu&#39; : &#39;Open menu&#39;}
+aria-expanded={menuOpen}
+&gt;
+&lt;Menu
+className={`w-5 h-5 absolute transition-all duration-300 ${
+menuOpen ? &#39;opacity-0 rotate-90 scale-50&#39; : &#39;opacity-100 rotate-0 scale-100&#39;
+}`}
+/&gt;
+&lt;X
+className={`w-5 h-5 absolute transition-all duration-300 ${
+menuOpen ? &#39;opacity-100 rotate-0 scale-100&#39; : &#39;opacity-0 -rotate-90 scale-50&#39;
+}`}
+/&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/nav&gt;
+
+{/* Mobile menu overlay */}
+&lt;div
+className={`lg:hidden fixed inset-0 z-20 transition-opacity duration-300 ${
+menuOpen ? &#39;opacity-100 pointer-events-auto&#39; : &#39;opacity-0 pointer-events-none&#39;
+}`}
+onClick={() =&gt; setMenuOpen(false)}
+&gt;
+&lt;div className=&quot;absolute inset-0 bg-[#1f2a1d]/40 backdrop-blur-sm&quot; /&gt;
+&lt;/div&gt;
+
+{/* Mobile menu drawer */}
+&lt;div
+className={`lg:hidden fixed top-0 right-0 bottom-0 z-20 w-[85%] max-w-sm bg-white/95 backdrop-blur-xl shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+menuOpen ? &#39;translate-x-0&#39; : &#39;translate-x-full&#39;
+}`}
+&gt;
+&lt;div className=&quot;flex flex-col h-full pt-24 px-8 pb-8&quot;&gt;
+&lt;div className=&quot;flex flex-col gap-1&quot;&gt;
+{navLinks.map((link, i) =&gt; (
+&lt;a
+key={link.href}
+href={link.href}
+onClick={() =&gt; setMenuOpen(false)}
+className={`text-2xl font-semibold text-[#1f2a1d] py-4 border-b border-[#1f2a1d]/10 transition-all duration-500 ${
+menuOpen ? &#39;translate-x-0 opacity-100&#39; : &#39;translate-x-8 opacity-0&#39;
+}`}
+style={{ transitionDelay: menuOpen ? `${150 + i * 70}ms` : &#39;0ms&#39; }}
+&gt;
+{link.label}
+&lt;/a&gt;
+))}
+&lt;/div&gt;
+
+&lt;div
+className={`mt-8 flex flex-col gap-4 transition-all duration-500 ${
+menuOpen ? &#39;translate-x-0 opacity-100&#39; : &#39;translate-x-8 opacity-0&#39;
+}`}
+style={{ transitionDelay: menuOpen ? &#39;400ms&#39; : &#39;0ms&#39; }}
+&gt;
+&lt;a href=&quot;#signup&quot; className=&quot;flex items-center gap-2 text-sm font-medium text-[#2d3a2a] sm:hidden&quot;&gt;
+&lt;UserPlus className=&quot;w-4 h-4&quot; /&gt;
+Sign Me Up!
+&lt;/a&gt;
+&lt;a href=&quot;#login&quot; className=&quot;flex items-center gap-2 text-sm font-medium text-[#2d3a2a] sm:hidden&quot;&gt;
+&lt;LogIn className=&quot;w-4 h-4&quot; /&gt;
+Enter
+&lt;/a&gt;
+&lt;button className=&quot;mt-2 bg-[#1f2a1d] hover:bg-[#2a3827] text-white text-sm font-semibold px-5 py-3 rounded-full transition-colors&quot;&gt;
+Try it Live
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+{/* Hero copy */}
+&lt;div className=&quot;relative z-10 flex flex-col items-center text-center pt-24 sm:pt-28 md:pt-32 px-4 sm:px-6&quot;&gt;
+&lt;h1
+className=&quot;font-normal leading-[0.95] text-[#336443] text-[2rem] sm:text-4xl md:text-5xl lg:text-[4.75rem] xl:text-[5.25rem] max-w-5xl&quot;
+style={{ fontFamily: &#39;&quot;Neue Haas Grotesk Display Pro 55 Roman&quot;, &quot;Neue Haas Grotesk Text Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif&#39;, letterSpacing: &#39;-0.035em&#39; }}
+&gt;
+Close the rift{&#39; &#39;}
+&lt;span className=&quot;text-[#85AB8B]&quot;&gt;
+linking
+&lt;br className=&quot;hidden sm:block&quot; /&gt; signals and action
+&lt;/span&gt;
+&lt;/h1&gt;
+&lt;p className=&quot;mt-6 sm:mt-8 text-[#4b5b47] text-sm sm:text-base md:text-lg leading-relaxed max-w-md px-2&quot;&gt;
+Shape scattered signals into meaningful outcomes via AI-driven workflows.
+&lt;/p&gt;
+&lt;/div&gt;
+
+{/* Bottom-left CTA block */}
+&lt;div className=&quot;absolute left-4 right-4 sm:right-auto sm:left-6 md:left-10 bottom-6 sm:bottom-8 md:bottom-10 z-10 max-w-sm&quot;&gt;
+&lt;div className=&quot;flex items-center gap-2 text-[#3d5638] sm:text-white/95 mb-3&quot;&gt;
+&lt;Sparkles className=&quot;w-4 h-4&quot; /&gt;
+&lt;span className=&quot;text-sm font-semibold sm:font-medium&quot;&gt;
+FluxEngine&lt;sup className=&quot;text-[10px]&quot;&gt;TM&lt;/sup&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;p className=&quot;text-[#3d5638]/90 sm:text-white/85 text-xs leading-relaxed mb-6 max-w-xs font-medium sm:font-normal&quot;&gt;
+LinkFlow smoothly unites your company systems, streamlining data paths between services without having to write custom scripts.
+&lt;/p&gt;
+&lt;div className=&quot;flex items-center gap-4 flex-wrap&quot;&gt;
+&lt;button className=&quot;bg-[#3d5638] sm:bg-white hover:bg-[#2d4228] sm:hover:bg-white/90 text-white sm:text-[#1f2a1d] text-sm font-semibold px-5 sm:px-6 py-2.5 sm:py-3 rounded-full transition-colors shadow-sm&quot;&gt;
+Try it Live
+&lt;/button&gt;
+&lt;button className=&quot;text-[#3d5638] sm:text-white text-sm font-semibold sm:font-medium hover:opacity-80 transition-opacity&quot;&gt;
+Know More.
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+{/* Bottom-right video link */}
+&lt;div className=&quot;hidden sm:flex absolute right-6 md:right-10 bottom-8 md:bottom-10 z-10 items-center gap-2 text-white/90 text-sm&quot;&gt;
+&lt;button className=&quot;flex items-center justify-center w-6 h-6 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors&quot;&gt;
+&lt;Play className=&quot;w-3 h-3 fill-white text-white ml-0.5&quot; /&gt;
+&lt;/button&gt;
+&lt;span className=&quot;font-medium&quot;&gt;How we build?&lt;/span&gt;
+&lt;span className=&quot;text-white/60&quot;&gt;1:35&lt;/span&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+);
+}
+
+export default App;
+```
+
+---
+
+### Animation Details (all CSS, no Framer Motion)
+
+| Element | Property | Values |
+|---------|----------|--------|
+| Hamburger Menu/X icon swap | `transition-all duration-300` | Open: Menu gets `opacity-0 rotate-90 scale-50`, X gets `opacity-100 rotate-0 scale-100`. Closed: reverse. |
+| Mobile overlay backdrop | `transition-opacity duration-300` | Open: `opacity-100 pointer-events-auto`. Closed: `opacity-0 pointer-events-none`. |
+| Mobile drawer slide | `transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]` | Open: `translate-x-0`. Closed: `translate-x-full`. |
+| Mobile nav links stagger | `transition-all duration-500` | Open: `translate-x-0 opacity-100`, delay per item: `150ms + i * 70ms`. Closed: `translate-x-8 opacity-0`, delay `0ms`. |
+| Mobile CTA group | `transition-all duration-500` | Open: `translate-x-0 opacity-100`, delay `400ms`. Closed: `translate-x-8 opacity-0`, delay `0ms`. |
+| Nav buttons | `transition-colors` | Default Tailwind duration (150ms). |
+| Opacity links | `transition-opacity` | `hover:opacity-80`. |
+
+---
+
+### Key Layout/Spacing Notes
+
+- Root section: `relative w-full min-h-screen sm:h-screen overflow-hidden`
+- Navbar padding: `px-4 sm:px-6 md:px-10 py-4 sm:py-6`
+- Desktop pill nav: `bg-white/70 backdrop-blur-md rounded-full pl-6 pr-1 py-1 shadow-sm border border-white/60`
+- Hero heading: `pt-24 sm:pt-28 md:pt-32`, font sizes `text-[2rem] sm:text-4xl md:text-5xl lg:text-[4.75rem] xl:text-[5.25rem]`, `leading-[0.95]`, `letterSpacing: &#39;-0.035em&#39;`
+- Bottom-left block: `absolute left-4 right-4 sm:right-auto sm:left-6 md:left-10 bottom-6 sm:bottom-8 md:bottom-10`
+- Bottom-right video: `absolute right-6 md:right-10 bottom-8 md:bottom-10`
+
+---
+
+### Dependencies (package.json)
+
+```json
+{
+&quot;dependencies&quot;: {
+&quot;lucide-react&quot;: &quot;^0.344.0&quot;,
+&quot;react&quot;: &quot;^18.3.1&quot;,
+&quot;react-dom&quot;: &quot;^18.3.1&quot;
+},
+&quot;devDependencies&quot;: {
+&quot;@vitejs/plugin-react&quot;: &quot;^4.3.1&quot;,
+&quot;autoprefixer&quot;: &quot;^10.4.18&quot;,
+&quot;postcss&quot;: &quot;^8.4.35&quot;,
+&quot;tailwindcss&quot;: &quot;^3.4.1&quot;,
+&quot;typescript&quot;: &quot;^5.5.3&quot;,
+&quot;vite&quot;: &quot;^5.4.2&quot;
+}
+}
+```</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

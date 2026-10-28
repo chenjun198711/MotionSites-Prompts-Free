@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Futuristic Tech — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色电影感全屏视差英雄区，背景为循环播放的科技视频，搭配Inter无衬线字体，营造沉浸式未来科技氛围。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/futuristic-tech.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Futuristic Tech — Hero Section 提示词">
+<meta property="og:description" content="深色电影感全屏视差英雄区，背景为循环播放的科技视频，搭配Inter无衬线字体，营造沉浸式未来科技氛围。">
+<meta property="og:url" content="https://prompt-site.shop/p/futuristic-tech.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/futuristic-tech.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Futuristic Tech","description":"深色电影感全屏视差英雄区，背景为循环播放的科技视频，搭配Inter无衬线字体，营造沉浸式未来科技氛围。","url":"https://prompt-site.shop/p/futuristic-tech.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-05-14T06:59:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Futuristic Tech</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-05-14</span><span>正文：4,729 字符</span></div><div class="hero-media"><img src="../assets/previews/futuristic-tech.webp" alt="Futuristic Tech 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色电影感全屏视差英雄区，背景为循环播放的科技视频，搭配Inter无衬线字体，营造沉浸式未来科技氛围。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a full-viewport hero section with a dark, cinematic aesthetic. Here are the exact specifications:
+
+**Video Background:**
+- Full-screen looping background video, muted, autoplaying, with `playsInline`
+- Video URL: `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260525_052706_d2e390fd-1846-4fe7-a4d8-8d2f1c875358.mp4`
+- Positioned `absolute inset-0`, `object-cover`, `z-0`
+
+**Font:**
+- Google Fonts: `Inter` (weights 400, 500, 600, 700) imported via `@import url(&#39;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap&#39;)`
+- Applied globally with `-webkit-font-smoothing: antialiased` and `-moz-osx-font-smoothing: grayscale`
+
+**Container:**
+- `relative w-full h-screen overflow-hidden bg-black` with `font-family: &#39;Inter, sans-serif&#39;`
+
+**Navbar (absolute, z-50, top):**
+- Positioned `absolute top-0 left-0 right-0 z-50`, flex row, `items-center justify-between`, padding `px-5 py-4 lg:px-10 lg:py-6`
+- **Logo:** Text &quot;axentra&quot; in white, `text-xl font-semibold tracking-tight`, font Inter
+- **Desktop nav links** (hidden on mobile, `hidden lg:flex`): Items are &quot;Platform&quot;, &quot;How it works&quot;, &quot;AI Defense&quot;, &quot;Connections&quot;, &quot;Insights&quot; inside a pill-shaped container with a custom `liquid-glass` effect (glassmorphism). Each link: `text-white/80 hover:text-white text-sm px-4 py-1.5 rounded-full hover:bg-white/10`
+- **CTA button** (desktop only, `hidden lg:block`): &quot;Join the wait&quot;, white background (`#ffffff`), black text, `text-sm font-medium px-5 py-2 rounded-full`, hover opacity 0.8
+- **Hamburger** (mobile only, `lg:hidden`): Animated toggle between `Menu` and `X` icons from lucide-react (size 20, strokeWidth 1.5, white). Uses cubic-bezier(0.23,1,0.32,1) easing with rotation and scale animations for the icon swap. Background changes to `#1a1a1a` when open.
+
+**Liquid Glass CSS effect** (for the desktop nav pill):
+```css
+.liquid-glass {
+background: rgba(255, 255, 255, 0.01);
+background-blend-mode: luminosity;
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border: none;
+box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+position: relative;
+overflow: hidden;
+}
+.liquid-glass::before {
+content: &#39;&#39;;
+position: absolute;
+inset: 0;
+border-radius: inherit;
+padding: 1.4px;
+background: linear-gradient(180deg,
+rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+pointer-events: none;
+}
+```
+
+**Mobile Menu (slide-down panel):**
+- Backdrop: fixed `inset-0 z-30`, blur(12px), `rgba(0,0,0,0.6)` when open, click-to-close
+- Panel: fixed `top-0 left-0 right-0 z-40`, max-height animates from 0 to 420px with `cubic-bezier(0.23, 1, 0.32, 1)` over 0.5s
+- Panel background: `rgba(8,8,8,0.97)`, bottom border `1px solid rgba(255,255,255,0.08)`, padding `pt-20 pb-6 px-5`
+- Each nav item: `text-white/70 hover:text-white text-base py-3 px-3 rounded-xl hover:bg-white/5`, staggered fade-in animation (each item delayed by `i * 50 + 80`ms), translateY(-8px) to 0 on open
+- Each item has an `ArrowRight` icon (size 14) that appears on hover (opacity 0 to 0.4, translateX animation)
+- Bottom section: separated by `1px solid rgba(255,255,255,0.07)` border, contains full-width &quot;Join the wait&quot; button (white bg, black text, rounded-full)
+- Escape key closes the menu
+
+**Hero Content (bottom-left aligned, z-20):**
+- Container: `relative z-20 flex flex-col items-start justify-end text-left h-full px-5 sm:px-8 lg:px-10 pb-16 md:pb-20`
+- **Heading:** &quot;When strategy meets its spark / and thought reshapes what lies ahead&quot;
+- White, `font-normal`, `leading-[1.12]`, `tracking-tight`, `max-w-3xl`
+- Font size: `clamp(1.75rem, 5vw, 2.6rem)`
+- Line break (`&lt;br className=&quot;hidden sm:block&quot; /&gt;`) between &quot;spark&quot; and &quot;and thought...&quot;
+- **Subtext:** &quot;a fluid channel - where deep resolve / and neural insight dissolve as one&quot;
+- Font: `&#39;Courier New&#39;, Courier, monospace` (monospace font)
+- Color: `rgba(255, 255, 255, 0.6)`
+- `text-sm md:text-base leading-relaxed`, `letter-spacing: 0.01em`
+- `max-w-xs sm:max-w-sm md:max-w-md`
+- Margin: `mt-5 md:mt-6`
+- Line break between &quot;resolve&quot; and &quot;and neural...&quot;
+- **CTA Button:** &quot;See it in motion&quot; with ArrowRight icon
+- White bg (`#ffffff`), black text, `text-sm font-medium`
+- `px-5 py-2.5 rounded-full`
+- `mt-7 md:mt-8`
+- ArrowRight icon (size 15) translates right 0.5 on hover (`group-hover:translate-x-0.5`)
+- `hover:opacity-80` with 300ms transition
+
+**Dependencies:**
+- React 18, TypeScript, Tailwind CSS 3, Vite
+- `lucide-react` for icons (ArrowRight, Menu, X)
+- Google Fonts Inter</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shiny Text — Components 提示词 | MotionSites Prompts</title>
+<meta name="description" content="A text component with a customizable shining gradient animation effect that sweeps across the text.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/community-superdesign-shiny-text.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shiny Text — Components 提示词">
+<meta property="og:description" content="A text component with a customizable shining gradient animation effect that sweeps across the text.">
+<meta property="og:url" content="https://prompt-site.shop/p/community-superdesign-shiny-text.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/community-superdesign-shiny-text.png">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Shiny Text","description":"A text component with a customizable shining gradient animation effect that sweeps across the text.","url":"https://prompt-site.shop/p/community-superdesign-shiny-text.html","inLanguage":"zh-CN","genre":"Components","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-components">Components</a></div><h1>Shiny Text</h1><div class="chip-row"><span class="chip">Components</span><span class="chip">animation</span><span class="chip">社区公开收藏</span></div><div class="facts"><span>正文：6,975 字符</span></div><div class="hero-media"><img src="../assets/previews/community-superdesign-shiny-text.png" alt="Shiny Text 动效预览" loading="lazy"><div class="media-note">本地预览图 · png</div></div><h2>简介</h2><p>A text component with a customizable shining gradient animation effect that sweeps across the text.</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">You are given a task to integrate an existing React component in the codebase
+
+~~~/README.md
+# ShinyText
+
+A text component with a customizable shining gradient animation effect that sweeps across the text.
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `text` | string | - | The text to display and animate |
+| `disabled` | boolean | false | Whether to disable the animation |
+| `speed` | number | 2 | Duration of the animation in seconds |
+| `className` | string | &#39;&#39; | Additional CSS classes for styling |
+| `color` | string | &#39;#b5b5b5&#39; | The base color of the text |
+| `shineColor` | string | &#39;#ffffff&#39; | The color of the shine effect |
+| `spread` | number | 120 | The spread angle of the gradient in degrees |
+| `yoyo` | boolean | false | Whether the animation should bounce back and forth |
+| `pauseOnHover` | boolean | false | Whether to pause the animation on hover |
+| `direction` | &#39;left&#39; \| &#39;right&#39; | &#39;left&#39; | The direction of the shine movement |
+| `delay` | number | 0 | Delay before animation starts (in seconds) |
+
+## Usage
+
+```tsx
+import ShinyText from &#39;@/sd-components/2f78ed51-fbb9-4da5-8537-b528a39fe26f&#39;;
+
+// Basic usage
+&lt;ShinyText text=&quot;Just some shiny text!&quot; /&gt;
+
+// Custom speed and colors
+&lt;ShinyText
+text=&quot;Shiny Text&quot;
+disabled={false}
+speed={3}
+className=&quot;custom-class&quot;
+color=&quot;#888888&quot;
+shineColor=&quot;#3b82f6&quot;
+/&gt;
+
+// Interactive usage
+&lt;ShinyText
+text=&quot;Hover to pause&quot;
+pauseOnHover={true}
+speed={1.5}
+/&gt;
+```
+~~~
+
+~~~/src/App.tsx
+import React from &#39;react&#39;;
+import ShinyText from &#39;./ShinyText&#39;;
+
+export default function App() {
+return (
+&lt;div className=&quot;min-h-screen w-full flex items-center justify-center bg-[#1A1A1B] p-8 font-sans&quot;&gt;
+&lt;div className=&quot;relative group rounded-3xl bg-[#222224] p-16 shadow-[0_0_40px_rgba(0,0,0,0.3)] transition-all hover:shadow-[0_0_60px_rgba(0,0,0,0.5)] border border-white/5&quot;&gt;
+&lt;div className=&quot;text-center space-y-12&quot;&gt;
+&lt;div&gt;
+&lt;h2 className=&quot;text-sm font-medium text-white/40 mb-8 uppercase tracking-[0.2em]&quot;&gt;Default Animation&lt;/h2&gt;
+&lt;div className=&quot;text-4xl md:text-5xl font-bold tracking-tight&quot;&gt;
+&lt;ShinyText
+text=&quot;✨ Shiny Text Effect&quot;
+disabled={false}
+speed={3}
+className=&quot;custom-class&quot;
+/&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div className=&quot;pt-12 border-t border-white/5 grid gap-8 justify-items-center&quot;&gt;
+&lt;div&gt;
+&lt;p className=&quot;text-xs text-white/30 mb-4 uppercase tracking-widest&quot;&gt;Hover to Pause&lt;/p&gt;
+&lt;ShinyText
+text=&quot;Hover over me to pause the shine&quot;
+speed={2}
+color=&quot;#888888&quot;
+shineColor=&quot;#3b82f6&quot; // Electric blue
+className=&quot;text-xl font-medium&quot;
+pauseOnHover={true}
+/&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;p className=&quot;text-xs text-white/30 mb-4 uppercase tracking-widest&quot;&gt;Yoyo Effect&lt;/p&gt;
+&lt;ShinyText
+text=&quot;Bouncing back and forth&quot;
+speed={1.5}
+color=&quot;#888888&quot;
+shineColor=&quot;#ec4899&quot; // Pink
+className=&quot;text-xl font-medium&quot;
+yoyo={true}
+/&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+);
+}
+~~~
+
+~~~/package.json
+{
+&quot;name&quot;: &quot;shiny-text-component&quot;,
+&quot;version&quot;: &quot;1.0.0&quot;,
+&quot;description&quot;: &quot;A shiny text animation component using Motion&quot;,
+&quot;main&quot;: &quot;src/ShinyText.tsx&quot;,
+&quot;dependencies&quot;: {
+&quot;react&quot;: &quot;^18.2.0&quot;,
+&quot;react-dom&quot;: &quot;^18.2.0&quot;,
+&quot;motion&quot;: &quot;^12.0.0&quot;,
+&quot;lucide-react&quot;: &quot;^0.344.0&quot;
+}
+}
+~~~
+
+~~~/src/ShinyText.tsx
+import React, { useState, useCallback, useEffect, useRef } from &#39;react&#39;;
+import { motion, useMotionValue, useAnimationFrame, useTransform } from &#39;motion/react&#39;;
+
+interface ShinyTextProps {
+text: string;
+disabled?: boolean;
+speed?: number;
+className?: string;
+color?: string;
+shineColor?: string;
+spread?: number;
+yoyo?: boolean;
+pauseOnHover?: boolean;
+direction?: &#39;left&#39; | &#39;right&#39;;
+delay?: number;
+}
+
+const ShinyText: React.FC&lt;ShinyTextProps&gt; = ({
+text,
+disabled = false,
+speed = 2,
+className = &#39;&#39;,
+color = &#39;#b5b5b5&#39;,
+shineColor = &#39;#ffffff&#39;,
+spread = 120,
+yoyo = false,
+pauseOnHover = false,
+direction = &#39;left&#39;,
+delay = 0
+}) =&gt; {
+const [isPaused, setIsPaused] = useState(false);
+const progress = useMotionValue(0);
+const elapsedRef = useRef(0);
+const lastTimeRef = useRef&lt;number | null&gt;(null);
+const directionRef = useRef(direction === &#39;left&#39; ? 1 : -1);
+
+const animationDuration = speed * 1000;
+const delayDuration = delay * 1000;
+
+useAnimationFrame(time =&gt; {
+if (disabled || isPaused) {
+lastTimeRef.current = null;
+return;
+}
+
+if (lastTimeRef.current === null) {
+lastTimeRef.current = time;
+return;
+}
+
+const deltaTime = time - lastTimeRef.current;
+lastTimeRef.current = time;
+elapsedRef.current += deltaTime;
+
+// Animation goes from 0 to 100
+if (yoyo) {
+const cycleDuration = animationDuration + delayDuration;
+const fullCycle = cycleDuration * 2;
+const cycleTime = elapsedRef.current % fullCycle;
+
+if (cycleTime &lt; animationDuration) {
+// Forward animation: 0 -&gt; 100
+const p = (cycleTime / animationDuration) * 100;
+progress.set(directionRef.current === 1 ? p : 100 - p);
+} else if (cycleTime &lt; cycleDuration) {
+// Delay at end
+progress.set(directionRef.current === 1 ? 100 : 0);
+} else if (cycleTime &lt; cycleDuration + animationDuration) {
+// Reverse animation: 100 -&gt; 0
+const reverseTime = cycleTime - cycleDuration;
+const p = 100 - (reverseTime / animationDuration) * 100;
+progress.set(directionRef.current === 1 ? p : 100 - p);
+} else {
+// Delay at start
+progress.set(directionRef.current === 1 ? 0 : 100);
+}
+} else {
+const cycleDuration = animationDuration + delayDuration;
+const cycleTime = elapsedRef.current % cycleDuration;
+
+if (cycleTime &lt; animationDuration) {
+// Animation phase: 0 -&gt; 100
+const p = (cycleTime / animationDuration) * 100;
+progress.set(directionRef.current === 1 ? p : 100 - p);
+} else {
+// Delay phase - hold at end (shine off-screen)
+progress.set(directionRef.current === 1 ? 100 : 0);
+}
+}
+});
+
+useEffect(() =&gt; {
+directionRef.current = direction === &#39;left&#39; ? 1 : -1;
+elapsedRef.current = 0;
+progress.set(0);
+// eslint-disable-next-line react-hooks/exhaustive-deps
+}, [direction]);
+
+// Transform: p=0 -&gt; 150% (shine off right), p=100 -&gt; -50% (shine off left)
+const backgroundPosition = useTransform(progress, p =&gt; `${150 - p * 2}% center`);
+
+const handleMouseEnter = useCallback(() =&gt; {
+if (pauseOnHover) setIsPaused(true);
+}, [pauseOnHover]);
+
+const handleMouseLeave = useCallback(() =&gt; {
+if (pauseOnHover) setIsPaused(false);
+}, [pauseOnHover]);
+
+const gradientStyle: React.CSSProperties = {
+backgroundImage: `linear-gradient(${spread}deg, ${color} 0%, ${color} 35%, ${shineColor} 50%, ${color} 65%, ${color} 100%)`,
+backgroundSize: &#39;200% auto&#39;,
+WebkitBackgroundClip: &#39;text&#39;,
+backgroundClip: &#39;text&#39;,
+WebkitTextFillColor: &#39;transparent&#39;
+};
+
+return (
+&lt;motion.span
+className={`inline-block ${className}`}
+style={{ ...gradientStyle, backgroundPosition }}
+onMouseEnter={handleMouseEnter}
+onMouseLeave={handleMouseLeave}
+&gt;
+{text}
+&lt;/motion.span&gt;
+);
+};
+
+export default ShinyText;
+~~~
+
+Implementation Guidelines
+
+1. Analyze the component structure, styling, animation implementations
+2. Review the component&#39;s arguments and state
+3. Think through what is the best place to adopt this component/style into the design we are doing
+4. Then adopt the component/design to our current system
+
+Help me integrate this into my design</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：superdesigndev/superdesign-prompts<br>原始文件：<code>prompts/shiny-text/README.md</code><br>许可证：CC0-1.0<br>作者：Jason Zhou<br><a href="https://github.com/superdesigndev/superdesign-prompts/blob/main/prompts/shiny-text/README.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="animated-cards.html">Animated Cards<small>Components · carousel</small></a><a href="scroll-marquee.html">Scroll Marquee<small>Components · carousel</small></a><a href="flowmate-carousal.html">FlowMate Carousal<small>Components · carousel</small></a><a href="apex-program-accordion.html">Apex Program Accordion<small>Components · faq</small></a><a href="bento-grid-stats.html">Bento Grid Stats<small>Components · features</small></a><a href="glassmorphic-feature-tabs.html">Glassmorphic Feature Tabs<small>Components · features</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

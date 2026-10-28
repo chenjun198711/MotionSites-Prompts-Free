@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Glitch Pulse — Landing Page 提示词 | MotionSites Prompts</title>
+<meta name="description" content="基于Glitch Pulse提示词构建的复古数字风格着陆页，采用固定定位视口内容、滚动驱动HLS视频和打字机效果，以像素字体、青柠绿和电光蓝配色呈现粗野主义美学。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/glitch-pulse.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Glitch Pulse — Landing Page 提示词">
+<meta property="og:description" content="基于Glitch Pulse提示词构建的复古数字风格着陆页，采用固定定位视口内容、滚动驱动HLS视频和打字机效果，以像素字体、青柠绿和电光蓝配色呈现粗野主义美学。">
+<meta property="og:url" content="https://prompt-site.shop/p/glitch-pulse.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/glitch-pulse.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Glitch Pulse","description":"基于Glitch Pulse提示词构建的复古数字风格着陆页，采用固定定位视口内容、滚动驱动HLS视频和打字机效果，以像素字体、青柠绿和电光蓝配色呈现粗野主义美学。","url":"https://prompt-site.shop/p/glitch-pulse.html","inLanguage":"zh-CN","genre":"Landing Page","dateCreated":"2026-06-22T05:14:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-landing_page">Landing Page</a></div><h1>Glitch Pulse</h1><div class="chip-row"><span class="chip">Landing Page</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-22</span><span>正文：16,156 字符</span></div><div class="hero-media"><img src="../assets/previews/glitch-pulse.webp" alt="Glitch Pulse 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>基于Glitch Pulse提示词构建的复古数字风格着陆页，采用固定定位视口内容、滚动驱动HLS视频和打字机效果，以像素字体、青柠绿和电光蓝配色呈现粗野主义美学。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">## Overview
+
+Build a single-page React + TypeScript + Vite + Tailwind CSS v4 landing page. The page is extremely tall (1200vh) but all visual content is position-fixed to the viewport. Scrolling drives two scroll-scrubbed HLS videos, a typewriter text deletion effect, a vertically-scrolling manifesto, mouse-trail stickers, and a scroll-triggered feedback form. The aesthetic is brutalist/retro-digital with a pixel font, lime green on near-black with electric blue accents.
+
+---
+
+## TECH STACK (exact versions)
+
+```json
+{
+&quot;dependencies&quot;: {
+&quot;@tailwindcss/vite&quot;: &quot;^4.1.14&quot;,
+&quot;@vitejs/plugin-react&quot;: &quot;^5.0.4&quot;,
+&quot;express&quot;: &quot;^4.21.2&quot;,
+&quot;hls.js&quot;: &quot;^1.6.16&quot;,
+&quot;react&quot;: &quot;^19.0.1&quot;,
+&quot;react-dom&quot;: &quot;^19.0.1&quot;,
+&quot;vite&quot;: &quot;^6.2.3&quot;
+},
+&quot;devDependencies&quot;: {
+&quot;@types/express&quot;: &quot;^4.17.21&quot;,
+&quot;@types/node&quot;: &quot;^22.14.0&quot;,
+&quot;esbuild&quot;: &quot;^0.25.0&quot;,
+&quot;tailwindcss&quot;: &quot;^4.1.14&quot;,
+&quot;tsx&quot;: &quot;^4.21.0&quot;,
+&quot;typescript&quot;: &quot;~5.8.2&quot;
+}
+}
+```
+
+---
+
+## ALL ASSET URLs
+
+### HLS Videos (Mux streams):
+```
+VIDEO_URL_1 = &quot;https://stream.mux.com/W2NRcV6MrewS7QyWWqAWZvJR9jrnPU5rxymlPg01gRzk.m3u8&quot;
+VIDEO_URL_2 = &quot;https://stream.mux.com/aypDi1exkKgYKEbWme9Csi47zxIim0101hw3ghmSzQIyw.m3u8&quot;
+```
+
+### Static Stickers (Figma CDN):
+```
+STICKER1 = &quot;https://crow-peanut-06457083.figma.site/_components/v2/4c2b061456bbff22b92923348791b501874ded3f/d9a6de619b1e7bf4b31b22e6d29324306ee68ad9.d9a6de61.png&quot;
+STICKER2 = &quot;https://crow-peanut-06457083.figma.site/_components/v2/4c2b061456bbff22b92923348791b501874ded3f/7d1d8f4421fc4780ec85b4153ca6605a4b90dd65.7d1d8f44.png&quot;
+STICKER3 = &quot;https://crow-peanut-06457083.figma.site/_components/v2/4c2b061456bbff22b92923348791b501874ded3f/80809d23ccb460d0db21f77bb3afef67d3ad1d9a.80809d23.png&quot;
+STICKER4 = &quot;https://crow-peanut-06457083.figma.site/_components/v2/4c2b061456bbff22b92923348791b501874ded3f/50d6c27f67bc10d6859cf37d2f017bc406ad3a0d.50d6c27f.png&quot;
+```
+
+### Mouse Trail Stickers (Figma CDN):
+```
+TRAIL_STICKER1 = &quot;https://crow-peanut-06457083.figma.site/_components/v2/4c2b061456bbff22b92923348791b501874ded3f/b77ef81dabfca9ce4a4d1af5d553e17019a0d229.b77ef81d.png&quot;
+TRAIL_STICKER2 = &quot;https://crow-peanut-06457083.figma.site/_components/v2/4c2b061456bbff22b92923348791b501874ded3f/9ece3a6bf6c5cecf6c0078d022a171bc93baf9c5.9ece3a6b.png&quot;
+TRAIL_STICKER3 = &quot;https://crow-peanut-06457083.figma.site/_components/v2/4c2b061456bbff22b92923348791b501874ded3f/41b9f0bffb2c0b2e1d3fbe26c124ed1378970c35.41b9f0bf.png&quot;
+TRAIL_STICKER4 = &quot;https://crow-peanut-06457083.figma.site/_components/v2/4c2b061456bbff22b92923348791b501874ded3f/0edc0785a3e3bf26be7a494886999c4a6f1dc14c.0edc0785.png&quot;
+TRAIL_STICKER5 = &quot;https://crow-peanut-06457083.figma.site/_components/v2/4c2b061456bbff22b92923348791b501874ded3f/d12ddf42fe4c8437df4414c883fe60fb77b20cbe.d12ddf42.png&quot;
+```
+
+---
+
+## FONT
+
+Google Font: **&quot;Press Start 2P&quot;** -- imported via CSS `@import url(...)`. Registered as a Tailwind v4 theme token:
+
+```css
+@theme {
+--font-press-start: &quot;Press Start 2P&quot;, system-ui, sans-serif;
+}
+```
+
+Applied everywhere via class `font-press-start`.
+
+---
+
+## COLOR SYSTEM
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| Background | `slate-950` | Page bg, form bg |
+| Primary text/accent | `#85D743` | All headings, buttons, cursor, manifesto text |
+| Secondary accent | `#0033FF` | Marquee bg, form border, button shadows |
+| Button hover | `#9eff5c` / `#9bfb4e` | Submit/reset button hover states |
+| Form bg | `slate-950/95` | 95% opacity dark overlay |
+| Input bg | `slate-900` | Form input fields |
+| Input border | `slate-700` | Default border, `#85D743` on focus |
+| Nav text | white | Navigation links |
+| Selection | `emerald-500/20` | Text selection highlight |
+
+---
+
+## HTML SHELL (`index.html`)
+
+```html
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot; /&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+&lt;title&gt;Scroll Video&lt;/title&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-slate-950 overflow-x-hidden m-0 p-0 selection:bg-emerald-500/20&quot;&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;module&quot; src=&quot;/src/main.tsx&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+```
+
+---
+
+## CSS (`src/index.css`) -- EXACT
+
+```css
+@import url(&#39;https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap&#39;);
+@import &quot;tailwindcss&quot;;
+
+@theme {
+--font-press-start: &quot;Press Start 2P&quot;, system-ui, sans-serif;
+}
+
+@keyframes marquee {
+0% { transform: translate3d(0, 0, 0); }
+100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes sticker-fade-out {
+0% {
+opacity: 0;
+transform: translate(-50%, -50%) rotate(var(--rot)) scale(0);
+}
+20% {
+opacity: 1;
+transform: translate(-50%, -50%) rotate(var(--rot)) scale(1.05);
+}
+30% {
+opacity: 1;
+transform: translate(-50%, -50%) rotate(var(--rot)) scale(1.0);
+}
+85% {
+opacity: 1;
+transform: translate(-50%, -50%) rotate(var(--rot)) scale(1.0);
+}
+100% {
+opacity: 0;
+transform: translate(-50%, -50%) rotate(var(--rot)) scale(0.8);
+}
+}
+
+.animate-marquee {
+display: flex;
+width: max-content;
+animation: marquee 10s linear infinite;
+}
+```
+
+---
+
+## PAGE LAYOUT
+
+Root container: `relative w-full bg-slate-950 min-h-[1200vh] select-none`
+
+All visual content is `position: fixed`. The 1200vh height exists solely to create scroll distance that drives the animations.
+
+---
+
+## ELEMENT-BY-ELEMENT BREAKDOWN
+
+### 1. FULL-SCREEN VIDEO BACKGROUND (fixed, z-auto)
+
+Container: `fixed inset-0 w-full h-full overflow-hidden`
+
+Two `&lt;video&gt;` elements stacked:
+- Both: `absolute inset-0 w-full h-full object-cover pointer-events-none transition-opacity duration-300`
+- Both: `muted playsInline autoPlay={false} preload=&quot;auto&quot; crossOrigin=&quot;anonymous&quot;`
+- Video 1 starts at `opacity: 1`, Video 2 starts at `opacity: 0`
+
+**HLS Setup:**
+- Use `hls.js` with `{ maxBufferLength: 60 }`
+- On `MANIFEST_PARSED`: call `video.play().then(() =&gt; video.pause())` to warm decoder
+- Fallback: native HLS for Safari via `canPlayType(&quot;application/vnd.apple.mpegurl&quot;)`
+
+**Scroll-Scrub Logic (requestAnimationFrame lerp loop):**
+- Calculate `progress = scrollY / (documentHeight - windowHeight)` [0 to 1]
+- Video 1 maps progress [0, 0.5] to its full duration
+- Video 2 maps progress [0.5, 1.0] to its full duration
+- Lerp factor: 0.3 (smooth interpolation per frame)
+- Guard: Only update `video.currentTime` when `!video.seeking`
+- Snap immediately at scroll boundaries (scrollY &lt;= 10 for v1, at bottom for v2)
+
+**Crossfade (no dim):**
+- Progress 0-0.45: v1 opacity 1, v2 opacity 0
+- Progress 0.45-0.5: v1 stays at opacity 1, v2 fades from 0 to 1 (overlaid on top)
+- Progress 0.5+: v1 opacity 0 (GPU savings), v2 opacity 1
+
+---
+
+### 2. DIAGONAL MARQUEE BANNER (fixed, z-50)
+
+Container: `fixed top-14 left-[-170px] w-[650px] -rotate-[30deg] z-50 bg-[#0033FF] py-[18px] overflow-hidden select-none pointer-events-none shadow-2xl`
+
+Inner: `.animate-marquee flex whitespace-nowrap`
+
+Two identical `&lt;span&gt;` elements for seamless loop:
+```
+font-press-start text-[16px] text-[#85D743] tracking-widest px-4
+```
+Content: `WARNING! WARNING! WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!&amp;nbsp;` (repeated twice)
+
+Animation: `marquee 10s linear infinite` (translates X from 0 to -50%)
+
+---
+
+### 3. FLOATING STICKER - TOP LEFT (fixed, z-40)
+
+Container: `fixed z-40 select-none pointer-events-none transition-transform duration-300`
+- Inline style: `top: 232px`, `left: 120px`, `transform: rotate(32deg)`
+- Image: STICKER1, `w-[100px] h-auto object-contain`, `referrerPolicy=&quot;no-referrer&quot;`
+
+---
+
+### 4. FLOATING STICKER - BOTTOM RIGHT (fixed, z-40)
+
+Container: `fixed bottom-8 right-8 z-40 select-none pointer-events-none transition-transform duration-300`
+- Image: STICKER2, `w-[110px] sm:w-[150px] h-auto object-contain`, `referrerPolicy=&quot;no-referrer&quot;`
+
+---
+
+### 5. NAVIGATION (fixed, z-50)
+
+```
+fixed top-10 right-8 md:right-16 z-50 flex gap-6 md:gap-10 font-press-start text-[10px] sm:text-xs md:text-sm text-white select-auto
+```
+
+Links: Projects, Expertise, About, Contact
+- Each: `hover:text-[#85D743] transition-colors duration-200`
+- Contact link: `onClick` prevents default, calls `window.scrollTo({ top: documentElement.scrollHeight, behavior: &quot;smooth&quot; })`
+
+---
+
+### 6. HERO TEXT - TYPEWRITER DELETION (fixed, z-30)
+
+Container: `fixed top-0 left-0 w-full h-screen z-30 pointer-events-none flex flex-col justify-end p-8 md:p-16 pb-16 sm:pb-24`
+
+H1: `font-press-start text-[#85D743] text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.2] tracking-tight uppercase select-none max-w-5xl`
+
+**Three lines:**
+
+**Line 1: &quot;PROBLEM&quot;** -- 7 individual `&lt;span className=&quot;inline-block relative&quot;&gt;` characters (indices 1-7)
+
+**Line 2: &quot;WITH&quot; + 2 stickers** -- wrapped in `inline-flex items-center gap-3 sm:gap-5 md:gap-7 align-middle`
+- Letters W-I-T-H in nested `inline-flex items-center gap-[0.06em] sm:gap-[0.08em] md:gap-[0.1em]` (indices 8-11)
+- STICKER4 image at index 12: `h-[0.85em] w-auto object-contain`, rotated `-8deg`
+- STICKER3 image at index 13: `h-[0.85em] w-auto object-contain`, rotated `6deg`
+
+**Line 3: &quot;CREATIVE?&quot;** -- 9 characters (indices 14-22)
+
+**Total character count: 22**
+
+**Cursor:** After the last visible character: `inline-block w-[0.14em] h-[0.8em] bg-[#85D743] ml-1 select-none animate-pulse align-middle`
+
+**Deletion logic:**
+- During scroll progress 0 to 0.25, characters are removed right-to-left
+- `visibleCount = Math.round((1 - activeProgress) * 22)` where `activeProgress = min(progress, 0.25) / 0.25`
+
+---
+
+### 7. MANIFESTO - ROLLING CREDITS (fixed, z-25)
+
+Container: `fixed top-0 left-0 w-full md:w-[70%] h-screen z-25 pointer-events-none flex flex-col justify-start p-8 md:p-16 pt-[12vh] pb-16 select-none`
+- Initial inline style: `opacity: 0`, `transform: translateY(100vh)`
+
+Text div: `font-press-start text-[#85D743] text-[20px] sm:text-[26px] md:text-[32px] leading-[1.35] tracking-tight uppercase text-left whitespace-pre-line select-none`
+
+**Scroll behavior:**
+- Begins after progress 0.25 + (200px / maxScroll) delay
+- `alpha = (progress - startProgress) / (1 - startProgress)` [0 to 1]
+- `opacity = min(1, alpha / 0.05)` (fast fade-in)
+- `translateY = 100 - (alpha * 450)` in vh (scrolls from +100vh to -350vh)
+
+**Exact manifesto text:**
+```
+LIMITLESS INPUTS OR
+STANDARD LAYOUT
+TEMPLATE
+CONSUMERS. THIS IS
+A HIGHLY SELECTIVE
+ENVIRONMENT
+ENGINEERED FOR
+HYPER-PRODUCTIVE
+CREATORS, UI/UX
+VISIONARIES, AND
+AI PROMPT
+ARCHITECTS WHO
+OPERATE AT THE
+ABSOLUTE LIMITS OF
+DIGITAL PRODUCT
+CREATION. OUR
+FRAMEWORK IS
+
+---
+
+WHY CHOOSE US?
+1. ZERO MOCKUPS,
+ONLY REAL CODE.
+2. SPEED RUNS -
+ZERO WASTED TIME.
+3. DIGITAL EDGE -
+AESTHETIC
+DOMINANCE.
+4. SYSTEM STATE -
+INTELLIGENT
+INTERACTION.
+
+---
+
+WE REJECT
+THE BORING.
+WE REJECT
+THE STANDARD.
+
+CHOOSE ABSOLUTE
+CREATIVE EDGE.
+
+THE FUTURE IS
+NOW SECURED.
+```
+
+---
+
+### 8. MOUSE TRAIL STICKERS (fixed, z-[60])
+
+Container: `fixed inset-0 pointer-events-none z-[60] overflow-hidden`
+
+**Behavior:**
+- Track mouse position via `window.addEventListener(&quot;mousemove&quot;, ..., { passive: true })`
+- Spawn new sticker when cursor moves &gt; 150px from last spawn point
+- 5 sticker types cycle sequentially (not randomly): trail_sticker1 through trail_sticker5
+- Random rotation: `Math.random() * 40 - 20` degrees
+- Max 4 stickers visible: `[...prev.slice(-3), newSticker]`
+- Auto-remove after 2200ms via `setTimeout`
+
+**Each sticker element:**
+- `absolute select-none pointer-events-none flex items-center justify-center -translate-x-1/2 -translate-y-1/2`
+- Inline style: `left: x`, `top: y`, `transform: translate(-50%, -50%) rotate(Xdeg)`, `--rot: Xdeg`
+- `animation: sticker-fade-out 2.2s forwards cubic-bezier(0.16, 1, 0.3, 1)`
+- Images: `w-[110px] sm:w-[150px] md:w-[180px] h-auto object-contain`, `referrerPolicy=&quot;no-referrer&quot;`
+
+---
+
+### 9. FEEDBACK FORM (fixed, z-[55])
+
+Container: `fixed left-1/2 z-[55] w-[92%] max-w-[460px] p-6 sm:p-8 bg-slate-950/95 border-4 border-[#0033FF] shadow-[10px_10px_0px_#85D743] select-auto transition-all duration-[900ms] pointer-events-auto`
+
+**Position/Animation:**
+- `bottom: 50%`
+- When visible: `transform: translate(-50%, 50%) rotate(0deg)`
+- When hidden: `transform: translate(-50%, 150vh) rotate(15deg)`
+- `transitionTimingFunction: cubic-bezier(0.16, 1, 0.3, 1)`
+
+**Triggers at:** scroll progress &gt;= 0.95
+
+**Close button:** `absolute top-4 right-4 font-press-start text-[14px] text-slate-500 hover:text-red-500 hover:scale-110 active:scale-95 transition-all cursor-pointer select-none border-none bg-transparent` -- content: `[X]`
+
+**Form (default state):**
+- Title: &quot;FEEDBACK SYSTEM&quot; -- `font-press-start text-xs sm:text-sm text-[#85D743] tracking-widest uppercase text-center mb-1`
+- Name input: `type=&quot;text&quot; required placeholder=&quot;YOUR NAME&quot;` -- `font-mono text-xs text-white bg-slate-900 border-2 border-slate-700 focus:border-[#85D743] hover:border-slate-500 focus:outline-none p-2.5 w-full uppercase transition-all placeholder-slate-600`
+- Email input: `type=&quot;email&quot; required placeholder=&quot;NAME@DOMAIN.COM&quot;` -- same styles minus `uppercase`
+- Textarea: `required rows={3} placeholder=&quot;FEEDBACK / ARCHITECTURE IDEAS...&quot;` -- same styles plus `resize-none`
+- Submit button: &quot;LAUNCH TRANSMISSION&quot; -- `font-press-start text-[8px] sm:text-[9px] text-black bg-[#85D743] hover:bg-[#9bfb4e] active:translate-y-0.5 active:shadow-none border-2 border-black py-3 px-6 shadow-[4px_4px_0px_#0033FF] w-full font-bold uppercase tracking-widest cursor-pointer select-none transition-all mt-1`
+- Form gap: `flex flex-col gap-4 sm:gap-5`
+
+**Success state:**
+- Symbol: `font-press-start text-[32px] text-[#85D743] mb-4 animate-bounce` -- content: `✦`
+- Heading: &quot;TRANSMISSION SUCCESS&quot; -- `font-press-start text-xs sm:text-sm text-[#85D743] mb-3 tracking-widest uppercase`
+- Subtext: &quot;Your feedback is secured in our neural network database.&quot; -- `font-mono text-[10px] sm:text-xs text-slate-400 max-w-sm mb-6 uppercase leading-relaxed`
+- Reset button: &quot;[ NEW TRANSMISSION ]&quot; -- `font-press-start text-[8px] sm:text-[10px] text-black bg-[#85D743] hover:bg-[#9eff5c] border-2 border-black py-2.5 px-5 font-bold uppercase tracking-wider shadow-[3px_3px_0px_#0033FF] active:translate-y-0.5 active:shadow-none transition-all cursor-pointer`
+
+---
+
+## SERVER (`server.ts`)
+
+Express server on port 3000. In development: Vite middleware mode (SPA). In production: serves static `dist/` directory.
+
+```typescript
+import express from &quot;express&quot;;
+import path from &quot;path&quot;;
+import fs from &quot;fs&quot;;
+import { createServer as createViteServer } from &quot;vite&quot;;
+
+async function startServer() {
+const app = express();
+const PORT = 3000;
+const publicDir = path.join(process.cwd(), &quot;public&quot;);
+if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
+
+if (process.env.NODE_ENV !== &quot;production&quot;) {
+const vite = await createViteServer({ server: { middlewareMode: true }, appType: &quot;spa&quot; });
+app.use(vite.middlewares);
+} else {
+const distPath = path.join(process.cwd(), &quot;dist&quot;);
+app.use(express.static(distPath));
+app.get(&quot;*&quot;, (req, res) =&gt; res.sendFile(path.join(distPath, &quot;index.html&quot;)));
+}
+
+app.listen(PORT, &quot;0.0.0.0&quot;, () =&gt; console.log(`Server running on http://localhost:${PORT}`));
+}
+startServer();
+```
+
+---
+
+## VITE CONFIG (`vite.config.ts`)
+
+```typescript
+import tailwindcss from &#39;@tailwindcss/vite&#39;;
+import react from &#39;@vitejs/plugin-react&#39;;
+import path from &#39;path&#39;;
+import { defineConfig } from &#39;vite&#39;;
+
+export default defineConfig(() =&gt; ({
+plugins: [react(), tailwindcss()],
+resolve: { alias: { &#39;@&#39;: path.resolve(__dirname, &#39;.&#39;) } },
+}));
+```
+
+---
+
+## CRITICAL IMPLEMENTATION DETAILS
+
+1. **No auto-play videos** -- videos are paused immediately after a play() call to warm up the decoder. Scroll scrubbing sets `currentTime` directly.
+2. **Seeking guard** -- `if (!video.seeking)` prevents setting new frames while browser is still rendering the previous seek.
+3. **No dim on crossfade** -- Video 1 stays at full opacity while video 2 fades in on top. Only after transition completes does video 1 go to opacity 0.
+4. **All images use `referrerPolicy=&quot;no-referrer&quot;`** to avoid Figma CDN blocking.
+5. **State updates use equality check** -- `setX((prev) =&gt; prev !== newVal ? newVal : prev)` to avoid unnecessary re-renders during scroll.
+6. **The manifesto translates a total of 450vh** (from +100vh to -350vh) to ensure it fully scrolls off screen.
+7. **Mouse trail uses sequential cycling** (`typeCounter % 5`), not random selection.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="motionz-premium-landing-page.html">MotionZ Premium Landing Page<small>Landing Page · landing-page</small></a><a href="future-state.html">Future-State<small>Landing Page · hero</small></a><a href="3d-story.html">3D Story<small>Landing Page · hero</small></a><a href="financial-suite.html">Financial Suite<small>Landing Page · hero</small></a><a href="prompt-hero.html">PROMPT<small>Landing Page · hero</small></a><a href="health-portal.html">Health Portal<small>Landing Page · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

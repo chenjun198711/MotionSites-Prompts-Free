@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rocket FAQ — FAQ &amp; Help 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色主题FAQ手风琴组件，使用Radix UI实现可折叠问答列表，搭配微动效和Material图标，适用于黑色背景的React应用。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/rocket-faq.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rocket FAQ — FAQ &amp; Help 提示词">
+<meta property="og:description" content="深色主题FAQ手风琴组件，使用Radix UI实现可折叠问答列表，搭配微动效和Material图标，适用于黑色背景的React应用。">
+<meta property="og:url" content="https://prompt-site.shop/p/rocket-faq.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/rocket-faq.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Rocket FAQ","description":"深色主题FAQ手风琴组件，使用Radix UI实现可折叠问答列表，搭配微动效和Material图标，适用于黑色背景的React应用。","url":"https://prompt-site.shop/p/rocket-faq.html","inLanguage":"zh-CN","genre":"FAQ & Help","dateCreated":"2026-06-04T15:13:26.148154+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-faq___help">FAQ &amp; Help</a></div><h1>Rocket FAQ</h1><div class="chip-row"><span class="chip">FAQ &amp; Help</span><span class="chip">faq</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-04</span><span>正文：10,658 字符</span></div><div class="hero-media"><img src="../assets/previews/rocket-faq.webp" alt="Rocket FAQ 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色主题FAQ手风琴组件，使用Radix UI实现可折叠问答列表，搭配微动效和Material图标，适用于黑色背景的React应用。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a dark-themed FAQ section for a React 18 + Vite + TypeScript app using TailwindCSS, framer-motion, and Radix UI Accordion. Match these specs exactly.
+
+## Stack &amp; Global Setup
+
+- React 18, Vite, TypeScript, TailwindCSS
+- Dependencies: `framer-motion`, `@radix-ui/react-accordion`, `clsx`, `tailwind-merge`
+- `cn()` helper: `twMerge(clsx(inputs))` exported from `@/lib/utils`
+- Dark theme background `#000000`, font `Inter`, Material Symbols Outlined for icons
+- Tailwind `theme.extend.colors`:
+- `landing.surface: &quot;rgba(255,255,255,0.10)&quot;`
+- `landing.surface-hover: &quot;rgba(255,255,255,0.16)&quot;`
+- `border: &quot;rgba(255,255,255,0.10)&quot;`
+- `foreground: &quot;hsl(0 0% 100%)&quot;` (semantic; use `text-foreground`, `text-foreground/60`, `text-foreground/70`, `text-foreground/80`)
+- `background: &quot;#000000&quot;` (semantic)
+
+## Helper Components
+
+### MIcon (Material Symbols Outlined)
+```tsx
+type Props = { name: string; size?: number; className?: string; fill?: 0|1; weight?: number; grade?: number; opsz?: number };
+export const MIcon = ({ name, size=20, className, fill=0, weight=400, grade=0, opsz=24 }: Props) =&gt; (
+&lt;span
+className={cn(&quot;material-symbols-outlined leading-none&quot;, className)}
+style={{ fontSize: size, fontVariationSettings: `&#39;FILL&#39; ${fill}, &#39;wght&#39; ${weight}, &#39;GRAD&#39; ${grade}, &#39;opsz&#39; ${opsz}` }}
+&gt;{name}&lt;/span&gt;
+);
+```
+Include in `index.html`:
+```html
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&quot; /&gt;
+```
+
+### FadeUp (framer-motion scroll reveal)
+- `motion.div`, `initial={{opacity:0, y:24}}`, `whileInView={{opacity:1, y:0}}`, `viewport={{once:true, amount:0.3}}`, `transition={{duration:0.6, delay, ease:[0.22,1,0.36,1]}}`. Honors `useReducedMotion`.
+
+### SpotlightBorder (cursor-tracked 1px gradient ring)
+- Wrapper `relative` with `rounded-{radius}` (xl/2xl/3xl/full).
+- Inside, an absolute-inset `&lt;span&gt;` with style:
+```ts
+{
+background: `radial-gradient(${size}px circle at var(--spot-x,-200px) var(--spot-y,-200px), rgba(255,255,255,${intensity}), rgba(255,255,255,0) 60%)`,
+padding: &quot;1px&quot;,
+WebkitMask: &quot;linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)&quot;,
+WebkitMaskComposite: &quot;xor&quot;,
+maskComposite: &quot;exclude&quot;,
+}
+```
+- Global mousemove listener writes `--spot-x` / `--spot-y` on the element (relative to its bounding rect).
+- Polymorphic `as`: div | button | section. Export both the component and `spotlightMaskStyle(size, intensity)` helper for reuse inline.
+
+### Radix Accordion wrapper (shadcn-style)
+`Accordion`, `AccordionItem` (`border-b` default), `AccordionTrigger` (flex justify-between, hides built-in chevron when class includes `[&amp;&gt;svg]:hidden`), `AccordionContent` (with `data-[state=open]:animate-accordion-down`, `data-[state=closed]:animate-accordion-up`). Use standard shadcn accordion file.
+
+Tailwind keyframes (in config):
+```js
+keyframes: {
+&quot;accordion-down&quot;: { from: { height: &quot;0&quot; }, to: { height: &quot;var(--radix-accordion-content-height)&quot; } },
+&quot;accordion-up&quot;: { from: { height: &quot;var(--radix-accordion-content-height)&quot; }, to: { height: &quot;0&quot; } },
+},
+animation: { &quot;accordion-down&quot;: &quot;accordion-down 0.2s ease-out&quot;, &quot;accordion-up&quot;: &quot;accordion-up 0.2s ease-out&quot; }
+```
+
+## Data
+
+```ts
+type CategoryKey = &quot;general&quot; | &quot;ai&quot; | &quot;integrations&quot;;
+const categories = [
+{ key: &quot;general&quot;, label: &quot;General&quot; },
+{ key: &quot;ai&quot;, label: &quot;AI &amp; Capabilities&quot; },
+{ key: &quot;integrations&quot;, label: &quot;Integrations &amp; Security&quot; },
+];
+const faqs: Record&lt;CategoryKey, {q:string; a:string}[]&gt; = {
+general: [
+{ q: &quot;What is UI Rocket?&quot;, a: &quot;UI Rocket is a learning platform for designers who want to master AI-powered design workflows and ship production-ready websites faster.&quot; },
+{ q: &quot;Who is this for?&quot;, a: &quot;Designers, founders, and creators who want to level up their AI design skills and build real, shippable products.&quot; },
+{ q: &quot;Do I need prior design experience?&quot;, a: &quot;No. The curriculum starts from fundamentals and progressively builds toward advanced AI-driven workflows.&quot; },
+{ q: &quot;How long does it take?&quot;, a: &quot;Most members make meaningful progress within a few weeks of consistent practice.&quot; },
+{ q: &quot;Is there a community?&quot;, a: &quot;Yes. You get access to a private community of designers and founders building with AI.&quot; },
+],
+ai: [
+{ q: &quot;Which AI tools do you cover?&quot;, a: &quot;We focus on Lovable, Figma AI, image generation models, and the workflows that tie them together into a real design process.&quot; },
+{ q: &quot;Will AI replace designers?&quot;, a: &quot;No. Designers who use AI fluently will replace those who don&#39;t. The course teaches you to be the former.&quot; },
+{ q: &quot;Do I need API keys?&quot;, a: &quot;No. Everything you need is included — no separate API keys, subscriptions, or hidden setup.&quot; },
+{ q: &quot;Can I use these skills with any tool?&quot;, a: &quot;Yes. The principles transfer across tools — you&#39;ll learn frameworks, not button-clicks.&quot; },
+{ q: &quot;How often is the content updated?&quot;, a: &quot;Regularly. As AI tools evolve, we update the curriculum so you&#39;re always learning what&#39;s current.&quot; },
+],
+integrations: [
+{ q: &quot;Which tools does UI Rocket integrate with?&quot;, a: &quot;UI Rocket works alongside Lovable, Figma, and the most common modern design and dev tools.&quot; },
+{ q: &quot;Is my data secure?&quot;, a: &quot;Yes. Your data is encrypted in transit and at rest, and never shared with third parties.&quot; },
+{ q: &quot;Is my data used to train AI models?&quot;, a: &quot;No. Your work and account data are never used to train AI models.&quot; },
+{ q: &quot;Who can access our workspace data?&quot;, a: &quot;Only members you explicitly invite. Access is fully under your control.&quot; },
+{ q: &quot;Where is my data stored?&quot;, a: &quot;On secure cloud infrastructure with industry-standard compliance and backups.&quot; },
+],
+};
+```
+
+## Section Layout (`FaqSection.tsx`)
+
+- `&lt;section id=&quot;faq&quot; className=&quot;relative w-full bg-background py-12 sm:py-16&quot;&gt;`
+- Inner container: `mx-auto max-w-[1080px] px-4 sm:px-6`
+
+### Header (top, two-column on lg)
+- Flex column on mobile, `lg:flex-row lg:items-end lg:justify-between`, `mb-14`, `gap-10`.
+- Left block (`max-w-2xl`):
+- Pill (FadeUp delay 1): `inline-flex items-center gap-2 rounded-full bg-landing-surface border border-white/10 px-3 py-1 text-xs text-foreground/80 backdrop-blur`, with leading `1.5×1.5` dot `bg-foreground/70`, label &quot;FAQ&quot;.
+- Heading (FadeUp delay 0.1): `text-3xl sm:text-4xl font-normal tracking-[-0.02em] leading-[1.05] text-foreground` — &quot;Answers to the questions&quot; `&lt;br className=&quot;hidden sm:block&quot;/&gt;` &quot; that come up most.&quot;
+- Right paragraph (FadeUp delay 0.2): `max-w-sm text-sm sm:text-base text-foreground/60` — &quot;Learn how UI Rocket works, what it covers, how the workflow flows, and what you can expect day to day.&quot;
+
+### Body grid
+`grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8 lg:gap-12 items-stretch`
+
+#### Left column (sticky category list + &quot;Got Questions&quot; card)
+- Outer `flex flex-col gap-4 lg:h-full`.
+- Top wrapper `lg:flex-1` containing a `SpotlightBorder` (radius `2xl`, size 280) with classes `flex flex-col p-2 sm:p-3 lg:sticky lg:top-24`.
+- Inside, map `categories`. Each item is itself a `SpotlightBorder as=&quot;button&quot; radius=&quot;full&quot; size={200} intensity={0.4}` with classes:
+- Base: `w-full text-center px-5 py-3 text-sm transition-colors`
+- Active: `bg-landing-surface border border-white/10 text-foreground`
+- Inactive: `border border-transparent text-foreground/60 hover:text-foreground`
+- `onClick` sets `active` state (`useState&lt;CategoryKey&gt;(&quot;general&quot;)`).
+- Bottom &quot;Got Questions?&quot; card: `SpotlightBorder` radius `2xl` size 360 with `mt-8 lg:mt-0 p-2 sm:p-3`, containing nested `SpotlightBorder` radius `2xl` size 260 intensity 0.4 with `border border-white/10 bg-landing-surface p-6`:
+- `&lt;h3 className=&quot;text-lg font-semibold text-foreground&quot;&gt;Got Questions?&lt;/h3&gt;`
+- `&lt;p className=&quot;mt-2 text-sm text-foreground/60 leading-relaxed&quot;&gt;Need help with something? Our team is here to make things easy. Don&#39;t hesitate to reach out.&lt;/p&gt;`
+- `&lt;a href=&quot;mailto:hello@uirocket.com&quot; className=&quot;mt-6 inline-flex items-center gap-1 text-sm text-foreground hover:text-foreground/80&quot;&gt;Email us &lt;span aria-hidden&gt;→&lt;/span&gt;&lt;/a&gt;`
+
+#### Right column (accordion)
+- Outer `SpotlightBorder radius=&quot;2xl&quot; size={360} className=&quot;p-2 sm:p-3&quot;`.
+- Inside: `&lt;Accordion type=&quot;single&quot; collapsible className=&quot;flex flex-col gap-3&quot;&gt;`.
+- Use `itemRefs = useRef&lt;Array&lt;HTMLDivElement|null&gt;&gt;([])` and a `useEffect` that adds a `mousemove` listener writing `--spot-x`/`--spot-y` on each item&#39;s bounding rect (so each card has its own spotlight).
+- Map `faqs[active]`. Each entry wrapped in `&lt;FadeUp delay={0.15 * idx} key={`${active}-${idx}`}&gt;`.
+- `AccordionItem`:
+- `value={`${active}-${idx}`}`, ref into `itemRefs`.
+- Classes: `relative rounded-2xl border border-white/10 bg-landing-surface px-6 [&amp;[data-state=open]]:bg-landing-surface-hover`
+- Inside, an absolute-inset `&lt;span aria-hidden className=&quot;pointer-events-none absolute inset-0 rounded-2xl&quot; style={spotlightMaskStyle(260, 0.4)} /&gt;` to render the per-card spotlight ring.
+- `AccordionTrigger`: `py-7 text-left text-sm sm:text-base font-medium text-foreground hover:no-underline [&amp;&gt;svg]:hidden`
+- Children: `&lt;span className=&quot;flex-1 pr-4&quot;&gt;{q}&lt;/span&gt;` and a 28px circular icon button: `flex h-7 w-7 items-center justify-center rounded-full border border-white/15 bg-white/[0.04] text-foreground/70 transition-transform duration-200 group-data-[state=open]:rotate-180`, containing `&lt;MIcon name=&quot;expand_more&quot; size={16} /&gt;`.
+- `AccordionContent`: `pb-7 text-sm text-foreground/60 leading-relaxed` — render `{a}`.
+
+## Behavior
+
+- Switching category re-keys the AccordionItem `value` prefix so all items collapse when category changes.
+- Only one item open at a time (`type=&quot;single&quot; collapsible`).
+- Spotlight ring follows mouse on the outer wrapper containers AND on every individual accordion item independently.
+- All entrance animations use FadeUp; reduced-motion disables translate but keeps opacity.
+
+## Acceptance Checklist
+
+- Dark `#000000` background, Inter text, max width 1080px.
+- Header: small pill with dot + &quot;FAQ&quot;, large heading &quot;Answers to the questions / that come up most.&quot;, right-side paragraph aligned to bottom on lg.
+- Two-column body: left 280px sticky category list with pill buttons (active = filled surface, inactive = transparent), plus &quot;Got Questions?&quot; card with email CTA arrow.
+- Right column: cards stacked with `gap-3`, rounded-2xl, surface fill, open state slightly brighter, 28px circular chevron button rotating 180° on open, content fades/animates via Radix accordion keyframes.
+- 1px spotlight ring follows cursor on every SpotlightBorder wrapper and every accordion card.
+- Scroll-in FadeUp stagger on header items and on each FAQ row (`0.15 * idx`).
+- Switching categories collapses any open item and swaps the question list.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><p class="muted">暂无同分类条目。</p><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

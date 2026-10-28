@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Velorix IIC — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色背景全屏视频英雄区，顶部导航栏带汉堡菜单，中央大标题与行动按钮，展示科技品牌首页。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/velorix-iic.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Velorix IIC — Hero Section 提示词">
+<meta property="og:description" content="深色背景全屏视频英雄区，顶部导航栏带汉堡菜单，中央大标题与行动按钮，展示科技品牌首页。">
+<meta property="og:url" content="https://prompt-site.shop/p/velorix-iic.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/velorix-iic.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Velorix IIC","description":"深色背景全屏视频英雄区，顶部导航栏带汉堡菜单，中央大标题与行动按钮，展示科技品牌首页。","url":"https://prompt-site.shop/p/velorix-iic.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-05-20T06:43:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Velorix IIC</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-05-20</span><span>正文：7,757 字符</span></div><div class="hero-media"><img src="../assets/previews/velorix-iic.webp" alt="Velorix IIC 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色背景全屏视频英雄区，顶部导航栏带汉堡菜单，中央大标题与行动按钮，展示科技品牌首页。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">## File: `src/App.tsx`
+
+```tsx
+import { ArrowRight, Menu, X } from &#39;lucide-react&#39;;
+import { useState, useEffect } from &#39;react&#39;;
+
+const BG_VIDEO = &quot;https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260508_155101_f2540600-6fe9-433e-8e48-b3f4b72f0727.mp4&quot;;
+
+const NAV_ITEMS = [&#39;Platform&#39;, &#39;How it works&#39;, &#39;AI Defense&#39;, &#39;Connections&#39;, &#39;Insights&#39;];
+
+function HamburgerButton({ open, onClick }: { open: boolean; onClick: () =&gt; void }) {
+return (
+&lt;button
+onClick={onClick}
+className=&quot;lg:hidden relative w-9 h-9 flex items-center justify-center rounded-full transition-all duration-300&quot;
+style={{ backgroundColor: open ? &#39;#1a1a1a&#39; : &#39;transparent&#39; }}
+aria-label=&quot;Toggle menu&quot;
+&gt;
+&lt;span
+className=&quot;absolute transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)]&quot;
+style={{ opacity: open ? 0 : 1, transform: open ? &#39;rotate(-90deg) scale(0.5)&#39; : &#39;rotate(0deg) scale(1)&#39; }}
+&gt;
+&lt;Menu size={20} color=&quot;white&quot; strokeWidth={1.5} /&gt;
+&lt;/span&gt;
+&lt;span
+className=&quot;absolute transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)]&quot;
+style={{ opacity: open ? 1 : 0, transform: open ? &#39;rotate(0deg) scale(1)&#39; : &#39;rotate(90deg) scale(0.5)&#39; }}
+&gt;
+&lt;X size={20} color=&quot;white&quot; strokeWidth={1.5} /&gt;
+&lt;/span&gt;
+&lt;/button&gt;
+);
+}
+
+function MobileMenu({ open, onClose }: { open: boolean; onClose: () =&gt; void }) {
+return (
+&lt;&gt;
+&lt;div
+className=&quot;fixed inset-0 z-30 lg:hidden transition-all duration-500&quot;
+style={{
+backdropFilter: open ? &#39;blur(12px)&#39; : &#39;blur(0px)&#39;,
+backgroundColor: open ? &#39;rgba(0,0,0,0.6)&#39; : &#39;rgba(0,0,0,0)&#39;,
+pointerEvents: open ? &#39;auto&#39; : &#39;none&#39;,
+}}
+onClick={onClose}
+/&gt;
+
+&lt;div
+className=&quot;fixed top-0 left-0 right-0 z-40 lg:hidden overflow-hidden&quot;
+style={{
+maxHeight: open ? &#39;420px&#39; : &#39;0px&#39;,
+transition: &#39;max-height 0.5s cubic-bezier(0.23, 1, 0.32, 1)&#39;,
+}}
+&gt;
+&lt;div
+className=&quot;pt-20 pb-6 px-5&quot;
+style={{ backgroundColor: &#39;rgba(8,8,8,0.97)&#39;, borderBottom: &#39;1px solid rgba(255,255,255,0.08)&#39; }}
+&gt;
+&lt;div className=&quot;flex flex-col gap-1&quot;&gt;
+{NAV_ITEMS.map((item, i) =&gt; (
+&lt;a
+key={item}
+href=&quot;#&quot;
+onClick={onClose}
+className=&quot;text-white/70 hover:text-white text-base py-3 px-3 rounded-xl hover:bg-white/5 transition-all duration-200 flex items-center justify-between group&quot;
+style={{
+fontFamily: &#39;Inter, sans-serif&#39;,
+transitionDelay: open ? `${i * 50 + 80}ms` : &#39;0ms&#39;,
+opacity: open ? 1 : 0,
+transform: open ? &#39;translateY(0)&#39; : &#39;translateY(-8px)&#39;,
+transition: `opacity 0.4s cubic-bezier(0.23,1,0.32,1) ${i * 50 + 80}ms, transform 0.4s cubic-bezier(0.23,1,0.32,1) ${i * 50 + 80}ms, color 0.2s, background 0.2s`,
+}}
+&gt;
+{item}
+&lt;ArrowRight size={14} className=&quot;opacity-0 group-hover:opacity-40 -translate-x-1 group-hover:translate-x-0 transition-all duration-200&quot; /&gt;
+&lt;/a&gt;
+))}
+&lt;/div&gt;
+
+&lt;div
+className=&quot;mt-5 pt-5&quot;
+style={{
+borderTop: &#39;1px solid rgba(255,255,255,0.07)&#39;,
+transitionDelay: open ? &#39;360ms&#39; : &#39;0ms&#39;,
+opacity: open ? 1 : 0,
+transform: open ? &#39;translateY(0)&#39; : &#39;translateY(-8px)&#39;,
+transition: `opacity 0.4s cubic-bezier(0.23,1,0.32,1) 360ms, transform 0.4s cubic-bezier(0.23,1,0.32,1) 360ms`,
+}}
+&gt;
+&lt;button
+className=&quot;w-full py-3 rounded-full text-black text-sm font-medium transition-all duration-300 hover:opacity-80&quot;
+style={{ fontFamily: &#39;Inter, sans-serif&#39;, backgroundColor: &#39;#ffffff&#39; }}
+&gt;
+Join the wait
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/&gt;
+);
+}
+
+function Navbar() {
+const [open, setOpen] = useState(false);
+
+useEffect(() =&gt; {
+const onKey = (e: KeyboardEvent) =&gt; e.key === &#39;Escape&#39; &amp;&amp; setOpen(false);
+window.addEventListener(&#39;keydown&#39;, onKey);
+return () =&gt; window.removeEventListener(&#39;keydown&#39;, onKey);
+}, []);
+
+return (
+&lt;&gt;
+&lt;nav className=&quot;absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-4 lg:px-10 lg:py-6&quot;&gt;
+&lt;span className=&quot;text-white text-xl font-semibold tracking-tight&quot; style={{ fontFamily: &#39;Inter, sans-serif&#39; }}&gt;
+velorix
+&lt;/span&gt;
+&lt;div className=&quot;hidden lg:flex items-center gap-1 rounded-full px-2 py-1.5&quot; style={{ backgroundColor: &#39;#0C0C0C&#39; }}&gt;
+{NAV_ITEMS.map((item) =&gt; (
+&lt;a
+key={item}
+href=&quot;#&quot;
+className=&quot;text-white/80 hover:text-white text-sm px-4 py-1.5 rounded-full hover:bg-white/10 transition-all duration-200&quot;
+style={{ fontFamily: &#39;Inter, sans-serif&#39; }}
+&gt;
+{item}
+&lt;/a&gt;
+))}
+&lt;/div&gt;
+&lt;div className=&quot;flex items-center gap-2&quot;&gt;
+&lt;HamburgerButton open={open} onClick={() =&gt; setOpen((v) =&gt; !v)} /&gt;
+&lt;button
+className=&quot;hidden lg:block text-sm font-medium px-5 py-2 rounded-full text-black transition-all duration-300 hover:opacity-80&quot;
+style={{ fontFamily: &#39;Inter, sans-serif&#39;, backgroundColor: &#39;#ffffff&#39; }}
+&gt;
+Join the wait
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/nav&gt;
+&lt;MobileMenu open={open} onClose={() =&gt; setOpen(false)} /&gt;
+&lt;/&gt;
+);
+}
+
+export default function App() {
+return (
+&lt;div className=&quot;relative w-full h-screen overflow-hidden bg-black&quot; style={{ fontFamily: &#39;Inter, sans-serif&#39; }}&gt;
+&lt;video
+className=&quot;absolute inset-0 z-0 w-full h-full object-cover&quot;
+src={BG_VIDEO}
+autoPlay
+loop
+muted
+playsInline
+/&gt;
+
+&lt;Navbar /&gt;
+
+&lt;div className=&quot;relative z-20 flex flex-col items-center text-center pt-[90px] md:pt-[120px] px-5 sm:px-8&quot;&gt;
+&lt;h1
+className=&quot;text-white font-normal leading-[1.12] tracking-tight max-w-3xl&quot;
+style={{
+fontFamily: &#39;Inter, sans-serif&#39;,
+fontSize: &#39;clamp(1.75rem, 5vw, 2.6rem)&#39;,
+}}
+&gt;
+Where precision finds its edge
+&lt;br className=&quot;hidden sm:block&quot; /&gt;
+{&#39; &#39;}and vision rewrites what comes next
+&lt;/h1&gt;
+
+&lt;p
+className=&quot;mt-5 md:mt-6 text-white/60 text-sm md:text-base leading-relaxed max-w-xs sm:max-w-sm md:max-w-md&quot;
+style={{ fontFamily: &quot;&#39;Courier New&#39;, Courier, monospace&quot;, letterSpacing: &#39;0.01em&#39; }}
+&gt;
+a seamless bridge - where raw ambition
+&lt;br className=&quot;hidden sm:block&quot; /&gt;
+{&#39; &#39;}and machine clarity converge as one
+&lt;/p&gt;
+
+&lt;button
+className=&quot;mt-7 md:mt-8 flex items-center gap-2.5 px-5 py-2.5 rounded-full text-black text-sm font-medium transition-all duration-300 hover:opacity-80 group&quot;
+style={{ fontFamily: &#39;Inter, sans-serif&#39;, backgroundColor: &#39;#ffffff&#39; }}
+&gt;
+Watch it unfold
+&lt;ArrowRight size={15} className=&quot;group-hover:translate-x-0.5 transition-transform duration-200&quot; /&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+);
+}
+```
+
+## Assets
+
+**Background video URL (verbatim):**
+```
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260508_155101_f2540600-6fe9-433e-8e48-b3f4b72f0727.mp4
+```
+
+## Icons (from `lucide-react`)
+
+Used via the `&lt;Menu&gt;`, `&lt;X&gt;`, and `&lt;ArrowRight&gt;` components. These are imported from the `lucide-react` npm package — the SVG path data is not inlined in this codebase; it ships inside the package. The three icons are rendered with:
+
+- `&lt;Menu size={20} color=&quot;white&quot; strokeWidth={1.5} /&gt;`
+- `&lt;X size={20} color=&quot;white&quot; strokeWidth={1.5} /&gt;`
+- `&lt;ArrowRight size={15} /&gt;` (hero button) and `&lt;ArrowRight size={14} /&gt;` (mobile menu links)
+
+## Dependencies (`package.json`)
+
+```json
+{
+&quot;dependencies&quot;: {
+&quot;@supabase/supabase-js&quot;: &quot;^2.57.4&quot;,
+&quot;lucide-react&quot;: &quot;^0.344.0&quot;,
+&quot;react&quot;: &quot;^18.3.1&quot;,
+&quot;react-dom&quot;: &quot;^18.3.1&quot;
+}
+}
+```
+
+## Animation values (all CSS, no Framer Motion)
+
+**Hamburger icon crossfade** — `duration: 0.3s`, `ease: cubic-bezier(0.23,1,0.32,1)`; Menu icon `opacity 1→0`, `transform rotate(0deg) scale(1) → rotate(-90deg) scale(0.5)`; X icon inverse.
+
+**Mobile menu backdrop** — `duration: 0.5s`; `backdropFilter blur(0px) → blur(12px)`; `background rgba(0,0,0,0) → rgba(0,0,0,0.6)`.
+
+**Mobile menu panel** — `max-height: 0px → 420px`, `duration: 0.5s`, `ease: cubic-bezier(0.23, 1, 0.32, 1)`.
+
+**Mobile menu link stagger** — each item `duration: 0.4s`, `ease: cubic-bezier(0.23,1,0.32,1)`, `delay: i * 50 + 80ms` (80, 130, 180, 230, 280); `opacity 0 → 1`, `transform translateY(-8px) → translateY(0)`.
+
+**Mobile menu CTA** — `duration: 0.4s`, `ease: cubic-bezier(0.23,1,0.32,1)`, `delay: 360ms`.
+
+**Hero button arrow** — hover `translate-x-0.5`, `duration: 0.2s`.
+
+No Supabase persistence is used on this marketing section — it&#39;s presentational only, and nothing on this hero is user-specific or stateful across sessions.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

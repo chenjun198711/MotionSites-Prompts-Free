@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ghost Cursor — Components 提示词 | MotionSites Prompts</title>
+<meta name="description" content="A fluid, smoky cursor trail effect using Three.js shader materials and post-processing bloom.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/community-superdesign-ghost-cursor.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ghost Cursor — Components 提示词">
+<meta property="og:description" content="A fluid, smoky cursor trail effect using Three.js shader materials and post-processing bloom.">
+<meta property="og:url" content="https://prompt-site.shop/p/community-superdesign-ghost-cursor.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Ghost Cursor","description":"A fluid, smoky cursor trail effect using Three.js shader materials and post-processing bloom.","url":"https://prompt-site.shop/p/community-superdesign-ghost-cursor.html","inLanguage":"zh-CN","genre":"Components","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-components">Components</a></div><h1>Ghost Cursor</h1><div class="chip-row"><span class="chip">Components</span><span class="chip">background</span><span class="chip">社区公开收藏</span></div><div class="facts"><span>正文：18,102 字符</span></div><div class="hero-media"><video src="../assets/community/superdesign/ghost-cursor/preview.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>A fluid, smoky cursor trail effect using Three.js shader materials and post-processing bloom.</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">You are given a task to integrate an existing React component in the codebase
+
+~~~/README.md
+# GhostCursor
+
+A fluid, smoky cursor trail effect using Three.js shader materials and post-processing bloom. This component adds a cinematic, ghostly trail that follows the cursor with organic movement.
+
+## Usage
+
+```tsx
+import { GhostCursor } from &#39;@/sd-components/72b3d7f3-3ac5-4819-9e63-117cebf79200&#39;;
+
+const MyComponent = () =&gt; {
+return (
+&lt;div style={{ position: &#39;relative&#39;, width: &#39;100%&#39;, height: &#39;500px&#39; }}&gt;
+{/* Content here */}
+
+&lt;GhostCursor
+color=&quot;#B19EEF&quot;
+trailLength={20}
+/&gt;
+&lt;/div&gt;
+);
+};
+```
+
+**Note**: The parent container should have `position: relative` or similar positioning context, as the GhostCursor uses `absolute inset-0`.
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `color` | `string` | `&#39;#B19EEF&#39;` | Base color of the trail |
+| `brightness` | `number` | `1` | Brightness multiplier |
+| `trailLength` | `number` | `50` | Length of the motion trail (number of previous positions) |
+| `inertia` | `number` | `0.5` | Movement inertia (0-1), higher means more lag/fluidity |
+| `bloomStrength` | `number` | `0.1` | Intensity of the glow effect |
+| `bloomRadius` | `number` | `1.0` | Radius of the bloom blur |
+| `bloomThreshold` | `number` | `0.025` | Brightness threshold for bloom |
+| `grainIntensity` | `number` | `0.05` | Film grain intensity (0-1) |
+| `edgeIntensity` | `number` | `0` | Edge accentuation intensity |
+| `mixBlendMode` | `CSSProperties[&#39;mixBlendMode&#39;]` | `&#39;screen&#39;` | CSS blend mode for the canvas |
+| `fadeDelayMs` | `number` | `1000` (desktop) | Delay before trail fades out when idle |
+| `fadeDurationMs` | `number` | `1500` (desktop) | Duration of fade out animation |
+| `zIndex` | `number` | `10` | CSS z-index of the canvas |
+| `className` | `string` | `undefined` | Additional CSS classes |
+
+## Dependencies
+
+- `three`: Required for WebGL rendering
+~~~
+
+~~~/src/App.tsx
+import React from &#39;react&#39;;
+import { GhostCursor } from &#39;./Component&#39;;
+
+const App = () =&gt; {
+return (
+&lt;div style={{
+position: &#39;relative&#39;,
+minHeight: &#39;100vh&#39;,
+backgroundColor: &#39;#111&#39;,
+color: &#39;#fff&#39;,
+display: &#39;flex&#39;,
+flexDirection: &#39;column&#39;,
+justifyContent: &#39;center&#39;,
+alignItems: &#39;center&#39;,
+overflow: &#39;hidden&#39;
+}}&gt;
+&lt;div className=&quot;z-20 text-center pointer-events-none select-none&quot;&gt;
+&lt;h1 className=&quot;text-4xl md:text-6xl font-bold mb-4 tracking-tighter&quot;&gt;Ghost Cursor&lt;/h1&gt;
+&lt;p className=&quot;text-gray-400 text-lg&quot;&gt;Move your cursor to see the effect&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;GhostCursor
+// Visuals
+color=&quot;#B19EEF&quot;
+brightness={1.2}
+edgeIntensity={0}
+// Trail and motion
+trailLength={20}
+inertia={0.4}
+// Post-processing
+grainIntensity={0.05}
+bloomStrength={0.5}
+bloomRadius={0.7}
+bloomThreshold={0}
+// Fade-out behavior
+fadeDelayMs={200}
+fadeDurationMs={1000}
+/&gt;
+
+{/* Background decoration */}
+&lt;div className=&quot;absolute inset-0 z-0 bg-gradient-to-tr from-purple-900/10 to-blue-900/10&quot; /&gt;
+&lt;/div&gt;
+);
+};
+
+export default App;
+~~~
+
+~~~/package.json
+{
+&quot;name&quot;: &quot;ghost-cursor&quot;,
+&quot;version&quot;: &quot;1.0.0&quot;,
+&quot;description&quot;: &quot;A fluid, smoky cursor trail effect using Three.js&quot;,
+&quot;main&quot;: &quot;src/Component.tsx&quot;,
+&quot;dependencies&quot;: {
+&quot;react&quot;: &quot;^18.0.0&quot;,
+&quot;react-dom&quot;: &quot;^18.0.0&quot;,
+&quot;three&quot;: &quot;^0.160.0&quot;,
+&quot;@types/three&quot;: &quot;^0.160.0&quot;
+}
+}
+~~~
+
+~~~/src/Component.tsx
+import React, { useEffect, useMemo, useRef } from &#39;react&#39;;
+import * as THREE from &#39;three&#39;;
+import { EffectComposer } from &#39;three/examples/jsm/postprocessing/EffectComposer.js&#39;;
+import { RenderPass } from &#39;three/examples/jsm/postprocessing/RenderPass.js&#39;;
+import { UnrealBloomPass } from &#39;three/examples/jsm/postprocessing/UnrealBloomPass.js&#39;;
+import { ShaderPass } from &#39;three/examples/jsm/postprocessing/ShaderPass.js&#39;;
+
+type GhostCursorProps = {
+className?: string;
+style?: React.CSSProperties;
+trailLength?: number;
+inertia?: number;
+grainIntensity?: number;
+bloomStrength?: number;
+bloomRadius?: number;
+bloomThreshold?: number;
+brightness?: number;
+color?: string;
+mixBlendMode?: React.CSSProperties[&#39;mixBlendMode&#39;];
+edgeIntensity?: number;
+maxDevicePixelRatio?: number;
+targetPixels?: number;
+fadeDelayMs?: number;
+fadeDurationMs?: number;
+zIndex?: number;
+};
+
+/**
+* GhostCursor component creates a fluid, smoky cursor trail effect using Three.js.
+* It uses custom shaders for the fluid simulation and post-processing for bloom/grain.
+*/
+export const GhostCursor: React.FC&lt;GhostCursorProps&gt; = ({
+className,
+style,
+trailLength = 50,
+inertia = 0.5,
+grainIntensity = 0.05,
+bloomStrength = 0.1,
+bloomRadius = 1.0,
+bloomThreshold = 0.025,
+brightness = 1,
+color = &#39;#B19EEF&#39;,
+mixBlendMode = &#39;screen&#39;,
+edgeIntensity = 0,
+maxDevicePixelRatio = 0.5,
+targetPixels,
+fadeDelayMs,
+fadeDurationMs,
+zIndex = 10
+}) =&gt; {
+const containerRef = useRef&lt;HTMLDivElement | null&gt;(null);
+const rendererRef = useRef&lt;THREE.WebGLRenderer | null&gt;(null);
+const composerRef = useRef&lt;EffectComposer | null&gt;(null);
+const materialRef = useRef&lt;THREE.ShaderMaterial | null&gt;(null);
+const bloomPassRef = useRef&lt;UnrealBloomPass | null&gt;(null);
+const filmPassRef = useRef&lt;ShaderPass | null&gt;(null);
+
+// Trail circular buffer
+const trailBufRef = useRef&lt;THREE.Vector2[]&gt;([]);
+const headRef = useRef(0);
+const rafRef = useRef&lt;number | null&gt;(null);
+const resizeObsRef = useRef&lt;ResizeObserver | null&gt;(null);
+const currentMouseRef = useRef(new THREE.Vector2(0.5, 0.5));
+const velocityRef = useRef(new THREE.Vector2(0, 0));
+const fadeOpacityRef = useRef(1.0);
+const lastMoveTimeRef = useRef(typeof performance !== &#39;undefined&#39; ? performance.now() : Date.now());
+const pointerActiveRef = useRef(false);
+const runningRef = useRef(false);
+
+const isTouch = useMemo(
+() =&gt; typeof window !== &#39;undefined&#39; &amp;&amp; (&#39;ontouchstart&#39; in window || navigator.maxTouchPoints &gt; 0),
+[]
+);
+
+const pixelBudget = targetPixels ?? (isTouch ? 0.9e6 : 1.3e6);
+const fadeDelay = fadeDelayMs ?? (isTouch ? 500 : 1000);
+const fadeDuration = fadeDurationMs ?? (isTouch ? 1000 : 1500);
+
+const baseVertexShader = `
+varying vec2 vUv;
+void main() {
+vUv = uv;
+gl_Position = vec4(position, 1.0);
+}
+`;
+
+const fragmentShader = `
+uniform float iTime;
+uniform vec3 iResolution;
+uniform vec2 iMouse;
+uniform vec2 iPrevMouse[MAX_TRAIL_LENGTH];
+uniform float iOpacity;
+uniform float iScale;
+uniform vec3 iBaseColor;
+uniform float iBrightness;
+uniform float iEdgeIntensity;
+
+varying vec2 vUv;
+
+float hash(vec2 p){ return fract(sin(dot(p,vec2(127.1,311.7))) * 43758.5453123); }
+
+float noise(vec2 p){
+vec2 i = floor(p), f = fract(p);
+f = f * f * (3. - 2. * f);
+return mix(mix(hash(i + vec2(0.,0.)), hash(i + vec2(1.,0.)), f.x),
+mix(hash(i + vec2(0.,1.)), hash(i + vec2(1.,1.)), f.x), f.y);
+}
+
+float fbm(vec2 p){
+float v = 0.0;
+float a = 0.5;
+mat2 m = mat2(cos(0.5), sin(0.5), -sin(0.5), cos(0.5));
+for(int i=0;i&lt;5;i++){
+v += a * noise(p);
+p = m * p * 2.0;
+a *= 0.5;
+}
+return v;
+}
+
+vec3 tint1(vec3 base){ return mix(base, vec3(1.0), 0.15); }
+vec3 tint2(vec3 base){ return mix(base, vec3(0.8, 0.9, 1.0), 0.25); }
+
+vec4 blob(vec2 p, vec2 mousePos, float intensity, float activity) {
+vec2 q = vec2(fbm(p * iScale + iTime * 0.1), fbm(p * iScale + vec2(5.2,1.3) + iTime * 0.1));
+vec2 r = vec2(fbm(p * iScale + q * 1.5 + iTime * 0.15), fbm(p * iScale + q * 1.5 + vec2(8.3,2.8) + iTime * 0.15));
+float smoke = fbm(p * iScale + r * 0.8);
+
+float radius = 0.5 + 0.3 * (1.0 / iScale);
+float distFactor = 1.0 - smoothstep(0.0, radius * activity, length(p - mousePos));
+float alpha = pow(smoke, 2.5) * distFactor;
+
+vec3 c1 = tint1(iBaseColor);
+vec3 c2 = tint2(iBaseColor);
+vec3 color = mix(c1, c2, sin(iTime * 0.5) * 0.5 + 0.5);
+
+return vec4(color * alpha * intensity, alpha * intensity);
+}
+
+void main() {
+vec2 uv = (gl_FragCoord.xy / iResolution.xy * 2.0 - 1.0) * vec2(iResolution.x / iResolution.y, 1.0);
+vec2 mouse = (iMouse * 2.0 - 1.0) * vec2(iResolution.x / iResolution.y, 1.0);
+
+vec3 colorAcc = vec3(0.0);
+float alphaAcc = 0.0;
+
+vec4 b = blob(uv, mouse, 1.0, iOpacity);
+colorAcc += b.rgb;
+alphaAcc += b.a;
+
+for (int i = 0; i &lt; MAX_TRAIL_LENGTH; i++) {
+vec2 pm = (iPrevMouse[i] * 2.0 - 1.0) * vec2(iResolution.x / iResolution.y, 1.0);
+float t = 1.0 - float(i) / float(MAX_TRAIL_LENGTH);
+t = pow(t, 2.0);
+
+if (t &gt; 0.01) {
+vec4 bt = blob(uv, pm, t * 0.8, iOpacity);
+colorAcc += bt.rgb;
+alphaAcc += bt.a;
+}
+}
+
+colorAcc *= iBrightness;
+
+vec2 uv01 = gl_FragCoord.xy / iResolution.xy;
+float edgeDist = min(min(uv01.x, 1.0 - uv01.x), min(uv01.y, 1.0 - uv01.y));
+float distFromEdge = clamp(edgeDist * 2.0, 0.0, 1.0);
+float k = clamp(iEdgeIntensity, 0.0, 1.0);
+float edgeMask = mix(1.0 - k, 1.0, distFromEdge);
+
+float outAlpha = clamp(alphaAcc * iOpacity * edgeMask, 0.0, 1.0);
+gl_FragColor = vec4(colorAcc, outAlpha);
+}
+`;
+
+const FilmGrainShader = useMemo(() =&gt; {
+return {
+uniforms: {
+tDiffuse: { value: null },
+iTime: { value: 0 },
+intensity: { value: grainIntensity }
+},
+vertexShader: `
+varying vec2 vUv;
+void main(){
+vUv = uv;
+gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+}
+`,
+fragmentShader: `
+uniform sampler2D tDiffuse;
+uniform float iTime;
+uniform float intensity;
+varying vec2 vUv;
+float hash1(float n){ return fract(sin(n)*43758.5453); }
+void main(){
+vec4 color = texture2D(tDiffuse, vUv);
+float n = hash1(vUv.x*1000.0 + vUv.y*2000.0 + iTime) * 2.0 - 1.0;
+color.rgb += n * intensity * color.rgb;
+gl_FragColor = color;
+}
+`
+};
+}, [grainIntensity]);
+
+const UnpremultiplyPass = useMemo(
+() =&gt;
+new ShaderPass({
+uniforms: { tDiffuse: { value: null } },
+vertexShader: `
+varying vec2 vUv;
+void main(){
+vUv = uv;
+gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+}
+`,
+fragmentShader: `
+uniform sampler2D tDiffuse;
+varying vec2 vUv;
+void main(){
+vec4 c = texture2D(tDiffuse, vUv);
+float a = max(c.a, 1e-5);
+vec3 straight = c.rgb / a;
+gl_FragColor = vec4(clamp(straight, 0.0, 1.0), c.a);
+}
+`
+}),
+[]
+);
+
+function calculateScale(el: HTMLElement) {
+const r = el.getBoundingClientRect();
+const base = 600;
+const current = Math.min(Math.max(1, r.width), Math.max(1, r.height));
+return Math.max(0.5, Math.min(2.0, current / base));
+}
+
+useEffect(() =&gt; {
+const host = containerRef.current;
+const parent = host?.parentElement;
+if (!host || !parent) return;
+
+// Note: Parent should be positioned relative or absolute by the user.
+// We won&#39;t modify parent style to avoid side effects/conflicts.
+
+const renderer = new THREE.WebGLRenderer({
+antialias: !isTouch,
+alpha: true,
+depth: false,
+stencil: false,
+powerPreference: &#39;default&#39;,
+premultipliedAlpha: false,
+preserveDrawingBuffer: false
+});
+
+renderer.setClearColor(0x000000, 0);
+rendererRef.current = renderer;
+
+renderer.domElement.style.pointerEvents = &#39;none&#39;;
+if (mixBlendMode) {
+renderer.domElement.style.mixBlendMode = String(mixBlendMode);
+} else {
+renderer.domElement.style.removeProperty(&#39;mix-blend-mode&#39;);
+}
+renderer.domElement.style.display = &#39;block&#39;;
+renderer.domElement.style.width = &#39;100%&#39;;
+renderer.domElement.style.height = &#39;100%&#39;;
+renderer.domElement.style.background = &#39;transparent&#39;;
+
+host.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+const geom = new THREE.PlaneGeometry(2, 2);
+
+const maxTrail = Math.max(1, Math.floor(trailLength));
+trailBufRef.current = Array.from({ length: maxTrail }, () =&gt; new THREE.Vector2(0.5, 0.5));
+headRef.current = 0;
+
+const baseColor = new THREE.Color(color);
+const material = new THREE.ShaderMaterial({
+defines: { MAX_TRAIL_LENGTH: maxTrail },
+uniforms: {
+iTime: { value: 0 },
+iResolution: { value: new THREE.Vector3(1, 1, 1) },
+iMouse: { value: new THREE.Vector2(0.5, 0.5) },
+iPrevMouse: { value: trailBufRef.current.map(v =&gt; v.clone()) },
+iOpacity: { value: 1.0 },
+iScale: { value: 1.0 },
+iBaseColor: { value: new THREE.Vector3(baseColor.r, baseColor.g, baseColor.b) },
+iBrightness: { value: brightness },
+iEdgeIntensity: { value: edgeIntensity }
+},
+vertexShader: baseVertexShader,
+fragmentShader,
+transparent: true,
+depthTest: false,
+depthWrite: false
+});
+materialRef.current = material;
+
+const mesh = new THREE.Mesh(geom, material);
+scene.add(mesh);
+
+const composer = new EffectComposer(renderer);
+composerRef.current = composer;
+
+const renderPass = new RenderPass(scene, camera);
+composer.addPass(renderPass);
+
+const bloomPass = new UnrealBloomPass(new THREE.Vector2(1, 1), bloomStrength, bloomRadius, bloomThreshold);
+bloomPassRef.current = bloomPass;
+composer.addPass(bloomPass);
+
+const filmPass = new ShaderPass(FilmGrainShader as any);
+filmPassRef.current = filmPass;
+composer.addPass(filmPass);
+
+composer.addPass(UnpremultiplyPass);
+
+const resize = () =&gt; {
+const rect = host.getBoundingClientRect();
+const cssW = Math.max(1, Math.floor(rect.width));
+const cssH = Math.max(1, Math.floor(rect.height));
+
+const currentDPR = Math.min(
+typeof window !== &#39;undefined&#39; ? window.devicePixelRatio || 1 : 1,
+maxDevicePixelRatio
+);
+
+const need = cssW * cssH * currentDPR * currentDPR;
+const scale = need &lt;= pixelBudget ? 1 : Math.max(0.5, Math.min(1, Math.sqrt(pixelBudget / Math.max(1, need))));
+
+const pixelRatio = currentDPR * scale;
+renderer.setPixelRatio(pixelRatio);
+renderer.setSize(cssW, cssH, false);
+composer.setPixelRatio?.(pixelRatio);
+composer.setSize(cssW, cssH);
+
+const wpx = Math.max(1, Math.floor(cssW * pixelRatio));
+const hpx = Math.max(1, Math.floor(cssH * pixelRatio));
+
+material.uniforms.iResolution.value.set(wpx, hpx, 1);
+material.uniforms.iScale.value = calculateScale(host);
+bloomPass.setSize(wpx, hpx);
+};
+
+resize();
+const ro = new ResizeObserver(resize);
+resizeObsRef.current = ro;
+ro.observe(host);
+
+const start = typeof performance !== &#39;undefined&#39; ? performance.now() : Date.now();
+
+const animate = () =&gt; {
+const now = performance.now();
+const t = (now - start) / 1000;
+
+const mat = materialRef.current!;
+const comp = composerRef.current!;
+
+if (pointerActiveRef.current) {
+velocityRef.current.set(
+currentMouseRef.current.x - mat.uniforms.iMouse.value.x,
+currentMouseRef.current.y - mat.uniforms.iMouse.value.y
+);
+mat.uniforms.iMouse.value.copy(currentMouseRef.current);
+fadeOpacityRef.current = 1.0;
+} else {
+velocityRef.current.multiplyScalar(inertia);
+if (velocityRef.current.lengthSq() &gt; 1e-6) {
+mat.uniforms.iMouse.value.add(velocityRef.current);
+}
+
+const dt = now - lastMoveTimeRef.current;
+if (dt &gt; fadeDelay) {
+const k = Math.min(1, (dt - fadeDelay) / fadeDuration);
+fadeOpacityRef.current = Math.max(0, 1 - k);
+}
+}
+
+const N = trailBufRef.current.length;
+headRef.current = (headRef.current + 1) % N;
+trailBufRef.current[headRef.current].copy(mat.uniforms.iMouse.value);
+
+const arr = mat.uniforms.iPrevMouse.value as THREE.Vector2[];
+for (let i = 0; i &lt; N; i++) {
+const srcIdx = (headRef.current - i + N) % N;
+arr[i].copy(trailBufRef.current[srcIdx]);
+}
+
+mat.uniforms.iOpacity.value = fadeOpacityRef.current;
+mat.uniforms.iTime.value = t;
+
+if (filmPassRef.current?.uniforms?.iTime) {
+filmPassRef.current.uniforms.iTime.value = t;
+}
+
+comp.render();
+
+if (!pointerActiveRef.current &amp;&amp; fadeOpacityRef.current &lt;= 0.001) {
+runningRef.current = false;
+rafRef.current = null;
+return;
+}
+
+rafRef.current = requestAnimationFrame(animate);
+};
+
+const ensureLoop = () =&gt; {
+if (!runningRef.current) {
+runningRef.current = true;
+rafRef.current = requestAnimationFrame(animate);
+}
+};
+
+const onPointerMove = (e: PointerEvent) =&gt; {
+const rect = parent.getBoundingClientRect();
+const x = THREE.MathUtils.clamp((e.clientX - rect.left) / Math.max(1, rect.width), 0, 1);
+const y = THREE.MathUtils.clamp(1 - (e.clientY - rect.top) / Math.max(1, rect.height), 0, 1);
+
+currentMouseRef.current.set(x, y);
+pointerActiveRef.current = true;
+lastMoveTimeRef.current = performance.now();
+ensureLoop();
+};
+
+const onPointerEnter = () =&gt; {
+pointerActiveRef.current = true;
+ensureLoop();
+};
+
+const onPointerLeave = () =&gt; {
+pointerActiveRef.current = false;
+lastMoveTimeRef.current = performance.now();
+ensureLoop();
+};
+
+parent.addEventListener(&#39;pointermove&#39;, onPointerMove, { passive: true });
+parent.addEventListener(&#39;pointerenter&#39;, onPointerEnter, { passive: true });
+parent.addEventListener(&#39;pointerleave&#39;, onPointerLeave, { passive: true });
+
+ensureLoop();
+
+return () =&gt; {
+if (rafRef.current) cancelAnimationFrame(rafRef.current);
+runningRef.current = false;
+rafRef.current = null;
+
+parent.removeEventListener(&#39;pointermove&#39;, onPointerMove);
+parent.removeEventListener(&#39;pointerenter&#39;, onPointerEnter);
+parent.removeEventListener(&#39;pointerleave&#39;, onPointerLeave);
+
+resizeObsRef.current?.disconnect();
+
+scene.clear();
+geom.dispose();
+material.dispose();
+composer.dispose();
+renderer.dispose();
+
+if (renderer.domElement &amp;&amp; renderer.domElement.parentElement) {
+renderer.domElement.parentElement.removeChild(renderer.domElement);
+}
+};
+}, [
+trailLength,
+inertia,
+grainIntensity,
+bloomStrength,
+bloomRadius,
+bloomThreshold,
+pixelBudget,
+fadeDelay,
+fadeDuration,
+isTouch,
+color,
+brightness,
+mixBlendMode,
+edgeIntensity
+]);
+
+useEffect(() =&gt; {
+if (materialRef.current) {
+const c = new THREE.Color(color);
+(materialRef.current.uniforms.iBaseColor.value as THREE.Vector3).set(c.r, c.g, c.b);
+}
+}, [color]);
+
+useEffect(() =&gt; {
+if (materialRef.current) {
+materialRef.current.uniforms.iBrightness.value = brightness;
+}
+}, [brightness]);
+
+useEffect(() =&gt; {
+if (materialRef.current) {
+materialRef.current.uniforms.iEdgeIntensity.value = edgeIntensity;
+}
+}, [edgeIntensity]);
+
+useEffect(() =&gt; {
+if (filmPassRef.current?.uniforms?.intensity) {
+filmPassRef.current.uniforms.intensity.value = grainIntensity;
+}
+}, [grainIntensity]);
+
+useEffect(() =&gt; {
+const el = rendererRef.current?.domElement;
+if (!el) return;
+
+if (mixBlendMode) {
+el.style.mixBlendMode = String(mixBlendMode);
+} else {
+el.style.removeProperty(&#39;mix-blend-mode&#39;);
+}
+}, [mixBlendMode]);
+
+const mergedStyle = useMemo&lt;React.CSSProperties&gt;(() =&gt; ({ zIndex, ...style }), [zIndex, style]);
+
+return (
+&lt;div ref={containerRef} className={`pointer-events-none absolute inset-0 ${className ?? &#39;&#39;}`} style={mergedStyle} /&gt;
+);
+};
+
+export default GhostCursor;
+~~~
+
+Implementation Guidelines
+
+1. Analyze the component structure, styling, animation implementations
+2. Review the component&#39;s arguments and state
+3. Think through what is the best place to adopt this component/style into the design we are doing
+4. Then adopt the component/design to our current system
+
+Help me integrate this into my design</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：superdesigndev/superdesign-prompts<br>原始文件：<code>prompts/ghost-cursor/README.md</code><br>许可证：CC0-1.0<br>作者：Jason Zhou<br><a href="https://github.com/superdesigndev/superdesign-prompts/blob/main/prompts/ghost-cursor/README.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="animated-cards.html">Animated Cards<small>Components · carousel</small></a><a href="scroll-marquee.html">Scroll Marquee<small>Components · carousel</small></a><a href="flowmate-carousal.html">FlowMate Carousal<small>Components · carousel</small></a><a href="apex-program-accordion.html">Apex Program Accordion<small>Components · faq</small></a><a href="bento-grid-stats.html">Bento Grid Stats<small>Components · features</small></a><a href="glassmorphic-feature-tabs.html">Glassmorphic Feature Tabs<small>Components · features</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

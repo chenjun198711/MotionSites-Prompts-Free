@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Finance Assistant — Fintech 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Wealth 暗色财务仪表盘 UI，纯 HTML + CSS 变量缩放还原。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/finance-assistant.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Finance Assistant — Fintech 提示词">
+<meta property="og:description" content="Wealth 暗色财务仪表盘 UI，纯 HTML + CSS 变量缩放还原。">
+<meta property="og:url" content="https://prompt-site.shop/p/finance-assistant.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/finance-assistant.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Finance Assistant","description":"Wealth 暗色财务仪表盘 UI，纯 HTML + CSS 变量缩放还原。","url":"https://prompt-site.shop/p/finance-assistant.html","inLanguage":"zh-CN","genre":"Fintech","dateCreated":"2026-08-14T08:39:05.666Z","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-fintech">Fintech</a></div><h1>Finance Assistant</h1><div class="chip-row"><span class="chip">Fintech</span><span class="chip">mobile</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-08-14</span><span>正文：7,509 字符</span></div><div class="hero-media"><img src="../assets/previews/finance-assistant.webp" alt="Finance Assistant 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>Wealth 暗色财务仪表盘 UI，纯 HTML + CSS 变量缩放还原。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Recreate EXACTLY this single-file HTML/CSS finance dashboard UI (title: &quot;Wealth — Dashboard&quot;). Pixel-faithful Motionsites / wealth-app style. No frameworks. Pure HTML + CSS. Design canvas ratio 1341×958. Scale everything with CSS variable:
+--u: min(100vw/1341, 100vh/958)
+Margins --m = 22u, gutter --g = 8u. Dark near-black stage #050605 / #060704 / #050604. NO dark veil/scrim over the hero photo (.veil { display:none }).
+
+════════════════════════════════════
+ASSETS (use these exact URLs)
+════════════════════════════════════
+1) Full-bleed hero portrait background (.bg uses background-size:cover, center):
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260730_094904_4a6cc87c-f65a-4838-8512-a8fb71943db9.png
+(Cinematic night photo of a woman in a dark knit sweater looking right toward a bokeh city skyline through a window; warm face light, cool city lights.)
+
+2) Growth card city skyline background:
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260730_095033_aeb84f6c-424c-4db6-81dc-fd401c670c8b.png
+(Vertical soft-focus night cityscape, navy/teal sky, yellow/white/red bokeh lights.)
+
+3) Circular account avatar (CSS border-radius:50%, cover):
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260730_095032_1ec7da6d-65a0-4ba5-a446-5f9e41d657aa.png
+(Smiling man with light brown hair, outdoor bokeh background.)
+
+4) Emoji / sticker to the RIGHT of headline &quot;Hey, Need help?&quot; (30u × 34u, contain, no-repeat):
+https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260730_100528_462fa6c5-c3cb-4e7e-82a7-27d23c7bb316_min.png&amp;w=384&amp;q=85
+
+CSS custom properties:
+--portrait: url(&lt;asset1&gt;);
+--city: url(&lt;asset2&gt;);
+--avatar: url(&lt;asset3&gt;);
+--emoji: url(&lt;asset4&gt;);
+--hero-tail: #070806;
+--track: #373a34;
+--card-line: rgba(255,255,255,.055);
+--font: &#39;Roboto&#39;,&#39;Helvetica Neue&#39;,&quot;Segoe UI&quot;,system-ui,Arial,sans-serif;
+(Original embeds Roboto as &#39;RobotoE&#39; woff2 weights 300/400/500/600 — use real Roboto with those weights.)
+
+════════════════════════════════════
+FONT / TYPE
+════════════════════════════════════
+Font family: Roboto (weights 300, 400, 500, 600). Antialiased.
+Exact copy &amp; hierarchy:
+- Brand &quot;Wealth&quot; — 15.5u, weight 600, #f2f2f2, tracking -0.2u; under it &quot;Dashboard&quot; — 11.5u, muted gray
+- Center headline &quot;Hey, Need help?&quot; — ~26u, weight 400, #fff, tracking -0.29u; emoji sits at left: calc(50% + 79.5u)
+- Subhead &quot;Just ask me anything&quot; — ~38u, weight 300, #bdbab6, tracking +0.26u
+- Account &quot;Alvie Wahed&quot; 15.5u/500 #f4f4f4; &quot;Product Manager&quot; 11.5u #8f918e
+- Card titles 21u #f0efee tracking -0.85u; meta &quot;Last 7 days&quot; 13.5u #7c7d7c
+- Big numbers #fbfbfa (e.g. 27–30u); foot notes #9a9c99; positive foot #8fce9d
+All money in USD (not INR): $1,013 / $1.70k / $1.2k / $1.8k / $1.58k / $1,039 / $541
+
+════════════════════════════════════
+GLASS / MATERIAL SYSTEM (critical)
+════════════════════════════════════
+Cards (.card):
+border-radius 24u;
+background rgba(255,255,255,.107);
+border 1u solid rgba(255,255,255,.055);
+box-shadow: 0 10u 22u rgba(0,0,0,.20), inset 0 1u 0 rgba(255,255,255,.045);
+backdrop-filter: blur(30u); -webkit-backdrop-filter: blur(30u);
+
+Toolbar chips (.tb): height 38u, radius 19u, dual-layer gradient border (transparent border + gradient border-box), soft white→black fill gradient, blur(12u) saturate(1.03), text #e8e8e6 11u.
+
+Nav circles (.nav): 50u round, nearly clear fill rgba(0,0,0,.008), border rgba(255,255,255,.085), blur(10u). Active (.nav.on): solid #fdfdfd, dark icons #141414, shadow 0 4u 16u rgba(0,0,0,.55). Inactive icons stroke #f2f2f2.
+
+Plus button: 48u circle, border rgba(255,255,255,.16), fill rgba(0,0,0,.032), blur(10u).
+
+Growth icon discs (.gi): glass discs with radial fill + rotating conic-gradient faux border (white alpha ring), blur(6u), white SVG glyphs. One larger &quot;big&quot; disc for the bar-chart icon.
+
+Insights pills: small chart icon + label &quot;Insights&quot;, muted #c6c8c4.
+
+════════════════════════════════════
+DESKTOP LAYOUT (bottom-anchored grid)
+════════════════════════════════════
+Left vertical rail (top ~85u, left 26u): 5 circular nav icons stacked gap 6u — Home (active white), Profile, Analytics bars, Notes clipboard, Network/users.
+
+Top-left: green circular logo 48u (radial #8fd6a4→#6cbe86→#57ad74) with white abstract “W/wealth” SVG mark; brand text to its right.
+
+Top-right account cluster: plus | circular avatar | name/role.
+
+Hero text centered over the woman’s face area; no dark overlay so photo stays bright.
+
+Toolbar floating above the card grid (bottom: gridH + bm + 15u, right 26u):
+[search] [edit] [date chip &quot;15 – 28 July, 2026&quot; with chevron] | [+ Add Wallet] [Create a Report]
+
+Bottom card grid (4 columns, bottom margin 24u):
+Row1 height 257u: Spending | Income | Portfolio | Growth (Growth spans full grid height 495u)
+Row2 height 230u: Wealth Score | Cash Flow (Growth already occupying right column)
+
+Card #1 Spending:
+- Teal tile icon gradient 150deg #2c5351→#3f6e64→#7fb09c, wallet SVG
+- Rows: Essentials 70% / Shopping 50% / Dining 30% with dark track #373a34 and green fill gradient #72bb89→#77c18c (bar widths ~75% / 53% / 34%)
+- Big &quot;$1,013&quot; + &quot;Total Spent&quot; with tag icon
+
+Card #2 Income:
+- Greener tile #3e5635→#547243→#a8d275
+- 3 vertical green bars (heights ~50/73/96u) labels &quot;50K&quot; &quot;$1.2k&quot; &quot;$1.8k&quot;
+- Big &quot;$1.70k&quot; + green &quot;+18% from last week&quot; with up-arrow
+
+Card #3 Portfolio:
+- Teal tile #35605c→#437470→#639a88, pie SVG
+- Horizontal stack bar: Stocks green 55% | Funds olive 30% | Cash yellow-olive 15% (flex ~139/77/60)
+- Big &quot;+12.8%&quot; + &quot;1.6% vs last week&quot;
+
+Card Growth (#g1) tall right:
+- City photo background, radius 26u, border rgba(255,255,255,.10), deep shadow
+- Top row of 7 frosted circular category icons (bank/card/pie/bars/kanban/badge/target)
+- Label &quot;Growth&quot;; soft olive radial glow; donut ring conic-gradient from 0deg: #d2dc4f 0–235deg then #5f9c6c to 360deg, masked to thin ring; center &quot;68%&quot;
+- Legend: green &quot;Wealth&quot; + yellow &quot;Savings&quot;
+- Title &quot;Balanced Wealth &amp; Savings&quot;; sub &quot;Overall Financial Health Index&quot;
+
+Card #4 Wealth Score:
+- &quot;Wealth Score&quot; / centered &quot;87&quot; / &quot;Strong&quot; / &quot;+5 vs weekly average York&quot;
+- 10 segment bar (7 green, 1 yellow-green, 2 translucent white)
+- Score Avg 7.2h | Progress 82% | Insights
+
+Card #5 Cash Flow:
+- &quot;Cash Flow&quot; / &quot;73&quot; / &quot;Healthy&quot; / &quot;Deep Work 14.5h&quot;
+- In bar full green → $1.58k; Out bar ~55% yellow-green → $1,039
+- Avg Cash Inflow $1.58k | Savings $541 | Insights
+
+════════════════════════════════════
+RESPONSIVE
+════════════════════════════════════
+Tablet portrait (max-aspect 1/1, min-width 700, min-height 960): 2-col grid, --u from 688×1392.
+Mobile (max-aspect 1/1 and max-width 699 or max-height 959): single column scroll; hero ~480u; stacked headline; toolbar wraps; nav becomes floating bottom glass dock (blur 24u saturate 1.25, rgba white fill, radius 36u). Still no veil.
+
+════════════════════════════════════
+IMPLEMENTATION RULES
+════════════════════════════════════
+- Single index.html, absolute positioning with calc(* var(--u)), isolation on stage.
+- Glass must read as real frosted glass over the photo (backdrop-filter required).
+- Exact strings, USD figures, colors, radii, and asset URLs above — do not invent replacements.
+- Match iconography with simple inline SVGs (home, user, bars, clipboard, network, search, pencil, calendar, plus, wallet tiles, insights, up-arrows).
+- Output production-ready HTML/CSS that looks identical on a ~1341×958 desktop viewport.
+` ` `</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="wealthcore.html">Wealthcore<small>Fintech · fintech</small></a><a href="crypto-vault.html">Crypto Vault<small>Fintech · fintech</small></a><a href="aurex-finance.html">Aurex Finance<small>Fintech · fintech</small></a><a href="remit-race.html">Remit Race<small>Fintech · mobile</small></a><a href="finflow.html">FinFlow<small>Fintech · hero</small></a><a href="evergreen-finance.html">Evergreen Finance<small>Fintech · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

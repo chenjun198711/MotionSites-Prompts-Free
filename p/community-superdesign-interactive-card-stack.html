@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Interactive Card Stack — Components 提示词 | MotionSites Prompts</title>
+<meta name="description" content="A premium, interactive card stack component with drag-to-back physics, random rotations, and smooth motion transitions. Features autoplay, mobile-optimized">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/community-superdesign-interactive-card-stack.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Interactive Card Stack — Components 提示词">
+<meta property="og:description" content="A premium, interactive card stack component with drag-to-back physics, random rotations, and smooth motion transitions. Features autoplay, mobile-optimized">
+<meta property="og:url" content="https://prompt-site.shop/p/community-superdesign-interactive-card-stack.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Interactive Card Stack","description":"A premium, interactive card stack component with drag-to-back physics, random rotations, and smooth motion transitions. Features autoplay, mobile-optimized interactions, and highly customizable animation configurations.","url":"https://prompt-site.shop/p/community-superdesign-interactive-card-stack.html","inLanguage":"zh-CN","genre":"Components","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-components">Components</a></div><h1>Interactive Card Stack</h1><div class="chip-row"><span class="chip">Components</span><span class="chip">components</span><span class="chip">社区公开收藏</span></div><div class="facts"><span>正文：10,221 字符</span></div><div class="hero-media"><video src="../assets/community/superdesign/interactive-card-stack/preview.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>A premium, interactive card stack component with drag-to-back physics, random rotations, and smooth motion transitions. Features autoplay, mobile-optimized interactions, and highly customizable animation configurations.</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">You are given a task to integrate an existing React component in the codebase
+
+~~~/README.md
+# InteractiveCardStack
+
+A premium, interactive card stack component for React. It features smooth drag physics, customizable animations, and automatic cycling. Perfect for showcases, galleries, or landing page features.
+
+## Features
+- 🖱️ **Drag-to-back physics**: Fluid interactions with Framer Motion.
+- 📱 **Mobile Optimized**: Custom handling for touch devices.
+- 🔄 **Autoplay**: Optional automatic card cycling with pause-on-hover.
+- 🎨 **Fully Customizable**: Control rotation, sensitivity, and spring physics.
+- 🌗 **Theme Aware**: Works seamlessly with light and dark modes.
+
+## Dependencies
+- `framer-motion`: ^11.0.0
+- `lucide-react`: ^0.454.0
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `cards` | `React.ReactNode[]` | `[]` | Array of React elements to display as cards. |
+| `randomRotation` | `boolean` | `false` | Apply slight random rotations to cards for a organic feel. |
+| `sensitivity` | `number` | `180` | Distance in pixels a card must be dragged to trigger send-to-back. |
+| `sendToBackOnClick` | `boolean` | `false` | Allow clicking a card to send it to the back. |
+| `autoplay` | `boolean` | `false` | Enable automatic cycling of cards. |
+| `autoplayDelay` | `number` | `3000` | Delay in ms between automatic transitions. |
+| `pauseOnHover` | `boolean` | `true` | Pause autoplay when user hovers over the stack. |
+| `animationConfig` | `object` | `{ stiffness: 260, damping: 20 }` | Framer Motion spring configuration. |
+| `mobileClickOnly` | `boolean` | `false` | Disable dragging on mobile; cards only cycle via click. |
+
+## Usage
+
+```tsx
+import { InteractiveCardStack } from &#39;@/sd-components/f7c18bb8-fe7d-4435-b722-c543df486128&#39;;
+
+function MyGallery() {
+const items = [
+&lt;img src=&quot;/img1.jpg&quot; className=&quot;w-full h-full object-cover&quot; /&gt;,
+&lt;img src=&quot;/img2.jpg&quot; className=&quot;w-full h-full object-cover&quot; /&gt;,
+&lt;div className=&quot;bg-primary text-white p-8&quot;&gt;Custom Content&lt;/div&gt;
+];
+
+return (
+&lt;div className=&quot;w-80 h-[450px]&quot;&gt;
+&lt;InteractiveCardStack
+cards={items}
+randomRotation={true}
+sendToBackOnClick={true}
+/&gt;
+&lt;/div&gt;
+);
+}
+```
+~~~
+
+~~~/src/App.tsx
+import React, { useState } from &#39;react&#39;;
+import { InteractiveCardStack } from &#39;./Component&#39;;
+import { RefreshCcw } from &#39;lucide-react&#39;;
+
+const IMAGES = [
+&quot;https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?q=80&amp;w=500&amp;auto=format&quot;,
+&quot;https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&amp;w=500&amp;auto=format&quot;,
+&quot;https://images.unsplash.com/photo-1452626212852-811d58933cae?q=80&amp;w=500&amp;auto=format&quot;,
+&quot;https://images.unsplash.com/photo-1572120360610-d971b9d7767c?q=80&amp;w=500&amp;auto=format&quot;
+];
+
+export default function App() {
+const [key, setKey] = useState(0);
+
+const cardItems = IMAGES.map((src, i) =&gt; (
+&lt;div key={i} className=&quot;w-full h-full relative group&quot;&gt;
+&lt;img
+src={src}
+alt={`Showcase ${i + 1}`}
+className=&quot;w-full h-full object-cover&quot;
+/&gt;
+&lt;div className=&quot;absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300&quot; /&gt;
+&lt;/div&gt;
+));
+
+return (
+&lt;div className=&quot;min-h-screen bg-[#F9F9F9] dark:bg-[#1A1A1B] flex flex-col items-center justify-center p-20&quot;&gt;
+{/* Title as requested in style guide */}
+&lt;h2 className=&quot;text-xl font-medium mb-12 text-[#1A1A1B] dark:text-[#F9F9F9] tracking-tight&quot;&gt;
+Interactive Card Stack
+&lt;/h2&gt;
+
+&lt;div className=&quot;relative group&quot;&gt;
+{/* Subtle borderless container with soft shadow */}
+&lt;div className=&quot;w-[320px] h-[420px] rounded-[2rem] shadow-[0_40px_80px_rgba(0,0,0,0.08)] bg-transparent&quot;&gt;
+&lt;InteractiveCardStack
+key={key}
+cards={cardItems}
+randomRotation={true}
+sendToBackOnClick={true}
+autoplay={false}
+pauseOnHover={true}
+/&gt;
+&lt;/div&gt;
+
+{/* Reply/Reset button as requested */}
+&lt;button
+onClick={() =&gt; setKey(prev =&gt; prev + 1)}
+className=&quot;absolute -bottom-20 left-1/2 -translate-x-1/2 p-3 bg-white dark:bg-zinc-800 rounded-full shadow-lg border border-border/50 hover:scale-110 active:scale-95 transition-all duration-200 group/btn&quot;
+aria-label=&quot;Reset Animation&quot;
+&gt;
+&lt;RefreshCcw className=&quot;w-5 h-5 text-primary group-hover/btn:rotate-180 transition-transform duration-500&quot; /&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;p className=&quot;mt-32 text-sm text-muted-foreground font-normal opacity-50&quot;&gt;
+Drag or click the top card to cycle
+&lt;/p&gt;
+&lt;/div&gt;
+);
+}
+~~~
+
+~~~/package.json
+{
+&quot;name&quot;: &quot;@seedance/interactive-card-stack&quot;,
+&quot;description&quot;: &quot;Premium interactive card stack with drag physics and autoplay&quot;,
+&quot;dependencies&quot;: {
+&quot;framer-motion&quot;: &quot;^11.0.0&quot;,
+&quot;lucide-react&quot;: &quot;^0.454.0&quot;,
+&quot;clsx&quot;: &quot;^2.1.1&quot;,
+&quot;tailwind-merge&quot;: &quot;^2.5.4&quot;
+}
+}
+~~~
+
+~~~/src/Component.tsx
+/**
+* InteractiveCardStack Component
+* A premium, smooth, and interactive card stack with drag-to-back physics.
+* Supports random rotation, autoplay, and mobile interactions.
+*/
+
+import React, { useState, useEffect } from &#39;react&#39;;
+import { motion, useMotionValue, useTransform, AnimatePresence, type PanInfo } from &#39;framer-motion&#39;;
+
+interface CardRotateProps {
+children: React.ReactNode;
+onSendToBack: () =&gt; void;
+sensitivity: number;
+disableDrag?: boolean;
+}
+
+function CardRotate({ children, onSendToBack, sensitivity, disableDrag = false }: CardRotateProps) {
+const x = useMotionValue(0);
+const y = useMotionValue(0);
+const rotateX = useTransform(y, [-100, 100], [30, -30]);
+const rotateY = useTransform(x, [-100, 100], [-30, 30]);
+
+function handleDragEnd(_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) {
+if (Math.abs(info.offset.x) &gt; sensitivity || Math.abs(info.offset.y) &gt; sensitivity) {
+onSendToBack();
+} else {
+x.set(0);
+y.set(0);
+}
+}
+
+if (disableDrag) {
+return (
+&lt;motion.div className=&quot;absolute inset-0&quot; style={{ x: 0, y: 0 }}&gt;
+{children}
+&lt;/motion.div&gt;
+);
+}
+
+return (
+&lt;motion.div
+className=&quot;absolute inset-0 cursor-grab active:cursor-grabbing&quot;
+style={{ x, y, rotateX, rotateY }}
+drag
+dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
+dragElastic={0.6}
+onDragEnd={handleDragEnd}
+&gt;
+{children}
+&lt;/motion.div&gt;
+);
+}
+
+export interface InteractiveCardStackProps {
+/** Array of card contents */
+cards?: React.ReactNode[];
+/** Enable random rotation for each card */
+randomRotation?: boolean;
+/** Sensitivity for the drag-to-back action (pixels) */
+sensitivity?: number;
+/** Whether clicking a card sends it to the back */
+sendToBackOnClick?: boolean;
+/** Spring animation configuration */
+animationConfig?: { stiffness: number; damping: number };
+/** Enable automatic cycling of cards */
+autoplay?: boolean;
+/** Delay between cycles in milliseconds */
+autoplayDelay?: number;
+/** Pause autoplay when hovering */
+pauseOnHover?: boolean;
+/** Disable drag on mobile devices and only allow clicks */
+mobileClickOnly?: boolean;
+/** Viewport width breakpoint for mobile detection */
+mobileBreakpoint?: number;
+/** Custom class for the container */
+className?: string;
+}
+
+export function InteractiveCardStack({
+cards = [],
+randomRotation = false,
+sensitivity = 180,
+sendToBackOnClick = false,
+animationConfig = { stiffness: 260, damping: 20 },
+autoplay = false,
+autoplayDelay = 3000,
+pauseOnHover = true,
+mobileClickOnly = false,
+mobileBreakpoint = 768,
+className = &quot;&quot;
+}: InteractiveCardStackProps) {
+const [isMobile, setIsMobile] = useState(false);
+const [isPaused, setIsPaused] = useState(false);
+
+// Initialize stack with IDs to track items correctly
+const [stack, setStack] = useState&lt;{ id: string; content: React.ReactNode; randomRot: number }[]&gt;([]);
+
+useEffect(() =&gt; {
+const checkMobile = () =&gt; {
+setIsMobile(window.innerWidth &lt; mobileBreakpoint);
+};
+checkMobile();
+window.addEventListener(&#39;resize&#39;, checkMobile);
+return () =&gt; window.removeEventListener(&#39;resize&#39;, checkMobile);
+}, [mobileBreakpoint]);
+
+useEffect(() =&gt; {
+if (cards.length &gt; 0) {
+setStack(cards.map((content, index) =&gt; ({
+id: `card-${index}-${Date.now()}`, // Ensure unique IDs even if content is similar
+content,
+randomRot: randomRotation ? Math.random() * 10 - 5 : 0
+})));
+}
+}, [cards, randomRotation]);
+
+const sendToBack = (id: string) =&gt; {
+setStack(prev =&gt; {
+const index = prev.findIndex(card =&gt; card.id === id);
+if (index === -1) return prev;
+
+const newStack = [...prev];
+const [card] = newStack.splice(index, 1);
+
+// Update random rotation for the card when it goes to back
+const updatedCard = {
+...card,
+randomRot: randomRotation ? Math.random() * 10 - 5 : 0
+};
+
+newStack.unshift(updatedCard);
+return newStack;
+});
+};
+
+useEffect(() =&gt; {
+if (autoplay &amp;&amp; stack.length &gt; 1 &amp;&amp; !isPaused) {
+const interval = setInterval(() =&gt; {
+const topCardId = stack[stack.length - 1].id;
+sendToBack(topCardId);
+}, autoplayDelay);
+return () =&gt; clearInterval(interval);
+}
+}, [autoplay, autoplayDelay, stack, isPaused]);
+
+const shouldDisableDrag = mobileClickOnly &amp;&amp; isMobile;
+const shouldEnableClick = sendToBackOnClick || shouldDisableDrag;
+
+if (stack.length === 0) return null;
+
+return (
+&lt;div
+className={`relative w-full h-full ${className}`}
+style={{ perspective: 1000 }}
+onMouseEnter={() =&gt; pauseOnHover &amp;&amp; setIsPaused(true)}
+onMouseLeave={() =&gt; pauseOnHover &amp;&amp; setIsPaused(false)}
+&gt;
+&lt;AnimatePresence&gt;
+{stack.map((card, index) =&gt; {
+// index 0 is bottom, stack.length - 1 is top
+const isTop = index === stack.length - 1;
+const depth = stack.length - 1 - index;
+
+return (
+&lt;CardRotate
+key={card.id}
+onSendToBack={() =&gt; sendToBack(card.id)}
+sensitivity={sensitivity}
+disableDrag={!isTop || shouldDisableDrag}
+&gt;
+&lt;motion.div
+className=&quot;rounded-2xl overflow-hidden w-full h-full bg-card border border-border/50 shadow-sm&quot;
+onClick={() =&gt; isTop &amp;&amp; shouldEnableClick &amp;&amp; sendToBack(card.id)}
+style={{
+zIndex: index,
+}}
+animate={{
+rotateZ: depth * -2 + card.randomRot,
+scale: 1 - depth * 0.04,
+y: depth * -8,
+opacity: 1 - depth * 0.15,
+transformOrigin: &#39;center center&#39;
+}}
+transition={{
+type: &#39;spring&#39;,
+stiffness: animationConfig.stiffness,
+damping: animationConfig.damping
+}}
+&gt;
+{card.content}
+&lt;/motion.div&gt;
+&lt;/CardRotate&gt;
+);
+})}
+&lt;/AnimatePresence&gt;
+&lt;/div&gt;
+);
+}
+
+export default InteractiveCardStack;
+~~~
+
+Implementation Guidelines
+
+1. Analyze the component structure, styling, animation implementations
+2. Review the component&#39;s arguments and state
+3. Think through what is the best place to adopt this component/style into the design we are doing
+4. Then adopt the component/design to our current system
+
+Help me integrate this into my design</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：superdesigndev/superdesign-prompts<br>原始文件：<code>prompts/interactive-card-stack/README.md</code><br>许可证：CC0-1.0<br>作者：Jason Zhou<br><a href="https://github.com/superdesigndev/superdesign-prompts/blob/main/prompts/interactive-card-stack/README.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="animated-cards.html">Animated Cards<small>Components · carousel</small></a><a href="scroll-marquee.html">Scroll Marquee<small>Components · carousel</small></a><a href="flowmate-carousal.html">FlowMate Carousal<small>Components · carousel</small></a><a href="apex-program-accordion.html">Apex Program Accordion<small>Components · faq</small></a><a href="bento-grid-stats.html">Bento Grid Stats<small>Components · features</small></a><a href="glassmorphic-feature-tabs.html">Glassmorphic Feature Tabs<small>Components · features</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

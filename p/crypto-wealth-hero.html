@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crypto Wealth — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色全屏视频背景上叠加两层滚动联动内容，展示产品名称与核心功能图标，适合品牌首页首屏展示">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/crypto-wealth-hero.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Crypto Wealth — Hero Section 提示词">
+<meta property="og:description" content="深色全屏视频背景上叠加两层滚动联动内容，展示产品名称与核心功能图标，适合品牌首页首屏展示">
+<meta property="og:url" content="https://prompt-site.shop/p/crypto-wealth-hero.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Crypto Wealth","description":"深色全屏视频背景上叠加两层滚动联动内容，展示产品名称与核心功能图标，适合品牌首页首屏展示","url":"https://prompt-site.shop/p/crypto-wealth-hero.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-04-16T08:07:25.734296+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Crypto Wealth</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-04-16</span><span>正文：11,283 字符</span></div><div class="hero-media"><video src="../assets/previews/crypto-wealth-hero.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>深色全屏视频背景上叠加两层滚动联动内容，展示产品名称与核心功能图标，适合品牌首页首屏展示</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Recreation Prompt
+Build a React + TypeScript + Vite + Tailwind CSS landing page called &quot;ContentFlow&quot; with two scroll-linked fullscreen sections layered over a fixed video background. Use lucide-react for icons. Use the Inter font from Google Fonts (weights 300-900).
+
+Stack &amp; Setup
+Vite + React 18 + TypeScript
+Tailwind CSS with default config
+lucide-react for icons (Layers, Calendar, Lock, BarChart3, FileText)
+Load Inter font via Google Fonts preconnect in index.html; set * { font-family: &#39;Inter&#39;, sans-serif; }
+Page title: ContentFlow
+Global Layout (App.tsx)
+Root wrapper: &lt;div className=&quot;min-h-[200vh]&quot;&gt; (creates scroll room)
+Renders &lt;VideoBackground zoom={videoZoom} /&gt; then &lt;Navbar /&gt; then a &lt;div className=&quot;relative&quot; style={{ zIndex: 10 }}&gt; containing &lt;Hero&gt; and &lt;ShowcaseSection&gt;
+Uses a custom useScrollProgress() hook returning 0..1 where progress = min(scrollY / viewportHeight, 1) (updated via rAF on passive scroll listener)
+videoZoom = 1 + scrollProgress * 0.3
+Video Background (Section 1 — fixed behind everything)
+src/components/VideoBackground.tsx:
+
+Single fixed, full-viewport video background, pointer-events-none, zIndex: 0
+Video URL: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260417_061226_74f0749c-a22d-42b3-895e-5d6203bc741c.mp4
+autoPlay loop muted playsInline, object-cover, absolutely positioned to fill
+Outer wrapper fixed inset-0 overflow-hidden pointer-events-none
+Inner wrapper applies transform: scale(${zoom}) with transformOrigin: &#39;center center&#39; and will-change-transform
+Accepts zoom?: number prop, default 1
+Navbar (fixed, floating pill)
+src/components/Navbar.tsx:
+
+&lt;nav&gt; fixed top/left/right, z-50, centered via flex, pt-6 px-6
+Inner pill: flex items-center gap-4 md:gap-8 bg-white/70 backdrop-blur-sm border border-gray-200/80 rounded-full pl-4 pr-2.5 md:pl-5 md:pr-2.5 py-2.5 shadow-sm
+Left logo: inline SVG 28x28 viewBox 0 0 256 256, four rounded-corner &quot;petal&quot; shapes in black (path d=&quot;M 128 192 C 92.654 192 64 220.654 64 256 L 0 256 C 0 185.308 57.308 128 128 128 Z M 256 128 C 256 198.692 198.692 256 128 256 L 128 192 C 163.346 192 192 163.346 192 128 Z M 128 64 C 92.654 64 64 92.654 64 128 L 0 128 C 0 57.308 57.308 0 128 0 Z M 256 0 C 256 70.692 198.692 128 128 128 L 128 64 C 163.346 64 192 35.346 192 0 Z&quot;)
+Hidden-on-mobile links (hidden md:flex items-center gap-7): Features, Workflows, Resources, Pricing — text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-150
+&quot;Get started&quot; button: gradient-border-btn text-sm font-semibold text-gray-900 rounded-full px-5 py-2 hover:bg-gray-50 shadow-sm
+.gradient-border-btn CSS: white background with a masked ::before pseudo-element creating a 1.5px gradient border using linear-gradient(135deg, #F59E0B, #3B82F6) via -webkit-mask + mask-composite: exclude trick
+Hero Section (Section 1 content)
+src/components/Hero.tsx:
+
+Props: { scrollProgress: number }
+opacity = max(1 - scrollProgress * 2.5, 0)
+translateY = scrollProgress * -60 (pixels)
+Root &lt;section&gt;: relative flex flex-col items-center justify-start px-4 sm:px-6 pt-32 sm:pt-36 md:pt-40 text-center min-h-screen will-change-transform, inline style applies opacity, transform: translateY(...), zIndex: 10, pointerEvents: opacity &lt; 0.1 ? &#39;none&#39; : &#39;auto&#39;
+Heading &lt;h1&gt; with classes text-[2.25rem] sm:text-[3rem] md:text-[3.75rem] leading-none tracking-tighter font-medium text-gray-900 max-w-2xl:
+Line 1: A New Way wrapped in &lt;span className=&quot;text-zinc-400&quot;&gt;
+Line 2: to Manage Your
+Line 3: Content Flow
+Lines separated with &lt;br /&gt;
+Subcopy &lt;p className=&quot;mt-8 text-base text-gray-500 max-w-sm leading-relaxed&quot;&gt;: Take full control of your publishing workflow &lt;br /&gt; with our unified content management platform.
+Then renders &lt;PopupCard /&gt;
+PopupCard (animated card stack under hero)
+src/components/PopupCard.tsx:
+
+Container: flex flex-col items-center gap-3 mt-10 sm:mt-16 w-full px-4 sm:px-0
+Renders 4 cards, each with a staggered animation delay of i * 150ms
+Card layout: popup-card-animate flex items-center gap-3 sm:gap-4 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200/60 px-4 sm:px-6 py-3 sm:py-4 w-full max-w-[380px]
+Each card has: leading icon, middle text (text-xs sm:text-sm font-medium text-gray-700 flex-1 whitespace-nowrap), trailing 28x28 SVG spin ring (light gray full circle + gradient arc from 12 o&#39;clock to 3 o&#39;clock, strokeWidth=3, round cap; arc uses a per-card linearGradient from gradientFrom to gradientTo with coords x1=14 y1=3 x2=25 y2=14)
+The trailing SVG has class spin-ring that rotates 360deg every 1.4s linear infinite
+Cards:
+Icon: the same black 4-petal logo SVG (24x24); text Your All-in-One Content Studio; gradient #F59E0B → #3B82F6
+Icon: &lt;Layers className=&quot;w-6 h-6 text-emerald-600 flex-shrink-0&quot; /&gt;; text Multi-Channel Publishing Hub; gradient #10B981 → #06B6D4
+Icon: &lt;Lock className=&quot;w-6 h-6 text-blue-600 flex-shrink-0&quot; /&gt;; text Role-Based Access &amp; Approvals; gradient #3B82F6 → #0EA5E9
+Icon: &lt;BarChart3 className=&quot;w-6 h-6 text-amber-600 flex-shrink-0&quot; /&gt;; text Advanced Content Analytics; gradient #F59E0B → #EF4444
+Keyframes popup-card-in: 0% opacity:0; transform: translateY(16px) scale(0.96) → 100% opacity:1; transform: translateY(0) scale(1); applied via .popup-card-animate { opacity:0; animation: popup-card-in 0.6s cubic-bezier(0.16,1,0.3,1) forwards; } with per-card animation-delay
+Showcase Section (Section 2)
+src/components/ShowcaseSection.tsx:
+
+Props: { scrollProgress: number }
+Fade-in/scale-up mapping: fadeStart = 0.35, fadeEnd = 0.75; t = clamp((scrollProgress - fadeStart) / (fadeEnd - fadeStart), 0, 1); apply opacity = t and scale = 0.88 + t * 0.12
+Root &lt;section&gt;: relative min-h-screen flex items-center justify-center px-6 md:px-16 lg:px-24 will-change-transform, inline style opacity, transform: scale(...), transformOrigin: &#39;center top&#39;, zIndex: 20
+Inner card: relative w-full max-w-7xl mx-auto rounded-2xl sm:rounded-3xl overflow-hidden min-h-[480px] sm:min-h-[560px] md:min-h-[680px]
+Background video inside the card (absolute inset-0 w-full h-full object-cover, autoplay/loop/muted/playsInline):
+URL: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260415_154932_f36efd90-557d-4cfb-add6-79336918bd53.mp4
+Overlay: absolute inset-0 z-[1] bg-gradient-to-t from-black/90 via-black/50 to-transparent pointer-events-none
+Foreground grid (relative z-10 flex flex-col md:flex-row items-end md:items-stretch h-full min-h-[480px] sm:min-h-[560px] md:min-h-[680px]):
+Left half (flex flex-col justify-end p-4 sm:p-5 md:p-8 md:w-1/2):
+&lt;h2 className=&quot;text-2xl sm:text-3xl md:text-[2.75rem] font-medium text-gray-900 md:text-white md:leading-[1.15] leading-tight tracking-tighter&quot;&gt;Your Content Engine,&lt;br /&gt;Faster and Clearer&lt;/h2&gt;
+&lt;p className=&quot;mt-5 text-sm md:text-base text-gray-600 md:text-white/70 leading-relaxed max-w-md&quot;&gt;Get live performance data, editorial analytics, and the clarity you need to publish confidently every single time.&lt;/p&gt;
+Right half (flex items-end justify-end md:w-1/2 mt-auto origin-bottom-right scale-[0.75] sm:scale-[0.85] md:scale-100): renders &lt;Dashboard /&gt;
+Dashboard Card
+src/components/Dashboard.tsx:
+
+Container: dashboard-animate bg-white rounded-tl-2xl shadow-xl border border-gray-100 p-4 sm:p-6 md:p-8 w-full max-w-xl flex flex-col gap-4 sm:gap-6
+Animation .dashboard-animate: opacity:0; animation: slide-in-right 0.9s ease-out 1.2s forwards; keyframes go from opacity:0; translateX(40px) to opacity:1; translateX(0)
+Top row (flex flex-col sm:flex-row items-start sm:justify-between gap-3 sm:gap-0):
+
+Left: w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gray-100 containing &lt;FileText className=&quot;w-5 h-5 sm:w-6 sm:h-6 text-gray-600&quot; /&gt;, label Total Reach (text-xs sm:text-sm text-gray-400 font-medium), big value 498,098 (text-xl sm:text-3xl font-bold text-gray-900 tracking-tight) with trailing views in small gray
+Right: legend dots Published (black 2x2 dot) and In Draft (gray-300 dot), plus pill badge Monthly (text-xs font-medium text-gray-700 bg-gray-100 rounded-md px-2.5 py-1)
+Chart (AnimatedChart):
+
+SVG viewBox 0 0 400 180; weekly data points:
+Mon 18000, Tue 22000, Wed 19000, Thu 25000, Fri 21000, Sat 32000, Sun 28000
+padTop=10, padBottom=30, maxVal=40000; points distributed horizontally evenly
+smooth() builds a path using midpoint cubic Bézier control points to produce a smooth curve
+Gradient chartGrad: #1F2937 0.08 → #1F2937 0 vertically; used as area fill under the line
+Y-axis labels 0, 10k, 20k, 30k, 40k drawn as text-anchor=&quot;end&quot;, fill-gray-400, fontSize=9, Inter; horizontal dashed grid lines stroke=&quot;#E5E7EB&quot;, strokeWidth=0.5, strokeDasharray=&quot;4 3&quot;
+X-axis day labels at y = height - 8, fontSize=9; highlight index 5 (Sat) is fill-gray-900 font-semibold, others fill-gray-400
+Line stroke #1F2937, width 2, round caps
+Animations (via refs on mount):
+Line path: dasharray/dashoffset trick, transition: stroke-dashoffset 1.8s ease-out to 0
+Area: opacity 0 → 1 over 1s, starting at 800ms
+Highlight dot at Sat (r=5, white fill, #1F2937 stroke width 2, scale-in from 0 at 1600ms over 0.4s)
+Tooltip group (rect x=hx-48, y=hy-32, 96x22, rx=6, fill #1F2937; texts 32,104 white and +6,488 in #34D399, both fontSize=9): fade + translateY(4px→0) starting 1800ms over 0.4s
+Dashed vertical drop line from highlight point to baseline (stroke=&quot;#1F2937&quot;, strokeDasharray=&quot;3 2&quot;)
+Top Channels block:
+
+Heading Top Channels (text-sm font-semibold text-gray-700 mb-4)
+Three rows (flex items-center justify-between):
+BLG Blog Posts 12,461 +4.20% positive, color #F59E0B
+SOC Social Media 8,932 -1.05% negative, color #3B82F6
+NWS Newsletters 5,718 +2.87% positive, color #10B981
+Each row left: colored circular badge (8×8 sm:10×10, white bold letter = first char of symbol, backgroundColor: ch.color), symbol bold + full name in gray-400 (hidden on small)
+Each row right: price, change in text-emerald-500 (positive) or text-red-500 (negative), then a ProgressRing (40x40 svg) hidden on small
+ProgressRing: r=16, circ = 2πr, strokeDasharray=circ, strokeDashoffset=circ - (percent/100)*circ, base stroke #E5E7EB, foreground stroke color, strokeWidth=3, round caps, rotated -90° around center. Class progress-ring-fill runs @keyframes progress-fill { 0% { stroke-dashoffset: 88; } } for 1.2s ease-out starting at 2s, both
+Use 70% for positive, 30% for negative
+CSS Keyframes to include (src/index.css)
+spin-ring (0 → 360deg, 1.4s linear infinite)
+slide-in-right used by .dashboard-animate (opacity + translateX from 40px, 0.9s ease-out 1.2s forwards)
+progress-fill used by .progress-ring-fill (stroke-dashoffset from 88 to 0, 1.2s ease-out 2s both)
+popup-card-in used by .popup-card-animate (0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; per-card inline animation-delay)
+.gradient-border-btn with ::before masked 1.5px gradient border using linear-gradient(135deg, #F59E0B, #3B82F6) and -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+Scroll Behavior Summary
+Scrolling 0 → 100% of viewport height drives scrollProgress 0 → 1
+Hero fades out quickly (opacity = 1 - p*2.5) and drifts up (translateY = -60px * p)
+Background video zooms from 1x to 1.3x
+Showcase section fades/scales in between p=0.35 and p=0.75 (opacity 0→1, scale 0.88→1.0), transform-origin center top</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

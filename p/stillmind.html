@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stillmind — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="全屏电影级英雄区块，背景为四层循环视频渐变切换，搭配斜体衬线标志与极简导航，适用于冥想或专注类应用。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/stillmind.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Stillmind — Hero Section 提示词">
+<meta property="og:description" content="全屏电影级英雄区块，背景为四层循环视频渐变切换，搭配斜体衬线标志与极简导航，适用于冥想或专注类应用。">
+<meta property="og:url" content="https://prompt-site.shop/p/stillmind.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Stillmind","description":"全屏电影级英雄区块，背景为四层循环视频渐变切换，搭配斜体衬线标志与极简导航，适用于冥想或专注类应用。","url":"https://prompt-site.shop/p/stillmind.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-07-02T23:31:11.024944+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Stillmind</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-07-02</span><span>正文：5,977 字符</span></div><div class="hero-media"><video src="../assets/previews/stillmind.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>全屏电影级英雄区块，背景为四层循环视频渐变切换，搭配斜体衬线标志与极简导航，适用于冥想或专注类应用。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Create a fullscreen cinematic hero section for a mindfulness/focus app called &quot;Lumora&quot; using React, Tailwind CSS, and Lucide React icons.
+
+## Font
+
+Use **Instrument Serif** (Google Fonts, italic for the logo). Load it in index.html:
+```
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+```
+
+Set `font-family: &#39;Instrument Serif&#39;, serif` on html/body. Use `system-ui, sans-serif` inline for body text (subtext, buttons, stats, video labels).
+
+---
+
+## Background Video Layer
+
+Stack 4 fullscreen looping videos absolutely positioned. Only the active one has `opacity-100`; others have `opacity-0`. Transition opacity over 1000ms ease-in-out. Videos autoPlay, muted, loop, playsInline.
+
+**Video URLs (in order):**
+1. `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260702_081127_0992a171-d3c6-4978-8213-0ec5df8b6d63.mp4`
+2. `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260702_092026_dd05b805-ea0f-40b2-8c52-332b88502592.mp4`
+3. `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260702_081042_df7202bf-bd80-4b2b-bbc6-1f09ba2870e9.mp4`
+4. `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260702_080959_4cac5234-3573-464e-a5b7-76b94b8a7d61.mp4`
+
+**Labels:** Golden Hour, Still Water, Deep Woods, Quiet Dawn
+
+---
+
+## Transparent PNG Overlay (z-index 1)
+
+Place this image over the videos as an absolutely positioned overlay covering the full viewport:
+```
+https://soft-zoom-63098134.figma.site/_assets/v11/0b4a435b2df2747593c43d7a1c9b4578f7d8d90c.png
+```
+
+Apply a continuous &quot;train-bob&quot; animation: translateY oscillates between 0 and -6px over 3s ease-in-out infinite, with a constant scale(1.03) to prevent edges from showing during the motion.
+
+---
+
+## Liquid Glass Effect (CSS class `.liquid-glass`)
+
+```css
+.liquid-glass {
+background: rgba(255, 255, 255, 0.01);
+background-blend-mode: luminosity;
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border: none;
+box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+position: relative;
+overflow: hidden;
+}
+```
+
+With a `::before` pseudo-element for a subtle gradient border:
+```css
+.liquid-glass::before {
+content: &#39;&#39;;
+position: absolute;
+inset: 0;
+border-radius: inherit;
+padding: 1.4px;
+background: linear-gradient(180deg,
+rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+pointer-events: none;
+}
+```
+
+---
+
+## Content Layer (z-index 2) - Flex Column Full Height
+
+### Navigation (top)
+- Left: &quot;Lumora&quot; in white, italic, text-xl (sm:text-2xl)
+- Right (desktop md+): A `.liquid-glass` pill containing nav links (&quot;How It Works&quot;, &quot;Features&quot;, &quot;Pricing&quot;, &quot;Community&quot;) in white/90 text-sm with hover to white, plus a solid white &quot;Get Started&quot; button at the end
+- Right (mobile): A `.liquid-glass` rounded hamburger button using Lucide `Menu`/`X` icons with a crossfade rotation animation (300ms). The Menu icon rotates out 90deg and scales to 75%; the X icon rotates in from -90deg
+
+### Mobile Menu Overlay (fixed, z-50)
+- Backdrop: `bg-black/60 backdrop-blur-sm`
+- Centered fullscreen panel with staggered entrance (each link delays 50ms more: 100ms, 150ms, 200ms, 250ms, 300ms)
+- Links: white text-3xl, translate-y-4 to 0 on open
+- &quot;Get Started&quot; button at bottom with scale animation
+- Cubic-bezier easing: `cubic-bezier(0.4,0,0.2,1)`, duration 500ms
+
+### Hero Content (centered, below nav)
+- **Badge**: `.liquid-glass` rounded-full pill with text &quot;Over 10,000 minds already finding their clarity&quot;
+- **Heading**: &quot;Clarity in an Endlessly / Noisy Universe&quot; (line break after &quot;Endlessly&quot;). Sizes: text-4xl / sm:text-5xl / md:text-7xl / lg:text-[5.5rem], leading-[1.1], max-w-4xl
+- **Subtext**: &quot;Rise above the chaos of pings, infinite scrolling, and relentless demands. Discover how to protect your presence and create with intention.&quot; max-w-xl, leading-relaxed
+- **Email Input**: `.liquid-glass` rounded-full pill containing a text input (&quot;Your Best Email&quot;) and a solid white &quot;Get Early Access&quot; button. Max-width 320px on mobile, sm:max-w-sm
+- **Video Switcher**: Row of 4 text buttons with labels. Active button has solid color + bottom border. Inactive buttons are 50% opacity with transparent border, hover to 80%
+
+### Dark Mode for &quot;Deep Woods&quot; (3rd video, index 2)
+When the 3rd video is active, all hero content (badge, heading, subtext, input, video switcher) transitions to dark color `#182C41` with 700ms duration. The navbar and bottom stats remain white always.
+
+### Bottom Stats (pushed to bottom via flex-1 spacer)
+- Row of stats separated by `|` dividers (hidden on mobile): &quot;60+ Deep Sessions&quot;, &quot;12,000+ Creators&quot;, &quot;4.8 User Satisfaction&quot;, &quot;Intentional-First Design&quot;
+- text-white/70, text-xs sm:text-sm, system-ui font
+
+---
+
+## Video Switching Logic
+- Track `activeVideo` state (default 0) and `isTransitioning` boolean
+- On click, if not already active and not mid-transition, set new active video and start a 1000ms cooldown (matching the CSS crossfade duration)
+- During cooldown, ignore additional clicks
+
+---
+
+## Responsive Behavior
+- Mobile: Smaller text sizes, tighter padding, hamburger nav, stats wrap naturally
+- Tablet/Desktop: Larger heading, more padding, inline nav pill, stats with pipe separators
+
+---
+
+## Section Container
+```html
+&lt;section className=&quot;relative w-full h-screen overflow-hidden bg-black&quot;&gt;
+```
+
+Black background prevents flash before videos load. Everything is a single viewport-height section with no scroll.
+
+---
+
+That&#39;s the complete specification. The entire app lives in a single `App.tsx` component with the CSS in `index.css`.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a><a href="bio-age-dashboard.html">Bio-Age Dashboard<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

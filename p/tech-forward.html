@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tech-Forward — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="全屏黑色极简英雄页，背景为全幅视频，顶部固定导航栏，底部内容区带白色渐变上浮效果。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/tech-forward.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tech-Forward — Hero Section 提示词">
+<meta property="og:description" content="全屏黑色极简英雄页，背景为全幅视频，顶部固定导航栏，底部内容区带白色渐变上浮效果。">
+<meta property="og:url" content="https://prompt-site.shop/p/tech-forward.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Tech-Forward","description":"全屏黑色极简英雄页，背景为全幅视频，顶部固定导航栏，底部内容区带白色渐变上浮效果。","url":"https://prompt-site.shop/p/tech-forward.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-06-30T09:27:13.37214+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Tech-Forward</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-06-30</span><span>正文：3,386 字符</span></div><div class="hero-media"><video src="../assets/previews/tech-forward.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>全屏黑色极简英雄页，背景为全幅视频，顶部固定导航栏，底部内容区带白色渐变上浮效果。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Create a full-screen hero section landing page using React, Vite, and Framer Motion (`motion` package). Use plain CSS (no Tailwind). The font is Inter (weights 300, 400, 500, 600) from Google Fonts. The design is minimal black-and-white with a full-viewport background video.
+
+**Stack:** React 19, Vite, `motion` (framer-motion), `lucide-react` (for the Plus icon).
+
+**Layout:**
+- Full viewport height (`min-height: 100vh`), white background, flex column with `justify-content: space-between`
+- Fixed navbar at top (z-index 50, pointer-events none on the nav itself, auto on children)
+- Absolutely positioned full-screen video behind everything (z-index 0)
+- Footer content pinned to bottom (z-index 30) with a white gradient fade-up background
+
+**Navbar (fixed, top):**
+- Left side contains:
+1. Logo: custom SVG icon (two rotated rounded rectangles at -35deg, black fill) + brand text &quot;NeuralKinetics&quot; (hidden on mobile, shown on desktop 768px+)
+2. Menu button: black pill with white circle containing a Plus icon (lucide, size 12, strokeWidth 3) + &quot;Menu&quot; text (11px, white)
+3. Tags pill: light gray (#F4F4F6) rounded-full container with two text labels &quot;Advanced Bionics&quot; and &quot;Cognitive AI&quot; (hidden on mobile, shown on desktop)
+- Right side contains:
+- A light gray pill with a black circle button (containing a 4-dot grid SVG icon) + label &quot;Adaptive Systems&quot; (hidden on mobile)
+
+**Background Video:**
+- URL: `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260508_215831_c6a8989c-d716-4d8d-8745-e972a2eec711.mp4`
+- autoPlay, muted, playsInline, object-fit: cover
+- On mobile: video wrapper is 80% width and 80% height (centered)
+- On desktop (768px+): video wrapper is 100% width and 100% height
+
+**Footer content (bottom, over gradient):**
+- Background: `linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0.8) 50%, transparent 100%)`
+- On mobile: stacks vertically. On desktop: row layout, items aligned to bottom.
+- Left block:
+1. Subtitle line: small black dot (8px circle) + &quot;Best digital banking card 2026&quot; (13px, 55% opacity black)
+2. Heading: &quot;One Card, Zero / Limits. Worldwide.&quot; on two lines. Font-weight 300, clamp(2rem, 8vw, 4.5rem) on mobile, clamp(2.5rem, 5.5vw, 4.5rem) on desktop, letter-spacing -0.03em, line-height 1
+3. Two buttons: &quot;See Features&quot; (black pill, white text, 13px) and &quot;How It Works&quot; (transparent with dark border rgba(0,0,0,0.35), 13px)
+- Right block: Three tag pills &quot;Neuromorphic&quot;, &quot;AGI&quot;, &quot;Cybernetics&quot; (white bg, light border rgba(0,0,0,0.12), 11px, rounded-full)
+
+**Animations (using `motion` from &#39;motion/react&#39;):**
+- Navbar: slides down from y:-16, opacity 0 to visible. Duration 0.8s, ease [0.16, 1, 0.3, 1]
+- Video: fades in from opacity 0 + scale 1.05 to opacity 1 + scale 1. Duration 1.8s
+- Footer wrapper: slides up from y:20, delay 0.5s, duration 1s
+- Subtitle: slides up from y:16, delay 0.6s, duration 0.8s
+- Heading: slides up from y:20, delay 0.8s, duration 0.8s
+- Buttons: slides up from y:16, delay 1.0s, duration 0.8s
+- All use ease: [0.16, 1, 0.3, 1]
+
+**Responsive (mobile-first, breakpoint at 768px):**
+- Mobile: navbar padding 16px, smaller buttons (28px circles), brand text hidden, tags hidden, right label hidden, footer stacks vertically, video at 80% size
+- Desktop (768px+): navbar padding 24px 32px, larger buttons (32px circles), all text/tags visible, footer is row layout, video fills 100%</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a><a href="bio-age-dashboard.html">Bio-Age Dashboard<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

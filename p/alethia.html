@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alethia — 3D 提示词 | MotionSites Prompts</title>
+<meta name="description" content="Build a single, self-contained  index.html  file — one file, no build step, no frameworks, no external CSS/JS libraries. All CSS in one  &lt;style  in  &lt;">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/alethia.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Alethia — 3D 提示词">
+<meta property="og:description" content="Build a single, self-contained  index.html  file — one file, no build step, no frameworks, no external CSS/JS libraries. All CSS in one  &lt;style  in  &lt;">
+<meta property="og:url" content="https://prompt-site.shop/p/alethia.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/alethia.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Alethia","description":"Build a single, self-contained  index.html  file — one file, no build step, no frameworks, no external CSS/JS libraries. All CSS in one  <style  in  <","url":"https://prompt-site.shop/p/alethia.html","inLanguage":"zh-CN","genre":"3D","dateCreated":"2026-09-12T17:52:34.052Z","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-3d">3D</a></div><h1>Alethia</h1><div class="chip-row"><span class="chip">3D</span><span class="chip">3d</span><span class="chip">yilai-ai 公开页面</span></div><div class="facts"><span>收录时间：2026-09-12</span><span>正文：44,838 字符</span></div><div class="hero-media"><img src="../assets/previews/alethia.webp" alt="Alethia 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a single, self-contained `index.html` file — one file, no build step, no
+frameworks, no external CSS/JS libraries. All CSS in one `&lt;style&gt;` in `&lt;head&gt;`,
+all JS in one IIFE in a `&lt;script&gt;` before `&lt;/body&gt;`. Vanilla ES5-compatible JS.
+
+This is the hero + scroll-film landing page for &quot;alethia&quot;, an environmental
+intelligence company. Reproduce it EXACTLY to the values below. Every number is
+a real sampled value from the reference design — do not round, re-derive, or
+&quot;improve&quot; them.
+
+════════════════════════════════════════════════════════════════════════
+0 · DOCUMENT
+════════════════════════════════════════════════════════════════════════
+&lt;!DOCTYPE html&gt;, lang=&quot;en&quot;, charset utf-8.
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, viewport-fit=cover&quot;&gt;
+&lt;title&gt;alethia — Where Ecosystem Science and Enterprise Strategy Meet&lt;/title&gt;
+
+════════════════════════════════════════════════════════════════════════
+1 · ASSETS (exact URLs — do not substitute)
+════════════════════════════════════════════════════════════════════════
+SCROLL FILM (primary, re-encoded for scrubbing — keyframe every 4 frames,
+no B-frames, so any seek decodes at most 3 frames):
+https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/4f7f0dd1-e1eb-4b65-a4a4-0ed8c51f54d4.mp4
+
+FALLBACK / ORIGINAL (Seedance 2.0 render from Higgsfield, 1080p 24fps):
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260910_090837_cb58503a-4f5f-4e56-bc2f-6879b1f6ff9a.mp4
+
+Store these as JS vars FILM_SRC (first) and FILM_ORIGINAL (second).
+
+POSTER PLATE: `assets/hero-plate.webp` — frame 0 of the film, shown until the
+video is decoded. If you do not have it, generate it with:
+  ffmpeg -i &lt;FILM_SRC&gt; -vf &quot;select=eq(n\,0)&quot; -vframes 1 assets/hero-plate.webp
+
+FONTS — the reference used five local .woff2 subsets. Reproduce them with these
+equivalents (self-host as woff2 in /assets, or load from a CDN):
+  &#39;Inter&#39;       → Inter variable, weight range 200–700, opsz pinned 32   (hero display + body)
+  &#39;InterText&#39;   → Inter variable, full Latin, 200–700                    (scroll sections)
+  &#39;AlethiaMono&#39; → Roboto Mono, weight range 300–700                      (nav, buttons, HUD labels)
+  &#39;MonoText&#39;    → Roboto Mono, full Latin, 300–700                       (scroll sections)
+  &#39;AlethiaMark&#39; → Poppins SemiBold, 300–700                              (wordmark only)
+Use font-display:block for Inter/AlethiaMono/AlethiaMark, font-display:swap for
+InterText/MonoText.
+
+════════════════════════════════════════════════════════════════════════
+2 · DESIGN TOKENS — :root
+════════════════════════════════════════════════════════════════════════
+Colour:
+  --ink:#01030F;  --white:#ffffff;  --blue:#0071FF;
+  --hairline:rgba(255,255,255,.84);
+  --hud:rgba(255,255,255,.78);
+  --scroll:rgba(255,255,255,.88);
+
+Families:
+  --font-display:&#39;Inter&#39;,-apple-system,BlinkMacSystemFont,&#39;Helvetica Neue&#39;,Arial,sans-serif;
+  --font-mono:&#39;AlethiaMono&#39;,ui-monospace,&#39;Roboto Mono&#39;,monospace;
+  --font-mark:&#39;AlethiaMark&#39;,&#39;Inter&#39;,sans-serif;
+  --font-text:&#39;InterText&#39;,&#39;Inter&#39;,-apple-system,BlinkMacSystemFont,&#39;Helvetica Neue&#39;,Arial,sans-serif;
+  --font-mono-text:&#39;MonoText&#39;,ui-monospace,&#39;Roboto Mono&#39;,monospace;
+
+Weights — MUST be plain numbers, never calc(). Safari drops calc() in
+font-weight, which silently kills the declaration. Every value is a real
+variable-axis position, nothing browser-synthesised:
+  --w-display:500;      /* hero headline            */
+  --w-body:300;         /* body copy                */
+  --w-body-strong:430;  /* body lead-in             */
+  --w-caption:300;      /* small UI caption         */
+  --w-mono:500;         /* hero button + HUD labels */
+  --w-nav:450;          /* navbar links + navbar CTA*/
+  --w-mono-label:500;   /* HUD micro-labels         */
+  --w-mark:430;         /* wordmark                 */
+
+Sizes / rhythm:
+  --t-display:70px;   --lh-display:68.5px;  --tr-display:-.029em;
+  --t-body:23.2px;    --lh-body:26px;       --tr-body:0em;
+  --tr-body-strong:-.021em;
+  --t-nav:15px;       --tr-nav:0em;
+  --t-caption:14.2px; --lh-caption:19px;    --tr-caption:0em;
+  --t-label:13px;     --lh-label:13px;      --tr-label:.008em;
+  --t-micro:11.8px;   --lh-micro:13px;      --tr-micro:0em;
+  --ref-w:1280; --ref-h:720;
+
+
+var(--ink); body colour #fff, font-family var(--font-display), font-weight
+var(--w-body), -webkit-font-smoothing:antialiased,
+-moz-osx-font-smoothing:grayscale, font-synthesis:none, overflow-x:hidden,
+text-rendering:geometricPrecision. Grayscale AA is deliberate — the weights were
+calibrated against it so macOS/Windows/Linux render identically.
+Focus ring: `:focus-visible{outline:2px solid #4DA3FF;outline-offset:3px;border-radius:4px}`
+
+════════════════════════════════════════════════════════════════════════
+3 · ARCHITECTURE — scaled-stage viewport shell
+════════════════════════════════════════════════════════════════════════
+.frame  position:fixed; inset:0; width:100%; height:100dvh; overflow:hidden;
+        background var(--ink); isolation:isolate.
+.plate  position:absolute; inset:0; 100%/100%; object-fit:cover;
+        object-position:50% 50%; z-index:0; pointer-events:none; user-select:none.
+        Used by BOTH the &lt;img&gt; poster and the &lt;video&gt; film.
+.stage  position:absolute; left:0; top:0;
+        width:var(--sw,1280px); height:var(--sh,720px);
+        transform-origin:0 0; transform:scale(var(--s,1)); z-index:1.
+
+The stage is scaled so ONE axis lands exactly on the viewport and the other
+grows past 1280×720 — never smaller. Chrome anchors to the real viewport edges,
+the hero block to the top, the caption block to the bottom, the HUD to the
+artwork&#39;s centre. Result: identical proportions at every aspect ratio, and no
+empty band on any edge.
+
+.track  height:700vh — the scroll runway, a sibling AFTER .frame,
+        `&lt;div class=&quot;track&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;`.
+
+════════════════════════════════════════════════════════════════════════
+4 · DOM STRUCTURE (exact order)
+════════════════════════════════════════════════════════════════════════
+&lt;div class=&quot;frame&quot;&gt;
+  &lt;img class=&quot;plate&quot; src=&quot;assets/hero-plate.webp&quot; alt=&quot;&quot;&gt;
+  &lt;video class=&quot;plate film&quot; id=&quot;film&quot; muted playsinline preload=&quot;auto&quot;
+         disablepictureinpicture disableremoteplayback aria-hidden=&quot;true&quot; tabindex=&quot;-1&quot;&gt;&lt;/video&gt;
+  &lt;div class=&quot;veil veil-v&quot; id=&quot;veilV&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;veil veil-e&quot; id=&quot;veilE&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;scenes&quot;&gt;
+    &lt;section class=&quot;scene vision&quot; id=&quot;vision&quot; aria-labelledby=&quot;vision-h&quot;&gt; … &lt;/section&gt;
+    &lt;section class=&quot;scene eco&quot;    id=&quot;eco&quot;    aria-labelledby=&quot;eco-h&quot;&gt;    … &lt;/section&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;stage&quot; id=&quot;stage&quot;&gt;
+    &lt;div class=&quot;bar&quot;&gt;   brand + nav + navcta + burger &lt;/div&gt;
+    &lt;div class=&quot;body&quot;&gt;  h1.headline + a.cta &lt;/div&gt;
+    &lt;div class=&quot;hudgroup&quot;&gt; .pill + svg.hud + #ghost + #annot &lt;/div&gt;
+    &lt;div class=&quot;foot&quot;&gt;  p.sub + .scroll &lt;/div&gt;
+    &lt;nav class=&quot;mnav&quot; id=&quot;mnav&quot; aria-label=&quot;Mobile&quot;&gt; … &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;track&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;
+
+════════════════════════════════════════════════════════════════════════
+5 · HEADER — stage coordinates
+════════════════════════════════════════════════════════════════════════
+.mark  (logo SVG) position:absolute; left:35px; top:19.5px; 32×38; overflow:visible.
+       All path/circle/ellipse/line children: fill:none;
+       stroke:rgba(255,255,255,.88); stroke-width:1.15; stroke-linejoin:round;
+       vector-effect:non-scaling-stroke.
+       viewBox=&quot;0 0 32 38&quot;, children in this order:
+         &lt;path d=&quot;M15.6 .9 L30.1 10.6 V28.4 L15.6 37.1 L1.9 28.4 V10.6 Z&quot;/&gt;
+         &lt;path d=&quot;M15.6 3.6 L27.2 10.4 L15.6 17.2 L4 10.4 Z&quot;/&gt;
+         &lt;path d=&quot;M15.6 3.6 V17.2 M4 10.4 H27.2&quot;/&gt;
+         &lt;path d=&quot;M4 10.4 V24.4 M27.2 10.4 V24.4 M4 24.4 L15.6 31.2 L27.2 24.4&quot;/&gt;
+         &lt;path d=&quot;M15.6 .9 V3.6 M1.9 10.6 H4 M30.1 10.6 H27.2 M1.9 28.4 L4 24.4 M30.1 28.4 L27.2 24.4&quot;/&gt;
+         &lt;path d=&quot;M15.6 17.2 V37.1&quot;/&gt;
+         &lt;path d=&quot;M4 10.4 L26 27.4 M27.2 10.4 L5.2 27.4&quot;/&gt;
+         &lt;ellipse cx=&quot;15.75&quot; cy=&quot;22.8&quot; rx=&quot;7.6&quot; ry=&quot;3.9&quot;/&gt;
+         &lt;ellipse cx=&quot;15.75&quot; cy=&quot;23.8&quot; rx=&quot;3.2&quot; ry=&quot;4.6&quot;/&gt;
+         &lt;circle cx=&quot;15.75&quot; cy=&quot;22.8&quot; r=&quot;1.5&quot;/&gt;
+
+.wordmark  text &quot;alethia&quot;, position:absolute; left:75.5px; top:20px;
+           font-family var(--font-mark); font-weight var(--w-mark);
+           font-size:32px; line-height:37px; letter-spacing:-.016em; color:#fff.
+
+.nav  position:absolute; left:50%; margin-left:-197px; top:26px; height:24px;
+      display:flex; align-items:center; gap:21.7px. aria-label=&quot;Primary&quot;.
+      Links in order: SOLUTIONS▾, OUR TECH▾, COMPANY, RESOURCES▾ (all href=&quot;#&quot;).
+      COMPANY has NO chevron.
+      a: display:flex; align-items:center; gap:9px; font-family var(--font-mono);
+         font-weight var(--w-nav); font-size var(--t-nav); line-height:1;
+         letter-spacing var(--tr-nav); color:#fff; text-decoration:none;
+         white-space:nowrap; transition:color .25s ease.
+      a:hover, a:focus-visible → color:#8FC2FF.
+      .chev  10×6, flex:none, viewBox=&quot;0 0 10 6&quot;,
+             &lt;path d=&quot;M1 1 L5 5 L9 1&quot;/&gt;, fill:none; stroke:currentColor;
+             stroke-width:1.7; stroke-linecap:square.
+
+.navcta  &lt;a href=&quot;#contact&quot;&gt;, position:absolute; right:38px; top:26px;
+         height:24px; display:flex; align-items:center; gap:15px;
+         text-decoration:none.
+   .lbl  &quot;LET’S TALK&quot; (curly apostrophe &amp;rsquo;), font-family var(--font-mono);
+         font-weight var(--w-nav); font-size var(--t-nav); line-height:1;
+         color:#fff; white-space:nowrap; word-spacing:-5px.
+   .sq   24×24; border-radius:5.5px; background var(--blue);
+         display:grid; place-items:center; flex:none;
+         box-shadow:0 0 9px rgba(0,113,255,.28);
+         transition:transform .25s ease, box-shadow .25s ease.
+         svg 13×13 display:block, viewBox=&quot;0 0 13 13&quot;,
+         &lt;path d=&quot;M3.4 9.6 L9.6 3.4 M4.5 3.4 H9.6 V8.5&quot;/&gt;
+         fill:none; stroke:#fff; stroke-width:2; stroke-linecap:round; stroke-linejoin:round.
+   Hover (`.navcta:hover .sq, .cta:hover .sq`):
+         transform:translate(1px,-1px); box-shadow:0 0 20px rgba(0,113,255,.7).
+
+════════════════════════════════════════════════════════════════════════
+6 · HERO BODY
+════════════════════════════════════════════════════════════════════════
+h1.headline  position:absolute; left:40px;
+             top:calc(140px + (100% - 720px) * .22);
+             font-family var(--font-display); font-weight var(--w-display);
+             font-size var(--t-display); line-height var(--lh-display);
+             letter-spacing var(--tr-display); color:#fff; white-space:nowrap.
+   .headline i { font-style:normal; display:block; }
+   Markup — three masked lines, each i wrapping a span:
+     &lt;i&gt;&lt;span&gt;Where Ecosystem&lt;/span&gt;&lt;/i&gt;
+     &lt;i&gt;&lt;span&gt;Science and Enterprise&lt;/span&gt;&lt;/i&gt;
+     &lt;i&gt;&lt;span&gt;Strategy Meet&lt;/span&gt;&lt;/i&gt;
+   Cap-top of line 1 = 148; line tops 146 / 215 / 284; left origin 40.
+
+a.cta  href=&quot;#contact&quot;; position:absolute; left:40.5px;
+       top:calc(379.5px + (100% - 720px) * .22); width:157px; height:56px;
+       border:1px solid var(--hairline); border-radius:8px;
+       background:rgba(255,255,255,.02);
+       backdrop-filter:blur(6px) (+ -webkit- prefix);
+       text-decoration:none; display:block;
+       transition:background .3s ease, border-color .3s ease.
+   :hover → background:rgba(255,255,255,.07); border-color:#fff.
+   .cta .lbl  position:absolute; left:16.5px; top:50%;
+              transform:translateY(calc(-50% + 1.5px));
+              font-family var(--font-mono); font-weight var(--w-mono);
+              font-size var(--t-nav); line-height:1; color:#fff;
+              white-space:nowrap; word-spacing:-2px. Text &quot;LET’S TALK&quot;.
+   .cta .sq   position:absolute; left:116.5px; top:16.5px. Same .sq as navbar.
+
+════════════════════════════════════════════════════════════════════════
+7 · FOOTER — sub-copy + scroll cue
+════════════════════════════════════════════════════════════════════════
+p.sub  position:absolute; left:42px; top:auto; bottom:44px;
+       font-family var(--font-display); font-weight var(--w-body);
+       font-size var(--t-body); line-height var(--lh-body);
+       letter-spacing var(--tr-body); color:#fff.
+   .sub b { font-weight:var(--w-body-strong);
+            letter-spacing:var(--tr-body-strong); display:block; }
+   Exact content (note the em-dash and the two &lt;br&gt; positions):
+     &lt;b&gt;Know your impact&amp;mdash;precisely.&lt;/b&gt;End-to-end environmental
+     intelligence powered &lt;br&gt;by science, blockchain, and transparent data you
+     &lt;br&gt;can trust.
+
+.scroll  position:absolute; left:auto; right:49px; top:auto; bottom:36px;
+         display:flex; align-items:center; gap:7px.
+   .scroll .m  16×19; flex:none. Same viewBox=&quot;0 0 32 38&quot; logo geometry as
+               .mark (identical path list), but strokes are
+               fill:none; stroke:rgba(255,255,255,.8); stroke-width:2;
+               stroke-linejoin:round.
+   .scroll span  &quot;Scroll to discover&quot;; font-family var(--font-display);
+                 font-weight var(--w-caption); font-size var(--t-caption);
+                 line-height var(--lh-caption); letter-spacing var(--tr-caption);
+                 color var(--scroll); white-space:nowrap.
+
+════════════════════════════════════════════════════════════════════════
+8 · HUD OVERLAY (drawn in stage pixels)
+════════════════════════════════════════════════════════════════════════
+.hudgroup  position:absolute; inset:0; pointer-events:none.
+           Wraps the HUD so tablet can scale/anchor it as one unit and the
+           scroll fade can act on it.
+.hud  position:absolute; left:50%; top:50%; margin:-360px 0 0 -640px;
+      width:1280px; height:720px; pointer-events:none; overflow:visible;
+      viewBox=&quot;0 0 1280 720&quot;; aria-hidden=&quot;true&quot;.
+   Stroke classes:
+     .dash  fill:none; stroke:var(--hud); stroke-width:1; stroke-dasharray:1.6 2.8;
+     .solid fill:none; stroke:var(--hud); stroke-width:1;
+     .ring  fill:none; stroke:var(--hud); stroke-width:1.4;
+     .dot   fill:var(--hud);
+     .plus  fill:none; stroke:#fff; stroke-width:2.4; stroke-linecap:butt;
+     .arrow fill:none; stroke:var(--hud); stroke-width:1.4;
+            stroke-linecap:round; stroke-linejoin:round;
+   &lt;defs&gt;&lt;filter id=&quot;glow&quot; x=&quot;-120%&quot; y=&quot;-120%&quot; width=&quot;340%&quot; height=&quot;340%&quot;&gt;
+           &lt;feGaussianBlur stdDeviation=&quot;2.2&quot;/&gt;&lt;/filter&gt;&lt;/defs&gt;
+   &lt;g class=&quot;h-axes&quot;&gt;
+     &lt;path class=&quot;dash&quot;  d=&quot;M762.5 374 V452&quot;/&gt;
+     &lt;path class=&quot;dash&quot;  d=&quot;M731 406.5 H857&quot;/&gt;
+     &lt;path class=&quot;dash&quot;  d=&quot;M731 391.5 H753&quot;/&gt;
+     &lt;path class=&quot;dash&quot;  d=&quot;M731 396.5 H751&quot;/&gt;
+     &lt;path class=&quot;solid&quot; d=&quot;M731 388.5 V395 M736 390 V394 M741 390 V394 M746 390 V394&quot;/&gt;
+     &lt;path class=&quot;solid&quot; d=&quot;M731 402.5 H745&quot;/&gt;
+   &lt;/g&gt;
+   &lt;g class=&quot;h-node&quot;&gt;
+     &lt;circle cx=&quot;762.5&quot; cy=&quot;406.5&quot; r=&quot;7.6&quot; fill=&quot;rgba(0,113,255,.5)&quot; filter=&quot;url(#glow)&quot;/&gt;
+     &lt;circle cx=&quot;762.5&quot; cy=&quot;406.5&quot; r=&quot;5.6&quot; fill=&quot;#0071FF&quot;/&gt;
+     &lt;circle cx=&quot;762.5&quot; cy=&quot;406.5&quot; r=&quot;2&quot;   fill=&quot;#EAF3FF&quot;/&gt;
+   &lt;/g&gt;
+   &lt;g class=&quot;h-marks&quot;&gt;
+     &lt;circle  class=&quot;ring&quot; cx=&quot;800&quot; cy=&quot;393.5&quot; r=&quot;5.4&quot;/&gt;
+     &lt;circle  class=&quot;dot&quot;  cx=&quot;800&quot; cy=&quot;394.6&quot; r=&quot;1.9&quot;/&gt;
+     &lt;ellipse class=&quot;ring&quot; cx=&quot;814&quot; cy=&quot;393.5&quot; rx=&quot;7&quot; ry=&quot;5.4&quot;/&gt;
+     &lt;circle  class=&quot;dot&quot;  cx=&quot;814&quot; cy=&quot;393.5&quot; r=&quot;2.2&quot;/&gt;
+     &lt;path    class=&quot;ring&quot; d=&quot;M826.4 398.6 a5.4 5.4 0 1 1 9.2 0&quot;/&gt;
+     &lt;circle  class=&quot;ring&quot; cx=&quot;831&quot; cy=&quot;393.8&quot; r=&quot;5.4&quot;/&gt;
+     &lt;path    class=&quot;dot&quot;  d=&quot;M831 390.6 l2.6 4.4 h-5.2 Z&quot;/&gt;
+     &lt;path    class=&quot;arrow&quot; d=&quot;M757.5 452 L762.5 460.5 L767.5 452 M762.5 452 V461&quot;/&gt;
+     &lt;path    class=&quot;plus&quot;  d=&quot;M750.5 456.5 V472.5 M742.5 464.5 H758.5&quot;/&gt;
+   &lt;/g&gt;
+
+.pill  position:absolute; left:50%; margin-left:90px; top:50%; margin-top:-10px;
+       width:71px; height:23px; border-radius:5px; background var(--blue);
+       box-shadow:0 0 12px rgba(0,113,255,.30); display:grid; place-items:center.
+   .pill span  &quot;IMPACT&quot;; font-family var(--font-mono);
+               font-weight var(--w-mono-label); font-size var(--t-label);
+               line-height:1; letter-spacing var(--tr-label); color:#fff;
+               transform:translateX(.3px).
+
+.annot  id=&quot;annot&quot;; position:absolute; left:50%; margin-left:255px;
+        top:50%; margin-top:24px; font-family var(--font-mono);
+        font-weight var(--w-mono-label); font-size var(--t-micro);
+        line-height var(--lh-micro); letter-spacing var(--tr-micro);
+        color:rgba(255,255,255,.95); white-space:pre.
+        Markup: &lt;span class=&quot;l1&quot;&gt;EVIDENCE&lt;/span&gt;&lt;span&gt;FOR DECISIONS&lt;/span&gt;
+        .annot .l1 { display:block; padding-left:3px; }
+
+.ghost  id=&quot;ghost&quot;; same typography as .annot but
+        left:50%; margin-left:228px; top:50%; margin-top:24px;
+        color:rgba(255,255,255,.5); white-space:pre; opacity:0.
+        Markup: EO&lt;span style=&quot;display:block&quot;&gt;FOR&lt;/span&gt;
+
+════════════════════════════════════════════════════════════════════════
+9 · SCROLL FILM LAYERS
+════════════════════════════════════════════════════════════════════════
+.film  opacity:0; transition:opacity .9s ease; background:var(--ink).
+.film.on  opacity:1.
+.veil  position:absolute; inset:0; z-index:0; pointer-events:none; opacity:0.
+.veil-v  background:radial-gradient(ellipse 36% 34% at 50% 52%,
+           rgba(1,3,15,.58) 0%, rgba(1,3,15,.22) 55%, rgba(1,3,15,0) 78%);
+.veil-e  background:
+           linear-gradient(180deg,rgba(1,3,15,.82) 0%,rgba(1,3,15,.42) 24%,rgba(1,3,15,0) 44%),
+           linear-gradient(0deg, rgba(1,3,15,.5) 0%,rgba(1,3,15,0) 26%);
+
+Hero → film handoff:
+  .body,.foot,.hudgroup { opacity:var(--ho,1); }
+  .headline,.cta,.sub,.scroll,.hudgroup { translate:0 var(--hy,0px); }
+  .bar { opacity:var(--bo,1); }
+  .frame[data-hero=&quot;off&quot;] .body,
+  .frame[data-hero=&quot;off&quot;] .foot,
+  .frame[data-hero=&quot;off&quot;] .hudgroup { visibility:hidden; }
+  .frame[data-bar=&quot;off&quot;] .bar { visibility:hidden; }
+
+.scenes  position:absolute; inset:0; z-index:1; pointer-events:none.
+.scene   position:absolute; inset:0; opacity:0; visibility:hidden.
+.scene.live  visibility:visible.
+
+── 02 · OUR VISION ──
+.vision  display:flex; flex-direction:column; align-items:center;
+         justify-content:center; text-align:center; padding:0 24px;
+         will-change:opacity,transform.
+.tag  &quot;OUR VISION&quot;; display:inline-block; font-family var(--font-mono-text);
+      font-weight:500; font-size:max(10px,calc(9px * var(--k,1)));
+      line-height:1; letter-spacing:.02em; padding:.46em .56em .4em;
+      border-radius:3px; background var(--blue); color:#fff;
+      box-shadow:0 0 12px rgba(0,113,255,.38); will-change:opacity,transform.
+.vision h2  margin-top:max(16px,calc(20px * var(--k,1)));
+      font-family var(--font-text); font-weight var(--w-display);
+      font-size:max(30px,calc(40px * var(--k,1))); line-height:.95;
+      letter-spacing:-.034em; color:#fff.
+   h2 i    display:block; font-style:normal; overflow:hidden;
+           padding:.08em 0 .12em; margin:-.08em 0 -.12em;
+   h2 i span  display:block; transform:translate3d(0,110%,0); will-change:transform;
+   Markup: &lt;i&gt;&lt;span&gt;From Data Chaos to&lt;/span&gt;&lt;/i&gt;&lt;i&gt;&lt;span&gt;Science-Backed,&lt;/span&gt;&lt;/i&gt;&lt;i&gt;&lt;span&gt;Actionable Insights&lt;/span&gt;&lt;/i&gt;
+.vision p  margin-top:max(16px,calc(22px * var(--k,1)));
+      font-family var(--font-text); font-weight:400;
+      font-size:max(14px,calc(14.5px * var(--k,1))); line-height:1.16;
+      letter-spacing:-.012em; color:rgba(255,255,255,.94);
+      will-change:opacity,transform.
+   Text: A Breakthrough In Environmental Measurement. &lt;br&gt;Built for Commercial Use.
+
+── 03 · ECOSYSTEM ──
+.eco-top  position:absolute; left:0; right:0; top:calc(104px * var(--k,1));
+          will-change:opacity,transform.
+.eco-label  position:absolute; left:max(18px,calc(16px * var(--k,1)));
+          top:calc(5px * var(--k,1)); font-family var(--font-mono-text);
+          font-weight:500; font-size:max(9.5px,calc(7.8px * var(--k,1)));
+          line-height:1.1; letter-spacing:.01em; color:rgba(255,255,255,.6).
+          Text: REAL-TIME,&lt;br&gt;BLOCKCHAIN-BACKED&lt;br&gt;CARBON INTELLIGENCE
+.eco h2  margin:0 3% 0 34.75%; max-width:27.5em;
+          font-family var(--font-text); font-weight var(--w-display);
+          font-size:max(20px,calc(27px * var(--k,1))); line-height:.93;
+          letter-spacing:-.03em; color:rgba(255,255,255,.94).
+   Text: Our Ecosystem-Level Accounting Solutions translate complex scientific
+   data into verifiable, compliance-ready metrics&amp;mdash;so you can drive
+   measurable results, not just reports.
+
+.spots  id=&quot;spots&quot;; position:absolute; left:0; top:0; width:100%; height:100%.
+        JS sizes this to the film&#39;s object-fit:cover box so each pin stays glued
+        to the same spot in the artwork at any aspect ratio.
+.spot   --d:max(20px,calc(23px * var(--k,1)));
+        position:absolute; left:var(--x); top:var(--y);
+        display:flex; align-items:center; gap:max(8px,calc(9px * var(--k,1)));
+        translate:calc(var(--d) / -2) -50%; opacity:0;
+        will-change:opacity,transform.
+   Four spots, inline custom props (desktop --x/--y, flow-mode --mx/--my):
+     1: --x:31.1%;  --y:50.5%; --mx:8%;  --my:57%
+     2: --x:76.45%; --y:50.5%; --mx:54%; --my:65%
+     3: --x:5.5%;   --y:73.3%; --mx:10%; --my:76%
+     4: --x:61.65%; --y:80.1%; --mx:50%; --my:87%
+   Each spot: &lt;span class=&quot;pin&quot;&gt;…svg…&lt;/span&gt;&lt;span class=&quot;cap&quot;&gt;CO&lt;sub&gt;2&lt;/sub&gt;
+   EMISSIONS&lt;br&gt;REACH RECORD HIGH&lt;br&gt;IN 2024&lt;/span&gt;  (same caption on all four)
+.pin  position:relative; width:var(--d); height:var(--d); flex:none;
+      border-radius:50%; background var(--blue); display:grid;
+      place-items:center; box-shadow:0 0 14px rgba(0,113,255,.55).
+   .pin svg  62%/62%; display:block; viewBox=&quot;0 0 16 16&quot;;
+             five white circles r=&quot;1.4&quot; at (8,3.4) (3.4,8) (8,8) (12.6,8) (8,12.6);
+             .pin circle{fill:#fff}
+   .pin::before  content:&#39;&#39;; position:absolute; inset:0; border-radius:50%;
+                 border:1px solid rgba(77,163,255,.9);
+                 animation:pulse 2.4s cubic-bezier(.2,.7,.3,1) infinite paused;
+   .eco.live .pin::before { animation-play-state:running; }
+   Delays: .spot:nth-child(2) -.6s, (3) -1.2s, (4) -1.8s.
+   @keyframes pulse{from{transform:scale(1);opacity:.85}to{transform:scale(2.1);opacity:0}}
+.cap  font-family var(--font-mono-text); font-weight:600;
+      font-size:max(8.5px,calc(7.4px * var(--k,1))); line-height:1.12;
+      letter-spacing:.01em; color:#fff; white-space:nowrap;
+      text-shadow:0 0 10px rgba(1,3,15,.6).
+   .cap sub { font-size:.72em; vertical-align:-.12em; line-height:0; }
+
+════════════════════════════════════════════════════════════════════════
+10 · ENTRANCE ANIMATION — one timeline, ~1.8s, runs once, then fully static
+════════════════════════════════════════════════════════════════════════
+Wrap everything in @media (prefers-reduced-motion:no-preference) and gate every
+selector on `html:not(.motion-done)` so JS can delete the whole timeline.
+
+The artwork never moves, so the entrance is carried entirely by the foreground
+and led by the message. Lines are staggered so only one line is ever mid-uncover
+— a masked reveal reads as broken text if every line is half-cut at once.
+
+A — masked line uncover (leads the sequence):
+  .headline → display:flex; flex-direction:column
+  .headline i → overflow:hidden; padding:.2em 0 .28em; margin:-.2em 0 -.28em
+  .headline i span → display:block; transform:translateY(130%);
+                     animation:e-line .66s cubic-bezier(.19,1,.22,1) forwards
+  delays: i:nth-child(1) .18s · (2) .34s · (3) .50s
+B — the frame settles in from the edge it is anchored to (three groups, not
+    eight nodes): .brand, .nav, .navcta, .burger →
+    opacity:0; animation:e-frame .5s cubic-bezier(.22,.8,.2,1) forwards
+    delays: .brand .06s · .nav .14s · .navcta and .burger .22s
+C — action, then context:
+  .cta    opacity:0; animation:e-act  .55s cubic-bezier(.22,.8,.2,1) .74s forwards
+  .sub    opacity:0; animation:e-lift .6s  cubic-bezier(.22,.8,.2,1) .86s forwards
+  .scroll opacity:0; animation:e-fade .45s ease-out 1.24s forwards
+D — the instrument acquires: lock, extend, populate, label, read:
+  .h-node opacity:0; transform-box:fill-box; transform-origin:center;
+          animation:e-lock   .45s cubic-bezier(.19,1,.22,1) .98s forwards
+  .h-axes opacity:0; animation:e-fade   .5s  ease-out 1.08s forwards
+  .h-marks opacity:0; animation:e-fade  .5s  ease-out 1.18s forwards
+  .pill   opacity:0; animation:e-settle .45s cubic-bezier(.22,.8,.2,1) 1.20s forwards
+  .annot  opacity:0; animation:e-fade   .4s  ease-out 1.32s forwards
+
+@keyframes e-line  {to{transform:none}}
+@keyframes e-frame {from{opacity:0;transform:translateY(-6px)} to{opacity:1;transform:none}}
+@keyframes e-lift  {from{opacity:0;transform:translateY(8px)}  to{opacity:1;transform:none}}
+@keyframes e-act   {from{opacity:0;transform:translateY(8px) scale(.99)} to{opacity:1;transform:none}}
+@keyframes e-fade  {to{opacity:1}}
+@keyframes e-lock  {from{opacity:0;transform:scale(.35)} to{opacity:1;transform:none}}
+@keyframes e-settle{from{opacity:0;transform:scale(.92)} to{opacity:1;transform:none}}
+
+════════════════════════════════════════════════════════════════════════
+11 · RESPONSIVE — four breakpoints, derived from the design not from devices
+════════════════════════════════════════════════════════════════════════
+──────── 11a · FLOW MODE (tablet + phone) ────────
+@media (max-width:1000px),(max-aspect-ratio:12/10) and (max-width:1200px)
+
+The scaled-stage architecture stays legible down to 1000px (nav 11.7px, body
+18.1px, HUD labels 9.2px) and first breaks at ~960px, so 1000px is where the
+architecture changes. The aspect clause is bounded to 1200px so a tall-but-wide
+desktop window keeps the desktop architecture.
+
+.stage → position:absolute; left:0; top:0; transform:none; width:100%; height:100%;
+         display:flex; flex-direction:column;
+         padding:max(18px,env(safe-area-inset-top)) 22px max(18px,env(safe-area-inset-bottom));
+         --fs:clamp(26px,min(9.6vw,7.6vh),64px); --hud-s:.62;
+.frame::after → content:&#39;&#39;; position:absolute; inset:0; z-index:0;
+  pointer-events:none; background:
+    linear-gradient(180deg,rgba(1,3,15,.86) 0%,rgba(1,3,15,.30) 26%,rgba(1,3,15,0) 44%),
+    linear-gradient(0deg, rgba(1,3,15,.92) 0%,rgba(1,3,15,.55) 26%,rgba(1,3,15,0) 52%);
+.plate → object-position:58% 46%;
+.mark,.wordmark,.nav,.navcta,.headline,.cta,.sub,.scroll →
+  position:static; left/top/right/bottom:auto; margin:0; transform:none;
+.nav,.navcta → display:none  (links AND nav CTA move into the menu; logo stays)
+.hudgroup → display:block; position:absolute; z-index:2; pointer-events:none;
+  left:50%; top:62%; width:1280px; height:720px; margin:-360px 0 0 -640px;
+  transform:scale(var(--hud-s)); transform-origin:50% 50%;  (HUD travels as one unit)
+.bar → display:flex; align-items:center; justify-content:space-between;
+       flex:none; position:relative; z-index:6;
+.brand → display:flex; align-items:center; gap:9px;
+.mark → 28×33;  .wordmark → font-size:27px; line-height:1;
+.sq → 21×21; border-radius:5px;  .sq svg → 11×11;
+.body → flex:1 1 auto; display:flex; flex-direction:column; justify-content:center;
+        gap:clamp(16px,3.4vh,30px); min-height:0;
+.headline → font-size:var(--fs); line-height:.985; white-space:normal; max-width:15ch;
+.headline i → display:inline;   .headline i+i::before → content:&#39; &#39;;
+.sub br → display:none;   .sub b → margin-bottom:.18em;
+.cta → width:clamp(146px,42vw,170px); height:clamp(46px,6.4vh,54px);
+       position:relative; flex:none;
+.cta .lbl → left:clamp(13px,3.6vw,17px); font-size:clamp(12px,3.3vw,15px);
+.cta .sq → position:absolute; left:auto; right:clamp(12px,3.4vw,16px);
+           top:50%; transform:translateY(-50%);
+.foot → flex:none; display:flex; flex-direction:column; gap:clamp(12px,2.4vh,20px);
+.sub → font-size:clamp(14px,3.9vw,18px); line-height:1.34; max-width:34ch;
+.scroll → align-self:flex-end;  .scroll .m → 14×17;  .scroll span → 12px;
+
+BURGER — same treatment as the hero CTA (1px hairline, 8px radius, glass fill),
+sized so the three bars read as one mark rather than separate dashes:
+.burger → --bar-w:16px; --bar-h:1.5px; --bar-gap:4px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:var(--bar-gap); width:36px; height:36px; flex:none; padding:0;
+  background:rgba(255,255,255,.02); border:1px solid var(--hairline);
+  border-radius:8px; backdrop-filter:blur(6px); cursor:pointer;
+  transition:background .3s ease,border-color .3s ease;
+  :hover → background:rgba(255,255,255,.07); border-color:#fff;
+.burger i → display:block; width:var(--bar-w); height:var(--bar-h); background:#fff;
+  transition:transform .38s cubic-bezier(.22,.8,.2,1), opacity .2s ease;
+Bars fold into a close mark while the panel is open:
+  [aria-expanded=&quot;true&quot;] i:nth-child(1) → translateY(calc(var(--bar-gap) + var(--bar-h))) rotate(45deg)
+  [aria-expanded=&quot;true&quot;] i:nth-child(2) → opacity:0; transform:scaleX(.3)
+  [aria-expanded=&quot;true&quot;] i:nth-child(3) → translateY(calc(-1 * (var(--bar-gap) + var(--bar-h)))) rotate(-45deg)
+.mnav → display:flex; flex-direction:column; gap:2px;
+  position:absolute; left:0; right:0; top:0; z-index:5; padding:76px 22px 26px;
+  background:rgba(2,5,20,.92);
+  backdrop-filter:blur(26px) saturate(140%);
+  border-bottom:1px solid rgba(255,255,255,.12);
+  transform:translateY(-102%); transition:transform .42s cubic-bezier(.22,.8,.2,1);
+.mnav.open → transform:translateY(0); box-shadow:0 0 0 100vmax rgba(1,3,15,.82);
+.mnav:not(.open) → pointer-events:none;
+.mnav a:not(.mnav-cta) → padding:13px 0; border-bottom:1px solid rgba(255,255,255,.08);
+.mnav a:not(.mnav-cta):last-of-type → border-bottom:0;
+.mnav-cta → display:inline-flex; align-items:center; justify-content:space-between;
+  gap:20px; width:max-content; min-width:200px; height:52px; margin-top:20px;
+  padding:0 15px 0 17px; border:1px solid var(--hairline); border-radius:8px;
+  background:rgba(255,255,255,.02); backdrop-filter:blur(6px);
+  transition:background .3s ease,border-color .3s ease;
+  :hover → background:rgba(255,255,255,.07); border-color:#fff;
+.mnav-cta .lbl → var(--font-mono)/var(--w-nav)/var(--t-nav); line-height:1;
+                 color:#fff; word-spacing:-5px;
+.mnav-cta .sq → 24×24; border-radius:5.5px;  svg 13×13.
+
+Outside flow mode: `.burger{display:none} .mnav{display:none}` — but keep
+.mnav a&#39;s typography at top level (var(--font-mono), var(--w-nav), 14px,
+line-height:1, var(--tr-nav), #fff, no underline) so it comes from the same
+tokens as the desktop nav.
+
+Scroll sections in flow mode (same media query):
+  .vision h2 → clamp(30px,8.6vw,48px);
+  .vision p  → clamp(14px,3.8vw,17px); max-width:26ch;  .vision p br → display:none;
+  .eco-top → top:max(104px,calc(env(safe-area-inset-top) + 88px)); padding:0 22px;
+             display:flex; flex-direction:column; gap:14px;
+  .eco-label → position:static;
+  .eco h2 → margin:0; max-width:22em; font-size:clamp(21px,5.6vw,32px); line-height:1.02;
+  .spot → left:var(--mx); top:var(--my);
+  .veil-e → linear-gradient(180deg,rgba(1,3,15,.9) 0%,rgba(1,3,15,.6) 30%,rgba(1,3,15,0) 56%),
+            linear-gradient(0deg,rgba(1,3,15,.5) 0%,rgba(1,3,15,0) 26%);
+
+──────── 11b · TABLET — 520px and up inside flow mode ────────
+@media (min-width:520px) and (max-width:1000px),
+       (min-width:520px) and (max-aspect-ratio:12/10) and (max-width:1200px)
+Keeps the desktop composition&#39;s DNA: headline block high-left, artwork with its
+HUD in the middle band, caption and scroll cue sharing the bottom band as a row.
+
+.stage → padding:max(30px,env(safe-area-inset-top)) clamp(34px,4.6vw,60px)
+                 max(30px,env(safe-area-inset-bottom)); --hud-s:.72;
+.plate → object-position:56% 48%;
+.frame::after → softer scrim (a tablet has room, so the artwork stays visible):
+  linear-gradient(180deg,rgba(1,3,15,.72) 0%,rgba(1,3,15,.20) 24%,rgba(1,3,15,0) 42%),
+  linear-gradient(0deg, rgba(1,3,15,.88) 0%,rgba(1,3,15,.42) 24%,rgba(1,3,15,0) 48%);
+.mark → 34×40;  .wordmark → 33px;
+.burger → --bar-w:19px; --bar-gap:4.5px; width:44px; height:44px;
+.body → justify-content:flex-start; padding-top:clamp(24px,7vh,86px);
+        gap:clamp(26px,4vh,40px);
+.headline → max-width:none; font-size:clamp(40px,8.4vw,74px); line-height:1;
+.headline i → display:block;  .headline i+i::before → content:none;
+        (headline keeps its designed three-line break instead of rewrapping)
+.cta → 172×56;  .cta .lbl → left:16.5px; font-size:var(--t-nav);
+.cta .sq → right:16px; 24×24; border-radius:5.5px;  svg 13×13;
+.foot → flex-direction:row; align-items:flex-end; justify-content:space-between;
+        gap:clamp(24px,4vw,56px);   (bottom band mirrors desktop)
+.sub → font-size:clamp(17px,2.1vw,21px); line-height:1.28; max-width:31ch;
+.sub br → display:none;
+.scroll → align-self:flex-end; flex:none;  .m → 16×19;  span → 14px;
+.mnav → padding:104px clamp(34px,4.6vw,60px) 40px;
+.mnav a:not(.mnav-cta) → padding:17px 0; font-size:16px;
+.mnav-cta → min-width:224px; height:56px; padding:0 16px 0 18px; margin-top:28px;
+.eco-top → padding:0 clamp(34px,4.6vw,60px);
+           top:max(136px,calc(env(safe-area-inset-top) + 122px));
+
+──────── 11c · MOBILE — below 520px ────────
+@media (max-width:519px)
+Chosen from where the tablet architecture actually fails: the HUD label starts
+clipping at ~510px, the caption drops to five lines by 460px, and the headline
+loses its three-line structure at 430px. Above 520px the tablet architecture
+holds. The HUD is re-architected rather than deleted — the crosshair stays as a
+scaled overlay on the artwork, and the IMPACT pill keeps its EVIDENCE FOR
+DECISIONS partner as a caption eyebrow, so no content is lost at any width.
+
+.stage → padding:max(16px,env(safe-area-inset-top)) 22px max(16px,env(safe-area-inset-bottom));
+.headline → max-width:none; line-height:1.02;
+            font-size:clamp(25px,calc((100vw - 44px) / 9.78),44px);
+            (size derived from the longest line, 9.59em, so &quot;Science and
+             Enterprise&quot; never wraps and the three designed lines survive)
+.headline i → display:block;  .headline i+i::before → content:none;
+.hudgroup → display:flex; align-items:center; flex-wrap:wrap; gap:9px;
+            position:static; width:auto; height:auto;
+            margin:0 0 clamp(10px,1.6vh,16px); transform:none;
+            pointer-events:auto; flex:none;
+.hud → --hs:.58; display:block; position:absolute; left:50%; top:50%;
+       width:1280px; height:720px; margin:-360px 0 0 -640px;
+       transform:translateX(calc(-122.5px * var(--hs))) scale(var(--hs));
+       transform-origin:50% 50%; pointer-events:none;
+       (the X shift centres the crosshair, not the 1280px canvas)
+.ghost → display:none;
+.pill → position:static; margin:0; transform:none; flex:none;
+        display:inline-grid; width:64px; height:21px; border-radius:5px;
+.pill span → font-size:11.5px;
+.annot → position:static; margin:0; transform:none; display:block;
+         font-size:10.5px; line-height:1.2; white-space:normal;
+         color:rgba(255,255,255,.62);
+.annot .l1,.annot span → display:inline; padding-left:0;
+.annot .l1::after → content:&#39; &#39;;
+Also (separate max-width:519px block): the hud group is in normal flow on
+phones, so translating it would make it the containing block for the crosshair.
+Move the transform instead:
+  .hudgroup{translate:none;}   .hud{translate:0 var(--hy,0px);}
+
+──────── 11d · SHORT LANDSCAPE PHONES ────────
+@media (max-width:900px) and (max-height:560px)
+Drop the caption, tighten everything:
+  .sub,.pill,.annot → display:none;   .hudgroup,.hud → display:none;
+  .body → gap:10px; justify-content:center; padding-top:0;
+  .stage → padding:12px 18px;   .cta → height:42px;
+  .mark → 24×28;   .wordmark → 23px;   .foot → gap:8px;
+
+════════════════════════════════════════════════════════════════════════
+12 · JAVASCRIPT — single IIFE, five subsystems
+════════════════════════════════════════════════════════════════════════
+Grab: stage(#stage), frame(stage.parentNode), film(#film), spotsEl(#spots),
+rootStyle(document.documentElement.style), plateImg(frame.querySelector(&#39;img.plate&#39;)).
+State: isFlow=false, baseX=50, baseY=50.
+
+12.1 · flow() — returns matchMedia(&#39;(max-width:1000px),(max-aspect-ratio:12/10)
+       and (max-width:1200px)&#39;).matches.
+
+12.2 · fit() — read frame.clientWidth/Height; isFlow=flow();
+  read objectPosition off the PLATE (which never gets inline styles) into
+  baseX/baseY; set --k on :root = Math.min(fw/1280, fh/720);
+  hotspot layer = the film&#39;s object-fit:cover box:
+    if flow → spotsEl.style.cssText=&#39;&#39;
+    else → ar = (film.videoWidth&amp;&amp;film.videoHeight) ? vw/vh : 16/9;
+           cw = Math.max(fw, fh*ar); ch = cw/ar; px=baseX/100; py=baseY/100;
+           cssText = &#39;left:&#39;+((fw-cw)*px)+&#39;px;top:&#39;+((fh-ch)*py)+&#39;px;width:&#39;+cw+&#39;px;height:&#39;+ch+&#39;px&#39;
+  if flow → --s:1, --sw:100%, --sh:100%, return.
+  else → s = (w/h &gt;= 1280/720) ? h/720 : w/1280;
+         --s:s, --sw:(w/s)+&#39;px&#39;, --sh:(h/s)+&#39;px&#39;.
+  Call fit() immediately; bind to resize (passive), orientationchange
+  (setTimeout 60), and visualViewport resize (passive).
+
+12.3 · Mobile menu — setMenu(open) toggles .open on #mnav and sets
+  aria-expanded on #burger. Burger click toggles. Click on any &lt;a&gt; inside #mnav
+  closes. Escape closes and returns focus to the burger.
+
+12.4 · HUD label decode — the reference frame is one moment of this reveal.
+  Skip entirely if prefers-reduced-motion:reduce (then just add .motion-done).
+  t1=&#39;EVIDENCE&#39;, t2=&#39;FOR DECISIONS&#39;,
+  pool=&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ#/\\&lt;&gt;_&#39;
+  Clear both spans&#39; textContent at start. setTimeout(startDecode, 1340) — the
+  readout decodes as its label fades in, not on load.
+  startDecode: guard against re-entry; ghost.style.opacity=&#39;1&#39;;
+    setInterval every 55ms: i++;
+      l1.textContent = t1.slice(0,i) + scr(t1.length-i);
+      l2.textContent = t2.slice(0,i) + scr(t2.length-i);
+      when i &gt;= t2.length → clearInterval, set final text, ghost opacity 0.
+    scr(n): up to 2 random chars from pool (Math.min(n,2)).
+  setTimeout at 2300ms: add .motion-done to &lt;html&gt; (drops every entrance rule),
+    then force a reflow on &#39;.cta,.sub,.scroll,.bar,.headline,.pill,.annot&#39;
+    (display:none → void offsetHeight → display:&#39;&#39;) to release the compositing
+    layers the entrance created, so the resting page rasterises exactly as the
+    un-animated design does.
+
+12.5 · SCROLL FILM ENGINE
+  Native scroll sets a target; a rAF loop eases a displayed progress toward it
+  (frame-rate independent), and that one value drives both the film&#39;s
+  currentTime and every overlay. The film is fetched whole into a blob so seeks
+  never wait on the network, and a new seek is only issued once the previous one
+  has landed, so the decoder is never flooded.
+
+  FILM_MAP (scroll progress → film progress, piecewise linear, both 0..1):
+    [[0,0],[.12,.25],[.47,.52],[.72,.78],[.92,1],[1,1]]
+    hero drift 0–2.5s | vision: rock turns toward camera 2.5–5.2s |
+    dive through the foliage 5.2–7.8s | ground settles 7.8–10s
+
+  Helpers:
+    c01(x)       clamp 0..1
+    ramp(p,a,b)  c01((p-a)/(b-a))
+    out3(t)      1-(1-t)^3
+    inOut(t)     t&lt;.5 ? 4t³ : 1-((-2t+2)³)/2
+    map(m,p)     piecewise-linear lookup over FILM_MAP
+    live(el,on)  toggles .live only when the state actually changes
+
+  render(p) — early-return if p === last. Then:
+   01 hero lifts away over the first stretch of scroll:
+      h = out3(ramp(p,0,.11));
+      --ho = (1-h).toFixed(4);  --hy = (-56*h).toFixed(2)+&#39;px&#39;;
+      frame.dataset.hero = h&gt;.995 ? &#39;off&#39; : &#39;on&#39;;
+   header steps aside during the dive, returns on the ground:
+      bo = c01(1 - ramp(p,.12,.2) + ramp(p,.76,.84));
+      --bo = bo.toFixed(4);  frame.dataset.bar = bo&lt;.01 ? &#39;off&#39; : &#39;on&#39;;
+   02 vision — tag, masked lines, then sub; exits by pushing past camera:
+      vin = ramp(p,.15,.31);  vout = inOut(ramp(p,.47,.57));
+      live(vis, vin&gt;0 &amp;&amp; vout&lt;1);
+      vis.opacity = 1-vout;
+      vis.transform = translate3d(0, -18*vout px, 0) scale(1 + .14*vout);
+      tt = out3(ramp(vin,0,.4));
+        tag opacity = tt; tag transform = translate3d(0, 10*(1-tt) px, 0);
+      per line i: lt = out3(ramp(vin, .12+i*.13, .62+i*.13));
+        line transform = translate3d(0, 110*(1-lt) %, 0);
+      st2 = out3(ramp(vin,.6,1));
+        p opacity = st2; p transform = translate3d(0, 12*(1-st2) px, 0);
+      veilV.opacity = Math.min(vin, 1-vout);
+   03 ecosystem — copy settles, then the pins acquire one by one:
+      ein = ramp(p,.8,.95);  live(eco, ein&gt;0);  eco.opacity = ein&gt;0 ? 1 : 0;
+      et = out3(ramp(ein,0,.55));
+        eTop opacity = et; eTop transform = translate3d(0, 22*(1-et) px, 0);
+      per spot j: s = out3(ramp(ein, .3+j*.12, .62+j*.12));
+        spot opacity = s; spot transform = scale(.7 + .3*s);
+      veilE.opacity = ein;
+   portrait pan — portrait crops keep only a sliver of the 16:9 film, so as the
+   dive lands, pan the framing left to keep the fern in shot:
+      if (isFlow) { ox = baseX - (baseX-26)*inOut(ramp(p,.68,.9));
+                    film.style.objectPosition = ox+&#39;% &#39;+baseY+&#39;%&#39;; }
+      else if (film.style.objectPosition) film.style.objectPosition=&#39;&#39;;
+
+  seek(p): if !ready return; wantT = map(FILM_MAP,p) * Math.max(0, dur-.05);
+    if (film.seeking) return;   // never flood the decoder
+    if (Math.abs(film.currentTime - wantT) &gt; .0005) film.currentTime = wantT;
+
+  rAF loop: readScroll() sets target from
+    (pageYOffset || documentElement.scrollTop) / (scrollHeight - innerHeight);
+    loop(now): dt = prev ? Math.min(64, now-prev) : 16.667;
+      k = reduce ? 1 : 1 - Math.pow(1-.11, dt/16.667);
+      // ~0.11 per 60Hz frame: heavy enough to glide, light enough to feel attached
+      cur += (target-cur)*k;
+      if (Math.abs(target-cur) &lt; .00004) cur = target;
+      render(cur); seek(cur);
+      re-request while cur!==target || (ready &amp;&amp; film.seeking), else prev=0.
+    kick() = readScroll() + start rAF if not already running.
+    Bind: scroll → kick (passive); resize → fit(), last=-1, kick() (passive);
+          film &#39;seeked&#39; → if still off target by &gt;.0005, kick().
+
+  Readiness: onReady() (idempotent) → ready=true; dur=film.duration||0;
+    film.pause(); fit(); film.currentTime = map(FILM_MAP,cur)*Math.max(0,dur-.05);
+    film.classList.add(&#39;on&#39;).
+  film &#39;loadeddata&#39; → iOS only paints a never-played video after a play(), so
+    prime it muted: var pr=film.play(); pr&amp;&amp;pr.then ? pr.then(onReady,onReady) : onReady().
+  Source loading: useSrc(u){film.src=u;film.load();}
+    if (fetch &amp;&amp; URL.createObjectURL) → fetch(FILM_SRC,{mode:&#39;cors&#39;})
+        → r.ok ? r.blob() : throw → useSrc(URL.createObjectURL(blob)),
+          on any failure → useSrc(FILM_ORIGINAL)
+    else → useSrc(FILM_SRC)
+  film &#39;error&#39; → if current src isn&#39;t FILM_ORIGINAL, useSrc(FILM_ORIGINAL).
+  Finally: readScroll(); cur = target; render(cur);
+
+════════════════════════════════════════════════════════════════════════
+13 · ACCEPTANCE CRITERIA
+════════════════════════════════════════════════════════════════════════
+1.  At 1280×720 the layout is pixel-identical to the coordinates in §5–§8.
+2.  At any other desktop aspect ratio the stage scales uniformly with no letter-
+    boxing or empty band on any edge; chrome stays on the real viewport edges.
+3.  The entrance runs exactly once, finishes by ~2.3s, and afterwards no element
+    retains an animation, transform, or compositing layer.
+4.  The HUD readout scrambles from random glyphs into &quot;EVIDENCE&quot; /
+    &quot;FOR DECISIONS&quot; starting at 1.34s, one character per 55ms.
+5.  Scrolling scrubs the CloudFront video smoothly with no stutter and no
+    network wait after the initial blob fetch; hero → vision → ecosystem
+    overlays stay locked to the film and never drift.
+6.  prefers-reduced-motion:reduce → no entrance, no decode, no scroll easing
+    (k=1, film tracks scroll 1:1), page fully usable.
+7.  Below 1000px (or ≤12/10 aspect under 1200px) the flow architecture engages,
+    the nav collapses into the burger panel, and the HUD travels as one scaled
+    unit anchored over the artwork.
+8.  Below 520px the headline holds its three designed lines, the crosshair stays
+    on the artwork, and IMPACT + EVIDENCE FOR DECISIONS become a caption eyebrow
+    — no content is dropped at any width.
+9.  Short landscape phones (≤900×560) drop the caption and HUD only.
+10. Keyboard: all links and the burger reachable, visible #4DA3FF focus ring,
+    Escape closes the mobile menu and restores focus to the burger.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="havenorbi.html">HAVENORBI<small>3D · 3d</small></a><a href="cast-and-render.html">Cast and Render<small>3D · 3d</small></a><a href="space-planet.html">Space planet<small>3D · 3d</small></a><a href="3d-character-studio.html">3D Character Studio<small>3D · 3d</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

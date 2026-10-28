@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CleanTech — Sustainability 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色哑光绿黑背景上，垂直滚动展示四区块的循环科技公司着陆页，搭配Inter字体与流畅动效。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/cleantech.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CleanTech — Sustainability 提示词">
+<meta property="og:description" content="深色哑光绿黑背景上，垂直滚动展示四区块的循环科技公司着陆页，搭配Inter字体与流畅动效。">
+<meta property="og:url" content="https://prompt-site.shop/p/cleantech.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"CleanTech","description":"深色哑光绿黑背景上，垂直滚动展示四区块的循环科技公司着陆页，搭配Inter字体与流畅动效。","url":"https://prompt-site.shop/p/cleantech.html","inLanguage":"zh-CN","genre":"Sustainability","dateCreated":"2026-07-03T02:12:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-sustainability">Sustainability</a></div><h1>CleanTech</h1><div class="chip-row"><span class="chip">Sustainability</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-07-03</span><span>正文：10,058 字符</span></div><div class="hero-media"><video src="../assets/previews/cleantech.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>深色哑光绿黑背景上，垂直滚动展示四区块的循环科技公司着陆页，搭配Inter字体与流畅动效。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">**Create a scroll-driven landing page for &quot;Terova&quot; -- a circular-systems / waste-reclamation tech company. Use React + Vite + TypeScript + Tailwind CSS + Framer Motion + Lucide React. The page has 4 major zones stacked vertically.**
+
+---
+
+### GLOBAL SETUP
+
+- **Font**: Google Fonts `Inter` (weights 300, 400, 500, 600, 700). Body uses `&#39;Inter&#39;, system-ui, sans-serif`. Tailwind config overrides `fontFamily.sans` to `&quot;Flexo Soft Medium&quot;, system-ui, sans-serif` (but only affects Tailwind&#39;s `font-sans` utility -- the body CSS directly sets Inter).
+- **Background color**: `#19261D` (dark muted green-black)
+- **Text color**: white
+- **Anti-aliasing**: `-webkit-font-smoothing: antialiased`
+- **Selection**: `rgba(255, 255, 255, 0.2)` background
+- **Dependencies**: `framer-motion ^12.42.2`, `lucide-react ^0.344.0`, `react ^18.3.1`, `react-dom ^18.3.1`
+
+---
+
+### PERSISTENT ELEMENT: DICE ICON (Fixed, bottom-right)
+
+A fixed-position element at `bottom-4 right-4` (responsive: `sm:bottom-6 sm:right-6`), `z-50`. It&#39;s a 10x10 (sm:11x11, md:12x12) rounded-md box with background `#E2DBC8`. Inside is a 3x3 CSS grid showing 5 dots (like the &quot;5&quot; face of a die) -- dots are 7px circles colored `#1C261E`. The dots sit at positions: top-left, top-right, center, bottom-left, bottom-right.
+
+---
+
+### SECTION 1: HERO (Fixed fullscreen with parallax fade)
+
+**Behavior**: The hero is `position: fixed; inset: 0; z-index: 0`. As the user scrolls, it fades out using JavaScript: `opacity = Math.max(0, 1 - scrollY / (innerHeight * 0.6))`. A `170vh` spacer div follows in the DOM to create scroll room before the next section.
+
+**Layout**: Full viewport, `flex flex-col`, background `#464340`, with `px-3 py-3` (responsive sm/md padding). Contains a single inner card div that is `flex-1 rounded-2xl relative`.
+
+**Background video** (inside the card, absolutely positioned with `rounded-2xl overflow-hidden`):
+```
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260703_154802_dcffa901-509b-4aa3-8e34-36bbf6edcfcb.mp4
+```
+`autoPlay muted loop playsInline`, `object-cover h-full w-full`.
+
+**Content overlay** (relative z-10, flex-col justify-between):
+
+- **Top-left**: Large heading: &quot;Circular systems / for a cleaner / planet&quot; (3 lines via `&lt;br&gt;`). Styled: `text-[2.5rem] sm:text-6xl md:text-7xl lg:text-8xl`, `font-normal`, `leading-[1.05]`, `tracking-tighter`, `text-[#E2DBC8]/80`. Wrapped in a `&lt;Reveal delay={200}&gt;` component.
+
+- **Bottom center**: Two elements centered:
+1. Paragraph: &quot;Next-Generation Portable Waste / Reclamation Technology&quot; (line break with `&lt;br&gt;`). `text-sm sm:text-base`, `text-[#E2DBC8]/80`, `max-w-xs`. Wrapped in `&lt;Reveal delay={400}&gt;`.
+2. Link: &quot;Start Here&quot; -- `text-xs uppercase tracking-[0.2em] text-[#E2DBC8]/50` with `hover:text-[#E2DBC8]` transition. Wrapped in `&lt;Reveal delay={500}&gt;`.
+
+- **Bottom-left notch with social icons**: An absolutely positioned element at `bottom-0 left-0`. It contains a `flex items-center gap-4` div with background `#464340`, `px-5 py-3 rounded-tr-[20px]`. Two decorative concave-corner divs use `radial-gradient(circle at 100% 0%, transparent 20px, #464340 20px)` -- one above (top, 20x20) and one to the right (bottom, 20x20). Icons: `Linkedin`, `Phone`, `Mail` from lucide-react, size 18, color `text-[#E2DBC8]/60` with `hover:text-[#E2DBC8]`.
+
+---
+
+### REVEAL COMPONENT (Reusable animation wrapper)
+
+Uses `IntersectionObserver` with `threshold: 0.15`. When visible, transitions from `translate-y-8 opacity-0` to `translate-y-0 opacity-100`. Duration `700ms`, `ease-out`, `will-change-transform`. Accepts optional `delay` (applied as `transitionDelay`), `className`, and `as` (&#39;div&#39; or &#39;span&#39;).
+
+---
+
+### SECTION 2: ABOUT / TEXT REVEAL (Scroll-driven character opacity)
+
+**Background**: `#1C261E`. Layout: `min-h-screen`, content aligned to bottom with `flex items-end`.
+
+**Text content**: A single paragraph with per-character opacity animation driven by scroll. The text reads:
+
+&gt; &quot;Our planet&#39;s ecological balance is shifting at an unprecedented pace. Resource recovery obstacles and contamination crises have surpassed critical limits, and the pursuit of transformative green solutions has never carried more weight.&quot;
+
+**Animation mechanic** (uses `framer-motion`):
+- `useScroll({ target: containerRef, offset: [&#39;start 0.8&#39;, &#39;end 0.2&#39;] })`
+- Each character&#39;s opacity transitions from `0.3` to `1` based on its position in the text.
+- For character at index `i` out of `total`: `start = i/total`, `end = start + 0.005`. UseTransform maps `scrollYProgress` from `[start, end]` to `[0.3, 1]`.
+- Words are wrapped in `inline-block whitespace-nowrap` spans to prevent breaks mid-word.
+- Visible/invisible span layering: invisible span holds space, absolute motion.span shows the animated character.
+- All characters colored `text-[#E2DBC8]`, `font-normal`.
+- Typography: `text-2xl sm:text-3xl md:text-5xl lg:text-6xl`, `leading-snug` (lg: `leading-[1.15]`), `tracking-tight`.
+- Container padding: `px-5 pb-10 sm:px-8 sm:pb-14 md:px-12 md:pb-16`.
+
+---
+
+### SECTION 3: SCROLL VIDEO + PINNED STAT OVERLAYS
+
+This section has two sub-systems:
+
+#### A) Scroll-linked Video Background (Sticky)
+
+**Video URL**:
+```
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260703_102446_48ac5215-4f23-49f4-a433-ec9798029150.mp4
+```
+
+**Implementation**: Extracts up to 120 frames from the video into `ImageBitmap` objects (scaled to max 1280px width). Renders frames onto a full-screen `&lt;canvas&gt;` driven by scroll progress.
+
+- Container: `sticky top-0 h-screen w-full -z-10 bg-[#0a0a0a]`.
+- Falls back to a `&lt;video&gt;` element with seek-based scrubbing if frame extraction fails.
+- Scroll progress: calculated from the parent container&#39;s scroll position (how far the container&#39;s top has moved off-screen relative to its height minus viewport height).
+- Smoothing: `smoothed += (targetProgress - smoothed) * 0.1` per animation frame.
+- Canvas draws frames using &quot;cover&quot; logic (like `object-cover`).
+- Overlay: `absolute inset-0 bg-black/20` tint.
+- Top gradient fade: `absolute inset-x-0 top-0 h-40 sm:h-56 md:h-72`, `linear-gradient(to bottom, #1C261E, transparent)` -- blends the previous section&#39;s background into the video.
+
+#### B) Pinned Statistics Sections (overlaid on the video)
+
+The parent container is `h-[400vh]` (creating 4x viewport of scroll distance). A `sticky top-0 h-screen pointer-events-none z-10` child holds two absolutely-positioned text sections that fade in/out based on scroll progress:
+
+**Section One** (&quot;2.01 billion&quot;):
+- Fade in: progress 0 to 0.2
+- Stay visible: 0.2 to 0.45
+- Fade out: 0.45 to 0.55
+- Layout: `flex-col justify-end`, bottom-aligned.
+- Heading: &quot;2.01 billion&quot; -- `text-4xl sm:text-5xl md:text-7xl lg:text-8xl`, `font-normal tracking-tighter text-[#E2DBC8]`
+- Paragraph: &quot;Tons of household and commercial refuse produced every single year. Lined up in hauling vehicles, this debris would circle the globe **24 times**&quot;
+- `text-sm sm:text-base text-[#E2DBC8]/70 max-w-lg leading-relaxed`
+- &quot;24 times&quot; is in a green badge: `inline-flex items-center rounded bg-[#4caf50] px-2 py-0.5 text-xs sm:text-sm font-semibold text-[#E2DBC8]`
+- Both text elements have individual slide-up animation: `translateY(2rem)` when opacity &lt; threshold, `translateY(0)` when visible. `transition-all duration-700 ease-out will-change-transform`.
+
+**Section Two** (&quot;under a fifth&quot;):
+- Fade in: progress 0.5 to 0.6
+- Stay visible: 0.6 to 0.85
+- Fade out: 0.85 to 1.0
+- Heading: &quot;under a fifth&quot; -- same typographic treatment as Section One.
+- Paragraph: &quot;Of all refuse is reclaimed each year&quot; -- `text-sm sm:text-base text-[#E2DBC8]/70`
+- Same slide-up animation pattern with staggered delay of 100ms for the paragraph.
+
+---
+
+### NAVBAR (Fixed, top-right)
+
+Position: `fixed right-4 top-4 z-50` (responsive: `sm:right-8 sm:top-7 md:right-12`). Wrapped in `&lt;Reveal&gt;`.
+
+Contains a link with:
+- **Custom SVG logo**: A 24x24 SVG, viewBox `0 0 256 256`, filled `#E2DBC8`. The path is a squircle shape with a leaf/arc cutout: `M 156 0 C 211.228 0 256 44.772 256 100 L 256 256 L 100 256 C 44.772 256 0 211.228 0 156 L 0 0 Z M 80 80 C 80 133.019 122.981 176 176 176 C 176 122.981 133.019 80 80 80 Z`
+- **Brand name**: &quot;terova&quot; -- `text-lg font-semibold tracking-tight` in `text-[#E2DBC8]`
+- Hover: `opacity-80` transition
+
+---
+
+### COLOR PALETTE
+
+| Token | Hex | Usage |
+|-------|-----|-------|
+| Page background | `#19261D` | Body, about section |
+| Hero card outer bg | `#464340` | Hero section bg, notch bg |
+| About section bg | `#1C261E` | Text reveal section |
+| Primary text | `#E2DBC8` | Headings, brand, icons |
+| Primary text muted | `#E2DBC8/80` | Hero heading, subtext |
+| Secondary text | `#E2DBC8/70` | Stat descriptions |
+| Tertiary text | `#E2DBC8/50` | CTA link |
+| Icon default | `#E2DBC8/60` | Social icons |
+| Accent green | `#4caf50` | Badge (&quot;24 times&quot;) |
+| Dice dots | `#1C261E` | Dots on dice element |
+| Dice background | `#E2DBC8` | Dice square |
+| Video fallback bg | `#0a0a0a` | Canvas container |
+| Overlay | `black/20` | Video darkening |
+
+---
+
+### SCROLL ARCHITECTURE SUMMARY
+
+1. **0px - ~170vh**: Hero is fixed and fades from full opacity to 0
+2. **After 170vh spacer**: AboutSection enters viewport (relative, z-10). Character-by-character text reveals on scroll.
+3. **After AboutSection**: ScrollVideo container begins. Video is sticky, scrubs with scroll. Pinned stat overlays fade in/out at defined thresholds over 400vh of scroll distance.
+
+---
+
+### KEY TECHNICAL NOTES
+
+- No GSAP or ScrollTrigger -- all scroll logic is vanilla JS `window.addEventListener(&#39;scroll&#39;)` + `requestAnimationFrame` smoothing, except the About section which uses Framer Motion&#39;s `useScroll`/`useTransform`.
+- Video frame extraction uses `createImageBitmap` from a seeked `&lt;video&gt;` element for smooth canvas-based playback.
+- The canvas uses `devicePixelRatio` (capped at 2) for sharp rendering.
+- All responsive breakpoints use Tailwind&#39;s default `sm:640px`, `md:768px`, `lg:1024px`.
+- The page is fully static/client-side -- no backend, no routing.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><p class="muted">暂无同分类条目。</p><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Waitlist Hero — Hero Section 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色全屏英雄区，顶部导航栏含品牌名和登录按钮，背景为带点状纹理的炭灰色，整体简洁现代。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/waitlist-hero.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Waitlist Hero — Hero Section 提示词">
+<meta property="og:description" content="深色全屏英雄区，顶部导航栏含品牌名和登录按钮，背景为带点状纹理的炭灰色，整体简洁现代。">
+<meta property="og:url" content="https://prompt-site.shop/p/waitlist-hero.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/waitlist-hero.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Waitlist Hero","description":"深色全屏英雄区，顶部导航栏含品牌名和登录按钮，背景为带点状纹理的炭灰色，整体简洁现代。","url":"https://prompt-site.shop/p/waitlist-hero.html","inLanguage":"zh-CN","genre":"Hero Section","dateCreated":"2026-05-08T07:48:52.423639+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-hero_section">Hero Section</a></div><h1>Waitlist Hero</h1><div class="chip-row"><span class="chip">Hero Section</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-05-08</span><span>正文：5,681 字符</span></div><div class="hero-media"><img src="../assets/previews/waitlist-hero.webp" alt="Waitlist Hero 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>深色全屏英雄区，顶部导航栏含品牌名和登录按钮，背景为带点状纹理的炭灰色，整体简洁现代。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a full-viewport dark hero section as a single React + TypeScript + Tailwind CSS page (Vite). Use the Inter font family. No purple/indigo hues.
+
+**Layout structure (top to bottom, full viewport, no scroll):**
+
+1. **Outer page wrapper** — `w-screen h-screen overflow-hidden flex flex-col`, background `#0E1114` with a subtle dotted pattern: `radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px)` at `24px 24px`.
+
+2. **Navbar** (outside the inner card) — `flex items-center justify-between px-7 py-7`, `shrink-0`.
+- Left: wordmark `micro` in white, `font-semibold text-2xl tracking-tight`, letter-spacing `-0.02em`.
+- Right: two buttons in a `gap-3` flex row.
+- &quot;Login&quot;: transparent, `text-white/70 text-sm font-medium px-4 py-2 rounded-full`, hover `text-white`.
+- &quot;Join the Waitlist&quot;: black bg `#000`, white text, `1px solid #ffffff` border, `text-sm font-semibold px-5 py-2 rounded-full`, hover `opacity-90`, active `scale-95`, 200ms transitions.
+
+3. **Inner card** — fills remaining height, `mx-2 mb-2`, `bg-#030404`, `rounded-[32px]`, `overflow-hidden`, `relative`.
+
+Inside the card:
+
+**a) Three-panel video section** (`flex-1 flex gap-2 p-2 lg:p-5 min-h-0`):
+- 3 equal-width cards (`flex-1`), each `relative overflow-hidden rounded-[22px]`. Cards 2 and 3 hidden on small screens (`hidden sm:block`).
+- Each card has a `&lt;canvas&gt;` absolutely covering it (`absolute inset-0 w-full h-full`).
+- A single hidden `&lt;video&gt;` element is the source of truth for all canvases, positioned offscreen (`position:absolute; width:1; height:1; opacity:0; left:-9999; top:-9999`), `muted playsInline preload=&quot;auto&quot;`.
+- Video URL: `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260508_071134_9cc2f2d8-a599-4a73-8c89-6eb4af170352.mp4` — but at build time, download this file and host it locally at `/public/boomerang.mp4` and reference it as `/boomerang.mp4`. Streaming directly from CloudFront and using `currentTime` seek-based boomerang causes lag.
+
+**Boomerang playback logic (critical — this is the non-obvious part):**
+- Do NOT seek via `video.currentTime` to reverse — it lags badly.
+- On mount, play the video forward once with `video.play()`. Use `requestVideoFrameCallback` (fallback to `requestAnimationFrame`) to capture every unique frame into an offscreen `&lt;canvas&gt;` element (scale down to max width 960 for memory). Push each captured canvas into a `frames[]` array.
+- On the `ended` event, stop capturing and store `frames` in React state.
+- Once frames are ready, run a `requestAnimationFrame` render loop at 30 FPS (1000/30 ms interval) that advances an index through `frames` with a direction variable: when index hits `frames.length - 1` flip to `-1`, when it hits `0` flip to `+1`. That&#39;s the boomerang.
+
+**Canvas slicing logic (one video rendered as three synced slices):**
+- Each frame of animation, for every visible canvas:
+- Resize canvas backing store to its `clientWidth`/`clientHeight` if mismatched.
+- Treat the N visible cards as one continuous `cover`-fitted surface (total width = `cw * n`, height = `ch`).
+- Compute source rect `sx, sy, sw, sh` from the frame that maintains `cover` behavior given that combined display aspect.
+- Slice width = `sw / n`; slice X = `sx + sliceW * i` for card `i`.
+- `ctx.drawImage(frame, sliceX, sy, sliceW, sh, 0, 0, cw, ch)`.
+
+**b) Bottom fade gradient** — absolutely positioned in the card, `bottom-0 left-0 right-0`, `height: 260px`, `z-10`, `pointer-events-none`, `background: linear-gradient(to top, rgba(3,4,4,0.88) 0%, rgba(3,4,4,0.50) 45%, transparent 100%)`.
+
+**c) Hero text + CTA row** — absolutely at bottom of card, `p-6 md:p-8 pb-10 md:pb-14`, `flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-0`, `z-20`, `pointer-events-none` (re-enable on interactive children).
+- Left column (`pointer-events-auto`):
+- Paragraph: &quot;An all-in-one tool for email, CRM, project management and more that automatically organizes itself.&quot; — `text-white/70 text-sm leading-relaxed max-w-[280px]`.
+- Button &quot;Join the Waitlist&quot; — `self-start px-6 py-2.5 rounded-full text-sm font-semibold`, `bg-#ffffff text-#030404`, hover `opacity-90`, active `scale-95`.
+- Right column (`md:items-end`):
+- `&lt;h1&gt;`: &quot;Organized.&quot; — `text-[clamp(52px,10vw,110px)]`, `font-weight: 600`, `line-height: 1.0`, `letter-spacing: -0.03em`, white, right-aligned on md+.
+- Italic subtitle: &quot;So you don&#39;t have to be.&quot; — `text-white/60 text-base italic tracking-wide`.
+
+**d) Middle card overlay (card 2 only):**
+- Centered pill-shaped image frame, `width: 130px`, `height: 225px`, `border-radius: 999px`, `overflow: hidden`, `box-shadow: 0 0 0 1.5px rgba(255,255,255,0.10)`.
+- Inside it, an `&lt;img&gt;` filling the frame (`objectFit: cover`, `objectPosition: center`) with src:
+`https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260507_181851_f7a6e930-087d-4ce3-978d-f982e804b7df.png&amp;w=1280&amp;q=85`.
+
+**e) Glowing Orbs** (decorative) — a reusable `&lt;Orb&gt;` component: `absolute pointer-events-none z-10`, `border-radius: 50%`, `background: radial-gradient(circle, {color} 0%, transparent 70%)`, `filter: blur(20px)`, `mix-blend-mode: screen`.
+- Card 1: `top:14% left:16% width:100 height:100`, color `rgba(255,255,255,0.70)`.
+- Card 2: `top:8% left:50% translateX(-50%) width:72 height:72`, color `rgba(200,215,255,0.55)`.
+- Card 3: `top:20% right:10% width:110 height:110`, color `rgba(185,210,235,0.55)`.
+
+**Stack:** React 18, TypeScript, Tailwind, Vite, lucide-react available (not used here). Single `src/App.tsx`. All transitions 200ms. No external UI libs. Match every color, radius, and pixel value above exactly.</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="portal.html">Portal<small>Hero Section · hero</small></a><a href="stillmind.html">Stillmind<small>Hero Section · hero</small></a><a href="lead-funnel.html">Lead Funnel<small>Hero Section · hero</small></a><a href="tech-forward.html">Tech-Forward<small>Hero Section · hero</small></a><a href="vision-reveal.html">Vision Reveal<small>Hero Section · hero</small></a><a href="wellness-balance.html">Wellness Balance<small>Hero Section · hero</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Card Swap — Components 提示词 | MotionSites Prompts</title>
+<meta name="description" content="An elegant card swapping animation component with depth perception and perspective. Features automated cycling of cards with a premium floating feel. Sourc">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/community-superdesign-card-swap.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Card Swap — Components 提示词">
+<meta property="og:description" content="An elegant card swapping animation component with depth perception and perspective. Features automated cycling of cards with a premium floating feel. Sourc">
+<meta property="og:url" content="https://prompt-site.shop/p/community-superdesign-card-swap.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Card Swap","description":"An elegant card swapping animation component with depth perception and perspective. Features automated cycling of cards with a premium floating feel. Source: ReactBits","url":"https://prompt-site.shop/p/community-superdesign-card-swap.html","inLanguage":"zh-CN","genre":"Components","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-components">Components</a></div><h1>Card Swap</h1><div class="chip-row"><span class="chip">Components</span><span class="chip">animation</span><span class="chip">社区公开收藏</span></div><div class="facts"><span>正文：9,997 字符</span></div><div class="hero-media"><video src="../assets/previews/community-superdesign-card-swap.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>An elegant card swapping animation component with depth perception and perspective. Features automated cycling of cards with a premium floating feel. Source: ReactBits</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">You are given a task to integrate an existing React component in the codebase
+
+~~~/README.md
+# CardSwapShowcase
+
+An elegant card swapping animation component with depth perception and perspective. Features automated cycling of cards with a premium floating feel, powered by GSAP.
+
+## Dependencies
+
+- `gsap`: ^3.12.5
+- `framer-motion`: ^11.11.17
+- `lucide-react`: ^0.460.0
+
+## Props
+
+### CardSwapProps
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `width` | `number \| string` | `500` | Width of the cards |
+| `height` | `number \| string` | `400` | Height of the cards |
+| `cardDistance` | `number` | `60` | Horizontal spacing between stacked cards |
+| `verticalDistance` | `number` | `70` | Vertical spacing between stacked cards |
+| `delay` | `number` | `5000` | Delay between swaps in milliseconds |
+| `pauseOnHover` | `boolean` | `false` | Pause the animation on mouse enter |
+| `skewAmount` | `number` | `6` | Initial skew applied to cards for depth |
+| `easing` | `&#39;linear&#39; \| &#39;elastic&#39;` | `&#39;elastic&#39;` | Animation easing style |
+| `onCardClick` | `(idx: number) =&gt; void` | - | Callback when a card is clicked |
+| `children` | `ReactNode` | - | Card elements to display |
+
+### CardProps
+
+Extends `React.HTMLAttributes&lt;HTMLDivElement&gt;`.
+
+| Prop | Type | Description |
+|------|------|-------------|
+| `customClass` | `string` | Additional CSS classes for the card |
+
+## Usage
+
+```tsx
+import { CardSwap, Card } from &#39;@/sd-components/b2f54efd-719a-454b-830b-2bf1c09122cc&#39;;
+
+function Example() {
+return (
+&lt;CardSwap delay={4000} cardDistance={40}&gt;
+&lt;Card&gt;
+&lt;h3&gt;Card 1&lt;/h3&gt;
+&lt;p&gt;Content&lt;/p&gt;
+&lt;/Card&gt;
+&lt;Card&gt;
+&lt;h3&gt;Card 2&lt;/h3&gt;
+&lt;p&gt;Content&lt;/p&gt;
+&lt;/Card&gt;
+&lt;/CardSwap&gt;
+);
+}
+```
+~~~
+
+~~~/src/App.tsx
+/**
+* Demo application for the CardSwap component.
+* Showcases the elegant card swapping animation in a minimalist environment.
+*/
+import React from &#39;react&#39;;
+import CardSwap, { Card } from &#39;./Component&#39;;
+
+export default function App() {
+const cards = [
+{
+id: 1,
+title: &quot;Perspective Design&quot;,
+description: &quot;Crafting interfaces with depth and intention.&quot;,
+color: &quot;bg-primary&quot;,
+image: &quot;https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot;
+},
+{
+id: 2,
+title: &quot;Fluid Motion&quot;,
+description: &quot;Seamless transitions that feel natural and responsive.&quot;,
+color: &quot;bg-accent&quot;,
+image: &quot;https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot;
+},
+{
+id: 3,
+title: &quot;Minimalist Aesthetic&quot;,
+description: &quot;Less is more when every detail is refined.&quot;,
+color: &quot;bg-secondary&quot;,
+image: &quot;https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot;
+},
+{
+id: 4,
+title: &quot;Atmospheric Loops&quot;,
+description: &quot;Creating a sense of calm through continuous motion.&quot;,
+color: &quot;bg-muted&quot;,
+image: &quot;https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&amp;w=800&amp;auto=format&amp;fit=crop&quot;
+}
+];
+
+return (
+&lt;div className=&quot;flex min-h-screen items-center justify-center bg-background p-20 overflow-hidden&quot;&gt;
+&lt;div className=&quot;flex flex-col items-center gap-12&quot;&gt;
+&lt;h1 className=&quot;text-2xl font-medium text-foreground tracking-tight opacity-80&quot;&gt;
+Card Swap Showcase
+&lt;/h1&gt;
+
+&lt;div className=&quot;relative w-[500px] h-[400px]&quot;&gt;
+&lt;CardSwap
+width={400}
+height={300}
+cardDistance={40}
+verticalDistance={40}
+delay={4000}
+pauseOnHover={true}
+skewAmount={4}
+&gt;
+{cards.map((card) =&gt; (
+&lt;Card key={card.id} className=&quot;p-0 overflow-hidden group&quot;&gt;
+&lt;div className=&quot;relative h-full w-full flex flex-col&quot;&gt;
+&lt;div className=&quot;flex-1 overflow-hidden&quot;&gt;
+&lt;img
+src={card.image}
+alt={card.title}
+className=&quot;w-full h-full object-cover transition-transform duration-700 group-hover:scale-110&quot;
+/&gt;
+&lt;div className=&quot;absolute inset-0 bg-gradient-to-t from-black/60 to-transparent&quot; /&gt;
+&lt;/div&gt;
+&lt;div className=&quot;absolute bottom-0 left-0 right-0 p-8 text-white&quot;&gt;
+&lt;h3 className=&quot;text-xl font-medium mb-2&quot;&gt;{card.title}&lt;/h3&gt;
+&lt;p className=&quot;text-sm text-white/70 leading-relaxed max-w-[80%]&quot;&gt;
+{card.description}
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/Card&gt;
+))}
+&lt;/CardSwap&gt;
+&lt;/div&gt;
+
+&lt;button
+onClick={() =&gt; window.location.reload()}
+className=&quot;mt-8 px-6 py-2 rounded-full border border-border text-sm text-muted-foreground hover:bg-muted hover:text-foreground transition-all duration-300&quot;
+&gt;
+Reply Animation
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+);
+}
+~~~
+
+~~~/package.json
+{
+&quot;name&quot;: &quot;card-swap-showcase&quot;,
+&quot;description&quot;: &quot;An elegant perspective card swapping animation component&quot;,
+&quot;dependencies&quot;: {
+&quot;gsap&quot;: &quot;^3.12.5&quot;,
+&quot;framer-motion&quot;: &quot;^11.11.17&quot;,
+&quot;lucide-react&quot;: &quot;^0.460.0&quot;,
+&quot;clsx&quot;: &quot;^2.1.1&quot;,
+&quot;tailwind-merge&quot;: &quot;^2.5.4&quot;
+}
+}
+~~~
+
+~~~/src/Component.tsx
+/**
+* CardSwap Component
+* An elegant card swapping animation using GSAP for smooth transitions.
+* Supports automated cycling, perspective depth, and interactive elements.
+*/
+import React, {
+Children,
+cloneElement,
+forwardRef,
+isValidElement,
+ReactElement,
+ReactNode,
+RefObject,
+useEffect,
+useMemo,
+useRef
+} from &#39;react&#39;;
+import gsap from &#39;gsap&#39;;
+
+export interface CardSwapProps {
+width?: number | string;
+height?: number | string;
+cardDistance?: number;
+verticalDistance?: number;
+delay?: number;
+pauseOnHover?: boolean;
+onCardClick?: (idx: number) =&gt; void;
+skewAmount?: number;
+easing?: &#39;linear&#39; | &#39;elastic&#39;;
+children: ReactNode;
+}
+
+export interface CardProps extends React.HTMLAttributes&lt;HTMLDivElement&gt; {
+customClass?: string;
+}
+
+export const Card = forwardRef&lt;HTMLDivElement, CardProps&gt;(({ customClass, ...rest }, ref) =&gt; (
+&lt;div
+ref={ref}
+{...rest}
+className={`absolute top-1/2 left-1/2 rounded-xl border border-border bg-card shadow-lg [transform-style:preserve-3d] [will-change:transform] [backface-visibility:hidden] ${customClass ?? &#39;&#39;} ${rest.className ?? &#39;&#39;}`.trim()}
+/&gt;
+));
+
+Card.displayName = &#39;Card&#39;;
+
+type CardRef = RefObject&lt;HTMLDivElement | null&gt;;
+
+interface Slot {
+x: number;
+y: number;
+z: number;
+zIndex: number;
+}
+
+const makeSlot = (i: number, distX: number, distY: number, total: number): Slot =&gt; ({
+x: i * distX,
+y: -i * distY,
+z: -i * distX * 1.5,
+zIndex: total - i
+});
+
+const placeNow = (el: HTMLElement, slot: Slot, skew: number) =&gt;
+gsap.set(el, {
+x: slot.x,
+y: slot.y,
+z: slot.z,
+xPercent: -50,
+yPercent: -50,
+skewY: skew,
+transformOrigin: &#39;center center&#39;,
+zIndex: slot.zIndex,
+force3D: true
+});
+
+export const CardSwap: React.FC&lt;CardSwapProps&gt; = ({
+width = 500,
+height = 400,
+cardDistance = 60,
+verticalDistance = 70,
+delay = 5000,
+pauseOnHover = false,
+onCardClick,
+skewAmount = 6,
+easing = &#39;elastic&#39;,
+children
+}) =&gt; {
+const config =
+easing === &#39;elastic&#39;
+? {
+ease: &#39;elastic.out(0.6,0.9)&#39;,
+durDrop: 2,
+durMove: 2,
+durReturn: 2,
+promoteOverlap: 0.9,
+returnDelay: 0.05
+}
+: {
+ease: &#39;power1.inOut&#39;,
+durDrop: 0.8,
+durMove: 0.8,
+durReturn: 0.8,
+promoteOverlap: 0.45,
+returnDelay: 0.2
+};
+
+const childArr = useMemo(() =&gt; Children.toArray(children) as ReactElement&lt;CardProps&gt;[], [children]);
+const refs = useMemo&lt;CardRef[]&gt;(() =&gt; childArr.map(() =&gt; React.createRef&lt;HTMLDivElement&gt;()), [childArr.length]);
+const order = useRef&lt;number[]&gt;(Array.from({ length: childArr.length }, (_, i) =&gt; i));
+const tlRef = useRef&lt;gsap.core.Timeline | null&gt;(null);
+const intervalRef = useRef&lt;number&gt;(0);
+const container = useRef&lt;HTMLDivElement&gt;(null);
+
+useEffect(() =&gt; {
+const total = refs.length;
+refs.forEach((r, i) =&gt; {
+if (r.current) {
+placeNow(r.current, makeSlot(i, cardDistance, verticalDistance, total), skewAmount);
+}
+});
+
+const swap = () =&gt; {
+if (order.current.length &lt; 2) return;
+const [front, ...rest] = order.current;
+const elFront = refs[front].current;
+if (!elFront) return;
+
+const tl = gsap.timeline();
+tlRef.current = tl;
+
+tl.to(elFront, {
+y: &#39;+=500&#39;,
+duration: config.durDrop,
+ease: config.ease
+});
+
+tl.addLabel(&#39;promote&#39;, `-=${config.durDrop * config.promoteOverlap}`);
+rest.forEach((idx, i) =&gt; {
+const el = refs[idx].current;
+if (!el) return;
+const slot = makeSlot(i, cardDistance, verticalDistance, refs.length);
+tl.set(el, { zIndex: slot.zIndex }, &#39;promote&#39;);
+tl.to(
+el,
+{
+x: slot.x,
+y: slot.y,
+z: slot.z,
+duration: config.durMove,
+ease: config.ease
+},
+`promote+=${i * 0.15}`
+);
+});
+
+const backSlot = makeSlot(refs.length - 1, cardDistance, verticalDistance, refs.length);
+tl.addLabel(&#39;return&#39;, `promote+=${config.durMove * config.returnDelay}`);
+tl.call(
+() =&gt; {
+gsap.set(elFront, { zIndex: backSlot.zIndex });
+},
+undefined,
+&#39;return&#39;
+);
+
+tl.to(
+elFront,
+{
+x: backSlot.x,
+y: backSlot.y,
+z: backSlot.z,
+duration: config.durReturn,
+ease: config.ease
+},
+&#39;return&#39;
+);
+
+tl.call(() =&gt; {
+order.current = [...rest, front];
+});
+};
+
+intervalRef.current = window.setInterval(swap, delay);
+
+if (pauseOnHover &amp;&amp; container.current) {
+const node = container.current;
+const pause = () =&gt; {
+tlRef.current?.pause();
+clearInterval(intervalRef.current);
+};
+const resume = () =&gt; {
+tlRef.current?.play();
+intervalRef.current = window.setInterval(swap, delay);
+};
+node.addEventListener(&#39;mouseenter&#39;, pause);
+node.addEventListener(&#39;mouseleave&#39;, resume);
+return () =&gt; {
+node.removeEventListener(&#39;mouseenter&#39;, pause);
+node.removeEventListener(&#39;mouseleave&#39;, resume);
+clearInterval(intervalRef.current);
+};
+}
+
+return () =&gt; clearInterval(intervalRef.current);
+}, [cardDistance, verticalDistance, delay, pauseOnHover, skewAmount, easing, refs]);
+
+const rendered = childArr.map((child, i) =&gt;
+isValidElement&lt;CardProps&gt;(child)
+? cloneElement(child, {
+key: i,
+ref: refs[i],
+style: { width, height, ...(child.props.style ?? {}) },
+onClick: (e: React.MouseEvent&lt;HTMLDivElement&gt;) =&gt; {
+child.props.onClick?.(e);
+onCardClick?.(i);
+}
+} as CardProps &amp; React.RefAttributes&lt;HTMLDivElement&gt;)
+: child
+);
+
+return (
+&lt;div
+ref={container}
+className=&quot;relative perspective-[1200px] transform-gpu&quot;
+style={{ width, height }}
+&gt;
+&lt;div className=&quot;absolute inset-0 [transform-style:preserve-3d]&quot;&gt;
+{rendered}
+&lt;/div&gt;
+&lt;/div&gt;
+);
+};
+
+export default CardSwap;
+~~~
+
+Implementation Guidelines
+
+1. Analyze the component structure, styling, animation implementations
+2. Review the component&#39;s arguments and state
+3. Think through what is the best place to adopt this component/style into the design we are doing
+4. Then adopt the component/design to our current system
+
+Help me integrate this into my design</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：superdesigndev/superdesign-prompts<br>原始文件：<code>prompts/card-swap/README.md</code><br>许可证：CC0-1.0<br>作者：Jason Zhou<br><a href="https://github.com/superdesigndev/superdesign-prompts/blob/main/prompts/card-swap/README.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="animated-cards.html">Animated Cards<small>Components · carousel</small></a><a href="scroll-marquee.html">Scroll Marquee<small>Components · carousel</small></a><a href="flowmate-carousal.html">FlowMate Carousal<small>Components · carousel</small></a><a href="apex-program-accordion.html">Apex Program Accordion<small>Components · faq</small></a><a href="bento-grid-stats.html">Bento Grid Stats<small>Components · features</small></a><a href="glassmorphic-feature-tabs.html">Glassmorphic Feature Tabs<small>Components · features</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

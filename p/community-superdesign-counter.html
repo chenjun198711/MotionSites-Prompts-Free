@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Counter — Components 提示词 | MotionSites Prompts</title>
+<meta name="description" content="A premium, high-performance rolling counter component with smooth mechanical-style transitions. Features automatic digit detection, customizable font sizes">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/community-superdesign-counter.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Counter — Components 提示词">
+<meta property="og:description" content="A premium, high-performance rolling counter component with smooth mechanical-style transitions. Features automatic digit detection, customizable font sizes">
+<meta property="og:url" content="https://prompt-site.shop/p/community-superdesign-counter.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Counter","description":"A premium, high-performance rolling counter component with smooth mechanical-style transitions. Features automatic digit detection, customizable font sizes, and sleek gradient overlays for a professional 'odometer' effect. Built with Framer Motion for precise easing and spring physics. Source: React","url":"https://prompt-site.shop/p/community-superdesign-counter.html","inLanguage":"zh-CN","genre":"Components","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-components">Components</a></div><h1>Counter</h1><div class="chip-row"><span class="chip">Components</span><span class="chip">components</span><span class="chip">社区公开收藏</span></div><div class="facts"><span>正文：9,503 字符</span></div><div class="hero-media"><video src="../assets/community/superdesign/counter/preview.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="media-note">本地预览视频 · mp4</div></div><h2>简介</h2><p>A premium, high-performance rolling counter component with smooth mechanical-style transitions. Features automatic digit detection, customizable font sizes, and sleek gradient overlays for a professional &#39;odometer&#39; effect. Built with Framer Motion for precise easing and spring physics. Source: ReactBits</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">You are given a task to integrate an existing React component in the codebase
+
+~~~/README.md
+# RollingCounter
+
+A premium, high-performance rolling counter component with smooth mechanical-style transitions. Features automatic digit detection, customizable font sizes, and sleek gradient overlays for a professional &#39;odometer&#39; effect.
+
+## Dependencies
+- `framer-motion`: `^11.0.0`
+- `lucide-react`: `latest` (for demo icons)
+
+## Props
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `value` | `number` | - | The numeric value to display. |
+| `fontSize` | `number` | `100` | Font size in pixels. |
+| `padding` | `number` | `0` | Vertical padding inside each digit container. |
+| `places` | `PlaceValue[]` | - | Custom array of place values (e.g., `[100, 10, 1, &#39;.&#39;, 0.1]`). |
+| `gap` | `number` | `8` | Gap between digits. |
+| `borderRadius` | `number` | `4` | Border radius of the counter container. |
+| `horizontalPadding` | `number` | `8` | Horizontal padding of the counter container. |
+| `textColor` | `string` | `&#39;inherit&#39;` | Text color. |
+| `fontWeight` | `CSSProperties[&#39;fontWeight&#39;]` | `&#39;inherit&#39;` | Font weight. |
+| `gradientHeight` | `number` | `16` | Height of the gradient overlay. |
+| `gradientFrom` | `string` | `&#39;hsl(var(--background))&#39;` | Start color of the gradient. |
+
+## Usage
+```tsx
+import { RollingCounter } from &#39;@/sd-components/7d2b2a3f-6411-4777-94ce-a18ef1ceca98&#39;;
+
+export default function MyComponent() {
+return (
+&lt;RollingCounter
+value={5432.1}
+fontSize={64}
+textColor=&quot;#1A1A1B&quot;
+gradientFrom=&quot;#F9F9F9&quot;
+/&gt;
+);
+}
+```
+~~~
+
+~~~/src/App.tsx
+/**
+* Demo for RollingCounter Component
+*
+* Shows a minimalist showcase of the rolling counter effect.
+* The counter value increments automatically to demonstrate the motion.
+*/
+
+import React, { useState, useEffect } from &#39;react&#39;;
+import { RollingCounter } from &#39;./Component&#39;;
+import { RotateCcw } from &#39;lucide-react&#39;;
+
+export default function App() {
+const [value, setValue] = useState(1234.5);
+
+useEffect(() =&gt; {
+const timer = setInterval(() =&gt; {
+setValue(v =&gt; parseFloat((v + 1.1).toFixed(1)));
+}, 2000);
+return () =&gt; clearInterval(timer);
+}, []);
+
+const resetValue = () =&gt; setValue(1234.5);
+
+return (
+&lt;div className=&quot;min-h-screen bg-[#F9F9F9] flex flex-col items-center justify-center p-20&quot;&gt;
+{/* Title as per design guidelines */}
+&lt;h1 className=&quot;mb-12 text-sm uppercase tracking-widest text-muted-foreground font-medium&quot;&gt;
+Rolling Counter
+&lt;/h1&gt;
+
+{/* Main Showcase Container */}
+&lt;div className=&quot;bg-white p-20 rounded-[40px] shadow-[0_40px_80px_rgba(0,0,0,0.05)] flex flex-col items-center gap-12&quot;&gt;
+&lt;RollingCounter
+value={value}
+fontSize={120}
+textColor=&quot;hsl(var(--foreground))&quot;
+fontWeight={600}
+gradientFrom=&quot;white&quot;
+gradientHeight={30}
+gap={4}
+/&gt;
+
+{/* Reply/Action Button as per guidelines */}
+&lt;button
+onClick={resetValue}
+className=&quot;flex items-center gap-2 px-6 py-3 bg-foreground text-background rounded-full hover:opacity-90 transition-opacity font-medium text-sm&quot;
+&gt;
+&lt;RotateCcw className=&quot;w-4 h-4&quot; /&gt;
+Reset Counter
+&lt;/button&gt;
+&lt;/div&gt;
+
+{/* Subtitle / Description */}
+&lt;p className=&quot;mt-12 text-muted-foreground text-center max-w-md text-sm leading-relaxed&quot;&gt;
+A precision mechanical-style animation using Framer Motion
+with automatic place value detection and smooth transitions.
+&lt;/p&gt;
+&lt;/div&gt;
+);
+}
+~~~
+
+~~~/package.json
+{
+&quot;name&quot;: &quot;rolling-counter&quot;,
+&quot;description&quot;: &quot;A premium mechanical rolling counter component with smooth Framer Motion animations.&quot;,
+&quot;dependencies&quot;: {
+&quot;framer-motion&quot;: &quot;^11.0.0&quot;,
+&quot;lucide-react&quot;: &quot;latest&quot;,
+&quot;react&quot;: &quot;^18.0.0&quot;,
+&quot;react-dom&quot;: &quot;^18.0.0&quot;
+}
+}
+~~~
+
+~~~/src/Component.tsx
+/**
+* RollingCounter Component
+*
+* A high-performance, mechanical-style rolling counter using Framer Motion.
+* It features smooth digit transitions, automatic place value detection,
+* and customizable styling including gradient overlays for a polished look.
+*/
+
+import { MotionValue, motion, useSpring, useTransform } from &#39;framer-motion&#39;;
+import React, { useEffect } from &#39;react&#39;;
+
+type PlaceValue = number | &#39;.&#39;;
+
+interface NumberProps {
+mv: MotionValue&lt;number&gt;;
+number: number;
+height: number;
+}
+
+function Number({ mv, number, height }: NumberProps) {
+const y = useTransform(mv, latest =&gt; {
+const placeValue = latest % 10;
+const offset = (10 + number - placeValue) % 10;
+let memo = offset * height;
+if (offset &gt; 5) {
+memo -= 10 * height;
+}
+return memo;
+});
+
+const baseStyle: React.CSSProperties = {
+position: &#39;absolute&#39;,
+inset: 0,
+display: &#39;flex&#39;,
+alignItems: &#39;center&#39;,
+justifyContent: &#39;center&#39;
+};
+
+return &lt;motion.span style={{ ...baseStyle, y }}&gt;{number}&lt;/motion.span&gt;;
+}
+
+interface DigitProps {
+place: PlaceValue;
+value: number;
+height: number;
+digitStyle?: React.CSSProperties;
+}
+
+function Digit({ place, value, height, digitStyle }: DigitProps) {
+// Decimal point digit
+if (place === &#39;.&#39;) {
+return (
+&lt;span
+className=&quot;relative inline-flex items-center justify-center&quot;
+style={{ height, width: &#39;fit-content&#39;, ...digitStyle }}
+&gt;
+.
+&lt;/span&gt;
+);
+}
+
+// Numeric digit
+const valueRoundedToPlace = Math.floor(value / place);
+const animatedValue = useSpring(valueRoundedToPlace, {
+damping: 20,
+stiffness: 100,
+mass: 1
+});
+
+useEffect(() =&gt; {
+animatedValue.set(valueRoundedToPlace);
+}, [animatedValue, valueRoundedToPlace]);
+
+const defaultStyle: React.CSSProperties = {
+height,
+position: &#39;relative&#39;,
+width: &#39;1ch&#39;,
+fontVariantNumeric: &#39;tabular-nums&#39;
+};
+
+return (
+&lt;span className=&quot;relative inline-flex overflow-hidden&quot; style={{ ...defaultStyle, ...digitStyle }}&gt;
+{Array.from({ length: 10 }, (_, i) =&gt; (
+&lt;Number key={i} mv={animatedValue} number={i} height={height} /&gt;
+))}
+&lt;/span&gt;
+);
+}
+
+export interface RollingCounterProps {
+/** The numeric value to display */
+value: number;
+/** Font size in pixels (default: 100) */
+fontSize?: number;
+/** Vertical padding inside each digit container (default: 0) */
+padding?: number;
+/**
+* Custom array of place values (e.g., [100, 10, 1, &#39;.&#39;, 0.1]).
+* If omitted, it&#39;s automatically detected from value.
+*/
+places?: PlaceValue[];
+/** Gap between digits (default: 8) */
+gap?: number;
+/** Border radius of the counter container (default: 4) */
+borderRadius?: number;
+/** Horizontal padding of the counter container (default: 8) */
+horizontalPadding?: number;
+/** Text color (default: &#39;inherit&#39;) */
+textColor?: string;
+/** Font weight (default: &#39;inherit&#39;) */
+fontWeight?: React.CSSProperties[&#39;fontWeight&#39;];
+/** Style object for the outer container */
+containerStyle?: React.CSSProperties;
+/** Style object for the inner counter wrapper */
+counterStyle?: React.CSSProperties;
+/** Style object for each individual digit span */
+digitStyle?: React.CSSProperties;
+/** Height of the gradient overlay (default: 16) */
+gradientHeight?: number;
+/** Start color of the gradient (default: &#39;black&#39;) */
+gradientFrom?: string;
+/** End color of the gradient (default: &#39;transparent&#39;) */
+gradientTo?: string;
+/** Custom style for the top gradient */
+topGradientStyle?: React.CSSProperties;
+/** Custom style for the bottom gradient */
+bottomGradientStyle?: React.CSSProperties;
+}
+
+/**
+* A reusable rolling counter component with smooth mechanical motion.
+*/
+export function RollingCounter({
+value,
+fontSize = 100,
+padding = 0,
+places,
+gap = 8,
+borderRadius = 4,
+horizontalPadding = 8,
+textColor = &#39;inherit&#39;,
+fontWeight = &#39;inherit&#39;,
+containerStyle,
+counterStyle,
+digitStyle,
+gradientHeight = 16,
+gradientFrom = &#39;hsl(var(--background))&#39;,
+gradientTo = &#39;transparent&#39;,
+topGradientStyle,
+bottomGradientStyle
+}: RollingCounterProps) {
+const height = fontSize + padding;
+
+// Automatic place detection if none provided
+const derivedPlaces = places || [...value.toString()].map((ch, i, a) =&gt; {
+if (ch === &#39;.&#39;) return &#39;.&#39;;
+const dotIndex = a.indexOf(&#39;.&#39;);
+const isInteger = dotIndex === -1;
+const exponent = isInteger ? a.length - i - 1 : i &lt; dotIndex ? dotIndex - i - 1 : -(i - dotIndex);
+return 10 ** exponent;
+});
+
+const defaultContainerStyle: React.CSSProperties = {
+position: &#39;relative&#39;,
+display: &#39;inline-block&#39;
+};
+
+const defaultCounterStyle: React.CSSProperties = {
+fontSize,
+display: &#39;flex&#39;,
+gap,
+overflow: &#39;hidden&#39;,
+borderRadius,
+paddingLeft: horizontalPadding,
+paddingRight: horizontalPadding,
+lineHeight: 1,
+color: textColor,
+fontWeight
+};
+
+const gradientContainerStyle: React.CSSProperties = {
+pointerEvents: &#39;none&#39;,
+position: &#39;absolute&#39;,
+inset: 0,
+display: &#39;flex&#39;,
+flexDirection: &#39;column&#39;,
+justifyContent: &#39;space-between&#39;
+};
+
+const defaultTopGradientStyle: React.CSSProperties = {
+height: gradientHeight,
+background: `linear-gradient(to bottom, ${gradientFrom}, ${gradientTo})`,
+zIndex: 10
+};
+
+const defaultBottomGradientStyle: React.CSSProperties = {
+height: gradientHeight,
+background: `linear-gradient(to top, ${gradientFrom}, ${gradientTo})`,
+zIndex: 10
+};
+
+return (
+&lt;span style={{ ...defaultContainerStyle, ...containerStyle }}&gt;
+&lt;span style={{ ...defaultCounterStyle, ...counterStyle }}&gt;
+{derivedPlaces.map((place, idx) =&gt; (
+&lt;Digit
+key={`${place}-${idx}`}
+place={place}
+value={value}
+height={height}
+digitStyle={digitStyle}
+/&gt;
+))}
+&lt;/span&gt;
+&lt;span style={gradientContainerStyle}&gt;
+&lt;span style={topGradientStyle ?? defaultTopGradientStyle} /&gt;
+&lt;span style={bottomGradientStyle ?? defaultBottomGradientStyle} /&gt;
+&lt;/span&gt;
+&lt;/span&gt;
+);
+}
+
+export default RollingCounter;
+~~~
+
+Implementation Guidelines
+
+1. Analyze the component structure, styling, animation implementations
+2. Review the component&#39;s arguments and state
+3. Think through what is the best place to adopt this component/style into the design we are doing
+4. Then adopt the component/design to our current system
+
+Help me integrate this into my design</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：superdesigndev/superdesign-prompts<br>原始文件：<code>prompts/counter/README.md</code><br>许可证：CC0-1.0<br>作者：Jason Zhou<br><a href="https://github.com/superdesigndev/superdesign-prompts/blob/main/prompts/counter/README.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="animated-cards.html">Animated Cards<small>Components · carousel</small></a><a href="scroll-marquee.html">Scroll Marquee<small>Components · carousel</small></a><a href="flowmate-carousal.html">FlowMate Carousal<small>Components · carousel</small></a><a href="apex-program-accordion.html">Apex Program Accordion<small>Components · faq</small></a><a href="bento-grid-stats.html">Bento Grid Stats<small>Components · features</small></a><a href="glassmorphic-feature-tabs.html">Glassmorphic Feature Tabs<small>Components · features</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

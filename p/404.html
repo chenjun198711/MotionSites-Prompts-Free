@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nexto 404 — 404 Pages 提示词 | MotionSites Prompts</title>
+<meta name="description" content="深色太空背景，中央展示外星飞船插画，搭配大号404文字和简洁导航链接，营造科幻风格的错误页面。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/404.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nexto 404 — 404 Pages 提示词">
+<meta property="og:description" content="深色太空背景，中央展示外星飞船插画，搭配大号404文字和简洁导航链接，营造科幻风格的错误页面。">
+<meta property="og:url" content="https://prompt-site.shop/p/404.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/404.png">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Nexto 404","description":"深色太空背景，中央展示外星飞船插画，搭配大号404文字和简洁导航链接，营造科幻风格的错误页面。","url":"https://prompt-site.shop/p/404.html","inLanguage":"zh-CN","genre":"404 Pages","dateCreated":"2026-04-02T08:53:00+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-404_pages">404 Pages</a></div><h1>Nexto 404</h1><div class="chip-row"><span class="chip">404 Pages</span><span class="chip">hero</span><span class="chip">MotionSites 公开库</span></div><div class="facts"><span>收录时间：2026-04-02</span><span>正文：5,679 字符</span></div><div class="hero-media"><img src="../assets/previews/404.png" alt="Nexto 404 动效预览" loading="lazy"><div class="media-note">本地预览图 · png</div></div><h2>简介</h2><p>深色太空背景，中央展示外星飞船插画，搭配大号404文字和简洁导航链接，营造科幻风格的错误页面。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build a 404 &quot;Page Not Found&quot; hero page as a single full-viewport (100vh, no scroll) React + Vite + Tailwind CSS application using the DM Sans font and Google Material Symbols Rounded icons. The page must match the following specification exactly:
+
+---
+
+## Fonts &amp; External Resources
+
+- **Google Font:** DM Sans (all weights, variable: `opsz 9..40, wght 100..1000`)
+- **Google Material Symbols Rounded:** `opsz,wght,FILL,GRAD@24,400,1,0`
+- **Logo image:** `https://pub-f170a2592d2c4a1485466404c36807be.r2.dev/Tests/logoipsum-415.svg` (rendered with `filter: brightness(0)` to make it black, height 28px)
+- **Background spaceship image:** `https://pub-e68758f43067417dba612b2371819aa1.r2.dev/viktor-components/alien-spaceship.png`
+
+---
+
+## Layout
+
+The entire page is exactly `100vh` with `overflow: hidden` on html, body, and `#root`. No scrolling. The body uses `display: flex; flex-direction: column`. The `#root` div also uses `height: 100vh; display: flex; flex-direction: column; overflow: hidden`.
+
+---
+
+## Background
+
+Body has a layered background:
+1. The spaceship PNG centered at `center 40%`, sized with `background-size: contain`
+2. A `linear-gradient(to top left, #F5F5F5, #F7F7F7)` covering the full page
+
+Both are `background-attachment: fixed` and `no-repeat`.
+
+---
+
+## Color Variables (CSS custom properties)
+
+```
+--text-main: #1a1a1a
+--text-secondary: #888888
+--bg-page: #F5F5F5
+--card-bg: #ffffff
+```
+
+---
+
+## Navbar
+
+- Max-width `1100px`, centered, padding `28px 40px`
+- Has a dashed bottom border made with `background-image: linear-gradient(to right, rgba(0,0,0,0.08) 2px, transparent 2px); background-size: 6px 1px` on a `::after` pseudo-element
+- **Left:** Logo (the SVG image + the text &quot;nexto.&quot; in 20px bold, -0.3px letter-spacing, color #111, flex with 9px gap)
+- **Center:** Nav links (&quot;Our Team&quot;, &quot;Solutions&quot; with a dropdown arrow character, &quot;Showcase&quot;, &quot;News&quot;) - 14px, weight 400, opacity 0.65, hover to opacity 1, gap 36px
+- **Right:** CTA button &quot;Let&#39;s Connect&quot; - dark gradient button (`linear-gradient(180deg, #2c2c2c 0%, #111111 100%)`), white text 13px weight 500, border-radius 40px, padding `5px 16px 5px 5px`. Has a white circular arrow icon (24px circle) on the LEFT side with a chevron SVG inside. Box-shadow `0 4px 15px rgba(0,0,0,0.15)`. On hover: translateY(-1px), stronger shadow, brightness(1.1).
+- **Hamburger (mobile only):** 3 spans, 24px wide, 2px height, animates to X when active. Hidden on desktop, shown on mobile (`display: flex` at max-width 768px).
+
+---
+
+## Mobile Navigation
+
+- Fixed full-screen overlay, slides in from right with `transform: translateX(100%)` -&gt; `translateX(0)`, cubic-bezier(0.77, 0, 0.175, 1) transition
+- On mobile: left-aligned, large links (38px, weight 800, letter-spacing -1.5px), each with bottom border, padding 24px 0
+- Last link is the CTA button styled same as navbar but with 32px arrow circle
+
+---
+
+## Main Content Area
+
+- `flex: 1`, centered both ways (`align-items: center; justify-content: center`), max-width 700px, padding `20px 20px 30px`
+- **Lost text:** &quot;Seems you&#39;ve wandered off...&quot; - 15px, color `--text-secondary`, weight 400, margin-bottom 12px
+- **Title wrapper:** `position: relative; display: inline-block; margin-bottom: 14px`
+- **Cloud decoration:** Material Symbols &quot;cloud&quot; icon, positioned `top: -18px; left: -24px`, font-size 42px, with gradient text fill (`linear-gradient(to bottom, #F7B2FB 50%, #786EF1 80%, #5588FB 100%)` using `-webkit-background-clip: text; -webkit-text-fill-color: transparent`), white drop-shadow outline, `floatSlow` animation (5s, 0.3s delay)
+- **Heart decoration:** Material Symbols &quot;favorite&quot; icon, positioned `bottom: -15px; right: 20px`, font-size 32px, same gradient fill, white drop-shadow outline, `floatSlow` animation (4.5s, 1s delay)
+- **Title:** &quot;Whoops! Nothing here yet&quot; - `font-size: clamp(34px, 5vw, 52px)`, weight 500, letter-spacing -1.5px, line-height 1.08, color #0f0f0f
+- **Subtext:** &quot;Grab a 30-minute `chat` to explore your ideas, scope, and vision. We&#39;ll find common ground, sync and `define` a clear roadmap.&quot; - 14px, color `--text-secondary`, line-height 1.7, max-width 470px, margin-bottom 28px. The words &quot;chat&quot; and &quot;define&quot; are in highlighted tags (inline-flex, background #E0E2E7, 12.5px, weight 600, padding 2px 12px, border-radius 6px)
+
+---
+
+## Navigation Cards
+
+- Flex column, gap 12px, max-width 460px, positioned at bottom with `margin-top: auto`
+- **Card 1 &quot;Main Page&quot;:** House SVG icon (path: `M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H5a1 1 0 01-1-1V9.5z` with door `M9 21V12h6v9` in white). Subtitle: &quot;Back where it all begins...&quot;
+- **Card 2 &quot;Showcase&quot;:** Circle-dot SVG icon (circle r=9 filled, inner circle r=3.5 white). Subtitle: &quot;Where we walk the walk&quot;
+- Each card: white background, border-radius 18px, padding 18px 22px, flex between, 1px border rgba(0,0,0,0.05), shadow `0 2px 12px rgba(0,0,0,0.04)`. On hover: translateY(-3px), shadow `0 8px 28px rgba(0,0,0,0.08)`.
+- Icon container: 48px circle, background #eaecf0, scales 1.05 on card hover
+- Right chevron arrow (rsaquo character, 21px), translateX(6px) on hover
+- Card title: 15px weight 600, subtitle: 12px color `--text-secondary`
+
+---
+
+## Animations
+
+```css
+@keyframes floatSlow {
+0%, 100% { transform: translateY(0px) rotate(0deg); }
+50% { transform: translateY(-10px) rotate(3deg); }
+}
+```
+
+---
+
+## Responsive Breakpoints
+
+**768px and below:**
+- Hide nav-links and desktop CTA button, show hamburger
+- Background-size: 90%, position: center 45%
+- Navbar padding: 20px
+- Title: 30px, decorations smaller
+- Cards: full width, gap 10px, smaller padding/icons
+
+**480px and below:**
+- Title: 26px
+- Background-size: 100%
+- Decorations even smaller
+
+---</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="404-planet.html">404 Planet<small>404 Pages · 404</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Halo Benefits — Why Us 提示词 | MotionSites Prompts</title>
+<meta name="description" content="金融科技稳定币落地页的“信息”板块，采用卡片式布局展示优势，配有箭头图标引导交互，全屏响应式设计。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/halo-benefits.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Halo Benefits — Why Us 提示词">
+<meta property="og:description" content="金融科技稳定币落地页的“信息”板块，采用卡片式布局展示优势，配有箭头图标引导交互，全屏响应式设计。">
+<meta property="og:url" content="https://prompt-site.shop/p/halo-benefits.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/halo-benefits.webp">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Halo Benefits","description":"金融科技稳定币落地页的“信息”板块，采用卡片式布局展示优势，配有箭头图标引导交互，全屏响应式设计。","url":"https://prompt-site.shop/p/halo-benefits.html","inLanguage":"zh-CN","genre":"Why Us","dateCreated":"2026-06-06T08:29:32.680888+00:00","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-why_us">Why Us</a></div><h1>Halo Benefits</h1><div class="chip-row"><span class="chip">Why Us</span><span class="chip">features</span><span class="chip">MotionSites 公开库</span><span class="chip">付费条目</span></div><div class="facts"><span>收录时间：2026-06-06</span><span>正文：14,377 字符</span></div><div class="hero-media"><img src="../assets/previews/halo-benefits.webp" alt="Halo Benefits 动效预览" loading="lazy"><div class="media-note">本地预览图 · webp</div></div><h2>简介</h2><p>金融科技稳定币落地页的“信息”板块，采用卡片式布局展示优势，配有箭头图标引导交互，全屏响应式设计。</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">Build an &quot;Info&quot; section for a fintech stablecoin landing page using **React + TypeScript + Tailwind CSS** with **lucide-react** for icons (use `ArrowRight`). Fully mobile responsive.
+
+### Font Setup
+
+Load **&quot;TT Norms Pro&quot;** via a stylesheet link in `index.html`:
+
+```html
+&lt;link href=&quot;https://db.onlinewebfonts.com/c/49bf5d043a27b890a040cf393277e2b2?family=TT+Norms+Pro+Regular&quot; rel=&quot;stylesheet&quot;&gt;
+```
+
+Apply globally in `index.css`:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+html {
+font-family: &#39;TT Norms Pro Regular&#39;, ui-sans-serif, system-ui, sans-serif;
+}
+body {
+font-family: &#39;TT Norms Pro Regular&#39;, ui-sans-serif, system-ui, sans-serif;
+}
+* {
+font-family: inherit;
+}
+}
+```
+
+---
+
+### Section Component: `InfoSection`
+
+**Outer wrapper:** `&lt;section&gt;` with classes `bg-[#F5F5F5] px-6 py-24`.
+
+**Inner container:** `&lt;div&gt;` with classes `max-w-[88rem] mx-auto`.
+
+The section has **two rows** stacked vertically.
+
+---
+
+#### ROW 1: Heading + Description (two-column grid)
+
+Wrapper `&lt;div&gt;` with classes `grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 items-start`.
+
+**Left column** (`&lt;div&gt;`, no extra classes):
+
+1. **Heading:**
+- Element: `&lt;h2&gt;`
+- Text: **&quot;Meet USD Halo.&quot;**
+- Classes: `text-black text-4xl md:text-5xl font-medium leading-tight mb-8`
+- Inline style: `{ letterSpacing: &#39;-0.03em&#39; }`
+
+2. **CTA pill button** (black capsule, text-left icon-right pattern):
+- Element: `&lt;button&gt;`
+- Classes: `inline-flex items-center gap-3 bg-black text-white text-base font-medium pl-8 pr-2 py-2 rounded-full hover:bg-gray-800 transition-colors duration-200`
+- Contains:
+- Plain text: **&quot;Discover it&quot;**
+- Then a `&lt;span&gt;` with classes `bg-white rounded-full p-2 flex items-center justify-center`, containing `&lt;ArrowRight className=&quot;w-5 h-5 text-black&quot; /&gt;`
+
+**Right column** (`&lt;div&gt;` with classes `flex items-center`):
+
+1. **Description paragraph:**
+- Element: `&lt;p&gt;`
+- Text: **&quot;USD Halo is a reward-earning dollar coin that lets your savings grow while remaining tied to the U.S. dollar.&quot;**
+- Classes: `text-black/70 text-2xl md:text-3xl font-normal leading-relaxed`
+
+---
+
+#### ROW 2: Four-column card grid
+
+Wrapper `&lt;div&gt;` with classes `grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4`.
+
+Contains 3 cards (the first spans 2 columns):
+
+**Card 1 -- Image background card (spans 2 columns):**
+- Wrapper `&lt;div&gt;` with classes `lg:col-span-2 rounded-2xl overflow-hidden relative min-h-80`
+- Inline style with background image:
+```tsx
+style={{
+backgroundImage: `url(&#39;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260423_164207_f243351d-ed59-48ec-83a0-a5e996bdbe3c.png&amp;w=1280&amp;q=85&#39;)`,
+backgroundSize: &#39;cover&#39;,
+backgroundPosition: &#39;center&#39;,
+}}
+```
+- Inner content `&lt;div&gt;` with classes `relative z-10 flex flex-col justify-between h-full p-7 min-h-80`
+- **Title:** `&lt;p&gt;` with text **&quot;Savings that bloom&quot;**, classes `text-black text-2xl font-medium leading-snug`, inline style `{ letterSpacing: &#39;-0.02em&#39; }`
+- **Description:** `&lt;p&gt;` with text **&quot;Gain steady returns as your dollar tokens are routed into top-performing DeFi strategies.&quot;**, classes `text-black/70 text-base font-normal leading-relaxed max-w-xs`
+
+**Card 2 -- Dark solid card:**
+- Wrapper `&lt;div&gt;` with classes `rounded-2xl p-7 flex flex-col justify-between min-h-80`
+- Inline style: `{ backgroundColor: &#39;#2B2644&#39; }`
+- **Title:** `&lt;p&gt;` with text **&quot;Always fluid,\&lt;br /\&gt;always pegged.&quot;**, classes `text-white text-2xl font-medium leading-snug`, inline style `{ letterSpacing: &#39;-0.02em&#39; }`
+- **Description:** `&lt;p&gt;` with text **&quot;Keep fully dollar-anchored with on-demand access to funds -- no lockups or waits.&quot;**, classes `text-white/60 text-base font-normal leading-relaxed`
+
+**Card 3 -- Dark solid card:**
+- Wrapper `&lt;div&gt;` with classes `rounded-2xl p-7 flex flex-col justify-between min-h-80`
+- Inline style: `{ backgroundColor: &#39;#2B2644&#39; }`
+- **Title:** `&lt;p&gt;` with text **&quot;Fully\&lt;br /\&gt;automated&quot;**, classes `text-white text-2xl font-medium leading-snug`, inline style `{ letterSpacing: &#39;-0.02em&#39; }`
+- **Description:** `&lt;p&gt;` with text **&quot;Skip the task of tuning positions yourself. USD Halo runs in the background for you.&quot;**, classes `text-white/60 text-base font-normal leading-relaxed`
+
+---
+
+### Key Design Specifications -- InfoSection
+
+- **Background:** `#F5F5F5` seamless with rest of page.
+- **Row 1 layout:** Two equal columns, `gap-12`, with `mb-16` separating it from the card grid below. Left column has heading + button stacked. Right column vertically centers a large descriptive paragraph.
+- **Pill button:** Black capsule with white text on left, white circle with black arrow icon on right. Asymmetric padding (`pl-8 pr-2 py-2`) creates the capsule-with-embedded-circle look.
+- **Card grid:** 4-column on `lg`, 2-column on `sm`, single column on mobile. `gap-4` between cards.
+- **Card 1** spans 2 columns on `lg`. Uses a full-bleed background image with no overlay/scrim -- text sits directly on the image. Content is distributed top-to-bottom using `justify-between`.
+- **Cards 2 &amp; 3** use a dark navy/purple background (`#2B2644`) with white text. Titles use `&lt;br /&gt;` for line breaks. Content distributed top-to-bottom via `justify-between`.
+- **All cards:** `rounded-2xl` (16px), `min-h-80` (320px), `p-7` internal padding.
+- **Typography:** Card titles are `text-2xl font-medium` with `-0.02em` letter-spacing. Card descriptions are `text-base font-normal`.
+
+---
+
+### Complete JSX -- InfoSection
+
+```tsx
+import { ArrowRight } from &#39;lucide-react&#39;;
+
+function InfoSection() {
+return (
+&lt;section className=&quot;bg-[#F5F5F5] px-6 py-24&quot;&gt;
+&lt;div className=&quot;max-w-[88rem] mx-auto&quot;&gt;
+{/* Row 1 */}
+&lt;div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 items-start&quot;&gt;
+&lt;div&gt;
+&lt;h2 className=&quot;text-black text-4xl md:text-5xl font-medium leading-tight mb-8&quot; style={{ letterSpacing: &#39;-0.03em&#39; }}&gt;
+Meet USD Halo.
+&lt;/h2&gt;
+&lt;button className=&quot;inline-flex items-center gap-3 bg-black text-white text-base font-medium pl-8 pr-2 py-2 rounded-full hover:bg-gray-800 transition-colors duration-200&quot;&gt;
+Discover it
+&lt;span className=&quot;bg-white rounded-full p-2 flex items-center justify-center&quot;&gt;
+&lt;ArrowRight className=&quot;w-5 h-5 text-black&quot; /&gt;
+&lt;/span&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;div className=&quot;flex items-center&quot;&gt;
+&lt;p className=&quot;text-black/70 text-2xl md:text-3xl font-normal leading-relaxed&quot;&gt;
+USD Halo is a reward-earning dollar coin that lets your savings grow while remaining tied to the U.S. dollar.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+{/* Row 2 -- 4-col grid */}
+&lt;div className=&quot;grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4&quot;&gt;
+{/* Card 1 -- spans 2 cols, image bg */}
+&lt;div
+className=&quot;lg:col-span-2 rounded-2xl overflow-hidden relative min-h-80&quot;
+style={{
+backgroundImage: `url(&#39;https://images.higgs.ai/?default=1&amp;output=webp&amp;url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260423_164207_f243351d-ed59-48ec-83a0-a5e996bdbe3c.png&amp;w=1280&amp;q=85&#39;)`,
+backgroundSize: &#39;cover&#39;,
+backgroundPosition: &#39;center&#39;,
+}}
+&gt;
+&lt;div className=&quot;relative z-10 flex flex-col justify-between h-full p-7 min-h-80&quot;&gt;
+&lt;p className=&quot;text-black text-2xl font-medium leading-snug&quot; style={{ letterSpacing: &#39;-0.02em&#39; }}&gt;
+Savings that bloom
+&lt;/p&gt;
+&lt;p className=&quot;text-black/70 text-base font-normal leading-relaxed max-w-xs&quot;&gt;
+Gain steady returns as your dollar tokens are routed into top-performing DeFi strategies.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+{/* Card 2 */}
+&lt;div
+className=&quot;rounded-2xl p-7 flex flex-col justify-between min-h-80&quot;
+style={{ backgroundColor: &#39;#2B2644&#39; }}
+&gt;
+&lt;p className=&quot;text-white text-2xl font-medium leading-snug&quot; style={{ letterSpacing: &#39;-0.02em&#39; }}&gt;
+Always fluid,&lt;br /&gt;always pegged.
+&lt;/p&gt;
+&lt;p className=&quot;text-white/60 text-base font-normal leading-relaxed&quot;&gt;
+Keep fully dollar-anchored with on-demand access to funds -- no lockups or waits.
+&lt;/p&gt;
+&lt;/div&gt;
+
+{/* Card 3 */}
+&lt;div
+className=&quot;rounded-2xl p-7 flex flex-col justify-between min-h-80&quot;
+style={{ backgroundColor: &#39;#2B2644&#39; }}
+&gt;
+&lt;p className=&quot;text-white text-2xl font-medium leading-snug&quot; style={{ letterSpacing: &#39;-0.02em&#39; }}&gt;
+Fully&lt;br /&gt;automated
+&lt;/p&gt;
+&lt;p className=&quot;text-white/60 text-base font-normal leading-relaxed&quot;&gt;
+Skip the task of tuning positions yourself. USD Halo runs in the background for you.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+);
+}
+```
+
+---
+
+---
+
+## Prompt 2: BackedBySection (Marquee)
+
+Build a &quot;Backed By&quot; marquee section for a fintech stablecoin landing page using **React + TypeScript + Tailwind CSS**. No icon library needed for this section.
+
+### Font Setup
+
+Same as above -- load **&quot;TT Norms Pro&quot;** via the stylesheet link in `index.html`:
+
+```html
+&lt;link href=&quot;https://db.onlinewebfonts.com/c/49bf5d043a27b890a040cf393277e2b2?family=TT+Norms+Pro+Regular&quot; rel=&quot;stylesheet&quot;&gt;
+```
+
+---
+
+### Section Component: `BackedBySection`
+
+**Outer wrapper:** `&lt;section&gt;` with classes `bg-[#F5F5F5] px-6` (no vertical padding -- this section sits flush between InfoSection and UseCasesSection).
+
+**Inner container:** `&lt;div&gt;` with classes `max-w-[88rem] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 items-center`.
+
+---
+
+#### LEFT COLUMN (1 of 4 columns)
+
+Wrapper `&lt;div&gt;` with classes `md:col-span-1`.
+
+Contains:
+- `&lt;p&gt;` with text **&quot;Funded by premier partners\&lt;br /\&gt;and forward-thinking leaders.&quot;**
+- Classes: `text-black/70 text-base leading-relaxed`
+
+---
+
+#### RIGHT COLUMN -- Marquee (3 of 4 columns)
+
+Wrapper `&lt;div&gt;` with classes `md:col-span-3 overflow-hidden`.
+
+**CSS animation** (injected via inline `&lt;style&gt;` tag inside the component):
+
+```css
+@keyframes backers-marquee {
+0% { transform: translateX(0); }
+100% { transform: translateX(-50%); }
+}
+.backers-track {
+display: flex;
+width: max-content;
+animation: backers-marquee 30s linear infinite;
+}
+```
+
+**Marquee track:** `&lt;div&gt;` with class `backers-track`.
+
+Contains the `BACKER_BRANDS` array duplicated (spread twice: `[...BACKER_BRANDS, ...BACKER_BRANDS]`) and mapped to `&lt;span&gt;` elements.
+
+Each `&lt;span&gt;`:
+- Classes: `mx-10 shrink-0 text-black/50 whitespace-nowrap`
+- Inline `style` from the brand object (unique font, weight, spacing per brand)
+- Key: array index `i`
+
+---
+
+### Brand Data Array
+
+Each brand has a unique font family, weight, letter-spacing, and font-size to simulate distinct brand wordmarks using only text styling (no logos/images):
+
+```tsx
+const BACKER_BRANDS: { name: string; style: React.CSSProperties }[] = [
+{ name: &quot;Fundamental Labs&quot;, style: { fontFamily: &quot;&#39;Times New Roman&#39;, serif&quot;, fontWeight: 400, letterSpacing: &quot;0.02em&quot;, fontSize: &quot;14px&quot; } },
+{ name: &quot;KUCOIN&quot;, style: { fontFamily: &quot;&#39;Arial Black&#39;, sans-serif&quot;, fontWeight: 900, letterSpacing: &quot;0.08em&quot;, fontSize: &quot;16px&quot; } },
+{ name: &quot;NGC&quot;, style: { fontFamily: &quot;&#39;Impact&#39;, sans-serif&quot;, fontWeight: 700, letterSpacing: &quot;0.05em&quot;, fontSize: &quot;18px&quot; } },
+{ name: &quot;NxGen&quot;, style: { fontFamily: &quot;&#39;Georgia&#39;, serif&quot;, fontWeight: 600, letterSpacing: &quot;-0.02em&quot;, fontSize: &quot;17px&quot; } },
+{ name: &quot;Matter Labs&quot;, style: { fontFamily: &quot;&#39;Helvetica&#39;, sans-serif&quot;, fontWeight: 700, letterSpacing: &quot;-0.01em&quot;, fontSize: &quot;15px&quot; } },
+{ name: &quot;DEXTools&quot;, style: { fontFamily: &quot;&#39;Verdana&#39;, sans-serif&quot;, fontWeight: 700, letterSpacing: &quot;0.06em&quot;, fontSize: &quot;14px&quot;, textTransform: &quot;uppercase&quot; as const } },
+{ name: &quot;NGRAVE&quot;, style: { fontFamily: &quot;&#39;Courier New&#39;, monospace&quot;, fontWeight: 700, letterSpacing: &quot;0.18em&quot;, fontSize: &quot;14px&quot; } },
+{ name: &quot;Polychain&quot;, style: { fontFamily: &quot;&#39;Palatino&#39;, serif&quot;, fontWeight: 500, letterSpacing: &quot;0.03em&quot;, fontSize: &quot;15px&quot; } },
+];
+```
+
+---
+
+### Key Design Specifications -- BackedBySection
+
+- **No vertical padding** on the section (`px-6` only) -- it sits between two `py-24` sections, acting as a visual divider/strip.
+- **Layout:** 4-column grid on `md`. Left column takes 1/4 width, marquee takes 3/4. Stacks on mobile.
+- **Marquee technique:** CSS-only infinite scroll. The array is duplicated so the second copy seamlessly replaces the first as it scrolls left. `width: max-content` ensures the track is as wide as its content. `-50%` translation moves exactly one copy&#39;s width.
+- **Animation speed:** `30s` -- slow, ambient scrolling.
+- **Brand styling:** Each brand name uses a different system font, weight, and letter-spacing to create visual variety mimicking actual brand wordmarks without needing logo images. Colors are all `text-black/50` (50% opacity black).
+- **Spacing between brands:** `mx-10` (80px total gap between adjacent names).
+
+---
+
+### Complete JSX -- BackedBySection
+
+```tsx
+const BACKER_BRANDS: { name: string; style: React.CSSProperties }[] = [
+{ name: &quot;Fundamental Labs&quot;, style: { fontFamily: &quot;&#39;Times New Roman&#39;, serif&quot;, fontWeight: 400, letterSpacing: &quot;0.02em&quot;, fontSize: &quot;14px&quot; } },
+{ name: &quot;KUCOIN&quot;, style: { fontFamily: &quot;&#39;Arial Black&#39;, sans-serif&quot;, fontWeight: 900, letterSpacing: &quot;0.08em&quot;, fontSize: &quot;16px&quot; } },
+{ name: &quot;NGC&quot;, style: { fontFamily: &quot;&#39;Impact&#39;, sans-serif&quot;, fontWeight: 700, letterSpacing: &quot;0.05em&quot;, fontSize: &quot;18px&quot; } },
+{ name: &quot;NxGen&quot;, style: { fontFamily: &quot;&#39;Georgia&#39;, serif&quot;, fontWeight: 600, letterSpacing: &quot;-0.02em&quot;, fontSize: &quot;17px&quot; } },
+{ name: &quot;Matter Labs&quot;, style: { fontFamily: &quot;&#39;Helvetica&#39;, sans-serif&quot;, fontWeight: 700, letterSpacing: &quot;-0.01em&quot;, fontSize: &quot;15px&quot; } },
+{ name: &quot;DEXTools&quot;, style: { fontFamily: &quot;&#39;Verdana&#39;, sans-serif&quot;, fontWeight: 700, letterSpacing: &quot;0.06em&quot;, fontSize: &quot;14px&quot;, textTransform: &quot;uppercase&quot; as const } },
+{ name: &quot;NGRAVE&quot;, style: { fontFamily: &quot;&#39;Courier New&#39;, monospace&quot;, fontWeight: 700, letterSpacing: &quot;0.18em&quot;, fontSize: &quot;14px&quot; } },
+{ name: &quot;Polychain&quot;, style: { fontFamily: &quot;&#39;Palatino&#39;, serif&quot;, fontWeight: 500, letterSpacing: &quot;0.03em&quot;, fontSize: &quot;15px&quot; } },
+];
+
+function BackedBySection() {
+return (
+&lt;section className=&quot;bg-[#F5F5F5] px-6&quot;&gt;
+&lt;div className=&quot;max-w-[88rem] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 items-center&quot;&gt;
+&lt;div className=&quot;md:col-span-1&quot;&gt;
+&lt;p className=&quot;text-black/70 text-base leading-relaxed&quot;&gt;
+Funded by premier partners&lt;br /&gt;and forward-thinking leaders.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div className=&quot;md:col-span-3 overflow-hidden&quot;&gt;
+&lt;style&gt;{`
+@keyframes backers-marquee {
+0% { transform: translateX(0); }
+100% { transform: translateX(-50%); }
+}
+.backers-track {
+display: flex;
+width: max-content;
+animation: backers-marquee 30s linear infinite;
+}
+`}&lt;/style&gt;
+&lt;div className=&quot;backers-track&quot;&gt;
+{[...BACKER_BRANDS, ...BACKER_BRANDS].map((brand, i) =&gt; (
+&lt;span
+key={i}
+className=&quot;mx-10 shrink-0 text-black/50 whitespace-nowrap&quot;
+style={brand.style}
+&gt;
+{brand.name}
+&lt;/span&gt;
+))}
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+);
+}
+```</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>该条目来自公开提示词页面，原始出处信息未随页面提供。</p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><p class="muted">暂无同分类条目。</p><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>

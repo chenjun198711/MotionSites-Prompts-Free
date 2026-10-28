@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Midnight Editorial Style — Design Systems &amp; Styles 提示词 | MotionSites Prompts</title>
+<meta name="description" content="A premium, ultra-modern dark aesthetic featuring deep black backgrounds (#050505), massive &#39;Satoshi&#39; typography for impact, and striking coral (#FF6B50) ac">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-adsense-account" content="ca-pub-5297416023272291">
+<script src="../theme.js"></script>
+<link rel="canonical" href="https://prompt-site.shop/p/community-superdesign-midnight-editorial-style-5f0a22.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Midnight Editorial Style — Design Systems &amp; Styles 提示词">
+<meta property="og:description" content="A premium, ultra-modern dark aesthetic featuring deep black backgrounds (#050505), massive &#39;Satoshi&#39; typography for impact, and striking coral (#FF6B50) ac">
+<meta property="og:url" content="https://prompt-site.shop/p/community-superdesign-midnight-editorial-style-5f0a22.html">
+<meta property="og:image" content="https://prompt-site.shop/assets/previews/community-superdesign-midnight-editorial-style-5f0a22.png">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5297416023272291" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Midnight Editorial Style","description":"A premium, ultra-modern dark aesthetic featuring deep black backgrounds (#050505), massive 'Satoshi' typography for impact, and striking coral (#FF6B50) accents. Designed for high-end agencies and portfolios that prioritize storytelling and visual drama.","url":"https://prompt-site.shop/p/community-superdesign-midnight-editorial-style-5f0a22.html","inLanguage":"zh-CN","genre":"Design Systems & Styles","isPartOf":{"@type":"WebSite","name":"MotionSites Prompts","url":"https://prompt-site.shop/"}}</script>
+<link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+<header class="site-head"><div class="inner"><a class="brand" href="../"><span class="brand-dot"></span>MotionSites Prompts</a><nav class="site-nav"><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a><button class="theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">暗色</button></nav></div></header><main class="wrap"><div class="crumbs"><a href="../">首页</a> / <a href="../all.html">全部提示词</a> / <a href="../all.html#c-design_systems___styles">Design Systems &amp; Styles</a></div><h1>Midnight Editorial Style</h1><div class="chip-row"><span class="chip">Design Systems &amp; Styles</span><span class="chip">landing-page</span><span class="chip">社区公开收藏</span></div><div class="facts"><span>正文：15,135 字符</span></div><div class="hero-media"><img src="../assets/previews/community-superdesign-midnight-editorial-style-5f0a22.png" alt="Midnight Editorial Style 动效预览" loading="lazy"><div class="media-note">本地预览图 · png</div></div><h2>简介</h2><p>A premium, ultra-modern dark aesthetic featuring deep black backgrounds (#050505), massive &#39;Satoshi&#39; typography for impact, and striking coral (#FF6B50) accents. Designed for high-end agencies and portfolios that prioritize storytelling and visual drama.</p><h2>完整提示词</h2><div class="prompt-box"><button class="copy-btn" id="copy-btn" type="button">复制提示词</button><pre id="prompt-text">This is a reference implementation of Midnight Editorial Style
+
+~~~html
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Acme | AI Product Designer&lt;/title&gt;
+&lt;script src=&quot;https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js&quot;&gt;&lt;/script&gt;
+&lt;style&gt;
+@import url(&#39;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap&#39;);
+
+@font-face {
+font-family: &#39;Satoshi&#39;;
+src: url(&#39;https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/uploads/4aed2f49-a476-436f-bae8-f31aa18f46fa/1767920861040-60c1c779/Satoshi-Variable.woff2&#39;) format(&#39;woff2&#39;);
+font-weight: 300 900;
+font-display: swap;
+font-style: normal;
+}
+
+:root {
+--font-satoshi: &#39;Satoshi&#39;, &#39;Inter&#39;, sans-serif;
+--color-bg: #050505;
+--color-accent: #FF6B50;
+}
+
+body {
+font-family: var(--font-satoshi);
+background-color: var(--color-bg);
+color: #ebebeb;
+scroll-behavior: smooth;
+}
+
+.selection-coral::selection {
+background-color: var(--color-accent);
+color: white;
+}
+
+.glass-nav {
+background: rgba(17, 17, 17, 0.8);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-text {
+font-size: 13vw;
+line-height: 0.9;
+letter-spacing: -0.05em;
+}
+
+@keyframes float {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+animation: float 4s ease-in-out infinite;
+}
+
+/* Scroll reveal simulation via intersection observer is typical but here we use utility classes for layout */
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;min-h-screen bg-[#050505] selection-coral overflow-x-hidden&quot;&gt;
+
+&lt;!-- Top Navigation --&gt;
+&lt;nav class=&quot;fixed top-0 left-0 right-0 z-[100] px-6 py-6 flex items-center justify-between text-sm font-medium tracking-tight&quot;&gt;
+&lt;div class=&quot;flex items-center gap-10&quot;&gt;
+&lt;a href=&quot;/&quot; id=&quot;nav-logo&quot; class=&quot;flex items-center group&quot;&gt;
+&lt;div class=&quot;w-8 h-8 bg-white rounded flex items-center justify-center text-black font-extrabold text-xl transition-transform group-hover:rotate-12&quot;&gt;S.&lt;/div&gt;
+&lt;/a&gt;
+
+&lt;div class=&quot;hidden lg:flex items-center gap-8 text-[#888888]&quot;&gt;
+&lt;a href=&quot;#&quot; id=&quot;nav-home-link&quot; class=&quot;hover:text-white transition-colors&quot;&gt;Home&lt;/a&gt;
+&lt;a href=&quot;#&quot; id=&quot;nav-about-link&quot; class=&quot;hover:text-white transition-colors&quot;&gt;About&lt;/a&gt;
+&lt;a href=&quot;#&quot; id=&quot;nav-work-link&quot; class=&quot;hover:text-white transition-colors&quot;&gt;Our Work&lt;/a&gt;
+&lt;a href=&quot;#&quot; id=&quot;nav-contact-link&quot; class=&quot;hover:text-white transition-colors&quot;&gt;Contact&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex items-center gap-8&quot;&gt;
+&lt;a href=&quot;#&quot; id=&quot;nav-journal-link&quot; class=&quot;hidden md:block text-[#888888] hover:text-white transition-colors&quot;&gt;Our journal&lt;/a&gt;
+&lt;a href=&quot;#&quot; id=&quot;nav-cta-btn&quot; class=&quot;px-5 py-2.5 bg-[#1a1a1a] hover:bg-white hover:text-black border border-[#333333] rounded-lg transition-all duration-300&quot;&gt;
+Get started
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;!-- Floating Bottom Navigation --&gt;
+&lt;div class=&quot;fixed bottom-8 left-1/2 -translate-x-1/2 z-[110] hidden md:flex items-center gap-2 p-2 glass-nav rounded-2xl shadow-2xl&quot;&gt;
+&lt;div class=&quot;flex items-center gap-1 pr-4 border-r border-[#333333]&quot;&gt;
+&lt;button class=&quot;p-3 hover:bg-[#222222] rounded-xl transition-all group relative&quot; title=&quot;Dashboard&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:layout-grid&quot; class=&quot;text-xl text-white&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/button&gt;
+&lt;button class=&quot;p-3 hover:bg-[#222222] rounded-xl transition-all group relative&quot; title=&quot;Global&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:globe&quot; class=&quot;text-xl text-white&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/button&gt;
+&lt;button class=&quot;p-3 hover:bg-[#222222] rounded-xl transition-all group relative&quot; title=&quot;Mobile&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:smartphone&quot; class=&quot;text-xl text-white&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/button&gt;
+&lt;button class=&quot;p-3 hover:bg-[#222222] rounded-xl transition-all group relative&quot; title=&quot;Services&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:package&quot; class=&quot;text-xl text-white&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/button&gt;
+&lt;button class=&quot;p-3 hover:bg-[#222222] rounded-xl transition-all group relative&quot; title=&quot;Announcements&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:megaphone&quot; class=&quot;text-xl text-white&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;a href=&quot;#contact&quot; id=&quot;floating-contact-btn&quot; class=&quot;px-6 py-3 bg-[#FF6B50] hover:bg-[#E55A40] text-black font-bold text-sm tracking-wide uppercase rounded-xl transition-all&quot;&gt;
+Contact
+&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!-- Hero Section --&gt;
+&lt;header class=&quot;relative h-screen w-full flex flex-col items-center justify-center&quot;&gt;
+&lt;div class=&quot;absolute inset-0 z-0 pointer-events-none&quot;&gt;
+&lt;div class=&quot;absolute inset-0 bg-[radial-gradient(circle_at_center,_#1a1a1a_0%,_#050505_70%)] opacity-60&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;relative z-10&quot;&gt;
+&lt;h1 class=&quot;hero-text font-bold text-white text-center italic-none&quot;&gt;
+/design
+&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;!-- Bottom UI Overlays --&gt;
+&lt;div class=&quot;absolute bottom-12 left-8 md:left-12 flex items-center gap-5 group&quot;&gt;
+&lt;div class=&quot;flex -space-x-4&quot;&gt;
+&lt;img src=&quot;https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&amp;w=150&amp;auto=format&amp;fit=crop&quot; alt=&quot;Team member&quot; class=&quot;w-10 h-10 rounded-full border-2 border-[#050505] object-cover grayscale group-hover:grayscale-0 transition-all&quot;&gt;
+&lt;img src=&quot;https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&amp;w=150&amp;auto=format&amp;fit=crop&quot; alt=&quot;Team member&quot; class=&quot;w-10 h-10 rounded-full border-2 border-[#050505] object-cover grayscale group-hover:grayscale-0 transition-all delay-75&quot;&gt;
+&lt;img src=&quot;https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&amp;w=150&amp;auto=format&amp;fit=crop&quot; alt=&quot;Team member&quot; class=&quot;w-10 h-10 rounded-full border-2 border-[#050505] object-cover grayscale group-hover:grayscale-0 transition-all delay-150&quot;&gt;
+&lt;/div&gt;
+&lt;p class=&quot;text-xs md:text-sm font-medium leading-tight text-[#888888] group-hover:text-white transition-colors&quot;&gt;
+Designing the&lt;br/&gt;future, today.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;absolute bottom-12 right-8 md:right-12 text-right&quot;&gt;
+&lt;a href=&quot;mailto:hello@example.com&quot; id=&quot;hero-email-link&quot; class=&quot;text-white font-medium hover:text-[#FF6B50] transition-colors border-b-2 border-white hover:border-[#FF6B50] pb-1&quot;&gt;
+hello@example.com
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/header&gt;
+
+&lt;!-- Benefits Section --&gt;
+&lt;section class=&quot;py-32 px-6 md:px-12 max-w-7xl mx-auto&quot;&gt;
+&lt;div class=&quot;flex items-center gap-3 mb-10&quot;&gt;
+&lt;div class=&quot;w-2 h-2 rounded-full bg-[#FF6B50] animate-pulse&quot;&gt;&lt;/div&gt;
+&lt;span class=&quot;text-[10px] font-bold tracking-[0.3em] text-[#666666] uppercase&quot;&gt;Why launch slow when you can move fast?&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;h2 class=&quot;text-4xl md:text-7xl font-medium leading-[1.05] tracking-tight text-white max-w-5xl mb-24&quot;&gt;
+Clean, scalable design that helps you &lt;span class=&quot;text-[#666666]&quot;&gt;ship faster&lt;/span&gt; and grow your revenue.
+&lt;/h2&gt;
+
+&lt;div class=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;&gt;
+&lt;!-- Benefit Card 1 --&gt;
+&lt;div class=&quot;bg-[#111111] rounded-[2.5rem] p-12 min-h-[520px] flex flex-col justify-between relative overflow-hidden group hover:bg-[#161616] transition-all duration-500&quot;&gt;
+&lt;div class=&quot;absolute top-10 right-10 bg-[#1a1a1a] text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-widest text-[#888888] border border-[#333333]&quot;&gt;
+Hyper-Growth
+&lt;/div&gt;
+
+&lt;div class=&quot;mt-auto&quot;&gt;
+&lt;h3 class=&quot;text-5xl md:text-7xl font-semibold tracking-tighter mb-2 text-white&quot;&gt;
+Start faster.
+&lt;/h3&gt;
+&lt;h3 class=&quot;text-5xl md:text-7xl font-semibold tracking-tighter text-[#444444] group-hover:text-[#666666] transition-colors&quot;&gt;
+Earn sooner.
+&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Benefit Card 2 --&gt;
+&lt;div class=&quot;bg-gradient-to-br from-[#4F46E5] to-[#7C3AED] rounded-[2.5rem] p-8 md:p-12 min-h-[520px] flex items-center justify-center relative overflow-hidden group&quot;&gt;
+&lt;!-- Browser Mockup Representation --&gt;
+&lt;div class=&quot;w-full max-w-md bg-[#e5e5e5] rounded-xl shadow-2xl overflow-hidden transform group-hover:scale-105 transition-transform duration-700 ease-out&quot;&gt;
+&lt;div class=&quot;bg-[#f5f5f5] px-4 py-3 border-b border-gray-200 flex items-center gap-2&quot;&gt;
+&lt;div class=&quot;w-2.5 h-2.5 rounded-full bg-red-400&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;w-2.5 h-2.5 rounded-full bg-yellow-400&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;w-2.5 h-2.5 rounded-full bg-green-400&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;ml-4 h-3 w-32 bg-gray-200 rounded-full&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;aspect-video bg-gray-100 relative overflow-hidden&quot;&gt;
+&lt;img src=&quot;https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; alt=&quot;Dashboard preview&quot; class=&quot;w-full h-full object-cover&quot;&gt;
+&lt;div class=&quot;absolute inset-0 bg-black/20&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;absolute bottom-6 left-6 text-white&quot;&gt;
+&lt;div class=&quot;text-[10px] font-bold uppercase tracking-widest mb-1&quot;&gt;Enterprise Edition&lt;/div&gt;
+&lt;div class=&quot;text-lg font-bold&quot;&gt;Analytics v4.0&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- Work Gallery --&gt;
+&lt;section id=&quot;work&quot; class=&quot;py-32 px-6 md:px-12 max-w-7xl mx-auto&quot;&gt;
+&lt;div class=&quot;flex justify-between items-end mb-20 border-b border-[#222222] pb-10&quot;&gt;
+&lt;h2 class=&quot;text-xs font-bold tracking-[0.4em] uppercase text-[#FF6B50]&quot;&gt;Selected Work&lt;/h2&gt;
+&lt;span class=&quot;hidden md:block text-[#444444] text-xs font-medium uppercase tracking-widest&quot;&gt;Volume 01 &amp;mdash; 2024&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-32&quot;&gt;
+
+&lt;!-- Project 1 --&gt;
+&lt;article class=&quot;group cursor-pointer&quot;&gt;
+&lt;div class=&quot;aspect-[4/3] overflow-hidden bg-[#111111] rounded-sm&quot;&gt;
+&lt;img src=&quot;https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; alt=&quot;Nebula Project&quot; class=&quot;w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;mt-8 flex justify-between items-start&quot;&gt;
+&lt;div&gt;
+&lt;h3 class=&quot;text-3xl font-bold tracking-tight mb-2 group-hover:text-[#FF6B50] transition-colors&quot;&gt;NEBULA&lt;/h3&gt;
+&lt;p class=&quot;text-[#666666] text-[10px] font-bold uppercase tracking-[0.2em]&quot;&gt;Brand Identity / AI&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;p-3 rounded-full border border-[#333333] group-hover:bg-[#FF6B50] group-hover:text-black group-hover:border-transparent transition-all duration-300&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:arrow-up-right&quot; class=&quot;text-2xl&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/article&gt;
+
+&lt;!-- Project 2 --&gt;
+&lt;article class=&quot;group cursor-pointer md:mt-24&quot;&gt;
+&lt;div class=&quot;aspect-[4/3] overflow-hidden bg-[#111111] rounded-sm&quot;&gt;
+&lt;img src=&quot;https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; alt=&quot;Quantum Project&quot; class=&quot;w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;mt-8 flex justify-between items-start&quot;&gt;
+&lt;div&gt;
+&lt;h3 class=&quot;text-3xl font-bold tracking-tight mb-2 group-hover:text-[#FF6B50] transition-colors&quot;&gt;QUANTUM&lt;/h3&gt;
+&lt;p class=&quot;text-[#666666] text-[10px] font-bold uppercase tracking-[0.2em]&quot;&gt;Web Design / Fintech&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;p-3 rounded-full border border-[#333333] group-hover:bg-[#FF6B50] group-hover:text-black group-hover:border-transparent transition-all duration-300&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:arrow-up-right&quot; class=&quot;text-2xl&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/article&gt;
+
+&lt;!-- Project 3 --&gt;
+&lt;article class=&quot;group cursor-pointer&quot;&gt;
+&lt;div class=&quot;aspect-[4/3] overflow-hidden bg-[#111111] rounded-sm&quot;&gt;
+&lt;img src=&quot;https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; alt=&quot;Echo Project&quot; class=&quot;w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;mt-8 flex justify-between items-start&quot;&gt;
+&lt;div&gt;
+&lt;h3 class=&quot;text-3xl font-bold tracking-tight mb-2 group-hover:text-[#FF6B50] transition-colors&quot;&gt;ECHO&lt;/h3&gt;
+&lt;p class=&quot;text-[#666666] text-[10px] font-bold uppercase tracking-[0.2em]&quot;&gt;Art Direction / Media&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;p-3 rounded-full border border-[#333333] group-hover:bg-[#FF6B50] group-hover:text-black group-hover:border-transparent transition-all duration-300&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:arrow-up-right&quot; class=&quot;text-2xl&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/article&gt;
+
+&lt;!-- Project 4 --&gt;
+&lt;article class=&quot;group cursor-pointer md:mt-24&quot;&gt;
+&lt;div class=&quot;aspect-[4/3] overflow-hidden bg-[#111111] rounded-sm&quot;&gt;
+&lt;img src=&quot;https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&amp;w=1000&amp;auto=format&amp;fit=crop&quot; alt=&quot;Flux Project&quot; class=&quot;w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;mt-8 flex justify-between items-start&quot;&gt;
+&lt;div&gt;
+&lt;h3 class=&quot;text-3xl font-bold tracking-tight mb-2 group-hover:text-[#FF6B50] transition-colors&quot;&gt;FLUX&lt;/h3&gt;
+&lt;p class=&quot;text-[#666666] text-[10px] font-bold uppercase tracking-[0.2em]&quot;&gt;Development / SaaS&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;p-3 rounded-full border border-[#333333] group-hover:bg-[#FF6B50] group-hover:text-black group-hover:border-transparent transition-all duration-300&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:arrow-up-right&quot; class=&quot;text-2xl&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/article&gt;
+
+&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- CTA / Footer Section --&gt;
+&lt;footer id=&quot;contact&quot; class=&quot;relative pt-48 pb-32 px-6 md:px-12 border-t border-[#1a1a1a]&quot;&gt;
+&lt;div class=&quot;max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-16&quot;&gt;
+
+&lt;div class=&quot;flex-1&quot;&gt;
+&lt;h2 class=&quot;text-[14vw] md:text-[10vw] leading-[0.85] font-black tracking-tighter text-white mb-12 select-none&quot;&gt;
+LET&#39;S&lt;br /&gt;TALK.
+&lt;/h2&gt;
+&lt;div class=&quot;flex flex-col gap-6&quot;&gt;
+&lt;a href=&quot;mailto:hello@example.com&quot; id=&quot;footer-email-link&quot; class=&quot;text-3xl md:text-4xl font-semibold hover:text-[#FF6B50] transition-all w-fit&quot;&gt;
+hello@example.com
+&lt;/a&gt;
+&lt;p class=&quot;text-[#666666] flex items-center gap-2&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:map-pin&quot;&gt;&lt;/iconify-icon&gt;
+Available for worldwide collaborations.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex gap-4 md:mb-6&quot;&gt;
+&lt;a href=&quot;#&quot; id=&quot;social-ig&quot; class=&quot;w-14 h-14 border border-[#333333] rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all hover:-translate-y-2&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:instagram&quot; class=&quot;text-xl&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; id=&quot;social-tw&quot; class=&quot;w-14 h-14 border border-[#333333] rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all hover:-translate-y-2&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:twitter&quot; class=&quot;text-xl&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; id=&quot;social-li&quot; class=&quot;w-14 h-14 border border-[#333333] rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all hover:-translate-y-2&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:linkedin&quot; class=&quot;text-xl&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; id=&quot;social-web&quot; class=&quot;w-14 h-14 border border-[#333333] rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all hover:-translate-y-2&quot;&gt;
+&lt;iconify-icon icon=&quot;lucide:globe&quot; class=&quot;text-xl&quot;&gt;&lt;/iconify-icon&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;max-w-7xl mx-auto mt-40 pt-10 border-t border-[#111111] flex flex-col md:flex-row justify-between text-[#333333] text-[10px] font-bold uppercase tracking-widest&quot;&gt;
+&lt;p&gt;&amp;copy; 2024 Acme Agency. All rights reserved.&lt;/p&gt;
+&lt;div class=&quot;flex gap-10 mt-6 md:mt-0&quot;&gt;
+&lt;a href=&quot;#&quot; id=&quot;footer-privacy&quot; class=&quot;hover:text-[#666666] transition-colors&quot;&gt;Privacy Policy&lt;/a&gt;
+&lt;a href=&quot;#&quot; id=&quot;footer-terms&quot; class=&quot;hover:text-[#666666] transition-colors&quot;&gt;Terms of Service&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/footer&gt;
+
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+~~~
+
+Please use the above as reference and apply to our context</pre></div><div class="note-box">把上面的提示词完整复制到支持长文本的 AI 工具中，再按需要替换品牌名、配色与文案。提示词描述的是整页结构与动效节奏，生成后建议在真实浏览器里检查首屏加载和移动端表现。</div><h2>来源与版权</h2><p>源仓库：superdesigndev/superdesign-prompts<br>原始文件：<code>prompts/midnight-editorial-style-5f0a22/README.md</code><br>许可证：CC0-1.0<br>作者：Jason Zhou<br><a href="https://github.com/superdesigndev/superdesign-prompts/blob/main/prompts/midnight-editorial-style-5f0a22/README.md" rel="nofollow noopener" target="_blank">查看原始页面</a></p><p class="muted">提示词文本与预览素材的版权归原作者或原平台所有，本站仅作索引与归档。若你是权利人并希望移除本条内容，请通过<a href="../contact.html">联系方式</a>告知。</p><h2>同分类提示词</h2><div class="related"><a href="community-superdesign-red-noir-style.html">Red Noir Style<small>Design Systems &amp; Styles · landing-page</small></a><a href="community-superdesign-deep-red-style-5b01cb.html">Deep Red Style<small>Design Systems &amp; Styles · design-systems-styles</small></a><a href="community-superdesign-glassmorphism-style.html">Glassmorphism Style<small>Design Systems &amp; Styles · landing-page</small></a><a href="community-superdesign-mosaic-grid-architecture-style.html">Mosaic Grid Architecture Style<small>Design Systems &amp; Styles · landing-page</small></a><a href="community-superdesign-neural-noir-interface-style.html">Neural Noir Interface Style<small>Design Systems &amp; Styles · landing-page</small></a><a href="community-superdesign-cinematic-style.html">Cinematic Style<small>Design Systems &amp; Styles · landing-page</small></a></div><p class="home-link"><a href="../">← 返回提示词库</a></p></main>
+<footer class="site-foot"><nav><a href="../all.html">全部提示词</a><a href="../about.html">关于本站</a><a href="../privacy.html">隐私政策</a><a href="../contact.html">联系方式</a><a href="../terms.html">使用条款</a></nav><div>© 2026 prompt-site.shop · 提示词版权归原作者所有</div></footer><script>(function(){var b=document.getElementById("copy-btn"),t=document.getElementById("prompt-text");if(!b||!t)return;function done(){b.textContent="已复制";setTimeout(function(){b.textContent="复制提示词"},1600)}function fb(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand("copy");done()}catch(e){}}b.addEventListener("click",function(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.textContent).then(done,fb)}else{fb()}})})();</script>
+</body>
+</html>
