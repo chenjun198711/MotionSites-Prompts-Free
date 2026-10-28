@@ -19,8 +19,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      # assets/ 有 1.1 GB 的预览图与视频，超过 Pages 的 1 GB 上限，
+      # 因此只发布站点结构、数据与详情页；媒体文件由宝塔站点提供。
+      - name: Stage site without media
+        run: |
+          mkdir -p _site
+          rsync -a \
+            --exclude 'assets/' \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            --exclude '_site/' \
+            --exclude 'node_modules/' \
+            --exclude 'scripts/' \
+            --exclude 'docs/' \
+            --exclude 'sources/' \
+            --exclude '*.zip' \
+            --exclude '*.xlsx' \
+            --exclude 'all_prompts*' \
+            ./ _site/
+          du -sh _site
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
